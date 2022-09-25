@@ -1,0 +1,32 @@
+project:
+  type: website
+
+website:
+  title: "Ryan's blog"
+  site-url: https://wesslen-blog.netlify.app
+  repo-url: https://github.com/wesslen/quarto-blog
+  open-graph: true
+  twitter-card:
+    creator: "@ryanwesslen"
+    card-style: summary_large_image
+  navbar:
+    background: "#eeeeee"
+    right:
+      - about.qmd
+      - icon: twitter
+        aria-label: twitter
+        href: https://twitter.com/ryanwesslen
+      - icon: github
+        aria-label: github
+        href: https://github.com/wesslen
+      - icon: person-circle
+        aria-label: website
+        href: https://wesslen.netlify.app
+
+format:
+  html:
+    theme: litera
+    css: styles.css
+
+
+

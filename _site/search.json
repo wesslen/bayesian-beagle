@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "posts/prodigy-db-intro/index.html",
+    "href": "posts/prodigy-db-intro/index.html",
+    "title": "Retrieving Prodigy annotations in Python",
+    "section": "",
+    "text": "By default, Prodigy includes SQLite database to save annotations.\nProdigy offers three helpful commands to manipulate."
+  },
+  {
+    "objectID": "posts/prodigy-db-intro/index.html#db-in",
+    "href": "posts/prodigy-db-intro/index.html#db-in",
+    "title": "Retrieving Prodigy annotations in Python",
+    "section": "db-in",
+    "text": "db-in\npython -m prodigy db-in new_dataset /path/to/data.jsonl"
+  },
+  {
+    "objectID": "posts/prodigy-db-intro/index.html#db-out",
+    "href": "posts/prodigy-db-intro/index.html#db-out",
+    "title": "Retrieving Prodigy annotations in Python",
+    "section": "db-out",
+    "text": "db-out\npython -m prodigy db-out new_dataset > /path/to/data.jsonl"
+  },
+  {
+    "objectID": "posts/prodigy-db-intro/index.html#db-merge",
+    "href": "posts/prodigy-db-intro/index.html#db-merge",
+    "title": "Retrieving Prodigy annotations in Python",
+    "section": "db-merge",
+    "text": "db-merge\npython -m prodigy db-merge new_dataset  \n\n## Accessing the database programmatically\n\nProdigy also offers a database component that enables retrieving \n\nfrom prodigy.components.db import connect\ndb = connect() examples = db.get_dataset(“my_dataset”)\n\nHow to use when have them. Use it to describe format for data.\n\n##\n\n\n##\n\nfrom prodigy.components.db import connect\nexamples = [{“text”: “hello world”, “_task_hash”: 123, “_input_hash”: 456}]\ndb = connect() # uses settings from prodigy.json db.add_dataset(“test_dataset”) # add dataset assert “test_dataset” in db # check that dataset was added db.add_examples(examples, [“test_dataset”]) # add examples to dataset dataset = db.get_dataset(“test_dataset”) # retrieve a dataset assert len(dataset) == 1 # check that examples were added\n\nHow to find other datasets\n\nall_dataset_names = db.datasets ```"
+  },
+  {
+    "objectID": "posts/2022-09-27-prodigy-iaa-textcat/index.html",
+    "href": "posts/2022-09-27-prodigy-iaa-textcat/index.html",
+    "title": "Inter-annotator Agreement (IAA) in Prodigy",
+    "section": "",
+    "text": "TODO: add preview image"
+  },
+  {
+    "objectID": "posts/2022-09-27-prodigy-iaa-textcat/index.html#multi-user-sessions-in-prodigy",
+    "href": "posts/2022-09-27-prodigy-iaa-textcat/index.html#multi-user-sessions-in-prodigy",
+    "title": "Inter-annotator Agreement (IAA) in Prodigy",
+    "section": "Multi-user sessions in Prodigy",
+    "text": "Multi-user sessions in Prodigy\nSince v1.7.0 was released, Prodigy has offered multi-user sessions within the same Prodigy instance. This functionality enables dividing up Prodigy annotations across different annotators when saving annotations to the same dataset and performing an identical task.\nTODO: 2-3 sentences on example, link to past TECH issues\n# news_headlines.jsonl\n{'text': 'Uber’s Lesson: Silicon Valley’s Start-Up Machine Needs Fixing',\n 'meta': {'source': 'The New York Times'}\n}\nTODO: add section on data input/formatting\n\n\nTerminal\n\npython -m prodigy textcat.manual news_textcat news_headlines.jsonl --label TECHNOLOGY\n\nUsing 1 label(s): TECHNOLOGY\n\n✨  Starting the web server at http://localhost:8080 ...\nOpen the app in your browser and start annotating!\n\n\n\n\nTo create a custom named session, add ?session=xxx to the annotation app URL. For example, annotator Jordan may access a running Prodigy project via http://localhost:8080/?session=jordan. The example shows running the textcat.manual Prodigy recipe but this works for any Prodigy recipe. This will enable use to track each annotator so we can calculate inter-annotator agreement.\n\nInternally, this will request and send back annotations with a session identifier consisting of the current dataset name and the session ID – for example, textcat-jordan. Every time annotator Jordan labels examples for this dataset, their annotations will be associated with this session identifier.\nLet’s say that in addition to Jordan, we also asked a second annotator, Alex, do both label 20 records in the dataset to determine whether the news headlines are technology-related or not. We provide both their respective URL and have them complete their annotations.\nTo pull their annotations, we’ll use Prodigy’s get_dataset_examples() function:\n\nfrom prodigy.components.db import connect\nimport pprint\n\ndb = connect()\nexamples = db.get_dataset_examples(\"news_textcat\")\n\npprint.pprint(examples[0])\n\n{'_annotator_id': 'news_textcat-jordan',\n '_input_hash': 1886699658,\n '_session_id': 'news_textcat-jordan',\n '_task_hash': -257308161,\n '_timestamp': 1659908691,\n '_view_id': 'classification',\n 'answer': 'accept',\n 'label': 'TECHNOLOGY',\n 'meta': {'source': 'The New York Times'},\n 'text': 'Uber’s Lesson: Silicon Valley’s Start-Up Machine Needs Fixing'}\n\n\n\n\n\n\n\n\nHint\n\n\n\nTODO: deprecation of get_dataset\n\n\nSince we’re interested in text classification annotations, we’ll focus on the \"answer\" values comparing those that are \"reject\" versus \"accept\".\n\nimport pandas as pd\n\n# keep only the \"accept\" and \"reject\" answers\nanno = [eg for eg in examples if eg[\"answer\"] in [\"accept\", \"reject\"]]\n\n# convert to a dataframe\ndf = pd.DataFrame(anno)\n\ndf_annotations = df.pivot(\n    index=['_input_hash'], \n    columns='_session_id', \n    values='answer'\n)\n\ndf_annotations.head(n=1)\n\n\n\n\n\n  \n    \n      _session_id\n      news_textcat-alex\n      news_textcat-jordan\n    \n    \n      _input_hash\n      \n      \n    \n  \n  \n    \n      -584314991\n      reject\n      reject"
+  },
+  {
+    "objectID": "posts/2022-09-27-prodigy-iaa-textcat/index.html#cohens-kappa",
+    "href": "posts/2022-09-27-prodigy-iaa-textcat/index.html#cohens-kappa",
+    "title": "Inter-annotator Agreement (IAA) in Prodigy",
+    "section": "Cohen’s Kappa",
+    "text": "Cohen’s Kappa\nTODO: 2-3 sentences on Cohen’s Kappa.\n\nfrom sklearn.metrics import cohen_kappa_score\n\nkappa = cohen_kappa_score(\n    df_annotations['news_textcat-alex'], \n    df_annotations['news_textcat-jordan'], \n    labels=None, \n    weights=None\n)\n\nprint(kappa)\n\n0.736842105263158\n\n\nSo we’ve found a Cohen’s Kappa of 0.737, which is fairly high.\nTODO: Discussion on interpreting Cohen’s Kappa\n\n\n\n\n\n\nImportant\n\n\n\nIn practice, you may have many more complexities like saving different annotations to different datasets, multi-class classification, span-based tasks like named entity recognition (NER) or spancat, or handling for more than two annotators. This use case is the simplest case; however, I hope to create more advanced use cases in the future."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ryan’s Blog",
+    "section": "",
+    "text": "prodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nprodigy\n\n\ndatabase\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 25, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Ryan Wesslen",
+    "section": "",
+    "text": "I’m a machine learning engineer at Explosion"
+  }
+]

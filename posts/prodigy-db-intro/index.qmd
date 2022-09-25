@@ -1,0 +1,69 @@
+---
+title: "Retrieving Prodigy annotations in Python"
+author: "Ryan Wesslen"
+date: "2022-09-25"
+categories: [prodigy, database]
+execute: 
+  enabled: false
+---
+
+By default, Prodigy includes SQLite database to save annotations. 
+
+Prodigy offers three helpful commands to manipulate.
+
+## `db-in`
+
+```
+python -m prodigy db-in new_dataset /path/to/data.jsonl
+```
+
+## `db-out`
+
+```
+python -m prodigy db-out new_dataset > /path/to/data.jsonl
+```
+
+## `db-merge`
+
+```
+python -m prodigy db-merge new_dataset  
+```
+
+```
+
+## Accessing the database programmatically
+
+Prodigy also offers a database component that enables retrieving 
+
+```
+from prodigy.components.db import connect
+
+db = connect()
+examples = db.get_dataset("my_dataset")
+```
+
+How to use when have them. Use it to describe format for data.
+
+##
+
+
+##
+
+```
+from prodigy.components.db import connect
+
+examples = [{"text": "hello world", "_task_hash": 123, "_input_hash": 456}]
+
+db = connect()                               # uses settings from prodigy.json
+db.add_dataset("test_dataset")               # add dataset
+assert "test_dataset" in db                  # check that dataset was added
+db.add_examples(examples, ["test_dataset"])  # add examples to dataset
+dataset = db.get_dataset("test_dataset")     # retrieve a dataset
+assert len(dataset) == 1                     # check that examples were added
+```
+
+How to find other datasets
+
+```
+all_dataset_names = db.datasets
+```

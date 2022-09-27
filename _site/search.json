@@ -53,7 +53,7 @@
     "href": "index.html",
     "title": "Ryan’s Blog",
     "section": "",
-    "text": "prodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nprodigy\n\n\ndatabase\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 25, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "prodigy\n\n\ndatabase\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\nchinese\n\n\nner\n\n\nconfig\n\n\n\nOverview of how to get started with Chinese in Prodigy\n\n\n\nRyan Wesslen\n\n\nSep 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -61,5 +61,47 @@
     "title": "Ryan Wesslen",
     "section": "",
     "text": "I’m a machine learning engineer at Explosion"
+  },
+  {
+    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html",
+    "href": "posts/2022-09-30-prodigy-db-intro/index.html",
+    "title": "Retrieving Prodigy annotations in Python",
+    "section": "",
+    "text": "By default, Prodigy includes SQLite database to save annotations.\nProdigy offers three helpful commands to manipulate."
+  },
+  {
+    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html#db-in",
+    "href": "posts/2022-09-30-prodigy-db-intro/index.html#db-in",
+    "title": "Retrieving Prodigy annotations in Python",
+    "section": "db-in",
+    "text": "db-in\npython -m prodigy db-in new_dataset /path/to/data.jsonl"
+  },
+  {
+    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html#db-out",
+    "href": "posts/2022-09-30-prodigy-db-intro/index.html#db-out",
+    "title": "Retrieving Prodigy annotations in Python",
+    "section": "db-out",
+    "text": "db-out\npython -m prodigy db-out new_dataset > /path/to/data.jsonl\npython -m prodigy db-out issue-5948 | jq"
+  },
+  {
+    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html#db-merge",
+    "href": "posts/2022-09-30-prodigy-db-intro/index.html#db-merge",
+    "title": "Retrieving Prodigy annotations in Python",
+    "section": "db-merge",
+    "text": "db-merge\npython -m prodigy db-merge new_dataset"
+  },
+  {
+    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html#accessing-the-database-programmatically",
+    "href": "posts/2022-09-30-prodigy-db-intro/index.html#accessing-the-database-programmatically",
+    "title": "Retrieving Prodigy annotations in Python",
+    "section": "Accessing the database programmatically",
+    "text": "Accessing the database programmatically\nProdigy also offers a database component that enables retrieving\nfrom prodigy.components.db import connect\n\ndb = connect()\nexamples = db.get_dataset(\"my_dataset\")\nHow to use when have them. Use it to describe format for data.\nfrom prodigy.components.db import connect\n\nexamples = [{\"text\": \"hello world\", \"_task_hash\": 123, \"_input_hash\": 456}]\n\ndb = connect()                               # uses settings from prodigy.json\ndb.add_dataset(\"test_dataset\")               # add dataset\nassert \"test_dataset\" in db                  # check that dataset was added\ndb.add_examples(examples, [\"test_dataset\"])  # add examples to dataset\ndataset = db.get_dataset(\"test_dataset\")     # retrieve a dataset\nassert len(dataset) == 1                     # check that examples were added\nHow to find other datasets\nall_dataset_names = db.datasets"
+  },
+  {
+    "objectID": "posts/2022-09-28-prodigy-chinese-arabic/index.html",
+    "href": "posts/2022-09-28-prodigy-chinese-arabic/index.html",
+    "title": "Using Prodigy with Chinese",
+    "section": "",
+    "text": "To get started you need to make sure you have one of the pipelines installed.\npython -m spacy download zh_core_web_sm\nNext, we need an input file. Prodigy can use .txt, .csv, and .jsonl files if they follow these input data formats. Let’s say we have a file named zh_headlines.txt of 10 article news headlines.\n# zh_headlines.txt\n新闻人物：有望成为意大利首位女总理的右翼党魁梅洛尼是谁？\n安倍晋三国葬为何在日本充满争议\n中共二十大“懒人包”：你可能想了解的几个基本问题\nNASA进行防御实验，以飞行器直接撞击小行星\n查尔斯国王如何帮助拯救英国农家奶酪\n斯诺登在美国面临间谍指控，可能导致数十年监禁。\n普京授予斯诺登俄罗斯公民身份\n疫情管控放松\n各国新冠疫情渐次“收尾” 大流行怎么定义？\n世界奇观：拥有两千年历史的土耳其地下城\nSince we have an initial ner component, let’s consider refining three entity types: ORG, PERSON, and DATE so we’ll use ner.correct. We can also modify Prodigy configuration and change the user interface instructions to Chinese. It is one of seven languages that are available (English, German, Dutch, Spanish, Portuguese, French, and Chinese). You can implement it through setting PRODIGY_CONFIG_OVERRIDES.\nPRODIGY_CONFIG_OVERRIDES='{\"ui_lang\": \"zh\"}' python -m prodigy ner.correct example_dataset zh_core_web_sm ./chinese_headlines.txt --label ORG,PERSON,DATE\n\nYou can also play with a demo of this interface."
   }
 ]

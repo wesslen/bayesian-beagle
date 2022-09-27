@@ -1,0 +1,47 @@
+---
+title: "Using Prodigy with Chinese"
+author: "Ryan Wesslen"
+date: "2022-09-28"
+categories: [prodigy, chinese, ner, config]
+execute: 
+  enabled: false
+image: chinese_preview.png
+description: "Overview of how to get started with Chinese in Prodigy"
+---
+
+Similar to other major languages like English, spaCy offers [four pipelines for Chinese](https://spacy.io/models/zh): `zh_core_web_sm`, `zh_core_web_md`, `zh_core_web_lg`, and `zh_core_web_trf`. 
+
+To get started you need to make sure you have one of the pipelines installed.
+
+```
+python -m spacy download zh_core_web_sm
+```
+
+Next, we need an input file. Prodigy can use `.txt`, `.csv`, and `.jsonl` files if they follow these [input data formats](https://prodi.gy/docs/api-loaders#input). Let's say we have a file named `zh_headlines.txt` of 10 article news headlines.
+
+```python
+# zh_headlines.txt
+新闻人物：有望成为意大利首位女总理的右翼党魁梅洛尼是谁？
+安倍晋三国葬为何在日本充满争议
+中共二十大“懒人包”：你可能想了解的几个基本问题
+NASA进行防御实验，以飞行器直接撞击小行星
+查尔斯国王如何帮助拯救英国农家奶酪
+斯诺登在美国面临间谍指控，可能导致数十年监禁。
+普京授予斯诺登俄罗斯公民身份
+疫情管控放松
+各国新冠疫情渐次“收尾” 大流行怎么定义？
+世界奇观：拥有两千年历史的土耳其地下城
+```
+
+Since we have an initial `ner` component, let's consider refining three entity types: `ORG`, `PERSON`, and `DATE` so we'll use [`ner.correct`](https://prodi.gy/docs/recipes/#ner-correct). We can also modify [Prodigy configuration](https://prodi.gy/docs/install#config) and change the [user interface instructions](https://prodi.gy/docs/api-web-app/#ui-language) to Chinese. It is one of seven languages that are available (English, German, Dutch, Spanish, Portuguese, French, and Chinese). You can implement it through setting [`PRODIGY_CONFIG_OVERRIDES`](https://prodi.gy/docs/install#config-overrides).
+
+```
+PRODIGY_CONFIG_OVERRIDES='{"ui_lang": "zh"}' python -m prodigy ner.correct example_dataset zh_core_web_sm ./chinese_headlines.txt --label ORG,PERSON,DATE
+```
+
+![](chinese_prodigy.png)
+
+You can also play with a demo of this interface.
+
+<p align="center">
+<iframe src="https://demo.prodi.gy/?=ar&view_id=ner_chars" title="Prodigy Demo" width="600" height="500" data-external="1"></iframe></p>

@@ -1,31 +1,45 @@
 [
   {
-    "objectID": "posts/prodigy-db-intro/index.html",
-    "href": "posts/prodigy-db-intro/index.html",
-    "title": "Retrieving Prodigy annotations in Python",
+    "objectID": "posts/2022-09-28-prodigy-chinese/index.html",
+    "href": "posts/2022-09-28-prodigy-chinese/index.html",
+    "title": "Using Prodigy with Chinese",
     "section": "",
-    "text": "By default, Prodigy includes SQLite database to save annotations.\nProdigy offers three helpful commands to manipulate."
+    "text": "To get started you need to make sure you have one of the pipelines installed.\npython -m spacy download zh_core_web_sm\nNext, we need an input file. Prodigy can use .txt, .csv, and .jsonl files if they follow these input data formats. Let’s say we have a file named zh_headlines.txt of 10 article news headlines.\n# zh_headlines.txt\n新闻人物：有望成为意大利首位女总理的右翼党魁梅洛尼是谁？\n安倍晋三国葬为何在日本充满争议\n中共二十大“懒人包”：你可能想了解的几个基本问题\nNASA进行防御实验，以飞行器直接撞击小行星\n查尔斯国王如何帮助拯救英国农家奶酪\n斯诺登在美国面临间谍指控，可能导致数十年监禁。\n普京授予斯诺登俄罗斯公民身份\n疫情管控放松\n各国新冠疫情渐次“收尾” 大流行怎么定义？\n世界奇观：拥有两千年历史的土耳其地下城\nSince we have an initial ner component, let’s consider refining three entity types: ORG, PERSON, and DATE so we’ll use ner.correct. We can also modify Prodigy configuration and change the user interface instructions to Chinese. It is one of seven languages that are available (English, German, Dutch, Spanish, Portuguese, French, and Chinese). You can implement it through setting PRODIGY_CONFIG_OVERRIDES.\nPRODIGY_CONFIG_OVERRIDES='{\"ui_lang\": \"zh\"}' python -m prodigy ner.correct example_dataset zh_core_web_sm ./chinese_headlines.txt --label ORG,PERSON,DATE\n\nYou can also play with a demo of this interface."
   },
   {
-    "objectID": "posts/prodigy-db-intro/index.html#db-in",
-    "href": "posts/prodigy-db-intro/index.html#db-in",
-    "title": "Retrieving Prodigy annotations in Python",
-    "section": "db-in",
-    "text": "db-in\npython -m prodigy db-in new_dataset /path/to/data.jsonl"
+    "objectID": "posts/2022-10-10-spacy-shiny/index.html",
+    "href": "posts/2022-10-10-spacy-shiny/index.html",
+    "title": "spaCy in Shiny for Python",
+    "section": "",
+    "text": "Recently, RStudio (soon-to-be-renamed, Posit) announced they’re alpha testing an extension of Shiny to Python!\nSo to learn, I created a prototype for spaCy using Shiny for Python, see my GitHub repo for spacy-shiny.\nIn this post, I want to briefly describe the basics of the app. I’ll reference some of the documentation used on the Shiny for Python documentation."
   },
   {
-    "objectID": "posts/prodigy-db-intro/index.html#db-out",
-    "href": "posts/prodigy-db-intro/index.html#db-out",
-    "title": "Retrieving Prodigy annotations in Python",
-    "section": "db-out",
-    "text": "db-out\npython -m prodigy db-out new_dataset > /path/to/data.jsonl"
+    "objectID": "posts/2022-10-10-spacy-shiny/index.html#what-makes-up-a-shiny-app",
+    "href": "posts/2022-10-10-spacy-shiny/index.html#what-makes-up-a-shiny-app",
+    "title": "spaCy in Shiny for Python",
+    "section": "What makes up a Shiny app?",
+    "text": "What makes up a Shiny app?\nShiny apps have two major parts that make up an app: 1. the UI (user-interface) 2. the Server function\nHere’s a generic Shiny app for Python:\nfrom shiny import App, ui\n\n# Part 1: ui ----\napp_ui = ui.page_fluid(\n    \"Hello, world!\",\n)\n\n# Part 2: server ----\ndef server(input, output, session):\n    ...\n\n# Combine into a shiny app.\n# Note that the variable must be \"app\".\napp = App(app_ui, server)\nTo run this file, we’ll need to call from shiny import App, ui. And then to create the app itself, we’ll combine the ui app_ui along with the server function into App(). Easy so far, right?"
   },
   {
-    "objectID": "posts/prodigy-db-intro/index.html#db-merge",
-    "href": "posts/prodigy-db-intro/index.html#db-merge",
-    "title": "Retrieving Prodigy annotations in Python",
-    "section": "db-merge",
-    "text": "db-merge\npython -m prodigy db-merge new_dataset  \n\n## Accessing the database programmatically\n\nProdigy also offers a database component that enables retrieving \n\nfrom prodigy.components.db import connect\ndb = connect() examples = db.get_dataset(“my_dataset”)\n\nHow to use when have them. Use it to describe format for data.\n\n##\n\n\n##\n\nfrom prodigy.components.db import connect\nexamples = [{“text”: “hello world”, “_task_hash”: 123, “_input_hash”: 456}]\ndb = connect() # uses settings from prodigy.json db.add_dataset(“test_dataset”) # add dataset assert “test_dataset” in db # check that dataset was added db.add_examples(examples, [“test_dataset”]) # add examples to dataset dataset = db.get_dataset(“test_dataset”) # retrieve a dataset assert len(dataset) == 1 # check that examples were added\n\nHow to find other datasets\n\nall_dataset_names = db.datasets ```"
+    "objectID": "posts/2022-10-10-spacy-shiny/index.html#basics-of-our-spacy-app-server-side",
+    "href": "posts/2022-10-10-spacy-shiny/index.html#basics-of-our-spacy-app-server-side",
+    "title": "spaCy in Shiny for Python",
+    "section": "Basics of our spaCy app: Server Side",
+    "text": "Basics of our spaCy app: Server Side\nTo describe my spaCy app (see code here), let’s work backwards, starting with the server function first.\ndef server(input, output, session):\n    @output\n    @render.text\n    @reactive.event(input.run) # Take a dependency on the button\n    def result():\n        doc, nlp = process_text(input.spacy_model(), input.text())\n        ...\nThe first line is defining the name and arguments for the server() function. The next line (@output) is a decorator that indicates that the result will be displayed in the UI. Last, the @reactive.event(input.run) means that this function will be a dependent event on some input we’re calling run input.run. We’ll explain this in just a second.\nWe’ll next define a function result(), which will result our main server action. The function will call process_text(), which is a combination of two helper functions:\ndef load_model(name):\n    return spacy.load(name)\n\ndef process_text(model_name, text):\n    nlp = load_model(model_name)\n    return nlp(text), nlp\nThis should be familiar if you’ve used spacy before to load models before. Notice that for process_text(), we also included a second argument for the text. This is what we’ll want to revisit in our user interface as this will become reactive based on the user’s input.\nAlso, we’ll fill in the ... with five additional lines of code, providing how to handle different spaCy components in our server. Notice the logic will look whether our spaCy pipeline has either \"parser\" and/or \"ner\" components and then render the html for each respective component using our input text (input.text()). We then concatenate the html for each part and that is what our server will return.\ndef server(input, output, session):\n    @output\n    @render.text\n    @reactive.event(input.run) # Take a dependency on the button\n    def result():\n        doc, nlp = process_text(input.spacy_model(), input.text())\n        if \"parser\" in nlp.pipe_names:\n            html_parser = get_parser(doc, nlp)\n        if \"ner\" in nlp.pipe_names:\n            html_ner = get_ner(doc, nlp)\n        return html_parser + html_ner\nTo define how we get our html outputs, we’ll provide two additional helper functions in our app.py where we specify what we want to extract from the doc object for either ner or our parser tagging. The key is we want to use displacy, spaCy’s nifty visualizer to render either part-of-speech or named entities into the user interface. So to use either, we want to use display.render().\nHTML_WRAPPER = \"\"\"<div style=\"overflow-x: auto; border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem; margin-bottom: 2.5rem\">{}</div>\"\"\"\n\ndef get_parser(doc, nlp):\n    options = {\n        \"collapse_punct\": True,\n        \"collapse_phrases\": True,\n        \"compact\": True,\n    }\n    docs = [span.as_doc() for span in doc.sents] if True else [doc]\n    for sent in docs:\n        html = displacy.render(sent, style=\"dep\", options=options)\n        html = html.replace(\"\\n\\n\", \"\\n\")\n        html = HTML_WRAPPER.format(html)\n    return html\nIf our spaCy pipeline has a part-of-speech (pos) component, we first can separate the document as sentences by using a list comprehension. We do this because displaCy will display pos tags from left to right, and if we have mulitiple sentences than we’ll need to scroll. By doing this, we’ll stack each pos visualizer vertically, one for each sentence.\nWe’ll then loop through each sentence, inputting it into displacy.render(), adding an additional new line (\\n) to improve the cosmetic look with extra vertical space, then format our html output. Notice that for displacy.render() we included the argument style=\"dep\" to indicate that we were using the dependency parsing.\nAlternatively for ner, we only need to provide the possible labels as an additional argument for display.render, which we can get from nlp.get_pipe(\"ner\").labels. We do need to specify that our style is \"ent\" as we’re interested in visualizing the entities. Then we do a similar trick to add white space by replacing blank lines with a new line character (\\n) and then format the html with HTML_WRAPPER.format().\nHTML_WRAPPER = \"\"\"<div style=\"overflow-x: auto; border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem; margin-bottom: 2.5rem\">{}</div>\"\"\"\n\ndef get_ner(doc, nlp):\n    labels = nlp.get_pipe(\"ner\").labels\n    html = displacy.render(doc, style=\"ent\", options={\"ents\": labels})\n    html = html.replace(\"\\n\", \" \")\n    html = HTML_WRAPPER.format(html)\n    return html"
+  },
+  {
+    "objectID": "posts/2022-10-10-spacy-shiny/index.html#basics-of-our-spacy-app-ui",
+    "href": "posts/2022-10-10-spacy-shiny/index.html#basics-of-our-spacy-app-ui",
+    "title": "spaCy in Shiny for Python",
+    "section": "Basics of our spaCy app: UI",
+    "text": "Basics of our spaCy app: UI\nWe also have to provide details for the user interface on what to display for our app.\nShiny uses a nested layout design for its user interface that typically starts with a ui.page_fluid() function that represents the fluid page. YOu can include other components like the panel_title() for the panel’s title or parts within a sidebar layout.\napp_ui = ui.page_fluid(\n    ui.panel_title(),\n    ui.layout_sidebar(\n        ui.panel_sidebar(\n            ...\n        ),\n        ui.panel_main(\n            ...\n        ),\n    ),\n)\n\n\n\n\n\nShiny’s nested layout design\n\n\nWhat’s great about ui objects is that they are just functions that output html that will be rendered in the user interface.\nFor example, let’s say we want to see what the ui.page_fluid() function does. We can then run the function to see that it simply outputs html code to render the text.\nfrom shiny import ui\n\nui.page_fluid(\"This is my page\")\n\n# <html>\n#   <head></head>\n#   <body>\n#     <div class=\"container-fluid\">This is my page.</div>\n#   </body>\n# </html>\nThere are many other ui objects that you can create and can provide widgets for your user interface.\nFor our interface, we want to provide the user with three options.\nFirst, the user can select their model they want to use.\nSecond, the user can input as a text box what is the text they want their respective model to analyze.\nLast, since shiny implements [reactive programming], we will want to add a button that executes the model select to run on the text provided only when the user clicks a button.\nTo do this, we’ll use the documentation for the UI inputs and identify that we’ll want to use the three functions:\n\nui.input_select(): this will input which spaCy model we’ll use\nui.input_text_area(): this will input what text we want to process in spaCy\nui.input_action_button(): this will be an action button that we’ll execute our server function only when this button is selected.\n\nSPACY_MODEL_NAMES = [\"en_core_web_sm\", \"de_core_news_sm\", \"es_core_news_sm\"]\nDEFAULT_TEXT = \"Tim Cook is the CEO of Apple.\"\n\napp_ui = ui.page_fluid(\n    ui.layout_sidebar(\n        ui.panel_sidebar(    \n            ui.input_select(id = \"spacy_model\", label = \"Model name\", choices = SPACY_MODEL_NAMES),\n            ui.input_text_area(id = \"text\", label = \"Text to analyze\", value = DEFAULT_TEXT),\n            ui.input_action_button(\"run\", \"Run doc!\"),\n        ),\n        ui.panel_main(\n            ui.output_ui(\"result\", placeholder=True),\n        ),\n    )\n)\nAs a last specification, we want to use the layout_sidebar() to include these three inputs in the sidebar of our user interface. We can list each of these three functions inside of the layout_sidebar() function. Last, it’s important to provide a unique id for each of our input functions. We need this as these unique id (names) will help us identify the values within the server side.\nFor example, recall that we named the reactive event in our server function @reactive.event(input.run). Notice that its input is input.run, the name of our input_action_button. Hence, this is how we can provide conditional logic for our reactive flow. We only run the result() function when the user will click the input.run button.\nLast, our only missing element is that we need to specify where we are displaying our display output that returned from our server function. For this, we can use the ui.output_ui() within the ui.panel_main(), which is the main display view of the ui.layout_sidebar(). For the user interface to know what is going to be run, we use result as the first argument as this is the name of our function within the server-side of the app.\nAs a final step, we then combine our UI and server with one final line of code:\napp = App(app_ui, server)\nWe can run this app locally but what if we want others to view our app? We can deploy it."
+  },
+  {
+    "objectID": "posts/2022-10-10-spacy-shiny/index.html#deployment",
+    "href": "posts/2022-10-10-spacy-shiny/index.html#deployment",
+    "title": "spaCy in Shiny for Python",
+    "section": "Deployment",
+    "text": "Deployment\nThe app below is a deployed version of app (see the GitHub repo) on shinyapps.io. This is one of the fastest ways to deploy an app as this is a cloud service provided by Posit. It provides free and paid tiers depending on your use. For more details about preparing your app for deployment, check out the deployment docs.\nWith all of these details, we can now run our app!"
   },
   {
     "objectID": "posts/2022-09-27-prodigy-iaa-textcat/index.html",
@@ -53,7 +67,7 @@
     "href": "index.html",
     "title": "Ryan’s Blog",
     "section": "",
-    "text": "prodigy\n\n\ndatabase\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\nchinese\n\n\nner\n\n\nconfig\n\n\n\nOverview of how to get started with Chinese in Prodigy\n\n\n\nRyan Wesslen\n\n\nSep 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "vis\n\n\nspacy\n\n\n\nCreating an app using spaCy with Shiny for Python\n\n\n\n\n\n\nOct 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\nchinese\n\n\nner\n\n\nconfig\n\n\n\nOverview of how to get started with Chinese in Prodigy\n\n\n\nRyan Wesslen\n\n\nSep 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -63,52 +77,38 @@
     "text": "I’m a machine learning engineer at Explosion"
   },
   {
-    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html",
-    "href": "posts/2022-09-30-prodigy-db-intro/index.html",
+    "objectID": "static/2022-09-30-prodigy-db-intro/index.html",
+    "href": "static/2022-09-30-prodigy-db-intro/index.html",
     "title": "Retrieving Prodigy annotations in Python",
     "section": "",
     "text": "By default, Prodigy includes SQLite database to save annotations.\nProdigy offers three helpful commands to manipulate."
   },
   {
-    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html#db-in",
-    "href": "posts/2022-09-30-prodigy-db-intro/index.html#db-in",
+    "objectID": "static/2022-09-30-prodigy-db-intro/index.html#db-in",
+    "href": "static/2022-09-30-prodigy-db-intro/index.html#db-in",
     "title": "Retrieving Prodigy annotations in Python",
     "section": "db-in",
     "text": "db-in\npython -m prodigy db-in new_dataset /path/to/data.jsonl"
   },
   {
-    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html#db-out",
-    "href": "posts/2022-09-30-prodigy-db-intro/index.html#db-out",
+    "objectID": "static/2022-09-30-prodigy-db-intro/index.html#db-out",
+    "href": "static/2022-09-30-prodigy-db-intro/index.html#db-out",
     "title": "Retrieving Prodigy annotations in Python",
     "section": "db-out",
     "text": "db-out\npython -m prodigy db-out new_dataset > /path/to/data.jsonl\npython -m prodigy db-out issue-5948 | jq"
   },
   {
-    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html#db-merge",
-    "href": "posts/2022-09-30-prodigy-db-intro/index.html#db-merge",
+    "objectID": "static/2022-09-30-prodigy-db-intro/index.html#db-merge",
+    "href": "static/2022-09-30-prodigy-db-intro/index.html#db-merge",
     "title": "Retrieving Prodigy annotations in Python",
     "section": "db-merge",
     "text": "db-merge\npython -m prodigy db-merge new_dataset"
   },
   {
-    "objectID": "posts/2022-09-30-prodigy-db-intro/index.html#accessing-the-database-programmatically",
-    "href": "posts/2022-09-30-prodigy-db-intro/index.html#accessing-the-database-programmatically",
+    "objectID": "static/2022-09-30-prodigy-db-intro/index.html#accessing-the-database-programmatically",
+    "href": "static/2022-09-30-prodigy-db-intro/index.html#accessing-the-database-programmatically",
     "title": "Retrieving Prodigy annotations in Python",
     "section": "Accessing the database programmatically",
     "text": "Accessing the database programmatically\nProdigy also offers a database component that enables retrieving\nfrom prodigy.components.db import connect\n\ndb = connect()\nexamples = db.get_dataset(\"my_dataset\")\nHow to use when have them. Use it to describe format for data.\nfrom prodigy.components.db import connect\n\nexamples = [{\"text\": \"hello world\", \"_task_hash\": 123, \"_input_hash\": 456}]\n\ndb = connect()                               # uses settings from prodigy.json\ndb.add_dataset(\"test_dataset\")               # add dataset\nassert \"test_dataset\" in db                  # check that dataset was added\ndb.add_examples(examples, [\"test_dataset\"])  # add examples to dataset\ndataset = db.get_dataset(\"test_dataset\")     # retrieve a dataset\nassert len(dataset) == 1                     # check that examples were added\nHow to find other datasets\nall_dataset_names = db.datasets"
-  },
-  {
-    "objectID": "posts/2022-09-28-prodigy-chinese-arabic/index.html",
-    "href": "posts/2022-09-28-prodigy-chinese-arabic/index.html",
-    "title": "Using Prodigy with Chinese",
-    "section": "",
-    "text": "To get started you need to make sure you have one of the pipelines installed.\npython -m spacy download zh_core_web_sm\nNext, we need an input file. Prodigy can use .txt, .csv, and .jsonl files if they follow these input data formats. Let’s say we have a file named zh_headlines.txt of 10 article news headlines.\n# zh_headlines.txt\n新闻人物：有望成为意大利首位女总理的右翼党魁梅洛尼是谁？\n安倍晋三国葬为何在日本充满争议\n中共二十大“懒人包”：你可能想了解的几个基本问题\nNASA进行防御实验，以飞行器直接撞击小行星\n查尔斯国王如何帮助拯救英国农家奶酪\n斯诺登在美国面临间谍指控，可能导致数十年监禁。\n普京授予斯诺登俄罗斯公民身份\n疫情管控放松\n各国新冠疫情渐次“收尾” 大流行怎么定义？\n世界奇观：拥有两千年历史的土耳其地下城\nSince we have an initial ner component, let’s consider refining three entity types: ORG, PERSON, and DATE so we’ll use ner.correct. We can also modify Prodigy configuration and change the user interface instructions to Chinese. It is one of seven languages that are available (English, German, Dutch, Spanish, Portuguese, French, and Chinese). You can implement it through setting PRODIGY_CONFIG_OVERRIDES.\nPRODIGY_CONFIG_OVERRIDES='{\"ui_lang\": \"zh\"}' python -m prodigy ner.correct example_dataset zh_core_web_sm ./chinese_headlines.txt --label ORG,PERSON,DATE\n\nYou can also play with a demo of this interface."
-  },
-  {
-    "objectID": "posts/2022-09-28-prodigy-chinese/index.html",
-    "href": "posts/2022-09-28-prodigy-chinese/index.html",
-    "title": "Using Prodigy with Chinese",
-    "section": "",
-    "text": "To get started you need to make sure you have one of the pipelines installed.\npython -m spacy download zh_core_web_sm\nNext, we need an input file. Prodigy can use .txt, .csv, and .jsonl files if they follow these input data formats. Let’s say we have a file named zh_headlines.txt of 10 article news headlines.\n# zh_headlines.txt\n新闻人物：有望成为意大利首位女总理的右翼党魁梅洛尼是谁？\n安倍晋三国葬为何在日本充满争议\n中共二十大“懒人包”：你可能想了解的几个基本问题\nNASA进行防御实验，以飞行器直接撞击小行星\n查尔斯国王如何帮助拯救英国农家奶酪\n斯诺登在美国面临间谍指控，可能导致数十年监禁。\n普京授予斯诺登俄罗斯公民身份\n疫情管控放松\n各国新冠疫情渐次“收尾” 大流行怎么定义？\n世界奇观：拥有两千年历史的土耳其地下城\nSince we have an initial ner component, let’s consider refining three entity types: ORG, PERSON, and DATE so we’ll use ner.correct. We can also modify Prodigy configuration and change the user interface instructions to Chinese. It is one of seven languages that are available (English, German, Dutch, Spanish, Portuguese, French, and Chinese). You can implement it through setting PRODIGY_CONFIG_OVERRIDES.\nPRODIGY_CONFIG_OVERRIDES='{\"ui_lang\": \"zh\"}' python -m prodigy ner.correct example_dataset zh_core_web_sm ./chinese_headlines.txt --label ORG,PERSON,DATE\n\nYou can also play with a demo of this interface."
   }
 ]

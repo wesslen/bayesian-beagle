@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ryan Wesslen">
-<meta name="dcterms.date" content="2022-09-25">
+<meta name="dcterms.date" content="2022-09-30">
 
 <title>Ryan’s blog - Retrieving Prodigy annotations in Python</title>
 <style>
@@ -113,46 +113,44 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Retrieving Prodigy annotations in Python</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">prodigy</div>
-                <div class="quarto-category">database</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Ryan Wesslen </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">September 25, 2022</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Retrieving Prodigy annotations in Python</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">prodigy</div>
+    <div class="quarto-category">database</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ryan Wesslen </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 30, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
 
 <p>By default, Prodigy includes SQLite database to save annotations.</p>
 <p>Prodigy offers three helpful commands to manipulate.</p>
@@ -163,32 +161,32 @@ ul.task-list li input[type="checkbox"] {
 <section id="db-out" class="level2">
 <h2 class="anchored" data-anchor-id="db-out"><code>db-out</code></h2>
 <pre><code>python -m prodigy db-out new_dataset &gt; /path/to/data.jsonl</code></pre>
+<pre><code>python -m prodigy db-out issue-5948 | jq </code></pre>
 </section>
 <section id="db-merge" class="level2">
 <h2 class="anchored" data-anchor-id="db-merge"><code>db-merge</code></h2>
 <pre><code>python -m prodigy db-merge new_dataset  </code></pre>
-<pre><code>
-## Accessing the database programmatically
+</section>
+<section id="accessing-the-database-programmatically" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-the-database-programmatically">Accessing the database programmatically</h2>
+<p>Prodigy also offers a database component that enables retrieving</p>
+<pre><code>from prodigy.components.db import connect
 
-Prodigy also offers a database component that enables retrieving 
-</code></pre>
-<p>from prodigy.components.db import connect</p>
-<p>db = connect() examples = db.get_dataset(“my_dataset”)</p>
-<pre><code>
-How to use when have them. Use it to describe format for data.
+db = connect()
+examples = db.get_dataset("my_dataset")</code></pre>
+<p>How to use when have them. Use it to describe format for data.</p>
+<pre><code>from prodigy.components.db import connect
 
-##
+examples = [{"text": "hello world", "_task_hash": 123, "_input_hash": 456}]
 
-
-##
-</code></pre>
-<p>from prodigy.components.db import connect</p>
-<p>examples = [{“text”: “hello world”, “_task_hash”: 123, “_input_hash”: 456}]</p>
-<p>db = connect() # uses settings from prodigy.json db.add_dataset(“test_dataset”) # add dataset assert “test_dataset” in db # check that dataset was added db.add_examples(examples, [“test_dataset”]) # add examples to dataset dataset = db.get_dataset(“test_dataset”) # retrieve a dataset assert len(dataset) == 1 # check that examples were added</p>
-<pre><code>
-How to find other datasets
-</code></pre>
-<p>all_dataset_names = db.datasets ```</p>
+db = connect()                               # uses settings from prodigy.json
+db.add_dataset("test_dataset")               # add dataset
+assert "test_dataset" in db                  # check that dataset was added
+db.add_examples(examples, ["test_dataset"])  # add examples to dataset
+dataset = db.get_dataset("test_dataset")     # retrieve a dataset
+assert len(dataset) == 1                     # check that examples were added</code></pre>
+<p>How to find other datasets</p>
+<pre><code>all_dataset_names = db.datasets</code></pre>
 
 
 </section>

@@ -328,28 +328,6 @@ Note
 <pre><code>python -m prodigy db-merge new_dataset  </code></pre>
 <p>TODO: Give an illustrative example</p>
 <p>TODO: <a href="https://support.prodi.gy/t/prodigy-ner-train-recipe-getting-killed-by-oom/3453/2">Problem with <code>db-merge</code> memory</a>.</p>
-</section>
-<section id="accessing-the-database-programmatically" class="level2">
-<h2 class="anchored" data-anchor-id="accessing-the-database-programmatically">Accessing the database programmatically</h2>
-<p>Prodigy also offers a database component that enables retrieving</p>
-<pre><code>from prodigy.components.db import connect
-
-db = connect()
-examples = db.get_dataset("my_dataset")</code></pre>
-<p>How to use when have them.</p>
-<p>Use it to describe format for data.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> prodigy.components.db <span class="im">import</span> <span class="ex">connect</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>examples <span class="op">=</span> [{<span class="st">"text"</span>: <span class="st">"hello world"</span>, <span class="st">"_task_hash"</span>: <span class="dv">123</span>, <span class="st">"_input_hash"</span>: <span class="dv">456</span>}]</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>db <span class="op">=</span> <span class="ex">connect</span>()                               <span class="co"># uses settings from prodigy.json</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>db.add_dataset(<span class="st">"test_dataset"</span>)               <span class="co"># add dataset</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="st">"test_dataset"</span> <span class="kw">in</span> db                  <span class="co"># check that dataset was added</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>db.add_examples(examples, [<span class="st">"test_dataset"</span>])  <span class="co"># add examples to dataset</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> db.get_dataset(<span class="st">"test_dataset"</span>)     <span class="co"># retrieve a dataset</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="bu">len</span>(dataset) <span class="op">==</span> <span class="dv">1</span>                     <span class="co"># check that examples were added</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>How to find other datasets</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>all_dataset_names <span class="op">=</span> db.datasets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

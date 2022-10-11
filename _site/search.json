@@ -119,13 +119,6 @@
     "text": "db-merge\nTODO: explain db-merge.\npython -m prodigy db-merge new_dataset  \nTODO: Give an illustrative example\nTODO: Problem with db-merge memory."
   },
   {
-    "objectID": "posts/2022-10-11-prodigy-db-intro/index.html#accessing-the-database-programmatically",
-    "href": "posts/2022-10-11-prodigy-db-intro/index.html#accessing-the-database-programmatically",
-    "title": "Retrieving annotations in Prodigy",
-    "section": "Accessing the database programmatically",
-    "text": "Accessing the database programmatically\nProdigy also offers a database component that enables retrieving\nfrom prodigy.components.db import connect\n\ndb = connect()\nexamples = db.get_dataset(\"my_dataset\")\nHow to use when have them.\nUse it to describe format for data.\nfrom prodigy.components.db import connect\n\nexamples = [{\"text\": \"hello world\", \"_task_hash\": 123, \"_input_hash\": 456}]\n\ndb = connect()                               # uses settings from prodigy.json\ndb.add_dataset(\"test_dataset\")               # add dataset\nassert \"test_dataset\" in db                  # check that dataset was added\ndb.add_examples(examples, [\"test_dataset\"])  # add examples to dataset\ndataset = db.get_dataset(\"test_dataset\")     # retrieve a dataset\nassert len(dataset) == 1                     # check that examples were added\nHow to find other datasets\nall_dataset_names = db.datasets"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ryan Wesslen",

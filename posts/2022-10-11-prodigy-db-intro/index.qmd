@@ -1,0 +1,182 @@
+---
+title: "Retrieving annotations in Prodigy"
+author: "Ryan Wesslen"
+date: "2022-10-11"
+description: "How to use Prodigy database recipes for handling annotated data."
+categories: [prodigy, database, sqlite]
+execute: 
+  enabled: true
+---
+
+By default, [Prodigy](https://prodi.gy/) includes a [SQLite](https://www.sqlite.org/index.html) database to save annotations. This enables using SQLite to be used out of the box without additional configuration. While there are many ways to customize the database, many users may be able to interact with their annotations only requiring three helpful Prodigy recipes: [`db-in`](#db-in), [`db-out`](#db-out), and [`db-merge`](#db-merge).
+
+In this post, I want to briefly review these recipes. Near the end, I'll also show how you can interact with [Prodigy's default database too from Python](#accessing-the-database-programmatically) to enable a more programmatic approach. We won't cover all aspects of Prodigy's database but I encourage the interested reader to see the [Prodigy database documentation](https://prodi.gy/docs/api-database) or [Prodigy Support issues tagged as database](https://support.prodi.gy/tag/database).
+
+
+## `db-out`
+
+Let's start first with the problem of exporting out annotations to files. For this, we'll use the `db-out` recipe that includes two arguments:
+1. `my_dataset` which is the Prodigy dataset we want to export
+2. `> /path/to/data.jsonl` which is the file location of the exported dataset. 
+
+To see this, let's first say we have a dataset named `ceo-letters`. It is 10 sentences from a CEO's Letter to Shareholders.
+
+
+```bash
+python -m prodigy db-out my_dataset > /path/to/data.jsonl
+```
+
+```bash
+python -m prodigy db-out  | jq 
+```
+
+TODO: show example
+
+## `db-in`
+
+The [`db-in`](https://prodi.gy/docs/recipes#db-in) is a recipe to load in new examples into your Prodigy database.
+
+:::{.callout-note}
+The `db-in` command is typically used to import existing annotations into your Prodigy datasets – for example, if you've already labelled data with some other process and want to combine it with new annotations or if you want to re-import annotations to a new dataset.
+
+If you just want to annotate data, you do not have to import anything upfront – you can just start the server with your input data and Prodigy will stream it in, let you annotate and save the collected annotations to the database.
+:::
+
+Prodigy prefers [newline-delimited JSON](https://jsonlines.org/) (or JSONL), as it can contain detailed information and meta data and allows being read in line by line. 
+
+Unlike regular JSON, JSONL doesn’t require parsing the entire file, which results in overall better performance when working with large volumes of text.
+
+TODO: change to [NER example]()
+
+As an example, we'll use an annotation that is in the format of the [`ner_manual` user interface](https://prodi.gy/docs/api-interfaces#ner_manual) with one annotation:
+
+```json
+{
+  "text": "First look at the new MacBook Pro",
+  "spans": [
+    {"start": 22, "end": 33, "label": "PRODUCT", "token_start": 5, "token_end": 6}
+  ],
+  "tokens": [
+    {"text": "First", "start": 0, "end": 5, "id": 0},
+    {"text": "look", "start": 6, "end": 10, "id": 1},
+    {"text": "at", "start": 11, "end": 13, "id": 2},
+    {"text": "the", "start": 14, "end": 17, "id": 3},
+    {"text": "new", "start": 18, "end": 21, "id": 4},
+    {"text": "MacBook", "start": 22, "end": 29, "id": 5},
+    {"text": "Pro", "start": 30, "end": 33, "id": 6}
+  ]
+}
+```
+
+For input `.jsonl` files, the key `"text"` required and contains the text contents of the document typically a sentence. 
+
+The `db-in` recipe requires two arguments:
+
+1. the name of the new dataset (`new_dataset`)
+2. a path to the input file (`/path/to/data.jsonl`)
+
+```bash
+python -m prodigy db-in new_dataset /path/to/data.jsonl
+```
+
+For example, let's say we have in our current working folder a file named `ner-sample.jsonl` that includes 1 documents, each with a sentence from a CEO's Letter to Shareholder. We can then read that file into the database as:
+
+```bash
+python -m prodigy db-in ner-sample ner-sample.jsonl
+✔ Created dataset 'ner_sample' in database SQLite
+✔ Imported 1 annotations to 'ner_sample' (session
+2022-10-11_13-22-26) in database SQLite
+Found and keeping existing "answer" in 0 examples
+```
+
+A few points to note. First, by running this command, Prodigy will create a new dataset named `ner_sample` into our default SQLite database. 
+
+TODO: explain other aspects. [Example of db-in options](https://support.prodi.gy/t/split-a-ner-manual-dataset-into-smaller-texts/5713/4)
+
+:::{.callout-note}
+What if your documents are not on a sentence level to start with? That's okay, you can use spaCy and its sentence segmenter in the `en_core_web_sm` model.
+
+```json
+{"text": "This is a sentence. This is another sentence. And then this is a sentence."}
+```
+
+```{python}
+#| echo: true
+#| eval: true
+
+import spacy
+import srsly
+
+nlp = spacy.load("en_core_web_sm")
+examples = srsly.read_jsonl("sentences.jsonl")
+texts = (eg["text"] for eg in examples)
+
+sentences = []
+for doc in nlp.pipe(texts):
+  for sent in doc.sents:
+    sentences.append({"text": sent.text}) 
+
+print(sentences)
+```
+
+You can use `srsly.write_jsonl` to export the data to a `.jsonl`:
+
+```python
+srsly.write_jsonl(output_loc, new_examples)
+```
+
+Alternatively, with Prodigy you can train your own sentence segmenter or use one of spaCy universe's projects like [`pySBD`](https://spacy.io/universe/project/python-sentence-boundary-disambiguation).
+
+Last, several off-the-shelf Prodigy recipes like [`ner.correct`](https://prodi.gy/docs/recipes#ner-correct) or [`ner.teach`](https://prodi.gy/docs/recipes#ner-teach) use a sentence segmenter as it's default behavior. You may turn off this behavior to not segment sentences by adding `--unsegmented` to the recipe.
+:::
+
+
+## `db-merge`
+
+TODO: explain db-merge.
+
+```
+python -m prodigy db-merge new_dataset  
+```
+
+TODO: Give an illustrative example
+
+
+TODO: [Problem with `db-merge` memory](https://support.prodi.gy/t/prodigy-ner-train-recipe-getting-killed-by-oom/3453/2).
+
+
+## Accessing the database programmatically
+
+Prodigy also offers a database component that enables retrieving 
+
+```
+from prodigy.components.db import connect
+
+db = connect()
+examples = db.get_dataset("my_dataset")
+```
+
+How to use when have them. 
+
+Use it to describe format for data.
+
+```python
+from prodigy.components.db import connect
+
+examples = [{"text": "hello world", "_task_hash": 123, "_input_hash": 456}]
+
+db = connect()                               # uses settings from prodigy.json
+db.add_dataset("test_dataset")               # add dataset
+assert "test_dataset" in db                  # check that dataset was added
+db.add_examples(examples, ["test_dataset"])  # add examples to dataset
+dataset = db.get_dataset("test_dataset")     # retrieve a dataset
+assert len(dataset) == 1                     # check that examples were added
+```
+
+How to find other datasets
+
+```python
+all_dataset_names = db.datasets
+```
+
+

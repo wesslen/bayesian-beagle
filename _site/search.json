@@ -42,6 +42,27 @@
     "text": "Deployment\nThe app below is a deployed version of app (see the GitHub repo) on shinyapps.io. This is one of the fastest ways to deploy an app as this is a cloud service provided by Posit. It provides free and paid tiers depending on your use. For more details about preparing your app for deployment, check out the deployment docs.\nWith all of these details, we can now run our app!"
   },
   {
+    "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html",
+    "href": "posts/2022-10-12-prodigy-peewee-db/index.html",
+    "title": "Prodigy Database: peewee and ORM’s",
+    "section": "",
+    "text": "In a previous post, I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database.\nHowever, that post abstractted"
+  },
+  {
+    "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html#under-the-hood",
+    "href": "posts/2022-10-12-prodigy-peewee-db/index.html#under-the-hood",
+    "title": "Prodigy Database: peewee and ORM’s",
+    "section": "Under the hood",
+    "text": "Under the hood\nCurrently (v1.11.8), Prodigy uses peewee for its ORM. An ORM is a “object-relational mapping” library. An ORM provides tools to convert (“map”) between objects in code and database tables (“relations”).\nWith an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type.\nFor example, a class named Animals can represent a SQL table animals. Each instance object of that class represents a row in the database."
+  },
+  {
+    "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html#datasette",
+    "href": "posts/2022-10-12-prodigy-peewee-db/index.html#datasette",
+    "title": "Prodigy Database: peewee and ORM’s",
+    "section": "datasette",
+    "text": "datasette\nTo get started, let’s first install datasette.\npip3 install datasette\ndatasette ~/.prodigy/prodigy.db"
+  },
+  {
     "objectID": "posts/2022-09-27-prodigy-iaa-textcat/index.html",
     "href": "posts/2022-09-27-prodigy-iaa-textcat/index.html",
     "title": "Inter-annotator Agreement (IAA) in Prodigy",
@@ -63,11 +84,46 @@
     "text": "Cohen’s Kappa\nTODO: 2-3 sentences on Cohen’s Kappa.\n\nfrom sklearn.metrics import cohen_kappa_score\n\nkappa = cohen_kappa_score(\n    df_annotations['news_textcat-alex'], \n    df_annotations['news_textcat-jordan'], \n    labels=None, \n    weights=None\n)\n\nprint(kappa)\n\n0.736842105263158\n\n\nSo we’ve found a Cohen’s Kappa of 0.737, which is fairly high.\nTODO: Discussion on interpreting Cohen’s Kappa\n\n\n\n\n\n\nImportant\n\n\n\nIn practice, you may have many more complexities like saving different annotations to different datasets, multi-class classification, span-based tasks like named entity recognition (NER) or spancat, or handling for more than two annotators. This use case is the simplest case; however, I hope to create more advanced use cases in the future."
   },
   {
+    "objectID": "posts/2022-10-11-prodigy-db-intro/index.html",
+    "href": "posts/2022-10-11-prodigy-db-intro/index.html",
+    "title": "Retrieving annotations in Prodigy",
+    "section": "",
+    "text": "By default, Prodigy includes a SQLite database to save annotations. This enables using SQLite to be used out of the box without additional configuration. While there are many ways to customize the database, many users may be able to interact with their annotations only requiring three helpful Prodigy recipes: db-in, db-out, and db-merge.\nIn this post, I want to briefly review these recipes. Near the end, I’ll also show how you can interact with Prodigy’s default database too from Python to enable a more programmatic approach. We won’t cover all aspects of Prodigy’s database but I encourage the interested reader to see the Prodigy database documentation or Prodigy Support issues tagged as database."
+  },
+  {
+    "objectID": "posts/2022-10-11-prodigy-db-intro/index.html#db-out",
+    "href": "posts/2022-10-11-prodigy-db-intro/index.html#db-out",
+    "title": "Retrieving annotations in Prodigy",
+    "section": "db-out",
+    "text": "db-out\nLet’s start first with the problem of exporting out annotations to files. For this, we’ll use the db-out recipe that includes two arguments: 1. my_dataset which is the Prodigy dataset we want to export 2. > /path/to/data.jsonl which is the file location of the exported dataset.\nTo see this, let’s first say we have a dataset named ceo-letters. It is 10 sentences from a CEO’s Letter to Shareholders.\npython -m prodigy db-out my_dataset > /path/to/data.jsonl\npython -m prodigy db-out  | jq \nTODO: show example"
+  },
+  {
+    "objectID": "posts/2022-10-11-prodigy-db-intro/index.html#db-in",
+    "href": "posts/2022-10-11-prodigy-db-intro/index.html#db-in",
+    "title": "Retrieving annotations in Prodigy",
+    "section": "db-in",
+    "text": "db-in\nThe db-in is a recipe to load in new examples into your Prodigy database.\n\n\n\n\n\n\nNote\n\n\n\nThe db-in command is typically used to import existing annotations into your Prodigy datasets – for example, if you’ve already labelled data with some other process and want to combine it with new annotations or if you want to re-import annotations to a new dataset.\nIf you just want to annotate data, you do not have to import anything upfront – you can just start the server with your input data and Prodigy will stream it in, let you annotate and save the collected annotations to the database.\n\n\nProdigy prefers newline-delimited JSON (or JSONL), as it can contain detailed information and meta data and allows being read in line by line.\nUnlike regular JSON, JSONL doesn’t require parsing the entire file, which results in overall better performance when working with large volumes of text.\nTODO: change to NER example\nAs an example, we’ll use an annotation that is in the format of the ner_manual user interface with one annotation:\n{\n  \"text\": \"First look at the new MacBook Pro\",\n  \"spans\": [\n    {\"start\": 22, \"end\": 33, \"label\": \"PRODUCT\", \"token_start\": 5, \"token_end\": 6}\n  ],\n  \"tokens\": [\n    {\"text\": \"First\", \"start\": 0, \"end\": 5, \"id\": 0},\n    {\"text\": \"look\", \"start\": 6, \"end\": 10, \"id\": 1},\n    {\"text\": \"at\", \"start\": 11, \"end\": 13, \"id\": 2},\n    {\"text\": \"the\", \"start\": 14, \"end\": 17, \"id\": 3},\n    {\"text\": \"new\", \"start\": 18, \"end\": 21, \"id\": 4},\n    {\"text\": \"MacBook\", \"start\": 22, \"end\": 29, \"id\": 5},\n    {\"text\": \"Pro\", \"start\": 30, \"end\": 33, \"id\": 6}\n  ]\n}\nFor input .jsonl files, the key \"text\" required and contains the text contents of the document typically a sentence.\nThe db-in recipe requires two arguments:\n\nthe name of the new dataset (new_dataset)\na path to the input file (/path/to/data.jsonl)\n\npython -m prodigy db-in new_dataset /path/to/data.jsonl\nFor example, let’s say we have in our current working folder a file named ner-sample.jsonl that includes 1 documents, each with a sentence from a CEO’s Letter to Shareholder. We can then read that file into the database as:\npython -m prodigy db-in ner-sample ner-sample.jsonl\n✔ Created dataset 'ner_sample' in database SQLite\n✔ Imported 1 annotations to 'ner_sample' (session\n2022-10-11_13-22-26) in database SQLite\nFound and keeping existing \"answer\" in 0 examples\nA few points to note. First, by running this command, Prodigy will create a new dataset named ner_sample into our default SQLite database.\nTODO: explain other aspects. Example of db-in options\n\n\n\n\n\n\nNote\n\n\n\nWhat if your documents are not on a sentence level to start with? That’s okay, you can use spaCy and its sentence segmenter in the en_core_web_sm model.\n{\"text\": \"This is a sentence. This is another sentence. And then this is a sentence.\"}\n\nimport spacy\nimport srsly\n\nnlp = spacy.load(\"en_core_web_sm\")\nexamples = srsly.read_jsonl(\"sentences.jsonl\")\ntexts = (eg[\"text\"] for eg in examples)\n\nsentences = []\nfor doc in nlp.pipe(texts):\n  for sent in doc.sents:\n    sentences.append({\"text\": sent.text}) \n\nprint(sentences)\n\n[{'text': 'This is a sentence.'}, {'text': 'This is another sentence.'}, {'text': 'And then this is a sentence.'}]\n\n\nYou can use srsly.write_jsonl to export the data to a .jsonl:\nsrsly.write_jsonl(output_loc, new_examples)\nAlternatively, with Prodigy you can train your own sentence segmenter or use one of spaCy universe’s projects like pySBD.\nLast, several off-the-shelf Prodigy recipes like ner.correct or ner.teach use a sentence segmenter as it’s default behavior. You may turn off this behavior to not segment sentences by adding --unsegmented to the recipe."
+  },
+  {
+    "objectID": "posts/2022-10-11-prodigy-db-intro/index.html#db-merge",
+    "href": "posts/2022-10-11-prodigy-db-intro/index.html#db-merge",
+    "title": "Retrieving annotations in Prodigy",
+    "section": "db-merge",
+    "text": "db-merge\nTODO: explain db-merge.\npython -m prodigy db-merge new_dataset  \nTODO: Give an illustrative example\nTODO: Problem with db-merge memory."
+  },
+  {
+    "objectID": "posts/2022-10-11-prodigy-db-intro/index.html#accessing-the-database-programmatically",
+    "href": "posts/2022-10-11-prodigy-db-intro/index.html#accessing-the-database-programmatically",
+    "title": "Retrieving annotations in Prodigy",
+    "section": "Accessing the database programmatically",
+    "text": "Accessing the database programmatically\nProdigy also offers a database component that enables retrieving\nfrom prodigy.components.db import connect\n\ndb = connect()\nexamples = db.get_dataset(\"my_dataset\")\nHow to use when have them.\nUse it to describe format for data.\nfrom prodigy.components.db import connect\n\nexamples = [{\"text\": \"hello world\", \"_task_hash\": 123, \"_input_hash\": 456}]\n\ndb = connect()                               # uses settings from prodigy.json\ndb.add_dataset(\"test_dataset\")               # add dataset\nassert \"test_dataset\" in db                  # check that dataset was added\ndb.add_examples(examples, [\"test_dataset\"])  # add examples to dataset\ndataset = db.get_dataset(\"test_dataset\")     # retrieve a dataset\nassert len(dataset) == 1                     # check that examples were added\nHow to find other datasets\nall_dataset_names = db.datasets"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ryan’s Blog",
     "section": "",
-    "text": "vis\n\n\nspacy\n\n\n\nCreating an app using spaCy with Shiny for Python\n\n\n\n\n\n\nOct 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\nchinese\n\n\nner\n\n\nconfig\n\n\n\nOverview of how to get started with Chinese in Prodigy\n\n\n\nRyan Wesslen\n\n\nSep 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "prodigy\n\n\ndatabase\n\n\norm\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nOct 12, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nprodigy\n\n\ndatabase\n\n\nsqlite\n\n\n\nHow to use Prodigy database recipes for handling annotated data.\n\n\n\nRyan Wesslen\n\n\nOct 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvis\n\n\nspacy\n\n\n\nCreating an app using spaCy with Shiny for Python\n\n\n\nRyan Wesslen\n\n\nOct 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\nchinese\n\n\nner\n\n\nconfig\n\n\n\nOverview of how to annotate with Chinese in Prodigy\n\n\n\nRyan Wesslen\n\n\nSep 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -75,40 +131,5 @@
     "title": "Ryan Wesslen",
     "section": "",
     "text": "I’m a machine learning engineer at Explosion"
-  },
-  {
-    "objectID": "static/2022-09-30-prodigy-db-intro/index.html",
-    "href": "static/2022-09-30-prodigy-db-intro/index.html",
-    "title": "Retrieving Prodigy annotations in Python",
-    "section": "",
-    "text": "By default, Prodigy includes SQLite database to save annotations.\nProdigy offers three helpful commands to manipulate."
-  },
-  {
-    "objectID": "static/2022-09-30-prodigy-db-intro/index.html#db-in",
-    "href": "static/2022-09-30-prodigy-db-intro/index.html#db-in",
-    "title": "Retrieving Prodigy annotations in Python",
-    "section": "db-in",
-    "text": "db-in\npython -m prodigy db-in new_dataset /path/to/data.jsonl"
-  },
-  {
-    "objectID": "static/2022-09-30-prodigy-db-intro/index.html#db-out",
-    "href": "static/2022-09-30-prodigy-db-intro/index.html#db-out",
-    "title": "Retrieving Prodigy annotations in Python",
-    "section": "db-out",
-    "text": "db-out\npython -m prodigy db-out new_dataset > /path/to/data.jsonl\npython -m prodigy db-out issue-5948 | jq"
-  },
-  {
-    "objectID": "static/2022-09-30-prodigy-db-intro/index.html#db-merge",
-    "href": "static/2022-09-30-prodigy-db-intro/index.html#db-merge",
-    "title": "Retrieving Prodigy annotations in Python",
-    "section": "db-merge",
-    "text": "db-merge\npython -m prodigy db-merge new_dataset"
-  },
-  {
-    "objectID": "static/2022-09-30-prodigy-db-intro/index.html#accessing-the-database-programmatically",
-    "href": "static/2022-09-30-prodigy-db-intro/index.html#accessing-the-database-programmatically",
-    "title": "Retrieving Prodigy annotations in Python",
-    "section": "Accessing the database programmatically",
-    "text": "Accessing the database programmatically\nProdigy also offers a database component that enables retrieving\nfrom prodigy.components.db import connect\n\ndb = connect()\nexamples = db.get_dataset(\"my_dataset\")\nHow to use when have them. Use it to describe format for data.\nfrom prodigy.components.db import connect\n\nexamples = [{\"text\": \"hello world\", \"_task_hash\": 123, \"_input_hash\": 456}]\n\ndb = connect()                               # uses settings from prodigy.json\ndb.add_dataset(\"test_dataset\")               # add dataset\nassert \"test_dataset\" in db                  # check that dataset was added\ndb.add_examples(examples, [\"test_dataset\"])  # add examples to dataset\ndataset = db.get_dataset(\"test_dataset\")     # retrieve a dataset\nassert len(dataset) == 1                     # check that examples were added\nHow to find other datasets\nall_dataset_names = db.datasets"
   }
 ]

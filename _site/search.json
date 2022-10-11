@@ -44,23 +44,30 @@
   {
     "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html",
     "href": "posts/2022-10-12-prodigy-peewee-db/index.html",
-    "title": "Prodigy Database: peewee and ORM’s",
+    "title": "Prodigy Database: ORM’s, peewee and Python",
     "section": "",
-    "text": "In a previous post, I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database.\nHowever, that post abstractted"
+    "text": "In a previous post, I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database. However, you may find you want more interaction with your annotation database. In this post, I want to deep dive a little into Prodigy’s database details. If you’re relatively new to Prodigy’s database, I recommend Prodigy’s Database documentation."
   },
   {
-    "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html#under-the-hood",
-    "href": "posts/2022-10-12-prodigy-peewee-db/index.html#under-the-hood",
-    "title": "Prodigy Database: peewee and ORM’s",
-    "section": "Under the hood",
-    "text": "Under the hood\nCurrently (v1.11.8), Prodigy uses peewee for its ORM. An ORM is a “object-relational mapping” library. An ORM provides tools to convert (“map”) between objects in code and database tables (“relations”).\nWith an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type.\nFor example, a class named Animals can represent a SQL table animals. Each instance object of that class represents a row in the database."
+    "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html#under-the-hood-orm-and-peewee",
+    "href": "posts/2022-10-12-prodigy-peewee-db/index.html#under-the-hood-orm-and-peewee",
+    "title": "Prodigy Database: ORM’s, peewee and Python",
+    "section": "Under the hood: ORM and peewee",
+    "text": "Under the hood: ORM and peewee\nAs of v1.11.8, Prodigy’s database has implemented an ORM, or “object-relational mapping” setup. The key idea of an ORM is to implement an object-oriented paradigm to database.\nBy contrast, if you’re from data analytics, you’ve likely used databases as SQL database management systems (DBMS) such as SQLite or MySQL. These systems are not object-oriented and on their own can only store and manipulate scalar values such as integers and strings organized within tables.\nThe programmer must either convert the object values into groups of simpler values for storage in the database (and convert them back upon retrieval), or only use simple scalar values within the program. Object–relational mapping implements the first approach.\nNow wait - you may have learned from the previous post the Prodigy implements by default SQLite. How can Prodigy use an ORM approach but still implement a DBMS like SQLite?\nThat’s because Prodigy also includes peewee, is a common open-source ORM and operates as Prodigy’s ORM. There are many alternative ORMs and they vary by programming language.\nAn ORM provides tools to convert (“map”) between objects in code and database tables (“relations”). With an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type. For example, a class named Animals can represent a SQL table animals. Each instance object of that class represents a row in the database.\nTODO: explain model and connect to second part\nSo why would we even use an ORM? ORM’s enable us to interact with our database using our language of choice instead of SQL."
   },
   {
-    "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html#datasette",
-    "href": "posts/2022-10-12-prodigy-peewee-db/index.html#datasette",
-    "title": "Prodigy Database: peewee and ORM’s",
-    "section": "datasette",
-    "text": "datasette\nTo get started, let’s first install datasette.\npip3 install datasette\ndatasette ~/.prodigy/prodigy.db"
+    "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html#accessing-the-database-programmatically-with-python",
+    "href": "posts/2022-10-12-prodigy-peewee-db/index.html#accessing-the-database-programmatically-with-python",
+    "title": "Prodigy Database: ORM’s, peewee and Python",
+    "section": "Accessing the database programmatically with Python",
+    "text": "Accessing the database programmatically with Python\nProdigy’s database model is included with the library and is available via prodigy.components.db in Python.\nfrom prodigy.components.db import connect\n\ndb = connect(\"sqlite\", {\"name\": \"prodigy.db\"}) # default\nexamples = db.get_dataset(\"my_dataset\")\nTODO: How to use\nTODO: Show data format for data.\nfrom prodigy.components.db import connect\n\nexamples = [{\"text\": \"hello world\", \"_task_hash\": 123, \"_input_hash\": 456}]\n\ndb = connect()                               # uses settings from prodigy.json\ndb.add_dataset(\"test_dataset\")               # add dataset\nassert \"test_dataset\" in db                  # check that dataset was added\ndb.add_examples(examples, [\"test_dataset\"])  # add examples to dataset\ndataset = db.get_dataset(\"test_dataset\")     # retrieve a dataset\nassert len(dataset) == 1                     # check that examples were added\nAlternatively, you can view the datasets like:\nprint(db.datasets)\nTODO: give an interesting example"
+  },
+  {
+    "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html#prodigy-v2-and-upcoming-changes",
+    "href": "posts/2022-10-12-prodigy-peewee-db/index.html#prodigy-v2-and-upcoming-changes",
+    "title": "Prodigy Database: ORM’s, peewee and Python",
+    "section": "Prodigy v2 and Upcoming Changes",
+    "text": "Prodigy v2 and Upcoming Changes\nMove away from peewee to SQLAlchemy as the new ORM.\nTODO: Experimental branch"
   },
   {
     "objectID": "posts/2022-09-27-prodigy-iaa-textcat/index.html",
@@ -121,9 +128,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Ryan’s Blog",
+    "title": "Ryan Wesslen",
     "section": "",
-    "text": "prodigy\n\n\ndatabase\n\n\norm\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nOct 12, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nprodigy\n\n\ndatabase\n\n\nsqlite\n\n\n\nHow to use Prodigy database recipes for handling annotated data.\n\n\n\nRyan Wesslen\n\n\nOct 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvis\n\n\nspacy\n\n\n\nCreating an app using spaCy with Shiny for Python\n\n\n\nRyan Wesslen\n\n\nOct 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\nchinese\n\n\nner\n\n\nconfig\n\n\n\nOverview of how to annotate with Chinese in Prodigy\n\n\n\nRyan Wesslen\n\n\nSep 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "prodigy\n\n\ndatabase\n\n\norm\n\n\n\nORM’s, peewee, and how to accessible Prodigy’s database with Python.\n\n\n\nRyan Wesslen\n\n\nOct 12, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nprodigy\n\n\ndatabase\n\n\nsqlite\n\n\n\nHow to use Prodigy database recipes for handling annotated data.\n\n\n\nRyan Wesslen\n\n\nOct 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvis\n\n\nspacy\n\n\n\nCreating an app using spaCy with Shiny for Python\n\n\n\nRyan Wesslen\n\n\nOct 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\nchinese\n\n\nner\n\n\nconfig\n\n\n\nOverview of how to annotate with Chinese in Prodigy\n\n\n\nRyan Wesslen\n\n\nSep 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

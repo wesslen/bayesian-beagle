@@ -1,0 +1,35 @@
+---
+title: "Prodigy Database: peewee and ORM's"
+author: "Ryan Wesslen"
+date: "2022-10-12"
+categories: [prodigy, database, orm]
+execute: 
+  enabled: false
+---
+
+In a [previous post](posts/2022-10-11-prodigy-db-intro), I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database.
+
+However, that post abstractted
+
+
+## Under the hood
+
+Currently (v1.11.8), Prodigy uses `peewee` for its ORM. An ORM is a "object-relational mapping" library. An ORM provides tools to convert ("map") between objects in code and database tables ("relations").
+
+With an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type.
+
+For example, a class named `Animals` can represent a SQL table `animals`. Each instance object of that class represents a row in the database.
+
+## datasette
+
+To get started, let's first install `datasette`. 
+
+```bash
+pip3 install datasette
+```
+
+
+
+```bash
+datasette ~/.prodigy/prodigy.db
+```

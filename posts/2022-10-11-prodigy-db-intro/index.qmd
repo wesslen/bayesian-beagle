@@ -10,12 +10,13 @@ execute:
 
 By default, [Prodigy](https://prodi.gy/) includes a [SQLite](https://www.sqlite.org/index.html) database to save annotations. This enables using SQLite to be used out of the box without additional configuration. While there are many ways to customize the database, many users may be able to interact with their annotations only requiring three helpful Prodigy recipes: [`db-in`](#db-in), [`db-out`](#db-out), and [`db-merge`](#db-merge).
 
-In this post, I want to briefly review these recipes. Near the end, I'll also show how you can interact with [Prodigy's default database too from Python](#accessing-the-database-programmatically) to enable a more programmatic approach. We won't cover all aspects of Prodigy's database but I encourage the interested reader to see the [Prodigy database documentation](https://prodi.gy/docs/api-database) or [Prodigy Support issues tagged as database](https://support.prodi.gy/tag/database).
+In this post, I want to briefly review these recipes which will cover many of your database needs for Prodigy. However, by no means is this all there is to Prodigy's Database and I'll have future posts on them as well. Also, I encourage the interested reader to see the [Prodigy database documentation](https://prodi.gy/docs/api-database) or [Prodigy Support issues tagged as database](https://support.prodi.gy/tag/database).
 
 
 ## `db-out`
 
 Let's start first with the problem of exporting out annotations to files. For this, we'll use the `db-out` recipe that includes two arguments:
+
 1. `my_dataset` which is the Prodigy dataset we want to export
 2. `> /path/to/data.jsonl` which is the file location of the exported dataset. 
 

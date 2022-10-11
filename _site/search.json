@@ -46,7 +46,7 @@
     "href": "posts/2022-10-12-prodigy-peewee-db/index.html",
     "title": "Prodigy Database: ORM’s, peewee and Python",
     "section": "",
-    "text": "In a previous post, I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database. However, you may find you want more interaction with your annotation database. In this post, I want to deep dive a little into Prodigy’s database details. If you’re relatively new to Prodigy’s database, I recommend Prodigy’s Database documentation."
+    "text": "In a previous post, I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database. However, you may find you want more interaction with your annotation database. In this post, I want to deep dive a little into Prodigy’s database details. Near the end, I’ll also show how you can interact with Prodigy’s default database too from Python to enable a more programmatic approach. This enables you to pull from the database using Python, not SQL.\nIf you’re relatively new to Prodigy’s database, I recommend Prodigy’s Database documentation which covers a lot of the fundamentals on Prodigy’s database framework."
   },
   {
     "objectID": "posts/2022-10-12-prodigy-peewee-db/index.html#under-the-hood-orm-and-peewee",
@@ -95,14 +95,14 @@
     "href": "posts/2022-10-11-prodigy-db-intro/index.html",
     "title": "Retrieving annotations in Prodigy",
     "section": "",
-    "text": "By default, Prodigy includes a SQLite database to save annotations. This enables using SQLite to be used out of the box without additional configuration. While there are many ways to customize the database, many users may be able to interact with their annotations only requiring three helpful Prodigy recipes: db-in, db-out, and db-merge.\nIn this post, I want to briefly review these recipes. Near the end, I’ll also show how you can interact with Prodigy’s default database too from Python to enable a more programmatic approach. We won’t cover all aspects of Prodigy’s database but I encourage the interested reader to see the Prodigy database documentation or Prodigy Support issues tagged as database."
+    "text": "By default, Prodigy includes a SQLite database to save annotations. This enables using SQLite to be used out of the box without additional configuration. While there are many ways to customize the database, many users may be able to interact with their annotations only requiring three helpful Prodigy recipes: db-in, db-out, and db-merge.\nIn this post, I want to briefly review these recipes which will cover many of your database needs for Prodigy. However, by no means is this all there is to Prodigy’s Database and I’ll have future posts on them as well. Also, I encourage the interested reader to see the Prodigy database documentation or Prodigy Support issues tagged as database."
   },
   {
     "objectID": "posts/2022-10-11-prodigy-db-intro/index.html#db-out",
     "href": "posts/2022-10-11-prodigy-db-intro/index.html#db-out",
     "title": "Retrieving annotations in Prodigy",
     "section": "db-out",
-    "text": "db-out\nLet’s start first with the problem of exporting out annotations to files. For this, we’ll use the db-out recipe that includes two arguments: 1. my_dataset which is the Prodigy dataset we want to export 2. > /path/to/data.jsonl which is the file location of the exported dataset.\nTo see this, let’s first say we have a dataset named ceo-letters. It is 10 sentences from a CEO’s Letter to Shareholders.\npython -m prodigy db-out my_dataset > /path/to/data.jsonl\npython -m prodigy db-out  | jq \nTODO: show example"
+    "text": "db-out\nLet’s start first with the problem of exporting out annotations to files. For this, we’ll use the db-out recipe that includes two arguments:\n\nmy_dataset which is the Prodigy dataset we want to export\n> /path/to/data.jsonl which is the file location of the exported dataset.\n\nTo see this, let’s first say we have a dataset named ceo-letters. It is 10 sentences from a CEO’s Letter to Shareholders.\npython -m prodigy db-out my_dataset > /path/to/data.jsonl\npython -m prodigy db-out  | jq \nTODO: show example"
   },
   {
     "objectID": "posts/2022-10-11-prodigy-db-intro/index.html#db-in",
@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "Ryan Wesslen",
     "section": "",
-    "text": "prodigy\n\n\ndatabase\n\n\norm\n\n\n\nORM’s, peewee, and how to accessible Prodigy’s database with Python.\n\n\n\nRyan Wesslen\n\n\nOct 12, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nprodigy\n\n\ndatabase\n\n\nsqlite\n\n\n\nHow to use Prodigy database recipes for handling annotated data.\n\n\n\nRyan Wesslen\n\n\nOct 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvis\n\n\nspacy\n\n\n\nCreating an app using spaCy with Shiny for Python\n\n\n\nRyan Wesslen\n\n\nOct 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\nchinese\n\n\nner\n\n\nconfig\n\n\n\nOverview of how to annotate with Chinese in Prodigy\n\n\n\nRyan Wesslen\n\n\nSep 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "prodigy\n\n\ndatabase\n\n\norm\n\n\n\nORM’s, peewee, and how to access Prodigy’s database with Python.\n\n\n\nRyan Wesslen\n\n\nOct 12, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nprodigy\n\n\ndatabase\n\n\nsqlite\n\n\n\nHow to use Prodigy database recipes for handling annotated data.\n\n\n\nRyan Wesslen\n\n\nOct 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvis\n\n\nspacy\n\n\n\nCreating an app using spaCy with Shiny for Python\n\n\n\nRyan Wesslen\n\n\nOct 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\nchinese\n\n\nner\n\n\nconfig\n\n\n\nOverview of how to annotate with Chinese in Prodigy\n\n\n\nRyan Wesslen\n\n\nSep 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprodigy\n\n\ntextcat\n\n\ninter-rater relilability\n\n\nmulti-user sessions\n\n\n\n\n\n\n\nRyan Wesslen\n\n\nSep 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

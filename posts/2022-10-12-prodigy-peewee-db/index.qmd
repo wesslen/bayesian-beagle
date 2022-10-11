@@ -1,14 +1,16 @@
 ---
 title: "Prodigy Database: ORM's, peewee and Python"
 author: "Ryan Wesslen"
-description: "ORM's, peewee, and how to accessible Prodigy's database with Python."
+description: "ORM's, peewee, and how to access Prodigy's database with Python."
 date: "2022-10-12"
 categories: [prodigy, database, orm]
 execute: 
   enabled: false
 ---
 
-In a [previous post](https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro), I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database. However, you may find you want more interaction with your annotation database. In this post, I want to deep dive a little into Prodigy's database details. If you're relatively new to Prodigy's database, I recommend [Prodigy's Database documentation](https://prodi.gy/docs/api-database).
+In a [previous post](https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro), I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database. However, you may find you want more interaction with your annotation database. In this post, I want to deep dive a little into Prodigy's database details. Near the end, I'll also show how you can interact with [Prodigy's default database too from Python](#accessing-the-database-programmatically) to enable a more programmatic approach. This enables you to pull from the database using Python, not SQL. 
+
+If you're relatively new to Prodigy's database, I recommend [Prodigy's Database documentation](https://prodi.gy/docs/api-database) which covers a lot of the fundamentals on Prodigy's database framework.
 
 ## Under the hood: ORM and peewee
 

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Ryan Wesslen">
 <meta name="dcterms.date" content="2022-10-12">
-<meta name="description" content="ORM’s, peewee, and how to accessible Prodigy’s database with Python.">
+<meta name="description" content="ORM’s, peewee, and how to access Prodigy’s database with Python.">
 
 <title>Reducing variance - Prodigy Database: ORM’s, peewee and Python</title>
 <style>
@@ -128,10 +128,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Reducing variance - Prodigy Database: ORM’s, peewee and Python">
-<meta property="og:description" content="ORM’s, peewee, and how to accessible Prodigy’s database with Python.">
+<meta property="og:description" content="ORM’s, peewee, and how to access Prodigy’s database with Python.">
 <meta property="og:site-name" content="Reducing variance">
 <meta name="twitter:title" content="Reducing variance - Prodigy Database: ORM’s, peewee and Python">
-<meta name="twitter:description" content="ORM’s, peewee, and how to accessible Prodigy’s database with Python.">
+<meta name="twitter:description" content="ORM’s, peewee, and how to access Prodigy’s database with Python.">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -183,7 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <h1 class="title">Prodigy Database: ORM’s, peewee and Python</h1>
                   <div>
         <div class="description">
-          ORM’s, peewee, and how to accessible Prodigy’s database with Python.
+          ORM’s, peewee, and how to access Prodigy’s database with Python.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -224,7 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<p>In a <a href="https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro">previous post</a>, I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database. However, you may find you want more interaction with your annotation database. In this post, I want to deep dive a little into Prodigy’s database details. If you’re relatively new to Prodigy’s database, I recommend <a href="https://prodi.gy/docs/api-database">Prodigy’s Database documentation</a>.</p>
+<p>In a <a href="https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro">previous post</a>, I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database. However, you may find you want more interaction with your annotation database. In this post, I want to deep dive a little into Prodigy’s database details. Near the end, I’ll also show how you can interact with <a href="#accessing-the-database-programmatically">Prodigy’s default database too from Python</a> to enable a more programmatic approach. This enables you to pull from the database using Python, not SQL.</p>
+<p>If you’re relatively new to Prodigy’s database, I recommend <a href="https://prodi.gy/docs/api-database">Prodigy’s Database documentation</a> which covers a lot of the fundamentals on Prodigy’s database framework.</p>
 <section id="under-the-hood-orm-and-peewee" class="level2">
 <h2 class="anchored" data-anchor-id="under-the-hood-orm-and-peewee">Under the hood: ORM and peewee</h2>
 <p>As of v1.11.8, Prodigy’s database has implemented an ORM, or “object-relational mapping” setup. The key idea of an ORM is to implement an object-oriented paradigm to database.</p>

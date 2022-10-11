@@ -1,35 +1,71 @@
 ---
-title: "Prodigy Database: peewee and ORM's"
+title: "Prodigy Database: ORM's, peewee and Python"
 author: "Ryan Wesslen"
+description: "ORM's, peewee, and how to accessible Prodigy's database with Python."
 date: "2022-10-12"
 categories: [prodigy, database, orm]
 execute: 
   enabled: false
 ---
 
-In a [previous post](posts/2022-10-11-prodigy-db-intro), I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database.
+In a [previous post](https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro), I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database. However, you may find you want more interaction with your annotation database. In this post, I want to deep dive a little into Prodigy's database details. If you're relatively new to Prodigy's database, I recommend [Prodigy's Database documentation](https://prodi.gy/docs/api-database).
 
-However, that post abstractted
+## Under the hood: ORM and peewee
 
+As of v1.11.8, Prodigy's database has implemented an ORM, or "object-relational mapping" setup. The key idea of an ORM is to implement an object-oriented paradigm to database.
 
-## Under the hood
+By contrast, if you're from data analytics, you've likely used databases as SQL database management systems (DBMS) such as SQLite or MySQL. These systems are not object-oriented and on their own can only store and manipulate scalar values such as integers and strings organized within tables.
 
-Currently (v1.11.8), Prodigy uses `peewee` for its ORM. An ORM is a "object-relational mapping" library. An ORM provides tools to convert ("map") between objects in code and database tables ("relations").
+The programmer must either convert the object values into groups of simpler values for storage in the database (and convert them back upon retrieval), or only use simple scalar values within the program. Object–relational mapping implements the first approach.
 
-With an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type.
+Now wait - you may have learned from the previous post the Prodigy implements by default SQLite. How can Prodigy use an ORM approach but still implement a DBMS like SQLite?
 
-For example, a class named `Animals` can represent a SQL table `animals`. Each instance object of that class represents a row in the database.
+That's because Prodigy also includes [peewee](http://docs.peewee-orm.com/en/latest/), is a common open-source ORM and operates as Prodigy's ORM. There are [many alternative ORMs](https://en.wikipedia.org/wiki/List_of_object%E2%80%93relational_mapping_software) and they vary by programming language.
 
-## datasette
+An ORM provides tools to convert ("map") between objects in code and database tables ("relations"). With an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type. For example, a class named `Animals` can represent a SQL table `animals`. Each instance object of that class represents a row in the database.
 
-To get started, let's first install `datasette`. 
+TODO: explain model and connect to second part
 
-```bash
-pip3 install datasette
+So why would we even use an ORM? ORM's enable us to interact with our database using our language of choice instead of SQL.
+
+## Accessing the database programmatically with Python 
+
+Prodigy’s database model is included with the library and is available via `prodigy.components.db` in Python.
+
+```python
+from prodigy.components.db import connect
+
+db = connect("sqlite", {"name": "prodigy.db"}) # default
+examples = db.get_dataset("my_dataset")
 ```
 
+TODO: How to use
 
+TODO: Show data format for data.
 
-```bash
-datasette ~/.prodigy/prodigy.db
+```python
+from prodigy.components.db import connect
+
+examples = [{"text": "hello world", "_task_hash": 123, "_input_hash": 456}]
+
+db = connect()                               # uses settings from prodigy.json
+db.add_dataset("test_dataset")               # add dataset
+assert "test_dataset" in db                  # check that dataset was added
+db.add_examples(examples, ["test_dataset"])  # add examples to dataset
+dataset = db.get_dataset("test_dataset")     # retrieve a dataset
+assert len(dataset) == 1                     # check that examples were added
 ```
+
+Alternatively, you can view the datasets like: 
+
+```python
+print(db.datasets)
+```
+
+TODO: give an interesting example
+
+## Prodigy v2 and Upcoming Changes
+
+Move away from `peewee` to SQLAlchemy as the new ORM.
+
+TODO: Experimental branch

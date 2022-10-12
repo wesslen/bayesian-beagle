@@ -36,7 +36,11 @@ So why would we even use an ORM?
 
 ORM's enable us to interact with our database using our language of choice instead of SQL. Because of Prodigy's ORM, this enables us to interface with our database using Python and not SQL.
 
-But another advantage to ORMs is that they make it easier to switch between different relational databases. For example, a developer could use SQLite for local development and MySQL in production. Since Prodigy has [configurations for either SQLite, MySQL, or PostgreSQL](https://prodi.gy/docs/api-database), this makes it even easier.
+:::{.column-margin}
+For a detailed look on ORM's, I recommend [Full Stack Python's post](https://www.fullstackpython.com/object-relational-mappers-orms.html)
+:::
+
+But another advantage to ORMs is that they make it easier to switch between different relational databases. For example, a developer could use SQLite for local development and MySQL in production (although, not recommended in practice). Since Prodigy has [configurations for either SQLite, MySQL, or PostgreSQL](https://prodi.gy/docs/api-database), this makes it even easier.
 
 :::{.column-margin}
 To globally modify your database, you can edit the `db` and `db_settings` in Prodigy's [configuration file](https://prodi.gy/docs/install#config), `prodigy.json`.

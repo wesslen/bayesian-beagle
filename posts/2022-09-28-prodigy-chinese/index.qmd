@@ -13,7 +13,7 @@ Similar to other major languages like English, spaCy offers [four pipelines for 
 
 To get started you need to make sure you have one of the pipelines installed.
 
-```
+```bash
 python -m spacy download zh_core_web_sm
 ```
 
@@ -35,7 +35,7 @@ NASA进行防御实验，以飞行器直接撞击小行星
 
 Since we have an initial `ner` component, let's consider refining three entity types: `ORG`, `PERSON`, and `DATE` so we'll use [`ner.correct`](https://prodi.gy/docs/recipes/#ner-correct). We can also modify [Prodigy configuration](https://prodi.gy/docs/install#config) and change the [user interface instructions](https://prodi.gy/docs/api-web-app/#ui-language) to Chinese. It is one of seven languages that are available (English, German, Dutch, Spanish, Portuguese, French, and Chinese). You can implement it through setting [`PRODIGY_CONFIG_OVERRIDES`](https://prodi.gy/docs/install#config-overrides).
 
-```
+```bash
 PRODIGY_CONFIG_OVERRIDES='{"ui_lang": "zh"}' python -m prodigy ner.correct example_dataset zh_core_web_sm ./chinese_headlines.txt --label ORG,PERSON,DATE
 ```
 

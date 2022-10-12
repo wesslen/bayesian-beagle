@@ -136,7 +136,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -217,30 +217,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
-<p>By default, <a href="https://prodi.gy/">Prodigy</a> includes a <a href="https://www.sqlite.org/index.html">SQLite</a> database to save annotations. This enables using SQLite to be used out of the box without additional configuration. While there are many ways to customize the database, many users may be able to interact with their annotations only requiring three helpful Prodigy recipes: <a href="#db-in"><code>db-in</code></a>, <a href="#db-out"><code>db-out</code></a>, and <a href="#db-merge"><code>db-merge</code></a>.</p>
+<p>By default, <a href="https://prodi.gy/">Prodigy</a> includes a <a href="https://www.sqlite.org/index.html">SQLite</a> database to save annotations. This enables using SQLite to be used out of the box without additional configuration. While there are many ways to customize the database, many users may be able to interact with their annotations only requiring three helpful Prodigy recipes: <a href="#db-out"><code>db-out</code></a>, <a href="#db-in"><code>db-in</code></a>, and <a href="#db-merge"><code>db-merge</code></a>.</p>
 <p>In this post, I want to briefly review these recipes which will cover many of your database needs for Prodigy. However, by no means is this all there is to Prodigy’s Database and I’ll have future posts on them as well. Also, I encourage the interested reader to see the <a href="https://prodi.gy/docs/api-database">Prodigy database documentation</a> or <a href="https://support.prodi.gy/tag/database">Prodigy Support issues tagged as database</a>.</p>
-<section id="db-out" class="level2">
+<section id="db-out" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="db-out"><code>db-out</code></h2>
-<p>Let’s start first with the problem of exporting out annotations to files. For this, we’ll use the <code>db-out</code> recipe that includes two arguments:</p>
-<ol type="1">
-<li><code>my_dataset</code> which is the Prodigy dataset we want to export</li>
-<li><code>&gt; /path/to/data.jsonl</code> which is the file location of the exported dataset.</li>
-</ol>
-<p>To see this, let’s first say we have a dataset named <code>ceo-letters</code>. It is 10 sentences from a CEO’s Letter to Shareholders.</p>
+<p>Let’s start first with the problem of exporting out annotations to files. For this recipe, we technically need only one argument: the name of a dataset that we want to export (like <code>my_dataset</code>). However, if we run <code>db-out</code> with only the name of the dataset, it will print out the dataset to terminal. Therefore, usually <code>db-out</code> will include a second argument <code>&gt; /path/to/data.jsonl</code> which is the file location of the exported dataset.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> prodigy db-out my_dataset <span class="op">&gt;</span> /path/to/data.jsonl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> prodigy db-out  <span class="kw">|</span> <span class="ex">jq</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>The <code>&gt;</code> directs the output of a command into a file. Here’s a helpful <a href="https://unix.stackexchange.com/questions/159513/what-are-the-shells-control-and-redirection-operators">Stack Exchange post</a> on common control and redirection operators in shells.</p>
+</div></div><p>TODO: Explain <code>jq</code></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> prodigy db-out my_dataset <span class="kw">|</span> <span class="ex">jq</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>TODO: show example</p>
 </section>
 <section id="db-in" class="level2">
 <h2 class="anchored" data-anchor-id="db-in"><code>db-in</code></h2>
-<p>The <a href="https://prodi.gy/docs/recipes#db-in"><code>db-in</code></a> is a recipe to load in new examples into your Prodigy database.</p>
+<p>The <a href="https://prodi.gy/docs/recipes#db-in"><code>db-in</code></a> is a recipe to load examples into your Prodigy database.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -255,10 +256,14 @@ Note
 <p>If you just want to annotate data, you do not have to import anything upfront – you can just start the server with your input data and Prodigy will stream it in, let you annotate and save the collected annotations to the database.</p>
 </div>
 </div>
-<p>Prodigy prefers <a href="https://jsonlines.org/">newline-delimited JSON</a> (or JSONL), as it can contain detailed information and meta data and allows being read in line by line.</p>
+<p>Prodigy prefers <a href="https://jsonlines.org/">newline-delimited JSON</a> (or JSONL), as it can contain detailed information and metadata.</p>
 <p>Unlike regular JSON, JSONL doesn’t require parsing the entire file, which results in overall better performance when working with large volumes of text.</p>
 <p>TODO: change to <a href="">NER example</a></p>
 <p>As an example, we’ll use an annotation that is in the format of the <a href="https://prodi.gy/docs/api-interfaces#ner_manual"><code>ner_manual</code> user interface</a> with one annotation:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>ner_input.jsonl</strong></pre>
+</div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"text"</span><span class="fu">:</span> <span class="st">"First look at the new MacBook Pro"</span><span class="fu">,</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"spans"</span><span class="fu">:</span> <span class="ot">[</span></span>
@@ -274,6 +279,7 @@ Note
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"text"</span><span class="fu">:</span> <span class="st">"Pro"</span><span class="fu">,</span> <span class="dt">"start"</span><span class="fu">:</span> <span class="dv">30</span><span class="fu">,</span> <span class="dt">"end"</span><span class="fu">:</span> <span class="dv">33</span><span class="fu">,</span> <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">6</span><span class="fu">}</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>For input <code>.jsonl</code> files, the key <code>"text"</code> required and contains the text contents of the document typically a sentence.</p>
 <p>The <code>db-in</code> recipe requires two arguments:</p>
 <ol type="1">
@@ -282,7 +288,7 @@ Note
 </ol>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> prodigy db-in new_dataset /path/to/data.jsonl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For example, let’s say we have in our current working folder a file named <code>ner-sample.jsonl</code> that includes 1 documents, each with a sentence from a CEO’s Letter to Shareholder. We can then read that file into the database as:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> prodigy db-in ner-sample ner-sample.jsonl</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> prodigy db-in ner_sample ner-input.jsonl</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">✔</span> Created dataset <span class="st">'ner_sample'</span> in database SQLite</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">✔</span> Imported 1 annotations to <span class="st">'ner_sample'</span> <span class="er">(</span><span class="ex">session</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">2022-10-11_13-22-26</span><span class="kw">)</span> <span class="er">in</span> <span class="ex">database</span> SQLite</span>
@@ -300,7 +306,12 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p>What if your documents are not on a sentence level to start with? That’s okay, you can use spaCy and its sentence segmenter in the <code>en_core_web_sm</code> model.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>sentences.jsonl</strong></pre>
+</div>
 <div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">"text"</span><span class="fu">:</span> <span class="st">"This is a sentence. This is another sentence. And then this is a sentence."</span><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> spacy</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> srsly</span>
@@ -322,7 +333,7 @@ Note
 <p>You can use <code>srsly.write_jsonl</code> to export the data to a <code>.jsonl</code>:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>srsly.write_jsonl(output_loc, new_examples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Alternatively, with Prodigy you can train your own sentence segmenter or use one of spaCy universe’s projects like <a href="https://spacy.io/universe/project/python-sentence-boundary-disambiguation"><code>pySBD</code></a>.</p>
-<p>Last, several off-the-shelf Prodigy recipes like <a href="https://prodi.gy/docs/recipes#ner-correct"><code>ner.correct</code></a> or <a href="https://prodi.gy/docs/recipes#ner-teach"><code>ner.teach</code></a> use a sentence segmenter as it’s default behavior. You may turn off this behavior to not segment sentences by adding <code>--unsegmented</code> to the recipe.</p>
+<p>Several off-the-shelf Prodigy recipes like <a href="https://prodi.gy/docs/recipes#ner-correct"><code>ner.correct</code></a> or <a href="https://prodi.gy/docs/recipes#ner-teach"><code>ner.teach</code></a> use a sentence segmenter as it’s default behavior. You may turn off this behavior to not segment sentences by adding <code>--unsegmented</code> to the recipe.</p>
 </div>
 </div>
 </section>

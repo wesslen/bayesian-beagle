@@ -233,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p>Similar to other major languages like English, spaCy offers <a href="https://spacy.io/models/zh">four pipelines for Chinese</a>: <code>zh_core_web_sm</code>, <code>zh_core_web_md</code>, <code>zh_core_web_lg</code>, and <code>zh_core_web_trf</code>.</p>
 <p>To get started you need to make sure you have one of the pipelines installed.</p>
-<pre><code>python -m spacy download zh_core_web_sm</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> spacy download zh_core_web_sm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next, we need an input file. Prodigy can use <code>.txt</code>, <code>.csv</code>, and <code>.jsonl</code> files if they follow these <a href="https://prodi.gy/docs/api-loaders#input">input data formats</a>. Let’s say we have a file named <code>zh_headlines.txt</code> of 10 article news headlines.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># zh_headlines.txt</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>新闻人物：有望成为意大利首位女总理的右翼党魁梅洛尼是谁？</span>
@@ -247,7 +247,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>各国新冠疫情渐次“收尾” 大流行怎么定义？</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>世界奇观：拥有两千年历史的土耳其地下城</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Since we have an initial <code>ner</code> component, let’s consider refining three entity types: <code>ORG</code>, <code>PERSON</code>, and <code>DATE</code> so we’ll use <a href="https://prodi.gy/docs/recipes/#ner-correct"><code>ner.correct</code></a>. We can also modify <a href="https://prodi.gy/docs/install#config">Prodigy configuration</a> and change the <a href="https://prodi.gy/docs/api-web-app/#ui-language">user interface instructions</a> to Chinese. It is one of seven languages that are available (English, German, Dutch, Spanish, Portuguese, French, and Chinese). You can implement it through setting <a href="https://prodi.gy/docs/install#config-overrides"><code>PRODIGY_CONFIG_OVERRIDES</code></a>.</p>
-<pre><code>PRODIGY_CONFIG_OVERRIDES='{"ui_lang": "zh"}' python -m prodigy ner.correct example_dataset zh_core_web_sm ./chinese_headlines.txt --label ORG,PERSON,DATE</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">PRODIGY_CONFIG_OVERRIDES</span><span class="op">=</span><span class="st">'{"ui_lang": "zh"}'</span> <span class="ex">python</span> <span class="at">-m</span> prodigy ner.correct example_dataset zh_core_web_sm ./chinese_headlines.txt <span class="at">--label</span> ORG,PERSON,DATE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="chinese_prodigy.png" class="img-fluid"></p>
 <p>You can also play with a demo of this interface.</p>
 <p align="center">

@@ -1,5 +1,5 @@
 ---
-title: "Prodigy Database: ORM's, peewee and Python"
+title: "Prodigy DB: ORM's, peewee and Python"
 author: "Ryan Wesslen"
 description: "ORM's, peewee, and how to access Prodigy's database with Python."
 date: "2022-10-12"
@@ -8,31 +8,43 @@ execute:
   enabled: false
 ---
 
-In a [previous post](https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro), I described some Prodigy database recipes that enable you to manipulate annotations saved into the default SQLite database. However, you may find you want more interaction with your annotation database. In this post, I want to deep dive a little into Prodigy's database details. Near the end, I'll also show how you can interact with [Prodigy's default database too from Python](#accessing-the-database-programmatically) to enable a more programmatic approach. This enables you to pull from the database using Python, not SQL. 
+In a [previous post](https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro), I described some Prodigy database recipes that enable you to manipulate annotations saved in the default SQLite database. However, you may find you want more database customization. In this post, I will dig into Prodigy's database core concepts. 
 
-If you're relatively new to Prodigy's database, I recommend [Prodigy's Database documentation](https://prodi.gy/docs/api-database) which covers a lot of the fundamentals on Prodigy's database framework.
+I'll also show how you can interact with [Prodigy's default database too from Python](#accessing-the-database-programmatically) to enable a more programmatic approach. This enables you to pull from the database using Python, not SQL.
+
+Last, I'll outline experimental database features to highlight possible changes to Prodigy's database system.
+
+If you're new to Prodigy's database, I recommend starting with [Prodigy's Database documentation](https://prodi.gy/docs/api-database) before this post.
 
 ## Under the hood: ORM and peewee
 
-As of v1.11.8, Prodigy's database has implemented an ORM, or "object-relational mapping" setup. The key idea of an ORM is to implement an object-oriented paradigm to database.
+As of v1.11.8, Prodigy's database uses an ORM, or "object-relational mapper". The key idea of an ORM is to implement an object-oriented paradigm to managing databases.
 
-By contrast, if you're from data analytics, you've likely used databases as SQL database management systems (DBMS) such as SQLite or MySQL. These systems are not object-oriented and on their own can only store and manipulate scalar values such as integers and strings organized within tables.
+By contrast, if you're from data analytics, you've likely used databases as SQL database management systems (DBMS) such as SQLite or MySQL. These systems are not object-oriented. They can only store and manipulate scalar values like strings and integers within tables.
 
-The programmer must either convert the object values into groups of simpler values for storage in the database (and convert them back upon retrieval), or only use simple scalar values within the program. Object–relational mapping implements the first approach.
+Now wait - you may know that [Prodigy implements by default SQLite](https://prodi.gy/docs/api-database). How can Prodigy use an ORM approach but still implement a DBMS like SQLite?
 
-Now wait - you may have learned from the previous post the Prodigy implements by default SQLite. How can Prodigy use an ORM approach but still implement a DBMS like SQLite?
+That's because Prodigy also includes [peewee](http://docs.peewee-orm.com/en/latest/), which is a common open-source ORM and operates as Prodigy's ORM. There are [many alternative ORMs](https://en.wikipedia.org/wiki/List_of_object%E2%80%93relational_mapping_software) and they vary by programming language.
 
-That's because Prodigy also includes [peewee](http://docs.peewee-orm.com/en/latest/), is a common open-source ORM and operates as Prodigy's ORM. There are [many alternative ORMs](https://en.wikipedia.org/wiki/List_of_object%E2%80%93relational_mapping_software) and they vary by programming language.
+TODO: https://www.fullstackpython.com/object-relational-mappers-orms.html
 
-An ORM provides tools to convert ("map") between objects in code and database tables ("relations"). With an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type. For example, a class named `Animals` can represent a SQL table `animals`. Each instance object of that class represents a row in the database.
+An ORM provides a library to convert ("map") between objects in code and database tables ("relations"). With an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type. For example, a class named `Animals` can represent a SQL table `animals`. Each instance object of that class represents a row in the database.
 
 TODO: explain model and connect to second part
 
-So why would we even use an ORM? ORM's enable us to interact with our database using our language of choice instead of SQL.
+So why would we even use an ORM? 
+
+ORM's enable us to interact with our database using our language of choice instead of SQL. Because of Prodigy's ORM, this enables us to interface with our database using Python and not SQL.
+
+But another advantage to ORMs is that they make it easier to switch between different relational databases. For example, a developer could use SQLite for local development and MySQL in production. Since Prodigy has [configurations for either SQLite, MySQL, or PostgreSQL](https://prodi.gy/docs/api-database), this makes it even easier.
+
+:::{.column-margin}
+To globally modify your database, you can edit the `db` and `db_settings` in Prodigy's [configuration file](https://prodi.gy/docs/install#config), `prodigy.json`.
+:::
 
 ## Accessing the database programmatically with Python 
 
-Prodigy’s database model is included with the library and is available via `prodigy.components.db` in Python.
+Prodigy’s database model is available from `prodigy.components.db` in Python.
 
 ```python
 from prodigy.components.db import connect
@@ -66,8 +78,32 @@ print(db.datasets)
 
 TODO: give an interesting example
 
-## Prodigy v2 and Upcoming Changes
+## Down the road changes
 
-Move away from `peewee` to SQLAlchemy as the new ORM.
+Earlier in 2022, the Prodigy team released a new [experimental branch in Prodigy Support](https://support.prodi.gy/t/duplicate-annotations-in-output/4961/53) that outlines experimental features in Prodigy's database system.
 
-TODO: Experimental branch
+The new branch includes a new Feed system stores all examples that are to be shown to annotators in the Database. Currently, [Prodigy creates and maps three tables](https://prodi.gy/docs/api-database#setup-tables):
+
+| Table   | Description                                                                                                                                                   |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Dataset | The dataset / session IDs and meta information.                                                                                                               |
+| Example | The individual annotation examples. Each example is only added once, so if you add the same annotation to multiple datasets, it’ll only have one record here. |
+| Link    | Example IDs linked to datasets. This is how Prodigy knows which examples belong to which datasets and sessions.                                               |
+
+What is new is a fourth table, Feed, which serves as a buffer to handle the batch of data for multiple annotators. Ultimately, this new Feed will replace Prodigy's current generator-based streams and will aim to reduce issues with multi-user annotators.
+
+This change requires schema changes so it also aligns with a switch to [SQLAlchemy](https://www.sqlalchemy.org/) from `peewee` for Prodigy's ORM. One advantage of this switch is that it can enable more database systems beyond SQLite, PostgreSQL, and MySQL.
+
+If you're interested in learning more, see this [Prodigy Support issue](https://support.prodi.gy/t/duplicate-annotations-in-output/4961/53), or you can install it:
+
+```bash
+pip install prodigy==1.11.8a4 --extra-index-url https://{YOUR_LICENSE_KEY}@download.prodi.gy
+```
+
+and modify `prodigy.json` such that:
+
+```{.json filename="prodigy.json"}
+{
+    "experimental_feed": true
+}
+```

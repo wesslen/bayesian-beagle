@@ -17,7 +17,7 @@ Per the [Prodigy Glossary](https://prodi.gy/docs#glossary), a single annotation 
 
 Since v1.7.0 was released, Prodigy has offered [multi-user sessions](https://prodi.gy/docs/api-web-app#multi-user-sessions) within the same Prodigy instance. This functionality enables dividing up Prodigy annotations across different annotators when saving annotations to the same dataset and performing an identical task.
 
-TODO: 2-3 sentences on example, link to past TECH issues
+Let's say we're interested in categorizing news headlines as Technology-related or not. We could load in a file named `news_headlines.jsonl` that include the article's headline as the value for `"text"` and includes the article's source as a dictionary in `"meta"`.
 
 ```python
 # news_headlines.jsonl
@@ -41,9 +41,9 @@ Open the app in your browser and start annotating!
 
 :::{.column-body-outset}
 ![](img/IAA-Jordan.png) 
+:::
 
 To create a custom named session, add `?session=xxx` to the annotation app URL. For example, annotator Jordan may access a running Prodigy project via `http://localhost:8080/?session=jordan`. The example shows running the [`textcat.manual`](https://prodi.gy/docs/recipes/#textcat-manual) Prodigy recipe but this works for any Prodigy recipe. This will enable use to track each annotator so we can calculate inter-annotator agreement.
-:::
 
 Internally, this will request and send back annotations with a session identifier consisting of the current dataset name and the session ID – for example, `textcat-jordan`. Every time annotator Jordan labels examples for this dataset, their annotations will be associated with this session identifier.
 
@@ -102,7 +102,7 @@ kappa = cohen_kappa_score(
 print(kappa)
 ```
 
-So we've found a Cohen's Kappa of `0.737`, which is fairly high. 
+Cohen's Kappa is `0.737`, which is fairly high. 
 
 TODO: Discussion on interpreting Cohen's Kappa
 

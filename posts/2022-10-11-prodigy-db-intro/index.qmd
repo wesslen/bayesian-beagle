@@ -8,34 +8,34 @@ execute:
   enabled: true
 ---
 
-By default, [Prodigy](https://prodi.gy/) includes a [SQLite](https://www.sqlite.org/index.html) database to save annotations. This enables using SQLite to be used out of the box without additional configuration. While there are many ways to customize the database, many users may be able to interact with their annotations only requiring three helpful Prodigy recipes: [`db-in`](#db-in), [`db-out`](#db-out), and [`db-merge`](#db-merge).
+By default, [Prodigy](https://prodi.gy/) includes a [SQLite](https://www.sqlite.org/index.html) database to save annotations. This enables using SQLite to be used out of the box without additional configuration. While there are many ways to customize the database, many users may be able to interact with their annotations only requiring three helpful Prodigy recipes: [`db-out`](#db-out), [`db-in`](#db-in), and [`db-merge`](#db-merge).
 
 In this post, I want to briefly review these recipes which will cover many of your database needs for Prodigy. However, by no means is this all there is to Prodigy's Database and I'll have future posts on them as well. Also, I encourage the interested reader to see the [Prodigy database documentation](https://prodi.gy/docs/api-database) or [Prodigy Support issues tagged as database](https://support.prodi.gy/tag/database).
 
 
 ## `db-out`
 
-Let's start first with the problem of exporting out annotations to files. For this, we'll use the `db-out` recipe that includes two arguments:
-
-1. `my_dataset` which is the Prodigy dataset we want to export
-2. `> /path/to/data.jsonl` which is the file location of the exported dataset. 
-
-To see this, let's first say we have a dataset named `ceo-letters`. It is 10 sentences from a CEO's Letter to Shareholders.
-
+Let's start first with the problem of exporting out annotations to files. For this recipe, we technically need only one argument: the name of a dataset that we want to export (like `my_dataset`). However, if we run `db-out` with only the name of the dataset, it will print out the dataset to terminal. Therefore, usually `db-out` will include a second argument `> /path/to/data.jsonl` which is the file location of the exported dataset. 
 
 ```bash
 python -m prodigy db-out my_dataset > /path/to/data.jsonl
 ```
 
+::: {.column-margin}
+The `>` directs the output of a command into a file. Here's a helpful [Stack Exchange post](https://unix.stackexchange.com/questions/159513/what-are-the-shells-control-and-redirection-operators) on common control and redirection operators in shells.
+:::
+
+TODO: Explain `jq`
+
 ```bash
-python -m prodigy db-out  | jq 
+python -m prodigy db-out my_dataset | jq 
 ```
 
 TODO: show example
 
 ## `db-in`
 
-The [`db-in`](https://prodi.gy/docs/recipes#db-in) is a recipe to load in new examples into your Prodigy database.
+The [`db-in`](https://prodi.gy/docs/recipes#db-in) is a recipe to load examples into your Prodigy database.
 
 :::{.callout-note}
 The `db-in` command is typically used to import existing annotations into your Prodigy datasets – for example, if you've already labelled data with some other process and want to combine it with new annotations or if you want to re-import annotations to a new dataset.
@@ -43,7 +43,7 @@ The `db-in` command is typically used to import existing annotations into your P
 If you just want to annotate data, you do not have to import anything upfront – you can just start the server with your input data and Prodigy will stream it in, let you annotate and save the collected annotations to the database.
 :::
 
-Prodigy prefers [newline-delimited JSON](https://jsonlines.org/) (or JSONL), as it can contain detailed information and meta data and allows being read in line by line. 
+Prodigy prefers [newline-delimited JSON](https://jsonlines.org/) (or JSONL), as it can contain detailed information and metadata.
 
 Unlike regular JSON, JSONL doesn’t require parsing the entire file, which results in overall better performance when working with large volumes of text.
 
@@ -51,7 +51,7 @@ TODO: change to [NER example]()
 
 As an example, we'll use an annotation that is in the format of the [`ner_manual` user interface](https://prodi.gy/docs/api-interfaces#ner_manual) with one annotation:
 
-```json
+```{.json filename="ner_input.jsonl"}
 {
   "text": "First look at the new MacBook Pro",
   "spans": [
@@ -83,7 +83,7 @@ python -m prodigy db-in new_dataset /path/to/data.jsonl
 For example, let's say we have in our current working folder a file named `ner-sample.jsonl` that includes 1 documents, each with a sentence from a CEO's Letter to Shareholder. We can then read that file into the database as:
 
 ```bash
-python -m prodigy db-in ner-sample ner-sample.jsonl
+python -m prodigy db-in ner_sample ner-input.jsonl
 ✔ Created dataset 'ner_sample' in database SQLite
 ✔ Imported 1 annotations to 'ner_sample' (session
 2022-10-11_13-22-26) in database SQLite
@@ -97,7 +97,7 @@ TODO: explain other aspects. [Example of db-in options](https://support.prodi.gy
 :::{.callout-note}
 What if your documents are not on a sentence level to start with? That's okay, you can use spaCy and its sentence segmenter in the `en_core_web_sm` model.
 
-```json
+```{.json filename="sentences.jsonl"}
 {"text": "This is a sentence. This is another sentence. And then this is a sentence."}
 ```
 
@@ -128,9 +128,8 @@ srsly.write_jsonl(output_loc, new_examples)
 
 Alternatively, with Prodigy you can train your own sentence segmenter or use one of spaCy universe's projects like [`pySBD`](https://spacy.io/universe/project/python-sentence-boundary-disambiguation).
 
-Last, several off-the-shelf Prodigy recipes like [`ner.correct`](https://prodi.gy/docs/recipes#ner-correct) or [`ner.teach`](https://prodi.gy/docs/recipes#ner-teach) use a sentence segmenter as it's default behavior. You may turn off this behavior to not segment sentences by adding `--unsegmented` to the recipe.
+Several off-the-shelf Prodigy recipes like [`ner.correct`](https://prodi.gy/docs/recipes#ner-correct) or [`ner.teach`](https://prodi.gy/docs/recipes#ner-teach) use a sentence segmenter as it's default behavior. You may turn off this behavior to not segment sentences by adding `--unsegmented` to the recipe.
 :::
-
 
 ## `db-merge`
 

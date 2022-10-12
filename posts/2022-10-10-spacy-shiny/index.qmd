@@ -29,7 +29,7 @@ Shiny for Python is still in its alpha testing. It could (and very likely will) 
 
 ## What makes up a Shiny app?
 
-Shiny apps have two major parts that make up an app:
+Shiny apps have two major parts:
 
 1. the UI (user-interface)
 2. the Server function
@@ -182,11 +182,11 @@ There are many other `ui` objects that you can create and can provide widgets fo
 
 For our interface, we want to provide the user with three options.
 
-First, the user can select their model they want to use.
+First, the user can select their model they want to use. In the current app, I include the core small models for English, Spanish and German.
 
 Second, the user can input as a text box what is the text they want their respective model to analyze.
 
-Last, since shiny implements [reactive programming], we will want to add a button that executes the model select to run on the text provided only when the user clicks a button.
+Last, since Shiny implements [reactive programming], we will want to add a button that executes the model select to run on the text provided only when the user clicks a button.
 
 To do this, we'll use the [documentation for the UI inputs](https://shiny.rstudio.com/py/api/#ui-inputs) and identify that we'll want to use the three functions:
 

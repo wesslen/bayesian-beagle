@@ -15,7 +15,7 @@ In this post, I want to briefly review these recipes which will cover many of yo
 
 ## `db-out`
 
-Let's start first with the problem of exporting out annotations to files. For this recipe, we technically need only one argument: the name of a dataset that we want to export (like `my_dataset`). However, if we run `db-out` with only the name of the dataset, it will print out the dataset to terminal. Therefore, usually `db-out` will include a second argument `> /path/to/data.jsonl` which is the file location of the exported dataset. 
+Let's start first with the [`db-out` recipe](https://prodi.gy/docs/recipes#db-out), which exports annotations to files. For this recipe, we technically need only one argument: the name of a dataset that we want to export (like `my_dataset`). However, if we run `db-out` with only the name of the dataset, it will print out the dataset to terminal. Therefore, usually `db-out` will include a second argument `> /path/to/data.jsonl` which is the file location of the exported dataset. 
 
 ```bash
 python -m prodigy db-out my_dataset > /path/to/data.jsonl

@@ -254,7 +254,7 @@ Warning
 </div>
 <section id="what-makes-up-a-shiny-app" class="level2">
 <h2 class="anchored" data-anchor-id="what-makes-up-a-shiny-app">What makes up a Shiny app?</h2>
-<p>Shiny apps have two major parts that make up an app:</p>
+<p>Shiny apps have two major parts:</p>
 <ol type="1">
 <li>the UI (user-interface)</li>
 <li>the Server function</li>
@@ -371,9 +371,9 @@ Warning
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># &lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>There are many other <code>ui</code> objects that you can create and can provide widgets for your user interface.</p>
 <p>For our interface, we want to provide the user with three options.</p>
-<p>First, the user can select their model they want to use.</p>
+<p>First, the user can select their model they want to use. In the current app, I include the core small models for English, Spanish and German.</p>
 <p>Second, the user can input as a text box what is the text they want their respective model to analyze.</p>
-<p>Last, since shiny implements [reactive programming], we will want to add a button that executes the model select to run on the text provided only when the user clicks a button.</p>
+<p>Last, since Shiny implements [reactive programming], we will want to add a button that executes the model select to run on the text provided only when the user clicks a button.</p>
 <p>To do this, we’ll use the <a href="https://shiny.rstudio.com/py/api/#ui-inputs">documentation for the UI inputs</a> and identify that we’ll want to use the three functions:</p>
 <ol type="1">
 <li><code>ui.input_select()</code>: this will input which spaCy model we’ll use</li>

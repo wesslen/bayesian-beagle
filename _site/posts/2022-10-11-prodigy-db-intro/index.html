@@ -129,9 +129,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Reducing variance - Retrieving annotations in Prodigy">
 <meta property="og:description" content="How to use Prodigy database recipes for handling annotated data.">
+<meta property="og:image" content="https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro/header.jpeg">
 <meta property="og:site-name" content="Reducing variance">
 <meta name="twitter:title" content="Reducing variance - Retrieving annotations in Prodigy">
 <meta name="twitter:description" content="How to use Prodigy database recipes for handling annotated data.">
+<meta name="twitter:image" content="https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro/header.jpeg">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -230,7 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In this post, I want to briefly review these recipes which will cover many of your database needs for Prodigy. However, by no means is this all there is to Prodigy’s Database and I’ll have future posts on them as well. Also, I encourage the interested reader to see the <a href="https://prodi.gy/docs/api-database">Prodigy database documentation</a> or <a href="https://support.prodi.gy/tag/database">Prodigy Support issues tagged as database</a>.</p>
 <section id="db-out" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="db-out"><code>db-out</code></h2>
-<p>Let’s start first with the problem of exporting out annotations to files. For this recipe, we technically need only one argument: the name of a dataset that we want to export (like <code>my_dataset</code>). However, if we run <code>db-out</code> with only the name of the dataset, it will print out the dataset to terminal. Therefore, usually <code>db-out</code> will include a second argument <code>&gt; /path/to/data.jsonl</code> which is the file location of the exported dataset.</p>
+<p>Let’s start first with the <a href="https://prodi.gy/docs/recipes#db-out"><code>db-out</code> recipe</a>, which exports annotations to files. For this recipe, we technically need only one argument: the name of a dataset that we want to export (like <code>my_dataset</code>). However, if we run <code>db-out</code> with only the name of the dataset, it will print out the dataset to terminal. Therefore, usually <code>db-out</code> will include a second argument <code>&gt; /path/to/data.jsonl</code> which is the file location of the exported dataset.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> prodigy db-out my_dataset <span class="op">&gt;</span> /path/to/data.jsonl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="no-row-height column-margin column-container"><div class="">

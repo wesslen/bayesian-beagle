@@ -1,14 +1,15 @@
 ---
-title: "Prodigy DB: ORM's, peewee and Python"
+title: "Looking under the hood: Prodigy's DB"
 author: "Ryan Wesslen"
 description: "ORM's, peewee, and how to access Prodigy's database with Python."
 date: "2022-10-12"
+image: header.jpeg
 categories: [prodigy, database, orm]
 execute: 
   enabled: false
 ---
 
-In a [previous post](https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro), I described some Prodigy database recipes that enable you to manipulate annotations saved in the default SQLite database. However, you may find you want more database customization. In this post, I will dig into Prodigy's database core concepts. 
+In a [previous post](https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro), I described Prodigy database recipes to manipulate annotations saved in the default database system. However, for your application, you may find you want more database customization . In this post, I will dig into Prodigy's database core concepts and look under the hood.
 
 I'll also show how you can interact with [Prodigy's default database too from Python](#accessing-the-database-programmatically) to enable a more programmatic approach. This enables you to pull from the database using Python, not SQL.
 
@@ -24,23 +25,27 @@ By contrast, if you're from data analytics, you've likely used databases as SQL 
 
 Now wait - you may know that [Prodigy implements by default SQLite](https://prodi.gy/docs/api-database). How can Prodigy use an ORM approach but still implement a DBMS like SQLite?
 
-That's because Prodigy also includes [peewee](http://docs.peewee-orm.com/en/latest/), which is a common open-source ORM and operates as Prodigy's ORM. There are [many alternative ORMs](https://en.wikipedia.org/wiki/List_of_object%E2%80%93relational_mapping_software) and they vary by programming language.
+That's because Prodigy uses [peewee](http://docs.peewee-orm.com/en/latest/), light-weight and popular open-source ORM, operates as its ORM. There are [many alternative ORMs](https://en.wikipedia.org/wiki/List_of_object%E2%80%93relational_mapping_software) and they vary by programming language.
 
-TODO: https://www.fullstackpython.com/object-relational-mappers-orms.html
 
-An ORM provides a library to convert ("map") between objects in code and database tables ("relations"). With an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type. For example, a class named `Animals` can represent a SQL table `animals`. Each instance object of that class represents a row in the database.
+<img src="orm.drawio.svg" style="max-width: 100%"/>
+<figcaption>An ORM library converts ("map") between objects and databases ("relations").</figcaption>
+
+<br>
+
+ With an ORM, typically you can create a class that represents a table in a SQL database. Each attribute of the class represents a column, with a name and a type. For example, a class named `Animals` can represent a SQL table `animals`. Each instance object of that class represents a row in the database.
 
 TODO: explain model and connect to second part
+
+:::{.column-margin}
+[Full Stack Python's post](https://www.fullstackpython.com/object-relational-mappers-orms.html) for a detailed look on ORM's. 
+:::
 
 So why would we even use an ORM? 
 
 ORM's enable us to interact with our database using our language of choice instead of SQL. Because of Prodigy's ORM, this enables us to interface with our database using Python and not SQL.
 
-:::{.column-margin}
-For a detailed look on ORM's, I recommend [Full Stack Python's post](https://www.fullstackpython.com/object-relational-mappers-orms.html)
-:::
-
-But another advantage to ORMs is that they make it easier to switch between different relational databases. For example, a developer could use SQLite for local development and MySQL in production (although, not recommended in practice). Since Prodigy has [configurations for either SQLite, MySQL, or PostgreSQL](https://prodi.gy/docs/api-database), this makes it even easier.
+Another advantage to ORMs is that they make it easier to switch between different relational databases. Since Prodigy has [configurations for either SQLite, MySQL, or PostgreSQL](https://prodi.gy/docs/api-database), this makes it even easier.
 
 :::{.column-margin}
 To globally modify your database, you can edit the `db` and `db_settings` in Prodigy's [configuration file](https://prodi.gy/docs/install#config), `prodigy.json`.
@@ -54,7 +59,7 @@ Prodigy’s database model is available from `prodigy.components.db` in Python.
 from prodigy.components.db import connect
 
 db = connect("sqlite", {"name": "prodigy.db"}) # default
-examples = db.get_dataset("my_dataset")
+print(db.datasets)
 ```
 
 TODO: How to use
@@ -72,12 +77,6 @@ assert "test_dataset" in db                  # check that dataset was added
 db.add_examples(examples, ["test_dataset"])  # add examples to dataset
 dataset = db.get_dataset("test_dataset")     # retrieve a dataset
 assert len(dataset) == 1                     # check that examples were added
-```
-
-Alternatively, you can view the datasets like: 
-
-```python
-print(db.datasets)
 ```
 
 TODO: give an interesting example

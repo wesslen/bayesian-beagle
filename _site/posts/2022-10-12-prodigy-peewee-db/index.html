@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2022-10-12">
 <meta name="description" content="ORM’s, peewee, and how to access Prodigy’s database with Python.">
 
-<title>Reducing variance - Prodigy DB: ORM’s, peewee and Python</title>
+<title>Reducing variance - Looking under the hood: Prodigy’s DB</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,11 +127,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Reducing variance - Prodigy DB: ORM’s, peewee and Python">
+<meta property="og:title" content="Reducing variance - Looking under the hood: Prodigy’s DB">
 <meta property="og:description" content="ORM’s, peewee, and how to access Prodigy’s database with Python.">
+<meta property="og:image" content="https://wesslen-blog.netlify.app/posts/2022-10-12-prodigy-peewee-db/header.jpeg">
 <meta property="og:site-name" content="Reducing variance">
-<meta name="twitter:title" content="Reducing variance - Prodigy DB: ORM’s, peewee and Python">
+<meta name="twitter:title" content="Reducing variance - Looking under the hood: Prodigy’s DB">
 <meta name="twitter:description" content="ORM’s, peewee, and how to access Prodigy’s database with Python.">
+<meta name="twitter:image" content="https://wesslen-blog.netlify.app/posts/2022-10-12-prodigy-peewee-db/header.jpeg">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -180,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Prodigy DB: ORM’s, peewee and Python</h1>
+      <h1 class="title">Looking under the hood: Prodigy’s DB</h1>
                   <div>
         <div class="description">
           ORM’s, peewee, and how to access Prodigy’s database with Python.
@@ -226,7 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<p>In a <a href="https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro">previous post</a>, I described some Prodigy database recipes that enable you to manipulate annotations saved in the default SQLite database. However, you may find you want more database customization. In this post, I will dig into Prodigy’s database core concepts.</p>
+<p>In a <a href="https://wesslen-blog.netlify.app/posts/2022-10-11-prodigy-db-intro">previous post</a>, I described Prodigy database recipes to manipulate annotations saved in the default database system. However, for your application, you may find you want more database customization . In this post, I will dig into Prodigy’s database core concepts and look under the hood.</p>
 <p>I’ll also show how you can interact with <a href="#accessing-the-database-programmatically">Prodigy’s default database too from Python</a> to enable a more programmatic approach. This enables you to pull from the database using Python, not SQL.</p>
 <p>Last, I’ll outline experimental database features to highlight possible changes to Prodigy’s database system.</p>
 <p>If you’re new to Prodigy’s database, I recommend starting with <a href="https://prodi.gy/docs/api-database">Prodigy’s Database documentation</a> before this post.</p>
@@ -235,16 +237,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>As of v1.11.8, Prodigy’s database uses an ORM, or “object-relational mapper”. The key idea of an ORM is to implement an object-oriented paradigm to managing databases.</p>
 <p>By contrast, if you’re from data analytics, you’ve likely used databases as SQL database management systems (DBMS) such as SQLite or MySQL. These systems are not object-oriented. They can only store and manipulate scalar values like strings and integers within tables.</p>
 <p>Now wait - you may know that <a href="https://prodi.gy/docs/api-database">Prodigy implements by default SQLite</a>. How can Prodigy use an ORM approach but still implement a DBMS like SQLite?</p>
-<p>That’s because Prodigy also includes <a href="http://docs.peewee-orm.com/en/latest/">peewee</a>, which is a common open-source ORM and operates as Prodigy’s ORM. There are <a href="https://en.wikipedia.org/wiki/List_of_object%E2%80%93relational_mapping_software">many alternative ORMs</a> and they vary by programming language.</p>
-<p>TODO: https://www.fullstackpython.com/object-relational-mappers-orms.html</p>
-<p>An ORM provides a library to convert (“map”) between objects in code and database tables (“relations”). With an ORM, you normally create a class that represents a table in a SQL database, each attribute of the class represents a column, with a name and a type. For example, a class named <code>Animals</code> can represent a SQL table <code>animals</code>. Each instance object of that class represents a row in the database.</p>
+<p>That’s because Prodigy uses <a href="http://docs.peewee-orm.com/en/latest/">peewee</a>, light-weight and popular open-source ORM, operates as its ORM. There are <a href="https://en.wikipedia.org/wiki/List_of_object%E2%80%93relational_mapping_software">many alternative ORMs</a> and they vary by programming language.</p>
+<img src="orm.drawio.svg" style="max-width: 100%">
+<figcaption>
+An ORM library converts (“map”) between objects and databases (“relations”).
+</figcaption>
+<p><br></p>
+<p>With an ORM, typically you can create a class that represents a table in a SQL database. Each attribute of the class represents a column, with a name and a type. For example, a class named <code>Animals</code> can represent a SQL table <code>animals</code>. Each instance object of that class represents a row in the database.</p>
 <p>TODO: explain model and connect to second part</p>
-<p>So why would we even use an ORM?</p>
-<p>ORM’s enable us to interact with our database using our language of choice instead of SQL. Because of Prodigy’s ORM, this enables us to interface with our database using Python and not SQL.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>For a detailed look on ORM’s, I recommend <a href="https://www.fullstackpython.com/object-relational-mappers-orms.html">Full Stack Python’s post</a></p>
-</div></div><p>But another advantage to ORMs is that they make it easier to switch between different relational databases. For example, a developer could use SQLite for local development and MySQL in production (although, not recommended in practice). Since Prodigy has <a href="https://prodi.gy/docs/api-database">configurations for either SQLite, MySQL, or PostgreSQL</a>, this makes it even easier.</p>
+<p><a href="https://www.fullstackpython.com/object-relational-mappers-orms.html">Full Stack Python’s post</a> for a detailed look on ORM’s.</p>
+</div></div><p>So why would we even use an ORM?</p>
+<p>ORM’s enable us to interact with our database using our language of choice instead of SQL. Because of Prodigy’s ORM, this enables us to interface with our database using Python and not SQL.</p>
+<p>Another advantage to ORMs is that they make it easier to switch between different relational databases. Since Prodigy has <a href="https://prodi.gy/docs/api-database">configurations for either SQLite, MySQL, or PostgreSQL</a>, this makes it even easier.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>To globally modify your database, you can edit the <code>db</code> and <code>db_settings</code> in Prodigy’s <a href="https://prodi.gy/docs/install#config">configuration file</a>, <code>prodigy.json</code>.</p>
@@ -255,7 +261,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> prodigy.components.db <span class="im">import</span> <span class="ex">connect</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>db <span class="op">=</span> <span class="ex">connect</span>(<span class="st">"sqlite"</span>, {<span class="st">"name"</span>: <span class="st">"prodigy.db"</span>}) <span class="co"># default</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>examples <span class="op">=</span> db.get_dataset(<span class="st">"my_dataset"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(db.datasets)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>TODO: How to use</p>
 <p>TODO: Show data format for data.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> prodigy.components.db <span class="im">import</span> <span class="ex">connect</span></span>
@@ -268,8 +274,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>db.add_examples(examples, [<span class="st">"test_dataset"</span>])  <span class="co"># add examples to dataset</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> db.get_dataset(<span class="st">"test_dataset"</span>)     <span class="co"># retrieve a dataset</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="bu">len</span>(dataset) <span class="op">==</span> <span class="dv">1</span>                     <span class="co"># check that examples were added</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Alternatively, you can view the datasets like:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(db.datasets)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>TODO: give an interesting example</p>
 </section>
 <section id="down-the-road-changes" class="level2">
@@ -305,15 +309,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>What is new is a fourth table, Feed, which serves as a buffer to handle the batch of data for multiple annotators. Ultimately, this new Feed will replace Prodigy’s current generator-based streams and will aim to reduce issues with multi-user annotators.</p>
 <p>This change requires schema changes so it also aligns with a switch to <a href="https://www.sqlalchemy.org/">SQLAlchemy</a> from <code>peewee</code> for Prodigy’s ORM. One advantage of this switch is that it can enable more database systems beyond SQLite, PostgreSQL, and MySQL.</p>
 <p>If you’re interested in learning more, see this <a href="https://support.prodi.gy/t/duplicate-annotations-in-output/4961/53">Prodigy Support issue</a>, or you can install it:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install prodigy==1.11.8a4 <span class="at">--extra-index-url</span> https://{YOUR_LICENSE_KEY}@download.prodi.gy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install prodigy==1.11.8a4 <span class="at">--extra-index-url</span> https://{YOUR_LICENSE_KEY}@download.prodi.gy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and modify <code>prodigy.json</code> such that:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>prodigy.json</strong></pre>
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"experimental_feed"</span><span class="fu">:</span> <span class="kw">true</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"experimental_feed"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

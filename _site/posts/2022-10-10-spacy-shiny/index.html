@@ -260,6 +260,10 @@ Warning
 <li>the Server function</li>
 </ol>
 <p>Here’s a generic Shiny app for Python:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>app.py</strong></pre>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shiny <span class="im">import</span> App, ui</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Part 1: ui ----</span></span>
@@ -274,6 +278,7 @@ Warning
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine into a shiny app.</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the variable must be "app".</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> App(app_ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>To run this file, we’ll need to call <code>from shiny import App, ui</code>. And then to create the app itself, we’ll combine the ui <code>app_ui</code> along with the <code>server</code> function into <code>App()</code>. Easy so far, right?</p>
 </section>
 <section id="basics-of-our-spacy-app-server-side" class="level2">

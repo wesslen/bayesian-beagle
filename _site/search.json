@@ -18,7 +18,7 @@
     "href": "posts/2022-10-10-spacy-shiny/index.html#what-makes-up-a-shiny-app",
     "title": "spaCy in Shiny for Python",
     "section": "What makes up a Shiny app?",
-    "text": "What makes up a Shiny app?\nShiny apps have two major parts:\n\nthe UI (user-interface)\nthe Server function\n\nHere’s a generic Shiny app for Python:\nfrom shiny import App, ui\n\n# Part 1: ui ----\napp_ui = ui.page_fluid(\n    \"Hello, world!\",\n)\n\n# Part 2: server ----\ndef server(input, output, session):\n    ...\n\n# Combine into a shiny app.\n# Note that the variable must be \"app\".\napp = App(app_ui, server)\nTo run this file, we’ll need to call from shiny import App, ui. And then to create the app itself, we’ll combine the ui app_ui along with the server function into App(). Easy so far, right?"
+    "text": "What makes up a Shiny app?\nShiny apps have two major parts:\n\nthe UI (user-interface)\nthe Server function\n\nHere’s a generic Shiny app for Python:\n\n\napp.py\n\nfrom shiny import App, ui\n\n# Part 1: ui ----\napp_ui = ui.page_fluid(\n    \"Hello, world!\",\n)\n\n# Part 2: server ----\ndef server(input, output, session):\n    ...\n\n# Combine into a shiny app.\n# Note that the variable must be \"app\".\napp = App(app_ui, server)\n\nTo run this file, we’ll need to call from shiny import App, ui. And then to create the app itself, we’ll combine the ui app_ui along with the server function into App(). Easy so far, right?"
   },
   {
     "objectID": "posts/2022-10-10-spacy-shiny/index.html#basics-of-our-spacy-app-server-side",

@@ -232,6 +232,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <p>Similar to other major languages like English, spaCy offers <a href="https://spacy.io/models/zh">four pipelines for Chinese</a>: <code>zh_core_web_sm</code>, <code>zh_core_web_md</code>, <code>zh_core_web_lg</code>, and <code>zh_core_web_trf</code>.</p>
+<div class="tip">
+<p>There’s a <a href="https://course.spacy.io/zh/chapter1">Chinese version of Advanced NLP with spaCy</a>, the free and interactive online course on spaCy! You’ll learn how to use spaCy to build advanced natural language understanding systems, using both rule-based and machine learning approaches.</p>
+</div>
 <p>To get started you need to make sure you have one of the pipelines installed.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> spacy download zh_core_web_sm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next, we need an input file. Prodigy can use <code>.txt</code>, <code>.csv</code>, and <code>.jsonl</code> files if they follow these <a href="https://prodi.gy/docs/api-loaders#input">input data formats</a>. Let’s say we have a file named <code>zh_headlines.txt</code> of 10 article news headlines.</p>

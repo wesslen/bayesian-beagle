@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install -r requirements-build.txt
+        python -m pip install -r requirements-summarizer.txt
     - name: Run summarization
       run: |
         python scripts/summarizer.py data/input.jsonl

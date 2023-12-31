@@ -4,21 +4,21 @@ function latex()
     return pandoc.RawBlock('tex', '{\\LaTeX}')
   elseif quarto.doc.isFormat("html") then
     return pandoc.Math('InlineMath', "\\LaTeX")
-  else 
+  else
     return pandoc.Span('LaTeX')
   end
 end
 
-function tex() 
+function tex()
   if quarto.doc.isFormat("pdf") then
     return pandoc.RawBlock('tex', '{\\TeX}')
   elseif quarto.doc.isFormat("html") then
     return pandoc.Math('InlineMath', "\\TeX")
-  else 
+  else
     return pandoc.Span('TeX')
   end
 end
-  
+
 -- shortcode that provides a nicely formatted 'bibtex' string
 function bibtex()
   if quarto.doc.isFormat("pdf") then
@@ -50,7 +50,7 @@ function vdots()
   end
 end
 
-function ddots() 
+function ddots()
   if quarto.doc.isFormat("pdf") then
     return pandoc.Math('InlineMath', "\\ddots")
   elseif quarto.doc.isFormat("html") then
@@ -64,15 +64,15 @@ function pct()
   local pct
   if quarto.doc.isFormat("pdf") then
     return pandoc.Math('InlineMath', '\\%')
-  else 
+  else
     return pandoc.Str("%")
   end
 end
- 
-function R2() 
+
+function R2()
   if quarto.doc.isFormat("pdf") then
     return pandoc.Math('InlineMath', "R^2")
   else
-    return {pandoc.Str("R"), pandoc.Superscript("2")} 
+    return {pandoc.Str("R"), pandoc.Superscript("2")}
   end
 end

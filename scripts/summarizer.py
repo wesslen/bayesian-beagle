@@ -15,7 +15,7 @@ def is_valid_arxiv_id(arxiv_id: str) -> bool:
     try:
         first_result = next(client.results(search_by_id))
         return True, first_result
-    except StopIteration:
+    except Exception:
         return False, None
 
 
@@ -24,8 +24,31 @@ def extract_text_from_html(html_content: str) -> str:
     return soup.get_text()
 
 
+def truncate_string(text, token_threshold):
+    """
+    Truncate a string after a specified number of word tokens.
+
+    :param text: The input string.
+    :param token_threshold: The maximum number of word tokens allowed.
+    :return: A truncated version of the string if it exceeds the token threshold.
+    """
+
+    # Split the text into words (tokens)
+    tokens = text.split()
+
+    # Check if the number of tokens is greater than the threshold
+    if len(tokens) > token_threshold:
+        # Truncate the list of tokens and join back into a string
+        truncated_text = " ".join(tokens[:token_threshold])
+        return truncated_text
+    else:
+        # If the text is within the limit, return it as is
+        return text
+
+
 def remove_double_quotes(input_string):
-    return input_string.replace('"', '')
+    return input_string.replace('"', "")
+
 
 def count_words(text: str) -> int:
     words = text.split()
@@ -58,13 +81,14 @@ def summarize_text(text: str) -> str:
 def tldr_title(text: str) -> str:
     client = OpenAI()
 
+    # TODO: Generalize this to allow different models and prompts. This should be appended to each record.
     response = client.chat.completions.create(
         model="gpt-3.5-turbo-1106",
         messages=[
             {
                 "role": "system",
                 "content": "You are a helpful assistant to summarize academic \
-                    article abstracts. "
+                    article abstracts. ",
             },
             {
                 "role": "user",
@@ -87,9 +111,13 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
     output_file_path (str): Output JSONL file path.
     """
     output_path = Path(output_file_path)
+    # TODO: check if output_path exists, if so, read it in. check it includes "id" key. raise error if not.
+
     with open(input_jsonl, "r") as file:
         for line in file:
             data = json.loads(line)
+
+            # TODO: if output_path exists, check "id" versus data. if found, skip with continue.
             arxiv_id = data["id"]
             categories = data["categories"]
 
@@ -105,9 +133,9 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
             word_count = count_words(html_content)
             if word_count > 15000:
                 typer.echo(
-                    f"Warning: HTML content for {arxiv_id} exceeds 15,000 tokens. Skipping."
+                    f"Warning: HTML content for {arxiv_id} exceeds 15,000 tokens. Truncating."
                 )
-                continue
+                html_content = truncate_string(html_content)
 
             text = extract_text_from_html(html_content)
             summary = summarize_text(text)
@@ -121,7 +149,10 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
                     "title": remove_double_quotes(first_result.title),
                     "subtitle": remove_double_quotes(tldr),
                     "categories": categories,
-                    "publish_date": first_result.published.strftime("%Y-%m-%d"),
+                    "publish_date": first_result.published.strftime(
+                        "%Y-%m-%d"
+                    ),
+                    "truncated": True if word_count > 15000 else False,
                 },
             }
 

@@ -4,9 +4,10 @@ env:
     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
 on:
-    push:
-      paths:
-        - 'data/input.jsonl'
+  push:
+    paths:
+      - 'data/input.jsonl'
+  workflow_dispatch:
 
 jobs:
   scheduled:

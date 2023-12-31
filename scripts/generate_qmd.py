@@ -12,6 +12,7 @@ title: "{{ example['meta']['title'] }}"
 subtitle: "{{ example['meta']['subtitle'] }}"
 author: "Bot"
 date: "{{ example['meta']['publish_date'] }}"
+link-external-newwindow: "{{ example['meta']['url']}}
 categories: {{ example['meta']['categories'] }}
 format:
   html:

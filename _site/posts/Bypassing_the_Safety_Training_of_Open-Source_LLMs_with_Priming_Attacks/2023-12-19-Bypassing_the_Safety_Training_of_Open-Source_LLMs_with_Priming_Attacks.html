@@ -65,10 +65,10 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Reducing variance - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta property="og:description" content="Popular LLMs are vulnerable to priming attacks that bypass safety training, improving harmful behavior success rate. Source code available.">
+<meta property="og:description" content="LLMs vulnerable to simple attacks bypassing safety training, improving harmful behavior detection by up to 3.3x.">
 <meta property="og:site-name" content="Reducing variance">
 <meta name="twitter:title" content="Reducing variance - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta name="twitter:description" content="Popular LLMs are vulnerable to priming attacks that bypass safety training, improving harmful behavior success rate. Source code available.">
+<meta name="twitter:description" content="LLMs vulnerable to simple attacks bypassing safety training, improving harmful behavior detection by up to 3.3x.">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</h1>
-            <p class="subtitle lead">Popular LLMs are vulnerable to priming attacks that bypass safety training, improving harmful behavior success rate. Source code available.</p>
+            <p class="subtitle lead">LLMs vulnerable to simple attacks bypassing safety training, improving harmful behavior detection by up to 3.3x.</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">security</div>
                 <div class="quarto-category">open-source</div>
@@ -164,43 +164,48 @@ ul.task-list li input[type="checkbox"] {
 <h1>Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</h1>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">1 Introduction</h2>
-<p>The paper investigates the vulnerability of state-of-the-art open-source LLMs to priming attacks, which circumvent safety training and can be used to extract harmful outputs.</p>
+<ul>
+<li>Autoregressive Large Language Models (LLMs) are widely used but require safety training for human alignment to prevent nefarious uses.</li>
+<li>It’s possible to bypass safety alignment and obtain harmful outputs from open-source LLMs through optimization-free attacks called <strong>priming attacks</strong>.</li>
+</ul>
 </section>
 <section id="methodology-results" class="level2">
 <h2 class="anchored" data-anchor-id="methodology-results">2 Methodology &amp; Results</h2>
-<p>The researchers use a few-shot prompt approach to generate priming attacks and automate the evaluation process using another LLM. The results show that the proposed priming attack outperforms baselines in terms of attack success rate on harmful behaviors.</p>
-<section id="a-details-on-experimental-setup" class="level3">
-<h3 class="anchored" data-anchor-id="a-details-on-experimental-setup">A Details on experimental setup</h3>
-<p>Experiments were conducted on a server with specific hardware specifications.</p>
+<section id="a.-few-shot-priming-attacks" class="level3">
+<h3 class="anchored" data-anchor-id="a.-few-shot-priming-attacks">A. Few-Shot Priming Attacks</h3>
+<ul>
+<li>Used a non-safety-trained LLM to generate priming attacks for harmful behaviors based on a new prompt format.</li>
+<li>Showed that priming with slightly more prompt-dependent content can improve the attack success rate by up to 3.3× compared to baseline attacks.</li>
+</ul>
 </section>
-<section id="b-few-shot-prompt-for-generating-priming-attacks" class="level3">
-<h3 class="anchored" data-anchor-id="b-few-shot-prompt-for-generating-priming-attacks">B Few-Shot Prompt for Generating Priming Attacks</h3>
-<p>The paper provides examples of few-shot prompts used for generating priming attacks.</p>
+<section id="b.-experimental-setup" class="level3">
+<h3 class="anchored" data-anchor-id="b.-experimental-setup">B. Experimental Setup</h3>
+<ul>
+<li>Used the pre-trained Llama-2 model for few-shot prompting with specific prompts and affirmative initial responses.</li>
+<li>Evaluated the attack success rate using the SOTA response classification tool Llama Guard.</li>
+</ul>
 </section>
-<section id="c-llama-guard-task-instructions" class="level3">
-<h3 class="anchored" data-anchor-id="c-llama-guard-task-instructions">C Llama Guard Task Instructions</h3>
-<p>Instructions given to Llama Guard for evaluating the attacks are provided, along with specific unsafe content categories.</p>
-</section>
-<section id="d-manual-evaluation-benchmark" class="level3">
-<h3 class="anchored" data-anchor-id="d-manual-evaluation-benchmark">D Manual Evaluation Benchmark</h3>
-<p>The paper clarifies the manual evaluation benchmark for labeling harmful responses, providing examples of harmful and safe responses.</p>
-</section>
-<section id="e-manual-evaluation-vs.-llama-guard" class="level3">
-<h3 class="anchored" data-anchor-id="e-manual-evaluation-vs.-llama-guard">E Manual Evaluation vs.&nbsp;Llama Guard</h3>
-<p>A comparison between manual evaluation and Llama Guard’s evaluation indicates differences in the assessment of harmful responses.</p>
-</section>
-<section id="f-runtime-comparison" class="level3">
-<h3 class="anchored" data-anchor-id="f-runtime-comparison">F Runtime Comparison</h3>
-<p>A comparison of runtimes for Llama-2 and few-shot prompting is provided, demonstrating the efficiency of the few-shot task.</p>
+<section id="results" class="level3">
+<h3 class="anchored" data-anchor-id="results">Results</h3>
+<ul>
+<li>Priming attacks outperformed baselines for all models, indicating the fragility of safety measures.</li>
+<li>Manual evaluation indicated that Llama Guard might underestimate harmfulness.</li>
+</ul>
 </section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">3 Conclusion</h2>
-<p>The study highlights the fragility of current LLM safety measures and raises concerns about future open-sourcing of LLMs, emphasizing the need for further research into safer open-sourcing methods.</p>
+<ul>
+<li>Highlighted the fragility of current LLM safety measures under increasingly practical assumptions.</li>
+<li>Suggested the need for further research into novel methods for safer open-sourcing.</li>
+</ul>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<p>The paper includes references to related works for further exploration.</p>
+<ul>
+<li>The paper provides a list of references for further exploration into the topic.</li>
+</ul>
+<p>For more detailed information, refer to the original text.</p>
 <section id="appendix" class="level3">
 <h3 class="anchored" data-anchor-id="appendix">Appendix</h3>
 <p><strong>Link</strong>: <a href="https://browse.arxiv.org/html/2312.12321v1">https://browse.arxiv.org/html/2312.12321v1</a> <br> <strong>Truncated</strong>: False <br> <strong>Word Count</strong>: 10319</p>

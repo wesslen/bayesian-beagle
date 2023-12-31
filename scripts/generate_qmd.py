@@ -12,7 +12,7 @@ QMD_TEMPLATE = """
 title: "{{ example['meta']['title'] }}"
 subtitle: "{{ example['meta']['subtitle'] }}"
 author: "Bot"
-date: "{{ current_date }}"
+date: "{{ example['meta']['publish_date'] }}"
 categories: {{ example['meta']['categories'] }}
 format:
   html:

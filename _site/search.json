@@ -1,59 +1,129 @@
 [
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html",
+    "href": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html",
+    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
     "section": "",
-    "text": "This paper presents novel prompting techniques to improve the performance of automatic summarization systems for scientific articles. The authors feed summarizers with lists of key terms extracted from articles, such as author keywords or automatically generated keywords, to guide summarization systems. The techniques are tested with various summarization models and input texts, showing performance gains, especially for smaller models summarizing sections separately.\n\n\n\n\nAutomatic text summarization aims to produce shortened versions of documents while retaining the most relevant information.\nScientific articles are challenging to summarize due to their length, complexity, and irregular organizational structures.\n\n\n\n\n\nEarlier approaches to automatic summarization relied on extractive methods, while current state-of-the-art systems are based on abstractive summarization models such as transformer architectures.\nPrior work includes techniques like planning with learned entity prompts and faceted summarization to guide summarization systems.\n\n\n\n\n\nPrompting Technique Dimension: The paper evaluates five distinct prompting techniques for generating prompts to provide scientific summarizers with useful contextual information.\nModel Dimension: The authors study the effects of prompting techniques integrated with a range of current state-of-the-art transformer models for scientific summarization.\nInput Text Dimension: The study explores three main conditions for input texts to understand when contextual information from prompts provides significant gains.\n\n\n\n\n\nThe authors use a dataset of open-access biomedical papers from PubMed Central for training and evaluation.\nThe experiments demonstrate consistent performance improvements from prompting techniques on smaller models, especially when summarizing sections independently.\nTargeted confusion testing is conducted to isolate the benefits of prompting.\n\n\n\n\nThe findings suggest that prompting is an effective approach to overcoming the limitations of smaller, less capable summarization systems. The study also underscores the potential of prompting as a promising technique to assist smaller models, particularly when computational resources are constrained.\n\n\n\nThe paper proposes novel prompting techniques to provide key term context and enhance scientific literature summarizers, presenting promising results for aiding smaller summarization models, particularly in the context of section-level summarization.\nThis summary is authored by Aldan Creo, Manuel Lama, and Juan C. Vidal from the University of Santiago de Compostela.\n\n\nLink: https://browse.arxiv.org/html/2312.08282v2  Truncated: True  Word Count: 46040"
+    "text": "Query-focused summarization (QFS) aims to provide a summary of a single or multiple documents to satisfy a given query.\nThe prototypical QFS pipeline consists of a retriever and a generator, where large language models (LLMs) are commonly used as generators.\nHowever, using LLMs in QFS may lead to hallucinations, which is a growing concern. This has led to an interest in developing new decoding methods to improve generation quality and reduce hallucinations.\n\n\n\n\n\nContext-aware Decoding (CAD) leverages the idea of pointwise mutual information to make the generation more conditioned on the input evidence.\nThe computational cost for CAD is assessed for the Transformer architecture.\n\n\n\n\n\nThe study involves experiments on QFS and news summarization datasets, employing different language models and evaluation metrics.\nPrompting templates and hyperparameters are provided for detailed experiment set-up.\n\n\n\n\n\nQuality of Generation: CAD improves QFS quality and can reduce factual mistakes/hallucinations, albeit with increased computational complexity and reduced speed.\nChoice of hyperparameter Î±: A trade-off is observed between improved factuality and reduced ROUGE score as Î± increases.\nCAD vs. vanilla decoding: CAD improves ROUGE scores and reduces factuality errors on news summarization datasets, while improving FactKB scores on QFS datasets.\n\n\n\n\n\nPrevious work has focused on understanding and addressing the issue of hallucination in natural language generation, as well as developing various decoding methods to improve generation quality.\n\n\n\n\n\nCAD is shown to improve generation quality, reduce factuality errors, and also slow down decoding speed.\nThe study was limited to language models up to 11B parameters, and larger models may exhibit different performance patterns."
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#abstract",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#abstract",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#introduction",
+    "href": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#introduction",
+    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
     "section": "",
-    "text": "This paper presents novel prompting techniques to improve the performance of automatic summarization systems for scientific articles. The authors feed summarizers with lists of key terms extracted from articles, such as author keywords or automatically generated keywords, to guide summarization systems. The techniques are tested with various summarization models and input texts, showing performance gains, especially for smaller models summarizing sections separately."
+    "text": "Query-focused summarization (QFS) aims to provide a summary of a single or multiple documents to satisfy a given query.\nThe prototypical QFS pipeline consists of a retriever and a generator, where large language models (LLMs) are commonly used as generators.\nHowever, using LLMs in QFS may lead to hallucinations, which is a growing concern. This has led to an interest in developing new decoding methods to improve generation quality and reduce hallucinations."
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#introduction",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#introduction",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#background",
+    "href": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#background",
+    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
     "section": "",
-    "text": "Automatic text summarization aims to produce shortened versions of documents while retaining the most relevant information.\nScientific articles are challenging to summarize due to their length, complexity, and irregular organizational structures."
+    "text": "Context-aware Decoding (CAD) leverages the idea of pointwise mutual information to make the generation more conditioned on the input evidence.\nThe computational cost for CAD is assessed for the Transformer architecture."
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#related-work",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#related-work",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#experiments",
+    "href": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#experiments",
+    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
     "section": "",
-    "text": "Earlier approaches to automatic summarization relied on extractive methods, while current state-of-the-art systems are based on abstractive summarization models such as transformer architectures.\nPrior work includes techniques like planning with learned entity prompts and faceted summarization to guide summarization systems."
+    "text": "The study involves experiments on QFS and news summarization datasets, employing different language models and evaluation metrics.\nPrompting templates and hyperparameters are provided for detailed experiment set-up."
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#methods",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#methods",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#results-and-analysis",
+    "href": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#results-and-analysis",
+    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
     "section": "",
-    "text": "Prompting Technique Dimension: The paper evaluates five distinct prompting techniques for generating prompts to provide scientific summarizers with useful contextual information.\nModel Dimension: The authors study the effects of prompting techniques integrated with a range of current state-of-the-art transformer models for scientific summarization.\nInput Text Dimension: The study explores three main conditions for input texts to understand when contextual information from prompts provides significant gains."
+    "text": "Quality of Generation: CAD improves QFS quality and can reduce factual mistakes/hallucinations, albeit with increased computational complexity and reduced speed.\nChoice of hyperparameter Î±: A trade-off is observed between improved factuality and reduced ROUGE score as Î± increases.\nCAD vs. vanilla decoding: CAD improves ROUGE scores and reduces factuality errors on news summarization datasets, while improving FactKB scores on QFS datasets."
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#results",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#results",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#related-work",
+    "href": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#related-work",
+    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
     "section": "",
-    "text": "The authors use a dataset of open-access biomedical papers from PubMed Central for training and evaluation.\nThe experiments demonstrate consistent performance improvements from prompting techniques on smaller models, especially when summarizing sections independently.\nTargeted confusion testing is conducted to isolate the benefits of prompting."
+    "text": "Previous work has focused on understanding and addressing the issue of hallucination in natural language generation, as well as developing various decoding methods to improve generation quality."
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#discussion",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#discussion",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#conclusion-and-limitations",
+    "href": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#conclusion-and-limitations",
+    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
     "section": "",
-    "text": "The findings suggest that prompting is an effective approach to overcoming the limitations of smaller, less capable summarization systems. The study also underscores the potential of prompting as a promising technique to assist smaller models, particularly when computational resources are constrained."
+    "text": "CAD is shown to improve generation quality, reduce factuality errors, and also slow down decoding speed.\nThe study was limited to language models up to 11B parameters, and larger models may exhibit different performance patterns."
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#conclusion",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#conclusion",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html",
+    "href": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html",
+    "title": "Android dialogue system for customer service using prompt-based topic control and compliments generation",
     "section": "",
-    "text": "The paper proposes novel prompting techniques to provide key term context and enhance scientific literature summarizers, presenting promising results for aiding smaller summarization models, particularly in the context of section-level summarization.\nThis summary is authored by Aldan Creo, Manuel Lama, and Juan C. Vidal from the University of Santiago de Compostela.\n\n\nLink: https://browse.arxiv.org/html/2312.08282v2  Truncated: True  Word Count: 46040"
+    "text": "The paper describes a dialogue system developed for the Dialogue Robot Competition 2023, focusing on generative AI and hospitality in customer service.\n\nGenerative AI, such as ChatGPT, has improved the performance of dialogue systems.\nHospitality is crucial in customer service, and dialogue systems are expected to respond with hospitality.\nThe paper aims to construct a dialogue system with various elements of hospitality service and evaluate users.\n\n\n\n\nThe proposed system focuses on topic control, compliments generation, and user preference extraction.\n\nControlling Topics with ChatGPT Prompts: The system achieves topic control for trip planning by inserting text into prompts using ChatGPT.\nDialogue Flow: The system elicits customer requests, confirms travel plan requirements, and discusses a plan that meets the customer’s needs.\nFunction to Complement a User’s Physical Appearance: The system captures the user’s upper body image to recognize appearance characteristics and issue compliments based on estimated attributes.\nControl Using User’s Past Speech: The system uses ChatGPT to determine sightseeing spots and create travel plans based on the user’s past utterances.\nOverall Configuration: The overall system configuration is explained and shown in Figure 2.\n\n\n\n\nThe system undergoes user evaluation, which consists of satisfaction evaluation and plan evaluation.\n\nSatisfaction Evaluation includes sufficiency of information, naturalness of dialogue, satisfaction with dialogue, trustworthiness of the robot, among others.\nPlan Evaluation assesses the feasibility of the travel plan created by the system.\n\n\n\n\nThe dialogue system, leveraging ChatGPT for topic control and compliment generation, was ranked first in both satisfaction and plan ratings during the preliminary round evaluation, indicating its effectiveness in real customer environments.\nThe paper provides insights into the development of an Android dialogue system that harnesses the power of generative AI and hospitality in customer service, with promising preliminary results from real customer evaluations.\n\nThe paper highlights the development of a dialogue system for the Dialogue Robot Competition 2023, emphasizing the utilization of ChatGPT for topic control and compliment generation, as well as the system’s effectiveness in real customer evaluations.\n\n\nLink: https://browse.arxiv.org/html/2312.12924v1  Truncated: False  Word Count: 2370"
+  },
+  {
+    "objectID": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#i.-introduction",
+    "href": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#i.-introduction",
+    "title": "Android dialogue system for customer service using prompt-based topic control and compliments generation",
+    "section": "",
+    "text": "The paper describes a dialogue system developed for the Dialogue Robot Competition 2023, focusing on generative AI and hospitality in customer service.\n\nGenerative AI, such as ChatGPT, has improved the performance of dialogue systems.\nHospitality is crucial in customer service, and dialogue systems are expected to respond with hospitality.\nThe paper aims to construct a dialogue system with various elements of hospitality service and evaluate users."
+  },
+  {
+    "objectID": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#ii.-proposed-system",
+    "href": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#ii.-proposed-system",
+    "title": "Android dialogue system for customer service using prompt-based topic control and compliments generation",
+    "section": "",
+    "text": "The proposed system focuses on topic control, compliments generation, and user preference extraction.\n\nControlling Topics with ChatGPT Prompts: The system achieves topic control for trip planning by inserting text into prompts using ChatGPT.\nDialogue Flow: The system elicits customer requests, confirms travel plan requirements, and discusses a plan that meets the customer’s needs.\nFunction to Complement a User’s Physical Appearance: The system captures the user’s upper body image to recognize appearance characteristics and issue compliments based on estimated attributes.\nControl Using User’s Past Speech: The system uses ChatGPT to determine sightseeing spots and create travel plans based on the user’s past utterances.\nOverall Configuration: The overall system configuration is explained and shown in Figure 2."
+  },
+  {
+    "objectID": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#iii.-user-evaluation-and-preliminary-results",
+    "href": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#iii.-user-evaluation-and-preliminary-results",
+    "title": "Android dialogue system for customer service using prompt-based topic control and compliments generation",
+    "section": "",
+    "text": "The system undergoes user evaluation, which consists of satisfaction evaluation and plan evaluation.\n\nSatisfaction Evaluation includes sufficiency of information, naturalness of dialogue, satisfaction with dialogue, trustworthiness of the robot, among others.\nPlan Evaluation assesses the feasibility of the travel plan created by the system."
+  },
+  {
+    "objectID": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#iv.-conclusion",
+    "href": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#iv.-conclusion",
+    "title": "Android dialogue system for customer service using prompt-based topic control and compliments generation",
+    "section": "",
+    "text": "The dialogue system, leveraging ChatGPT for topic control and compliment generation, was ranked first in both satisfaction and plan ratings during the preliminary round evaluation, indicating its effectiveness in real customer environments.\nThe paper provides insights into the development of an Android dialogue system that harnesses the power of generative AI and hospitality in customer service, with promising preliminary results from real customer evaluations.\n\nThe paper highlights the development of a dialogue system for the Dialogue Robot Competition 2023, emphasizing the utilization of ChatGPT for topic control and compliment generation, as well as the system’s effectiveness in real customer evaluations.\n\n\nLink: https://browse.arxiv.org/html/2312.12924v1  Truncated: False  Word Count: 2370"
+  },
+  {
+    "objectID": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html",
+    "href": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html",
+    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
+    "section": "",
+    "text": "Summary of “RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation”\n\nI. Introduction\nThe paper introduces “RecRanker” which uses large language models (LLMs) for top-k recommendations and proposes various strategies for instruction tuning and hybrid ranking to enhance model performance.\n\n\nII. Related Work\nThe section discusses top-k recommendation paradigms, collaborative filtering-based direct recommendations, sequential recommendations, and the integration of LLMs into recommender systems.\n\n\nIII. Preliminaries\nIt provides the mathematical definitions for top-k recommendation and the representation of the original LLM in the recommendation methods.\n\n\nIV. Methodology\n\nIV-A Overview: Describes the training and inference pipeline of RecRanker.\nIV-B Adaptive User Sampling: Discusses the importance-aware sampling, clustering-based sampling, and penalties for repetitive sampling strategies.\nIV-C Candidate Items Selection: Explains negative sampling and retrieval model-based item selection.\nIV-D Prompt Construction: Describes pointwise, pairwise, and listwise ranking, position shifting, and prompt enhancement strategies.\nIV-E Optimization via Instruction Tuning: Details the fine-tuning of LLM using instruction-based approaches.\nIV-F Hybrid Ranking: Introduces a hybrid ranking method by ensembling multiple ranking tasks.\n\n\n\nV. Experiment\n\nV-A Experimental Setup: Describes the datasets, evaluation metrics, and research questions being investigated.\nV-A1 Dataset: Introduces the MovieLens-100K, MovieLens-1M, and BookCrossing datasets.\nV-A2 Evaluation Metrics: Specifies the evaluation metrics used for the experiments.\n\nThe paper includes tables presenting dataset descriptions and experimental results, which analyze the performance of RecRanker against baseline models for different recommendation scenarios.\nOverall, the paper introduces RecRanker as a framework for instruction-tuning LLMs for top-k recommendations, proposing strategies for user sampling, prompt construction, model tuning, and hybrid ranking, and presents comprehensive experiments to validate the effectiveness of the proposed framework.\n\n\n\nAppendix\nLink: https://browse.arxiv.org/html/2312.16018v1  Truncated: True  Word Count: 29329"
+  },
+  {
+    "objectID": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html",
+    "href": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html",
+    "title": "Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs",
+    "section": "",
+    "text": "Explainable recommender systems are important for transparency and interpretability in AI-driven decision-making processes.\nLarge Language Models (LLMs) have the capability to provide explanations in recommender systems but face challenges in personalization and trustworthiness.\n\n\n\n\n\nIdentified five key characteristics for high-quality AI-generated explanations: Personalization, Factuality, Robustness, Human readability, and Proper utterance.\nPresented examples of zero-shot and Logic-Scaffolding model explanations to highlight limitations of the zero-shot approach.\n\n\n\n\n\nDescribed the Logic-Scaffolding framework with three main steps: Relevant Item Selection, Aspect Extraction, and Chain-of-Thought Reasoning.\n\n3.1 Relevant Item Selection: Utilized a pre-trained sentence transformer model to select influential items related to the recommended item from the user’s history.\n3.2 Aspect Extraction: Leveraged few-shot learning technique to extract essential aspects associated with each item.\n3.3 Chain-of-Thought Reasoning: Used chain-of-thought prompting technique to guide the generation of explanations.\n\n\n\n\n\n\nShowcased the interactive user interface used in the demonstration to explore the effect of the proposed framework on the quality of explanations.\nConducted human evaluation comparing the explanations generated by the zero-shot approach and the Logic-Scaffolding model, highlighting the superior performance of the latter.\n\n\n\n\nThe Logic-Scaffolding model consistently received higher ratings than the zero-shot approach across criteria of relevance, human-readability, factuality, and proper utterance.\nEffect size test indicated a “large” effect in three out of four criteria, with significant improvements in factuality.\n\nOverall, the Logic-Scaffolding framework provides a practical solution to address the limitations of generic LLMs in generating reliable, personalized, and responsible explanations in recommender systems.\n\n\n\nLink: https://browse.arxiv.org/html/2312.14345v1  Truncated: False  Word Count: 4674"
+  },
+  {
+    "objectID": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#introduction",
+    "href": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#introduction",
+    "title": "Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs",
+    "section": "",
+    "text": "Explainable recommender systems are important for transparency and interpretability in AI-driven decision-making processes.\nLarge Language Models (LLMs) have the capability to provide explanations in recommender systems but face challenges in personalization and trustworthiness."
+  },
+  {
+    "objectID": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#characteristics-of-a-good-explanation",
+    "href": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#characteristics-of-a-good-explanation",
+    "title": "Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs",
+    "section": "",
+    "text": "Identified five key characteristics for high-quality AI-generated explanations: Personalization, Factuality, Robustness, Human readability, and Proper utterance.\nPresented examples of zero-shot and Logic-Scaffolding model explanations to highlight limitations of the zero-shot approach."
+  },
+  {
+    "objectID": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#aspect-instructed-recommendation-evidence-generation",
+    "href": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#aspect-instructed-recommendation-evidence-generation",
+    "title": "Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs",
+    "section": "",
+    "text": "Described the Logic-Scaffolding framework with three main steps: Relevant Item Selection, Aspect Extraction, and Chain-of-Thought Reasoning.\n\n3.1 Relevant Item Selection: Utilized a pre-trained sentence transformer model to select influential items related to the recommended item from the user’s history.\n3.2 Aspect Extraction: Leveraged few-shot learning technique to extract essential aspects associated with each item.\n3.3 Chain-of-Thought Reasoning: Used chain-of-thought prompting technique to guide the generation of explanations."
+  },
+  {
+    "objectID": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#demonstration-of-results",
+    "href": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#demonstration-of-results",
+    "title": "Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs",
+    "section": "",
+    "text": "Showcased the interactive user interface used in the demonstration to explore the effect of the proposed framework on the quality of explanations.\nConducted human evaluation comparing the explanations generated by the zero-shot approach and the Logic-Scaffolding model, highlighting the superior performance of the latter.\n\n\n\n\nThe Logic-Scaffolding model consistently received higher ratings than the zero-shot approach across criteria of relevance, human-readability, factuality, and proper utterance.\nEffect size test indicated a “large” effect in three out of four criteria, with significant improvements in factuality.\n\nOverall, the Logic-Scaffolding framework provides a practical solution to address the limitations of generic LLMs in generating reliable, personalized, and responsible explanations in recommender systems.\n\n\n\nLink: https://browse.arxiv.org/html/2312.14345v1  Truncated: False  Word Count: 4674"
   },
   {
     "objectID": "posts/Mitigating_Data_Injection_Attacks_on_Federated_Learning/2023-12-04-Mitigating_Data_Injection_Attacks_on_Federated_Learning.html",
@@ -109,7 +179,140 @@
     "href": "index.html",
     "title": "Ryan Wesslen",
     "section": "",
-    "text": "Bypassing the Safety Training of Open-Source LLMs with Priming Attacks\n\n\n\nsecurity\n\n\nopen-source\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 19, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPrompting LLMs with content plans to enhance the summarization of scientific articles\n\n\n\nprompt engineering\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMitigating Data Injection Attacks on Federated Learning\n\n\n\nsecurity\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 4, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation\n\n\n\nprompt engineering\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nThe Persuasive Power of Large Language Models\n\n\n\nhci\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nLogic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs\n\n\n\nhci\n\n\nprompt engineering\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 22, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nContext-aware Decoding Reduces Hallucination in Query-focused Summarization\n\n\n\nrobustness\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nAndroid dialogue system for customer service using prompt-based topic control and compliments generation\n\n\n\nhci\n\n\nprompt engineering\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBypassing the Safety Training of Open-Source LLMs with Priming Attacks\n\n\n\nsecurity\n\n\nopen-source\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 19, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPrompting LLMs with content plans to enhance the summarization of scientific articles\n\n\n\nprompt engineering\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nLLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization\n\n\n\nhci\n\n\nprogramming\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 8, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMitigating Data Injection Attacks on Federated Learning\n\n\n\nsecurity\n\n\n\n\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 4, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html",
+    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html",
+    "title": "The Persuasive Power of Large Language Models",
+    "section": "",
+    "text": "The study focusses on Large Language Models (LLMs) and their ability to act as persuasive agents in social dynamics, specifically in the context of opinion change. It raises critical questions regarding the potential of these LLMs to influence public opinion and interact with each other to simulate human-like persuasion dynamics.\n\n\n\nThe experimental design involved setting up a synthetic persuasion dialogue scenario on climate change, where a “convincer” LLM generated persuasive arguments for a “skeptic” LLM. The study explored different persuasion strategies and levels of skeptics’ stubbornness, while human judges evaluated the persuasiveness of machine-generated arguments.\n\n\n\n\nThe study found that arguments containing factual knowledge, trust, status, and support were most effective in changing the skeptic’s opinion, as perceived by both LLMs and human judges.\nTrust and support were particularly effective in altering the skeptic’s viewpoint, with a decrease in persuasive power correlating with increased skepticism in the skeptic’s responses.\n\n\n\n\nThe findings indicate that LLMs are capable of emulating some dynamics of persuasion and opinion change similar to human social systems. However, discrepancies were noted in how humans and LLMs perceive the effectiveness of different persuasive dimensions.\n\n\n\n\nLLMs can effectively mimic dynamics of persuasion and opinion change observed in human discourse.\nArguments rich in factual knowledge, trust, status, and support were perceived as persuasive by both LLMs and human judges.\n\n\n\n\n\nThe study’s limitations include the simplified setup and the need for further research on multi-turn conversations, diverse agent profiles, and the development of effective system prompts.\nFuture research should explore the capabilities of individual agents, optimal prompting strategies, and mechanisms inducing LLMs to signal a change of opinion.\n\n\n\n\nThe deployment of AI agents for persuasion and social interactions necessitates the consideration of potential risks and ethical challenges, such as the use of LLMs for misinformation and the trade-offs between benefits and power consumption.\nThe study provides valuable insights into the persuasive capabilities of LLMs and highlights the importance of further research to understand and mitigate the risks associated with using these models for persuasion in online social contexts.\n\n\nLink: https://browse.arxiv.org/html/2312.15523v1  Truncated: False  Word Count: 12372"
+  },
+  {
+    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#introduction",
+    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#introduction",
+    "title": "The Persuasive Power of Large Language Models",
+    "section": "",
+    "text": "The study focusses on Large Language Models (LLMs) and their ability to act as persuasive agents in social dynamics, specifically in the context of opinion change. It raises critical questions regarding the potential of these LLMs to influence public opinion and interact with each other to simulate human-like persuasion dynamics."
+  },
+  {
+    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#methods",
+    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#methods",
+    "title": "The Persuasive Power of Large Language Models",
+    "section": "",
+    "text": "The experimental design involved setting up a synthetic persuasion dialogue scenario on climate change, where a “convincer” LLM generated persuasive arguments for a “skeptic” LLM. The study explored different persuasion strategies and levels of skeptics’ stubbornness, while human judges evaluated the persuasiveness of machine-generated arguments."
+  },
+  {
+    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#results",
+    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#results",
+    "title": "The Persuasive Power of Large Language Models",
+    "section": "",
+    "text": "The study found that arguments containing factual knowledge, trust, status, and support were most effective in changing the skeptic’s opinion, as perceived by both LLMs and human judges.\nTrust and support were particularly effective in altering the skeptic’s viewpoint, with a decrease in persuasive power correlating with increased skepticism in the skeptic’s responses."
+  },
+  {
+    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#discussion",
+    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#discussion",
+    "title": "The Persuasive Power of Large Language Models",
+    "section": "",
+    "text": "The findings indicate that LLMs are capable of emulating some dynamics of persuasion and opinion change similar to human social systems. However, discrepancies were noted in how humans and LLMs perceive the effectiveness of different persuasive dimensions."
+  },
+  {
+    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#key-findings",
+    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#key-findings",
+    "title": "The Persuasive Power of Large Language Models",
+    "section": "",
+    "text": "LLMs can effectively mimic dynamics of persuasion and opinion change observed in human discourse.\nArguments rich in factual knowledge, trust, status, and support were perceived as persuasive by both LLMs and human judges."
+  },
+  {
+    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#limitations-and-future-work",
+    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#limitations-and-future-work",
+    "title": "The Persuasive Power of Large Language Models",
+    "section": "",
+    "text": "The study’s limitations include the simplified setup and the need for further research on multi-turn conversations, diverse agent profiles, and the development of effective system prompts.\nFuture research should explore the capabilities of individual agents, optimal prompting strategies, and mechanisms inducing LLMs to signal a change of opinion."
+  },
+  {
+    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#ethical-considerations",
+    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#ethical-considerations",
+    "title": "The Persuasive Power of Large Language Models",
+    "section": "",
+    "text": "The deployment of AI agents for persuasion and social interactions necessitates the consideration of potential risks and ethical challenges, such as the use of LLMs for misinformation and the trade-offs between benefits and power consumption.\nThe study provides valuable insights into the persuasive capabilities of LLMs and highlights the importance of further research to understand and mitigate the risks associated with using these models for persuasion in online social contexts.\n\n\nLink: https://browse.arxiv.org/html/2312.15523v1  Truncated: False  Word Count: 12372"
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "",
+    "text": "With the advent of Large Language Models (LLMs) like GPT-3, there is growing interest in their potential to optimize source code. This paper focuses on methodologically stringent case studies applied to well-known open source python libraries pillow and numpy.\n\n\n\nThe paper aims to explore the use of LLMs for code optimization in collaboration with humans. This includes assessing the potential improvements and whether human expertise is necessary in the process.\n\n\n\n\n\nEnergy Consumption: Code optimization can potentially reduce energy consumption, which is significant given the escalating energy costs of computation.\nSub-Optimal Source Code Quality: Inefficient code hampers performance and contributes to escalating energy consumption.\nBenefits of Code Optimization: Optimized code can reduce energy consumption, operational costs, and offers better user experience and system reliability.\n\n\n\n\n\nLLMs for Code Optimization: Limited attention has been given to the use of LLMs for code optimization.\nCollaborative use of LLMs for coding tasks: This paper is the first to explore the use of LLMs for code optimization in collaboration with humans.\nEvaluation of the Usefulness of LLMs for Coding Tasks: Previous literature has focused on functional correctness and quantitative evaluation of performance improvement on coding tasks.\n\n\n\n\nThe specific aims include exploring the use of LLMs for code optimization in collaboration with an expert, evaluating the magnitude of improvement, assessing the necessity of human expert involvement, and deriving generalizable insights for collaborative code optimization."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#aims",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#aims",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "",
+    "text": "The paper aims to explore the use of LLMs for code optimization in collaboration with humans. This includes assessing the potential improvements and whether human expertise is necessary in the process."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#why-optimize-source-code",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#why-optimize-source-code",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "",
+    "text": "Energy Consumption: Code optimization can potentially reduce energy consumption, which is significant given the escalating energy costs of computation.\nSub-Optimal Source Code Quality: Inefficient code hampers performance and contributes to escalating energy consumption.\nBenefits of Code Optimization: Optimized code can reduce energy consumption, operational costs, and offers better user experience and system reliability."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#prior-art",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#prior-art",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "",
+    "text": "LLMs for Code Optimization: Limited attention has been given to the use of LLMs for code optimization.\nCollaborative use of LLMs for coding tasks: This paper is the first to explore the use of LLMs for code optimization in collaboration with humans.\nEvaluation of the Usefulness of LLMs for Coding Tasks: Previous literature has focused on functional correctness and quantitative evaluation of performance improvement on coding tasks."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#objectives-and-scope-of-the-paper",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#objectives-and-scope-of-the-paper",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "",
+    "text": "The specific aims include exploring the use of LLMs for code optimization in collaboration with an expert, evaluating the magnitude of improvement, assessing the necessity of human expert involvement, and deriving generalizable insights for collaborative code optimization."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#the-expert-and-the-machine",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#the-expert-and-the-machine",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "The Expert and the Machine",
+    "text": "The Expert and the Machine\n\nThe expert, Andreas Florath, and ChatGPT-4 were used for all case studies.\nA custom-configured version of GPT was utilized in November 2023 to assess reproducibility and consistency of results obtained using the standard version of ChatGPT-4."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#selection-of-source-code-locus",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#selection-of-source-code-locus",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "Selection of Source Code Locus",
+    "text": "Selection of Source Code Locus\n\nOpen source Python libraries pillow and numpy were chosen as the natural environment due to their wide usage, allowing for direct comparison and easy replication."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#the-collaborative-optimization-process",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#the-collaborative-optimization-process",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "The Collaborative Optimization Process",
+    "text": "The Collaborative Optimization Process\n\nThe process involved preparation, starting prompts, iteration, evaluation, termination, and generalization and post-optimization."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#evaluation-of-benefit",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#evaluation-of-benefit",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "Evaluation of Benefit",
+    "text": "Evaluation of Benefit\nFour types of evaluation were conducted, focusing on quantitative performance improvement, quantitative code size improvement, correctness, and real-world impact through pull request validation."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#are-the-chosen-metrics-good-proxies-for-benefit-of-collaborative-optimization",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#are-the-chosen-metrics-good-proxies-for-benefit-of-collaborative-optimization",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "Are the Chosen Metrics Good Proxies for Benefit of Collaborative Optimization?",
+    "text": "Are the Chosen Metrics Good Proxies for Benefit of Collaborative Optimization?\nThe paper acknowledges the need for a larger and more systematic study to evidence the benefits of collaborative code optimization. It also outlines the potential bias and considerations for cost and energy savings."
+  },
+  {
+    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#original-source-code",
+    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#original-source-code",
+    "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
+    "section": "Original Source Code",
+    "text": "Original Source Code\nThe original source code under focus is located in the ImageStat module of the python pillow library.\nNote: Due to the extensive content provided, a more detailed summary with specific quotes from the text to illustrate key points and findings can be further produced upon request.\n\nAppendix\nLink: https://browse.arxiv.org/html/2312.14949v1  Truncated: True  Word Count: 43275"
   },
   {
     "objectID": "posts/Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks/2023-12-19-Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks.html",
@@ -145,5 +348,61 @@
     "title": "Bypassing the Safety Training of Open-Source LLMs with Priming Attacks",
     "section": "",
     "text": "The paper provides a list of references for further exploration into the topic.\n\nFor more detailed information, refer to the original text.\n\n\nLink: https://browse.arxiv.org/html/2312.12321v1  Truncated: False  Word Count: 10319"
+  },
+  {
+    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html",
+    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "This paper presents novel prompting techniques to improve the performance of automatic summarization systems for scientific articles. The authors feed summarizers with lists of key terms extracted from articles, such as author keywords or automatically generated keywords, to guide summarization systems. The techniques are tested with various summarization models and input texts, showing performance gains, especially for smaller models summarizing sections separately.\n\n\n\n\nAutomatic text summarization aims to produce shortened versions of documents while retaining the most relevant information.\nScientific articles are challenging to summarize due to their length, complexity, and irregular organizational structures.\n\n\n\n\n\nEarlier approaches to automatic summarization relied on extractive methods, while current state-of-the-art systems are based on abstractive summarization models such as transformer architectures.\nPrior work includes techniques like planning with learned entity prompts and faceted summarization to guide summarization systems.\n\n\n\n\n\nPrompting Technique Dimension: The paper evaluates five distinct prompting techniques for generating prompts to provide scientific summarizers with useful contextual information.\nModel Dimension: The authors study the effects of prompting techniques integrated with a range of current state-of-the-art transformer models for scientific summarization.\nInput Text Dimension: The study explores three main conditions for input texts to understand when contextual information from prompts provides significant gains.\n\n\n\n\n\nThe authors use a dataset of open-access biomedical papers from PubMed Central for training and evaluation.\nThe experiments demonstrate consistent performance improvements from prompting techniques on smaller models, especially when summarizing sections independently.\nTargeted confusion testing is conducted to isolate the benefits of prompting.\n\n\n\n\nThe findings suggest that prompting is an effective approach to overcoming the limitations of smaller, less capable summarization systems. The study also underscores the potential of prompting as a promising technique to assist smaller models, particularly when computational resources are constrained.\n\n\n\nThe paper proposes novel prompting techniques to provide key term context and enhance scientific literature summarizers, presenting promising results for aiding smaller summarization models, particularly in the context of section-level summarization.\nThis summary is authored by Aldan Creo, Manuel Lama, and Juan C. Vidal from the University of Santiago de Compostela.\n\n\nLink: https://browse.arxiv.org/html/2312.08282v2  Truncated: True  Word Count: 46040"
+  },
+  {
+    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#abstract",
+    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#abstract",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "This paper presents novel prompting techniques to improve the performance of automatic summarization systems for scientific articles. The authors feed summarizers with lists of key terms extracted from articles, such as author keywords or automatically generated keywords, to guide summarization systems. The techniques are tested with various summarization models and input texts, showing performance gains, especially for smaller models summarizing sections separately."
+  },
+  {
+    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#introduction",
+    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#introduction",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "Automatic text summarization aims to produce shortened versions of documents while retaining the most relevant information.\nScientific articles are challenging to summarize due to their length, complexity, and irregular organizational structures."
+  },
+  {
+    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#related-work",
+    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#related-work",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "Earlier approaches to automatic summarization relied on extractive methods, while current state-of-the-art systems are based on abstractive summarization models such as transformer architectures.\nPrior work includes techniques like planning with learned entity prompts and faceted summarization to guide summarization systems."
+  },
+  {
+    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#methods",
+    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#methods",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "Prompting Technique Dimension: The paper evaluates five distinct prompting techniques for generating prompts to provide scientific summarizers with useful contextual information.\nModel Dimension: The authors study the effects of prompting techniques integrated with a range of current state-of-the-art transformer models for scientific summarization.\nInput Text Dimension: The study explores three main conditions for input texts to understand when contextual information from prompts provides significant gains."
+  },
+  {
+    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#results",
+    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#results",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "The authors use a dataset of open-access biomedical papers from PubMed Central for training and evaluation.\nThe experiments demonstrate consistent performance improvements from prompting techniques on smaller models, especially when summarizing sections independently.\nTargeted confusion testing is conducted to isolate the benefits of prompting."
+  },
+  {
+    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#discussion",
+    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#discussion",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "The findings suggest that prompting is an effective approach to overcoming the limitations of smaller, less capable summarization systems. The study also underscores the potential of prompting as a promising technique to assist smaller models, particularly when computational resources are constrained."
+  },
+  {
+    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#conclusion",
+    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#conclusion",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "The paper proposes novel prompting techniques to provide key term context and enhance scientific literature summarizers, presenting promising results for aiding smaller summarization models, particularly in the context of section-level summarization.\nThis summary is authored by Aldan Creo, Manuel Lama, and Juan C. Vidal from the University of Santiago de Compostela.\n\n\nLink: https://browse.arxiv.org/html/2312.08282v2  Truncated: True  Word Count: 46040"
   }
 ]

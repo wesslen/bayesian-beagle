@@ -1,9 +1,9 @@
 name: Rebuild Site
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron:  '0 9 * * *'
+  push:
+    paths:
+      - 'data/output.jsonl'
 
 jobs:
   scheduled:
@@ -30,7 +30,7 @@ jobs:
         sudo apt-get install -f
     - name: Build new site
       run: |
-        python scripts/generate_qmd.py data/input.jsonl posts
+        python scripts/generate_qmd.py data/output.jsonl posts
         quarto render
     - name: Commit and push if it changed
       run: |-

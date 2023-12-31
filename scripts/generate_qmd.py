@@ -10,7 +10,7 @@ QMD_TEMPLATE = """
 ---
 title: "{{ example['meta']['title'] }}"
 subtitle: "{{ example['meta']['subtitle'] }}"
-author: "Bot"
+author: "{{ example['meta']['model'] }}"
 date: "{{ example['meta']['publish_date'] }}"
 link: "{{ example['meta']['url'] }}"
 categories: {{ example['meta']['categories'] }}
@@ -18,7 +18,16 @@ format:
   html:
     code-overflow: wrap
 ---
+
 {{ example['text'] }}
+
+### Appendix
+
+**Link**: [{{ example['meta']['url'] }}]({{ example['meta']['url'] }})
+<br>
+**Truncated**: {{ example['meta']['is_truncated'] }}
+<br>
+**Word Count**: {{ example['meta']['word_count'] }}
 """
 
 

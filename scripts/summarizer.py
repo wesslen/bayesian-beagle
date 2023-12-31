@@ -23,7 +23,9 @@ class OpenAIAssistant:
             system_message = "You are a helpful assistant to summarize academic \
                               articles. Output the summary as Markdown with Headings \
                               for different sections. You may also output code snippets \
-                              following Markdown conventions."
+                              following Markdown conventions. Add in bolding for key \
+                              terminology. Add in bullets to summarize sections. Provide \
+                              direct quotes whenever helpful to provide context."
             user_message = f"Please summarize the following text:\n\n{text}"
 
         elif task == "tldr":

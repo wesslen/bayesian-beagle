@@ -34,7 +34,7 @@ def escape_double_quotes(input_string):
     Returns:
     str: The processed string with escaped double quotes.
     """
-    return input_string.replace('"', '\\"')
+    return input_string.replace('"', '\"')
 
 def count_words(text: str) -> int:
     words = text.split()

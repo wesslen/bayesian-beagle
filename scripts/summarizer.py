@@ -15,7 +15,7 @@ def is_valid_arxiv_id(arxiv_id: str) -> bool:
     try:
         first_result = next(client.results(search_by_id))
         return True, first_result
-    except:
+    except Exception:
         return False, None
 
 
@@ -39,14 +39,16 @@ def truncate_string(text, token_threshold):
     # Check if the number of tokens is greater than the threshold
     if len(tokens) > token_threshold:
         # Truncate the list of tokens and join back into a string
-        truncated_text = ' '.join(tokens[:token_threshold])
+        truncated_text = " ".join(tokens[:token_threshold])
         return truncated_text
     else:
         # If the text is within the limit, return it as is
         return text
 
+
 def remove_double_quotes(input_string):
-    return input_string.replace('"', '')
+    return input_string.replace('"', "")
+
 
 def count_words(text: str) -> int:
     words = text.split()
@@ -79,14 +81,14 @@ def summarize_text(text: str) -> str:
 def tldr_title(text: str) -> str:
     client = OpenAI()
 
-    # TODO: Generalize this to allow different models and prompts. This should be appended to each record. 
+    # TODO: Generalize this to allow different models and prompts. This should be appended to each record.
     response = client.chat.completions.create(
         model="gpt-3.5-turbo-1106",
         messages=[
             {
                 "role": "system",
                 "content": "You are a helpful assistant to summarize academic \
-                    article abstracts. "
+                    article abstracts. ",
             },
             {
                 "role": "user",
@@ -97,6 +99,7 @@ def tldr_title(text: str) -> str:
     )
 
     return response.choices[0].message.content
+
 
 @app.command()
 def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
@@ -146,7 +149,9 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
                     "title": remove_double_quotes(first_result.title),
                     "subtitle": remove_double_quotes(tldr),
                     "categories": categories,
-                    "publish_date": first_result.published.strftime("%Y-%m-%d"),
+                    "publish_date": first_result.published.strftime(
+                        "%Y-%m-%d"
+                    ),
                     "truncated": True if word_count > 15000 else False,
                 },
             }

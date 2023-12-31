@@ -1,6 +1,5 @@
 import json
 import typer
-from datetime import datetime
 from jinja2 import Environment, BaseLoader
 from pathlib import Path
 

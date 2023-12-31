@@ -7,7 +7,52 @@ import json
 from pathlib import Path
 import logging
 
+
+class OpenAIAssistant:
+    def __init__(self, model="gpt-3.5-turbo-1106"):
+        self.client = OpenAI()
+        self.model = model
+        self.cache = {}
+
+    def process_text(self, text: str, task: str) -> str:
+        # Check if the request is already in the cache
+        if (text, task) in self.cache:
+            return self.cache[(text, task)]
+
+        if task == "summarize":
+            system_message = "You are a helpful assistant to summarize academic \
+                              articles. Output the summary as Markdown with Headings \
+                              for different sections. You may also output code snippets \
+                              following Markdown conventions."
+            user_message = f"Please summarize the following text:\n\n{text}"
+
+        elif task == "tldr":
+            system_message = "You are a helpful assistant to summarize academic \
+                              article abstracts."
+            user_message = f"Write a tl;dr in fewer than 20 words for \
+                             the following text:\n\n{text}"
+
+        else:
+            raise ValueError("Invalid task specified")
+
+        response = self.client.chat.completions.create(
+            model=self.model,
+            messages=[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message},
+            ],
+        )
+
+        result = response.choices[0].message.content
+        # Cache the result
+        self.cache[(text, task)] = result
+        return result
+
+
 app = typer.Typer()
+# Instantiate the OpenAIAssistant
+MODEL = "gpt-3.5-turbo-1106"
+assistant = OpenAIAssistant(model=MODEL)
 
 # Initialize logging
 logging.basicConfig(
@@ -39,49 +84,26 @@ def count_words(text: str) -> int:
     return len(words)
 
 
-def summarize_text(text: str) -> str:
-    client = OpenAI()
+def truncate_string(text, token_threshold):
+    """
+    Truncate a string after a specified number of word tokens.
 
-    response = client.chat.completions.create(
-        model="gpt-3.5-turbo-1106",
-        messages=[
-            {
-                "role": "system",
-                "content": "You are a helpful assistant to summarize academic \
-                    articles. Output the summary as Markdown with Headings \
-                    for different sections. You may also output code snippets \
-                    following Markdown conventions.",
-            },
-            {
-                "role": "user",
-                "content": f"Please summarize the following text:\n\n{text}",
-            },
-        ],
-    )
+    :param text: The input string.
+    :param token_threshold: The maximum number of word tokens allowed.
+    :return: A truncated version of the string if it exceeds the token threshold.
+    """
 
-    return response.choices[0].message.content
+    # Split the text into words (tokens)
+    tokens = text.split()
 
-
-def tldr_title(text: str) -> str:
-    client = OpenAI()
-
-    response = client.chat.completions.create(
-        model="gpt-3.5-turbo-1106",
-        messages=[
-            {
-                "role": "system",
-                "content": "You are a helpful assistant to summarize academic \
-                    article abstracts. ",
-            },
-            {
-                "role": "user",
-                "content": f"Write a tl;dr in fewer than 20 words for \
-                    the following text:\n\n{text}",
-            },
-        ],
-    )
-
-    return response.choices[0].message.content
+    # Check if the number of tokens is greater than the threshold
+    if len(tokens) > token_threshold:
+        # Truncate the list of tokens and join back into a string
+        truncated_text = " ".join(tokens[:token_threshold])
+        return truncated_text
+    else:
+        # If the text is within the limit, return it as is
+        return text
 
 
 @app.command()
@@ -131,13 +153,15 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
             word_count = count_words(html_content)
             if word_count > 15000:
                 logging.info(
-                    f"Warning: HTML content for {arxiv_id} exceeds 15,000 tokens. Skipping."
+                    f"Warning: HTML content for {arxiv_id} exceeds 15,000 tokens. Truncating."
                 )
-                continue
+                html_content = truncate_string(
+                    html_content, token_threshold=15000
+                )
 
             text = extract_text_from_html(html_content)
-            summary = summarize_text(text)
-            tldr = tldr_title(first_result.summary)
+            summary = assistant.process_text(text, "summarize")
+            tldr = assistant.process_text(first_result.summary, "tldr")
 
             output_data = {
                 "id": arxiv_id,
@@ -150,6 +174,9 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
                     "publish_date": first_result.published.strftime(
                         "%Y-%m-%d"
                     ),
+                    "model": MODEL,
+                    "word_count": word_count,
+                    "is_truncated": True if word_count > 15000 else False,
                 },
             }
 

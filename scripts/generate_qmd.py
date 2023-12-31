@@ -1,10 +1,8 @@
 import json
-import os
 import typer
 from datetime import datetime
 from jinja2 import Environment, BaseLoader
 from pathlib import Path
-from typing import Optional
 
 app = typer.Typer()
 
@@ -14,7 +12,7 @@ QMD_TEMPLATE = """
 title: "{{ example['meta']['title'] }}"
 subtitle: "{{ example['meta']['subtitle'] }}"
 author: "Bot"
-date: "{{ current_date }}"
+date: "{{ example['meta']['publish_date'] }}"
 categories: {{ example['meta']['categories'] }}
 format:
   html:
@@ -23,13 +21,14 @@ format:
 {{ example['text'] }}
 """
 
+
 def create_qmd_file(example, output_folder):
     """
     Create a .qmd file from a JSON dictionary
     """
-    title = example['meta']['title']
+    title = example["meta"]["title"]
     folder_name = title.replace(" ", "_")
-    current_date = datetime.now().strftime('%Y-%m-%d')
+    current_date = example["meta"]["publish_date"]
     file_name = f"{current_date}-{folder_name}.qmd"
     folder_path = Path(output_folder) / folder_name
     file_path = folder_path / file_name
@@ -49,20 +48,22 @@ def create_qmd_file(example, output_folder):
     folder_path.mkdir(parents=True, exist_ok=True)
 
     # Write the rendered content to a file
-    with open(file_path, 'w', encoding='utf-8') as file:
+    with open(file_path, "w", encoding="utf-8") as file:
         file.write(rendered_qmd)
-    
+
     print(f"File saved: {file_path}")
+
 
 @app.command()
 def generate_qmd(input_jsonl: str, output_folder: str):
     """
     Generate QMD files from a JSONL file
     """
-    with open(input_jsonl, 'r', encoding='utf-8') as file:
+    with open(input_jsonl, "r", encoding="utf-8") as file:
         for line in file:
             example = json.loads(line)
             create_qmd_file(example, output_folder)
+
 
 if __name__ == "__main__":
     app()

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Bot">
-<meta name="dcterms.date" content="2023-12-31">
+<meta name="dcterms.date" content="2023-12-04">
 
-<title>Reducing variance - Baseball post</title>
+<title>Reducing variance - Mitigating Data Injection Attacks on Federated Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,11 +64,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Reducing variance - Baseball post">
-<meta property="og:description" content="Predictions for the upcoming season">
+<meta property="og:title" content="Reducing variance - Mitigating Data Injection Attacks on Federated Learning">
+<meta property="og:description" content="Federated learning vulnerable to attacks. Paper proposes detection and mitigation technique using local scheme by coordinating node.">
 <meta property="og:site-name" content="Reducing variance">
-<meta name="twitter:title" content="Reducing variance - Baseball post">
-<meta name="twitter:description" content="Predictions for the upcoming season">
+<meta name="twitter:title" content="Reducing variance - Mitigating Data Injection Attacks on Federated Learning">
+<meta name="twitter:description" content="Federated learning vulnerable to attacks. Paper proposes detection and mitigation technique using local scheme by coordinating node.">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -120,11 +120,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Baseball post</h1>
-            <p class="subtitle lead">Predictions for the upcoming season</p>
+      <h1 class="title">Mitigating Data Injection Attacks on Federated Learning</h1>
+            <p class="subtitle lead">Federated learning vulnerable to attacks. Paper proposes detection and mitigation technique using local scheme by coordinating node.</p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">baseball</div>
-                <div class="quarto-category">sports</div>
+                <div class="quarto-category">security</div>
               </div>
                   </div>
   </div>
@@ -142,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 31, 2023</p>
+        <p class="date">December 4, 2023</p>
       </div>
     </div>
     
@@ -160,11 +159,45 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>This blog is about baseball..</p>
+<section id="mitigating-data-injection-attacks-on-federated-learning" class="level1">
+<h1>Mitigating Data Injection Attacks on Federated Learning</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1 Introduction</h2>
+<p>The increasing volume and variety of data have led to a need for data privacy and security in various industries. Federated learning, a collaborative approach for training machine learning models without sharing the raw data, has gained popularity in addressing these concerns. However, federated learning is susceptible to data injection attacks, where malicious agents manipulate the learning process. Detecting and mitigating these attacks are significant challenges in federated learning systems.</p>
+</section>
+<section id="problem-formulation" class="level2">
+<h2 class="anchored" data-anchor-id="problem-formulation">2 Problem Formulation</h2>
+<section id="federated-learning" class="level3">
+<h3 class="anchored" data-anchor-id="federated-learning">2.1 Federated Learning</h3>
+<p>Federated learning involves learning a model using agents’ private data by refining local model parameters and transmitting updates to a coordinating node to obtain a global model. The goal is to minimize an objective function using a gradient descent approach.</p>
+</section>
+<section id="data-injection-attacks" class="level3">
+<h3 class="anchored" data-anchor-id="data-injection-attacks">2.2 Data Injection Attacks</h3>
+<p>In data injection attacks, malicious participants inject false data into the training process to manipulate the global model. Different attack schemes such as label flipping and constant output attacks can be employed to steer the model towards a false, predetermined performance.</p>
+</section>
+</section>
+<section id="attacker-detection-and-avoidance" class="level2">
+<h2 class="anchored" data-anchor-id="attacker-detection-and-avoidance">3 Attacker Detection and Avoidance</h2>
+<p>A low-complexity metric is proposed to detect attackers by comparing the updates from edge agents over time. When an agent is suspected to be an attacker, its parameter updates are ignored for a certain period. The detection method is designed to operate continuously, and conditions are provided for identifying all malicious agents.</p>
+</section>
+<section id="simulations" class="level2">
+<h2 class="anchored" data-anchor-id="simulations">4 Simulations</h2>
+<section id="example-1-constant-output-attack" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-constant-output-attack">4.1 Example 1: Constant-Output Attack</h3>
+<p>Simulated attacks on decentralized learning show that the proposed detection algorithm effectively mitigates constant-output attacks by detecting and isolating attackers, leading to convergence to a truthful model.</p>
+</section>
+<section id="example-2-label-flip-attack" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-label-flip-attack">4.2 Example 2: Label-Flip Attack</h3>
+<p>Simulated label-flip attacks demonstrate the effectiveness of the detection scheme in identifying and mitigating attacks, preventing the model from succumbing to false labeling.</p>
+</section>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">5 Conclusions</h2>
+<p>The paper presents a robust federated learning algorithm capable of operating in the presence of data injection attacks and provides conditions for proper identification of malicious agents. Simulations demonstrate the performance of the proposed technique in mitigating different types of attacks. Additional details and proofs of the proposed scheme will be presented in an extended version of the work.</p>
+<p>References are also included in the text.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

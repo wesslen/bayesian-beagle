@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Bot">
+<meta name="dcterms.date" content="2023-12-04">
 
-<title>Reducing variance - Ryan Wesslen</title>
+<title>Reducing variance - Mitigating Data Injection Attacks on Federated Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,55 +61,26 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Reducing variance - Ryan Wesslen">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Reducing variance - Mitigating Data Injection Attacks on Federated Learning">
+<meta property="og:description" content="Federated learning can be vulnerable to false data attacks, but this paper proposes a method to detect and mitigate such attacks.">
 <meta property="og:site-name" content="Reducing variance">
-<meta name="twitter:title" content="Reducing variance - Ryan Wesslen">
+<meta name="twitter:title" content="Reducing variance - Mitigating Data Injection Attacks on Federated Learning">
+<meta name="twitter:description" content="Federated learning can be vulnerable to false data attacks, but this paper proposes a method to detect and mitigate such attacks.">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Reducing variance</span>
     </a>
   </div>
@@ -120,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">Ryan Wesslen</span></a>
   </li>  
   <li class="nav-item compact">
@@ -148,130 +119,85 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Ryan Wesslen</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Mitigating Data Injection Attacks on Federated Learning</h1>
+            <p class="subtitle lead">Federated learning can be vulnerable to false data attacks, but this paper proposes a method to detect and mitigate such attacks.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">security</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Bot </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 4, 2023</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="open-source">open-source <span class="quarto-category-count">(1)</span></div><div class="category" data-category="prompt engineering">prompt engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="security">security <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<section id="summary-of-mitigating-data-injection-attacks-on-federated-learning" class="level1">
+<h1>Summary of “Mitigating Data Injection Attacks on Federated Learning”</h1>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>The paper addresses the vulnerability of federated learning to data injection attacks, where malicious agents manipulate the learning process to compromise the model. It proposes a novel technique to detect and mitigate data injection attacks, with a focus on constant-output and label-flip attacks. The proposed method involves comparing updates from participating agents over time and ignoring updates from suspicious agents. Simulations demonstrate the effectiveness of the technique in overcoming attacks.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1 Introduction</h2>
+<p>The introduction highlights the increasing need for data privacy in various industries and introduces federated learning as a technique that allows collaborative model training while preserving data privacy. However, it also outlines the vulnerability of federated learning to various security threats, including data injection attacks.</p>
+</section>
+<section id="problem-formulation" class="level2">
+<h2 class="anchored" data-anchor-id="problem-formulation">2 Problem Formulation</h2>
+<section id="federated-learning" class="level3">
+<h3 class="anchored" data-anchor-id="federated-learning">2.1 Federated Learning</h3>
+<p>This section describes the process of federated learning, where agents refine their model parameters iteratively using their private datasets and share updates with a coordinating node.</p>
+</section>
+<section id="data-injection-attacks" class="level3">
+<h3 class="anchored" data-anchor-id="data-injection-attacks">2.2 Data Injection Attacks</h3>
+<p>The paper discusses the potential threat of data injection attacks in federated learning, particularly focusing on scenarios where some participating agents are malicious. It presents scenarios of attacks such as constant-output and label-flip attacks.</p>
+</section>
+</section>
+<section id="attacker-detection-and-avoidance" class="level2">
+<h2 class="anchored" data-anchor-id="attacker-detection-and-avoidance">3 Attacker Detection and Avoidance</h2>
+<p>The proposed method for detecting data injection attacks involves comparing updates from agents over time and ignoring updates from suspicious agents based on a low-complexity metric. The method is designed to overcome false alarms and ensure convergence to a truthful model with a high probability.</p>
+</section>
+<section id="simulations" class="level2">
+<h2 class="anchored" data-anchor-id="simulations">4 Simulations</h2>
+<p>The paper presents simulated attacks on decentralized learning and evaluates the performance of the detection algorithm. It provides examples of constant-output attacks and label-flip attacks, demonstrating the effectiveness of the proposed detection and mitigation technique.</p>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">5 Conclusions</h2>
+<p>The paper concludes by summarizing the proposed robust federated learning algorithm and its ability to operate in the presence of data injection attacks. It also outlines future work to be conducted including detailed proofs, and bounds on detection probability and false alarm probability.</p>
+<p>The paper reflects the growing concern and interest in addressing security threats in federated learning systems, and it provides a novel perspective on detecting and mitigating data injection attacks. The simulation results demonstrate the potential effectiveness of the proposed technique in overcoming such attacks.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="security,open-source" data-listing-date-sort="1702944000000" data-listing-file-modified-sort="1704058038254" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks/2023-12-19-Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Bypassing the Safety Training of Open-Source LLMs with Priming Attacks
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('security'); return false;">
-security
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('open-source'); return false;">
-open-source
-</div>
-</div>
-<div class="card-text listing-description">
-The paper investigates the vulnerability of state-of-the-art open-source LLMs to priming attacks, which circumvent safety training and can be used to extract harmful outputs.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Bot
-</div>
-<div class="listing-date">
-Dec 19, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="prompt engineering" data-listing-date-sort="1702425600000" data-listing-file-modified-sort="1704058038258" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Prompting LLMs with content plans to enhance the summarization of scientific articles
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('prompt engineering'); return false;">
-prompt engineering
-</div>
-</div>
-<div class="card-text listing-description">
-The paper introduces novel prompting techniques to enhance the performance of automatic…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Bot
-</div>
-<div class="listing-date">
-Dec 13, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="security" data-listing-date-sort="1701648000000" data-listing-file-modified-sort="1704058038254" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/Mitigating_Data_Injection_Attacks_on_Federated_Learning/2023-12-04-Mitigating_Data_Injection_Attacks_on_Federated_Learning.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Mitigating Data Injection Attacks on Federated Learning
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('security'); return false;">
-security
-</div>
-</div>
-<div class="card-text listing-description">
-The paper addresses the vulnerability of federated learning to data injection attacks, where malicious agents manipulate the learning process to compromise the model. It…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Bot
-</div>
-<div class="listing-date">
-Dec 4, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

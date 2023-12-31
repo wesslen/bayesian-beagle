@@ -24,6 +24,18 @@ def extract_text_from_html(html_content: str) -> str:
     return soup.get_text()
 
 
+def escape_double_quotes(input_string):
+    """
+    Add an escape character before any double quotes in a string.
+
+    Parameters:
+    input_string (str): The string to process.
+
+    Returns:
+    str: The processed string with escaped double quotes.
+    """
+    return input_string.replace('"', '\\"')
+
 def count_words(text: str) -> int:
     words = text.split()
     return len(words)
@@ -115,8 +127,8 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
                 "text": summary,
                 "meta": {
                     "url": url,
-                    "title": first_result.title,
-                    "subtitle": tldr,
+                    "title": escape_double_quotes(first_result.title),
+                    "subtitle": escape_double_quotes(tldr),
                     "categories": categories,
                     "publish_date": first_result.published.strftime("%Y-%m-%d"),
                 },

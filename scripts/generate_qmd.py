@@ -13,6 +13,7 @@ subtitle: "{{ example['meta']['subtitle'] }}"
 author: "{{ example['meta']['model'] }}"
 date: "{{ example['meta']['publish_date'] }}"
 link: "{{ example['meta']['url'] }}"
+image: "{{ example['meta']['url'] }}/x1.png"
 categories: {{ example['meta']['categories'] }}
 format:
   html:
@@ -23,11 +24,9 @@ format:
 
 ### Appendix
 
-**Link**: [{{ example['meta']['url'] }}]({{ example['meta']['url'] }})
-<br>
-**Truncated**: {{ example['meta']['is_truncated'] }}
-<br>
-**Word Count**: {{ example['meta']['word_count'] }}
+| Link     | [{{ example['meta']['url'] }}]({{ example['meta']['url'] }})       |
+| Truncated       | {{ example['meta']['is_truncated'] }}       |
+| Word Count       | {{ example['meta']['word_count'] }}       |
 """
 
 

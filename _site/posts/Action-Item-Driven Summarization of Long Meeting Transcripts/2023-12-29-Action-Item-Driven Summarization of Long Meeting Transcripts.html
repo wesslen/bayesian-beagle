@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="dcterms.date" content="2023-12-29">
+<meta name="description" content="Novel approach automates abstractive meeting summaries from transcript action items, achieving improved results over current models.">
 
-<title>Bayesian beagle</title>
+<title>Bayesian beagle - Action-Item-Driven Summarization of Long Meeting Transcripts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,20 +64,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Bayesian beagle">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bayesian beagle - Action-Item-Driven Summarization of Long Meeting Transcripts">
+<meta property="og:description" content="Novel approach automates abstractive meeting summaries from transcript action items, achieving improved results over current models.">
+<meta property="og:image" content="https://wesslen-blog.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Bayesian beagle">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<meta name="twitter:title" content="Bayesian beagle - Action-Item-Driven Summarization of Long Meeting Transcripts">
+<meta name="twitter:description" content="Novel approach automates abstractive meeting summaries from transcript action items, achieving improved results over current models.">
+<meta name="twitter:image" content="https://wesslen-blog.netlify.app/../bayesian-beagle.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bayesian beagle</span>
     </a>
   </div>
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">Bayesian beagle</span></a>
   </li>  
   <li class="nav-item compact">
@@ -120,27 +120,115 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Action-Item-Driven Summarization of Long Meeting Transcripts</h1>
+                  <div>
+        <div class="description">
+          Novel approach automates abstractive meeting summaries from transcript action items, achieving improved results over current models.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">prompt engineering</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>gpt-3.5-turbo-1106 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 29, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="bayesian-beagle.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bayesian beagle</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>I’m a Bayesian beagle who has curated a LLM-summarized articles on LLMs.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main>  
-</div>
- <!-- /main -->
+
+
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ul>
+<li>The paper introduces a novel approach to automatically generate abstractive meeting summaries driven by <strong>action items</strong> contained in the meeting transcript.</li>
+<li>It develops three novel topic segmentation algorithms that outperform linear segmentation by up to 1.36%.</li>
+<li>The paper’s novel <strong>recursive</strong> summarization algorithm improves upon the performance of current state-of-the-art models by approximately 4.98% in terms of the BERTScore metric.</li>
+</ul>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>The paper explores the automation of creating meeting summaries, utilizing large language models to generate abstractive summaries driven by <strong>action items</strong> in meeting transcripts. It contrasts extractive and abstractive summarization techniques, emphasizing the importance of abstractive techniques for generating more coherent and informative summaries.</p>
+</section>
+<section id="related-work" class="level3">
+<h3 class="anchored" data-anchor-id="related-work">Related Work</h3>
+<p>The related work discusses previous methods in <strong>meeting summarization</strong>, recursive summarization techniques, the BART model, the AMI dataset, and current segmentation techniques.</p>
+</section>
+<section id="approach" class="level3">
+<h3 class="anchored" data-anchor-id="approach">Approach</h3>
+<p>The paper details the <strong>divide-and-conquer</strong> approach to summarizing meeting transcripts, including three novel topic segmentation algorithms and a recursive algorithm for generating action-item-driven meeting summaries.</p>
+</section>
+<section id="results-and-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-analysis">Results and Analysis</h3>
+<p>The results showcase the performance of the topic segmentation methods, the recursive algorithm, and the action-item-driven summary. It is highlighted that the action-item-driven summaries achieve higher BERTScores than general summaries, indicating the effectiveness of incorporating action items.</p>
+</section>
+<section id="future-research" class="level3">
+<h3 class="anchored" data-anchor-id="future-research">Future Research</h3>
+<p>The paper identifies future research directions, such as incorporating additional components into meeting summaries and developing more advanced topic segmentation and action-item extraction techniques.</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>The conclusion underlines the novelty of the paper’s approach and highlights its potential for application in summarizing other genres of text.</p>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<ul>
+<li>The paper’s reliance on BERTScore and ROUGE metrics for evaluation may not fully capture the quality of the generated summaries.</li>
+<li>It could benefit from providing more in-depth comparisons with existing meeting summarization techniques and datasets to demonstrate the superiority of its proposed approach.</li>
+<li>The future research section could be expanded to include potential challenges or limitations in implementing the suggested further developments.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Link</td>
+<td><a href="https://browse.arxiv.org/html/2312.17581v1">https://browse.arxiv.org/html/2312.17581v1</a></td>
+</tr>
+<tr class="even">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>Word Count</td>
+<td>4749</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -161,6 +249,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

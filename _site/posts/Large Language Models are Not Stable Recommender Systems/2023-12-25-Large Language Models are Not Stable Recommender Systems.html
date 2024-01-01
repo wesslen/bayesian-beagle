@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="dcterms.date" content="2023-12-25">
+<meta name="description" content="LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.">
 
-<title>Bayesian beagle</title>
+<title>Bayesian beagle - Large Language Models are Not Stable Recommender Systems</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,20 +64,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Bayesian beagle">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bayesian beagle - Large Language Models are Not Stable Recommender Systems">
+<meta property="og:description" content="LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.15746v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Bayesian beagle">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<meta name="twitter:title" content="Bayesian beagle - Large Language Models are Not Stable Recommender Systems">
+<meta name="twitter:description" content="LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.15746v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bayesian beagle</span>
     </a>
   </div>
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">Bayesian beagle</span></a>
   </li>  
   <li class="nav-item compact">
@@ -120,27 +120,93 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Large Language Models are Not Stable Recommender Systems</h1>
+                  <div>
+        <div class="description">
+          LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">recommender</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>gpt-3.5-turbo-1106 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 25, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="bayesian-beagle.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bayesian beagle</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>I’m a Bayesian beagle who has curated a LLM-summarized articles on LLMs.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main>  
-</div>
- <!-- /main -->
+
+
+<section id="main-findings" class="level3">
+<h3 class="anchored" data-anchor-id="main-findings">Main Findings</h3>
+<ol type="1">
+<li><p><strong>Positional Bias in LLMs</strong>: The study identifies consistent patterns of positional bias in large language models (LLMs) when used as recommender systems, leading to unstable recommendation results that are sensitive to the order of input candidate items.</p></li>
+<li><p><strong>STELLA Framework</strong>: The paper proposes the STELLA (Stable LLM for Recommendation) framework, which involves a two-stage pipeline for using LLMs as recommender systems. It employs a probing stage to identify bias patterns and a recommendation stage using a Bayesian updating strategy to calibrate biased output and enhance recommendation performance.</p></li>
+<li><p><strong>Effectiveness of STELLA</strong>: Extensive experiments validate the effectiveness of the STELLA framework, significantly reducing variance and improving overall recommendation performance of LLMs.</p></li>
+</ol>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<p>While the paper introduces an innovative framework for addressing the instability of LLMs as recommender systems, there are potential limitations and concerns in the study:</p>
+<ol type="1">
+<li><p><strong>Experiment Scalability</strong>: The experiments are conducted using relatively smaller-scale LLMs, and the scalability of the proposed framework to larger models is not addressed. The effectiveness of STELLA on larger, more complex LLMs may need to be further investigated.</p></li>
+<li><p><strong>Dataset Selection</strong>: The paper uses a limited number of datasets for evaluation. Additional diverse and more extensive datasets could provide a more comprehensive understanding of the framework’s performance across different domains and user preferences.</p></li>
+<li><p><strong>Applicability</strong>: The study mainly focuses on post-processing techniques for LLM-based recommendations and does not delve into the potential challenges or limitations in real-world implementation. Understanding the practical applicability and potential trade-offs of integrating STELLA into existing recommender systems is crucial for its adoption in industry.</p></li>
+</ol>
+<p>Overall, while the paper presents a promising solution to address the instability of LLMs in recommendations, further research and real-world application testing may be necessary to fully assess its effectiveness and practical utility.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Link</td>
+<td><a href="https://browse.arxiv.org/html/2312.15746v1">https://browse.arxiv.org/html/2312.15746v1</a></td>
+</tr>
+<tr class="even">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>Word Count</td>
+<td>4797</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -161,6 +227,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

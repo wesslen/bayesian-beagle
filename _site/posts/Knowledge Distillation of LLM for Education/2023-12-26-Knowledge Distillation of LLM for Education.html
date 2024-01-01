@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="dcterms.date" content="2023-12-26">
+<meta name="description" content="Method proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in education.">
 
-<title>Bayesian beagle</title>
+<title>Bayesian beagle - Knowledge Distillation of LLM for Education</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,20 +64,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Bayesian beagle">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bayesian beagle - Knowledge Distillation of LLM for Education">
+<meta property="og:description" content="Method proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in education.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.15842v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Bayesian beagle">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<meta name="twitter:title" content="Bayesian beagle - Knowledge Distillation of LLM for Education">
+<meta name="twitter:description" content="Method proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in education.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.15842v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bayesian beagle</span>
     </a>
   </div>
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">Bayesian beagle</span></a>
   </li>  
   <li class="nav-item compact">
@@ -120,27 +120,156 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Knowledge Distillation of LLM for Education</h1>
+                  <div>
+        <div class="description">
+          Method proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in education.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">education</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>gpt-3.5-turbo-1106 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 26, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="bayesian-beagle.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bayesian beagle</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>I’m a Bayesian beagle who has curated a LLM-summarized articles on LLMs.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main>  
-</div>
- <!-- /main -->
+
+
+<section id="knowledge-distillation-of-llm-for-education" class="level1">
+<h1>Knowledge Distillation of LLM for Education</h1>
+<section id="major-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h2>
+<ul>
+<li>The study proposes a method for <strong>distilling the knowledge of fine-tuned Large Language Models (LLMs) into smaller, more efficient, and accurate neural networks</strong> for deployment in resource-constrained educational environments.</li>
+<li>The <strong>knowledge transfer is achieved through a specialized loss function tailored to learn from the LLM’s output probabilities</strong>, ensuring that the student model closely mimics the teacher’s performance.</li>
+<li>Results demonstrate that the <strong>distilled student models have comparable accuracy to the teacher model for the 7T dataset</strong>, and significantly higher accuracy than original neural network models for other datasets.</li>
+</ul>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The use of <strong>Large Language Models (LLMs) in education</strong>, particularly for automatic scoring, is discussed, highlighting their potential impact on classroom assessment practices and adaptive learning systems. The deployment of these models in educational settings is constrained by their considerable size and computational requirements, which presents a challenge for widespread adoption in resource-constrained educational environments.</p>
+</section>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="large-language-models-for-automatic-scoring" class="level3">
+<h3 class="anchored" data-anchor-id="large-language-models-for-automatic-scoring">Large Language Models for Automatic Scoring</h3>
+<ul>
+<li>Studies have focused on fine-tuning LLMs for automatic scoring applications, demonstrating their potential in evaluating student responses with high accuracy.</li>
+<li>The deployment of sophisticated LLMs in practical educational settings presents considerable challenges, leading to the proposal of various approaches to address these challenges.</li>
+</ul>
+</section>
+<section id="knowledge-distillation-kd-of-llm" class="level3">
+<h3 class="anchored" data-anchor-id="knowledge-distillation-kd-of-llm">Knowledge Distillation (KD) of LLM</h3>
+<ul>
+<li>KD has emerged as a pivotal technique in harnessing the power of LLMs for practical applications, particularly in fields with limited computational resources.</li>
+<li>Challenges and advancements in KD for text classification and contextual pre-training language models for specific applications are discussed.</li>
+</ul>
+</section>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<section id="original-neural-network" class="level3">
+<h3 class="anchored" data-anchor-id="original-neural-network">Original Neural Network</h3>
+<ul>
+<li>A detailed explanation of the methodology used for classification tasks is provided. ### Proposed KD</li>
+<li>The study proposes a method for knowledge distillation and presents a detailed algorithm for the KD process.</li>
+</ul>
+</section>
+</section>
+<section id="experimental-setup" class="level2">
+<h2 class="anchored" data-anchor-id="experimental-setup">Experimental Setup</h2>
+<section id="data-collection-and-preprocessing" class="level3">
+<h3 class="anchored" data-anchor-id="data-collection-and-preprocessing">Data Collection and Preprocessing</h3>
+<ul>
+<li>The dataset utilized and the dataset preprocessing methods are described for each assessment item included in the study. ### Training Scheme</li>
+<li>The architecture and optimization approach for the student models are described for each dataset. ### Evaluation and Validation</li>
+<li>The partitioning of datasets and model optimization strategy are detailed.</li>
+</ul>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<ul>
+<li>The comparative analysis of model accuracy across four datasets is presented, showcasing the efficacy of KD in enhancing the performance of student models.</li>
+<li>The effect of KD compared to conventional neural network training approaches varies across datasets, with KD successfully improving the performance of student models.</li>
+</ul>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<section id="application-of-kd-in-education" class="level3">
+<h3 class="anchored" data-anchor-id="application-of-kd-in-education">Application of KD in Education</h3>
+<ul>
+<li>KD is discussed as a breakthrough in creating accurate and productive automatic scoring systems, suitable for integrating tablet- and smartphone-based learning apps. ### Limitations of KD in Education</li>
+<li>The limitations of KD, such as falling short of the teacher model’s accuracy, are highlighted, as well as the need for representative and extensive datasets for training the teacher model. ### Future Directions</li>
+<li>Potential future research directions in the application of KD in education are outlined, including soft label processing and expanding application areas.</li>
+</ul>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<ul>
+<li>The study effectively illustrates how KD can be used to optimize LLMs for usage in instructional technology, particularly on low-processor devices, and lays the foundation for future developments in the field.</li>
+</ul>
+</section>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<p>The paper effectively presents the methodology and results of the study and provides valuable insights into the potential applications and limitations of knowledge distillation in the context of educational technology. One potential critique is the need for further discussion on the ethical implications and biases associated with the application of KD in educational settings. Additionally, the authors could further elaborate on the scalability and generalizability of the proposed approach across diverse educational contexts.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Link</td>
+<td><a href="https://browse.arxiv.org/html/2312.15842v1">https://browse.arxiv.org/html/2312.15842v1</a></td>
+</tr>
+<tr class="even">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>Word Count</td>
+<td>5073</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -161,6 +290,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

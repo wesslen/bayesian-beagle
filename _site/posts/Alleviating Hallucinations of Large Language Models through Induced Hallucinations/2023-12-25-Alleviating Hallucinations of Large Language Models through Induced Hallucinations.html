@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="dcterms.date" content="2023-12-25">
+<meta name="description" content="ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.">
 
-<title>Bayesian beagle</title>
+<title>Bayesian beagle - Alleviating Hallucinations of Large Language Models through Induced Hallucinations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,20 +64,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Bayesian beagle">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bayesian beagle - Alleviating Hallucinations of Large Language Models through Induced Hallucinations">
+<meta property="og:description" content="ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.15710v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Bayesian beagle">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<meta name="twitter:title" content="Bayesian beagle - Alleviating Hallucinations of Large Language Models through Induced Hallucinations">
+<meta name="twitter:description" content="ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.15710v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bayesian beagle</span>
     </a>
   </div>
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">Bayesian beagle</span></a>
   </li>  
   <li class="nav-item compact">
@@ -120,27 +120,125 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Alleviating Hallucinations of Large Language Models through Induced Hallucinations</h1>
+                  <div>
+        <div class="description">
+          ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">robustness</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>gpt-3.5-turbo-1106 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 25, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="bayesian-beagle.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bayesian beagle</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>I’m a Bayesian beagle who has curated a LLM-summarized articles on LLMs.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main>  
-</div>
- <!-- /main -->
+
+
+<section id="summary-of-alleviating-hallucinations-of-large-language-models-through-induced-hallucinations" class="level1">
+<h1>Summary of “Alleviating Hallucinations of Large Language Models through Induced Hallucinations”</h1>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings:</h2>
+<ol type="1">
+<li><strong>Hallucinations in Large Language Models (LLMs):</strong> The study aims to address the issue of hallucinations in LLMs, where the models generate inaccurate or fabricated information, hindering their practical application.</li>
+<li><strong>Induce-then-Contrast Decoding (ICD):</strong> The proposed ICD method involves inducing hallucinations from LLMs and using them as penalty terms during decoding to improve factuality. Experimental results show significant improvement in truthfulness across various model sizes and families, comparable to state-of-the-art LLMs when equipped with ICD.</li>
+<li><strong>Effectiveness:</strong> ICD method provides substantial improvements in truthfulness on TruthfulQA and reduces hallucinations in open-ended text generation on FActScore compared to baseline decoding methods.</li>
+</ol>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<ul>
+<li>Large Language Models (LLMs) have shown impressive capabilities but continue to struggle with hallucinations, generating inaccurate or fabricated information.</li>
+<li>Previous research suggests that training objectives and lack of knowledge may contribute to hallucinations in LLMs.</li>
+</ul>
+</section>
+<section id="induce-then-contrast-decoding" class="level2">
+<h2 class="anchored" data-anchor-id="induce-then-contrast-decoding">Induce-then-Contrast Decoding</h2>
+<section id="inducing-hallucinations-from-llms" class="level3">
+<h3 class="anchored" data-anchor-id="inducing-hallucinations-from-llms">Inducing Hallucinations from LLMs</h3>
+<ul>
+<li>Factually weak LLMs are constructed by inducing hallucinations through fine-tuning or zero-shot prompting, which is then used as a penalty term to guide LLMs to generate more factual content.</li>
+<li>The fine-tuning process involves maximizing the log probability of the target output given system prompt and user input with new learned weights.</li>
+</ul>
+</section>
+<section id="factually-weak-llm-as-a-penalty" class="level3">
+<h3 class="anchored" data-anchor-id="factually-weak-llm-as-a-penalty">Factually Weak LLM as A Penalty</h3>
+<ul>
+<li>The decoding process involves amplifying predictions from the original model and downplaying untruthful predictions using a contrasting distribution to improve factuality.</li>
+<li>An adaptive plausibility constraint is introduced to select tokens for penalty, focusing only on those with higher probabilities than a certain proportion of the maximum probability assigned by the original model.</li>
+</ul>
+</section>
+</section>
+<section id="experiments" class="level2">
+<h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
+<ul>
+<li>Experimental evaluation on TruthfulQA and FActScore benchmarks demonstrates the effectiveness of ICD method in improving factuality and reducing hallucinations in LLMs compared to baseline decoding methods.</li>
+<li>Additional analyses include suitability of different task formats for inducing hallucinations, effectiveness across different LLM model sizes, and impact of data size and data source for inducing hallucinations.</li>
+</ul>
+</section>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<ul>
+<li>The additional computational costs and latency introduced by contrastive decoding could be a limitation in practical application.</li>
+<li>The study primarily focuses on evaluating the effectiveness of ICD on TruthfulQA and FActScore, but the universal applicability of the method across different domains and tasks is yet to be determined.</li>
+</ul>
+<p>Overall, the study introduces an innovative method, ICD, for alleviating hallucinations in LLMs, providing empirical evidence of its effectiveness. The potential of the method in addressing hallucinations in open domains and general tasks, as well as its scalability and practical application, warrant further investigation.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Link</td>
+<td><a href="https://browse.arxiv.org/html/2312.15710v1">https://browse.arxiv.org/html/2312.15710v1</a></td>
+</tr>
+<tr class="even">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>Word Count</td>
+<td>4999</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -161,6 +259,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

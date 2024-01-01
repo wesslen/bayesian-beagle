@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="dcterms.date" content="2023-12-26">
+<meta name="description" content="Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task contamination on LLMs’ performance over time.">
 
-<title>Bayesian beagle</title>
+<title>Bayesian beagle - Task Contamination: Language Models May Not Be Few-Shot Anymore</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,20 +64,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Bayesian beagle">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bayesian beagle - Task Contamination: Language Models May Not Be Few-Shot Anymore">
+<meta property="og:description" content="Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task contamination on LLMs’ performance over time.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.16337v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Bayesian beagle">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<meta name="twitter:title" content="Bayesian beagle - Task Contamination: Language Models May Not Be Few-Shot Anymore">
+<meta name="twitter:description" content="Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task contamination on LLMs’ performance over time.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.16337v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bayesian beagle</span>
     </a>
   </div>
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">Bayesian beagle</span></a>
   </li>  
   <li class="nav-item compact">
@@ -120,27 +120,150 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Task Contamination: Language Models May Not Be Few-Shot Anymore</h1>
+                  <div>
+        <div class="description">
+          Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task contamination on LLMs’ performance over time.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">prompt engineering</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>gpt-3.5-turbo-1106 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 26, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="bayesian-beagle.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bayesian beagle</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>I’m a Bayesian beagle who has curated a LLM-summarized articles on LLMs.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main>  
-</div>
- <!-- /main -->
+
+
+<section id="task-contamination-language-models-may-not-be-few-shot-anymore" class="level1">
+<h1>Task Contamination: Language Models May Not Be Few-Shot Anymore</h1>
+<section id="major-findings" class="level2">
+<h2 class="anchored" data-anchor-id="major-findings">Major Findings</h2>
+<ul>
+<li>Large language models (LLMs) demonstrate <strong>inflated performance</strong> in zero-shot or few-shot evaluation due to <strong>task contamination</strong>.</li>
+<li>Closed-source models may not be trustworthy baselines in these settings, especially those including <strong>instruction fine-tuning</strong> or <strong>reinforcement learning with human feedback (RLHF)</strong>.</li>
+<li>Models show little to no statistically significant improvements over <strong>majority baselines</strong> for tasks without demonstrated possibility of task contamination.</li>
+</ul>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Large language models (LLMs), such as GPT-3 series models, have garnered attention for their impressive performance in zero-shot and few-shot settings. However, concerns about <strong>data contamination</strong> have been raised, particularly related to <strong>task contamination</strong> – the inclusion of task training examples in the pre-training data, thereby affecting the zero-shot and few-shot performance.</p>
+</section>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<ul>
+<li>Four methods of measuring task contamination:
+<ul>
+<li><strong>Training data inspection</strong>: Search through the training data to find task training examples.</li>
+<li><strong>Task example extraction</strong>: Extract task examples from an existing model.</li>
+<li><strong>Membership inference</strong>: Check if the model generated content for an input instance exactly matches the original dataset.</li>
+<li><strong>Chronological analysis</strong>: Measure performance on a dataset with a known release date and check for evidence of contamination.</li>
+</ul></li>
+</ul>
+</section>
+<section id="models-and-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="models-and-datasets">Models and Datasets</h2>
+<ul>
+<li>Experimented with 12 models, including both proprietary GPT-3 series models and open models with free access to their weights.</li>
+<li>Datasets were divided into pre-2021 and post-2021 categories for analyzing zero-shot or few-shot performance difference.</li>
+</ul>
+</section>
+<section id="chronological-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="chronological-analysis">Chronological Analysis</h2>
+<ul>
+<li>Analyzed performance on datasets released before and after the model training data collection date.</li>
+<li>GPT-3 series models demonstrated a significant increase in performance on earlier datasets, indicating possible task contamination.</li>
+</ul>
+</section>
+<section id="training-data-inspection" class="level2">
+<h2 class="anchored" data-anchor-id="training-data-inspection">Training Data Inspection</h2>
+<ul>
+<li>Conducted on two instruction fine-tuned open LLMs (Alpaca and Vicuna) for various classification tasks.</li>
+<li>Performance improved for models with more task-specific training examples, indicating <strong>contaminated performance</strong>.</li>
+</ul>
+</section>
+<section id="task-example-extraction" class="level2">
+<h2 class="anchored" data-anchor-id="task-example-extraction">Task Example Extraction</h2>
+<ul>
+<li>Attempted to extract task examples from the LLM.</li>
+<li>GPT-3 series models, starting from davinci-001, were able to generate task-specific training examples, providing evidence of task contamination.</li>
+</ul>
+</section>
+<section id="llm-performance-on-tasks-with-no-contamination" class="level2">
+<h2 class="anchored" data-anchor-id="llm-performance-on-tasks-with-no-contamination">LLM Performance on Tasks With No Contamination</h2>
+<ul>
+<li>Rarely show statistically significant improvements over majority baselines for tasks without demonstrated possibility of task contamination.</li>
+</ul>
+</section>
+<section id="membership-inference" class="level2">
+<h2 class="anchored" data-anchor-id="membership-inference">Membership Inference</h2>
+<ul>
+<li>Strongly indicates increased contamination is related to increased performance for the semantic parsing task.</li>
+</ul>
+</section>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<ul>
+<li><strong>Low recall</strong> for methods detecting task contamination.</li>
+<li>Difficulty in analyzing task contamination especially for models without instruction tuning.</li>
+</ul>
+<p>In conclusion, the paper reveals evidence of task contamination for LLMs and recommends additional research on this issue.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Link</td>
+<td><a href="https://browse.arxiv.org/html/2312.16337v1">https://browse.arxiv.org/html/2312.16337v1</a></td>
+</tr>
+<tr class="even">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>Word Count</td>
+<td>5492</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -161,6 +284,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

@@ -72,7 +72,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 18,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
@@ -96,12 +97,16 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Bayesian beagle - Ryan’s LLM Blog 🤖">
-<meta property="og:image" content="https://browse.arxiv.org/html/2312.16018v1/extracted/5317281/f17.png">
+<meta property="og:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Bayesian beagle - Ryan’s LLM Blog 🤖">
-<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.16018v1/extracted/5317281/f17.png">
+<meta name="twitter:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 </head>
 
 <body class="nav-fixed">
@@ -169,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="hci">hci <span class="quarto-category-count">(4)</span></div><div class="category" data-category="open-source">open-source <span class="quarto-category-count">(1)</span></div><div class="category" data-category="programming">programming <span class="quarto-category-count">(2)</span></div><div class="category" data-category="prompt engineering">prompt engineering <span class="quarto-category-count">(6)</span></div><div class="category" data-category="robustness">robustness <span class="quarto-category-count">(1)</span></div><div class="category" data-category="security">security <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(20)</span></div><div class="category" data-category="education">education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hci">hci <span class="quarto-category-count">(4)</span></div><div class="category" data-category="open-source">open-source <span class="quarto-category-count">(1)</span></div><div class="category" data-category="programming">programming <span class="quarto-category-count">(2)</span></div><div class="category" data-category="prompt engineering">prompt engineering <span class="quarto-category-count">(10)</span></div><div class="category" data-category="recommender">recommender <span class="quarto-category-count">(2)</span></div><div class="category" data-category="robustness">robustness <span class="quarto-category-count">(3)</span></div><div class="category" data-category="security">security <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -182,8 +187,98 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="prompt engineering" data-listing-date-sort="1703548800000" data-listing-file-modified-sort="1704146341802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-categories="prompt engineering" data-listing-date-sort="1703808000000" data-listing-file-modified-sort="1704148046272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/Action-Item-Driven Summarization of Long Meeting Transcripts/2023-12-29-Action-Item-Driven Summarization of Long Meeting Transcripts.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./bayesian-beagle.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Action-Item-Driven Summarization of Long Meeting Transcripts
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('prompt engineering'); return false;">
+prompt engineering
+</div>
+</div>
+<div class="card-text listing-description">
+Novel approach automates abstractive meeting summaries from transcript action items, achieving improved results over current models.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 29, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="prompt engineering" data-listing-date-sort="1703548800000" data-listing-file-modified-sort="1704148046284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4/2023-12-26-Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://browse.arxiv.org/html/2312.16171v1/x1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('prompt engineering'); return false;">
+prompt engineering
+</div>
+</div>
+<div class="card-text listing-description">
+26 principles simplify querying large language models, with a focus on understanding and enhancing user comprehension. Experiments validate the effectiveness on various…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 26, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="prompt engineering" data-listing-date-sort="1703548800000" data-listing-file-modified-sort="1704148046276" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://browse.arxiv.org/html/2312.16337v1/x1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Task Contamination: Language Models May Not Be Few-Shot Anymore
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('prompt engineering'); return false;">
+prompt engineering
+</div>
+</div>
+<div class="card-text listing-description">
+Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 26, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="prompt engineering" data-listing-date-sort="1703548800000" data-listing-file-modified-sort="1704148046260" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img src="https://browse.arxiv.org/html/2312.16018v1/extracted/5317281/f17.png" class="thumbnail-image card-img" style="height: 150px;">
@@ -212,8 +307,158 @@ Dec 26, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="hci" data-listing-date-sort="1703376000000" data-listing-file-modified-sort="1704146341786" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="4" data-categories="education" data-listing-date-sort="1703548800000" data-listing-file-modified-sort="1704148046292" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<a href="./posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://browse.arxiv.org/html/2312.15842v1/x1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Knowledge Distillation of LLM for Education
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('education'); return false;">
+education
+</div>
+</div>
+<div class="card-text listing-description">
+Method proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 26, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="prompt engineering" data-listing-date-sort="1703548800000" data-listing-file-modified-sort="1704148046288" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://browse.arxiv.org/html/2312.15918v1/x1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Supervised Knowledge Makes Large Language Models Better In-context Learners
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('prompt engineering'); return false;">
+prompt engineering
+</div>
+</div>
+<div class="card-text listing-description">
+LLMs improve in-context learning with task-specific fine-tuned models, enhancing generalizability and factuality in language applications.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 26, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="recommender" data-listing-date-sort="1703462400000" data-listing-file-modified-sort="1704148046296" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/Large Language Models are Not Stable Recommender Systems/2023-12-25-Large Language Models are Not Stable Recommender Systems.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://browse.arxiv.org/html/2312.15746v1/x1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Large Language Models are Not Stable Recommender Systems
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('recommender'); return false;">
+recommender
+</div>
+</div>
+<div class="card-text listing-description">
+LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 25, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="recommender" data-listing-date-sort="1703462400000" data-listing-file-modified-sort="1704148046304" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/Unlocking the Potential of Large Language Models for Explainable Recommendations/2023-12-25-Unlocking the Potential of Large Language Models for Explainable Recommendations.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://browse.arxiv.org/html/2312.15661v2/x1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Unlocking the Potential of Large Language Models for Explainable Recommendations
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('recommender'); return false;">
+recommender
+</div>
+</div>
+<div class="card-text listing-description">
+Recommendation explanations benefit from integration of large language models in LLMXRec, providing quality and effectiveness.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 25, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="robustness" data-listing-date-sort="1703462400000" data-listing-file-modified-sort="1704148046300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://browse.arxiv.org/html/2312.15710v1/x1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Alleviating Hallucinations of Large Language Models through Induced Hallucinations
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('robustness'); return false;">
+robustness
+</div>
+</div>
+<div class="card-text listing-description">
+ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 25, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="9" data-categories="hci" data-listing-date-sort="1703376000000" data-listing-file-modified-sort="1704148046244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/The Persuasive Power of Large Language Models/2023-12-24-The Persuasive Power of Large Language Models.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img src="https://browse.arxiv.org/html/2312.15523v1/extracted/5315218/img/chat-example.png" class="thumbnail-image card-img" style="height: 150px;">
@@ -242,8 +487,8 @@ Dec 24, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="hci,prompt engineering" data-listing-date-sort="1703203200000" data-listing-file-modified-sort="1704146341794" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="10" data-categories="hci,prompt engineering" data-listing-date-sort="1703203200000" data-listing-file-modified-sort="1704148046252" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs/2023-12-22-Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img src="https://browse.arxiv.org/html/2312.14345v1/x1.png" class="thumbnail-image card-img" style="height: 150px;">
@@ -275,8 +520,38 @@ Dec 22, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="robustness" data-listing-date-sort="1703116800000" data-listing-file-modified-sort="1704146341806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="11" data-categories="robustness" data-listing-date-sort="1703203200000" data-listing-file-modified-sort="1704148046280" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/Evolving Large Language Model Assistant with Long-Term Conditional Memory/2023-12-22-Evolving Large Language Model Assistant with Long-Term Conditional Memory.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://browse.arxiv.org/html/2312.17257v1/x1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Evolving Large Language Model Assistant with Long-Term Conditional Memory
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('robustness'); return false;">
+robustness
+</div>
+</div>
+<div class="card-text listing-description">
+AI assistant ChatGPT uses verbal long-term memory to improve responses, tested on different datasets.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 22, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="12" data-categories="robustness" data-listing-date-sort="1703116800000" data-listing-file-modified-sort="1704148046264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/Context-aware Decoding Reduces Hallucination in Query-focused Summarization/2023-12-21-Context-aware Decoding Reduces Hallucination in Query-focused Summarization.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img src="./bayesian-beagle.png" class="thumbnail-image card-img" style="height: 150px;">
@@ -305,8 +580,8 @@ Dec 21, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="hci,prompt engineering" data-listing-date-sort="1703030400000" data-listing-file-modified-sort="1704146341798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="13" data-categories="hci,prompt engineering" data-listing-date-sort="1703030400000" data-listing-file-modified-sort="1704148046256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/Android dialogue system for customer service using prompt-based topic control and compliments generation/2023-12-20-Android dialogue system for customer service using prompt-based topic control and compliments generation.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img src="https://browse.arxiv.org/html/2312.12924v1/extracted/5307376/fig/dialogue_flow.png" class="thumbnail-image card-img" style="height: 150px;">
@@ -338,8 +613,8 @@ Dec 20, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="security,open-source" data-listing-date-sort="1702944000000" data-listing-file-modified-sort="1704146341778" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<a href="./posts/Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks/2023-12-19-Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="14" data-categories="security,open-source" data-listing-date-sort="1702944000000" data-listing-file-modified-sort="1704148046232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/Bypassing the Safety Training of Open-Source LLMs with Priming Attacks/2023-12-19-Bypassing the Safety Training of Open-Source LLMs with Priming Attacks.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img src="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png" class="thumbnail-image card-img" style="height: 150px;">
@@ -371,8 +646,38 @@ Dec 19, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="prompt engineering,programming" data-listing-date-sort="1702425600000" data-listing-file-modified-sort="1704146341810" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<a href="./posts/GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements/2023-12-13-GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="15" data-categories="prompt engineering" data-listing-date-sort="1702425600000" data-listing-file-modified-sort="1704148046240" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/Prompting LLMs with content plans to enhance the summarization of scientific articles/2023-12-13-Prompting LLMs with content plans to enhance the summarization of scientific articles.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./bayesian-beagle.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Prompting LLMs with content plans to enhance the summarization of scientific articles
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('prompt engineering'); return false;">
+prompt engineering
+</div>
+</div>
+<div class="card-text listing-description">
+Novel prompting techniques improve scientific article summarization, providing key terms to guide summarization systems for better performance.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+gpt-3.5-turbo-1106
+</div>
+<div class="listing-date">
+Dec 13, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="16" data-categories="prompt engineering,programming" data-listing-date-sort="1702425600000" data-listing-file-modified-sort="1704148046264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements/2023-12-13-GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img src="https://browse.arxiv.org/html/2312.08189v1/extracted/5251769/copilot-chat.png" class="thumbnail-image card-img" style="height: 150px;">
@@ -404,38 +709,8 @@ Dec 13, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="prompt engineering" data-listing-date-sort="1702425600000" data-listing-file-modified-sort="1704146341782" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<a href="./posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./bayesian-beagle.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Prompting LLMs with content plans to enhance the summarization of scientific articles
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('prompt engineering'); return false;">
-prompt engineering
-</div>
-</div>
-<div class="card-text listing-description">
-Novel prompting techniques improve scientific article summarization, providing key terms to guide summarization systems for better performance.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-gpt-3.5-turbo-1106
-</div>
-<div class="listing-date">
-Dec 13, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="prompt engineering" data-listing-date-sort="1702339200000" data-listing-file-modified-sort="1704146341814" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<a href="./posts/Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales/2023-12-12-Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="17" data-categories="prompt engineering" data-listing-date-sort="1702339200000" data-listing-file-modified-sort="1704148046268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales/2023-12-12-Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img src="https://browse.arxiv.org/html/2312.07399v1/x1.png" class="thumbnail-image card-img" style="height: 150px;">
@@ -464,11 +739,11 @@ Dec 12, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="hci,programming" data-listing-date-sort="1701993600000" data-listing-file-modified-sort="1704146341790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="18" data-categories="hci,programming" data-listing-date-sort="1701993600000" data-listing-file-modified-sort="1704148046248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization/2023-12-08-LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./bayesian-beagle.png" class="thumbnail-image card-img" style="height: 150px;">
+<img data-src="./bayesian-beagle.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -497,11 +772,11 @@ Dec 8, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="security" data-listing-date-sort="1701648000000" data-listing-file-modified-sort="1704146341782" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<a href="./posts/Mitigating_Data_Injection_Attacks_on_Federated_Learning/2023-12-04-Mitigating_Data_Injection_Attacks_on_Federated_Learning.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="19" data-categories="security" data-listing-date-sort="1701648000000" data-listing-file-modified-sort="1704148046236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/Mitigating Data Injection Attacks on Federated Learning/2023-12-04-Mitigating Data Injection Attacks on Federated Learning.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="https://browse.arxiv.org/html/2312.02102v2/extracted/5299805/Figures/FederatedSimple3.png" class="thumbnail-image card-img" style="height: 150px;">
+<img data-src="https://browse.arxiv.org/html/2312.02102v2/extracted/5299805/Figures/FederatedSimple3.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -531,6 +806,9 @@ Dec 4, 2023
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

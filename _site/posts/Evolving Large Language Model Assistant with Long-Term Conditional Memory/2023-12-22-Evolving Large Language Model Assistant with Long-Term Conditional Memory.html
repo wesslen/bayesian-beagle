@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="dcterms.date" content="2023-12-22">
+<meta name="description" content="AI assistant ChatGPT uses verbal long-term memory to improve responses, tested on different datasets.">
 
-<title>Bayesian beagle</title>
+<title>Bayesian beagle - Evolving Large Language Model Assistant with Long-Term Conditional Memory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,20 +64,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Bayesian beagle">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bayesian beagle - Evolving Large Language Model Assistant with Long-Term Conditional Memory">
+<meta property="og:description" content="AI assistant ChatGPT uses verbal long-term memory to improve responses, tested on different datasets.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.17257v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Bayesian beagle">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://wesslen-blog.netlify.app/bayesian-beagle.png">
+<meta name="twitter:title" content="Bayesian beagle - Evolving Large Language Model Assistant with Long-Term Conditional Memory">
+<meta name="twitter:description" content="AI assistant ChatGPT uses verbal long-term memory to improve responses, tested on different datasets.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.17257v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bayesian beagle</span>
     </a>
   </div>
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">Bayesian beagle</span></a>
   </li>  
   <li class="nav-item compact">
@@ -120,27 +120,134 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Evolving Large Language Model Assistant with Long-Term Conditional Memory</h1>
+                  <div>
+        <div class="description">
+          AI assistant ChatGPT uses verbal long-term memory to improve responses, tested on different datasets.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">robustness</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>gpt-3.5-turbo-1106 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 22, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="bayesian-beagle.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bayesian beagle</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>I’m a Bayesian beagle who has curated a LLM-summarized articles on LLMs.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main>  
-</div>
- <!-- /main -->
+
+
+<section id="evolving-large-language-model-assistant-with-long-term-conditional-memory" class="level3">
+<h3 class="anchored" data-anchor-id="evolving-large-language-model-assistant-with-long-term-conditional-memory">Evolving Large Language Model Assistant with Long-Term Conditional Memory</h3>
+<section id="key-findings" class="level4">
+<h4 class="anchored" data-anchor-id="key-findings">Key Findings</h4>
+<ul>
+<li>The paper introduces an evolving large language model assistant that utilizes <strong>verbal long-term memory</strong> from previous dialogues to improve future responses.</li>
+<li>The model introduces a new memorizing mechanism called <strong>conditional memory</strong> to solve the limitations of previous methods and explores different ways of constructing memory.</li>
+<li>The paper evaluates the model on three constructed test datasets focusing on different abilities required by an AI assistant with long-term memory.</li>
+</ul>
+</section>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
+<ul>
+<li>Large language models (LLMs), like ChatGPT, have gained significant popularity and are widely used in natural language processing tasks such as chit-chat and providing assistance to users.</li>
+<li>The main problem for current AI assistants is the lack of long-term memory from previous dialogues, preventing them from improving the quality of their responses.</li>
+</ul>
+</section>
+<section id="framework-of-the-evolving-llm-assistant" class="level4">
+<h4 class="anchored" data-anchor-id="framework-of-the-evolving-llm-assistant">Framework of the Evolving LLM Assistant</h4>
+<ul>
+<li>The evolving LLM assistant consists of an LLM, a memory, and a prompt-based wrapper conducting interactions between the assistant and the memory.</li>
+<li>The wrapper utilizes the ongoing dialogue and LLM assistant to construct memory records and store them in the memory, which are later used to improve response generation.</li>
+</ul>
+</section>
+<section id="related-work" class="level4">
+<h4 class="anchored" data-anchor-id="related-work">Related Work</h4>
+<ul>
+<li>The paper discusses retrieval-based dialogue systems and how they have been extended to LLM-based chatbots augmented by retrieval.</li>
+</ul>
+</section>
+<section id="method" class="level4">
+<h4 class="anchored" data-anchor-id="method">Method</h4>
+<ul>
+<li>The construction of memory involves three distinct memory types: history-based memory, summary-based memory, and <strong>conditional memory</strong>, which is proposed in this paper.</li>
+<li>The retrieval and use of memory records in response generation is achieved through a dense retrieval model and <strong>self-reflection mechanism</strong> for memory retrieval.</li>
+</ul>
+</section>
+<section id="dataset" class="level4">
+<h4 class="anchored" data-anchor-id="dataset">Dataset</h4>
+<ul>
+<li>The paper constructs three test datasets to test the model’s abilities in learning from dialogue history, continuing previous dialogue, and learning from human feedback.</li>
+</ul>
+</section>
+<section id="experiment" class="level4">
+<h4 class="anchored" data-anchor-id="experiment">Experiment</h4>
+<ul>
+<li>The experiment results show that <strong>conditional memory</strong> achieves the best performance among the three forms of memory.</li>
+<li>The combination of <strong>conditional memory</strong> and <strong>summary-based memory</strong> can improve the performance of the model.</li>
+<li>The <strong>self-reflection retrieval</strong> mechanism is effective, especially for <strong>summary-based memory</strong>, improving the accuracy of retrieved memory records.</li>
+</ul>
+</section>
+<section id="critique" class="level4">
+<h4 class="anchored" data-anchor-id="critique">Critique</h4>
+<ul>
+<li>The paper lacks a detailed discussion of the potential limitations and challenges of using conditional memory in real-world applications.</li>
+<li>The study’s evaluation is limited to automated evaluations and may benefit from human evaluations to validate the practical utility of the proposed assistant.</li>
+</ul>
+</section>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Link</td>
+<td><a href="https://browse.arxiv.org/html/2312.17257v1">https://browse.arxiv.org/html/2312.17257v1</a></td>
+</tr>
+<tr class="even">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>Word Count</td>
+<td>5215</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -161,6 +268,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

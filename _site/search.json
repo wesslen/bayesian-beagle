@@ -1,212 +1,541 @@
 [
   {
-    "objectID": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html",
-    "href": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html",
-    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
+    "objectID": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html",
+    "href": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html",
+    "title": "Supervised Knowledge Makes Large Language Models Better In-context Learners",
     "section": "",
-    "text": "Context-aware Decoding (CAD) is a decoding method that reduces factual mistakes/hallucinations while mostly retaining the match of lexical patterns in query-focused summarization (QFS) datasets.\nThe study demonstrates that CAD can improve news summarization quality and reduce hallucination/factuality errors in QFS.\nDespite the benefits, CAD also introduces additional inference-time FLOPs and potentially slows down decoding speed, and the choice of hyperparameter α affects the performance."
+    "text": "The paper introduces SuperContext, a strategy to enhance the reliability of Large Language Models (LLMs) by integrating supervised knowledge from task-specific fine-tuned models during the inference stage. The study examines Natural Language Understanding (NLU) and Question Answering (QA) tasks, demonstrating that SuperContext can significantly improve LLM performance concerning generalizability and factuality.\n\n\n\nSupervised Knowledge Enhancement: SuperContext leverages task-specific fine-tuned models to provide supervised knowledge to enhance LLMs, leading to improved generalization and factuality.\nImproved Out-of-distribution Generalizability: The study reveals that SuperContext outperforms traditional in-context learning methods, particularly in managing out-of-distribution data and minimizing hallucinations.\nTask-Specific Adaptability: The paper demonstrates the efficacy of SuperContext across diverse tasks, showing its potential in fostering more reliable LLMs."
   },
   {
-    "objectID": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#appendix",
-    "href": "posts/Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization/2023-12-21-Context-aware_Decoding_Reduces_Hallucination_in_Query-focused_Summarization.html#appendix",
-    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
+    "objectID": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#summary",
+    "href": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#summary",
+    "title": "Supervised Knowledge Makes Large Language Models Better In-context Learners",
+    "section": "",
+    "text": "The paper introduces SuperContext, a strategy to enhance the reliability of Large Language Models (LLMs) by integrating supervised knowledge from task-specific fine-tuned models during the inference stage. The study examines Natural Language Understanding (NLU) and Question Answering (QA) tasks, demonstrating that SuperContext can significantly improve LLM performance concerning generalizability and factuality.\n\n\n\nSupervised Knowledge Enhancement: SuperContext leverages task-specific fine-tuned models to provide supervised knowledge to enhance LLMs, leading to improved generalization and factuality.\nImproved Out-of-distribution Generalizability: The study reveals that SuperContext outperforms traditional in-context learning methods, particularly in managing out-of-distribution data and minimizing hallucinations.\nTask-Specific Adaptability: The paper demonstrates the efficacy of SuperContext across diverse tasks, showing its potential in fostering more reliable LLMs."
+  },
+  {
+    "objectID": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#method",
+    "href": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#method",
+    "title": "Supervised Knowledge Makes Large Language Models Better In-context Learners",
+    "section": "Method",
+    "text": "Method\n\nIn-context Learning Baseline\n\nIn-context learning serves as the cornerstone for stimulating the in-context learning ability of LLMs by providing in-domain data for several NLU tasks with 16-shot examples.\nIt sets the groundwork for the evaluation of traditional in-context learning and the proposed SuperContext method.\n\n\n\nSuperContext\n\nSuperContext is introduced as a simple and general approach for in-context learning, integrating the auxiliary knowledge from a small, discriminative model with LLMs during predictions.\nThe method involves incorporating the predictive results and confidence of a discriminative model in the LLM’s inference process."
+  },
+  {
+    "objectID": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#experiments",
+    "href": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#experiments",
+    "title": "Supervised Knowledge Makes Large Language Models Better In-context Learners",
+    "section": "Experiments",
+    "text": "Experiments\n\nSetup\n\nThe experiments involve source models, datasets, and baselines for NLU and QA tasks, with a focus on GLUE-X and SQuAD 2.0 for evaluation.\n\n\n\nNLU Results\n\nSuperContext outperforms both fine-tuned task-specific models and traditional in-context learning methods in NLU tasks, showcasing its superior capability.\nTask-level analysis reveals performance improvements across various NLU tasks, indicating the potential of SuperContext in diverse scenarios.\n\n\n\nQA Results\n\nIn Question Answering tasks, SuperContext shows significant improvements over traditional in-context learning methods, particularly in minimizing hallucinations and enhancing accuracy for open questions."
+  },
+  {
+    "objectID": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#analysis-and-discussion",
+    "href": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#analysis-and-discussion",
+    "title": "Supervised Knowledge Makes Large Language Models Better In-context Learners",
+    "section": "Analysis and Discussion",
+    "text": "Analysis and Discussion\nThe paper discusses reversed predictions, interpretation analysis, and the effect of SLM confidence. It emphasizes the critical role of SLM confidence in the prompt design of SuperContext and highlights the interpretability and reliability of the proposed method."
+  },
+  {
+    "objectID": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#critique",
+    "href": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#critique",
+    "title": "Supervised Knowledge Makes Large Language Models Better In-context Learners",
+    "section": "Critique",
+    "text": "Critique\nThe paper provides a comprehensive framework for enhancing LLMs, but it could benefit from further exploration of the limitations and ethical considerations of the proposed method. Additionally, a more detailed comparison with existing methods and analyses, especially in the discussion of reversed predictions, would strengthen the paper’s findings."
+  },
+  {
+    "objectID": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#appendix",
+    "href": "posts/Supervised Knowledge Makes Large Language Models Better In-context Learners/2023-12-26-Supervised Knowledge Makes Large Language Models Better In-context Learners.html#appendix",
+    "title": "Supervised Knowledge Makes Large Language Models Better In-context Learners",
     "section": "Appendix",
-    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.14335v1\n\n\nTruncated\nFalse\n\n\nWord Count\n2884"
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.15918v1\n\n\nTruncated\nFalse\n\n\nWord Count\n6466"
   },
   {
-    "objectID": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html",
-    "href": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html",
+    "objectID": "posts/Android dialogue system for customer service using prompt-based topic control and compliments generation/2023-12-20-Android dialogue system for customer service using prompt-based topic control and compliments generation.html",
+    "href": "posts/Android dialogue system for customer service using prompt-based topic control and compliments generation/2023-12-20-Android dialogue system for customer service using prompt-based topic control and compliments generation.html",
     "title": "Android dialogue system for customer service using prompt-based topic control and compliments generation",
     "section": "",
     "text": "Topic Control and Compliments: The developed Android dialogue system for customer service demonstrated the use of ChatGPT for topic control in trip planning, as well as generating compliments for users based on their appearance.\nUser Preference Integration: The system integrated user preferences by extracting knowledge from the history of the user’s utterances and utilizing it to propose travel plans matching the user’s preferences.\nEffective User Evaluation: In a preliminary round held at a travel agency’s actual store, the system garnered positive feedback and was ranked first in both satisfaction ratings and plan ratings by real customers."
   },
   {
-    "objectID": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#appendix",
-    "href": "posts/Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation/2023-12-20-Android_dialogue_system_for_customer_service_using_prompt-based_topic_control_and_compliments_generation.html#appendix",
+    "objectID": "posts/Android dialogue system for customer service using prompt-based topic control and compliments generation/2023-12-20-Android dialogue system for customer service using prompt-based topic control and compliments generation.html#appendix",
+    "href": "posts/Android dialogue system for customer service using prompt-based topic control and compliments generation/2023-12-20-Android dialogue system for customer service using prompt-based topic control and compliments generation.html#appendix",
     "title": "Android dialogue system for customer service using prompt-based topic control and compliments generation",
     "section": "Appendix",
     "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.12924v1\n\n\nTruncated\nFalse\n\n\nWord Count\n1231"
   },
   {
-    "objectID": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html",
-    "href": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html",
-    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
+    "objectID": "posts/Action-Item-Driven Summarization of Long Meeting Transcripts/2023-12-29-Action-Item-Driven Summarization of Long Meeting Transcripts.html",
+    "href": "posts/Action-Item-Driven Summarization of Long Meeting Transcripts/2023-12-29-Action-Item-Driven Summarization of Long Meeting Transcripts.html",
+    "title": "Action-Item-Driven Summarization of Long Meeting Transcripts",
     "section": "",
-    "text": "The paper introduces RecRanker, a framework designed for using instruction-tuning large language models (LLMs) to serve as the ranker in top-k recommendations. The authors propose importance-aware sampling, a position-shifting strategy, and prompt enhancement from conventional recommendation models to improve the model’s performance. They also introduce a hybrid ranking method to combine different ranking tasks for better performance.\n\n\n\n\nHybrid Ranking Method: The hybrid ranking approach significantly enhances the model’s performance across diverse ranking tasks.\nAdaptive User Sampling: Adaptive user sampling greatly improves the quality and diversity of the dataset, leading to better model performance.\nPrompt Enhancement: Integrating signals from conventional recommendation models into prompts enhances the model’s understanding and reasoning capabilities.\n\n\n\n\n\nAdaptive User Sampling: The framework employs importance-aware sampling and clustering-based sampling to procure high-quality, representative, and diverse users for the dataset.\nPrompt Construction: The position shifting strategy and prompt enhancement improve the contextual understanding of the LLM. Signals from conventional recommender models are seamlessly incorporated into the prompt.\nOptimization via Instruction Tuning: The fine-tuning process involves optimizing the LLM using a dataset generated from instructional data to align the model responses with user intents and preferences.\nHybrid Ranking: A hybrid ranking method is introduced to amalgamate the outputs of different ranking tasks for more effective recommendations.\n\n\n\n\n\nThe proposed RecRanker outperforms the traditional recommendation models, especially for the BookCrossing dataset.\nAnalysis of hyper-parameters shows the significance of appropriate hyper-parameter selection in achieving optimal model performance.\nInstruction-tuned LLMs perform significantly better than the GPT-3.5 model in top-k recommendations.\n\n\n\n\nThe paper provides valuable insights and contributions to the field of recommendation systems. However, the study could have delved deeper into the computational resources and scalability issues associated with deploying LLMs for large-scale recommender systems. Additionally, further exploration of potential limitations or challenges associated with the proposed framework may have added depth to the paper.\nOverall, the RecRanker framework presents a promising approach to leveraging instruction-tuning LLMs for top-k recommendations, with empirical evaluations demonstrating its effectiveness.\n\n\n\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.16018v1\n\n\nTruncated\nFalse\n\n\nWord Count\n7669"
+    "text": "The paper introduces a novel approach to automatically generate abstractive meeting summaries driven by action items contained in the meeting transcript.\nIt develops three novel topic segmentation algorithms that outperform linear segmentation by up to 1.36%.\nThe paper’s novel recursive summarization algorithm improves upon the performance of current state-of-the-art models by approximately 4.98% in terms of the BERTScore metric."
   },
   {
-    "objectID": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#abstract",
-    "href": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#abstract",
-    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
-    "section": "",
-    "text": "The paper introduces RecRanker, a framework designed for using instruction-tuning large language models (LLMs) to serve as the ranker in top-k recommendations. The authors propose importance-aware sampling, a position-shifting strategy, and prompt enhancement from conventional recommendation models to improve the model’s performance. They also introduce a hybrid ranking method to combine different ranking tasks for better performance."
-  },
-  {
-    "objectID": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#main-findings",
-    "href": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#main-findings",
-    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
-    "section": "",
-    "text": "Hybrid Ranking Method: The hybrid ranking approach significantly enhances the model’s performance across diverse ranking tasks.\nAdaptive User Sampling: Adaptive user sampling greatly improves the quality and diversity of the dataset, leading to better model performance.\nPrompt Enhancement: Integrating signals from conventional recommendation models into prompts enhances the model’s understanding and reasoning capabilities."
-  },
-  {
-    "objectID": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#methodology",
-    "href": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#methodology",
-    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
-    "section": "",
-    "text": "Adaptive User Sampling: The framework employs importance-aware sampling and clustering-based sampling to procure high-quality, representative, and diverse users for the dataset.\nPrompt Construction: The position shifting strategy and prompt enhancement improve the contextual understanding of the LLM. Signals from conventional recommender models are seamlessly incorporated into the prompt.\nOptimization via Instruction Tuning: The fine-tuning process involves optimizing the LLM using a dataset generated from instructional data to align the model responses with user intents and preferences.\nHybrid Ranking: A hybrid ranking method is introduced to amalgamate the outputs of different ranking tasks for more effective recommendations."
-  },
-  {
-    "objectID": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#experimental-results",
-    "href": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#experimental-results",
-    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
-    "section": "",
-    "text": "The proposed RecRanker outperforms the traditional recommendation models, especially for the BookCrossing dataset.\nAnalysis of hyper-parameters shows the significance of appropriate hyper-parameter selection in achieving optimal model performance.\nInstruction-tuned LLMs perform significantly better than the GPT-3.5 model in top-k recommendations."
-  },
-  {
-    "objectID": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#critique",
-    "href": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#critique",
-    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
-    "section": "",
-    "text": "The paper provides valuable insights and contributions to the field of recommendation systems. However, the study could have delved deeper into the computational resources and scalability issues associated with deploying LLMs for large-scale recommender systems. Additionally, further exploration of potential limitations or challenges associated with the proposed framework may have added depth to the paper.\nOverall, the RecRanker framework presents a promising approach to leveraging instruction-tuning LLMs for top-k recommendations, with empirical evaluations demonstrating its effectiveness."
-  },
-  {
-    "objectID": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#appendix",
-    "href": "posts/RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation/2023-12-26-RecRanker:_Instruction_Tuning_Large_Language_Model_as_Ranker_for_Top-k_Recommendation.html#appendix",
-    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
-    "section": "",
-    "text": "Link\nhttps://browse.arxiv.org/html/2312.16018v1\n\n\nTruncated\nFalse\n\n\nWord Count\n7669"
-  },
-  {
-    "objectID": "posts/GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements/2023-12-13-GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements.html",
-    "href": "posts/GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements/2023-12-13-GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements.html",
-    "title": "GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements",
-    "section": "",
-    "text": "GuardRails is a novel heuristic that leverages Large Language Models (LLMs) to suggest inputs for ambiguous purpose statements, aiding programmers in clarifying the intended behavior of functions.\nGuardRails compares favorably against GitHub Copilot’s Chat feature in identifying potential ambiguities in purpose statements, explicitly highlighting ambiguous inputs and outperforming Copilot Chat in several cases.\nThe tool has the potential to be especially helpful for novice programmers and instructors, aiding in the identification and clarification of ambiguities in purpose statements."
-  },
-  {
-    "objectID": "posts/GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements/2023-12-13-GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements.html#appendix",
-    "href": "posts/GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements/2023-12-13-GuardRails:_Automated_Suggestions_for_Clarifying_Ambiguous_Purpose_Statements.html#appendix",
-    "title": "GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements",
+    "objectID": "posts/Action-Item-Driven Summarization of Long Meeting Transcripts/2023-12-29-Action-Item-Driven Summarization of Long Meeting Transcripts.html#appendix",
+    "href": "posts/Action-Item-Driven Summarization of Long Meeting Transcripts/2023-12-29-Action-Item-Driven Summarization of Long Meeting Transcripts.html#appendix",
+    "title": "Action-Item-Driven Summarization of Long Meeting Transcripts",
     "section": "Appendix",
-    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.08189v1\n\n\nTruncated\nFalse\n\n\nWord Count\n3094"
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.17581v1\n\n\nTruncated\nFalse\n\n\nWord Count\n4749"
   },
   {
-    "objectID": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html",
-    "href": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html",
+    "objectID": "posts/Bypassing the Safety Training of Open-Source LLMs with Priming Attacks/2023-12-19-Bypassing the Safety Training of Open-Source LLMs with Priming Attacks.html",
+    "href": "posts/Bypassing the Safety Training of Open-Source LLMs with Priming Attacks/2023-12-19-Bypassing the Safety Training of Open-Source LLMs with Priming Attacks.html",
+    "title": "Bypassing the Safety Training of Open-Source LLMs with Priming Attacks",
+    "section": "",
+    "text": "Priming attacks are shown to be effective in bypassing safety training for open-source Large Language Models (LLMs), resulting in a significant increase in the Attack Success Rate on Harmful Behaviors.\nThe study highlights the ease with which adversaries can coerce open-source LLMs to comply with harmful requests, undermining the efficacy of safety measures in current LLMs, and raising pivotal concerns for the future of open-sourcing LLMs.\nThe research contributes to demonstrating the fragility of existing safety measures for LLMs and emphasizes the need for further exploration of novel methods for safer open-sourcing."
+  },
+  {
+    "objectID": "posts/Bypassing the Safety Training of Open-Source LLMs with Priming Attacks/2023-12-19-Bypassing the Safety Training of Open-Source LLMs with Priming Attacks.html#appendix",
+    "href": "posts/Bypassing the Safety Training of Open-Source LLMs with Priming Attacks/2023-12-19-Bypassing the Safety Training of Open-Source LLMs with Priming Attacks.html#appendix",
+    "title": "Bypassing the Safety Training of Open-Source LLMs with Priming Attacks",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.12321v1\n\n\nTruncated\nFalse\n\n\nWord Count\n2072"
+  },
+  {
+    "objectID": "posts/Evolving Large Language Model Assistant with Long-Term Conditional Memory/2023-12-22-Evolving Large Language Model Assistant with Long-Term Conditional Memory.html",
+    "href": "posts/Evolving Large Language Model Assistant with Long-Term Conditional Memory/2023-12-22-Evolving Large Language Model Assistant with Long-Term Conditional Memory.html",
+    "title": "Evolving Large Language Model Assistant with Long-Term Conditional Memory",
+    "section": "",
+    "text": "The paper introduces an evolving large language model assistant that utilizes verbal long-term memory from previous dialogues to improve future responses.\nThe model introduces a new memorizing mechanism called conditional memory to solve the limitations of previous methods and explores different ways of constructing memory.\nThe paper evaluates the model on three constructed test datasets focusing on different abilities required by an AI assistant with long-term memory.\n\n\n\n\n\nLarge language models (LLMs), like ChatGPT, have gained significant popularity and are widely used in natural language processing tasks such as chit-chat and providing assistance to users.\nThe main problem for current AI assistants is the lack of long-term memory from previous dialogues, preventing them from improving the quality of their responses.\n\n\n\n\n\nThe evolving LLM assistant consists of an LLM, a memory, and a prompt-based wrapper conducting interactions between the assistant and the memory.\nThe wrapper utilizes the ongoing dialogue and LLM assistant to construct memory records and store them in the memory, which are later used to improve response generation.\n\n\n\n\n\nThe paper discusses retrieval-based dialogue systems and how they have been extended to LLM-based chatbots augmented by retrieval.\n\n\n\n\n\nThe construction of memory involves three distinct memory types: history-based memory, summary-based memory, and conditional memory, which is proposed in this paper.\nThe retrieval and use of memory records in response generation is achieved through a dense retrieval model and self-reflection mechanism for memory retrieval.\n\n\n\n\n\nThe paper constructs three test datasets to test the model’s abilities in learning from dialogue history, continuing previous dialogue, and learning from human feedback.\n\n\n\n\n\nThe experiment results show that conditional memory achieves the best performance among the three forms of memory.\nThe combination of conditional memory and summary-based memory can improve the performance of the model.\nThe self-reflection retrieval mechanism is effective, especially for summary-based memory, improving the accuracy of retrieved memory records.\n\n\n\n\n\nThe paper lacks a detailed discussion of the potential limitations and challenges of using conditional memory in real-world applications.\nThe study’s evaluation is limited to automated evaluations and may benefit from human evaluations to validate the practical utility of the proposed assistant."
+  },
+  {
+    "objectID": "posts/Evolving Large Language Model Assistant with Long-Term Conditional Memory/2023-12-22-Evolving Large Language Model Assistant with Long-Term Conditional Memory.html#appendix",
+    "href": "posts/Evolving Large Language Model Assistant with Long-Term Conditional Memory/2023-12-22-Evolving Large Language Model Assistant with Long-Term Conditional Memory.html#appendix",
+    "title": "Evolving Large Language Model Assistant with Long-Term Conditional Memory",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.17257v1\n\n\nTruncated\nFalse\n\n\nWord Count\n5215"
+  },
+  {
+    "objectID": "posts/Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs/2023-12-22-Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs.html",
+    "href": "posts/Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs/2023-12-22-Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs.html",
     "title": "Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs",
     "section": "",
     "text": "Large language models (LLMs) have the potential to provide explanations for recommendations, but existing models struggle to produce zero-shot explanations reliably due to lack of true personalization, transparency, and adaptability.\nThe paper proposes a framework called Logic-Scaffolding that addresses these challenges by combining aspect-based explanation and chain-of-thought prompting to generate explanations through intermediate reasoning steps.\nThe authors present an interactive demonstration to showcase the effectiveness of the Logic-Scaffolding framework in generating explanation for movie recommendations."
   },
   {
-    "objectID": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#appendix",
-    "href": "posts/Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs/2023-12-22-Logic-Scaffolding:_Personalized_Aspect-Instructed_Recommendation_Explanation_Generation_using_LLMs.html#appendix",
+    "objectID": "posts/Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs/2023-12-22-Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs.html#appendix",
+    "href": "posts/Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs/2023-12-22-Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs.html#appendix",
     "title": "Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs",
     "section": "Appendix",
     "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.14345v1\n\n\nTruncated\nFalse\n\n\nWord Count\n1744"
   },
   {
-    "objectID": "posts/Mitigating_Data_Injection_Attacks_on_Federated_Learning/2023-12-04-Mitigating_Data_Injection_Attacks_on_Federated_Learning.html",
-    "href": "posts/Mitigating_Data_Injection_Attacks_on_Federated_Learning/2023-12-04-Mitigating_Data_Injection_Attacks_on_Federated_Learning.html",
-    "title": "Mitigating Data Injection Attacks on Federated Learning",
+    "objectID": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html",
+    "href": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html",
+    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
     "section": "",
-    "text": "Federated Learning and Its Vulnerabilities: The paper highlights the concept of federated learning, where multiple entities collaboratively train models using their private data. It emphasizes that despite its advantages, federated learning is susceptible to data injection attacks, which can compromise the learning process and lead to a suboptimal model.\nDetection and Mitigation Technique: The paper proposes a novel local scheme for detecting and mitigating data injection attacks in federated learning systems. The technique involves comparing updates from participating agents and ignoring updates from suspicious agents. A threshold-based mechanism is employed for attacker localization and subsequent mitigation.\nSimulation Results: The paper presents simulation results showcasing the effectiveness of the proposed technique in detecting and mitigating data injection attacks. It demonstrates mitigating attacks such as constant-output attacks and label-flipping attacks, highlighting the ability of the algorithm to maintain convergence of the model to a truthful model."
+    "text": "The paper introduces RecRanker, a framework designed for using instruction-tuning large language models (LLMs) to serve as the ranker in top-k recommendations. The authors propose importance-aware sampling, a position-shifting strategy, and prompt enhancement from conventional recommendation models to improve the model’s performance. They also introduce a hybrid ranking method to combine different ranking tasks for better performance.\n\n\n\n\nHybrid Ranking Method: The hybrid ranking approach significantly enhances the model’s performance across diverse ranking tasks.\nAdaptive User Sampling: Adaptive user sampling greatly improves the quality and diversity of the dataset, leading to better model performance.\nPrompt Enhancement: Integrating signals from conventional recommendation models into prompts enhances the model’s understanding and reasoning capabilities.\n\n\n\n\n\nAdaptive User Sampling: The framework employs importance-aware sampling and clustering-based sampling to procure high-quality, representative, and diverse users for the dataset.\nPrompt Construction: The position shifting strategy and prompt enhancement improve the contextual understanding of the LLM. Signals from conventional recommender models are seamlessly incorporated into the prompt.\nOptimization via Instruction Tuning: The fine-tuning process involves optimizing the LLM using a dataset generated from instructional data to align the model responses with user intents and preferences.\nHybrid Ranking: A hybrid ranking method is introduced to amalgamate the outputs of different ranking tasks for more effective recommendations.\n\n\n\n\n\nThe proposed RecRanker outperforms the traditional recommendation models, especially for the BookCrossing dataset.\nAnalysis of hyper-parameters shows the significance of appropriate hyper-parameter selection in achieving optimal model performance.\nInstruction-tuned LLMs perform significantly better than the GPT-3.5 model in top-k recommendations.\n\n\n\n\nThe paper provides valuable insights and contributions to the field of recommendation systems. However, the study could have delved deeper into the computational resources and scalability issues associated with deploying LLMs for large-scale recommender systems. Additionally, further exploration of potential limitations or challenges associated with the proposed framework may have added depth to the paper.\nOverall, the RecRanker framework presents a promising approach to leveraging instruction-tuning LLMs for top-k recommendations, with empirical evaluations demonstrating its effectiveness.\n\n\n\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.16018v1\n\n\nTruncated\nFalse\n\n\nWord Count\n7669"
   },
   {
-    "objectID": "posts/Mitigating_Data_Injection_Attacks_on_Federated_Learning/2023-12-04-Mitigating_Data_Injection_Attacks_on_Federated_Learning.html#appendix",
-    "href": "posts/Mitigating_Data_Injection_Attacks_on_Federated_Learning/2023-12-04-Mitigating_Data_Injection_Attacks_on_Federated_Learning.html#appendix",
-    "title": "Mitigating Data Injection Attacks on Federated Learning",
+    "objectID": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#abstract",
+    "href": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#abstract",
+    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
+    "section": "",
+    "text": "The paper introduces RecRanker, a framework designed for using instruction-tuning large language models (LLMs) to serve as the ranker in top-k recommendations. The authors propose importance-aware sampling, a position-shifting strategy, and prompt enhancement from conventional recommendation models to improve the model’s performance. They also introduce a hybrid ranking method to combine different ranking tasks for better performance."
+  },
+  {
+    "objectID": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#main-findings",
+    "href": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#main-findings",
+    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
+    "section": "",
+    "text": "Hybrid Ranking Method: The hybrid ranking approach significantly enhances the model’s performance across diverse ranking tasks.\nAdaptive User Sampling: Adaptive user sampling greatly improves the quality and diversity of the dataset, leading to better model performance.\nPrompt Enhancement: Integrating signals from conventional recommendation models into prompts enhances the model’s understanding and reasoning capabilities."
+  },
+  {
+    "objectID": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#methodology",
+    "href": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#methodology",
+    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
+    "section": "",
+    "text": "Adaptive User Sampling: The framework employs importance-aware sampling and clustering-based sampling to procure high-quality, representative, and diverse users for the dataset.\nPrompt Construction: The position shifting strategy and prompt enhancement improve the contextual understanding of the LLM. Signals from conventional recommender models are seamlessly incorporated into the prompt.\nOptimization via Instruction Tuning: The fine-tuning process involves optimizing the LLM using a dataset generated from instructional data to align the model responses with user intents and preferences.\nHybrid Ranking: A hybrid ranking method is introduced to amalgamate the outputs of different ranking tasks for more effective recommendations."
+  },
+  {
+    "objectID": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#experimental-results",
+    "href": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#experimental-results",
+    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
+    "section": "",
+    "text": "The proposed RecRanker outperforms the traditional recommendation models, especially for the BookCrossing dataset.\nAnalysis of hyper-parameters shows the significance of appropriate hyper-parameter selection in achieving optimal model performance.\nInstruction-tuned LLMs perform significantly better than the GPT-3.5 model in top-k recommendations."
+  },
+  {
+    "objectID": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#critique",
+    "href": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#critique",
+    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
+    "section": "",
+    "text": "The paper provides valuable insights and contributions to the field of recommendation systems. However, the study could have delved deeper into the computational resources and scalability issues associated with deploying LLMs for large-scale recommender systems. Additionally, further exploration of potential limitations or challenges associated with the proposed framework may have added depth to the paper.\nOverall, the RecRanker framework presents a promising approach to leveraging instruction-tuning LLMs for top-k recommendations, with empirical evaluations demonstrating its effectiveness."
+  },
+  {
+    "objectID": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#appendix",
+    "href": "posts/RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation/2023-12-26-RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation.html#appendix",
+    "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation",
+    "section": "",
+    "text": "Link\nhttps://browse.arxiv.org/html/2312.16018v1\n\n\nTruncated\nFalse\n\n\nWord Count\n7669"
+  },
+  {
+    "objectID": "posts/Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales/2023-12-12-Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales.html",
+    "href": "posts/Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales/2023-12-12-Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales.html",
+    "title": "Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales",
+    "section": "",
+    "text": "The paper presents a “reasoning-aware” diagnosis framework using large language models (LLMs) to rationalize the diagnostic process via prompt-based learning in a time- and labor-efficient manner.\nIt addresses the clinical reasoning for disease diagnosis, demonstrating LLMs’ ability of clinical reasoning through extensive experiments and analyses on both rationale generation and disease diagnosis in various settings.\nThe framework involves clinical rationalization, few-shot reasoning and diagnosis with LLMs, and knowledge distillation towards smaller models."
+  },
+  {
+    "objectID": "posts/Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales/2023-12-12-Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales.html#appendix-1",
+    "href": "posts/Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales/2023-12-12-Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales.html#appendix-1",
+    "title": "Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales",
     "section": "Appendix",
-    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.02102v2\n\n\nTruncated\nFalse\n\n\nWord Count\n3631"
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.07399v1\n\n\nTruncated\nFalse\n\n\nWord Count\n5596"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Bayesian beagle",
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
     "section": "",
-    "text": "I’m a Bayesian beagle who has curated reading though LLM generation."
+    "text": "Large language models (LLMs) demonstrate inflated performance in zero-shot or few-shot evaluation due to task contamination.\nClosed-source models may not be trustworthy baselines in these settings, especially those including instruction fine-tuning or reinforcement learning with human feedback (RLHF).\nModels show little to no statistically significant improvements over majority baselines for tasks without demonstrated possibility of task contamination.\n\n\n\n\nLarge language models (LLMs), such as GPT-3 series models, have garnered attention for their impressive performance in zero-shot and few-shot settings. However, concerns about data contamination have been raised, particularly related to task contamination – the inclusion of task training examples in the pre-training data, thereby affecting the zero-shot and few-shot performance.\n\n\n\n\nFour methods of measuring task contamination:\n\nTraining data inspection: Search through the training data to find task training examples.\nTask example extraction: Extract task examples from an existing model.\nMembership inference: Check if the model generated content for an input instance exactly matches the original dataset.\nChronological analysis: Measure performance on a dataset with a known release date and check for evidence of contamination.\n\n\n\n\n\n\nExperimented with 12 models, including both proprietary GPT-3 series models and open models with free access to their weights.\nDatasets were divided into pre-2021 and post-2021 categories for analyzing zero-shot or few-shot performance difference.\n\n\n\n\n\nAnalyzed performance on datasets released before and after the model training data collection date.\nGPT-3 series models demonstrated a significant increase in performance on earlier datasets, indicating possible task contamination.\n\n\n\n\n\nConducted on two instruction fine-tuned open LLMs (Alpaca and Vicuna) for various classification tasks.\nPerformance improved for models with more task-specific training examples, indicating contaminated performance.\n\n\n\n\n\nAttempted to extract task examples from the LLM.\nGPT-3 series models, starting from davinci-001, were able to generate task-specific training examples, providing evidence of task contamination.\n\n\n\n\n\nRarely show statistically significant improvements over majority baselines for tasks without demonstrated possibility of task contamination.\n\n\n\n\n\nStrongly indicates increased contamination is related to increased performance for the semantic parsing task.\n\n\n\n\n\nLow recall for methods detecting task contamination.\nDifficulty in analyzing task contamination especially for models without instruction tuning.\n\nIn conclusion, the paper reveals evidence of task contamination for LLMs and recommends additional research on this issue.\n\n\n\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.16337v1\n\n\nTruncated\nFalse\n\n\nWord Count\n5492"
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#major-findings",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#major-findings",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Large language models (LLMs) demonstrate inflated performance in zero-shot or few-shot evaluation due to task contamination.\nClosed-source models may not be trustworthy baselines in these settings, especially those including instruction fine-tuning or reinforcement learning with human feedback (RLHF).\nModels show little to no statistically significant improvements over majority baselines for tasks without demonstrated possibility of task contamination."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#introduction",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#introduction",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Large language models (LLMs), such as GPT-3 series models, have garnered attention for their impressive performance in zero-shot and few-shot settings. However, concerns about data contamination have been raised, particularly related to task contamination – the inclusion of task training examples in the pre-training data, thereby affecting the zero-shot and few-shot performance."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#overview",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#overview",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Four methods of measuring task contamination:\n\nTraining data inspection: Search through the training data to find task training examples.\nTask example extraction: Extract task examples from an existing model.\nMembership inference: Check if the model generated content for an input instance exactly matches the original dataset.\nChronological analysis: Measure performance on a dataset with a known release date and check for evidence of contamination."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#models-and-datasets",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#models-and-datasets",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Experimented with 12 models, including both proprietary GPT-3 series models and open models with free access to their weights.\nDatasets were divided into pre-2021 and post-2021 categories for analyzing zero-shot or few-shot performance difference."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#chronological-analysis",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#chronological-analysis",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Analyzed performance on datasets released before and after the model training data collection date.\nGPT-3 series models demonstrated a significant increase in performance on earlier datasets, indicating possible task contamination."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#training-data-inspection",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#training-data-inspection",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Conducted on two instruction fine-tuned open LLMs (Alpaca and Vicuna) for various classification tasks.\nPerformance improved for models with more task-specific training examples, indicating contaminated performance."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#task-example-extraction",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#task-example-extraction",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Attempted to extract task examples from the LLM.\nGPT-3 series models, starting from davinci-001, were able to generate task-specific training examples, providing evidence of task contamination."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#llm-performance-on-tasks-with-no-contamination",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#llm-performance-on-tasks-with-no-contamination",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Rarely show statistically significant improvements over majority baselines for tasks without demonstrated possibility of task contamination."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#membership-inference",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#membership-inference",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Strongly indicates increased contamination is related to increased performance for the semantic parsing task."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#critique",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#critique",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Low recall for methods detecting task contamination.\nDifficulty in analyzing task contamination especially for models without instruction tuning.\n\nIn conclusion, the paper reveals evidence of task contamination for LLMs and recommends additional research on this issue."
+  },
+  {
+    "objectID": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#appendix",
+    "href": "posts/Task Contamination: Language Models May Not Be Few-Shot Anymore/2023-12-26-Task Contamination: Language Models May Not Be Few-Shot Anymore.html#appendix",
+    "title": "Task Contamination: Language Models May Not Be Few-Shot Anymore",
+    "section": "",
+    "text": "Link\nhttps://browse.arxiv.org/html/2312.16337v1\n\n\nTruncated\nFalse\n\n\nWord Count\n5492"
+  },
+  {
+    "objectID": "posts/Large Language Models are Not Stable Recommender Systems/2023-12-25-Large Language Models are Not Stable Recommender Systems.html",
+    "href": "posts/Large Language Models are Not Stable Recommender Systems/2023-12-25-Large Language Models are Not Stable Recommender Systems.html",
+    "title": "Large Language Models are Not Stable Recommender Systems",
+    "section": "",
+    "text": "Positional Bias in LLMs: The study identifies consistent patterns of positional bias in large language models (LLMs) when used as recommender systems, leading to unstable recommendation results that are sensitive to the order of input candidate items.\nSTELLA Framework: The paper proposes the STELLA (Stable LLM for Recommendation) framework, which involves a two-stage pipeline for using LLMs as recommender systems. It employs a probing stage to identify bias patterns and a recommendation stage using a Bayesian updating strategy to calibrate biased output and enhance recommendation performance.\nEffectiveness of STELLA: Extensive experiments validate the effectiveness of the STELLA framework, significantly reducing variance and improving overall recommendation performance of LLMs."
+  },
+  {
+    "objectID": "posts/Large Language Models are Not Stable Recommender Systems/2023-12-25-Large Language Models are Not Stable Recommender Systems.html#appendix",
+    "href": "posts/Large Language Models are Not Stable Recommender Systems/2023-12-25-Large Language Models are Not Stable Recommender Systems.html#appendix",
+    "title": "Large Language Models are Not Stable Recommender Systems",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.15746v1\n\n\nTruncated\nFalse\n\n\nWord Count\n4797"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ryan’s LLM Blog 🤖",
     "section": "",
-    "text": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation\n\n\n\nprompt engineering\n\n\n\nLarge language models (LLMs) are being used for recommender systems, but current research overlooks integrating multiple ranking tasks. RecRanker aims to enhance LLM…\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Persuasive Power of Large Language Models\n\n\n\nhci\n\n\n\nLarge Language Models can generate effective arguments and interact with each other in opinion dynamics, suggesting potential impact on online discourse.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLogic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs\n\n\n\nhci\n\n\nprompt engineering\n\n\n\nLarge Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 22, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContext-aware Decoding Reduces Hallucination in Query-focused Summarization\n\n\n\nrobustness\n\n\n\nQuery-focused summarization explores methods like Context-aware Decoding to improve summarization quality without generating false information.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndroid dialogue system for customer service using prompt-based topic control and compliments generation\n\n\n\nhci\n\n\nprompt engineering\n\n\n\nA dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBypassing the Safety Training of Open-Source LLMs with Priming Attacks\n\n\n\nsecurity\n\n\nopen-source\n\n\n\nLLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 19, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements\n\n\n\nprompt engineering\n\n\nprogramming\n\n\n\nProgrammers should clarify function purposes using a heuristic, comparing it with GitHub Copilot’s Chat, and providing an open-source implementation.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrompting LLMs with content plans to enhance the summarization of scientific articles\n\n\n\nprompt engineering\n\n\n\nNovel prompting techniques improve scientific article summarization, providing key terms to guide summarization systems for better performance.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLarge Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales\n\n\n\nprompt engineering\n\n\n\nNLP-driven clinical reasoning framework improves disease diagnosis through efficient rationale generation and evaluation, benefiting future research.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization\n\n\n\nhci\n\n\nprogramming\n\n\n\nGPT-4 can optimize code efficiency, but human input is essential and more study is needed.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 8, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMitigating Data Injection Attacks on Federated Learning\n\n\n\nsecurity\n\n\n\nTL;DR: Proposed technique detects and mitigates false data injection attacks in federated learning systems to ensure model accuracy.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 4, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Action-Item-Driven Summarization of Long Meeting Transcripts\n\n\n\nprompt engineering\n\n\n\nNovel approach automates abstractive meeting summaries from transcript action items, achieving improved results over current models.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrincipled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4\n\n\n\nprompt engineering\n\n\n\n26 principles simplify querying large language models, with a focus on understanding and enhancing user comprehension. Experiments validate the effectiveness on various…\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTask Contamination: Language Models May Not Be Few-Shot Anymore\n\n\n\nprompt engineering\n\n\n\nLarge language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task…\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation\n\n\n\nprompt engineering\n\n\n\nLarge language models (LLMs) are being used for recommender systems, but current research overlooks integrating multiple ranking tasks. RecRanker aims to enhance LLM…\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKnowledge Distillation of LLM for Education\n\n\n\neducation\n\n\n\nMethod proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in…\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSupervised Knowledge Makes Large Language Models Better In-context Learners\n\n\n\nprompt engineering\n\n\n\nLLMs improve in-context learning with task-specific fine-tuned models, enhancing generalizability and factuality in language applications.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLarge Language Models are Not Stable Recommender Systems\n\n\n\nrecommender\n\n\n\nLLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 25, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnlocking the Potential of Large Language Models for Explainable Recommendations\n\n\n\nrecommender\n\n\n\nRecommendation explanations benefit from integration of large language models in LLMXRec, providing quality and effectiveness.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 25, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlleviating Hallucinations of Large Language Models through Induced Hallucinations\n\n\n\nrobustness\n\n\n\nICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 25, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Persuasive Power of Large Language Models\n\n\n\nhci\n\n\n\nLarge Language Models can generate effective arguments and interact with each other in opinion dynamics, suggesting potential impact on online discourse.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLogic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs\n\n\n\nhci\n\n\nprompt engineering\n\n\n\nLarge Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 22, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvolving Large Language Model Assistant with Long-Term Conditional Memory\n\n\n\nrobustness\n\n\n\nAI assistant ChatGPT uses verbal long-term memory to improve responses, tested on different datasets.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 22, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContext-aware Decoding Reduces Hallucination in Query-focused Summarization\n\n\n\nrobustness\n\n\n\nQuery-focused summarization explores methods like Context-aware Decoding to improve summarization quality without generating false information.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndroid dialogue system for customer service using prompt-based topic control and compliments generation\n\n\n\nhci\n\n\nprompt engineering\n\n\n\nA dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBypassing the Safety Training of Open-Source LLMs with Priming Attacks\n\n\n\nsecurity\n\n\nopen-source\n\n\n\nLLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 19, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrompting LLMs with content plans to enhance the summarization of scientific articles\n\n\n\nprompt engineering\n\n\n\nNovel prompting techniques improve scientific article summarization, providing key terms to guide summarization systems for better performance.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements\n\n\n\nprompt engineering\n\n\nprogramming\n\n\n\nProgrammers should clarify function purposes using a heuristic, comparing it with GitHub Copilot’s Chat, and providing an open-source implementation.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLarge Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales\n\n\n\nprompt engineering\n\n\n\nNLP-driven clinical reasoning framework improves disease diagnosis through efficient rationale generation and evaluation, benefiting future research.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization\n\n\n\nhci\n\n\nprogramming\n\n\n\nGPT-4 can optimize code efficiency, but human input is essential and more study is needed.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 8, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMitigating Data Injection Attacks on Federated Learning\n\n\n\nsecurity\n\n\n\nTL;DR: Proposed technique detects and mitigates false data injection attacks in federated learning systems to ensure model accuracy.\n\n\n\ngpt-3.5-turbo-1106\n\n\nDec 4, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html",
-    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Bayesian beagle",
+    "section": "",
+    "text": "I’m a Bayesian beagle who has curated a LLM-summarized articles on LLMs."
+  },
+  {
+    "objectID": "posts/Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4/2023-12-26-Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4.html",
+    "href": "posts/Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4/2023-12-26-Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4.html",
+    "title": "Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4",
+    "section": "",
+    "text": "This paper introduces 26 principled instructions for querying and prompting large language models to streamline the process and enhance user comprehension.\nThe authors show that larger models possess a considerable capacity for simulation, and the more precise the task or directive provided, the more effectively the model performs.\nThe paper presents comprehensive experiments and results that demonstrate the effectiveness of the proposed principles in improving the quality, accuracy, and complexity of responses from large language models."
+  },
+  {
+    "objectID": "posts/Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4/2023-12-26-Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4.html#appendix",
+    "href": "posts/Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4/2023-12-26-Principled Instructions Are All You Need for Questioning LLaMA-1_2, GPT-3.5_4.html#appendix",
+    "title": "Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.16171v1\n\n\nTruncated\nFalse\n\n\nWord Count\n3023"
+  },
+  {
+    "objectID": "posts/Prompting LLMs with content plans to enhance the summarization of scientific articles/2023-12-13-Prompting LLMs with content plans to enhance the summarization of scientific articles.html",
+    "href": "posts/Prompting LLMs with content plans to enhance the summarization of scientific articles/2023-12-13-Prompting LLMs with content plans to enhance the summarization of scientific articles.html",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "Scientific Summarization Challenge: Summarizing scientific articles presents unique challenges, given their length, complexity, and irregular organizational structures, making it a remarkably challenging domain within automatic text summarization.\nProposed Prompting Techniques: The study proposes novel prompting techniques to provide contextual information to aid scientific summarization systems, yielding consistent performance gains, especially for smaller models summarizing sections separately.\nImplications and Future Directions: The study suggests that smaller summarization models benefit from prompts and provides opportunities for further research in exploring different prompt generation techniques and attention mechanisms.\n\n\n\n\n\nAutomatic text summarization aims to produce shortened versions of documents while retaining relevant information.\nScientific article summarization is especially challenging due to their length, complexity, and irregular organizational structures.\n\n\n\n\n\nPrior work heavily relied on extractive methods but has shifted towards abstractive methods using neural network architectures, motivating the study’s focus on enhancing abstractive scientific summarizers based on transformer models.\n\n\n\n\n\nPrompting Technique Dimension: The study compares approaches for generating prompts, providing lists of salient terms through unsupervised extraction from input texts and evaluates five distinct prompting techniques.\nModel Dimension: The study integrates prompting techniques with a range of current state-of-the-art transformer models for scientific summarization.\nInput Text Dimension: The study explores different text input conditions for summarization, including I+D (concatenation of introduction and discussion texts), S-n/a (summarizing sections separately), and S-w/a (similar to S-n/a, with added section type identifiers).\n\n\n\n\n\nConsistent ROUGE improvements were observed in smaller models, especially when summarizing sections independently, suggesting that supplied terms offer valuable global context.\nSmaller models showed significant declines in quality when exposed to unrelated prompts in confusion testing, indicating active utilization of supplied informative terms.\nNo single prompting technique consistently outperformed across all settings, suggesting that the optimal selection depends on specific architectures and tasks.\n\n\n\n\n\nThe findings indicate that focused local contexts derive the greatest benefit from global information provided through prompts.\nThe ETC attention mechanism shows advancements compared to sliding window attention, highlighting the importance of adopting an attention architecture that ensures continuous access to the instruction throughout the summarization process.\n\n\n\n\n\nOpportunities for future research include exploring additional prompting techniques, investigating automatic entity prompt generation, and adapting global attention to directly focus on prompt token positions to enhance prompt utilization.\n\n\n\n\n\nThe study introduces prompting as a technique to enhance scientific summarization systems and demonstrates particular utility for improving fundamental deficiencies of smaller models in appropriate contexts, providing implications for resource-limited applications."
+  },
+  {
+    "objectID": "posts/Prompting LLMs with content plans to enhance the summarization of scientific articles/2023-12-13-Prompting LLMs with content plans to enhance the summarization of scientific articles.html#summary",
+    "href": "posts/Prompting LLMs with content plans to enhance the summarization of scientific articles/2023-12-13-Prompting LLMs with content plans to enhance the summarization of scientific articles.html#summary",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "",
+    "text": "Scientific Summarization Challenge: Summarizing scientific articles presents unique challenges, given their length, complexity, and irregular organizational structures, making it a remarkably challenging domain within automatic text summarization.\nProposed Prompting Techniques: The study proposes novel prompting techniques to provide contextual information to aid scientific summarization systems, yielding consistent performance gains, especially for smaller models summarizing sections separately.\nImplications and Future Directions: The study suggests that smaller summarization models benefit from prompts and provides opportunities for further research in exploring different prompt generation techniques and attention mechanisms.\n\n\n\n\n\nAutomatic text summarization aims to produce shortened versions of documents while retaining relevant information.\nScientific article summarization is especially challenging due to their length, complexity, and irregular organizational structures.\n\n\n\n\n\nPrior work heavily relied on extractive methods but has shifted towards abstractive methods using neural network architectures, motivating the study’s focus on enhancing abstractive scientific summarizers based on transformer models.\n\n\n\n\n\nPrompting Technique Dimension: The study compares approaches for generating prompts, providing lists of salient terms through unsupervised extraction from input texts and evaluates five distinct prompting techniques.\nModel Dimension: The study integrates prompting techniques with a range of current state-of-the-art transformer models for scientific summarization.\nInput Text Dimension: The study explores different text input conditions for summarization, including I+D (concatenation of introduction and discussion texts), S-n/a (summarizing sections separately), and S-w/a (similar to S-n/a, with added section type identifiers).\n\n\n\n\n\nConsistent ROUGE improvements were observed in smaller models, especially when summarizing sections independently, suggesting that supplied terms offer valuable global context.\nSmaller models showed significant declines in quality when exposed to unrelated prompts in confusion testing, indicating active utilization of supplied informative terms.\nNo single prompting technique consistently outperformed across all settings, suggesting that the optimal selection depends on specific architectures and tasks.\n\n\n\n\n\nThe findings indicate that focused local contexts derive the greatest benefit from global information provided through prompts.\nThe ETC attention mechanism shows advancements compared to sliding window attention, highlighting the importance of adopting an attention architecture that ensures continuous access to the instruction throughout the summarization process.\n\n\n\n\n\nOpportunities for future research include exploring additional prompting techniques, investigating automatic entity prompt generation, and adapting global attention to directly focus on prompt token positions to enhance prompt utilization.\n\n\n\n\n\nThe study introduces prompting as a technique to enhance scientific summarization systems and demonstrates particular utility for improving fundamental deficiencies of smaller models in appropriate contexts, providing implications for resource-limited applications."
+  },
+  {
+    "objectID": "posts/Prompting LLMs with content plans to enhance the summarization of scientific articles/2023-12-13-Prompting LLMs with content plans to enhance the summarization of scientific articles.html#appendix",
+    "href": "posts/Prompting LLMs with content plans to enhance the summarization of scientific articles/2023-12-13-Prompting LLMs with content plans to enhance the summarization of scientific articles.html#appendix",
+    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.08282v2\n\n\nTruncated\nFalse\n\n\nWord Count\n4878"
+  },
+  {
+    "objectID": "posts/GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements/2023-12-13-GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements.html",
+    "href": "posts/GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements/2023-12-13-GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements.html",
+    "title": "GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements",
+    "section": "",
+    "text": "GuardRails is a novel heuristic that leverages Large Language Models (LLMs) to suggest inputs for ambiguous purpose statements, aiding programmers in clarifying the intended behavior of functions.\nGuardRails compares favorably against GitHub Copilot’s Chat feature in identifying potential ambiguities in purpose statements, explicitly highlighting ambiguous inputs and outperforming Copilot Chat in several cases.\nThe tool has the potential to be especially helpful for novice programmers and instructors, aiding in the identification and clarification of ambiguities in purpose statements."
+  },
+  {
+    "objectID": "posts/GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements/2023-12-13-GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements.html#appendix",
+    "href": "posts/GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements/2023-12-13-GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements.html#appendix",
+    "title": "GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.08189v1\n\n\nTruncated\nFalse\n\n\nWord Count\n3094"
+  },
+  {
+    "objectID": "posts/The Persuasive Power of Large Language Models/2023-12-24-The Persuasive Power of Large Language Models.html",
+    "href": "posts/The Persuasive Power of Large Language Models/2023-12-24-The Persuasive Power of Large Language Models.html",
     "title": "The Persuasive Power of Large Language Models",
     "section": "",
     "text": "Takeaways - Large Language Models (LLMs) are increasingly capable of emulating social agents and engaging in complex interactions, raising concerns about potential implications for online discourse. - In a study on climate change persuasion, LLMs demonstrated the ability to generate effective arguments, incorporating dimensions of social pragmatics that influence opinion change. - While arguments that conveyed knowledge, trust, status, and support were perceived as most effective by both LLM agents and human judges, humans showed a disproportionate preference for knowledge-based arguments."
   },
   {
-    "objectID": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#appendix",
-    "href": "posts/The_Persuasive_Power_of_Large_Language_Models/2023-12-24-The_Persuasive_Power_of_Large_Language_Models.html#appendix",
+    "objectID": "posts/The Persuasive Power of Large Language Models/2023-12-24-The Persuasive Power of Large Language Models.html#appendix",
+    "href": "posts/The Persuasive Power of Large Language Models/2023-12-24-The Persuasive Power of Large Language Models.html#appendix",
     "title": "The Persuasive Power of Large Language Models",
     "section": "Appendix",
     "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.15523v1\n\n\nTruncated\nFalse\n\n\nWord Count\n5448"
   },
   {
-    "objectID": "posts/Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales/2023-12-12-Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales.html",
-    "href": "posts/Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales/2023-12-12-Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales.html",
-    "title": "Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales",
+    "objectID": "posts/Context-aware Decoding Reduces Hallucination in Query-focused Summarization/2023-12-21-Context-aware Decoding Reduces Hallucination in Query-focused Summarization.html",
+    "href": "posts/Context-aware Decoding Reduces Hallucination in Query-focused Summarization/2023-12-21-Context-aware Decoding Reduces Hallucination in Query-focused Summarization.html",
+    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
     "section": "",
-    "text": "The paper presents a “reasoning-aware” diagnosis framework using large language models (LLMs) to rationalize the diagnostic process via prompt-based learning in a time- and labor-efficient manner.\nIt addresses the clinical reasoning for disease diagnosis, demonstrating LLMs’ ability of clinical reasoning through extensive experiments and analyses on both rationale generation and disease diagnosis in various settings.\nThe framework involves clinical rationalization, few-shot reasoning and diagnosis with LLMs, and knowledge distillation towards smaller models."
+    "text": "Context-aware Decoding (CAD) is a decoding method that reduces factual mistakes/hallucinations while mostly retaining the match of lexical patterns in query-focused summarization (QFS) datasets.\nThe study demonstrates that CAD can improve news summarization quality and reduce hallucination/factuality errors in QFS.\nDespite the benefits, CAD also introduces additional inference-time FLOPs and potentially slows down decoding speed, and the choice of hyperparameter α affects the performance."
   },
   {
-    "objectID": "posts/Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales/2023-12-12-Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales.html#appendix-1",
-    "href": "posts/Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales/2023-12-12-Large_Language_Models_are_Clinical_Reasoners:_Reasoning-Aware_Diagnosis_Framework_with_Prompt-Generated_Rationales.html#appendix-1",
-    "title": "Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales",
+    "objectID": "posts/Context-aware Decoding Reduces Hallucination in Query-focused Summarization/2023-12-21-Context-aware Decoding Reduces Hallucination in Query-focused Summarization.html#appendix",
+    "href": "posts/Context-aware Decoding Reduces Hallucination in Query-focused Summarization/2023-12-21-Context-aware Decoding Reduces Hallucination in Query-focused Summarization.html#appendix",
+    "title": "Context-aware Decoding Reduces Hallucination in Query-focused Summarization",
     "section": "Appendix",
-    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.07399v1\n\n\nTruncated\nFalse\n\n\nWord Count\n5596"
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.14335v1\n\n\nTruncated\nFalse\n\n\nWord Count\n2884"
   },
   {
-    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html",
-    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html",
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "The study proposes a method for distilling the knowledge of fine-tuned Large Language Models (LLMs) into smaller, more efficient, and accurate neural networks for deployment in resource-constrained educational environments.\nThe knowledge transfer is achieved through a specialized loss function tailored to learn from the LLM’s output probabilities, ensuring that the student model closely mimics the teacher’s performance.\nResults demonstrate that the distilled student models have comparable accuracy to the teacher model for the 7T dataset, and significantly higher accuracy than original neural network models for other datasets.\n\n\n\n\nThe use of Large Language Models (LLMs) in education, particularly for automatic scoring, is discussed, highlighting their potential impact on classroom assessment practices and adaptive learning systems. The deployment of these models in educational settings is constrained by their considerable size and computational requirements, which presents a challenge for widespread adoption in resource-constrained educational environments.\n\n\n\n\n\n\nStudies have focused on fine-tuning LLMs for automatic scoring applications, demonstrating their potential in evaluating student responses with high accuracy.\nThe deployment of sophisticated LLMs in practical educational settings presents considerable challenges, leading to the proposal of various approaches to address these challenges.\n\n\n\n\n\nKD has emerged as a pivotal technique in harnessing the power of LLMs for practical applications, particularly in fields with limited computational resources.\nChallenges and advancements in KD for text classification and contextual pre-training language models for specific applications are discussed.\n\n\n\n\n\n\n\n\nA detailed explanation of the methodology used for classification tasks is provided. ### Proposed KD\nThe study proposes a method for knowledge distillation and presents a detailed algorithm for the KD process.\n\n\n\n\n\n\n\n\nThe dataset utilized and the dataset preprocessing methods are described for each assessment item included in the study. ### Training Scheme\nThe architecture and optimization approach for the student models are described for each dataset. ### Evaluation and Validation\nThe partitioning of datasets and model optimization strategy are detailed.\n\n\n\n\n\n\nThe comparative analysis of model accuracy across four datasets is presented, showcasing the efficacy of KD in enhancing the performance of student models.\nThe effect of KD compared to conventional neural network training approaches varies across datasets, with KD successfully improving the performance of student models.\n\n\n\n\n\n\n\nKD is discussed as a breakthrough in creating accurate and productive automatic scoring systems, suitable for integrating tablet- and smartphone-based learning apps. ### Limitations of KD in Education\nThe limitations of KD, such as falling short of the teacher model’s accuracy, are highlighted, as well as the need for representative and extensive datasets for training the teacher model. ### Future Directions\nPotential future research directions in the application of KD in education are outlined, including soft label processing and expanding application areas.\n\n\n\n\n\n\nThe study effectively illustrates how KD can be used to optimize LLMs for usage in instructional technology, particularly on low-processor devices, and lays the foundation for future developments in the field.\n\n\n\n\nThe paper effectively presents the methodology and results of the study and provides valuable insights into the potential applications and limitations of knowledge distillation in the context of educational technology. One potential critique is the need for further discussion on the ethical implications and biases associated with the application of KD in educational settings. Additionally, the authors could further elaborate on the scalability and generalizability of the proposed approach across diverse educational contexts.\n\n\n\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.15842v1\n\n\nTruncated\nFalse\n\n\nWord Count\n5073"
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#major-takeaways",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#major-takeaways",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "The study proposes a method for distilling the knowledge of fine-tuned Large Language Models (LLMs) into smaller, more efficient, and accurate neural networks for deployment in resource-constrained educational environments.\nThe knowledge transfer is achieved through a specialized loss function tailored to learn from the LLM’s output probabilities, ensuring that the student model closely mimics the teacher’s performance.\nResults demonstrate that the distilled student models have comparable accuracy to the teacher model for the 7T dataset, and significantly higher accuracy than original neural network models for other datasets."
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#introduction",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#introduction",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "The use of Large Language Models (LLMs) in education, particularly for automatic scoring, is discussed, highlighting their potential impact on classroom assessment practices and adaptive learning systems. The deployment of these models in educational settings is constrained by their considerable size and computational requirements, which presents a challenge for widespread adoption in resource-constrained educational environments."
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#background",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#background",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "Studies have focused on fine-tuning LLMs for automatic scoring applications, demonstrating their potential in evaluating student responses with high accuracy.\nThe deployment of sophisticated LLMs in practical educational settings presents considerable challenges, leading to the proposal of various approaches to address these challenges.\n\n\n\n\n\nKD has emerged as a pivotal technique in harnessing the power of LLMs for practical applications, particularly in fields with limited computational resources.\nChallenges and advancements in KD for text classification and contextual pre-training language models for specific applications are discussed."
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#methodology",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#methodology",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "A detailed explanation of the methodology used for classification tasks is provided. ### Proposed KD\nThe study proposes a method for knowledge distillation and presents a detailed algorithm for the KD process."
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#experimental-setup",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#experimental-setup",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "The dataset utilized and the dataset preprocessing methods are described for each assessment item included in the study. ### Training Scheme\nThe architecture and optimization approach for the student models are described for each dataset. ### Evaluation and Validation\nThe partitioning of datasets and model optimization strategy are detailed."
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#results",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#results",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "The comparative analysis of model accuracy across four datasets is presented, showcasing the efficacy of KD in enhancing the performance of student models.\nThe effect of KD compared to conventional neural network training approaches varies across datasets, with KD successfully improving the performance of student models."
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#discussion",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#discussion",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "KD is discussed as a breakthrough in creating accurate and productive automatic scoring systems, suitable for integrating tablet- and smartphone-based learning apps. ### Limitations of KD in Education\nThe limitations of KD, such as falling short of the teacher model’s accuracy, are highlighted, as well as the need for representative and extensive datasets for training the teacher model. ### Future Directions\nPotential future research directions in the application of KD in education are outlined, including soft label processing and expanding application areas."
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#conclusion",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#conclusion",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "The study effectively illustrates how KD can be used to optimize LLMs for usage in instructional technology, particularly on low-processor devices, and lays the foundation for future developments in the field."
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#critique",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#critique",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "The paper effectively presents the methodology and results of the study and provides valuable insights into the potential applications and limitations of knowledge distillation in the context of educational technology. One potential critique is the need for further discussion on the ethical implications and biases associated with the application of KD in educational settings. Additionally, the authors could further elaborate on the scalability and generalizability of the proposed approach across diverse educational contexts."
+  },
+  {
+    "objectID": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#appendix",
+    "href": "posts/Knowledge Distillation of LLM for Education/2023-12-26-Knowledge Distillation of LLM for Education.html#appendix",
+    "title": "Knowledge Distillation of LLM for Education",
+    "section": "",
+    "text": "Link\nhttps://browse.arxiv.org/html/2312.15842v1\n\n\nTruncated\nFalse\n\n\nWord Count\n5073"
+  },
+  {
+    "objectID": "posts/LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization/2023-12-08-LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization.html",
+    "href": "posts/LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization/2023-12-08-LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization.html",
     "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
     "section": "",
     "text": "LLMs for Code Optimization: The study showcases the efficacy of Large Language Models (LLMs) in optimizing open-source Python libraries by collaborating with human experts. The results demonstrate substantial performance improvements across multiple case studies.\nHuman Expert in the Loop: The paper highlights the essential role of human expertise in guiding LLMs to achieve effective solutions, often with fewer iterations than anticipated. The interactive collaboration of human and LLMs leads to significant performance improvements in the optimized code.\nPromising Tool for Code Optimization: The findings indicate a strong potential for the practical utility of LLMs in code optimization in open-source libraries, emphasizing their collaborative dynamics with human experts."
   },
   {
-    "objectID": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#appendix",
-    "href": "posts/LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization/2023-12-08-LLM_Interactive_Optimization_of_Open_Source_Python_Libraries_--_Case_Studies_and_Generalization.html#appendix",
+    "objectID": "posts/LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization/2023-12-08-LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization.html#appendix",
+    "href": "posts/LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization/2023-12-08-LLM Interactive Optimization of Open Source Python Libraries -- Case Studies and Generalization.html#appendix",
     "title": "LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization",
     "section": "Appendix",
     "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.14949v1\n\n\nTruncated\nFalse\n\n\nWord Count\n10353"
   },
   {
-    "objectID": "posts/Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks/2023-12-19-Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks.html",
-    "href": "posts/Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks/2023-12-19-Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks.html",
-    "title": "Bypassing the Safety Training of Open-Source LLMs with Priming Attacks",
+    "objectID": "posts/Unlocking the Potential of Large Language Models for Explainable Recommendations/2023-12-25-Unlocking the Potential of Large Language Models for Explainable Recommendations.html",
+    "href": "posts/Unlocking the Potential of Large Language Models for Explainable Recommendations/2023-12-25-Unlocking the Potential of Large Language Models for Explainable Recommendations.html",
+    "title": "Unlocking the Potential of Large Language Models for Explainable Recommendations",
     "section": "",
-    "text": "Priming attacks are shown to be effective in bypassing safety training for open-source Large Language Models (LLMs), resulting in a significant increase in the Attack Success Rate on Harmful Behaviors.\nThe study highlights the ease with which adversaries can coerce open-source LLMs to comply with harmful requests, undermining the efficacy of safety measures in current LLMs, and raising pivotal concerns for the future of open-sourcing LLMs.\nThe research contributes to demonstrating the fragility of existing safety measures for LLMs and emphasizes the need for further exploration of novel methods for safer open-sourcing."
+    "text": "The study proposes the LLMXRec framework, which leverages Large Language Models (LLMs) for providing explainable recommendations. This framework aims to ensure that the accuracy of recommendation models is not compromised and the tool is flexible enough to accommodate various recommendation models.\nThe research highlights the significance of instruction tuning in enhancing the controllability of LLMs and boosting the quality of the explanations they generate. This method involves tailoring a broad range of human-labeled instructions and responses to improve the model’s generalization and anticipation of unseen scenarios.\nThe findings indicate that LLMXRec’s instruction-tuned versions outperform baseline LLMs in terms of explanation quality, human ratings, and local feature prediction accuracy, proving the effectiveness of the proposed framework."
   },
   {
-    "objectID": "posts/Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks/2023-12-19-Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks.html#appendix",
-    "href": "posts/Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks/2023-12-19-Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks.html#appendix",
-    "title": "Bypassing the Safety Training of Open-Source LLMs with Priming Attacks",
+    "objectID": "posts/Unlocking the Potential of Large Language Models for Explainable Recommendations/2023-12-25-Unlocking the Potential of Large Language Models for Explainable Recommendations.html#appendix",
+    "href": "posts/Unlocking the Potential of Large Language Models for Explainable Recommendations/2023-12-25-Unlocking the Potential of Large Language Models for Explainable Recommendations.html#appendix",
+    "title": "Unlocking the Potential of Large Language Models for Explainable Recommendations",
     "section": "Appendix",
-    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.12321v1\n\n\nTruncated\nFalse\n\n\nWord Count\n2072"
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.15661v2\n\n\nTruncated\nFalse\n\n\nWord Count\n5001"
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html",
+    "href": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html",
+    "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
     "section": "",
-    "text": "Scientific Summarization Challenge: Summarizing scientific articles presents unique challenges, given their length, complexity, and irregular organizational structures, making it a remarkably challenging domain within automatic text summarization.\nProposed Prompting Techniques: The study proposes novel prompting techniques to provide contextual information to aid scientific summarization systems, yielding consistent performance gains, especially for smaller models summarizing sections separately.\nImplications and Future Directions: The study suggests that smaller summarization models benefit from prompts and provides opportunities for further research in exploring different prompt generation techniques and attention mechanisms.\n\n\n\n\n\nAutomatic text summarization aims to produce shortened versions of documents while retaining relevant information.\nScientific article summarization is especially challenging due to their length, complexity, and irregular organizational structures.\n\n\n\n\n\nPrior work heavily relied on extractive methods but has shifted towards abstractive methods using neural network architectures, motivating the study’s focus on enhancing abstractive scientific summarizers based on transformer models.\n\n\n\n\n\nPrompting Technique Dimension: The study compares approaches for generating prompts, providing lists of salient terms through unsupervised extraction from input texts and evaluates five distinct prompting techniques.\nModel Dimension: The study integrates prompting techniques with a range of current state-of-the-art transformer models for scientific summarization.\nInput Text Dimension: The study explores different text input conditions for summarization, including I+D (concatenation of introduction and discussion texts), S-n/a (summarizing sections separately), and S-w/a (similar to S-n/a, with added section type identifiers).\n\n\n\n\n\nConsistent ROUGE improvements were observed in smaller models, especially when summarizing sections independently, suggesting that supplied terms offer valuable global context.\nSmaller models showed significant declines in quality when exposed to unrelated prompts in confusion testing, indicating active utilization of supplied informative terms.\nNo single prompting technique consistently outperformed across all settings, suggesting that the optimal selection depends on specific architectures and tasks.\n\n\n\n\n\nThe findings indicate that focused local contexts derive the greatest benefit from global information provided through prompts.\nThe ETC attention mechanism shows advancements compared to sliding window attention, highlighting the importance of adopting an attention architecture that ensures continuous access to the instruction throughout the summarization process.\n\n\n\n\n\nOpportunities for future research include exploring additional prompting techniques, investigating automatic entity prompt generation, and adapting global attention to directly focus on prompt token positions to enhance prompt utilization.\n\n\n\n\n\nThe study introduces prompting as a technique to enhance scientific summarization systems and demonstrates particular utility for improving fundamental deficiencies of smaller models in appropriate contexts, providing implications for resource-limited applications."
+    "text": "Hallucinations in Large Language Models (LLMs): The study aims to address the issue of hallucinations in LLMs, where the models generate inaccurate or fabricated information, hindering their practical application.\nInduce-then-Contrast Decoding (ICD): The proposed ICD method involves inducing hallucinations from LLMs and using them as penalty terms during decoding to improve factuality. Experimental results show significant improvement in truthfulness across various model sizes and families, comparable to state-of-the-art LLMs when equipped with ICD.\nEffectiveness: ICD method provides substantial improvements in truthfulness on TruthfulQA and reduces hallucinations in open-ended text generation on FActScore compared to baseline decoding methods.\n\n\n\n\n\nLarge Language Models (LLMs) have shown impressive capabilities but continue to struggle with hallucinations, generating inaccurate or fabricated information.\nPrevious research suggests that training objectives and lack of knowledge may contribute to hallucinations in LLMs.\n\n\n\n\n\n\n\nFactually weak LLMs are constructed by inducing hallucinations through fine-tuning or zero-shot prompting, which is then used as a penalty term to guide LLMs to generate more factual content.\nThe fine-tuning process involves maximizing the log probability of the target output given system prompt and user input with new learned weights.\n\n\n\n\n\nThe decoding process involves amplifying predictions from the original model and downplaying untruthful predictions using a contrasting distribution to improve factuality.\nAn adaptive plausibility constraint is introduced to select tokens for penalty, focusing only on those with higher probabilities than a certain proportion of the maximum probability assigned by the original model.\n\n\n\n\n\n\nExperimental evaluation on TruthfulQA and FActScore benchmarks demonstrates the effectiveness of ICD method in improving factuality and reducing hallucinations in LLMs compared to baseline decoding methods.\nAdditional analyses include suitability of different task formats for inducing hallucinations, effectiveness across different LLM model sizes, and impact of data size and data source for inducing hallucinations.\n\n\n\n\n\nThe additional computational costs and latency introduced by contrastive decoding could be a limitation in practical application.\nThe study primarily focuses on evaluating the effectiveness of ICD on TruthfulQA and FActScore, but the universal applicability of the method across different domains and tasks is yet to be determined.\n\nOverall, the study introduces an innovative method, ICD, for alleviating hallucinations in LLMs, providing empirical evidence of its effectiveness. The potential of the method in addressing hallucinations in open domains and general tasks, as well as its scalability and practical application, warrant further investigation.\n\n\n\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.15710v1\n\n\nTruncated\nFalse\n\n\nWord Count\n4999"
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#summary",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#summary",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#key-findings",
+    "href": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#key-findings",
+    "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
     "section": "",
-    "text": "Scientific Summarization Challenge: Summarizing scientific articles presents unique challenges, given their length, complexity, and irregular organizational structures, making it a remarkably challenging domain within automatic text summarization.\nProposed Prompting Techniques: The study proposes novel prompting techniques to provide contextual information to aid scientific summarization systems, yielding consistent performance gains, especially for smaller models summarizing sections separately.\nImplications and Future Directions: The study suggests that smaller summarization models benefit from prompts and provides opportunities for further research in exploring different prompt generation techniques and attention mechanisms.\n\n\n\n\n\nAutomatic text summarization aims to produce shortened versions of documents while retaining relevant information.\nScientific article summarization is especially challenging due to their length, complexity, and irregular organizational structures.\n\n\n\n\n\nPrior work heavily relied on extractive methods but has shifted towards abstractive methods using neural network architectures, motivating the study’s focus on enhancing abstractive scientific summarizers based on transformer models.\n\n\n\n\n\nPrompting Technique Dimension: The study compares approaches for generating prompts, providing lists of salient terms through unsupervised extraction from input texts and evaluates five distinct prompting techniques.\nModel Dimension: The study integrates prompting techniques with a range of current state-of-the-art transformer models for scientific summarization.\nInput Text Dimension: The study explores different text input conditions for summarization, including I+D (concatenation of introduction and discussion texts), S-n/a (summarizing sections separately), and S-w/a (similar to S-n/a, with added section type identifiers).\n\n\n\n\n\nConsistent ROUGE improvements were observed in smaller models, especially when summarizing sections independently, suggesting that supplied terms offer valuable global context.\nSmaller models showed significant declines in quality when exposed to unrelated prompts in confusion testing, indicating active utilization of supplied informative terms.\nNo single prompting technique consistently outperformed across all settings, suggesting that the optimal selection depends on specific architectures and tasks.\n\n\n\n\n\nThe findings indicate that focused local contexts derive the greatest benefit from global information provided through prompts.\nThe ETC attention mechanism shows advancements compared to sliding window attention, highlighting the importance of adopting an attention architecture that ensures continuous access to the instruction throughout the summarization process.\n\n\n\n\n\nOpportunities for future research include exploring additional prompting techniques, investigating automatic entity prompt generation, and adapting global attention to directly focus on prompt token positions to enhance prompt utilization.\n\n\n\n\n\nThe study introduces prompting as a technique to enhance scientific summarization systems and demonstrates particular utility for improving fundamental deficiencies of smaller models in appropriate contexts, providing implications for resource-limited applications."
+    "text": "Hallucinations in Large Language Models (LLMs): The study aims to address the issue of hallucinations in LLMs, where the models generate inaccurate or fabricated information, hindering their practical application.\nInduce-then-Contrast Decoding (ICD): The proposed ICD method involves inducing hallucinations from LLMs and using them as penalty terms during decoding to improve factuality. Experimental results show significant improvement in truthfulness across various model sizes and families, comparable to state-of-the-art LLMs when equipped with ICD.\nEffectiveness: ICD method provides substantial improvements in truthfulness on TruthfulQA and reduces hallucinations in open-ended text generation on FActScore compared to baseline decoding methods."
   },
   {
-    "objectID": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#appendix",
-    "href": "posts/Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles/2023-12-13-Prompting_LLMs_with_content_plans_to_enhance_the_summarization_of_scientific_articles.html#appendix",
-    "title": "Prompting LLMs with content plans to enhance the summarization of scientific articles",
+    "objectID": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#introduction",
+    "href": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#introduction",
+    "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+    "section": "",
+    "text": "Large Language Models (LLMs) have shown impressive capabilities but continue to struggle with hallucinations, generating inaccurate or fabricated information.\nPrevious research suggests that training objectives and lack of knowledge may contribute to hallucinations in LLMs."
+  },
+  {
+    "objectID": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#induce-then-contrast-decoding",
+    "href": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#induce-then-contrast-decoding",
+    "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+    "section": "",
+    "text": "Factually weak LLMs are constructed by inducing hallucinations through fine-tuning or zero-shot prompting, which is then used as a penalty term to guide LLMs to generate more factual content.\nThe fine-tuning process involves maximizing the log probability of the target output given system prompt and user input with new learned weights.\n\n\n\n\n\nThe decoding process involves amplifying predictions from the original model and downplaying untruthful predictions using a contrasting distribution to improve factuality.\nAn adaptive plausibility constraint is introduced to select tokens for penalty, focusing only on those with higher probabilities than a certain proportion of the maximum probability assigned by the original model."
+  },
+  {
+    "objectID": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#experiments",
+    "href": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#experiments",
+    "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+    "section": "",
+    "text": "Experimental evaluation on TruthfulQA and FActScore benchmarks demonstrates the effectiveness of ICD method in improving factuality and reducing hallucinations in LLMs compared to baseline decoding methods.\nAdditional analyses include suitability of different task formats for inducing hallucinations, effectiveness across different LLM model sizes, and impact of data size and data source for inducing hallucinations."
+  },
+  {
+    "objectID": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#critique",
+    "href": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#critique",
+    "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+    "section": "",
+    "text": "The additional computational costs and latency introduced by contrastive decoding could be a limitation in practical application.\nThe study primarily focuses on evaluating the effectiveness of ICD on TruthfulQA and FActScore, but the universal applicability of the method across different domains and tasks is yet to be determined.\n\nOverall, the study introduces an innovative method, ICD, for alleviating hallucinations in LLMs, providing empirical evidence of its effectiveness. The potential of the method in addressing hallucinations in open domains and general tasks, as well as its scalability and practical application, warrant further investigation."
+  },
+  {
+    "objectID": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#appendix",
+    "href": "posts/Alleviating Hallucinations of Large Language Models through Induced Hallucinations/2023-12-25-Alleviating Hallucinations of Large Language Models through Induced Hallucinations.html#appendix",
+    "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+    "section": "",
+    "text": "Link\nhttps://browse.arxiv.org/html/2312.15710v1\n\n\nTruncated\nFalse\n\n\nWord Count\n4999"
+  },
+  {
+    "objectID": "posts/Mitigating Data Injection Attacks on Federated Learning/2023-12-04-Mitigating Data Injection Attacks on Federated Learning.html",
+    "href": "posts/Mitigating Data Injection Attacks on Federated Learning/2023-12-04-Mitigating Data Injection Attacks on Federated Learning.html",
+    "title": "Mitigating Data Injection Attacks on Federated Learning",
+    "section": "",
+    "text": "Federated Learning and Its Vulnerabilities: The paper highlights the concept of federated learning, where multiple entities collaboratively train models using their private data. It emphasizes that despite its advantages, federated learning is susceptible to data injection attacks, which can compromise the learning process and lead to a suboptimal model.\nDetection and Mitigation Technique: The paper proposes a novel local scheme for detecting and mitigating data injection attacks in federated learning systems. The technique involves comparing updates from participating agents and ignoring updates from suspicious agents. A threshold-based mechanism is employed for attacker localization and subsequent mitigation.\nSimulation Results: The paper presents simulation results showcasing the effectiveness of the proposed technique in detecting and mitigating data injection attacks. It demonstrates mitigating attacks such as constant-output attacks and label-flipping attacks, highlighting the ability of the algorithm to maintain convergence of the model to a truthful model."
+  },
+  {
+    "objectID": "posts/Mitigating Data Injection Attacks on Federated Learning/2023-12-04-Mitigating Data Injection Attacks on Federated Learning.html#appendix",
+    "href": "posts/Mitigating Data Injection Attacks on Federated Learning/2023-12-04-Mitigating Data Injection Attacks on Federated Learning.html#appendix",
+    "title": "Mitigating Data Injection Attacks on Federated Learning",
     "section": "Appendix",
-    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.08282v2\n\n\nTruncated\nFalse\n\n\nWord Count\n4878"
+    "text": "Appendix\n\n\n\nLink\nhttps://browse.arxiv.org/html/2312.02102v2\n\n\nTruncated\nFalse\n\n\nWord Count\n3631"
   }
 ]

@@ -6,6 +6,7 @@ import arxiv
 import json
 from pathlib import Path
 import logging
+from strip_tags import strip_tags
 
 
 class OpenAIAssistant:
@@ -21,12 +22,13 @@ class OpenAIAssistant:
 
         if task == "summarize":
             system_message = "You are a helpful assistant to summarize academic \
-                              articles. Output the summary as Markdown with Headings \
+                              articles. Output the summary as markdown with headings \
                               for different sections. You may also output code snippets \
                               following Markdown conventions. Add in bolding for key \
                               terminology. Add in bullets to summarize sections. Provide \
-                              direct quotes whenever helpful to provide context."
-            user_message = f"Please summarize the following text:\n\n{text}"
+                              direct quotes whenever helpful to provide context. Do not \
+                              start with the title or # Summary or end referencing references."
+            user_message = f"Summarize the following text in 200 or fewer words:\n\n{text}"
 
         elif task == "tldr":
             system_message = "You are a helpful assistant to summarize academic \
@@ -60,6 +62,7 @@ assistant = OpenAIAssistant(model=MODEL)
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
+logger = logging.getLogger(__name__)
 
 
 def is_valid_arxiv_id(arxiv_id: str) -> bool:
@@ -73,8 +76,19 @@ def is_valid_arxiv_id(arxiv_id: str) -> bool:
 
 
 def extract_text_from_html(html_content: str) -> str:
-    soup = BeautifulSoup(html_content, "html.parser")
-    return soup.get_text()
+    stripped = strip_tags(
+        html_content,
+        [".ltx_page_content"],
+        minify=True,
+        removes=[
+            ".ltx_authors",
+            ".ltx_bibliography",
+            ".package-alerts",
+            ".section",
+        ],
+    )
+
+    return stripped
 
 
 def remove_double_quotes(input_string):
@@ -106,6 +120,26 @@ def truncate_string(text, token_threshold):
     else:
         # If the text is within the limit, return it as is
         return text
+
+
+def extract_first_png_image(html_content):
+    """
+    Extract the first .png image URL from a given HTML content.
+
+    :param html_content: A string containing HTML content.
+    :return: URL of the first .png image or None if no .png image is found.
+    """
+    try:
+        soup = BeautifulSoup(html_content, "lxml")
+
+        for img in soup.find_all("img"):
+            if img["src"].endswith(".png"):
+                return img["src"]
+
+        return None
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
+        raise
 
 
 @app.command()
@@ -150,18 +184,29 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
 
             url = f"https://browse.arxiv.org/html/{arxiv_id}"
             response = requests.get(url)
-            html_content = response.text
+            html_content = response.content.decode("utf-8")
+            text = extract_text_from_html(html_content)
 
-            word_count = count_words(html_content)
+            # get first image
+            try:
+                png_url = extract_first_png_image(html_content)
+
+                if png_url is None:
+                    logger.warning("No .png image found in the HTML content.")
+                else:
+                    print(f"Found .png image URL: {png_url}")
+
+            except Exception as e:
+                logger.error(f"Failed to extract .png image: {e}")
+
+            # count words, if longer than 15,000 then truncate
+            word_count = count_words(text)
             if word_count > 15000:
                 logging.info(
                     f"Warning: HTML content for {arxiv_id} exceeds 15,000 tokens. Truncating."
                 )
-                html_content = truncate_string(
-                    html_content, token_threshold=15000
-                )
+                text = truncate_string(text, token_threshold=15000)
 
-            text = extract_text_from_html(html_content)
             summary = assistant.process_text(text, "summarize")
             tldr = assistant.process_text(first_result.summary, "tldr")
 
@@ -177,6 +222,7 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
                         "%Y-%m-%d"
                     ),
                     "model": MODEL,
+                    "image": f"{url}/{png_url}",
                     "word_count": word_count,
                     "is_truncated": True if word_count > 15000 else False,
                 },

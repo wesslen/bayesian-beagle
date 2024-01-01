@@ -40,6 +40,7 @@ def create_qmd_file(example, output_folder):
     """
     title = example["meta"]["title"]
     folder_name = title.replace(" ", "_")
+    folder_name = title.replace("/", "_")
     current_date = example["meta"]["publish_date"]
     image = (
         "../../../bayesian-beagle.png"

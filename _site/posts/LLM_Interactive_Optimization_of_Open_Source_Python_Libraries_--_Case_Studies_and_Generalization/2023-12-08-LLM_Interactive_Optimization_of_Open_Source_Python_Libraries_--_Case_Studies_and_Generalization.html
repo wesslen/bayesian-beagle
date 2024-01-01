@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="gpt-3.5-turbo-1106">
-<meta name="dcterms.date" content="2023-12-19">
-<meta name="description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
+<meta name="dcterms.date" content="2023-12-08">
+<meta name="description" content="GPT-4 can optimize code efficiency, but human input is essential and more study is needed.">
 
-<title>Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</title>
+<title>Bayesian beagle - LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,13 +65,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta property="og:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
+<meta property="og:title" content="Bayesian beagle - LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization">
+<meta property="og:description" content="GPT-4 can optimize code efficiency, but human input is essential and more study is needed.">
+<meta property="og:image" content="https://wesslen-blog.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta name="twitter:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta name="twitter:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
-<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
+<meta name="twitter:title" content="Bayesian beagle - LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization">
+<meta name="twitter:description" content="GPT-4 can optimize code efficiency, but human input is essential and more study is needed.">
+<meta name="twitter:image" content="https://wesslen-blog.netlify.app/../bayesian-beagle.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -123,15 +123,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</h1>
+      <h1 class="title">LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization</h1>
                   <div>
         <div class="description">
-          LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.
+          GPT-4 can optimize code efficiency, but human input is essential and more study is needed.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">security</div>
-                <div class="quarto-category">open-source</div>
+                <div class="quarto-category">hci</div>
+                <div class="quarto-category">programming</div>
               </div>
                   </div>
   </div>
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 19, 2023</p>
+        <p class="date">December 8, 2023</p>
       </div>
     </div>
     
@@ -167,39 +167,34 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
 <ol type="1">
-<li><p><strong>Priming attacks</strong> are shown to be effective in bypassing safety training for open-source Large Language Models (LLMs), resulting in a significant increase in the Attack Success Rate on Harmful Behaviors.</p></li>
-<li><p>The study highlights the ease with which adversaries can coerce open-source LLMs to comply with harmful requests, undermining the efficacy of safety measures in current LLMs, and raising pivotal concerns for the future of open-sourcing LLMs.</p></li>
-<li><p>The research contributes to demonstrating the fragility of existing safety measures for LLMs and emphasizes the need for further exploration of novel methods for safer open-sourcing.</p></li>
+<li><p><strong>LLMs for Code Optimization</strong>: The study showcases the efficacy of Large Language Models (LLMs) in optimizing open-source Python libraries by collaborating with human experts. The results demonstrate substantial performance improvements across multiple case studies.</p></li>
+<li><p><strong>Human Expert in the Loop</strong>: The paper highlights the essential role of human expertise in guiding LLMs to achieve effective solutions, often with fewer iterations than anticipated. The interactive collaboration of human and LLMs leads to significant performance improvements in the optimized code.</p></li>
+<li><p><strong>Promising Tool for Code Optimization</strong>: The findings indicate a strong potential for the practical utility of LLMs in code optimization in open-source libraries, emphasizing their collaborative dynamics with human experts.</p></li>
 </ol>
 </section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<section id="aims" class="level4">
+<h4 class="anchored" data-anchor-id="aims">Aims</h4>
 <ul>
-<li>Autoregressive Large Language Models (LLMs) have become ubiquitous in user-facing applications, prompting extensive safety training to ensure human alignment and prevent nefarious usage.</li>
-<li>Current safety measures, such as RLHF techniques and fine-tuning, may still be circumvented, leading to harmful outputs or compliance with harmful behavior requests.</li>
-<li>The paper challenges the assumption that attackers are limited to specific input formats, advocating for unrestricted inputs in the extraction of harmful behavior content from open-source models.</li>
+<li>The study aims to fill the gap in literature by providing a methodologically stringent case study of optimizing source code of open-source Python libraries using an LLM ChatGPT-4.</li>
 </ul>
 </section>
-<section id="methodology-results" class="level3">
-<h3 class="anchored" data-anchor-id="methodology-results">Methodology &amp; Results</h3>
+<section id="why-optimize-source-code" class="level4">
+<h4 class="anchored" data-anchor-id="why-optimize-source-code">Why Optimize Source Code?</h4>
 <ul>
-<li>The study presents a threat model that allows successful low-resource attacks via <strong>priming attacks</strong> on open-source LLMs, leveraging API query access and the autoregressive nature of LLMs to fulfill harmful requests.</li>
-<li>Few-shot prompting using a helper LLM is employed to generate priming attacks, demonstrating significant improvements in the Attack Success Rate compared to baseline methods.</li>
-<li>Experiment results reveal the effectiveness of priming attacks in bypassing safety measures for LLMs, with the attack outperforming baselines across different model families and sizes.</li>
+<li>The importance of energy and cost efficiency in source code and the potential societal and environmental benefits of optimized code are emphasized.</li>
 </ul>
 </section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<section id="prior-art" class="level4">
+<h4 class="anchored" data-anchor-id="prior-art">Prior Art</h4>
 <ul>
-<li>The paper concludes by emphasizing how priming attacks highlight the vulnerability of current safety measures and the need for further research into safer methods for open-sourcing LLMs.</li>
+<li>The paper highlights the relative dearth of research specifically focusing on the collaborative use</li>
 </ul>
 </section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The use of automated evaluation processes and the absence of a rigorous human study to systematically study the priming process may raise concerns regarding the robustness and real-world applicability of the findings. Additionally, the paper acknowledges the underestimation of harmfulness by the evaluation tool used, indicating potential limitations in the accuracy of the reported Attack Success Rates. Further validation and real-world testing with human subjects may be necessary to accurately assess the impact and feasibility of priming attacks on open-source LLMs.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -207,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Link</td>
-<td><a href="https://browse.arxiv.org/html/2312.12321v1">https://browse.arxiv.org/html/2312.12321v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2312.14949v1">https://browse.arxiv.org/html/2312.14949v1</a></td>
 </tr>
 <tr class="even">
 <td>Truncated</td>
@@ -215,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Word Count</td>
-<td>2072</td>
+<td>10353</td>
 </tr>
 </tbody>
 </table>

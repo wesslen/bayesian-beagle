@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="gpt-3.5-turbo-1106">
-<meta name="dcterms.date" content="2023-12-19">
-<meta name="description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
+<meta name="dcterms.date" content="2023-12-20">
+<meta name="description" content="A dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.">
 
-<title>Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</title>
+<title>Bayesian beagle - Android dialogue system for customer service using prompt-based topic control and compliments generation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,13 +65,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta property="og:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
+<meta property="og:title" content="Bayesian beagle - Android dialogue system for customer service using prompt-based topic control and compliments generation">
+<meta property="og:description" content="A dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.12924v1/extracted/5307376/fig/dialogue_flow.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta name="twitter:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta name="twitter:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
-<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
+<meta name="twitter:title" content="Bayesian beagle - Android dialogue system for customer service using prompt-based topic control and compliments generation">
+<meta name="twitter:description" content="A dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.12924v1/extracted/5307376/fig/dialogue_flow.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -123,15 +123,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</h1>
+      <h1 class="title">Android dialogue system for customer service using prompt-based topic control and compliments generation</h1>
                   <div>
         <div class="description">
-          LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.
+          A dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">security</div>
-                <div class="quarto-category">open-source</div>
+                <div class="quarto-category">hci</div>
+                <div class="quarto-category">prompt engineering</div>
               </div>
                   </div>
   </div>
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 19, 2023</p>
+        <p class="date">December 20, 2023</p>
       </div>
     </div>
     
@@ -170,36 +170,45 @@ ul.task-list li input[type="checkbox"] {
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
 <ol type="1">
-<li><p><strong>Priming attacks</strong> are shown to be effective in bypassing safety training for open-source Large Language Models (LLMs), resulting in a significant increase in the Attack Success Rate on Harmful Behaviors.</p></li>
-<li><p>The study highlights the ease with which adversaries can coerce open-source LLMs to comply with harmful requests, undermining the efficacy of safety measures in current LLMs, and raising pivotal concerns for the future of open-sourcing LLMs.</p></li>
-<li><p>The research contributes to demonstrating the fragility of existing safety measures for LLMs and emphasizes the need for further exploration of novel methods for safer open-sourcing.</p></li>
+<li><strong>Topic Control and Compliments</strong>: The developed Android dialogue system for customer service demonstrated the use of ChatGPT for <strong>topic control</strong> in trip planning, as well as generating <strong>compliments</strong> for users based on their appearance.</li>
+<li><strong>User Preference Integration</strong>: The system integrated user preferences by extracting knowledge from the history of the user’s utterances and utilizing it to propose travel plans matching the user’s preferences.</li>
+<li><strong>Effective User Evaluation</strong>: In a preliminary round held at a travel agency’s actual store, the system garnered positive feedback and was ranked first in both satisfaction ratings and plan ratings by real customers.</li>
 </ol>
 </section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<section id="proposed-system" class="level3">
+<h3 class="anchored" data-anchor-id="proposed-system">Proposed System</h3>
 <ul>
-<li>Autoregressive Large Language Models (LLMs) have become ubiquitous in user-facing applications, prompting extensive safety training to ensure human alignment and prevent nefarious usage.</li>
-<li>Current safety measures, such as RLHF techniques and fine-tuning, may still be circumvented, leading to harmful outputs or compliance with harmful behavior requests.</li>
-<li>The paper challenges the assumption that attackers are limited to specific input formats, advocating for unrestricted inputs in the extraction of harmful behavior content from open-source models.</li>
+<li><strong>Controlling topics with ChatGPT prompts</strong>:
+<ul>
+<li>Utilized GPT-3.5-trubo and GPT4 for topic control in creating travel plans by inserting fixed text into prompts.</li>
+</ul></li>
+<li><strong>Dialogue Flow</strong>:
+<ul>
+<li>Elicited customer requests through questions, confirmed travel plan requirements, and discussed plans aligning with customer needs.</li>
+</ul></li>
+<li><strong>Function to complement a user’s physical appearance</strong>:
+<ul>
+<li>Utilized appearance recognition to automatically generate compliments for users.</li>
+</ul></li>
+<li><strong>Control using user’s past speech</strong>:
+<ul>
+<li>Employed ChatGPT to determine sightseeing spots and create travel plans based on the user’s past speech.</li>
+</ul></li>
+<li><strong>Overall Configuration</strong>:
+<ul>
+<li>The system’s overall configuration was detailed, showing the dialogue flow and the user evaluation results.</li>
+</ul></li>
 </ul>
 </section>
-<section id="methodology-results" class="level3">
-<h3 class="anchored" data-anchor-id="methodology-results">Methodology &amp; Results</h3>
+<section id="user-evaluation-and-preliminary-results" class="level3">
+<h3 class="anchored" data-anchor-id="user-evaluation-and-preliminary-results">User Evaluation and Preliminary Results</h3>
 <ul>
-<li>The study presents a threat model that allows successful low-resource attacks via <strong>priming attacks</strong> on open-source LLMs, leveraging API query access and the autoregressive nature of LLMs to fulfill harmful requests.</li>
-<li>Few-shot prompting using a helper LLM is employed to generate priming attacks, demonstrating significant improvements in the Attack Success Rate compared to baseline methods.</li>
-<li>Experiment results reveal the effectiveness of priming attacks in bypassing safety measures for LLMs, with the attack outperforming baselines across different model families and sizes.</li>
-</ul>
-</section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<ul>
-<li>The paper concludes by emphasizing how priming attacks highlight the vulnerability of current safety measures and the need for further research into safer methods for open-sourcing LLMs.</li>
+<li><strong>High Satisfaction and Reliability</strong>: The system was highly rated in terms of satisfaction and reliability of information by real customers in actual shops, demonstrating the effectiveness of integrating user preferences and compliments.</li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The use of automated evaluation processes and the absence of a rigorous human study to systematically study the priming process may raise concerns regarding the robustness and real-world applicability of the findings. Additionally, the paper acknowledges the underestimation of harmfulness by the evaluation tool used, indicating potential limitations in the accuracy of the reported Attack Success Rates. Further validation and real-world testing with human subjects may be necessary to accurately assess the impact and feasibility of priming attacks on open-source LLMs.</p>
+<p>While the paper provides an insightful overview of the Android dialogue system and its successful preliminary evaluation, it would benefit from a more detailed explanation of the technical aspects of the system’s development and the limitations or challenges faced during the implementation and evaluation process. Additionally, further clarification on the ethical considerations and potential privacy concerns related to capturing user appearance for compliments generation would enhance the comprehensiveness of the paper.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -207,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Link</td>
-<td><a href="https://browse.arxiv.org/html/2312.12321v1">https://browse.arxiv.org/html/2312.12321v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2312.12924v1">https://browse.arxiv.org/html/2312.12924v1</a></td>
 </tr>
 <tr class="even">
 <td>Truncated</td>
@@ -215,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Word Count</td>
-<td>2072</td>
+<td>1231</td>
 </tr>
 </tbody>
 </table>

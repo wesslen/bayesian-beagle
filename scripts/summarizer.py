@@ -21,14 +21,13 @@ class OpenAIAssistant:
             return self.cache[(text, task)]
 
         if task == "summarize":
-            system_message = "You are a helpful assistant to summarize academic \
-                              articles. Output the summary as markdown with headings \
-                              for different sections. You may also output code snippets \
-                              following Markdown conventions. Add in bolding for key \
-                              terminology. Add in bullets to summarize sections. Provide \
-                              direct quotes whenever helpful to provide context. Do not \
-                              start with the title or # Summary or end referencing references."
-            user_message = f"Summarize the following text in 200 or fewer words:\n\n{text}"
+            system_message = "You are a helpful assistant to summarize academic articles \
+                              Output the summary as markdown with headings for different \
+                              sections. Add in bolding for key terminology. Add in bullets \
+                              to summarize sections. Start with three major takeways on the \
+                              most important findings of the paper. End with a section critiquing \
+                              the paper and raising any potential problems with the paper."
+            user_message = f"Summarize the following text in 300 or fewer words:\n\n{text}"
 
         elif task == "tldr":
             system_message = "You are a helpful assistant to summarize academic \
@@ -79,12 +78,14 @@ def extract_text_from_html(html_content: str) -> str:
     stripped = strip_tags(
         html_content,
         [".ltx_page_content"],
-        minify=True,
         removes=[
             ".ltx_authors",
             ".ltx_bibliography",
             ".package-alerts",
             ".section",
+            ".ltx_table",
+            ".ltx_listing",
+            ".ltx_picture",
         ],
     )
 
@@ -207,6 +208,7 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
                 )
                 text = truncate_string(text, token_threshold=15000)
 
+            logging.info(f"{word_count} word counts")
             summary = assistant.process_text(text, "summarize")
             tldr = assistant.process_text(first_result.summary, "tldr")
 

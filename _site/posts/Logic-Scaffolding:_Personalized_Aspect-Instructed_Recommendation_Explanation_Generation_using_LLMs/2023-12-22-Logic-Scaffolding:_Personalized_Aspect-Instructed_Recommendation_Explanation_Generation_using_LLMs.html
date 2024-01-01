@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="gpt-3.5-turbo-1106">
-<meta name="dcterms.date" content="2023-12-19">
-<meta name="description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
+<meta name="dcterms.date" content="2023-12-22">
+<meta name="description" content="Large Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.">
 
-<title>Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</title>
+<title>Bayesian beagle - Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,13 +65,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta property="og:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
+<meta property="og:title" content="Bayesian beagle - Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs">
+<meta property="og:description" content="Large Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.14345v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta name="twitter:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta name="twitter:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
-<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
+<meta name="twitter:title" content="Bayesian beagle - Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs">
+<meta name="twitter:description" content="Large Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.14345v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -123,15 +123,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</h1>
+      <h1 class="title">Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs</h1>
                   <div>
         <div class="description">
-          LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.
+          Large Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">security</div>
-                <div class="quarto-category">open-source</div>
+                <div class="quarto-category">hci</div>
+                <div class="quarto-category">prompt engineering</div>
               </div>
                   </div>
   </div>
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 19, 2023</p>
+        <p class="date">December 22, 2023</p>
       </div>
     </div>
     
@@ -170,36 +170,40 @@ ul.task-list li input[type="checkbox"] {
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
 <ol type="1">
-<li><p><strong>Priming attacks</strong> are shown to be effective in bypassing safety training for open-source Large Language Models (LLMs), resulting in a significant increase in the Attack Success Rate on Harmful Behaviors.</p></li>
-<li><p>The study highlights the ease with which adversaries can coerce open-source LLMs to comply with harmful requests, undermining the efficacy of safety measures in current LLMs, and raising pivotal concerns for the future of open-sourcing LLMs.</p></li>
-<li><p>The research contributes to demonstrating the fragility of existing safety measures for LLMs and emphasizes the need for further exploration of novel methods for safer open-sourcing.</p></li>
+<li>Large language models (LLMs) have the potential to provide explanations for recommendations, but existing models struggle to produce zero-shot explanations reliably due to lack of true personalization, transparency, and adaptability.</li>
+<li>The paper proposes a framework called <strong>Logic-Scaffolding</strong> that addresses these challenges by combining aspect-based explanation and chain-of-thought prompting to generate explanations through intermediate reasoning steps.</li>
+<li>The authors present an interactive demonstration to showcase the effectiveness of the <strong>Logic-Scaffolding</strong> framework in generating explanation for movie recommendations.</li>
 </ol>
 </section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<section id="characteristics-of-a-good-explanation" class="level3">
+<h3 class="anchored" data-anchor-id="characteristics-of-a-good-explanation">Characteristics of a Good Explanation</h3>
 <ul>
-<li>Autoregressive Large Language Models (LLMs) have become ubiquitous in user-facing applications, prompting extensive safety training to ensure human alignment and prevent nefarious usage.</li>
-<li>Current safety measures, such as RLHF techniques and fine-tuning, may still be circumvented, leading to harmful outputs or compliance with harmful behavior requests.</li>
-<li>The paper challenges the assumption that attackers are limited to specific input formats, advocating for unrestricted inputs in the extraction of harmful behavior content from open-source models.</li>
+<li><strong>Personalization</strong>: Tailored to individual preferences and needs.</li>
+<li><strong>Factuality</strong>: Emphasizes the need for accurate and reliable information.</li>
+<li><strong>Robustness</strong>: Ensures consistent, relevant, and deep explanations.</li>
+<li><strong>Human readability</strong>: Easily understandable, transparent, and aligned with human cognition.</li>
+<li><strong>Proper utterance</strong>: Delivers clear, concise, and unbiased explanations.</li>
 </ul>
 </section>
-<section id="methodology-results" class="level3">
-<h3 class="anchored" data-anchor-id="methodology-results">Methodology &amp; Results</h3>
+<section id="aspect-instructed-recommendation-evidence-generation" class="level3">
+<h3 class="anchored" data-anchor-id="aspect-instructed-recommendation-evidence-generation">Aspect-Instructed Recommendation Evidence Generation</h3>
 <ul>
-<li>The study presents a threat model that allows successful low-resource attacks via <strong>priming attacks</strong> on open-source LLMs, leveraging API query access and the autoregressive nature of LLMs to fulfill harmful requests.</li>
-<li>Few-shot prompting using a helper LLM is employed to generate priming attacks, demonstrating significant improvements in the Attack Success Rate compared to baseline methods.</li>
-<li>Experiment results reveal the effectiveness of priming attacks in bypassing safety measures for LLMs, with the attack outperforming baselines across different model families and sizes.</li>
+<li><strong>Relevant Item Selection</strong>: Selects influential items related to the recommended item from the user’s history based on cosine similarity scores.</li>
+<li><strong>Aspect Extraction</strong>: Leverages few-shot learning technique to extract fine-grained features of items.</li>
+<li><strong>Chain-of-Thought Reasoning</strong>: Guides the generation of explanations through intermediate reasoning steps.</li>
 </ul>
 </section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<section id="demonstration-of-results" class="level3">
+<h3 class="anchored" data-anchor-id="demonstration-of-results">Demonstration of Results</h3>
 <ul>
-<li>The paper concludes by emphasizing how priming attacks highlight the vulnerability of current safety measures and the need for further research into safer methods for open-sourcing LLMs.</li>
+<li>Utilized the <strong>Logic-Scaffolding</strong> framework to generate explanations for popular movies from the MovieLens 1M dataset.</li>
+<li>The framework consistently received higher ratings than the zero-shot approach in terms of relevance, human-readability, factuality, and proper utterance.</li>
+<li>Effect size tests showed a large impact in improving factuality and other criteria.</li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The use of automated evaluation processes and the absence of a rigorous human study to systematically study the priming process may raise concerns regarding the robustness and real-world applicability of the findings. Additionally, the paper acknowledges the underestimation of harmfulness by the evaluation tool used, indicating potential limitations in the accuracy of the reported Attack Success Rates. Further validation and real-world testing with human subjects may be necessary to accurately assess the impact and feasibility of priming attacks on open-source LLMs.</p>
+<p>The paper presents a promising framework for personalized aspect-instructed recommendation explanation generation using LLMs. However, the effectiveness of the framework needs to be evaluated in a wider range of recommendation domains beyond just movie recommendations. Additionally, the demonstration of results should also include user feedback and real-world application scenarios to validate the practical usability and impact of the proposed framework.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -207,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Link</td>
-<td><a href="https://browse.arxiv.org/html/2312.12321v1">https://browse.arxiv.org/html/2312.12321v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2312.14345v1">https://browse.arxiv.org/html/2312.14345v1</a></td>
 </tr>
 <tr class="even">
 <td>Truncated</td>
@@ -215,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Word Count</td>
-<td>2072</td>
+<td>1744</td>
 </tr>
 </tbody>
 </table>

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="gpt-3.5-turbo-1106">
-<meta name="dcterms.date" content="2023-12-19">
-<meta name="description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
+<meta name="dcterms.date" content="2023-12-21">
+<meta name="description" content="Query-focused summarization explores methods like Context-aware Decoding to improve summarization quality without generating false information.">
 
-<title>Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</title>
+<title>Bayesian beagle - Context-aware Decoding Reduces Hallucination in Query-focused Summarization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,13 +65,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta property="og:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
+<meta property="og:title" content="Bayesian beagle - Context-aware Decoding Reduces Hallucination in Query-focused Summarization">
+<meta property="og:description" content="Query-focused summarization explores methods like Context-aware Decoding to improve summarization quality without generating false information.">
+<meta property="og:image" content="https://wesslen-blog.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta name="twitter:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta name="twitter:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
-<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
+<meta name="twitter:title" content="Bayesian beagle - Context-aware Decoding Reduces Hallucination in Query-focused Summarization">
+<meta name="twitter:description" content="Query-focused summarization explores methods like Context-aware Decoding to improve summarization quality without generating false information.">
+<meta name="twitter:image" content="https://wesslen-blog.netlify.app/../bayesian-beagle.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -123,15 +123,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</h1>
+      <h1 class="title">Context-aware Decoding Reduces Hallucination in Query-focused Summarization</h1>
                   <div>
         <div class="description">
-          LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.
+          Query-focused summarization explores methods like Context-aware Decoding to improve summarization quality without generating false information.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">security</div>
-                <div class="quarto-category">open-source</div>
+                <div class="quarto-category">robustness</div>
               </div>
                   </div>
   </div>
@@ -149,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 19, 2023</p>
+        <p class="date">December 21, 2023</p>
       </div>
     </div>
     
@@ -167,39 +166,47 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
-<ol type="1">
-<li><p><strong>Priming attacks</strong> are shown to be effective in bypassing safety training for open-source Large Language Models (LLMs), resulting in a significant increase in the Attack Success Rate on Harmful Behaviors.</p></li>
-<li><p>The study highlights the ease with which adversaries can coerce open-source LLMs to comply with harmful requests, undermining the efficacy of safety measures in current LLMs, and raising pivotal concerns for the future of open-sourcing LLMs.</p></li>
-<li><p>The research contributes to demonstrating the fragility of existing safety measures for LLMs and emphasizes the need for further exploration of novel methods for safer open-sourcing.</p></li>
-</ol>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ul>
+<li><strong>Context-aware Decoding (CAD)</strong> is a decoding method that reduces factual mistakes/hallucinations while mostly retaining the match of lexical patterns in query-focused summarization (QFS) datasets.</li>
+<li>The study demonstrates that CAD can improve news summarization quality and reduce hallucination/factuality errors in QFS.</li>
+<li>Despite the benefits, CAD also introduces additional inference-time FLOPs and potentially slows down decoding speed, and the choice of hyperparameter α affects the performance.</li>
+</ul>
 </section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <ul>
-<li>Autoregressive Large Language Models (LLMs) have become ubiquitous in user-facing applications, prompting extensive safety training to ensure human alignment and prevent nefarious usage.</li>
-<li>Current safety measures, such as RLHF techniques and fine-tuning, may still be circumvented, leading to harmful outputs or compliance with harmful behavior requests.</li>
-<li>The paper challenges the assumption that attackers are limited to specific input formats, advocating for unrestricted inputs in the extraction of harmful behavior content from open-source models.</li>
+<li>Query-focused summarization (QFS) aims to provide a summary of a single/multiple documents satisfying the information needs of a given query.</li>
+<li>Large language models (LLMs) in QFS/RAG pipeline can lead to the hallucination problem where the generated summary contains information contradicting the source documents.</li>
+<li>There is growing interest in developing decoding methods, such as CAD, to improve generation quality and reduce hallucination.</li>
 </ul>
 </section>
-<section id="methodology-results" class="level3">
-<h3 class="anchored" data-anchor-id="methodology-results">Methodology &amp; Results</h3>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
 <ul>
-<li>The study presents a threat model that allows successful low-resource attacks via <strong>priming attacks</strong> on open-source LLMs, leveraging API query access and the autoregressive nature of LLMs to fulfill harmful requests.</li>
-<li>Few-shot prompting using a helper LLM is employed to generate priming attacks, demonstrating significant improvements in the Attack Success Rate compared to baseline methods.</li>
-<li>Experiment results reveal the effectiveness of priming attacks in bypassing safety measures for LLMs, with the attack outperforming baselines across different model families and sizes.</li>
+<li><strong>Context-aware Decoding (CAD)</strong> leverages the idea of pointwise mutual information (PMI) and proposes a product-of-experts enhancement to make the generation more conditioned on the input evidence.</li>
+<li>The computational cost of CAD is analyzed in terms of FLOPs in comparison to vanilla decoding.</li>
 </ul>
 </section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<section id="experiments" class="level3">
+<h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
 <ul>
-<li>The paper concludes by emphasizing how priming attacks highlight the vulnerability of current safety measures and the need for further research into safer methods for open-sourcing LLMs.</li>
+<li>The study conducts experiments on QFS datasets and news summarization datasets with different choices of language models, including pre-trained and instruction finetuned models.</li>
+<li>Hyperparameters are set for decoding, including temperature, sampling strategies, and α for studying the effectiveness of CAD.</li>
+</ul>
+</section>
+<section id="results-and-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="results-and-analysis">Results and Analysis</h3>
+<ul>
+<li>CAD improves ROUGE scores and reduces factuality errors on news summarization datasets, but the improved FactKB scores are not reflected consistently in QFS datasets.</li>
+<li>The choice of α affects the trade-off between factuality errors and ROUGE scores.</li>
+<li>CAD slows down the decoding speed or requires more CUDA memory despite improving generation quality.</li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The use of automated evaluation processes and the absence of a rigorous human study to systematically study the priming process may raise concerns regarding the robustness and real-world applicability of the findings. Additionally, the paper acknowledges the underestimation of harmfulness by the evaluation tool used, indicating potential limitations in the accuracy of the reported Attack Success Rates. Further validation and real-world testing with human subjects may be necessary to accurately assess the impact and feasibility of priming attacks on open-source LLMs.</p>
+<p>The study provides valuable insights into CAD’s effectiveness in reducing hallucination and improving QFS quality. However, the findings are limited to language models no larger than 11B, and the trade-off between improved quality and increased computational complexity could be a concern that needs further investigation.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -207,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Link</td>
-<td><a href="https://browse.arxiv.org/html/2312.12321v1">https://browse.arxiv.org/html/2312.12321v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2312.14335v1">https://browse.arxiv.org/html/2312.14335v1</a></td>
 </tr>
 <tr class="even">
 <td>Truncated</td>
@@ -215,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Word Count</td>
-<td>2072</td>
+<td>2884</td>
 </tr>
 </tbody>
 </table>

@@ -2,6 +2,7 @@ import json
 import typer
 from jinja2 import Environment, BaseLoader
 from pathlib import Path
+from datetime import datetime
 
 app = typer.Typer()
 
@@ -9,21 +10,28 @@ app = typer.Typer()
 QMD_TEMPLATE = """
 ---
 title: "{{ example['meta']['title'] }}"
-subtitle: "{{ example['meta']['subtitle'] }}"
+description: "{{ example['meta']['subtitle'] }}"
 author: "{{ example['meta']['model'] }}"
 date: "{{ example['meta']['publish_date'] }}"
 link: "{{ example['meta']['url'] }}"
-image: "{{ example['meta']['url'] }}/x1.png"
+image: "{{ example['meta']['image'] }}"
 categories: {{ example['meta']['categories'] }}
+file-modified: {{ timestamp.strftime('%Y-%m-%d') }}
 format:
   html:
     code-overflow: wrap
 ---
 
+## tl;dr
+
+{{ example['meta']['subtitle'] }}
+
 {{ example['text'] }}
 
-### Appendix
+## Appendix
 
+|          |          |
+|----------|----------|
 | Link     | [{{ example['meta']['url'] }}]({{ example['meta']['url'] }})       |
 | Truncated       | {{ example['meta']['is_truncated'] }}       |
 | Word Count       | {{ example['meta']['word_count'] }}       |
@@ -50,7 +58,9 @@ def create_qmd_file(example, output_folder):
     template = env.from_string(QMD_TEMPLATE)
 
     # Render the template with data
-    rendered_qmd = template.render(example=example, current_date=current_date)
+    rendered_qmd = template.render(
+        example=example, current_date=current_date, timestamp=datetime.now()
+    )
 
     # Create output sub-folder
     folder_path.mkdir(parents=True, exist_ok=True)

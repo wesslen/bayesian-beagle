@@ -8,6 +8,7 @@
 
 <meta name="author" content="gpt-3.5-turbo-1106">
 <meta name="dcterms.date" content="2023-12-19">
+<meta name="description" content="LLMs are vulnerable to priming attacks that bypass safety training, increasing attack success rates on harmful behaviors.">
 
 <title>Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</title>
 <style>
@@ -65,12 +66,12 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta property="og:description" content="LLMs vulnerable to simple attacks bypassing safety training, improving harmful behavior detection by up to 3.3x.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2312.12321v1/x1.png">
+<meta property="og:description" content="LLMs are vulnerable to priming attacks that bypass safety training, increasing attack success rates on harmful behaviors.">
+<meta property="og:image" content="https://wesslen-blog.netlify.app/posts/Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks/None">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta name="twitter:description" content="LLMs vulnerable to simple attacks bypassing safety training, improving harmful behavior detection by up to 3.3x.">
-<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.12321v1/x1.png">
+<meta name="twitter:description" content="LLMs are vulnerable to priming attacks that bypass safety training, increasing attack success rates on harmful behaviors.">
+<meta name="twitter:image" content="https://wesslen-blog.netlify.app/posts/Bypassing_the_Safety_Training_of_Open-Source_LLMs_with_Priming_Attacks/None">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -123,8 +124,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</h1>
-            <p class="subtitle lead">LLMs vulnerable to simple attacks bypassing safety training, improving harmful behavior detection by up to 3.3x.</p>
-                                <div class="quarto-categories">
+                  <div>
+        <div class="description">
+          LLMs are vulnerable to priming attacks that bypass safety training, increasing attack success rates on harmful behaviors.
+        </div>
+      </div>
+                          <div class="quarto-categories">
                 <div class="quarto-category">security</div>
                 <div class="quarto-category">open-source</div>
               </div>
@@ -162,60 +167,65 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">tl;dr</h2>
+<p>LLMs are vulnerable to priming attacks that bypass safety training, increasing attack success rates on harmful behaviors.</p>
+</section>
 <section id="bypassing-the-safety-training-of-open-source-llms-with-priming-attacks" class="level1">
 <h1>Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</h1>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<ul>
+<li>Investigates the fragility of state-of-the-art (SOTA) open-source LLMs under simple optimization-free attacks called <strong>priming attacks</strong>.</li>
+<li>These attacks bypass alignment from safety training and can improve the attack success rate on harmful behaviors by up to 3.3×.</li>
+</ul>
+</section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">1 Introduction</h2>
 <ul>
-<li>Autoregressive Large Language Models (LLMs) are widely used but require safety training for human alignment to prevent nefarious uses.</li>
-<li>It’s possible to bypass safety alignment and obtain harmful outputs from open-source LLMs through optimization-free attacks called <strong>priming attacks</strong>.</li>
+<li>Discusses the need for safety training for LLMs and previous research on circumventing safety alignment in open-source LLMs.</li>
+<li>Introduces the concept of allowing unrestricted inputs for open-source LLMs.</li>
 </ul>
 </section>
 <section id="methodology-results" class="level2">
 <h2 class="anchored" data-anchor-id="methodology-results">2 Methodology &amp; Results</h2>
-<section id="a.-few-shot-priming-attacks" class="level3">
-<h3 class="anchored" data-anchor-id="a.-few-shot-priming-attacks">A. Few-Shot Priming Attacks</h3>
 <ul>
-<li>Used a non-safety-trained LLM to generate priming attacks for harmful behaviors based on a new prompt format.</li>
-<li>Showed that priming with slightly more prompt-dependent content can improve the attack success rate by up to 3.3× compared to baseline attacks.</li>
+<li>Describes the methodology for few-shot priming attacks involving prompting a non-safety-trained helper LLM and evaluates the attack success rate (ASR) on harmful behaviors.</li>
+<li>Presents results showing that priming attacks outperform baselines for all models.</li>
 </ul>
-</section>
-<section id="b.-experimental-setup" class="level3">
-<h3 class="anchored" data-anchor-id="b.-experimental-setup">B. Experimental Setup</h3>
-<ul>
-<li>Used the pre-trained Llama-2 model for few-shot prompting with specific prompts and affirmative initial responses.</li>
-<li>Evaluated the attack success rate using the SOTA response classification tool Llama Guard.</li>
-</ul>
-</section>
-<section id="results" class="level3">
-<h3 class="anchored" data-anchor-id="results">Results</h3>
-<ul>
-<li>Priming attacks outperformed baselines for all models, indicating the fragility of safety measures.</li>
-<li>Manual evaluation indicated that Llama Guard might underestimate harmfulness.</li>
-</ul>
-</section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">3 Conclusion</h2>
 <ul>
-<li>Highlighted the fragility of current LLM safety measures under increasingly practical assumptions.</li>
-<li>Suggested the need for further research into novel methods for safer open-sourcing.</li>
+<li>Summarizes the findings and highlights the fragility of current LLM safety measures under practical assumptions, raising concerns for the future of open-sourcing LLMs.</li>
 </ul>
 </section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="appendices" class="level2">
+<h2 class="anchored" data-anchor-id="appendices">Appendices</h2>
 <ul>
-<li>The paper provides a list of references for further exploration into the topic.</li>
+<li>Details on the experimental setup, few-shot prompt format, Llama Guard task instructions, manual evaluation benchmark, manual evaluation vs.&nbsp;Llama Guard, and runtime comparison.</li>
 </ul>
-<p>For more detailed information, refer to the original text.</p>
-<section id="appendix" class="level3">
-<h3 class="anchored" data-anchor-id="appendix">Appendix</h3>
-<p>Link | <a href="https://browse.arxiv.org/html/2312.12321v1">https://browse.arxiv.org/html/2312.12321v1</a> |<br>
-Truncated | False |<br>
-Word Count | 10319 |</p>
-
-
 </section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Link</td>
+<td><a href="https://browse.arxiv.org/html/2312.12321v1">https://browse.arxiv.org/html/2312.12321v1</a></td>
+</tr>
+<tr class="even">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>Word Count</td>
+<td>4388</td>
+</tr>
+</tbody>
+</table>
+
+
 </section>
 </section>
 

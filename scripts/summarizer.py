@@ -190,10 +190,10 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
             # get first image
             try:
                 png_url = extract_first_png_image(html_content)
-
                 if png_url is None:
                     logger.warning("No .png image found in the HTML content.")
                 else:
+                    png_url = f"{url}/{png_url}"
                     print(f"Found .png image URL: {png_url}")
 
             except Exception as e:
@@ -222,7 +222,7 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
                         "%Y-%m-%d"
                     ),
                     "model": MODEL,
-                    "image": f"{url}/{png_url}",
+                    "image": png_url,
                     "word_count": word_count,
                     "is_truncated": True if word_count > 15000 else False,
                 },

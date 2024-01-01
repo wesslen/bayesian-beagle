@@ -14,17 +14,13 @@ description: "{{ example['meta']['subtitle'] }}"
 author: "{{ example['meta']['model'] }}"
 date: "{{ example['meta']['publish_date'] }}"
 link: "{{ example['meta']['url'] }}"
-image: "{{ example['meta']['image'] }}"
+image: "{{ image }}"
 categories: {{ example['meta']['categories'] }}
 file-modified: {{ timestamp.strftime('%Y-%m-%d') }}
 format:
   html:
     code-overflow: wrap
 ---
-
-## tl;dr
-
-{{ example['meta']['subtitle'] }}
 
 {{ example['text'] }}
 
@@ -45,6 +41,11 @@ def create_qmd_file(example, output_folder):
     title = example["meta"]["title"]
     folder_name = title.replace(" ", "_")
     current_date = example["meta"]["publish_date"]
+    image = (
+        "../../../bayesian-beagle.png"
+        if example["meta"]["image"] is None
+        else example["meta"]["image"]
+    )
     file_name = f"{current_date}-{folder_name}.qmd"
     folder_path = Path(output_folder) / folder_name
     file_path = folder_path / file_name
@@ -59,7 +60,10 @@ def create_qmd_file(example, output_folder):
 
     # Render the template with data
     rendered_qmd = template.render(
-        example=example, current_date=current_date, timestamp=datetime.now()
+        example=example,
+        current_date=current_date,
+        timestamp=datetime.now(),
+        image=image,
     )
 
     # Create output sub-folder

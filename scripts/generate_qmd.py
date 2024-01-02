@@ -34,13 +34,35 @@ format:
 """
 
 
+def convert_to_folder_name(title):
+    """
+    Convert a given string to a folder name format by replacing spaces, slashes,
+    question marks, colons, commas, and hyphens with underscores.
+
+    Parameters:
+    title (str): The string to be converted into folder name format.
+
+    Returns:
+    str: The converted folder name.
+    """
+    # Characters to be replaced
+    replace_chars = " /?:,-"
+
+    # Create a translation table for replacing characters
+    trans_table = str.maketrans(replace_chars, "_" * len(replace_chars))
+
+    # Replace specified characters with underscores
+    folder_name = title.translate(trans_table)
+
+    return folder_name
+
+
 def create_qmd_file(example, output_folder):
     """
     Create a .qmd file from a JSON dictionary
     """
     title = example["meta"]["title"]
-    folder_name = title.replace(" ", "_")
-    folder_name = title.replace("/", "_")
+    folder_name = convert_to_folder_name(title)
     current_date = example["meta"]["publish_date"]
     image = (
         "../../../bayesian-beagle.png"

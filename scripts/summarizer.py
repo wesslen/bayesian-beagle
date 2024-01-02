@@ -202,7 +202,9 @@ def extract_first_png_image(html_content):
 def summarize(
     input_jsonl: str,
     output_file_path: str = "data/output.jsonl",
-    force_generate_all: bool = False,
+    force_generate_all: bool = typer.Option(
+        False, "-f", "--force-generate-all"
+    ),
 ):
     """
     Summarizes texts from Arxiv HTML pages listed in a JSONL file using OpenAI's Chat API.

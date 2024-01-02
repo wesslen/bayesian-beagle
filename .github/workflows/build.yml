@@ -5,7 +5,13 @@ on:
     paths:
       - 'data/output.jsonl'
   workflow_dispatch:
-
+    inputs:
+      force_generate_all:
+        description: 'Force generate all posts'
+        required: false
+        type: boolean
+        default: false
+    
 jobs:
   scheduled:
     runs-on: ubuntu-latest
@@ -31,7 +37,7 @@ jobs:
         sudo apt-get install -f
     - name: Build new site
       run: |
-        python scripts/generate_qmd.py data/output.jsonl posts
+        python scripts/generate_qmd.py data/output.jsonl posts -f ${{ github.event.inputs.force_generate_all }}
         quarto render
     - name: Commit and push if it changed
       run: |-

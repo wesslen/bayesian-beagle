@@ -173,16 +173,23 @@ def truncate_string(text, token_threshold):
 
 def extract_first_png_image(html_content):
     """
-    Extract the first .png image URL from a given HTML content.
+    Extract the first .png image URL from the first <section class="ltx_section">
+    in the given HTML content.
 
     :param html_content: A string containing HTML content.
-    :return: URL of the first .png image or None if no .png image is found.
+    :return: URL of the first .png image in the first section or None if no .png image is found.
     """
     try:
         soup = BeautifulSoup(html_content, "lxml")
 
-        for img in soup.find_all("img"):
-            if img["src"].endswith(".png"):
+        # Find the first section with class 'ltx_section'
+        first_section = soup.find("section", class_="ltx_section")
+        if first_section:
+            # Find the first img with .png in the first section
+            img = first_section.find(
+                "img", src=lambda x: x and x.endswith(".png")
+            )
+            if img:
                 return img["src"]
 
         return None

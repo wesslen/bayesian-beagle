@@ -11,7 +11,7 @@ QMD_TEMPLATE = """
 ---
 title: "{{ example['meta']['title'] }}"
 description: "{{ example['meta']['subtitle'] }}"
-author: authors
+author: {{ authors }}
 date: "{{ example['meta']['publish_date'] }}"
 image: "{{ image }}"
 categories: {{ example['meta']['categories'] }}

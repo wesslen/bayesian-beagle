@@ -57,7 +57,7 @@ def convert_to_folder_name(title):
     return folder_name
 
 
-def create_qmd_file(example, output_folder):
+def create_qmd_file(example, output_folder, force_generate_all=False):
     """
     Create a .qmd file from a JSON dictionary
     """
@@ -74,7 +74,7 @@ def create_qmd_file(example, output_folder):
     file_path = folder_path / file_name
 
     # Check if the file already exists
-    if file_path.is_file():
+    if not force_generate_all and file_path.is_file():
         print(f"File already exists: {file_path}")
         return
 
@@ -100,14 +100,18 @@ def create_qmd_file(example, output_folder):
 
 
 @app.command()
-def generate_qmd(input_jsonl: str, output_folder: str):
+def generate_qmd(
+    input_jsonl: str,
+    output_folder: str,
+    force_generate_all: bool = typer.Option(False, "-f", "--force-generate-all"),
+):
     """
     Generate QMD files from a JSONL file
     """
     with open(input_jsonl, "r", encoding="utf-8") as file:
         for line in file:
             example = json.loads(line)
-            create_qmd_file(example, output_folder)
+            create_qmd_file(example, output_folder, force_generate_all)
 
 
 if __name__ == "__main__":

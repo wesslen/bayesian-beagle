@@ -30,7 +30,8 @@ format:
 |----------|----------|
 | Model     | {{ example['meta']['model'] }}       |
 | Date Generated     | {{ timestamp.strftime('%Y-%m-%d') }}       |
-| HTML     | {{ example['meta']['url'] }}       |
+| Abstract | [{{ example['meta']['links']['abs'] }}]({{ example['meta']['links']['abs'] }})        |
+| HTML     | [{{ example['meta']['links']['html'] }}]({{ example['meta']['links']['html'] }})       |
 | Truncated       | {{ example['meta']['is_truncated'] }}       |
 | Word Count       | {{ example['meta']['word_count'] }}       |
 """

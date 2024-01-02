@@ -173,22 +173,19 @@ def truncate_string(text, token_threshold):
 
 def extract_first_png_image(html_content):
     """
-    Extract the first .png image URL from the first <section class="ltx_section">
-    in the given HTML content.
+    Extract the first .png image URL from the HTML content, searching through each 
+    <section class="ltx_section"> until a .png image is found.
 
     :param html_content: A string containing HTML content.
-    :return: URL of the first .png image in the first section or None if no .png image is found.
+    :return: URL of the first .png image found in the sections, or None if no .png image is found.
     """
     try:
         soup = BeautifulSoup(html_content, "lxml")
 
-        # Find the first section with class 'ltx_section'
-        first_section = soup.find("section", class_="ltx_section")
-        if first_section:
-            # Find the first img with .png in the first section
-            img = first_section.find(
-                "img", src=lambda x: x and x.endswith(".png")
-            )
+        # Iterate through each section with class 'ltx_section'
+        for section in soup.find_all("section", class_="ltx_section"):
+            # Find the first img with .png in the current section
+            img = section.find("img", src=lambda x: x and x.endswith(".png"))
             if img:
                 return img["src"]
 
@@ -196,7 +193,6 @@ def extract_first_png_image(html_content):
     except Exception as e:
         logger.error(f"An error occurred: {e}")
         raise
-
 
 @app.command()
 def summarize(

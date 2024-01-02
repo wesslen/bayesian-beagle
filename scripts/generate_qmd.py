@@ -14,7 +14,7 @@ description: "{{ example['meta']['subtitle'] }}"
 author: "{{ example['meta']['model'] }}"
 date: "{{ example['meta']['publish_date'] }}"
 link: "{{ example['meta']['url'] }}"
-image: "{{ example['meta']['image'] }}"
+image: "{{ image }}"
 categories: {{ example['meta']['categories'] }}
 file-modified: {{ timestamp.strftime('%Y-%m-%d') }}
 format:

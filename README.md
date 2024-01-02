@@ -72,4 +72,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Acknowledgments
 
 - ArXiv for making scientific articles openly accessible to all.
-- Quarto for their outstanding publishing tools.
+- [Posit](https://posit.co/) for their outstanding publishing tool, Quarto.
+- [Simon Willison](https://github.com/simonw)'s helpful [`strip-tags`](https://github.com/simonw/strip-tags) library

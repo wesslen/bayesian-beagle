@@ -240,11 +240,13 @@ def summarize(
 
             # count words, if longer than 15,000 then truncate
             word_count = count_words(text)
-            if word_count > 15000:
+
+            THRESHOLD = 10000
+            if word_count > THRESHOLD:
                 logging.info(
-                    f"Warning: HTML content for {arxiv_id} exceeds 15,000 tokens. Truncating."
+                    f"Warning: HTML content for {arxiv_id} exceeds 10,000 tokens. Truncating."
                 )
-                text = truncate_string(text, token_threshold=15000)
+                text = truncate_string(text, token_threshold=THRESHOLD)
 
             logging.info(f"{word_count} word counts")
             summary = assistant.process_text(text, "summarize")
@@ -264,7 +266,7 @@ def summarize(
                     "model": MODEL,
                     "image": png_url,
                     "word_count": word_count,
-                    "is_truncated": True if word_count > 15000 else False,
+                    "is_truncated": True if word_count > THRESHOLD else False,
                 },
             }
 

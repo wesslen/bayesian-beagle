@@ -11,12 +11,11 @@ QMD_TEMPLATE = """
 ---
 title: "{{ example['meta']['title'] }}"
 description: "{{ example['meta']['subtitle'] }}"
-author: "{{ example['meta']['model'] }}"
+author: "{{ example['meta']['authors'] }}"
 date: "{{ example['meta']['publish_date'] }}"
-link: "{{ example['meta']['url'] }}"
 image: "{{ image }}"
 categories: {{ example['meta']['categories'] }}
-file-modified: {{ timestamp.strftime('%Y-%m-%d') }}
+authors: {{ authors }}
 format:
   html:
     code-overflow: wrap
@@ -30,6 +29,7 @@ format:
 
 |          |          |
 |----------|----------|
+| Model     | {{ example['meta']['model'] }}       |
 | Date Generated     | {{ timestamp.strftime('%Y-%m-%d') }}       |
 | HTML     | [{{ example['meta']['url'] }}]({{ example['meta']['url'] }})       |
 | Truncated       | {{ example['meta']['is_truncated'] }}       |
@@ -75,6 +75,7 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
     file_name = f"{current_date}-{folder_name}.qmd"
     folder_path = Path(output_folder) / folder_name
     file_path = folder_path / file_name
+    authors = ", ".join(example["meta"]["authors"])
 
     # Check if the file already exists
     if not force_generate_all and file_path.is_file():
@@ -90,6 +91,7 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
         current_date=current_date,
         timestamp=datetime.now(),
         image=image,
+        authors=authors,
     )
 
     # Create output sub-folder

@@ -238,10 +238,9 @@ def summarize(
             except Exception as e:
                 logger.error(f"Failed to extract .png image: {e}")
 
-            # count words, if longer than 15,000 then truncate
+            # count words, if longer than 9,500 then truncate
             word_count = count_words(text)
-
-            THRESHOLD = 10000
+            THRESHOLD = 9500
             if word_count > THRESHOLD:
                 logging.info(
                     f"Warning: HTML content for {arxiv_id} exceeds 10,000 tokens. Truncating."

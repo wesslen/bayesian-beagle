@@ -144,27 +144,27 @@ def remove_double_quotes(input_string):
     return input_string.replace('"', "")
 
 
-def count_words(text: str) -> int:
-    words = text.split()
-    return len(words)
+def count_token(text: str) -> int:
+    token_count = len(text) // 4  # Rough estimate of token count
+    return token_count
 
 
 def truncate_string(text, token_threshold):
     """
-    Truncate a string after a specified number of word tokens.
+    Truncate a string after a specified number of characters based on token approximation.
 
     :param text: The input string.
-    :param token_threshold: The maximum number of word tokens allowed.
-    :return: A truncated version of the string if it exceeds the token threshold.
+    :param token_threshold: The maximum number of tokens allowed.
+    :return: A truncated version of the string if it exceeds the character limit based on token approximation.
     """
 
-    # Split the text into words (tokens)
-    tokens = text.split()
+    # Calculate the character limit (approximation based on 4 characters per token)
+    char_limit = token_threshold * 4
 
-    # Check if the number of tokens is greater than the threshold
-    if len(tokens) > token_threshold:
-        # Truncate the list of tokens and join back into a string
-        truncated_text = " ".join(tokens[:token_threshold])
+    # Check if the number of characters is greater than the limit
+    if len(text) > char_limit:
+        # Truncate the text to the character limit
+        truncated_text = text[:char_limit]
         return truncated_text
     else:
         # If the text is within the limit, return it as is
@@ -256,9 +256,9 @@ def summarize(
             except Exception as e:
                 logger.error(f"Failed to extract .png image: {e}")
 
-            # count words, if longer than 9,500 then truncate
-            word_count = count_words(text)
-            THRESHOLD = 9500
+            # count words, if longer than 15,000 then truncate
+            word_count = count_token(text)
+            THRESHOLD = 15000
             if word_count > THRESHOLD:
                 logging.info(
                     f"Warning: HTML content for {arxiv_id} exceeds {THRESHOLD} tokens. Truncating."

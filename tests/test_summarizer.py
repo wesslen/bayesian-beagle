@@ -7,7 +7,7 @@ sys.path.append(str(Path(__file__).parent.parent / "scripts"))
 from summarizer import (
     extract_text_from_html,
     is_valid_arxiv_id,
-    count_words,
+    count_token,
     get_url_content,
     OpenAIAssistant,
     remove_double_quotes,
@@ -55,9 +55,9 @@ def test_extract_text_from_html():
     assert text == "Test paragraph."
 
 
-def test_count_words():
+def test_token_words():
     text = "This is a test string with eight words."
-    assert count_words(text) == 8
+    assert count_token(text) == 9
 
 
 def test_is_valid_arxiv_id():

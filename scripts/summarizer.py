@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import logging
 from strip_tags import strip_tags
+from requests.exceptions import HTTPError
 
 
 class OpenAIAssistant:
@@ -46,10 +47,27 @@ class OpenAIAssistant:
             ],
         )
 
-        result = response.choices[0].message.content
-        # Cache the result
-        self.cache[(text, task)] = result
-        return result
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": system_message},
+                    {"role": "user", "content": user_message},
+                ],
+            )
+
+            result = response.choices[0].message.content
+            # Cache the result
+            self.cache[(text, task)] = result
+            return result
+        except HTTPError as e:
+            logger.error(f"OpenAI API error for task '{task}': {e}")
+            return None
+        except Exception as e:
+            logger.error(
+                f"Unexpected error during processing text for task '{task}': {e}"
+            )
+            return None
 
 
 app = typer.Typer()
@@ -243,13 +261,25 @@ def summarize(
             THRESHOLD = 9500
             if word_count > THRESHOLD:
                 logging.info(
-                    f"Warning: HTML content for {arxiv_id} exceeds 10,000 tokens. Truncating."
+                    f"Warning: HTML content for {arxiv_id} exceeds {THRESHOLD} tokens. Truncating."
                 )
                 text = truncate_string(text, token_threshold=THRESHOLD)
 
             logging.info(f"{word_count} word counts")
+
             summary = assistant.process_text(text, "summarize")
+            if summary is None:
+                logger.error(
+                    f"Skipping record {arxiv_id} due to an error in text summarization."
+                )
+                continue  # Skip current record
+
             tldr = assistant.process_text(first_result.summary, "tldr")
+            if tldr is None:
+                logger.error(
+                    f"Skipping record {arxiv_id} due to an error in creating tldr."
+                )
+                continue  # Skip current record
 
             output_data = {
                 "id": arxiv_id,

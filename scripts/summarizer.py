@@ -174,7 +174,11 @@ def extract_first_png_image(html_content):
 
 
 @app.command()
-def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
+def summarize(
+    input_jsonl: str,
+    output_file_path: str = "data/output.jsonl",
+    force_generate_all: bool = False,
+):
     """
     Summarizes texts from Arxiv HTML pages listed in a JSONL file using OpenAI's Chat API.
 
@@ -202,11 +206,12 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
             categories = data["categories"]
 
             # Skip if already processed
-            if arxiv_id in existing_ids:
-                logging.info(
-                    f"Arxiv ID {arxiv_id} already processed. Skipping."
-                )
-                continue
+            if force_generate_all is False:
+                if arxiv_id in existing_ids:
+                    logging.info(
+                        f"Arxiv ID {arxiv_id} already processed. Skipping."
+                    )
+                    continue
 
             valid, first_result = is_valid_arxiv_id(arxiv_id)
             if not valid:
@@ -214,12 +219,11 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
                 continue
 
             url = f"https://browse.arxiv.org/html/{arxiv_id}"
-            response = get_url_content(url)
-            if response is None:
+            html_content = get_url_content(url)
+            if html_content is None:
                 logging.info(f"HTML output not available for {arxiv_id}")
                 continue
 
-            html_content = response.content.decode("utf-8")
             text = extract_text_from_html(html_content)
 
             # get first image

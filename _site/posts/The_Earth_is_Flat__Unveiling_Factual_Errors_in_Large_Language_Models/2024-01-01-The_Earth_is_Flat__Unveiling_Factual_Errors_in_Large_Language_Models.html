@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Wenxuan Wang’, ‘Juluan Shi’, ‘Zhaopeng Tu’, ‘Youliang Yuan’, ‘Jen-tse Huang’, ‘Wenxiang Jiao’, ‘Michael R. Lyu’]">
 <meta name="dcterms.date" content="2024-01-01">
-<meta name="description" content="FactChecker exposes factual errors in large language models, finding up to 45% inaccuracies and improving accuracy through learning.">
+<meta name="description" content="TL;DR: FactChecker is a new automatic testing framework that uncovers factual inaccuracies in large language models with up to 45% error detection.">
 
 <title>Bayesian beagle - The Earth is Flat? Unveiling Factual Errors in Large Language Models</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - The Earth is Flat? Unveiling Factual Errors in Large Language Models">
-<meta property="og:description" content="FactChecker exposes factual errors in large language models, finding up to 45% inaccuracies and improving accuracy through learning.">
+<meta property="og:description" content="TL;DR: FactChecker is a new automatic testing framework that uncovers factual inaccuracies in large language models with up to 45% error detection.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2401.00761v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - The Earth is Flat? Unveiling Factual Errors in Large Language Models">
-<meta name="twitter:description" content="FactChecker exposes factual errors in large language models, finding up to 45% inaccuracies and improving accuracy through learning.">
+<meta name="twitter:description" content="TL;DR: FactChecker is a new automatic testing framework that uncovers factual inaccuracies in large language models with up to 45% error detection.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00761v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    FactChecker exposes factual errors in large language models, finding up to 45% inaccuracies and improving accuracy through learning.
+    TL;DR: FactChecker is a new automatic testing framework that uncovers factual inaccuracies in large language models with up to 45% error detection.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Wenxuan Wang, Juluan Shi, Zhaopeng Tu, Youliang Yuan, Jen-tse Huang, Wenxiang Jiao, Michael R. Lyu </p>
           </div>
   </div>
     
@@ -155,85 +155,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2401.00761v1/x1.png" class="img-fluid"></p>
-<section id="summary-of-biasasker-measuring-the-bias-in-your-chatbot-via-asking-questions" class="level3">
-<h3 class="anchored" data-anchor-id="summary-of-biasasker-measuring-the-bias-in-your-chatbot-via-asking-questions">Summary of “BiasAsker: Measuring the Bias in Your Chatbot via Asking Questions”</h3>
-<section id="main-findings" class="level4">
-<h4 class="anchored" data-anchor-id="main-findings">Main Findings</h4>
+<section id="biasasker-measuring-the-bias-in-your-chatbot-via-asking-questions" class="level1">
+<h1>BiasAsker: Measuring the Bias in Your Chatbot via Asking Questions</h1>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ol type="1">
+<li><strong>BiasAsker</strong> is introduced as a testing method to identify bias in conversational AI software through asking questions.</li>
+<li>The study demonstrates that BiasAsker can effectively reveal factual errors in a variety of large language models used in chatbot and digital assistant applications with an accuracy of up to 78.2% for commercial LLMs and an improvement of 33.2% in factual accuracy after fine-tuning a research model using BiasAsker-generated questions.</li>
+<li>BiasAsker is shown to be highly effective in identifying factual errors, passing a manual validation with a ~93% accuracy in identified errors.</li>
+</ol>
+</section>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<p>Recent advancements in Large Language Models (LLMs) have led to the rapid adoption of AI-driven chatbot and digital assistant applications. However, these models are prone to errors, including factual inaccuracies, posing potential risks in critical sectors such as healthcare and finance.</p>
+</section>
+<section id="approach-and-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="approach-and-implementation">Approach and Implementation</h3>
+<p>BiasAsker operates in three stages: <strong>Knowledge Graph Construction</strong>, <strong>Question Generation</strong>, and <strong>Answer Assessment</strong>. The study employs <strong>Wikidata</strong> as a primary knowledge base, generates questions using a rule-based approach, and evaluates responses using performance metrics and comparison methods.</p>
+</section>
+<section id="evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation">Evaluation</h3>
 <ul>
-<li>BiasAsker proposes a novel testing method that can automatically find the <strong>bias in conversational AI software</strong> by asking questions.</li>
-<li>It reveals a significant number of <strong>factual errors</strong> in both commercially deployed and academic LLMs and achieves an improvement in factual accuracy.</li>
-<li><strong>Multi-hop questions</strong> and <strong>WH questions</strong> are particularly challenging for LLMs, leading to a higher incidence of errors.</li>
+<li><strong>Effectiveness of BiasAsker</strong>: BiasAsker successfully identifies factual errors across various LLMs, notably detecting 36.9% of the test cases with errors.</li>
+<li><strong>Validity of Identified Factual Errors</strong>: Upon manual inspection, 93% of the identified errors were found to be valid.</li>
+<li><strong>Using BiasAsker for Improvement</strong>: Test cases generated by BiasAsker led to substantial improvements in factual accuracy, with an average improvement of 6.5% using in-context learning and 33.2% via fine-tuning of the research models.</li>
 </ul>
 </section>
-<section id="introduction" class="level4">
-<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
-<ul>
-<li>Recent advancements in LLMs have led to their rapid integration into various sectors, with potential <strong>errors in factual accuracy</strong> posing a significant barrier to their development and adoption.</li>
-</ul>
 </section>
-<section id="background" class="level4">
-<h4 class="anchored" data-anchor-id="background">Background</h4>
-<ul>
-<li><strong>Factual errors</strong> and the importance of identifying and rectifying such inaccuracies are discussed.</li>
-<li>The significance of <strong>knowledge graphs</strong> in storing structured repository of human knowledge is outlined.</li>
-</ul>
-</section>
-<section id="approach-and-implementation" class="level4">
-<h4 class="anchored" data-anchor-id="approach-and-implementation">Approach and Implementation</h4>
-<ul>
-<li>BiasAsker consists of three stages: <strong>Knowledge Graph Construction</strong>, <strong>Question Generation</strong>, and <strong>Answer Assessment</strong>, leveraging <strong>rule-based question generation</strong> and <strong>multiple matching metrics</strong> for evaluation.</li>
-</ul>
-</section>
-<section id="evaluation" class="level4">
-<h4 class="anchored" data-anchor-id="evaluation">Evaluation</h4>
-<ul>
-<li>BiasAsker effectively identifies and validates factual errors in various LLMs, with a focus on <strong>WH questions</strong>, <strong>multi-hop questions</strong>, and their relative difficulty.</li>
-</ul>
-</section>
-<section id="rq1-effectiveness-of-biasasker" class="level4">
-<h4 class="anchored" data-anchor-id="rq1-effectiveness-of-biasasker">RQ1: Effectiveness of BiasAsker</h4>
-<ul>
-<li>BiasAsker successfully detects a significant number of <strong>factual errors</strong> across LLMs, with GPT4 performing better than other systems.</li>
-</ul>
-</section>
-<section id="rq2-validity-of-identified-factual-errors" class="level4">
-<h4 class="anchored" data-anchor-id="rq2-validity-of-identified-factual-errors">RQ2: Validity of Identified Factual Errors</h4>
-<ul>
-<li>BiasAsker’s detected factual errors are validated through manual inspection, with a high percentage of errors found to be valid.</li>
-</ul>
-</section>
-<section id="rq3-using-biasasker-for-improvement" class="level4">
-<h4 class="anchored" data-anchor-id="rq3-using-biasasker-for-improvement">RQ3: Using BiasAsker for Improvement</h4>
-<ul>
-<li>BiasAsker demonstrates potential to improve the <strong>factual accuracy</strong> of LLMs through methods such as <strong>In-Context Learning (ICL)</strong> and <strong>fine-tuning</strong>, showcasing noteworthy improvements.</li>
-</ul>
-</section>
-<section id="critique" class="level4">
-<h4 class="anchored" data-anchor-id="critique">Critique</h4>
-<ul>
-<li>The study acknowledges limitations in human annotation and NLP techniques, as well as the reliance on a single knowledge base (Wikidata).</li>
-<li>The limited exploration of various LLMs during evaluation is recognized as a potential limitation.</li>
-</ul>
-<p>In conclusion, BiasAsker emerges as a novel and promising framework for uncovering bias and factual errors in conversational AI software, providing a pathway for improving its accuracy and dependability.</p>
-</section>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<p>The paper’s reliance on NLP methods for error detection and the limitation to a single knowledge base may introduce the potential for false positives or overlook factual inaccuracies. Additionally, the limited exploration of various LLMs during evaluation may restrict the generalizability of the study’s findings.</p>
+<p>Overall, the study’s use of BiasAsker offers a valuable contribution to the field of conversational AI software testing, demonstrating its effectiveness in identifying and rectifying factual inaccuracies in large language models. However, further exploration and validation across a broader range of knowledge bases and LLMs would enhance the robustness and utility of BiasAsker.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00761v1">https://browse.arxiv.org/html/2401.00761v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>11574</td>
 </tr>
@@ -241,6 +217,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Linyi Yang’, ‘Shuibai Zhang’, ‘Zhuohao Yu’, ‘Guangsheng Bao’, ‘Yidong Wang’, ‘Jindong Wang’, ‘Ruochen Xu’, ‘Wei Ye’, ‘Xing Xie’, ‘Weizhu Chen’, ‘Yue Zhang’]">
 <meta name="dcterms.date" content="2023-12-26">
-<meta name="description" content="LLMs improve in-context learning with task-specific fine-tuned models, enhancing generalizability and factuality in language applications.">
+<meta name="description" content="TL;DR: A framework enhances Large Language Models’ reliability, generalizability, and factuality, using discriminative models during inference.">
 
 <title>Bayesian beagle - Supervised Knowledge Makes Large Language Models Better In-context Learners</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Supervised Knowledge Makes Large Language Models Better In-context Learners">
-<meta property="og:description" content="LLMs improve in-context learning with task-specific fine-tuned models, enhancing generalizability and factuality in language applications.">
+<meta property="og:description" content="TL;DR: A framework enhances Large Language Models’ reliability, generalizability, and factuality, using discriminative models during inference.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.15918v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Supervised Knowledge Makes Large Language Models Better In-context Learners">
-<meta name="twitter:description" content="LLMs improve in-context learning with task-specific fine-tuned models, enhancing generalizability and factuality in language applications.">
+<meta name="twitter:description" content="TL;DR: A framework enhances Large Language Models’ reliability, generalizability, and factuality, using discriminative models during inference.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.15918v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    LLMs improve in-context learning with task-specific fine-tuned models, enhancing generalizability and factuality in language applications.
+    TL;DR: A framework enhances Large Language Models’ reliability, generalizability, and factuality, using discriminative models during inference.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Linyi Yang, Shuibai Zhang, Zhuohao Yu, Guangsheng Bao, Yidong Wang, Jindong Wang, Ruochen Xu, Wei Ye, Xing Xie, Weizhu Chen, Yue Zhang </p>
           </div>
   </div>
     
@@ -155,89 +155,82 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.15918v1/x1.png" class="img-fluid"></p>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>The paper introduces SuperContext, a strategy to enhance the reliability of Large Language Models (LLMs) by integrating supervised knowledge from task-specific fine-tuned models during the inference stage. The study examines Natural Language Understanding (NLU) and Question Answering (QA) tasks, demonstrating that SuperContext can significantly improve LLM performance concerning generalizability and factuality.</p>
-<section id="three-major-takeaways" class="level3">
-<h3 class="anchored" data-anchor-id="three-major-takeaways">Three Major Takeaways</h3>
-<ol type="1">
-<li><strong>Supervised Knowledge Enhancement</strong>: SuperContext leverages task-specific fine-tuned models to provide supervised knowledge to enhance LLMs, leading to improved generalization and factuality.</li>
-<li><strong>Improved Out-of-distribution Generalizability</strong>: The study reveals that SuperContext outperforms traditional in-context learning methods, particularly in managing out-of-distribution data and minimizing hallucinations.</li>
-<li><strong>Task-Specific Adaptability</strong>: The paper demonstrates the efficacy of SuperContext across diverse tasks, showing its potential in fostering more reliable LLMs.</li>
-</ol>
+<section id="supervised-knowledge-in-large-language-models" class="level1">
+<h1>Supervised Knowledge in Large Language Models</h1>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li><strong>Large Language Models (LLMs)</strong> demonstrate emerging in-context learning abilities through prompt engineering and have garnered significant performance across diverse tasks.</li>
+<li>The study introduces <strong>SuperContext</strong>, a framework that uses task-Specific fine-tuned Language Models (SLMs) to improve LLMs’ in-context learning during the inference stage.</li>
+<li>Using SuperContext, <strong>enhanced versions of Llama 2 and ChatGPT surpass their original versions regarding generalizability and factuality</strong>.</li>
+</ul>
 </section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<ul>
+<li><strong>Large language models (LLMs)</strong> have shown robust performance across various tasks, but face challenges such as substantial resources for training and deployment, slow inference times, and susceptibility to hallucinations.</li>
+</ul>
 </section>
 <section id="method" class="level2">
 <h2 class="anchored" data-anchor-id="method">Method</h2>
-<section id="in-context-learning-baseline" class="level3">
-<h3 class="anchored" data-anchor-id="in-context-learning-baseline">In-context Learning Baseline</h3>
 <ul>
-<li>In-context learning serves as the cornerstone for stimulating the in-context learning ability of LLMs by providing in-domain data for several NLU tasks with 16-shot examples.</li>
-<li>It sets the groundwork for the evaluation of traditional in-context learning and the proposed SuperContext method.</li>
+<li><strong>In-context Learning Baseline</strong>: Traditional in-context learning involves using in-domain data for several Natural Language Understanding (NLU) tasks with 16-shot examples.</li>
+<li><strong>SuperContext</strong>: A simple and general approach that incorporates the auxiliary knowledge from a small, discriminative model with LLMs when making predictions for new tasks.</li>
 </ul>
-</section>
-<section id="supercontext" class="level3">
-<h3 class="anchored" data-anchor-id="supercontext">SuperContext</h3>
-<ul>
-<li>SuperContext is introduced as a simple and general approach for in-context learning, integrating the auxiliary knowledge from a small, discriminative model with LLMs during predictions.</li>
-<li>The method involves incorporating the predictive results and confidence of a discriminative model in the LLM’s inference process.</li>
-</ul>
-</section>
 </section>
 <section id="experiments" class="level2">
 <h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
-<section id="setup" class="level3">
-<h3 class="anchored" data-anchor-id="setup">Setup</h3>
 <ul>
-<li>The experiments involve source models, datasets, and baselines for NLU and QA tasks, with a focus on GLUE-X and SQuAD 2.0 for evaluation.</li>
+<li><strong>Setup</strong>: Tested on 8 NLU tasks and 1 generation task to validate SuperContext on GLUE-X benchmark and SQuAD 2.0.</li>
+<li><strong>NLU Results</strong>: SuperContext outperformed both SLMs and LLMs across NLU tasks, surpassing the supervised task-specific model, ELECTRA-large, as well.</li>
+<li><strong>QA Results</strong>: SuperContext significantly improved accuracy for open questions in the QA task.</li>
 </ul>
-</section>
-<section id="nlu-results" class="level3">
-<h3 class="anchored" data-anchor-id="nlu-results">NLU Results</h3>
-<ul>
-<li>SuperContext outperforms both fine-tuned task-specific models and traditional in-context learning methods in NLU tasks, showcasing its superior capability.</li>
-<li>Task-level analysis reveals performance improvements across various NLU tasks, indicating the potential of SuperContext in diverse scenarios.</li>
-</ul>
-</section>
-<section id="qa-results" class="level3">
-<h3 class="anchored" data-anchor-id="qa-results">QA Results</h3>
-<ul>
-<li>In Question Answering tasks, SuperContext shows significant improvements over traditional in-context learning methods, particularly in minimizing hallucinations and enhancing accuracy for open questions.</li>
-</ul>
-</section>
 </section>
 <section id="analysis-and-discussion" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-and-discussion">Analysis and Discussion</h2>
-<p>The paper discusses reversed predictions, interpretation analysis, and the effect of SLM confidence. It emphasizes the critical role of SLM confidence in the prompt design of SuperContext and highlights the interpretability and reliability of the proposed method.</p>
+<ul>
+<li><strong>Reversed Predictions</strong>: SuperContext lead to the correction of predictions made by LLMs in both NLU and QA tasks.</li>
+<li><strong>Interpretation Analysis</strong>: LLMs demonstrated the ability to recall influential in-context examples and output rationales, with SuperContext resulting in higher performance and overlap with human rationale.</li>
+<li><strong>The Effect of SLM Confidence</strong>: There is a positive correlation between SLM confidence and LLM performance, emphasizing the importance of including both prediction and confidence in the prompt design.</li>
+</ul>
 </section>
 <section id="critique" class="level2">
 <h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<p>The paper provides a comprehensive framework for enhancing LLMs, but it could benefit from further exploration of the limitations and ethical considerations of the proposed method. Additionally, a more detailed comparison with existing methods and analyses, especially in the discussion of reversed predictions, would strengthen the paper’s findings.</p>
+<ul>
+<li>The study lacked a comparison with other large-scale language models, potentially limiting the generalizability of the findings.</li>
+<li>The effectiveness of SuperContext was not evaluated in real-world applications, limiting its practical implications.</li>
+</ul>
+<p>Overall, the study sheds light on the potential of incorporating supervised knowledge from SLMs to enhance the performance of LLMs in various NLU and QA tasks. The findings highlight the importance of leveraging discriminative models for improving the reliability and factuality of LLMs.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.15918v1">https://browse.arxiv.org/html/2312.15918v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
-<td>6466</td>
+<td>12183</td>
 </tr>
 </tbody>
 </table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

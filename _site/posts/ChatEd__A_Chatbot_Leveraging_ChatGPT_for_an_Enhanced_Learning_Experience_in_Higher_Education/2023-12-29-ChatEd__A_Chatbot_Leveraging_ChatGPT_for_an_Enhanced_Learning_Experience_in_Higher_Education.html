@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Kevin Wang’, ‘Jason Ramos’, ‘Ramon Lawrence’]">
 <meta name="dcterms.date" content="2023-12-29">
-<meta name="description" content="ChatGPT can enhance education by offering personalized assistance, but generating incorrect or biased answers remains a challenge. An innovative architecture integrating ChatGPT with an information retrieval-based chatbot shows promise in higher education.">
+<meta name="description" content="ChatGPT and similar language models have potential in education but face challenges with accuracy. New architecture offers enhanced student support.">
 
 <title>Bayesian beagle - ChatEd: A Chatbot Leveraging ChatGPT for an Enhanced Learning Experience in Higher Education</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - ChatEd: A Chatbot Leveraging ChatGPT for an Enhanced Learning Experience in Higher Education">
-<meta property="og:description" content="ChatGPT can enhance education by offering personalized assistance, but generating incorrect or biased answers remains a challenge. An innovative architecture integrating ChatGPT with an information retrieval-based chatbot shows promise in higher education.">
+<meta property="og:description" content="ChatGPT and similar language models have potential in education but face challenges with accuracy. New architecture offers enhanced student support.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2401.00052v1/extracted/5322671/image/userInterface.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - ChatEd: A Chatbot Leveraging ChatGPT for an Enhanced Learning Experience in Higher Education">
-<meta name="twitter:description" content="ChatGPT can enhance education by offering personalized assistance, but generating incorrect or biased answers remains a challenge. An innovative architecture integrating ChatGPT with an information retrieval-based chatbot shows promise in higher education.">
+<meta name="twitter:description" content="ChatGPT and similar language models have potential in education but face challenges with accuracy. New architecture offers enhanced student support.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00052v1/extracted/5322671/image/userInterface.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    ChatGPT can enhance education by offering personalized assistance, but generating incorrect or biased answers remains a challenge. An innovative architecture integrating ChatGPT with an information retrieval-based chatbot shows promise in higher education.
+    ChatGPT and similar language models have potential in education but face challenges with accuracy. New architecture offers enhanced student support.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Kevin Wang, Jason Ramos, Ramon Lawrence </p>
           </div>
   </div>
     
@@ -158,65 +158,80 @@ ul.task-list li input[type="checkbox"] {
 <section id="major-takeaways" class="level3">
 <h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
 <ol type="1">
-<li>The paper introduces ChatEd, a novel chatbot architecture that combines the strengths of Large Language Models (LLMs) like ChatGPT with a traditional information retrieval based chatbot framework to offer enhanced student support in higher education.</li>
-<li>ChatEd addresses concerns about misinformation, biases, and lack of domain-specific expertise by integrating accurate, specific context provided by traditional virtual assistants with the vast knowledge base and dynamic interaction capabilities of LLMs.</li>
-<li>Empirical evaluations demonstrate that ChatEd shows high promise in question-answering ability, context awareness, and conversational depth, outperforming ChatGPT for course-specific queries and providing verifiable responses.</li>
+<li><strong>ChatEd</strong> is introduced as a novel system that combines the capabilities of <strong>ChatGPT</strong> with traditional information retrieval-based chatbot frameworks to provide enhanced student support in higher education.</li>
+<li>The architecture of ChatEd integrates chatbot technology with a large language model, achieving high question-answering ability, context awareness, and conversational depth.</li>
+<li>Evaluation of ChatEd demonstrated exceptional performance in relevance, accuracy, and helpfulness compared to ChatGPT, particularly in responding to course-specific queries.</li>
 </ol>
 </section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <ul>
-<li><strong>Potential of LLMs in Education</strong>: Large Language Models like ChatGPT have the potential to provide personalized learning and generate and answer questions, but concerns exist regarding misinformation, biases, and lack of domain-specific expertise.</li>
-<li><strong>Challenges with Previous Chatbots</strong>: Traditional chatbots had limitations in conversational scope and dependency on vast and accurate data, with significant overhead associated with training for every new course.</li>
+<li>Large Language Models (LLMs), such as ChatGPT, have the potential to revolutionize education but can pose challenges related to accuracy and domain-specific knowledge.</li>
+<li>ChatEd aims to address these challenges by combining ChatGPT with an information retrieval-based chatbot framework to offer enhanced student support in higher education.</li>
+</ul>
+</section>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<ul>
+<li>LLMs like ChatGPT offer personalized learning but may lack domain-specific knowledge and provide biased or incorrect information.</li>
+<li>Previous virtual assistants in higher education, including Jill Watson, demonstrated effectiveness in reducing teacher workload and promoting engagement.</li>
+<li>Developing specialized chatbots for courses is hindered by the cost and challenge of collecting training data and the complexity of training chatbot models.</li>
 </ul>
 </section>
 <section id="system-design" class="level3">
 <h3 class="anchored" data-anchor-id="system-design">System Design</h3>
 <ul>
-<li><strong>ChatEd Features</strong>:
-<ul>
-<li>Enhanced Accuracy and Contextual Relevance</li>
-<li>Conversational Memory</li>
-<li>Ease of Integration</li>
-<li>Streamlined and Easy Training</li>
-</ul></li>
-<li><strong>ChatEd Architecture</strong>: Combines information retrieval system with an LLM like ChatGPT to provide accurate, educational context-specific answers by leveraging existing course materials.</li>
+<li>ChatEd integrates an information retrieval system with a large language model, providing correct, relevant, and verifiable responses to student queries.</li>
+<li>The unique architecture ensures contextual understanding and conversational memory while allowing seamless integration with existing Learning Management Systems (LMS).</li>
+<li>The system eliminates the need for training on Q&amp;A data, leveraging existing course materials for efficient chatbot building.</li>
 </ul>
 </section>
 <section id="methodology" class="level3">
 <h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
 <ul>
-<li><strong>Evaluation Metrics</strong>: Relevance, Accuracy, Helpfulness, and Context Awareness were used to evaluate ChatEd’s question-answering ability and conversational depth.</li>
+<li>ChatEd’s question-answering ability, context awareness, and conversational depth were evaluated using diverse question sets from specific courses.</li>
+<li>The system’s performance was compared to ChatGPT, demonstrating exceptional relevance, accuracy, and helpfulness in providing course-specific answers.</li>
 </ul>
 </section>
 <section id="results" class="level3">
 <h3 class="anchored" data-anchor-id="results">Results</h3>
 <ul>
-<li><strong>Question Answering Results</strong>: ChatEd outperformed ChatGPT in terms of relevancy, accuracy, and helpfulness, especially excelling in answering managerial questions and providing concise, course-specific responses.</li>
-<li><strong>Conversational Depth</strong>: ChatEd displayed strong contextual awareness, but there is potential for further improvement in understanding complex context switching.</li>
+<li>ChatEd excelled in question-answering and demonstrated strong conversational depth but showed room for improvement in understanding complex context switches.</li>
+<li>The system outperformed ChatGPT in providing managerial, concise, and context-specific responses, offering accurate and helpful information.</li>
+</ul>
+</section>
+<section id="discussion" class="level3">
+<h3 class="anchored" data-anchor-id="discussion">Discussion</h3>
+<ul>
+<li>ChatEd’s unique approach eliminates the need for extensive training and provides accurate, course-specific responses to enhance the student learning experience, especially in responding to course-specific queries.</li>
+<li>While ChatGPT excels in general questions with widely available answers, ChatEd shows superior performance in providing course-contextualized responses.</li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper provides a comprehensive and innovative approach to leveraging LLMs for educational chatbots. However, there are potential concerns about the generalizability of the findings, the scalability of the system to diverse course contexts, and the potential biases in the evaluation process. Additionally, further exploration of ChatEd’s limitations and challenges in real-world implementation would strengthen the paper’s practical implications.</p>
+<p>The paper does not address potential ethical concerns or biases that may be introduced by integrating an information retrieval system with a large language model. Additionally, the evaluation addresses only two courses, limiting the generalizability of the results. Future work should involve broader testing across multiple courses to ensure the scalability and effectiveness of ChatEd across diverse educational domains.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00052v1">https://browse.arxiv.org/html/2401.00052v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>5566</td>
 </tr>

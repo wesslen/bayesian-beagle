@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Yu Ying Chiu’, ‘Ashish Sharma’, ‘Inna Wanyin Lin’, ‘Tim Althoff’]">
 <meta name="dcterms.date" content="2024-01-01">
-<meta name="description" content="LLMs as therapists need more research for quality care due to undesirable behaviors and lack of systematic studies.">
+<meta name="description" content="ChatGPT and other large language models are being considered as therapists, but research shows their behavior may not reflect high-quality therapy.">
 
 <title>Bayesian beagle - A Computational Framework for Behavioral Assessment of LLM Therapists</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - A Computational Framework for Behavioral Assessment of LLM Therapists">
-<meta property="og:description" content="LLMs as therapists need more research for quality care due to undesirable behaviors and lack of systematic studies.">
+<meta property="og:description" content="ChatGPT and other large language models are being considered as therapists, but research shows their behavior may not reflect high-quality therapy.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2401.00820v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - A Computational Framework for Behavioral Assessment of LLM Therapists">
-<meta name="twitter:description" content="LLMs as therapists need more research for quality care due to undesirable behaviors and lack of systematic studies.">
+<meta name="twitter:description" content="ChatGPT and other large language models are being considered as therapists, but research shows their behavior may not reflect high-quality therapy.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00820v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    LLMs as therapists need more research for quality care due to undesirable behaviors and lack of systematic studies.
+    ChatGPT and other large language models are being considered as therapists, but research shows their behavior may not reflect high-quality therapy.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Yu Ying Chiu, Ashish Sharma, Inna Wanyin Lin, Tim Althoff </p>
           </div>
   </div>
     
@@ -158,45 +158,88 @@ ul.task-list li input[type="checkbox"] {
 <section id="major-takeaways" class="level3">
 <h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
 <ol type="1">
-<li><p><strong>Bolt Framework</strong>: The paper introduces the Bolt framework, a computational tool designed to assess the behavior of large language models (LLMs) acting as therapists. It aims to measure how these models respond to clients seeking mental health support and compares their behavior against high- and low-quality human therapy.</p></li>
-<li><p><strong>Behavior Analysis</strong>: Through the Bolt framework, the study identifies that LLM therapists more closely resemble behaviors exhibited in low-quality therapy rather than high-quality therapy. They tend to exhibit behaviors that are potentially undesirable, such as overemphasis on offering solutions and less focus on empathetic behaviors like reflections.</p></li>
-<li><p><strong>Comparison with Human Therapy</strong>: The study compares the behaviors of LLM therapists with those of high- and low-quality human therapists. It finds significant differences in how LLM therapists respond to certain client behaviors, indicating potential areas for improvement.</p></li>
+<li><p>The paper develops a novel computational framework, Bolt, to systematically assess the conversational behavior of LLM therapists in mental health conversations. The framework also enables comparison of their behavior against high- and low-quality human therapy.</p></li>
+<li><p>The study finds that the LLM therapists’ behavior resembles behaviors more commonly exhibited in low-quality therapy rather than high-quality therapy, such as offering a higher degree of problem-solving advice and using certain linguistic attributes similar to low-quality therapy.</p></li>
+<li><p>LLM therapists currently do not fully align with high-quality care, and the study stresses the need for additional research to improve and evaluate their efficacy.</p></li>
 </ol>
 </section>
-<section id="framework-for-behavioral-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="framework-for-behavioral-assessment">Framework for Behavioral Assessment</h3>
-<p>The paper introduces the Bolt framework, a computational tool designed to study the conversational behavior of LLMs when employed as therapists. The framework aims to systematically assess the behavior of LLM therapists and compare it with that of high- and low-quality human therapy.</p>
-</section>
-<section id="computational-analysis-and-findings" class="level3">
-<h3 class="anchored" data-anchor-id="computational-analysis-and-findings">Computational Analysis and Findings</h3>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <ul>
-<li><strong>Behavior Frequency</strong>: LLM therapists exhibit behaviors similar to low-quality human therapy, such as offering solutions and reflections, which may not align with high-quality therapy principles.</li>
-<li><strong>Temporal Order of Behavior</strong>: LLM therapists prioritize solutions over reflecting and normalizing, which may negatively impact the therapeutic relationship, similar to low-quality therapy.</li>
-<li><strong>Adaptability to Client Behaviors</strong>: LLM therapists demonstrate both similarities and differences in their response to various client behaviors compared to high- and low-quality human therapy.</li>
-<li><strong>Linguistic Attributes</strong>: LLM therapists exhibit word usage patterns and behaviors that diverge from high-quality therapy approaches.</li>
+<li>Large language models (LLMs) have generated interest as therapists for mental health support, yet systematic studies on their behavior are lacking.</li>
 </ul>
 </section>
-<section id="critique-and-potential-problems" class="level3">
-<h3 class="anchored" data-anchor-id="critique-and-potential-problems">Critique and Potential Problems</h3>
-<p>The study’s focus on the Bolt framework and the computational analysis of LLM therapists’ behaviors provides valuable insights. However, the reliance on simulated conversations and the use of predefined datasets may not fully capture the complex dynamics of real therapeutic interactions. Additionally, the potential biases and limitations of the LLMs themselves may impact the accuracy and quality of their responses, which could influence the study’s findings.</p>
+<section id="bolt-framework-for-assessing-conversational-behavior-of-llm-therapists" class="level3">
+<h3 class="anchored" data-anchor-id="bolt-framework-for-assessing-conversational-behavior-of-llm-therapists">Bolt: Framework for Assessing Conversational Behavior of LLM Therapists</h3>
+<section id="llm-therapists" class="level4">
+<h4 class="anchored" data-anchor-id="llm-therapists">LLM Therapists</h4>
+<ul>
+<li>LLMs are used as therapists through custom “system prompts” that instruct them to function as therapists.</li>
+</ul>
+</section>
+<section id="datasets-of-therapy-conversations" class="level4">
+<h4 class="anchored" data-anchor-id="datasets-of-therapy-conversations">Datasets of Therapy Conversations</h4>
+<ul>
+<li>High-quality and low-quality therapy conversation datasets are used for simulating conversations between LLM therapists and clients.</li>
+</ul>
+</section>
+<section id="simulating-conversations-between-llm-therapists-and-clients" class="level4">
+<h4 class="anchored" data-anchor-id="simulating-conversations-between-llm-therapists-and-clients">Simulating Conversations between LLM Therapists and Clients</h4>
+<ul>
+<li>The study uses the datasets of therapy conversations to simulate conversations between LLM therapists and simulated clients, employing two simulation strategies: LLM Single Response Simulation and LLM Full Conversation Simulation.</li>
+</ul>
+</section>
+<section id="behavioral-techniques-in-psychotherapy" class="level4">
+<h4 class="anchored" data-anchor-id="behavioral-techniques-in-psychotherapy">Behavioral Techniques in Psychotherapy</h4>
+<ul>
+<li>The paper characterizes 13 major psychotherapy techniques for therapists and six types of expressions from clients, focusing on behavior change, self-disclosure of affect or experiences, and gaining insights, among others.</li>
+</ul>
+</section>
+<section id="associating-conversational-behavior-with-high-quality-and-low-quality-therapy" class="level4">
+<h4 class="anchored" data-anchor-id="associating-conversational-behavior-with-high-quality-and-low-quality-therapy">Associating Conversational Behavior with High-Quality and Low-Quality Therapy</h4>
+<ul>
+<li>The study differentiates between behaviors representative of high-quality therapy and low-quality therapy sessions, which help in understanding potentially desirable and undesirable behaviors.</li>
+</ul>
+</section>
+</section>
+<section id="identifying-conversational-behavior-in-psychotherapy-conversations" class="level3">
+<h3 class="anchored" data-anchor-id="identifying-conversational-behavior-in-psychotherapy-conversations">Identifying Conversational Behavior in Psychotherapy Conversations</h3>
+<p>The paper details the annotation, models, experiments, and results for identifying conversational behavior in therapist and client utterances. The prompting-based methods outperform fine-tuned models, and the inclusion of examples in prompts significantly enhances the performance of classification models.</p>
+</section>
+<section id="conversational-behavior-of-llm-therapists-a-case-study-of-gpt-and-llama2-variants" class="level3">
+<h3 class="anchored" data-anchor-id="conversational-behavior-of-llm-therapists-a-case-study-of-gpt-and-llama2-variants">Conversational Behavior of LLM Therapists: A Case Study of GPT and Llama2 Variants</h3>
+<p>The study assesses the behavior of four popular LLM variants when employed as therapists and compares their behavior against high-quality and low-quality human therapy, analyzing their frequency of behavior, temporal order of behavior, adaptability to different client behaviors, and linguistic attributes.</p>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<ul>
+<li><p>The paper focuses on behavioral and quality assessments but does not directly address the identification of safety concerns, which is also critical for assessing the readiness of LLM therapists.</p></li>
+<li><p>The ethical and technical challenges of studying the behavior of LLMs in mental health contexts are acknowledged, but the implications of potential risks and ethical considerations could be further elaborated.</p></li>
+<li><p>The study’s reliance on simulated conversations presents limitations in capturing real-world responses and nuanced client interactions, which may affect the authenticity of the findings.</p></li>
+<li><p>While the paper provides valuable insights into the behavior of LLM therapists, the research would benefit from further exploration and validation in real-world clinical settings to ensure the applicability and generalizability of the findings.</p></li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00820v1">https://browse.arxiv.org/html/2401.00820v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>True</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>19139</td>
 </tr>

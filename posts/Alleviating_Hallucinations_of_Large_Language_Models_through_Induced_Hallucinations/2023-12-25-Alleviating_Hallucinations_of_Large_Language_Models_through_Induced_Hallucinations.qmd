@@ -1,13 +1,12 @@
 
 ---
 title: "Alleviating Hallucinations of Large Language Models through Induced Hallucinations"
-description: "ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and \textsc{FActScore} benchmarks."
-author: "gpt-3.5-turbo-1106"
+description: "New decoding strategy reduces misinformation in large language models, improving factuality across various models and benchmarks."
+author: "['Yue Zhang', 'Leyang Cui', 'Wei Bi', 'Shuming Shi']"
 date: "2023-12-25"
-link: "https://browse.arxiv.org/html/2312.15710v1"
 image: "https://browse.arxiv.org/html/2312.15710v1/x1.png"
 categories: ['robustness']
-file-modified: 2024-01-02
+authors: Yue Zhang, Leyang Cui, Wei Bi, Shuming Shi
 format:
   html:
     code-overflow: wrap
@@ -15,41 +14,36 @@ format:
 
 ![](https://browse.arxiv.org/html/2312.15710v1/x1.png)
 
-# Summary of "Alleviating Hallucinations of Large Language Models through Induced Hallucinations" 
+### Summary
 
-## Key Findings:
-1. **Hallucinations in Large Language Models (LLMs):** The study aims to address the issue of hallucinations in LLMs, where the models generate inaccurate or fabricated information, hindering their practical application.
-2. **Induce-then-Contrast Decoding (ICD):** The proposed ICD method involves inducing hallucinations from LLMs and using them as penalty terms during decoding to improve factuality. Experimental results show significant improvement in truthfulness across various model sizes and families, comparable to state-of-the-art LLMs when equipped with ICD.
-3. **Effectiveness:** ICD method provides substantial improvements in truthfulness on TruthfulQA and reduces hallucinations in open-ended text generation on FActScore compared to baseline decoding methods.
+#### Major Findings
+1. Large language models (LLMs) often generate inaccurate or fabricated information, known as "hallucinations."
+2. The proposed Induce-then-Contrast Decoding (ICD) method effectively reduces hallucinations in LLMs across various model sizes and families.
+3. Experimental results demonstrate that ICD significantly improves the truthfulness of LLMs on both discrimination-based and generation-based hallucination evaluation benchmarks.
 
-## Introduction
-- Large Language Models (LLMs) have shown impressive capabilities but continue to struggle with hallucinations, generating inaccurate or fabricated information.
-- Previous research suggests that training objectives and lack of knowledge may contribute to hallucinations in LLMs.
+#### Introduction
+- Large language models (LLMs) have demonstrated remarkable capabilities in various natural language processing tasks but continue to generate inaccurate or fabricated information, termed as "hallucinations."
+- Previous work suggests that the pre-training objective of existing LLMs may be a cause for hallucinations, and injecting more knowledge into LLMs through post-hoc supervised fine-tuning may inadvertently encourage hallucinations.
 
-## Induce-then-Contrast Decoding
-### Inducing Hallucinations from LLMs
-- Factually weak LLMs are constructed by inducing hallucinations through fine-tuning or zero-shot prompting, which is then used as a penalty term to guide LLMs to generate more factual content.
-- The fine-tuning process involves maximizing the log probability of the target output given system prompt and user input with new learned weights.
+#### Induce-then-Contrast Decoding
+- ICD is a lightweight decoding method that first constructs a factually weak LLM by inducing hallucinations from the original LLM and then eliminates the non-factual knowledge by contrastive decoding.
+- Experimental results show that inducing hallucinations through fine-tuning or zero-shot prompting and penalizing them effectively guides LLMs to generate more factual content.
 
-### Factually Weak LLM as A Penalty
-- The decoding process involves amplifying predictions from the original model and downplaying untruthful predictions using a contrasting distribution to improve factuality.
-- An adaptive plausibility constraint is introduced to select tokens for penalty, focusing only on those with higher probabilities than a certain proportion of the maximum probability assigned by the original model.
+#### Experiments
+- ICD significantly improves the truthfulness of LLMs on both the discrimination-based benchmark (TruthfulQA) and the generation-based benchmark (FActScore) compared to other decoding methods.
+- Additional analysis shows the impact of task format, model sizes, data size for inducing hallucinations, and comparisons between real and synthetic data for inducing hallucinations.
 
-## Experiments
-- Experimental evaluation on TruthfulQA and FActScore benchmarks demonstrates the effectiveness of ICD method in improving factuality and reducing hallucinations in LLMs compared to baseline decoding methods.
-- Additional analyses include suitability of different task formats for inducing hallucinations, effectiveness across different LLM model sizes, and impact of data size and data source for inducing hallucinations.
-
-## Critique
-- The additional computational costs and latency introduced by contrastive decoding could be a limitation in practical application.
-- The study primarily focuses on evaluating the effectiveness of ICD on TruthfulQA and FActScore, but the universal applicability of the method across different domains and tasks is yet to be determined.
-
-Overall, the study introduces an innovative method, ICD, for alleviating hallucinations in LLMs, providing empirical evidence of its effectiveness. The potential of the method in addressing hallucinations in open domains and general tasks, as well as its scalability and practical application, warrant further investigation.
+### Critique
+- The paper lacks a thorough discussion of potential ethical considerations and broader societal implications of mitigating hallucinations in LLMs.
+- The evaluation setting could be expanded to cover a wider range of tasks and benchmark datasets for a more comprehensive assessment of the proposed ICD method.
+- The authors could have provided more details about potential future directions and how they would address the limitations of the current study.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
 | Date Generated     | 2024-01-02       |
-| HTML     | [https://browse.arxiv.org/html/2312.15710v1](https://browse.arxiv.org/html/2312.15710v1)       |
+| HTML     | []()       |
 | Truncated       | False       |
-| Word Count       | 4999       |
+| Word Count       | 9227       |

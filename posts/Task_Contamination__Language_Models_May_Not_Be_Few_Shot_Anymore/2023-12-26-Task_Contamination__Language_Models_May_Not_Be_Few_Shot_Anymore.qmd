@@ -1,13 +1,12 @@
 
 ---
 title: "Task Contamination: Language Models May Not Be Few-Shot Anymore"
-description: "Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task contamination on LLMs' performance over time."
-author: "gpt-3.5-turbo-1106"
+description: "Large language models (LLMs) perform better in zero-shot and few-shot tasks on datasets released before their training data creation date, possibly due to task contamination."
+author: "['Changmao Li', 'Jeffrey Flanigan']"
 date: "2023-12-26"
-link: "https://browse.arxiv.org/html/2312.16337v1"
 image: "https://browse.arxiv.org/html/2312.16337v1/x1.png"
 categories: ['prompt engineering']
-file-modified: 2024-01-02
+authors: Changmao Li, Jeffrey Flanigan
 format:
   html:
     code-overflow: wrap
@@ -15,58 +14,30 @@ format:
 
 ![](https://browse.arxiv.org/html/2312.16337v1/x1.png)
 
-# Task Contamination: Language Models May Not Be Few-Shot Anymore
+### Summary
 
-## Major Findings
-- Large language models (LLMs) demonstrate **inflated performance** in zero-shot or few-shot evaluation due to **task contamination**.
-- Closed-source models may not be trustworthy baselines in these settings, especially those including **instruction fine-tuning** or **reinforcement learning with human feedback (RLHF)**.
-- Models show little to no statistically significant improvements over **majority baselines** for tasks without demonstrated possibility of task contamination.
-  
-## Introduction
-Large language models (LLMs), such as GPT-3 series models, have garnered attention for their impressive performance in zero-shot and few-shot settings. However, concerns about **data contamination** have been raised, particularly related to **task contamination** – the inclusion of task training examples in the pre-training data, thereby affecting the zero-shot and few-shot performance.
+The paper explores the phenomenon of task contamination in large language models (LLMs), which affects their zero-shot and few-shot performance. The study uses a range of LLMs and tasks to demonstrate how LLMs may be exposed to task examples during pre-training, leading to inflated performance in zero-shot and few-shot settings. The authors employ various methods, such as training data inspection, task example extraction, and chronological analysis, to provide evidence of task contamination. The results indicate that closed-sourced models may demonstrate inflated performance in zero-shot or few-shot evaluation, and are therefore not trustworthy baselines in these settings. Additionally, the paper uncovers challenges in assessing task contamination due to different formats of training data and the difficulty in extracting task examples. The findings suggest a need for caution in relying on LLMs for zero-shot and few-shot tasks and call for additional research to understand the extent of task contamination for large language models.
 
-## Overview
-- Four methods of measuring task contamination:
-  - **Training data inspection**: Search through the training data to find task training examples.
-  - **Task example extraction**: Extract task examples from an existing model.
-  - **Membership inference**: Check if the model generated content for an input instance exactly matches the original dataset.
-  - **Chronological analysis**: Measure performance on a dataset with a known release date and check for evidence of contamination.
+### Major Takeaways
 
-## Models and Datasets
-- Experimented with 12 models, including both proprietary GPT-3 series models and open models with free access to their weights.
-- Datasets were divided into pre-2021 and post-2021 categories for analyzing zero-shot or few-shot performance difference.
+1. Closed-sourced models may demonstrate inflated performance in zero-shot or few-shot evaluation, casting doubt on their trustworthiness as baselines in these settings.
+2. LLMs rarely show statistically significant improvements over majority baselines in both zero and few-shot settings for tasks without demonstrated possibility of task contamination.
+3. The observed increase over time in the zero-shot or few-shot performance of LLMs, especially in the GPT-3 series, is likely due to task contamination.
 
-## Chronological Analysis
-- Analyzed performance on datasets released before and after the model training data collection date.
-- GPT-3 series models demonstrated a significant increase in performance on earlier datasets, indicating possible task contamination.
+### Critique
 
-## Training Data Inspection
-- Conducted on two instruction fine-tuned open LLMs (Alpaca and Vicuna) for various classification tasks.
-- Performance improved for models with more task-specific training examples, indicating **contaminated performance**.
+The paper provides valuable insights into the phenomenon of task contamination in large language models, but there are some potential limitations and areas for improvement:
 
-## Task Example Extraction
-- Attempted to extract task examples from the LLM.
-- GPT-3 series models, starting from davinci-001, were able to generate task-specific training examples, providing evidence of task contamination.
-
-## LLM Performance on Tasks With No Contamination
-- Rarely show statistically significant improvements over majority baselines for tasks without demonstrated possibility of task contamination.
-
-## Membership Inference
-- Strongly indicates increased contamination is related to increased performance for the semantic parsing task.
-
-## Critique
-- **Low recall** for methods detecting task contamination.
-- Difficulty in analyzing task contamination especially for models without instruction tuning.
-
-In conclusion, the paper reveals evidence of task contamination for LLMs and recommends additional research on this issue.
-
-
+1. The study focuses primarily on the chronological analysis and task contamination for specific models, potentially limiting the generalizability of the findings to a broader range of LLMs and tasks.
+2. The challenges and limitations of the methods used for detecting task contamination, such as training data inspection and task example extraction, raise concerns about the reliability and completeness of the evidence presented.
+3. The paper lacks a comprehensive discussion of potential strategies or solutions to mitigate task contamination in large language models, leaving an opportunity for further exploration in future research.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
 | Date Generated     | 2024-01-02       |
-| HTML     | [https://browse.arxiv.org/html/2312.16337v1](https://browse.arxiv.org/html/2312.16337v1)       |
+| HTML     | []()       |
 | Truncated       | False       |
-| Word Count       | 5492       |
+| Word Count       | 8991       |

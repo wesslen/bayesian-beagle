@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Junjie Ye’, ‘Guanyu Li’, ‘Songyang Gao’, ‘Caishuang Huang’, ‘Yilong Wu’, ‘Sixian Li’, ‘Xiaoran Fan’, ‘Shihan Dou’, ‘Qi Zhang’, ‘Tao Gui’, ‘Xuanjing Huang’]">
 <meta name="dcterms.date" content="2024-01-01">
-<meta name="description" content="ToolEyes evaluates LLMs’ tool learning using real-world scenarios, finding limitations and guiding future research.">
+<meta name="description" content="ToolEyes assesses large language model tool learning in authentic scenarios, uncovering limitations and guiding future research.">
 
 <title>Bayesian beagle - ToolEyes: Fine-Grained Evaluation for Tool Learning Capabilities of Large Language Models in Real-world Scenarios</title>
 <style>
@@ -66,12 +66,12 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - ToolEyes: Fine-Grained Evaluation for Tool Learning Capabilities of Large Language Models in Real-world Scenarios">
-<meta property="og:description" content="ToolEyes evaluates LLMs’ tool learning using real-world scenarios, finding limitations and guiding future research.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2401.00741v1/x1.png">
+<meta property="og:description" content="ToolEyes assesses large language model tool learning in authentic scenarios, uncovering limitations and guiding future research.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2401.00741v1/x2.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - ToolEyes: Fine-Grained Evaluation for Tool Learning Capabilities of Large Language Models in Real-world Scenarios">
-<meta name="twitter:description" content="ToolEyes evaluates LLMs’ tool learning using real-world scenarios, finding limitations and guiding future research.">
-<meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00741v1/x1.png">
+<meta name="twitter:description" content="ToolEyes assesses large language model tool learning in authentic scenarios, uncovering limitations and guiding future research.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00741v1/x2.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    ToolEyes evaluates LLMs’ tool learning using real-world scenarios, finding limitations and guiding future research.
+    <p>ToolEyes assesses large language model tool learning in authentic scenarios, uncovering limitations and guiding future research.</p>
   </div>
 </div>
 
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Junjie Ye, Guanyu Li, Songyang Gao, Caishuang Huang, Yilong Wu, Sixian Li, Xiaoran Fan, Shihan Dou, Qi Zhang, Tao Gui, Xuanjing Huang </p>
           </div>
   </div>
     
@@ -155,54 +155,130 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><img src="https://browse.arxiv.org/html/2401.00741v1/x1.png" class="img-fluid"></p>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
+<p><img src="https://browse.arxiv.org/html/2401.00741v1/x2.png" class="img-fluid"></p>
+<section id="tooleyes-fine-grained-evaluation-for-tool-learning-capabilities-of-large-language-models-in-real-world-scenarios" class="level1">
+<h1>ToolEyes: Fine-Grained Evaluation for Tool Learning Capabilities of Large Language Models in Real-world Scenarios</h1>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
 <ul>
-<li><strong>ToolEyes</strong> is a system designed to evaluate large language models’ (LLMs) capabilities to learn and utilize tools in real-world scenarios.</li>
-<li>The system focuses on evaluating LLMs in seven scenarios and across five essential capabilities for tool learning: format alignment, intent comprehension, behavior planning, tool selection, and answer organization.</li>
-<li>The study reveals that LLMs exhibit scenario-specific preferences in tool learning, and expanding the model size exacerbates the hindrance to tool learning.</li>
+<li><strong>ToolEyes</strong> offers a fine-grained evaluation system for Large Language Models’ (LLMs) tool learning capabilities, examining seven real-world scenarios and approximately 600 tools.</li>
+<li>The evaluation reveals that LLMs exhibit preference for specific scenarios and restricted cognitive abilities in tool learning, with larger model size exacerbating the hindrance to tool learning.</li>
+<li>The findings suggest the need for improvement in tool learning capabilities across all categories of LLMs.</li>
 </ul>
 </section>
-<section id="evaluation-system" class="level3">
-<h3 class="anchored" data-anchor-id="evaluation-system">Evaluation System</h3>
+<section id="evaluation-system" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-system">Evaluation System</h2>
+<section id="scenario-construction" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-construction">Scenario Construction</h3>
 <ul>
-<li><strong>Scenario Construction</strong>: ToolEyes formulates seven real-world scenarios ranging from text generation to financial transactions, each with a collection of related tools.</li>
-<li><strong>Tool Library Building</strong>: The system establishes a tool library of approximately 600 tools to serve as an interface for LLMs to interact with the environment.</li>
-<li><strong>Human-Driven Data Generation</strong>: Professionals related to each scenario contribute to identifying actual requirements, resulting in 382 user queries after thorough manual validation.</li>
+<li>ToolEyes formulates seven real-world scenarios, including <strong>Text Generation, Data Understanding, Real-Time Search, Application Manipulation, Personal Life, Information Retrieval</strong>, and <strong>Financial Transactions</strong>.</li>
+<li>Each scenario is equipped with a related set of tools, totaling 41 categories, 95 subcategories, and 568 tools.</li>
 </ul>
 </section>
-<section id="model-selection-and-results" class="level3">
-<h3 class="anchored" data-anchor-id="model-selection-and-results">Model Selection and Results</h3>
+<section id="tool-library-building" class="level3">
+<h3 class="anchored" data-anchor-id="tool-library-building">Tool Library Building</h3>
 <ul>
-<li><strong>Model Selection</strong>: The study evaluates ten LLMs across three categories: open-source, tool-oriented, and closed-source, uncovering preferences and limitations in tool learning capabilities.</li>
-<li><strong>Results</strong>: LLMs exhibit scenario-specific preferences, and the study uncovers limitations in LLMs’ behavioral planning skills across various capabilities essential for effective tool learning.</li>
+<li>The system establishes a tool library, serving as an interface for LLMs to interact with the environment.</li>
+</ul>
+</section>
+<section id="human-driven-data-generation" class="level3">
+<h3 class="anchored" data-anchor-id="human-driven-data-generation">Human-Driven Data Generation</h3>
+<ul>
+<li>Professionals were engaged to identify actual requirements by reviewing the tool documentation to ensure comprehensive coverage of different scenarios.</li>
+</ul>
+</section>
+<section id="llms-capability-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="llms-capability-evaluation">LLMs Capability Evaluation</h3>
+<ul>
+<li>ToolEyes evaluates LLMs across five essential capabilities: <strong>format alignment, intent comprehension, behavior planning, tool selection</strong>, and <strong>answer organization</strong>.</li>
 </ul>
 </section>
 </section>
-<section id="critique" class="level2">
-<h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<p>The paper provides valuable insights into the fine-grained evaluation of LLMs’ tool learning capabilities. However, it relies heavily on the evaluation of LLMs without explicitly considering potential biases and limitations. Additionally, the study does not explore the potential impact of overfitting or bias in the dataset used for LLM evaluation. Moreover, the paper does not provide a clear discussion on the generalizability of the findings to broader applications or potential implications for industry and society. Further exploration of the robustness and applicability of the findings would enhance the paper’s contribution to the field.</p>
+<section id="experiments" class="level2">
+<h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
+<section id="model-selection" class="level3">
+<h3 class="anchored" data-anchor-id="model-selection">Model Selection</h3>
+<ul>
+<li>Experiments were conducted on ten LLMs from three sources: open-source, tool-oriented, and closed-source categories, including <strong>LLaMA-2-chat, Vicuna-1.5, Text-davinci-003, GPT-3.5-turbo</strong>, and <strong>GPT-4.</strong></li>
+</ul>
 </section>
+<section id="experimental-setup" class="level3">
+<h3 class="anchored" data-anchor-id="experimental-setup">Experimental Setup</h3>
+<ul>
+<li>LLMs were assessed using a five-shot format for open-source models and zero-shot format for others, with specific prompt templates used during inference.</li>
+</ul>
+</section>
+<section id="results-in-different-scenarios" class="level3">
+<h3 class="anchored" data-anchor-id="results-in-different-scenarios">Results in Different Scenarios</h3>
+<ul>
+<li>LLMs exhibit scenario-specific preferences in tool learning, influenced by their optimization goals and training data.</li>
+</ul>
+</section>
+<section id="results-of-different-llms-capabilities" class="level3">
+<h3 class="anchored" data-anchor-id="results-of-different-llms-capabilities">Results of Different LLMs Capabilities</h3>
+<ul>
+<li>The present constraints in LLMs thinking skills present a substantial obstacle to tool learning, and LLMs with superior performance exhibit more effective problem-solving abilities.</li>
+</ul>
+</section>
+<section id="why-does-not-llms-capabilities-increase-with-size" class="level3">
+<h3 class="anchored" data-anchor-id="why-does-not-llms-capabilities-increase-with-size">Why does NOT LLMs Capabilities Increase with Size?</h3>
+<ul>
+<li>The study found that as the model size increases, there is a potential weakening of the instrumental learning capabilities within specific LLM families.</li>
+</ul>
+</section>
+</section>
+<section id="insights-for-advancing-tool-learning" class="level2">
+<h2 class="anchored" data-anchor-id="insights-for-advancing-tool-learning">Insights for Advancing Tool Learning</h2>
+<ul>
+<li>Ideas for advancing tool learning include task construction considering model behavior, scenario generalization using diverse data, and capability enhancement addressing the “barrel effect.”</li>
+</ul>
+</section>
+<section id="related-works" class="level2">
+<h2 class="anchored" data-anchor-id="related-works">Related Works</h2>
+<ul>
+<li>The paper discusses tool learning and evaluations for tool learning, highlighting the challenges in current tool learning research.</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<ul>
+<li>ToolEyes offers instructive insights to inform the development of tool learning and presents avenues for future research.</li>
+</ul>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<ul>
+<li>The paper acknowledges limitations, including the absence of a novel LLM dedicated to tool learning and the associated costs of scoring using specific LLMs.</li>
+</ul>
+</section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ul>
+<li>Key references include Tang et al.&nbsp;(2023), Wei et al.&nbsp;(2022b), Chen et al.&nbsp;(2023b), and Schick et al.&nbsp;(2023).</li>
+</ul>
+<hr>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00741v1">https://browse.arxiv.org/html/2401.00741v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>11381</td>
 </tr>
@@ -210,6 +286,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

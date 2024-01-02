@@ -1,13 +1,12 @@
 
 ---
 title: "Evolving Large Language Model Assistant with Long-Term Conditional Memory"
-description: "AI assistant ChatGPT uses verbal long-term memory to improve responses, tested on different datasets."
-author: "gpt-3.5-turbo-1106"
+description: "AI assistant ChatGPT with verbal long-term memory for improved responses using GPT-4."
+author: "['Ruifeng Yuan', 'Shichao Sun', 'Zili Wang', 'Ziqiang Cao', 'Wenjie Li']"
 date: "2023-12-22"
-link: "https://browse.arxiv.org/html/2312.17257v1"
 image: "https://browse.arxiv.org/html/2312.17257v1/x1.png"
 categories: ['robustness']
-file-modified: 2024-01-02
+authors: Ruifeng Yuan, Shichao Sun, Zili Wang, Ziqiang Cao, Wenjie Li
 format:
   html:
     code-overflow: wrap
@@ -15,52 +14,57 @@ format:
 
 ![](https://browse.arxiv.org/html/2312.17257v1/x1.png)
 
-### Evolving Large Language Model Assistant with Long-Term Conditional Memory
+# Evolving Large Language Model Assistant with Long-Term Conditional Memory
 
-#### Key Findings
+## Major Findings
+- The paper presents a new evolving large language model (LLM) assistant that uses long-term memory to preserve knowledge and experiences from past dialogues to improve future responses.
+- The model utilizes a memory-based framework with three main components: an existing LLM assistant, a memory, and a prompt-based interaction between the assistant and the memory.
+- The proposed **conditional memory** approach is the most effective for learning new knowledge and from human feedback, while a combination of conditional memory and summary-based memory improves performance for continuing previous dialogue.
 
-- The paper introduces an evolving large language model assistant that utilizes **verbal long-term memory** from previous dialogues to improve future responses.
-- The model introduces a new memorizing mechanism called **conditional memory** to solve the limitations of previous methods and explores different ways of constructing memory.
-- The paper evaluates the model on three constructed test datasets focusing on different abilities required by an AI assistant with long-term memory.
+## Abstract
+The paper introduces an evolving large language model assistant that leverages long-term conditional memory to enhance the quality of responses in future dialogues. The model generates and stores records for each dialogue to be used in later interactions. The paper examines different mechanisms for constructing and utilizing memory and evaluates the assistant on three test datasets focusing on various abilities required by an AI assistant with long-term memory.
 
-#### Introduction
-- Large language models (LLMs), like ChatGPT, have gained significant popularity and are widely used in natural language processing tasks such as chit-chat and providing assistance to users.
-- The main problem for current AI assistants is the lack of long-term memory from previous dialogues, preventing them from improving the quality of their responses.
+## Introduction
+- Large language models (LLMs), such as ChatGPT, have become popular in providing assistance and engaging in chit-chat with users.
+- The main problem is that current AI assistants do not retain information from previous dialogues, hindering their ability to learn from past interactions and improve future responses.
+- The evolving LLM assistant aims to address this by using a memory-based framework to store and retrieve dialogue history.
 
-#### Framework of the Evolving LLM Assistant
+## Related Work
+- Existing research in retrieval-based dialogue systems and conversational question answering has long focused on integrating retrieved dialogue and external knowledge into the generation process.
 
-- The evolving LLM assistant consists of an LLM, a memory, and a prompt-based wrapper conducting interactions between the assistant and the memory.
-- The wrapper utilizes the ongoing dialogue and LLM assistant to construct memory records and store them in the memory, which are later used to improve response generation.
+## Method
+### Memory Construction
+- The paper explores three types of memory construction: history-based memory, summary-based memory, and conditional memory, with conditional memory demonstrating the most promising results.
+### Memory Retrieval and Application
+- The memory retrieval process involves utilizing dense retrieval and a self-reflection mechanism to determine the usefulness of retrieved information.
 
-#### Related Work
+## Dataset
+- The experiment involves constructing three test datasets focusing on different aspects: continuing previous dialogue, learning new knowledge, and learning from user feedback.
 
-- The paper discusses retrieval-based dialogue systems and how they have been extended to LLM-based chatbots augmented by retrieval.
+## Experiment
+- The study uses GPT-4 as the backbone for evaluation and employs various GPT-4 evaluations, including scoring, comparing, and multiple choice.
+- Results indicate that conditional memory outperforms other forms of memory and that the combination of conditional memory and summary-based memory enhances performance.
+- **Self-reflection retrieval** is effective, especially for summary-based memory.
 
-#### Method
+## Appendix A: Method Details
+- It provides detailed prompts for memory construction, self-reflection retrieval, and dataset construction.
 
-- The construction of memory involves three distinct memory types: history-based memory, summary-based memory, and **conditional memory**, which is proposed in this paper.
-- The retrieval and use of memory records in response generation is achieved through a dense retrieval model and **self-reflection mechanism** for memory retrieval.
+## Appendix B: Dataset Construction Details
+- It presents prompts for constructing test datasets focusing on continuing previous dialogue, learning new knowledge, and learning from human feedback.
 
-#### Dataset
+## Appendix C: GPT Evaluation Details
+- It outlines prompts for GPT-4 evaluations, such as scoring, comparing, and multiple choice.
 
-- The paper constructs three test datasets to test the model’s abilities in learning from dialogue history, continuing previous dialogue, and learning from human feedback.
-
-#### Experiment
-
-- The experiment results show that **conditional memory** achieves the best performance among the three forms of memory.
-- The combination of **conditional memory** and **summary-based memory** can improve the performance of the model.
-- The **self-reflection retrieval** mechanism is effective, especially for **summary-based memory**, improving the accuracy of retrieved memory records.
-
-#### Critique
-
-- The paper lacks a detailed discussion of the potential limitations and challenges of using conditional memory in real-world applications.
-- The study's evaluation is limited to automated evaluations and may benefit from human evaluations to validate the practical utility of the proposed assistant.
+## Critique
+- The study uses small-scale datasets for testing due to the high cost of GPT-4 usage, which may limit the generalizability of the findings.
+- The paper acknowledges that other key points, such as time stamp or forgetting mechanism, are yet to be explored, suggesting that the study is still in the foundational stage.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
 | Date Generated     | 2024-01-02       |
-| HTML     | [https://browse.arxiv.org/html/2312.17257v1](https://browse.arxiv.org/html/2312.17257v1)       |
+| HTML     | []()       |
 | Truncated       | False       |
-| Word Count       | 5215       |
+| Word Count       | 8298       |

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Behnam Rahdari’, ‘Hao Ding’, ‘Ziwei Fan’, ‘Yifei Ma’, ‘Zhuotong Chen’, ‘Anoop Deoras’, ‘Branislav Kveton’]">
 <meta name="dcterms.date" content="2023-12-22">
-<meta name="description" content="Large Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.">
+<meta name="description" content="Large Language Models show potential for recommendation explanations, but current models struggle. A proposed Logic-Scaffolding framework aims to improve explanation generation.">
 
 <title>Bayesian beagle - Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs">
-<meta property="og:description" content="Large Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.">
+<meta property="og:description" content="Large Language Models show potential for recommendation explanations, but current models struggle. A proposed Logic-Scaffolding framework aims to improve explanation generation.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.14345v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Logic-Scaffolding: Personalized Aspect-Instructed Recommendation Explanation Generation using LLMs">
-<meta name="twitter:description" content="Large Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.">
+<meta name="twitter:description" content="Large Language Models show potential for recommendation explanations, but current models struggle. A proposed Logic-Scaffolding framework aims to improve explanation generation.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.14345v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Large Language Models are great at text generation but struggle with explanations. Logic-Scaffolding offers a solution using intermediate reasoning steps.
+    Large Language Models show potential for recommendation explanations, but current models struggle. A proposed Logic-Scaffolding framework aims to improve explanation generation.
   </div>
 </div>
 
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Behnam Rahdari, Hao Ding, Ziwei Fan, Yifei Ma, Zhuotong Chen, Anoop Deoras, Branislav Kveton </p>
           </div>
   </div>
     
@@ -156,63 +156,66 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.14345v1/x1.png" class="img-fluid"></p>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
 <ol type="1">
-<li>Large language models (LLMs) have the potential to provide explanations for recommendations, but existing models struggle to produce zero-shot explanations reliably due to lack of true personalization, transparency, and adaptability.</li>
-<li>The paper proposes a framework called <strong>Logic-Scaffolding</strong> that addresses these challenges by combining aspect-based explanation and chain-of-thought prompting to generate explanations through intermediate reasoning steps.</li>
-<li>The authors present an interactive demonstration to showcase the effectiveness of the <strong>Logic-Scaffolding</strong> framework in generating explanation for movie recommendations.</li>
+<li><strong>Logic-Scaffolding</strong> is a framework proposed to address the challenge of generating reliable zero-shot explanations for recommendations using Large Language Models (LLMs).</li>
+<li>The framework combines <strong>aspect-based explanation</strong> and <strong>chain-of-thought prompting</strong> to generate explanations through intermediate reasoning steps, aiming to enhance personalization, factuality, robustness, human readability, and proper utterance in the generated explanations.</li>
+<li>An interactive demonstration is presented to showcase the improved quality of explanations generated by the Logic-Scaffolding framework.</li>
 </ol>
 </section>
 <section id="characteristics-of-a-good-explanation" class="level3">
 <h3 class="anchored" data-anchor-id="characteristics-of-a-good-explanation">Characteristics of a Good Explanation</h3>
 <ul>
-<li><strong>Personalization</strong>: Tailored to individual preferences and needs.</li>
-<li><strong>Factuality</strong>: Emphasizes the need for accurate and reliable information.</li>
-<li><strong>Robustness</strong>: Ensures consistent, relevant, and deep explanations.</li>
-<li><strong>Human readability</strong>: Easily understandable, transparent, and aligned with human cognition.</li>
-<li><strong>Proper utterance</strong>: Delivers clear, concise, and unbiased explanations.</li>
+<li><strong>Personalization</strong>: Enhances user understanding and satisfaction.</li>
+<li><strong>Factuality</strong>: Establishes credibility and ensures accurate and reliable information.</li>
+<li><strong>Robustness</strong>: Ensures consistent and relevant explanations across diverse domains.</li>
+<li><strong>Human readability</strong>: Essential for informed decision-making and aligning with human cognition.</li>
+<li><strong>Proper utterance</strong>: Focuses on delivering clear, concise, and unbiased explanations.</li>
 </ul>
 </section>
 <section id="aspect-instructed-recommendation-evidence-generation" class="level3">
 <h3 class="anchored" data-anchor-id="aspect-instructed-recommendation-evidence-generation">Aspect-Instructed Recommendation Evidence Generation</h3>
 <ul>
-<li><strong>Relevant Item Selection</strong>: Selects influential items related to the recommended item from the user’s history based on cosine similarity scores.</li>
-<li><strong>Aspect Extraction</strong>: Leverages few-shot learning technique to extract fine-grained features of items.</li>
-<li><strong>Chain-of-Thought Reasoning</strong>: Guides the generation of explanations through intermediate reasoning steps.</li>
+<li><strong>Relevant Item Selection</strong>: Involves selecting influential items related to the recommended item from the user’s history.</li>
+<li><strong>Aspect Extraction</strong>: Utilizes few-shot learning technique to extract essential aspects associated with each item.</li>
+<li><strong>Chain-of-Thought Reasoning</strong>: Guides the explanation generation process through intermediate reasoning steps.</li>
 </ul>
 </section>
 <section id="demonstration-of-results" class="level3">
 <h3 class="anchored" data-anchor-id="demonstration-of-results">Demonstration of Results</h3>
 <ul>
-<li>Utilized the <strong>Logic-Scaffolding</strong> framework to generate explanations for popular movies from the MovieLens 1M dataset.</li>
-<li>The framework consistently received higher ratings than the zero-shot approach in terms of relevance, human-readability, factuality, and proper utterance.</li>
-<li>Effect size tests showed a large impact in improving factuality and other criteria.</li>
+<li><strong>Generating the Explanation</strong>: Data from the “MovieLens 1M” dataset is used to generate and compare explanations with both the Logic-Scaffolding framework and a zero-shot model.</li>
+<li><strong>Human Evaluation</strong>: A between-subjects study reveals that explanations generated by the Logic-Scaffolding framework consistently received higher ratings in terms of relevance, human-readability, factuality, and proper utterance compared to the zero-shot approach.</li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper presents a promising framework for personalized aspect-instructed recommendation explanation generation using LLMs. However, the effectiveness of the framework needs to be evaluated in a wider range of recommendation domains beyond just movie recommendations. Additionally, the demonstration of results should also include user feedback and real-world application scenarios to validate the practical usability and impact of the proposed framework.</p>
+<p>The paper provides a comprehensive framework and demonstrates its efficacy through an interactive demonstration and human evaluation. However, it would be beneficial to include a more extensive comparison with existing explanation generation techniques and address potential limitations or challenges in implementing the Logic-Scaffolding framework in different recommendation systems. Additionally, the generalizability of the framework across various domains and datasets could be further explored to ascertain its scalability and robustness.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.14345v1">https://browse.arxiv.org/html/2312.14345v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
-<td>1744</td>
+<td>3123</td>
 </tr>
 </tbody>
 </table>

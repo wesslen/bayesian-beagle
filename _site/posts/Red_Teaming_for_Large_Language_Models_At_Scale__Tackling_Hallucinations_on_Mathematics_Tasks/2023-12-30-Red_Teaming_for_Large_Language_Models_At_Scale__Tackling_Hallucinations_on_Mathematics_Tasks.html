@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Aleksander Buszydlik’, ‘Karol Dobiczek’, ‘Michał Teodor Okoń’, ‘Konrad Skublicki’, ‘Philip Lippmann’, ‘Jie Yang’]">
 <meta name="dcterms.date" content="2023-12-30">
-<meta name="description" content="Prompting techniques affect LLM performance. Structured reasoning and examples improve quality, but some models still struggle with basic tasks.">
+<meta name="description" content="Study evaluates prompting techniques for LLMs on math tasks. Findings show models struggle with elementary calculations and reasoning even with red teaming.">
 
 <title>Bayesian beagle - Red Teaming for Large Language Models At Scale: Tackling Hallucinations on Mathematics Tasks</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Red Teaming for Large Language Models At Scale: Tackling Hallucinations on Mathematics Tasks">
-<meta property="og:description" content="Prompting techniques affect LLM performance. Structured reasoning and examples improve quality, but some models still struggle with basic tasks.">
+<meta property="og:description" content="Study evaluates prompting techniques for LLMs on math tasks. Findings show models struggle with elementary calculations and reasoning even with red teaming.">
 <meta property="og:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Red Teaming for Large Language Models At Scale: Tackling Hallucinations on Mathematics Tasks">
-<meta name="twitter:description" content="Prompting techniques affect LLM performance. Structured reasoning and examples improve quality, but some models still struggle with basic tasks.">
+<meta name="twitter:description" content="Study evaluates prompting techniques for LLMs on math tasks. Findings show models struggle with elementary calculations and reasoning even with red teaming.">
 <meta name="twitter:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Prompting techniques affect LLM performance. Structured reasoning and examples improve quality, but some models still struggle with basic tasks.
+    Study evaluates prompting techniques for LLMs on math tasks. Findings show models struggle with elementary calculations and reasoning even with red teaming.
   </div>
 </div>
 
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Aleksander Buszydlik, Karol Dobiczek, Michał Teodor Okoń, Konrad Skublicki, Philip Lippmann, Jie Yang </p>
           </div>
   </div>
     
@@ -156,82 +156,79 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="None.png" class="img-fluid"></p>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
+<section id="red-teaming-for-large-language-models-at-scale-tackling-hallucinations-on-mathematics-tasks" class="level3">
+<h3 class="anchored" data-anchor-id="red-teaming-for-large-language-models-at-scale-tackling-hallucinations-on-mathematics-tasks">Red Teaming for Large Language Models At Scale: Tackling Hallucinations on Mathematics Tasks</h3>
+<section id="main-findings" class="level4">
+<h4 class="anchored" data-anchor-id="main-findings">Main Findings</h4>
 <ol type="1">
-<li>Red teaming LLMs on elementary calculations and algebraic tasks revealed that <strong>gpt-3.5-turbo</strong> and <strong>gpt-4 models</strong> are not well suited for these tasks, even when red teamed.</li>
-<li><strong>Structured reasoning and providing worked-out examples</strong> were found to slow down the deterioration of the quality of answers but did not significantly improve the performance of the models.</li>
-<li>The models’ numerical abilities seemed to stem mostly from <strong>memorization</strong>, rather than their ability to follow simple algorithms.</li>
+<li>Red teaming techniques <strong>do not effectively</strong> reduce hallucinations in gpt-3.5-turbo and gpt-4 models for elementary calculations and reasoning tasks.</li>
+<li>Models achieve <strong>low accuracy</strong> ranging from 50-60% on harder calculations and puzzles, with some techniques slightly improving performance while others degrading it.</li>
+<li>Providing <strong>examples</strong> improves model performance, suggesting some capacity for knowledge transfer between problems.</li>
 </ol>
 </section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
 <ul>
-<li>Red teaming is used to systematically find backdoors in Large Language Models (LLMs) to elicit irresponsible responses.</li>
-<li>Red teaming at scale can be challenging as the model’s answers often require manual verification, especially in contexts involving potential harm.</li>
+<li>Red teaming aims to find backdoors in Large Language Models (LLMs) to elicit irresponsible responses and involves strategic prompting and querying to identify vulnerabilities.</li>
 </ul>
 </section>
-<section id="related-work" class="level3">
-<h3 class="anchored" data-anchor-id="related-work">Related Work</h3>
+<section id="related-work" class="level4">
+<h4 class="anchored" data-anchor-id="related-work">Related Work</h4>
 <ul>
-<li><strong>Safety of LLMs</strong>: Modern LLMs are far from safe, and are prone to hallucinations, posing significant threats.</li>
-<li><strong>Mathematical Reasoning in LLMs</strong>: Previous work has shown that advanced LLMs tend to be inconsistent on mathematics tasks.</li>
+<li>Top-performing LLMs are not entirely safe and are prone to hallucinate content, posing significant threats.</li>
+<li>Previous research has found inconsistencies and amplification of hallucinations in LLMs when it comes to mathematical reasoning.</li>
 </ul>
 </section>
-<section id="methods" class="level3">
-<h3 class="anchored" data-anchor-id="methods">Methods</h3>
+<section id="methods" class="level4">
+<h4 class="anchored" data-anchor-id="methods">Methods</h4>
 <ul>
-<li>The study uses the gpt-4 and gpt-3.5-turbo models accessed through the OpenAI API to evaluate their performance on mathematics tasks.</li>
-<li>They develop a Python framework for automatic red teaming at scale and conduct two experiments: Elementary Mathematics and Algebraic Reasoning.</li>
+<li>Used the gpt-4 and gpt-3.5-turbo models and developed a Python framework for automatic red teaming at scale to assess their performance on school-level calculations and algebraic puzzles.</li>
 </ul>
 </section>
-<section id="results" class="level3">
-<h3 class="anchored" data-anchor-id="results">Results</h3>
+<section id="results" class="level4">
+<h4 class="anchored" data-anchor-id="results">Results</h4>
 <ul>
-<li><strong>Experiment 1</strong>: Easy calculations were completed with high accuracy, while the performance on harder calculations dropped significantly. Red teaming techniques generally degraded the models’ performance.</li>
-<li><strong>Experiment 2</strong>: Providing examples led to an increase in performance on almost all metrics, with some techniques benefiting more than others.</li>
+<li>Models have low accuracy on harder calculations, with some red teaming techniques improving performance and others degrading it, while providing examples improves model performance on different metrics.</li>
 </ul>
 </section>
-<section id="discussion" class="level3">
-<h3 class="anchored" data-anchor-id="discussion">Discussion</h3>
+<section id="discussion" class="level4">
+<h4 class="anchored" data-anchor-id="discussion">Discussion</h4>
 <ul>
-<li>The findings suggest that the models are generally not suited for mathematics tasks, and at best, red teaming techniques slightly improved performance.</li>
-<li>Prompts with red teaming tended to be much longer, likely detracting from the problem at hand.</li>
+<li>Models are not well-suited for mathematics tasks, and their numerical abilities mainly stem from memorization rather than the ability to follow simple algorithms. Examples may introduce noise or not be tailored well enough for the models.</li>
 </ul>
 </section>
-<section id="conclusion-and-limitations" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion-and-limitations">Conclusion and Limitations</h3>
+<section id="conclusions-and-limitations" class="level4">
+<h4 class="anchored" data-anchor-id="conclusions-and-limitations">Conclusions and Limitations</h4>
 <ul>
-<li>The study develops a Python framework for automatic red teaming of LLMs at scale and evaluates two GPT models at school-level calculations and puzzles.</li>
-<li><strong>Limitations</strong>: The evaluation only covers one type of LLM and the training data is not publicly available.</li>
+<li>Presented a Python framework for red teaming evaluations and highlighted the limitations of the study, including evaluating only one type of LLM and the lack of publicly available training data.</li>
 </ul>
 </section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper provides valuable insights into the limitations of current LLMs in handling elementary mathematics and algebraic reasoning tasks. However, potential problems and limitations include:</p>
-<ul>
-<li>The study only uses two specific LLM models, and the generalizability of the findings to other models may be limited.</li>
-<li>The paper does not delve into potential solutions or improvements to address the observed limitations in the models’ performance.</li>
-</ul>
-<p>Overall, while the study highlights important shortcomings of LLMs, further research is needed to address these limitations and develop more robust models for mathematical reasoning tasks.</p>
+<section id="critique" class="level4">
+<h4 class="anchored" data-anchor-id="critique">Critique</h4>
+<p>The paper provides insightful findings on the effectiveness of red teaming techniques and examples in mitigating hallucinations in LLMs on mathematical tasks. However, the study is limited by evaluating only two specific LLM models and may not consider all potential factors contributing to model behavior, such as fine-tuning methods or model architecture differences. Additionally, the study could benefit from a more comprehensive exploration of red teaming techniques and their impact on a broader range of LLMs. Overall, while the study provides valuable insights, further research is needed to fully understand and address the potential risks associated with LLM hallucinations.</p>
+</section>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00290v1">https://browse.arxiv.org/html/2401.00290v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>7380</td>
 </tr>

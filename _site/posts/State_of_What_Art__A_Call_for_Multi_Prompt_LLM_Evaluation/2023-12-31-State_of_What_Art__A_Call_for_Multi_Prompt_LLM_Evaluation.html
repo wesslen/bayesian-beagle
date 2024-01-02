@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Moran Mizrahi’, ‘Guy Kaplan’, ‘Dan Malkin’, ‘Rotem Dror’, ‘Dafna Shahaf’, ‘Gabriel Stanovsky’]">
 <meta name="dcterms.date" content="2023-12-31">
-<meta name="description" content="Analysis of single-prompt evaluations on language models, proposing diverse prompts and tailored metrics for robust assessment.">
+<meta name="description" content="Advances in large language models are analyzed for their evaluation, suggesting diverse prompts for more reliable assessments.">
 
 <title>Bayesian beagle - State of What Art? A Call for Multi-Prompt LLM Evaluation</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - State of What Art? A Call for Multi-Prompt LLM Evaluation">
-<meta property="og:description" content="Analysis of single-prompt evaluations on language models, proposing diverse prompts and tailored metrics for robust assessment.">
+<meta property="og:description" content="Advances in large language models are analyzed for their evaluation, suggesting diverse prompts for more reliable assessments.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2401.00595v1/extracted/5324720/figures/swfigure12.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - State of What Art? A Call for Multi-Prompt LLM Evaluation">
-<meta name="twitter:description" content="Analysis of single-prompt evaluations on language models, proposing diverse prompts and tailored metrics for robust assessment.">
+<meta name="twitter:description" content="Advances in large language models are analyzed for their evaluation, suggesting diverse prompts for more reliable assessments.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00595v1/extracted/5324720/figures/swfigure12.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Analysis of single-prompt evaluations on language models, proposing diverse prompts and tailored metrics for robust assessment.
+    Advances in large language models are analyzed for their evaluation, suggesting diverse prompts for more reliable assessments.
   </div>
 </div>
 
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Moran Mizrahi, Guy Kaplan, Dan Malkin, Rotem Dror, Dafna Shahaf, Gabriel Stanovsky </p>
           </div>
   </div>
     
@@ -158,85 +158,93 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="https://browse.arxiv.org/html/2401.00595v1/extracted/5324720/figures/swfigure12.png" class="img-fluid"></p>
 <section id="major-takeaways" class="level3">
 <h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
-<ol type="1">
-<li><p><strong>Single-prompt evaluations for large language models (LLMs) are unreliable</strong>: The paper showcases that the performance and ranking of LLMs on specific tasks can significantly vary based on the chosen prompt or instruction template. This inconsistency highlights the brittleness of single-prompt evaluations.</p></li>
-<li><p><strong>Proposal for multi-prompt evaluation metrics</strong>: The paper proposes a shift towards evaluating LLMs with a diverse set of prompt or instruction templates, offering different evaluation metrics for varied use cases. Metrics such as maximum performance, average performance, saturation, and combined performance score are suggested as more robust approaches.</p></li>
-<li><p><strong>Demonstrated sensitivity of LLMs to prompt paraphrasing</strong>: The paper not only identifies the sensitivity of LLMs to prompt paraphrasing, but it also extends the analysis to showcase that popular LLMs, including OpenAI models, exhibit significant performance variations with slight prompt modifications.</p></li>
-</ol>
+<ul>
+<li><p><strong>Single-prompt evaluations of large language models (LLMs) are prone to brittleness</strong>: The paper highlights the significant impact of prompt variations on LLM performance, challenging the adequacy of single-prompt evaluations. It presents findings that demonstrate the considerable performance discrepancies resulting from minor changes in prompt formulations.</p></li>
+<li><p><strong>Proposal for multi-prompt evaluation metrics</strong>: To address the limitations of single-prompt evaluations, the paper introduces a set of diverse <strong>evaluation metrics</strong> tailored to specific use cases. These metrics aim to provide a more robust and meaningful assessment of LLM capabilities by leveraging a diverse set of instruction templates for each task.</p></li>
+<li><p><strong>Significant divergence in model rankings and performance</strong>: The paper showcases the substantial differences in both absolute performance and relative model rankings resulting from the evaluation using multiple prompt variations. This indicates the inadequacy of traditional single-prompt evaluations for capturing the true capabilities of LLMs.</p></li>
+</ul>
 </section>
-<section id="sections-summary" class="level3">
-<h3 class="anchored" data-anchor-id="sections-summary">Sections Summary</h3>
+<section id="summary-of-sections" class="level3">
+<h3 class="anchored" data-anchor-id="summary-of-sections">Summary of Sections</h3>
 <section id="introduction" class="level4">
 <h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
 <ul>
-<li>Addresses the issue of variations in LLM performance based on different instruction templates and proposes a multi-prompt evaluation approach.</li>
+<li>Recent advancements in large language models and the prevalent use of single instruction templates in LLM evaluations are introduced.</li>
 </ul>
 </section>
 <section id="background-and-definitions" class="level4">
 <h4 class="anchored" data-anchor-id="background-and-definitions">Background and Definitions</h4>
 <ul>
-<li>Discusses the differences in task instructions, samples, and input-output exemplars and the prevalence of single-instruction evaluations in current LLM evaluation benchmarks.</li>
-<li>Highlights the need for novel evaluation benchmarks and methods based on the observed brittleness of single-prompt evaluations.</li>
+<li>Discussion on task instruction templates and existing evaluation benchmarks for LLMs, along with an overview of related work on prompt robustness.</li>
 </ul>
 </section>
 <section id="experimental-setup" class="level4">
 <h4 class="anchored" data-anchor-id="experimental-setup">Experimental Setup</h4>
 <ul>
-<li>Describes the tasks and models evaluated and the methods used to measure LLM performance on different instruction templates and prompts.</li>
+<li>Description of the tasks and models evaluated in the study, including 39 diverse tasks from three evaluation benchmarks and 16 instruction-tuned LLMs from diverse model families.</li>
 </ul>
 </section>
 <section id="single-prompt-evaluation-leads-to-inconsistent-results" class="level4">
 <h4 class="anchored" data-anchor-id="single-prompt-evaluation-leads-to-inconsistent-results">Single-Prompt Evaluation Leads to Inconsistent Results</h4>
 <ul>
-<li>Demonstrates the inconsistencies in LLM performance and ranking based on single-instruction evaluations, leading to a call for multi-prompt evaluation metrics.</li>
+<li>Exploration of the limitations of single-prompt evaluations through statistical analysis and quantification of performance variance due to instruction template paraphrasing.</li>
 </ul>
 </section>
 <section id="different-use-cases-merit-different-metrics" class="level4">
 <h4 class="anchored" data-anchor-id="different-use-cases-merit-different-metrics">Different Use Cases Merit Different Metrics</h4>
 <ul>
-<li>Proposes and discusses various evaluation metrics for specific use cases, emphasizing the need for nuanced evaluation methods tailored to different purposes.</li>
+<li>Proposal of four tailored evaluation metrics for LLMs, each suitable for specific scenarios and user needs, emphasizing the need to choose the evaluation metric based on the extrinsic needs of the evaluators.</li>
 </ul>
 </section>
 <section id="multi-prompt-evaluation" class="level4">
 <h4 class="anchored" data-anchor-id="multi-prompt-evaluation">Multi-Prompt Evaluation</h4>
 <ul>
-<li>Presents an evaluation of models based on the proposed multi-prompt evaluation metrics, illustrating differences in model rankings and performances.</li>
+<li>Presentation of an evaluation of various models according to the proposed metrics, revealing differences in model rankings depending on the metric used.</li>
 </ul>
 </section>
 <section id="small-scale-evaluation-of-openai-models-on-prompt-paraphrasing" class="level4">
 <h4 class="anchored" data-anchor-id="small-scale-evaluation-of-openai-models-on-prompt-paraphrasing">Small-Scale Evaluation of OpenAI Models on Prompt Paraphrasing</h4>
 <ul>
-<li>Provides additional evidence of sensitivity to prompt paraphrasing, particularly in OpenAI models.</li>
+<li>Findings from a small-scale evaluation demonstrating the sensitivity of OpenAI models to prompt paraphrasing and the resultant divergence in model performance between original prompts and paraphrases.</li>
 </ul>
 </section>
 <section id="conclusions" class="level4">
 <h4 class="anchored" data-anchor-id="conclusions">Conclusions</h4>
 <ul>
-<li>Emphasizes the necessity of a shift towards more consistent and comparable LLM evaluations, emphasizing the importance of robust evaluation methods.</li>
+<li>Emphasis on the need for nuanced evaluation methods and the proposal of alternative evaluation metrics to ensure more consistent and comparable LLM evaluations.</li>
 </ul>
 </section>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper effectively highlights the limitations of single-prompt evaluations for LLMs and proposes alternative metrics. However, the paper could benefit from a more detailed comparison of the proposed multi-prompt evaluation approach with existing evaluation methods. Additionally, while the paper presents evidence of inconsistency in LLM performances, further exploration of potential causes or underlying mechanisms could strengthen the findings. Some sections, such as the experimental setup, could provide more detail to enhance clarity and reproducibility. Lastly, the paper should discuss potential limitations or challenges in implementing multi-prompt evaluations in real-world LLM uses.</p>
+<ul>
+<li><p><strong>Generalizability of Findings</strong>: The study’s findings are based on a specific set of tasks, LLMs, and evaluation benchmarks, potentially limiting the generalizability of the results.</p></li>
+<li><p><strong>Lack of External Validation</strong>: The study does not provide validation using external datasets or real-world scenarios to demonstrate the practical applicability of the proposed multi-prompt evaluation metrics. This raises questions about the real-world effectiveness of the proposed metrics.</p></li>
+<li><p><strong>Potential Bias in Manual Verification</strong>: The manual verification and filtering of automatic instruction paraphrases may introduce subjective bias, impacting the robustness of the findings.</p></li>
+</ul>
+<p>Overall, while the paper makes a compelling case for the limitations of single-prompt evaluations and proposes alternative evaluation metrics, there is a need for further validation and applicability testing to support the practical adoption of these metrics in real-world LLM evaluation scenarios.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00595v1">https://browse.arxiv.org/html/2401.00595v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>10053</td>
 </tr>

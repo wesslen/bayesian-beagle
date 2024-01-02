@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Neeraj Varshney’, ‘Pavel Dolin’, ‘Agastya Seth’, ‘Chitta Baral’]">
 <meta name="dcterms.date" content="2023-12-30">
-<meta name="description" content="Study introduces SODE benchmark to evaluate safety and over-defensiveness of large language models, revealing important defense strategy findings.">
+<meta name="description" content="SODE benchmark assesses LLM safety and over-defensiveness, revealing key defense strategy insights for further research.">
 
 <title>Bayesian beagle - The Art of Defending: A Systematic Evaluation and Analysis of LLM Defense Strategies on Safety and Over-Defensiveness</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - The Art of Defending: A Systematic Evaluation and Analysis of LLM Defense Strategies on Safety and Over-Defensiveness">
-<meta property="og:description" content="Study introduces SODE benchmark to evaluate safety and over-defensiveness of large language models, revealing important defense strategy findings.">
+<meta property="og:description" content="SODE benchmark assesses LLM safety and over-defensiveness, revealing key defense strategy insights for further research.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2401.00287v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - The Art of Defending: A Systematic Evaluation and Analysis of LLM Defense Strategies on Safety and Over-Defensiveness">
-<meta name="twitter:description" content="Study introduces SODE benchmark to evaluate safety and over-defensiveness of large language models, revealing important defense strategy findings.">
+<meta name="twitter:description" content="SODE benchmark assesses LLM safety and over-defensiveness, revealing key defense strategy insights for further research.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00287v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Study introduces SODE benchmark to evaluate safety and over-defensiveness of large language models, revealing important defense strategy findings.
+    SODE benchmark assesses LLM safety and over-defensiveness, revealing key defense strategy insights for further research.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Neeraj Varshney, Pavel Dolin, Agastya Seth, Chitta Baral </p>
           </div>
   </div>
     
@@ -155,75 +155,63 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2401.00287v1/x1.png" class="img-fluid"></p>
-<section id="three-major-takeaways" class="level3">
-<h3 class="anchored" data-anchor-id="three-major-takeaways">Three Major Takeaways</h3>
-<ol type="1">
-<li><p><strong>Safety Evaluation</strong>: The paper introduces the Safety and Over-Defensiveness Evaluation (SODE) benchmark to assess LLM defense strategies against unsafe inputs by analyzing their impact on safety and over-defensiveness.</p></li>
-<li><p><strong>Key Findings</strong>: The study uncovers critical findings, such as the effectiveness of safety instructions in improving safety but leading to undue over-defensiveness, and how providing contextual knowledge can break the safety guardrails and render models more susceptible to generating harmful responses.</p></li>
-<li><p><strong>Effect of Defense Strategies</strong>: The paper reveals that different defense strategies significantly affect the safety and over-defensiveness of LLMs, emphasizing the need for comprehensive evaluation and comparison.</p></li>
-</ol>
-</section>
-<section id="sections-summary" class="level3">
-<h3 class="anchored" data-anchor-id="sections-summary">Sections Summary</h3>
-<section id="abstract" class="level4">
-<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
-<p>The paper presents the SODE benchmark, enabling systematic evaluation of LLM defense strategies and revealing critical findings related to safety and over-defensiveness.</p>
-</section>
-<section id="introduction" class="level4">
-<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
-<p>Concerns over the vulnerabilities and safety of LLMs highlight the need for research in safeguarding their use, leading to the proposal of various defense strategies. However, existing evaluation suites lack diverse inputs for accurate assessment.</p>
-</section>
-<section id="sode-benchmark" class="level4">
-<h4 class="anchored" data-anchor-id="sode-benchmark">SODE Benchmark</h4>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
 <ul>
-<li><strong>Dataset</strong>: Includes a comprehensive collection of both safe and unsafe prompts from various sources for evaluating safety and over-defensiveness.</li>
-<li><strong>Performance Evaluation</strong>: Evaluates responses differently for both unsafe and safe prompts using classification metrics.</li>
+<li><strong>Safety Concerns in NLP</strong>: The study focuses on addressing safety concerns pertaining to Large Language Models (LLMs) which play a pivotal role in natural language processing applications.</li>
+<li><strong>Critical Findings</strong>: The paper presents important findings, such as the impact of defense strategies on both safety and over-defensiveness, and the vulnerability of models to generating unsafe responses when provided with contextual knowledge.</li>
+<li><strong>SODE Benchmark</strong>: The Safety and Over-Defensiveness Evaluation (SODE) benchmark is introduced, offering a comprehensive collection of safe and unsafe prompts with evaluation methods for systematic analysis.</li>
 </ul>
 </section>
-<section id="llm-defense-strategies" class="level4">
-<h4 class="anchored" data-anchor-id="llm-defense-strategies">LLM Defense Strategies</h4>
+<section id="sode-benchmark" class="level3">
+<h3 class="anchored" data-anchor-id="sode-benchmark">SODE Benchmark</h3>
 <ul>
-<li><strong>Safety Instruction</strong>: Providing safety instructions improves safety but increases over-defensiveness.</li>
-<li><strong>In-Context Exemplars</strong>: Introducing exemplars improves performance on both safe and unsafe prompts.</li>
-<li><strong>Self-Check Techniques</strong>: Self-checking strategies lead to excessive over-defensiveness.</li>
-<li><strong>Contextual Knowledge</strong>: Providing contextual knowledge increases vulnerability to generating harmful responses.</li>
+<li><strong>Evaluation Dataset</strong>: The SODE benchmark compiles a diverse collection of safe and unsafe prompts from various sources and categorizes the unsafe prompts into different risk areas such as information hazards, malicious uses, and discrimination.
+<ul>
+<li><strong>Unsafe Prompts</strong>: Prompts are included from datasets like HarmfulQA, Latent-Jailbreak, and Do Not Answer, covering a wide range of unsafe inputs.</li>
+<li><strong>Safe Prompts</strong>: Safe prompts are compiled from human-instruction test sets like Vicuna and WizardLM.</li>
+</ul></li>
+<li><strong>Performance Evaluation</strong>: It utilizes automated evaluations using LLMs and provides an efficient evaluation method based on small language models such as DeBERTa-v3-large models.</li>
 </ul>
 </section>
-<section id="experiments-and-results" class="level4">
-<h4 class="anchored" data-anchor-id="experiments-and-results">Experiments and Results</h4>
+<section id="llm-defense-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="llm-defense-strategies">LLM Defense Strategies</h3>
 <ul>
-<li>Assessing the impact of different defense strategies on various state-of-the-art LLM models, revealing their effectiveness and model-dependent nature.</li>
+<li>The paper outlines several defense strategies, including Safety Instruction, In-Context Exemplars, Self-Safety Check of Input and Output, Incorporating Unsafe Prompts in Instruction Tuning, and Contextual Knowledge, and analyzes their impact on model performance.</li>
 </ul>
 </section>
-<section id="conclusion" class="level4">
-<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
-<p>The paper introduces the SODE benchmark and presents crucial findings that can guide further research in improving the safety of LLMs.</p>
-</section>
+<section id="experiments-and-results" class="level3">
+<h3 class="anchored" data-anchor-id="experiments-and-results">Experiments and Results</h3>
+<ul>
+<li>The study reveals the impact of various defense strategies on different state-of-the-art LLMs, showcasing how strategies like Safety Instruction and In-Context Exemplars improve safety, while strategies like Self-Safety Check techniques make the models over-defensive.</li>
+<li>The results demonstrate the effectiveness of defense strategies in reducing Unsafe Responses on Unsafe Prompts (URUP) and maintaining low Abstained Responses on Safe Prompts (ARSP) for different LLMs.</li>
+</ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<ul>
-<li><strong>Model Dependency</strong>: The paper assesses defense strategies on specific LLM models, raising questions about the generalizability of findings to other models.</li>
-<li><strong>Ethical Considerations</strong>: While the paper acknowledges its focus on systematic evaluation, it should further consider potential ethical implications of its findings.</li>
-</ul>
+<p>The paper provides comprehensive insights into defense strategies for LLMs, but potential problems lie in the limited focus on the specific LLMs studied and the need for broader applicability to various LLMs and real-world scenarios. Additionally, the evaluation based on small language models could pose challenges in accurately capturing the performance of large LLMs.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00287v1">https://browse.arxiv.org/html/2401.00287v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>8573</td>
 </tr>

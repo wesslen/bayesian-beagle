@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Jinglong Luo’, ‘Yehong Zhang’, ‘Jiaqi Zhang’, ‘Xin Mu’, ‘Hui Wang’, ‘Yue Yu’, ‘Zenglin Xu’]">
 <meta name="dcterms.date" content="2024-01-01">
-<meta name="description" content="SMPC protects privacy of inference data for large language models, SecFormer optimizes PPI for Transformer models.">
+<meta name="description" content="Privacy concerns with large language models led to Secure Multi-Party Computing (SMPC) for Privacy-Preserving Inference. SecFormer optimizes SMPC for Transformer models, improving performance and efficiency.">
 
 <title>Bayesian beagle - SecFormer: Towards Fast and Accurate Privacy-Preserving Inference for Large Language Models</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - SecFormer: Towards Fast and Accurate Privacy-Preserving Inference for Large Language Models">
-<meta property="og:description" content="SMPC protects privacy of inference data for large language models, SecFormer optimizes PPI for Transformer models.">
+<meta property="og:description" content="Privacy concerns with large language models led to Secure Multi-Party Computing (SMPC) for Privacy-Preserving Inference. SecFormer optimizes SMPC for Transformer models, improving performance and efficiency.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2401.00793v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - SecFormer: Towards Fast and Accurate Privacy-Preserving Inference for Large Language Models">
-<meta name="twitter:description" content="SMPC protects privacy of inference data for large language models, SecFormer optimizes PPI for Transformer models.">
+<meta name="twitter:description" content="Privacy concerns with large language models led to Secure Multi-Party Computing (SMPC) for Privacy-Preserving Inference. SecFormer optimizes SMPC for Transformer models, improving performance and efficiency.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00793v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    SMPC protects privacy of inference data for large language models, SecFormer optimizes PPI for Transformer models.
+    Privacy concerns with large language models led to Secure Multi-Party Computing (SMPC) for Privacy-Preserving Inference. SecFormer optimizes SMPC for Transformer models, improving performance and efficiency.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Jinglong Luo, Yehong Zhang, Jiaqi Zhang, Xin Mu, Hui Wang, Yue Yu, Zenglin Xu </p>
           </div>
   </div>
     
@@ -155,59 +155,68 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2401.00793v1/x1.png" class="img-fluid"></p>
-<section id="major-takeaways" class="level3">
-<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<section id="key-findings" class="level4">
+<h4 class="anchored" data-anchor-id="key-findings">Key Findings</h4>
 <ol type="1">
-<li><p><strong>Privacy Concerns and SMPC</strong>: The paper addresses the growing privacy concerns related to large language models in cloud platforms by introducing an advanced optimization framework, SecFormer, which strikes a balance between performance and efficiency in Privacy-Preserving Inference (PPI) for Transformer models.</p></li>
-<li><p><strong>Optimization of Nonlinear Operations</strong>: SecFormer effectively eliminates the high-cost exponential and maximum operations in PPI without sacrificing model performance. It also introduces a suite of efficient Secure Multi-Party Computing (SMPC) protocols that handle complex nonlinear functions within PPI, such as Softmax, GeLU, and LayerNorm.</p></li>
-<li><p><strong>Performance and Efficiency</strong>: Experimental results demonstrate that SecFormer outperforms existing frameworks in both performance and efficiency, showing improvements in the performance of BERTBASE and BERTLARGE models and being significantly faster than previous methods.</p></li>
+<li><strong>SecFormer Framework</strong>: Introduces the SecFormer framework for privacy-preserving inference (PPI) for large language models that strikes an optimal balance between performance and efficiency.</li>
+<li><strong>Performance Improvement</strong>: Outperforms existing approaches in both performance and efficiency, showing improvements of 5.6% to 24.2% for BERTBASE and BERTLARGE models.</li>
+<li><strong>Privacy-preserving Algorithms</strong>: Introduces novel privacy-preserving algorithms for GeLU, Softmax, and LayerNorm, and demonstrates their effectiveness through extensive evaluation.</li>
 </ol>
+</section>
 </section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The paper addresses the escalating privacy concerns related to large language models hosted on cloud platforms by presenting an optimization framework, SecFormer.</p>
+<p>The introduction highlights the escalating privacy concerns with the use of large language models for inference services and the potential risks associated with sensitive data.</p>
 </section>
 <section id="background" class="level3">
 <h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>The paper introduces the structure of Transformer models and SMPC primitives, highlighting the challenges encountered in Privacy-Preserving Inference (PPI) for Transformer models arising from nonlinear operations and the limitations of current SMPC protocols.</p>
+<p>The section introduces the structure of Transformer models and the primitives of Secure Multi-Party Computation (SMPC) and outlines the challenges encountered in Privacy-Preserving Inference (PPI) for Transformer models.</p>
 </section>
 <section id="method" class="level3">
 <h3 class="anchored" data-anchor-id="method">Method</h3>
-<p>The SecFormer framework is described, covering the optimization of the model design and SMPC protocol design. It details the development of privacy-preserving algorithms for GeLU, Softmax, and LayerNorm in Transformer models.</p>
+<ol type="1">
+<li><strong>SecFormer</strong>: Introduces the SecFormer framework, focusing on optimization in model design and SMPC protocol design.</li>
+<li><strong>Privacy-preserving Algorithms</strong>: Details algorithms for privacy-preserving GeLU, approximate Softmax, and LayerNorm, emphasizing their effectiveness through ablation studies.</li>
+</ol>
 </section>
 <section id="experiments" class="level3">
 <h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
-<p>The effectiveness of the SecFormer framework is demonstrated through a series of experiments. It compares the performance and efficiency of SecFormer with existing methods and evaluates the privacy-preserving algorithms introduced in the paper.</p>
+<ol type="1">
+<li><strong>Performance</strong>: Demonstrates performance improvements in SecFormer compared to existing approaches, showing superior performance and efficiency in PPI for BERTBASE and BERTLARGE models.</li>
+<li><strong>Ablation Study</strong>: Evaluates the effectiveness of the privacy-preserving algorithms and demonstrates their superiority over existing methods.</li>
+</ol>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>The paper concludes that SecFormer surpasses existing PPI methods, offering a scalable and effective solution for large language models while meeting privacy and efficiency standards.</p>
+<p>SecFormer offers a promising solution that balances performance and efficiency for privacy-preserving inference in large language models while maintaining high standards of privacy.</p>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<ol type="1">
-<li>While the paper presents impressive results, it would benefit from a more comprehensive discussion of potential limitations or challenges in implementing SecFormer in real-world scenarios.</li>
-<li>The experiments focus on comparisons with existing methods, but a deeper analysis of the potential trade-offs or drawbacks of the SecFormer framework in specific use cases would provide a more nuanced understanding of its applicability.</li>
-<li>The paper could extend its discussion to include ethical considerations and potential implications of implementing privacy-preserving algorithms in large language models.</li>
-</ol>
+<p>The paper does not specifically address potential limitations or challenges in real-world deployment of the SecFormer framework. It would be valuable to acknowledge and discuss potential practical challenges or trade-offs associated with implementing the proposed algorithms and frameworks. Additionally, further insights or comparisons with more diverse or complex datasets would enhance the comprehensiveness of the findings.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00793v1">https://browse.arxiv.org/html/2401.00793v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>10983</td>
 </tr>

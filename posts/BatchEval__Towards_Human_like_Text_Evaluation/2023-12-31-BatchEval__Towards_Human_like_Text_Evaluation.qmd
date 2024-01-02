@@ -1,13 +1,12 @@
 
 ---
 title: "BatchEval: Towards Human-like Text Evaluation"
-description: "Introducing BatchEval paradigm improves text evaluation with large language models by 10.5% while reducing API cost."
-author: "gpt-3.5-turbo-1106"
+description: "BatchEval improves text evaluation over LLMs, addressing design sensitivity, noise resistance, and ensemble performance, with 10.5% higher correlations at reduced API cost."
+author: "['Peiwen Yuan', 'Shaoxiong Feng', 'Yiwei Li', 'Xinglin Wang', 'Boyuan Pan', 'Heda Wang', 'Kan Li']"
 date: "2023-12-31"
-link: "https://browse.arxiv.org/html/2401.00437v1"
 image: "https://browse.arxiv.org/html/2401.00437v1/x1.png"
 categories: ['robustness', 'prompt engineering']
-file-modified: 2024-01-02
+authors: Peiwen Yuan, Shaoxiong Feng, Yiwei Li, Xinglin Wang, Boyuan Pan, Heda Wang, Kan Li
 format:
   html:
     code-overflow: wrap
@@ -17,20 +16,23 @@ format:
 
 ### BatchEval: Towards Human-like Text Evaluation
 
-#### Abstract
-The paper introduces "BatchEval," a new paradigm for text evaluation that conducts batch-wise evaluation iteratively to address limitations of sample-wise evaluation methods. The proposed approach aims to alleviate sensitivity to prompt design, poor resistance to noise, and inferior ensemble performance by incorporating batch-wise evaluation akin to the way humans assess text. The paper presents comprehensive experiments demonstrating that **BatchEval outperforms state-of-the-art methods by 10.5% on Pearson correlations** with a lower API cost.
+#### Key Findings
+1. **Inferior ensemble performance with static reference:** Current large language model (LLM)-based evaluators face challenges with ensemble performance due to weak diversity and lack of comparison between analyses.
+2. **Sensitivity to prompt design:** Minor changes to the prompt may lead to significant variations in evaluation results.
+3. **Poor resistance to noise:** Evaluation scores lack discrimination and exhibit a non-uniform distribution, leading to reduced robustness against noise.
 
 #### Introduction
-The paper outlines the significance of accurate text evaluation in the context of rapid progress in large language models (LLMs) and highlights the limitations of existing automatic evaluation methods in aligning with human judgments.
+- Text evaluation is crucial for understanding and developing LLMs, and automatic methods have been explored to complement human evaluation, but inconsistencies with human judgments persist.
 
-#### Background
-The paper provides an overview of existing automatic text evaluation methods, including rule-based, embedding-based
+#### Proposed Paradigm: BatchEval
+- **Addressing Issues:** BatchEval alleviates prompt sensitivity, noise resistance, and ensemble performance. It conducts batch-wise evaluation
 
 ## Appendix
 
 |          |          |
 |----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
 | Date Generated     | 2024-01-02       |
-| HTML     | [https://browse.arxiv.org/html/2401.00437v1](https://browse.arxiv.org/html/2401.00437v1)       |
+| HTML     | []()       |
 | Truncated       | True       |
 | Word Count       | 15893       |

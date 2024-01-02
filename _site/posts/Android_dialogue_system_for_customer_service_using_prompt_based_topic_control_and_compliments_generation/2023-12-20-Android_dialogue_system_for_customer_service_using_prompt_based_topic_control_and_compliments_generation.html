@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Miyama Tamotsu’, ‘Okada Shogo’]">
 <meta name="dcterms.date" content="2023-12-20">
-<meta name="description" content="A dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.">
+<meta name="description" content="Dialogue system for trip planning uses ChatGPT-API to control topics and generate compliments, evaluated positively in a travel agency.">
 
 <title>Bayesian beagle - Android dialogue system for customer service using prompt-based topic control and compliments generation</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Android dialogue system for customer service using prompt-based topic control and compliments generation">
-<meta property="og:description" content="A dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.">
+<meta property="og:description" content="Dialogue system for trip planning uses ChatGPT-API to control topics and generate compliments, evaluated positively in a travel agency.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.12924v1/extracted/5307376/fig/dialogue_flow.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Android dialogue system for customer service using prompt-based topic control and compliments generation">
-<meta name="twitter:description" content="A dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.">
+<meta name="twitter:description" content="Dialogue system for trip planning uses ChatGPT-API to control topics and generate compliments, evaluated positively in a travel agency.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.12924v1/extracted/5307376/fig/dialogue_flow.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    A dialogue system using ChatGPT-API to plan trips and give compliments, effectively evaluated in a preliminary round.
+    Dialogue system for trip planning uses ChatGPT-API to control topics and generate compliments, evaluated positively in a travel agency.
   </div>
 </div>
 
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Miyama Tamotsu, Okada Shogo </p>
           </div>
   </div>
     
@@ -156,68 +156,102 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.12924v1/extracted/5307376/fig/dialogue_flow.png" class="img-fluid"></p>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
 <ol type="1">
-<li><strong>Topic Control and Compliments</strong>: The developed Android dialogue system for customer service demonstrated the use of ChatGPT for <strong>topic control</strong> in trip planning, as well as generating <strong>compliments</strong> for users based on their appearance.</li>
-<li><strong>User Preference Integration</strong>: The system integrated user preferences by extracting knowledge from the history of the user’s utterances and utilizing it to propose travel plans matching the user’s preferences.</li>
-<li><strong>Effective User Evaluation</strong>: In a preliminary round held at a travel agency’s actual store, the system garnered positive feedback and was ranked first in both satisfaction ratings and plan ratings by real customers.</li>
+<li>The paper describes the development of a <strong>dialogue system for customer service, integrating topic control, compliment generation, and trip planning</strong> using the ChatGPT-API.</li>
+<li>The system employs <strong>generative AI (GPT-3.5-turbo and GPT-4)</strong> for controlling topics, creating dialogue prompts, and generating travel plans based on user preferences.</li>
+<li>Preliminary evaluations conducted in a travel agency’s actual store demonstrated the <strong>effectiveness of the proposed system</strong>, ranking it first in both satisfaction and plan ratings.</li>
 </ol>
 </section>
-<section id="proposed-system" class="level3">
-<h3 class="anchored" data-anchor-id="proposed-system">Proposed System</h3>
+<section id="i.-introduction" class="level3">
+<h3 class="anchored" data-anchor-id="i.-introduction">I. Introduction</h3>
 <ul>
-<li><strong>Controlling topics with ChatGPT prompts</strong>:
-<ul>
-<li>Utilized GPT-3.5-trubo and GPT4 for topic control in creating travel plans by inserting fixed text into prompts.</li>
-</ul></li>
-<li><strong>Dialogue Flow</strong>:
-<ul>
-<li>Elicited customer requests through questions, confirmed travel plan requirements, and discussed plans aligning with customer needs.</li>
-</ul></li>
-<li><strong>Function to complement a user’s physical appearance</strong>:
-<ul>
-<li>Utilized appearance recognition to automatically generate compliments for users.</li>
-</ul></li>
-<li><strong>Control using user’s past speech</strong>:
-<ul>
-<li>Employed ChatGPT to determine sightseeing spots and create travel plans based on the user’s past speech.</li>
-</ul></li>
-<li><strong>Overall Configuration</strong>:
-<ul>
-<li>The system’s overall configuration was detailed, showing the dialogue flow and the user evaluation results.</li>
-</ul></li>
+<li>Development of dialogue system for the Dialogue Robot Competition 2023</li>
+<li>Importance of hospitality and social implementation in customer service</li>
+<li>Necessity to construct a dialogue system with various elements of hospitality service and evaluate users</li>
 </ul>
 </section>
-<section id="user-evaluation-and-preliminary-results" class="level3">
-<h3 class="anchored" data-anchor-id="user-evaluation-and-preliminary-results">User Evaluation and Preliminary Results</h3>
+<section id="ii.-proposed-system" class="level3">
+<h3 class="anchored" data-anchor-id="ii.-proposed-system">II. Proposed System</h3>
+<section id="a.-controlling-topics-with-chatgpt-prompts" class="level4">
+<h4 class="anchored" data-anchor-id="a.-controlling-topics-with-chatgpt-prompts">A. Controlling topics with ChatGPT prompts</h4>
 <ul>
-<li><strong>High Satisfaction and Reliability</strong>: The system was highly rated in terms of satisfaction and reliability of information by real customers in actual shops, demonstrating the effectiveness of integrating user preferences and compliments.</li>
+<li>Utilization of GPT-3.5-turbo and GPT-4 for creating a travel plan</li>
+<li>Inserting fixed text in the prompts to direct the topic toward travel planning</li>
+</ul>
+</section>
+<section id="b.-dialogue-flow" class="level4">
+<h4 class="anchored" data-anchor-id="b.-dialogue-flow">B. Dialogue Flow</h4>
+<ul>
+<li>Eliciting customer requests through questions and determining tourist destinations</li>
+<li>Confirming customer requirements for the travel plan and discussing a suitable plan</li>
+</ul>
+</section>
+<section id="c.-function-to-complement-a-users-physical-appearance" class="level4">
+<h4 class="anchored" data-anchor-id="c.-function-to-complement-a-users-physical-appearance">C. Function to complement a user’s physical appearance</h4>
+<ul>
+<li>Recognition of user’s appearance characteristics using CLIP model and Face++</li>
+<li>Automatic generation of compliments based on user’s appearance characteristics</li>
+</ul>
+</section>
+<section id="d.-control-using-users-past-speech" class="level4">
+<h4 class="anchored" data-anchor-id="d.-control-using-users-past-speech">D. Control using user’s past speech</h4>
+<ul>
+<li>Utilizing ChatGPT to determine sightseeing spots and create travel plans based on user’s past speech information</li>
+</ul>
+</section>
+<section id="e.-overall-configuration" class="level4">
+<h4 class="anchored" data-anchor-id="e.-overall-configuration">E. Overall Configuration</h4>
+<ul>
+<li>System configuration presenting the overall structure</li>
+</ul>
+</section>
+</section>
+<section id="iii.-user-evaluation-and-preliminary-results" class="level3">
+<h3 class="anchored" data-anchor-id="iii.-user-evaluation-and-preliminary-results">III. User Evaluation and Preliminary Results</h3>
+<ul>
+<li>Evaluation items including satisfaction and plan ratings</li>
+<li>System ranked first in both satisfaction and plan ratings during the preliminary round</li>
+</ul>
+</section>
+<section id="iv.-conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="iv.-conclusion">IV. Conclusion</h3>
+<ul>
+<li>Summary of the system’s dialogue control and usage of ChatGPT</li>
+<li>Ranking first in the preliminary round evaluations</li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>While the paper provides an insightful overview of the Android dialogue system and its successful preliminary evaluation, it would benefit from a more detailed explanation of the technical aspects of the system’s development and the limitations or challenges faced during the implementation and evaluation process. Additionally, further clarification on the ethical considerations and potential privacy concerns related to capturing user appearance for compliments generation would enhance the comprehensiveness of the paper.</p>
+<ul>
+<li>The paper lacks a detailed discussion of the limitations or potential challenges faced during the development and implementation of the dialogue system.</li>
+<li>Further insights into the scalability and adaptability of the system in diverse customer service scenarios could enhance the paper’s depth and applicability.</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.12924v1">https://browse.arxiv.org/html/2312.12924v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
-<td>1231</td>
+<td>2038</td>
 </tr>
 </tbody>
 </table>

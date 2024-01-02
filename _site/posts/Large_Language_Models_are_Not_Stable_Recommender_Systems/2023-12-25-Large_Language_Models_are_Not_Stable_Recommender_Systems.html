@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Tianhui Ma’, ‘Yuan Cheng’, ‘Hengshu Zhu’, ‘Hui Xiong’]">
 <meta name="dcterms.date" content="2023-12-25">
-<meta name="description" content="LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.">
+<meta name="description" content="LLMs struggle as recommender systems due to position bias. STELLA framework mitigates bias, improving recommendation performance.">
 
 <title>Bayesian beagle - Large Language Models are Not Stable Recommender Systems</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Large Language Models are Not Stable Recommender Systems">
-<meta property="og:description" content="LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.">
+<meta property="og:description" content="LLMs struggle as recommender systems due to position bias. STELLA framework mitigates bias, improving recommendation performance.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.15746v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Large Language Models are Not Stable Recommender Systems">
-<meta name="twitter:description" content="LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.">
+<meta name="twitter:description" content="LLMs struggle as recommender systems due to position bias. STELLA framework mitigates bias, improving recommendation performance.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.15746v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance.
+    LLMs struggle as recommender systems due to position bias. STELLA framework mitigates bias, improving recommendation performance.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Tianhui Ma, Yuan Cheng, Hengshu Zhu, Hui Xiong </p>
           </div>
   </div>
     
@@ -155,43 +155,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.15746v1/x1.png" class="img-fluid"></p>
-<section id="main-findings" class="level3">
-<h3 class="anchored" data-anchor-id="main-findings">Main Findings</h3>
-<ol type="1">
-<li><p><strong>Positional Bias in LLMs</strong>: The study identifies consistent patterns of positional bias in large language models (LLMs) when used as recommender systems, leading to unstable recommendation results that are sensitive to the order of input candidate items.</p></li>
-<li><p><strong>STELLA Framework</strong>: The paper proposes the STELLA (Stable LLM for Recommendation) framework, which involves a two-stage pipeline for using LLMs as recommender systems. It employs a probing stage to identify bias patterns and a recommendation stage using a Bayesian updating strategy to calibrate biased output and enhance recommendation performance.</p></li>
-<li><p><strong>Effectiveness of STELLA</strong>: Extensive experiments validate the effectiveness of the STELLA framework, significantly reducing variance and improving overall recommendation performance of LLMs.</p></li>
-</ol>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ul>
+<li><strong>Large language models (LLMs)</strong> are observed to exhibit <strong>position bias</strong>, affecting the stability and accuracy of their recommendations across various scenarios.</li>
+<li>The proposed <strong>STELLA framework</strong> employs a two-stage pipeline to address position bias in LLMs, using a Bayesian probabilistic framework to adjust biased output and enhance recommendation performance.</li>
+<li>Extensive experiments validate the effectiveness of the STELLA framework in <strong>reducing variance</strong> and <strong>enhancing recommendation performance</strong> of LLMs.</li>
+</ul>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<ul>
+<li>Recommender systems play a crucial role in various online services, and while traditional models have limitations in capturing user preferences in complex contexts, there is growing interest in exploring the use of LLMs for novel recommender systems.</li>
+</ul>
+</section>
+<section id="position-bias-in-large-language-model" class="level3">
+<h3 class="anchored" data-anchor-id="position-bias-in-large-language-model">Position Bias in Large Language Model</h3>
+<ul>
+<li>Using LLMs as recommender systems introduces <strong>position bias</strong>, making recommendation results sensitive to the order of input candidate items.</li>
+<li>The position bias problem in using LLMs for recommendation systems is still in its early stages and requires systematic exploration.</li>
+</ul>
+</section>
+<section id="calibrating-the-position-bias" class="level3">
+<h3 class="anchored" data-anchor-id="calibrating-the-position-bias">Calibrating the Position Bias</h3>
+<ul>
+<li>The proposed STELLA framework involves a <strong>probing stage</strong> to detect position biases and a <strong>recommendation stage</strong> that employs a Bayesian strategy to adjust biased output of LLMs with an entropy indicator.</li>
+</ul>
+</section>
+<section id="experiments" class="level3">
+<h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
+<ul>
+<li>Extensive experiments on various datasets demonstrate that the raw output of LLMs is highly unstable, but STELLA provides stable and consistent performance, significantly outperforming baseline approaches.</li>
+</ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>While the paper introduces an innovative framework for addressing the instability of LLMs as recommender systems, there are potential limitations and concerns in the study:</p>
-<ol type="1">
-<li><p><strong>Experiment Scalability</strong>: The experiments are conducted using relatively smaller-scale LLMs, and the scalability of the proposed framework to larger models is not addressed. The effectiveness of STELLA on larger, more complex LLMs may need to be further investigated.</p></li>
-<li><p><strong>Dataset Selection</strong>: The paper uses a limited number of datasets for evaluation. Additional diverse and more extensive datasets could provide a more comprehensive understanding of the framework’s performance across different domains and user preferences.</p></li>
-<li><p><strong>Applicability</strong>: The study mainly focuses on post-processing techniques for LLM-based recommendations and does not delve into the potential challenges or limitations in real-world implementation. Understanding the practical applicability and potential trade-offs of integrating STELLA into existing recommender systems is crucial for its adoption in industry.</p></li>
-</ol>
-<p>Overall, while the paper presents a promising solution to address the instability of LLMs in recommendations, further research and real-world application testing may be necessary to fully assess its effectiveness and practical utility.</p>
+<ul>
+<li>The paper focuses on the effectiveness of the proposed framework but lacks a detailed analysis of potential limitations or trade-offs associated with implementing the STELLA framework.</li>
+<li>The language and technical complexity of the paper may pose challenges for readers with limited expertise in natural language processing and Bayesian frameworks.</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.15746v1">https://browse.arxiv.org/html/2312.15746v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
-<td>4797</td>
+<td>8647</td>
 </tr>
 </tbody>
 </table>

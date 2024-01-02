@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Yue Zhang’, ‘Leyang Cui’, ‘Wei Bi’, ‘Shuming Shi’]">
 <meta name="dcterms.date" content="2023-12-25">
-<meta name="description" content="ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.">
+<meta name="description" content="New decoding strategy reduces misinformation in large language models, improving factuality across various models and benchmarks.">
 
 <title>Bayesian beagle - Alleviating Hallucinations of Large Language Models through Induced Hallucinations</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Alleviating Hallucinations of Large Language Models through Induced Hallucinations">
-<meta property="og:description" content="ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.">
+<meta property="og:description" content="New decoding strategy reduces misinformation in large language models, improving factuality across various models and benchmarks.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.15710v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Alleviating Hallucinations of Large Language Models through Induced Hallucinations">
-<meta name="twitter:description" content="ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.">
+<meta name="twitter:description" content="New decoding strategy reduces misinformation in large language models, improving factuality across various models and benchmarks.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.15710v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    ICD strategy reduces LLM hallucinations, improving factuality in generated content across models. Effective on TruthfulQA and extsc{FActScore} benchmarks.
+    New decoding strategy reduces misinformation in large language models, improving factuality across various models and benchmarks.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Yue Zhang, Leyang Cui, Wei Bi, Shuming Shi </p>
           </div>
   </div>
     
@@ -155,80 +155,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.15710v1/x1.png" class="img-fluid"></p>
-<section id="summary-of-alleviating-hallucinations-of-large-language-models-through-induced-hallucinations" class="level1">
-<h1>Summary of “Alleviating Hallucinations of Large Language Models through Induced Hallucinations”</h1>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings:</h2>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<section id="major-findings" class="level4">
+<h4 class="anchored" data-anchor-id="major-findings">Major Findings</h4>
 <ol type="1">
-<li><strong>Hallucinations in Large Language Models (LLMs):</strong> The study aims to address the issue of hallucinations in LLMs, where the models generate inaccurate or fabricated information, hindering their practical application.</li>
-<li><strong>Induce-then-Contrast Decoding (ICD):</strong> The proposed ICD method involves inducing hallucinations from LLMs and using them as penalty terms during decoding to improve factuality. Experimental results show significant improvement in truthfulness across various model sizes and families, comparable to state-of-the-art LLMs when equipped with ICD.</li>
-<li><strong>Effectiveness:</strong> ICD method provides substantial improvements in truthfulness on TruthfulQA and reduces hallucinations in open-ended text generation on FActScore compared to baseline decoding methods.</li>
+<li>Large language models (LLMs) often generate inaccurate or fabricated information, known as “hallucinations.”</li>
+<li>The proposed Induce-then-Contrast Decoding (ICD) method effectively reduces hallucinations in LLMs across various model sizes and families.</li>
+<li>Experimental results demonstrate that ICD significantly improves the truthfulness of LLMs on both discrimination-based and generation-based hallucination evaluation benchmarks.</li>
 </ol>
 </section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
 <ul>
-<li>Large Language Models (LLMs) have shown impressive capabilities but continue to struggle with hallucinations, generating inaccurate or fabricated information.</li>
-<li>Previous research suggests that training objectives and lack of knowledge may contribute to hallucinations in LLMs.</li>
+<li>Large language models (LLMs) have demonstrated remarkable capabilities in various natural language processing tasks but continue to generate inaccurate or fabricated information, termed as “hallucinations.”</li>
+<li>Previous work suggests that the pre-training objective of existing LLMs may be a cause for hallucinations, and injecting more knowledge into LLMs through post-hoc supervised fine-tuning may inadvertently encourage hallucinations.</li>
 </ul>
 </section>
-<section id="induce-then-contrast-decoding" class="level2">
-<h2 class="anchored" data-anchor-id="induce-then-contrast-decoding">Induce-then-Contrast Decoding</h2>
-<section id="inducing-hallucinations-from-llms" class="level3">
-<h3 class="anchored" data-anchor-id="inducing-hallucinations-from-llms">Inducing Hallucinations from LLMs</h3>
+<section id="induce-then-contrast-decoding" class="level4">
+<h4 class="anchored" data-anchor-id="induce-then-contrast-decoding">Induce-then-Contrast Decoding</h4>
 <ul>
-<li>Factually weak LLMs are constructed by inducing hallucinations through fine-tuning or zero-shot prompting, which is then used as a penalty term to guide LLMs to generate more factual content.</li>
-<li>The fine-tuning process involves maximizing the log probability of the target output given system prompt and user input with new learned weights.</li>
+<li>ICD is a lightweight decoding method that first constructs a factually weak LLM by inducing hallucinations from the original LLM and then eliminates the non-factual knowledge by contrastive decoding.</li>
+<li>Experimental results show that inducing hallucinations through fine-tuning or zero-shot prompting and penalizing them effectively guides LLMs to generate more factual content.</li>
 </ul>
 </section>
-<section id="factually-weak-llm-as-a-penalty" class="level3">
-<h3 class="anchored" data-anchor-id="factually-weak-llm-as-a-penalty">Factually Weak LLM as A Penalty</h3>
+<section id="experiments" class="level4">
+<h4 class="anchored" data-anchor-id="experiments">Experiments</h4>
 <ul>
-<li>The decoding process involves amplifying predictions from the original model and downplaying untruthful predictions using a contrasting distribution to improve factuality.</li>
-<li>An adaptive plausibility constraint is introduced to select tokens for penalty, focusing only on those with higher probabilities than a certain proportion of the maximum probability assigned by the original model.</li>
+<li>ICD significantly improves the truthfulness of LLMs on both the discrimination-based benchmark (TruthfulQA) and the generation-based benchmark (FActScore) compared to other decoding methods.</li>
+<li>Additional analysis shows the impact of task format, model sizes, data size for inducing hallucinations, and comparisons between real and synthetic data for inducing hallucinations.</li>
 </ul>
 </section>
 </section>
-<section id="experiments" class="level2">
-<h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
 <ul>
-<li>Experimental evaluation on TruthfulQA and FActScore benchmarks demonstrates the effectiveness of ICD method in improving factuality and reducing hallucinations in LLMs compared to baseline decoding methods.</li>
-<li>Additional analyses include suitability of different task formats for inducing hallucinations, effectiveness across different LLM model sizes, and impact of data size and data source for inducing hallucinations.</li>
+<li>The paper lacks a thorough discussion of potential ethical considerations and broader societal implications of mitigating hallucinations in LLMs.</li>
+<li>The evaluation setting could be expanded to cover a wider range of tasks and benchmark datasets for a more comprehensive assessment of the proposed ICD method.</li>
+<li>The authors could have provided more details about potential future directions and how they would address the limitations of the current study.</li>
 </ul>
-</section>
-<section id="critique" class="level2">
-<h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<ul>
-<li>The additional computational costs and latency introduced by contrastive decoding could be a limitation in practical application.</li>
-<li>The study primarily focuses on evaluating the effectiveness of ICD on TruthfulQA and FActScore, but the universal applicability of the method across different domains and tasks is yet to be determined.</li>
-</ul>
-<p>Overall, the study introduces an innovative method, ICD, for alleviating hallucinations in LLMs, providing empirical evidence of its effectiveness. The potential of the method in addressing hallucinations in open domains and general tasks, as well as its scalability and practical application, warrant further investigation.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.15710v1">https://browse.arxiv.org/html/2312.15710v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
-<td>4999</td>
+<td>9227</td>
 </tr>
 </tbody>
 </table>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

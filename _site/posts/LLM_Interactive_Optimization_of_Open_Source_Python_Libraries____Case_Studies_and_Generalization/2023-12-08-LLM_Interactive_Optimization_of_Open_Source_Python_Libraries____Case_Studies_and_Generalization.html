@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Andreas Florath’, ‘Franz Kiraly’]">
 <meta name="dcterms.date" content="2023-12-08">
-<meta name="description" content="GPT-4 can optimize code efficiency, but human input is essential and more study is needed.">
+<meta name="description" content="GPT-4 effectively optimizes python libraries with human input, but further quantification is needed for broader application.">
 
 <title>Bayesian beagle - LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization</title>
 <style>
@@ -66,12 +66,12 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization">
-<meta property="og:description" content="GPT-4 can optimize code efficiency, but human input is essential and more study is needed.">
-<meta property="og:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
+<meta property="og:description" content="GPT-4 effectively optimizes python libraries with human input, but further quantification is needed for broader application.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.14949v1/correlation_plot.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - LLM Interactive Optimization of Open Source Python Libraries – Case Studies and Generalization">
-<meta name="twitter:description" content="GPT-4 can optimize code efficiency, but human input is essential and more study is needed.">
-<meta name="twitter:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
+<meta name="twitter:description" content="GPT-4 effectively optimizes python libraries with human input, but further quantification is needed for broader application.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.14949v1/correlation_plot.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    GPT-4 can optimize code efficiency, but human input is essential and more study is needed.
+    GPT-4 effectively optimizes python libraries with human input, but further quantification is needed for broader application.
   </div>
 </div>
 
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Andreas Florath, Franz Kiraly </p>
           </div>
   </div>
     
@@ -155,55 +155,134 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><img src="None.png" class="img-fluid"></p>
-<section id="major-takeaways" class="level3">
-<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<p><img src="https://browse.arxiv.org/html/2312.14949v1/correlation_plot.png" class="img-fluid"></p>
+<p><strong>Summary:</strong></p>
+<p><strong>Major Takeaways:</strong> - The paper presents methodologically stringent case studies applied to well-known open source Python libraries pillow and numpy, using the LLM ChatGPT-4, to optimize source code for <strong>energy and compute efficiency</strong> in <strong>interactive</strong> collaboration with a human expert. - LLM ChatGPT-4 was successful in optimizing the source code, with improvements reported for the same expert across multiple case studies, where performance improvements ranged from 1.2 to 38 times. - The case studies demonstrate a strong potential for <strong>practical utility</strong> of LLMs in collaborative code optimization for open-source Python libraries.</p>
+<section id="contents" class="level3">
+<h3 class="anchored" data-anchor-id="contents">Contents:</h3>
 <ol type="1">
-<li><p><strong>LLMs for Code Optimization</strong>: The study showcases the efficacy of Large Language Models (LLMs) in optimizing open-source Python libraries by collaborating with human experts. The results demonstrate substantial performance improvements across multiple case studies.</p></li>
-<li><p><strong>Human Expert in the Loop</strong>: The paper highlights the essential role of human expertise in guiding LLMs to achieve effective solutions, often with fewer iterations than anticipated. The interactive collaboration of human and LLMs leads to significant performance improvements in the optimized code.</p></li>
-<li><p><strong>Promising Tool for Code Optimization</strong>: The findings indicate a strong potential for the practical utility of LLMs in code optimization in open-source libraries, emphasizing their collaborative dynamics with human experts.</p></li>
+<li><strong>Introduction</strong>
+<ul>
+<li>Aims</li>
+<li>Why Optimize Source Code?</li>
+<li>Prior Art</li>
+<li>Objectives and Scope of the Paper</li>
+<li>Findings</li>
+</ul></li>
+<li><strong>Methods</strong>
+<ul>
+<li>The Expert and the Machine
+<ul>
+<li>The Expert</li>
+<li>The Machine</li>
+</ul></li>
+<li>Selection of Source Code Locus
+<ul>
+<li>Open Source Python as Natural Choice</li>
+<li>Expert Selection of Locus</li>
+</ul></li>
+<li>The Collaborative Optimization Process
+<ul>
+<li>Preparation</li>
+<li>Starting Prompt</li>
+<li>Iteration</li>
+<li>Evaluation</li>
+<li>Termination</li>
+<li>Generalization and Post-Optimization</li>
+</ul></li>
+<li>Evaluation of Benefit
+<ul>
+<li>Measurement of Performance Improvement</li>
+<li>Bytecode Inspection</li>
+<li>Correctness</li>
+<li>Real World Impact - Pull Requests</li>
+</ul></li>
+<li>Are the Chosen Metrics Good Proxies for Cost or Energy Savings?</li>
+<li>Are the Chosen Metrics Good Proxies for Benefit of Collaborative Optimization?</li>
+</ul></li>
+<li><strong>Optimization Process</strong>
+<ul>
+<li>Original Source Code</li>
+<li>ChatGPT’s First Try</li>
+<li>Iterative Approach</li>
+<li>Human-Driven Optimization</li>
+<li>numpy: A Misstep in Speed?</li>
+<li>Returning to the Fundamentals</li>
+<li>The Pivotal Moment</li>
+<li>Final Adjustments: A Manual Touch</li>
+</ul></li>
+<li><strong>Measurements</strong>
+<ul>
+<li>Data</li>
+<li>Experimental Setup</li>
+<li>Validation Methodology</li>
+<li>Performance Metrics</li>
+<li>Performance Outcomes</li>
+<li>Statistical Summary</li>
+<li>Outliers and Extremes</li>
+<li>Correlation Analysis</li>
+<li>Scatter Plot</li>
+<li>Pull Request to Upstream</li>
+</ul></li>
+<li><strong>Generalization of Findings</strong>
+<ul>
+<li>Statistics</li>
+<li>Exploration of the range() Function</li>
+<li>Trade-offs: Generators versus Explicit Loops</li>
+<li>Sequential vs.&nbsp;Tuple Assignment</li>
+<li>Ternary Operator vs.&nbsp;Explicit If-Else</li>
+<li>Array Initialization: Generator Comprehensions vs.&nbsp;Append Method</li>
+</ul></li>
+<li><strong>Method Transferability</strong>
+<ul>
+<li>Pillow ImageStat’s _getcount Method</li>
+<li>Examination of Numpy’s as_series Function</li>
+<li>Using Google Bard as LLM</li>
+</ul></li>
+<li><strong>Results and Discussion</strong>
+<ul>
+<li>Significance of Findings and Method Transferability</li>
+<li>Reproducibility and Consistency Across LLM Versions</li>
+<li>The Importance of Performance Measurement</li>
+<li>LLMs: Potential, Limitations, and Collaborative Dynamics</li>
+<li>Future Directions and Community Collaboration</li>
+<li>Conclusion and Summary of Key Findings</li>
+</ul></li>
+<li><strong>Authors’ Contributions</strong></li>
+<li><strong>Acknowledgments</strong></li>
+<li><strong>Appendix: Result Details</strong></li>
 </ol>
 </section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<section id="aims" class="level4">
-<h4 class="anchored" data-anchor-id="aims">Aims</h4>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique:</h3>
 <ul>
-<li>The study aims to fill the gap in literature by providing a methodologically stringent case study of optimizing source code of open-source Python libraries using an LLM ChatGPT-4.</li>
+<li>The study lacks a comparison to other optimization techniques or algorithms used in the literature, which would provide a more comprehensive assessment of the effectiveness of LLM-based optimization.</li>
+<li>The study’s qualitative nature leaves room for potential biases, and more robust quantitative studies would enhance the rigor of the findings.</li>
 </ul>
-</section>
-<section id="why-optimize-source-code" class="level4">
-<h4 class="anchored" data-anchor-id="why-optimize-source-code">Why Optimize Source Code?</h4>
-<ul>
-<li>The importance of energy and cost efficiency in source code and the potential societal and environmental benefits of optimized code are emphasized.</li>
-</ul>
-</section>
-<section id="prior-art" class="level4">
-<h4 class="anchored" data-anchor-id="prior-art">Prior Art</h4>
-<ul>
-<li>The paper highlights the relative dearth of research specifically focusing on the collaborative use</li>
-</ul>
-</section>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.14949v1">https://browse.arxiv.org/html/2312.14949v1</a></td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
+<td>Truncated</td>
+<td>True</td>
 </tr>
 <tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
 <td>Word Count</td>
-<td>10353</td>
+<td>18038</td>
 </tr>
 </tbody>
 </table>

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Peiwen Yuan’, ‘Shaoxiong Feng’, ‘Yiwei Li’, ‘Xinglin Wang’, ‘Boyuan Pan’, ‘Heda Wang’, ‘Kan Li’]">
 <meta name="dcterms.date" content="2023-12-31">
-<meta name="description" content="Introducing BatchEval paradigm improves text evaluation with large language models by 10.5% while reducing API cost.">
+<meta name="description" content="BatchEval improves text evaluation over LLMs, addressing design sensitivity, noise resistance, and ensemble performance, with 10.5% higher correlations at reduced API cost.">
 
 <title>Bayesian beagle - BatchEval: Towards Human-like Text Evaluation</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - BatchEval: Towards Human-like Text Evaluation">
-<meta property="og:description" content="Introducing BatchEval paradigm improves text evaluation with large language models by 10.5% while reducing API cost.">
+<meta property="og:description" content="BatchEval improves text evaluation over LLMs, addressing design sensitivity, noise resistance, and ensemble performance, with 10.5% higher correlations at reduced API cost.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2401.00437v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - BatchEval: Towards Human-like Text Evaluation">
-<meta name="twitter:description" content="Introducing BatchEval paradigm improves text evaluation with large language models by 10.5% while reducing API cost.">
+<meta name="twitter:description" content="BatchEval improves text evaluation over LLMs, addressing design sensitivity, noise resistance, and ensemble performance, with 10.5% higher correlations at reduced API cost.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00437v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Introducing BatchEval paradigm improves text evaluation with large language models by 10.5% while reducing API cost.
+    BatchEval improves text evaluation over LLMs, addressing design sensitivity, noise resistance, and ensemble performance, with 10.5% higher correlations at reduced API cost.
   </div>
 </div>
 
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Peiwen Yuan, Shaoxiong Feng, Yiwei Li, Xinglin Wang, Boyuan Pan, Heda Wang, Kan Li </p>
           </div>
   </div>
     
@@ -158,17 +158,25 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="https://browse.arxiv.org/html/2401.00437v1/x1.png" class="img-fluid"></p>
 <section id="batcheval-towards-human-like-text-evaluation" class="level3">
 <h3 class="anchored" data-anchor-id="batcheval-towards-human-like-text-evaluation">BatchEval: Towards Human-like Text Evaluation</h3>
-<section id="abstract" class="level4">
-<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
-<p>The paper introduces “BatchEval,” a new paradigm for text evaluation that conducts batch-wise evaluation iteratively to address limitations of sample-wise evaluation methods. The proposed approach aims to alleviate sensitivity to prompt design, poor resistance to noise, and inferior ensemble performance by incorporating batch-wise evaluation akin to the way humans assess text. The paper presents comprehensive experiments demonstrating that <strong>BatchEval outperforms state-of-the-art methods by 10.5% on Pearson correlations</strong> with a lower API cost.</p>
+<section id="key-findings" class="level4">
+<h4 class="anchored" data-anchor-id="key-findings">Key Findings</h4>
+<ol type="1">
+<li><strong>Inferior ensemble performance with static reference:</strong> Current large language model (LLM)-based evaluators face challenges with ensemble performance due to weak diversity and lack of comparison between analyses.</li>
+<li><strong>Sensitivity to prompt design:</strong> Minor changes to the prompt may lead to significant variations in evaluation results.</li>
+<li><strong>Poor resistance to noise:</strong> Evaluation scores lack discrimination and exhibit a non-uniform distribution, leading to reduced robustness against noise.</li>
+</ol>
 </section>
 <section id="introduction" class="level4">
 <h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
-<p>The paper outlines the significance of accurate text evaluation in the context of rapid progress in large language models (LLMs) and highlights the limitations of existing automatic evaluation methods in aligning with human judgments.</p>
+<ul>
+<li>Text evaluation is crucial for understanding and developing LLMs, and automatic methods have been explored to complement human evaluation, but inconsistencies with human judgments persist.</li>
+</ul>
 </section>
-<section id="background" class="level4">
-<h4 class="anchored" data-anchor-id="background">Background</h4>
-<p>The paper provides an overview of existing automatic text evaluation methods, including rule-based, embedding-based</p>
+<section id="proposed-paradigm-batcheval" class="level4">
+<h4 class="anchored" data-anchor-id="proposed-paradigm-batcheval">Proposed Paradigm: BatchEval</h4>
+<ul>
+<li><strong>Addressing Issues:</strong> BatchEval alleviates prompt sensitivity, noise resistance, and ensemble performance. It conducts batch-wise evaluation</li>
+</ul>
 </section>
 </section>
 <section id="appendix" class="level2">
@@ -176,18 +184,22 @@ ul.task-list li input[type="checkbox"] {
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00437v1">https://browse.arxiv.org/html/2401.00437v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>True</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>15893</td>
 </tr>

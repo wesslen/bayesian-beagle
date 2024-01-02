@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Ehsan Latif’, ‘Luyang Fang’, ‘Ping Ma’, ‘Xiaoming Zhai’]">
 <meta name="dcterms.date" content="2023-12-26">
-<meta name="description" content="Method proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in education.">
+<meta name="description" content="A method is proposed to create smaller, efficient neural networks from large language models, aiming to deploy them on resource-constrained devices and improve accessibility in educational settings.">
 
 <title>Bayesian beagle - Knowledge Distillation of LLM for Education</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Knowledge Distillation of LLM for Education">
-<meta property="og:description" content="Method proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in education.">
+<meta property="og:description" content="A method is proposed to create smaller, efficient neural networks from large language models, aiming to deploy them on resource-constrained devices and improve accessibility in educational settings.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.15842v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Knowledge Distillation of LLM for Education">
-<meta name="twitter:description" content="Method proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in education.">
+<meta name="twitter:description" content="A method is proposed to create smaller, efficient neural networks from large language models, aiming to deploy them on resource-constrained devices and improve accessibility in educational settings.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.15842v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Method proposes distilling Large Language Models into smaller, accurate neural networks for resource-constrained devices. Results show potential for accessibility in education.
+    A method is proposed to create smaller, efficient neural networks from large language models, aiming to deploy them on resource-constrained devices and improve accessibility in educational settings.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Ehsan Latif, Luyang Fang, Ping Ma, Xiaoming Zhai </p>
           </div>
   </div>
     
@@ -155,105 +155,82 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.15842v1/x1.png" class="img-fluid"></p>
-<section id="knowledge-distillation-of-llm-for-education" class="level1">
-<h1>Knowledge Distillation of LLM for Education</h1>
-<section id="major-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h2>
-<ul>
-<li>The study proposes a method for <strong>distilling the knowledge of fine-tuned Large Language Models (LLMs) into smaller, more efficient, and accurate neural networks</strong> for deployment in resource-constrained educational environments.</li>
-<li>The <strong>knowledge transfer is achieved through a specialized loss function tailored to learn from the LLM’s output probabilities</strong>, ensuring that the student model closely mimics the teacher’s performance.</li>
-<li>Results demonstrate that the <strong>distilled student models have comparable accuracy to the teacher model for the 7T dataset</strong>, and significantly higher accuracy than original neural network models for other datasets.</li>
-</ul>
+<section id="summary-of-knowledge-distillation-of-llm-for-education" class="level1">
+<h1>Summary of “Knowledge Distillation of LLM for Education”</h1>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ol type="1">
+<li><strong>Knowledge Distillation (KD)</strong> effectively optimizes Large Language Models (LLMs) for use in educational technology, especially on low-processor devices, achieving upto 90% accuracy with much smaller model parameters (0.02M) and processing requirements, compared to the original LLMs.</li>
+<li>The effectiveness of KD in enhancing the performance of a smaller student model compared to original neural network models, particularly in scenarios where the original model may not fully capture the underlying patterns in the data, is demonstrated across various datasets.</li>
+<li>While KD does not achieve the same level of accuracy as the teacher models, it greatly reduces the performance gap, demonstrating its efficiency in establishing compact student models and making it suitable for practical educational settings.</li>
+</ol>
 </section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The use of <strong>Large Language Models (LLMs) in education</strong>, particularly for automatic scoring, is discussed, highlighting their potential impact on classroom assessment practices and adaptive learning systems. The deployment of these models in educational settings is constrained by their considerable size and computational requirements, which presents a challenge for widespread adoption in resource-constrained educational environments.</p>
+<ul>
+<li>AI has significant impact on classroom assessment practices and adaptive learning systems, particularly with the integration of <strong>Large Language Models (LLMs)</strong> into various domains, such as education.</li>
+<li>However, the considerable size and computational requirements of LLMs pose a challenge for deployment in resource-constrained educational environments, prompting exploration of methods like KD.</li>
+</ul>
 </section>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
-<section id="large-language-models-for-automatic-scoring" class="level3">
-<h3 class="anchored" data-anchor-id="large-language-models-for-automatic-scoring">Large Language Models for Automatic Scoring</h3>
 <ul>
-<li>Studies have focused on fine-tuning LLMs for automatic scoring applications, demonstrating their potential in evaluating student responses with high accuracy.</li>
-<li>The deployment of sophisticated LLMs in practical educational settings presents considerable challenges, leading to the proposal of various approaches to address these challenges.</li>
+<li>The use of LLMs in education, specifically for automatic scoring, has gained significant attention, and studies have shown promise in handling diverse types of educational assessments.</li>
+<li>Challenges in deploying LLMs in practical educational settings have led to various approaches, including knowledge distillation techniques, to address these limitations.</li>
 </ul>
-</section>
-<section id="knowledge-distillation-kd-of-llm" class="level3">
-<h3 class="anchored" data-anchor-id="knowledge-distillation-kd-of-llm">Knowledge Distillation (KD) of LLM</h3>
-<ul>
-<li>KD has emerged as a pivotal technique in harnessing the power of LLMs for practical applications, particularly in fields with limited computational resources.</li>
-<li>Challenges and advancements in KD for text classification and contextual pre-training language models for specific applications are discussed.</li>
-</ul>
-</section>
 </section>
 <section id="methodology" class="level2">
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<section id="original-neural-network" class="level3">
-<h3 class="anchored" data-anchor-id="original-neural-network">Original Neural Network</h3>
 <ul>
-<li>A detailed explanation of the methodology used for classification tasks is provided. ### Proposed KD</li>
-<li>The study proposes a method for knowledge distillation and presents a detailed algorithm for the KD process.</li>
+<li>The proposed KD approach leverages knowledge from a large pre-trained teacher model to guide the training of a more compact student model, effectively transferring its predictive and generalization capabilities.</li>
+<li>The KD methodology is applied and evaluated across diverse datasets of student-written responses, with results showcasing the efficacy in enhancing the performance of compact student models relative to original neural network models.</li>
 </ul>
-</section>
 </section>
 <section id="experimental-setup" class="level2">
 <h2 class="anchored" data-anchor-id="experimental-setup">Experimental Setup</h2>
-<section id="data-collection-and-preprocessing" class="level3">
-<h3 class="anchored" data-anchor-id="data-collection-and-preprocessing">Data Collection and Preprocessing</h3>
 <ul>
-<li>The dataset utilized and the dataset preprocessing methods are described for each assessment item included in the study. ### Training Scheme</li>
-<li>The architecture and optimization approach for the student models are described for each dataset. ### Evaluation and Validation</li>
-<li>The partitioning of datasets and model optimization strategy are detailed.</li>
-</ul>
-</section>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<ul>
-<li>The comparative analysis of model accuracy across four datasets is presented, showcasing the efficacy of KD in enhancing the performance of student models.</li>
-<li>The effect of KD compared to conventional neural network training approaches varies across datasets, with KD successfully improving the performance of student models.</li>
+<li>Datasets of student-written responses to science and mathematical questions were used to evaluate the performance of student models trained using the KD approach, with results showing improved performance using KD, particularly on datasets where the original neural network models did not fully capture the underlying patterns in the data.</li>
 </ul>
 </section>
 <section id="discussion" class="level2">
 <h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
-<section id="application-of-kd-in-education" class="level3">
-<h3 class="anchored" data-anchor-id="application-of-kd-in-education">Application of KD in Education</h3>
 <ul>
-<li>KD is discussed as a breakthrough in creating accurate and productive automatic scoring systems, suitable for integrating tablet- and smartphone-based learning apps. ### Limitations of KD in Education</li>
-<li>The limitations of KD, such as falling short of the teacher model’s accuracy, are highlighted, as well as the need for representative and extensive datasets for training the teacher model. ### Future Directions</li>
-<li>Potential future research directions in the application of KD in education are outlined, including soft label processing and expanding application areas.</li>
+<li>The discussed study provides valuable insights into the potential applications of KD in educational technology, particularly in automated grading systems and personalized learning experiences. However, it’s important to recognize the limitations and future directions for further research and development in this field.</li>
 </ul>
-</section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <ul>
-<li>The study effectively illustrates how KD can be used to optimize LLMs for usage in instructional technology, particularly on low-processor devices, and lays the foundation for future developments in the field.</li>
+<li>The study effectively illustrates the potential and viability of KD in educational contexts, underscoring the need for ongoing research and innovation in AI for education.</li>
 </ul>
 </section>
 <section id="critique" class="level2">
 <h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<p>The paper effectively presents the methodology and results of the study and provides valuable insights into the potential applications and limitations of knowledge distillation in the context of educational technology. One potential critique is the need for further discussion on the ethical implications and biases associated with the application of KD in educational settings. Additionally, the authors could further elaborate on the scalability and generalizability of the proposed approach across diverse educational contexts.</p>
+<p>The article does not delve into the technical details of the KD process, making it challenging for readers to understand the specific methodologies and challenges involved in the knowledge distillation approach. Additionally, the limitations of the study, such as the potential biases in the teacher model and the representativeness of data used, could be elaborated further to provide a more comprehensive understanding of the implications of the study’s findings.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.15842v1">https://browse.arxiv.org/html/2312.15842v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
-<td>5073</td>
+<td>9762</td>
 </tr>
 </tbody>
 </table>

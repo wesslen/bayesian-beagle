@@ -1,13 +1,12 @@
 
 ---
 title: "Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales"
-description: "NLP-driven clinical reasoning framework improves disease diagnosis through efficient rationale generation and evaluation, benefiting future research."
-author: "gpt-3.5-turbo-1106"
+description: "Proposing a time-efficient framework for clinical reasoning in disease diagnosis using prompt-based learning and machine-generated rationales."
+author: "['Taeyoon Kwon', 'Kai Tzu-iunn Ong', 'Dongjin Kang', 'Seungjun Moon', 'Jeong Ryong Lee', 'Dosik Hwang', 'Yongsik Sim', 'Beomseok Sohn', 'Dongha Lee', 'Jinyoung Yeo']"
 date: "2023-12-12"
-link: "https://browse.arxiv.org/html/2312.07399v1"
 image: "https://browse.arxiv.org/html/2312.07399v1/x1.png"
 categories: ['prompt engineering']
-file-modified: 2024-01-02
+authors: Taeyoon Kwon, Kai Tzu-iunn Ong, Dongjin Kang, Seungjun Moon, Jeong Ryong Lee, Dosik Hwang, Yongsik Sim, Beomseok Sohn, Dongha Lee, Jinyoung Yeo
 format:
   html:
     code-overflow: wrap
@@ -15,44 +14,45 @@ format:
 
 ![](https://browse.arxiv.org/html/2312.07399v1/x1.png)
 
-### Major Takeaways:
-- The paper presents a "reasoning-aware" diagnosis framework using large language models (LLMs) to rationalize the diagnostic process via prompt-based learning in a time- and labor-efficient manner.
-- It addresses the clinical reasoning for disease diagnosis, demonstrating LLMs' ability of clinical reasoning through extensive experiments and analyses on both rationale generation and disease diagnosis in various settings.
-- The framework involves clinical rationalization, few-shot reasoning and diagnosis with LLMs, and knowledge distillation towards smaller models.
+### Findings 
 
-### Introduction
-- Reasoning in clinical diagnosis involves an integration of patient data, relevant medical knowledge, clinicians’ experience, and other contextual or situational factors.
-- Poor clinical reasoning has been linked to misdiagnoses and causing hospital adverse events, emphasizing the importance of effective clinical reasoning for diagnosis in real clinical settings.
-- Existing approaches for disease diagnosis with deep learning (DL) models mostly focus on image or text classification, neglecting clinical reasoning, and may be limited by data scarcity in biomedical domains.
+1. Large Language Models (LLMs) demonstrate the capability for clinical reasoning in disease diagnosis via prompt-based learning, resulting in better performance in disease diagnosis through extensive experiments and analyses.
 
-### Problem Formulation
-- Most existing DL-based disease diagnosis approaches neglect the clinical reasoning connecting patient description and diagnosis, which can lead to diagnostic errors and contribute to patient deaths and hospital adverse events.
-- The paper aims to address the absence of clinical reasoning in disease diagnosis by leveraging LLMs’ reasoning capacity.
+2. Reasoning-aware diagnosis framework has shown potential in data-scarce scenarios, with multimodal student models consistently outperforming vision-only and vision-language baseline models even with limited training data.
 
-### Testbed: Alzheimer’s Disease Diagnosis
-- The Alzheimer’s disease (AD) diagnosis task is chosen as the testbed for clinical reasoning due to its requirement for a thorough understanding of various aspects of the disease.
+3. Ethical considerations were highlighted, and potential societal impacts such as data bias, accountability, and legal challenges were acknowledged before applying the method to real clinical settings.
 
-### Reasoning-Aware Diagnosis Framework
-- The framework leverages LLMs' ability of CoT reasoning to generate free-text rationales that guide and explain the diagnosis.
-- It includes modules for clinical rationalization, few-shot CoT reasoning, unimodal-student distillation, and multimodal-student distillation.
-- The framework aims to facilitate clinical reasoning by leveraging LLMs to reason over patient data, refer to relevant knowledge, and generate rationales that guide and explain the diagnosis.
+### Methodology
+- Reasoning in clinical reasoning, also known as clinical reasoning or diagnostic reasoning, is a dynamic thinking process between the observed clinical evidence and the identification of disease.
+- Machine reasoning has been exploited in the framework for reasoning-aware diagnosis. The diagnosis, based on the patient description and the rationale, is formulated as chain-of-thought reasoning, specifically Clinical Chain-of-Thought (Clinical CoT).
+
+### Framework Overview
+- **Module I: Clinical Rationalization**
+  - Generating clinical CoT rationales by prompting a LLM to rationalize the presented clinical data.
+- **Module II-1: Few-shot CoT Reasoning**
+  - Investigating the success of LLMs in clinical reasoning with few-shot disease diagnosis.
+- **Module II-2: Unimodal-Student Distillation**
+  - Distilling the knowledge of diagnostic reasoning from the LLM into smaller language models for real clinical settings.
+- **Module II-3: Multimodal-Student Distillation**
+  - Extending knowledge distillation in clinical diagnosis to vision-language models.
 
 ### Experiments
-- Experimental settings, datasets, and the implementation details of student models are provided.
-
-### Appendix
-- Additional details on the prompts used for generating rationale candidates, the rationalization module, and few-shot diagnosis with LLMs are included in the appendix.
+- Extensive evaluation and analysis of generated rationales demonstrate the potential of LLMs and distilled models to replicate the reasoning of clinical professionals in a human-like manner.
+- Human evaluations and analysis of generated rationales establish the potential of utilizing LLMs to model clinical reasoning in disease diagnosis.
 
 ### Critique
-- The paper does not address potential limitations or biases in the datasets used, and it does not specify the exact performance metrics used in the experiments.
-- The use of licensed radiologists to evaluate the quality of machine-generated rationales may introduce subjectivity and may not be representative of all clinical professionals' perspectives.
-- The reliance on highly advanced LLMs and complex model architectures may limit the practical implementation of the proposed framework in real clinical settings where computational resources may be limited.
+- Length restriction in prompt-based learning might affect models' performance in rationale generation and diagnosis.
+- Lack of exploration of paradigms, such as jointly predicting the rationale generation and diagnosis via multi-task learning or dividing them into separate stages.
+- No incorporation of the framework into real-world clinical settings.
+
+The paper introduces an innovative approach emerging from the findings and leverages the capabilities to demonstrate the significance of using prompt-based learning. The emphasis on real-world applications and ethical considerations denotes a strong foundation for future research. However, the study's potential limitations and lack of integration into clinical settings must be addressed for practical use.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
 | Date Generated     | 2024-01-02       |
-| HTML     | [https://browse.arxiv.org/html/2312.07399v1](https://browse.arxiv.org/html/2312.07399v1)       |
+| HTML     | []()       |
 | Truncated       | False       |
-| Word Count       | 5596       |
+| Word Count       | 10273       |

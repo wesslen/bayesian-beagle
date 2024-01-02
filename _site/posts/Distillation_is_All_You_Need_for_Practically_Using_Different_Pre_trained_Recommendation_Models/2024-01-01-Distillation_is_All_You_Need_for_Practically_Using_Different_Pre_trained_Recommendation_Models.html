@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Wenqi Sun’, ‘Ruobing Xie’, ‘Junjie Zhang’, ‘Wayne Xin Zhao’, ‘Leyu Lin’, ‘Ji-Rong Wen’]">
 <meta name="dcterms.date" content="2024-01-01">
-<meta name="description" content="Proposal uses joint knowledge distillation to efficiently utilize diverse pre-trained recommendation models for enhancing student models.">
+<meta name="description" content="Proposed PRM-KD model efficiently utilizes diverse pre-trained recommendation models to enhance student models for real-world recommendations.">
 
 <title>Bayesian beagle - Distillation is All You Need for Practically Using Different Pre-trained Recommendation Models</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Distillation is All You Need for Practically Using Different Pre-trained Recommendation Models">
-<meta property="og:description" content="Proposal uses joint knowledge distillation to efficiently utilize diverse pre-trained recommendation models for enhancing student models.">
+<meta property="og:description" content="Proposed PRM-KD model efficiently utilizes diverse pre-trained recommendation models to enhance student models for real-world recommendations.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2401.00797v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Distillation is All You Need for Practically Using Different Pre-trained Recommendation Models">
-<meta name="twitter:description" content="Proposal uses joint knowledge distillation to efficiently utilize diverse pre-trained recommendation models for enhancing student models.">
+<meta name="twitter:description" content="Proposed PRM-KD model efficiently utilizes diverse pre-trained recommendation models to enhance student models for real-world recommendations.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2401.00797v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Proposal uses joint knowledge distillation to efficiently utilize diverse pre-trained recommendation models for enhancing student models.
+    Proposed PRM-KD model efficiently utilizes diverse pre-trained recommendation models to enhance student models for real-world recommendations.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Wenqi Sun, Ruobing Xie, Junjie Zhang, Wayne Xin Zhao, Leyu Lin, Ji-Rong Wen </p>
           </div>
   </div>
     
@@ -155,76 +155,63 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2401.00797v1/x1.png" class="img-fluid"></p>
-<section id="main-findings" class="level3">
-<h3 class="anchored" data-anchor-id="main-findings">Main Findings</h3>
+<section id="distillation-of-pre-trained-recommendation-models-for-practical-usage" class="level3">
+<h3 class="anchored" data-anchor-id="distillation-of-pre-trained-recommendation-models-for-practical-usage">Distillation of Pre-trained Recommendation Models for Practical Usage</h3>
+<p><strong>Summary:</strong> The paper introduces a novel approach, PRM-KD, which utilizes knowledge distillation from different pre-trained recommendation models (PRMs) to enhance practical use of these models in recommender systems. The PRM-KD framework distills knowledge from multiple representative PRMs, ensuring effective and efficient integration into various types of student recommendation models. Extensive experiments demonstrate the effectiveness, universality, and efficiency of PRM-KD.</p>
+<section id="major-findings" class="level4">
+<h4 class="anchored" data-anchor-id="major-findings">Major Findings:</h4>
 <ol type="1">
-<li><strong>PRM-KD</strong> is proposed as a method for <strong>knowledge distillation</strong> from different <strong>pre-trained recommendation models (PRMs)</strong> to enhance student recommendation models in practical recommender systems.</li>
-<li>PRM-KD achieves consistent improvements over competitive baselines on five real-world datasets, demonstrating the effectiveness, universality, and efficiency of the model.</li>
-<li>The proposed PRM-KD provides a good trade-off between performance, inference speed, and memory cost, significantly outperforming the PRMs and not increasing online memory and computational costs.</li>
+<li>PRM-KD achieves significant improvements in performance compared to conventional recommendation methods, demonstrating its superiority in practical usage of PRMs.</li>
+<li>The multi-teacher distillation approach in PRM-KD effectively leverages the knowledge encoded in various PRMs to enhance the students, showcasing its feasibility for various types of student recommendation models.</li>
+<li>PRM-KD shows a good trade-off between performance, inference speed, and memory cost, ensuring practical usage without additional online deployment cost.</li>
 </ol>
+</section>
 </section>
 <section id="methodology" class="level3">
 <h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
 <ul>
-<li><strong>Distillation from Different PRM Teachers</strong>
-<ul>
-<li>Introduction to different types of PRMs</li>
-<li>The need to adopt different PRMs as teacher models</li>
-<li>How to jointly distill knowledge from heterogeneous PRMs</li>
-</ul></li>
-<li><strong>Integrating Multi-teacher Knowledge into a Student</strong>
-<ul>
-<li>The distillation scores from different PRMs are integrated and transferred to a single student model</li>
-</ul></li>
-<li><strong>Model Training</strong>
-<ul>
-<li>The model training of student comprises the original training from supervised signals and the distillation from teachers</li>
-</ul></li>
-</ul>
-</section>
-<section id="related-work" class="level3">
-<h3 class="anchored" data-anchor-id="related-work">Related Work</h3>
-<ul>
-<li><strong>Pre-trained Recommendation</strong>: Discusses the development and focus of various pre-trained recommendation models</li>
-<li><strong>Distillation for Recommendation</strong>: Highlights the application of knowledge distillation in recommendation algorithms</li>
+<li><strong>Introduction to Different PRMs:</strong> The paper introduces three categories of PRMs and highlights their distinct characteristics and applications in recommendation systems.</li>
+<li><strong>Distillation from Different PRM Teachers:</strong> PRM-KD leverages knowledge distillation to effectively distill knowledge from different PRMs, integrating them into a single student model.</li>
+<li><strong>Model Training:</strong> The model training comprises two main parts: the original training from supervised signals and the distillation from teachers, ensuring the effective integration of knowledge from PRMs.</li>
 </ul>
 </section>
 <section id="experiments" class="level3">
 <h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
 <ul>
-<li><strong>Experimental Setup</strong>: Details the datasets, evaluation metrics, competitors, and implementation details</li>
-<li><strong>Main Results</strong>: Compares PRM-KD with competitive baselines and presents the results</li>
-<li><strong>Ablation Study</strong>: Evaluates how each of the proposed techniques affects the final performance</li>
-<li><strong>Analysis on Universality of PRM-KD</strong>: Testing the effectiveness of PRM-KD in distilling knowledge of PRMs to various types of student recommendation models</li>
-<li><strong>Analysis on Model Efficiency</strong>: Empirical study on model efficiency across different teacher and student models</li>
-<li><strong>Parameter Analyses</strong>: Explores the effects of varying hyper-parameters, including temperature, distillation weight, and hidden dimensionality</li>
+<li><strong>Experimental Setup:</strong> The paper conducts experiments on five public benchmark datasets from Amazon, using leave-one-out strategy for evaluations.</li>
+<li><strong>Main Results:</strong> The results demonstrate the superiority of PRM-KD over other conventional methods, showing consistent improvements in performance across different datasets.</li>
+<li><strong>Ablation Study:</strong> The study evaluates the effectiveness of key components in PRM-KD, showing that multi-teacher distillation and consistent weight adjustment significantly contribute to the performance improvements.</li>
+<li><strong>Analysis on Universality of PRM-KD:</strong> The experiments verify the universal effectiveness of PRM-KD in distilling knowledge to different types of student recommendation models.</li>
+<li><strong>Analysis on Model Efficiency:</strong> The paper conducts empirical study on model efficiency, showcasing the superior trade-off between performance, inference speed, and memory cost of PRM-KD.</li>
+<li><strong>Parameter Analyses:</strong> The experiments evaluate the performance of PRM-KD with varying hyper-parameters, providing valuable insights into the impact of each parameter on model performance.</li>
 </ul>
-</section>
-<section id="conclusion-and-future-work" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion-and-future-work">Conclusion and Future Work</h3>
-<p>The paper concludes by discussing the findings of the study and potential areas for future exploration, including exploring more sophisticated integration methods to enhance knowledge distillation from PRMs.</p>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The proposed PRM-KD method provides an innovative approach to enhancing student recommendation models using knowledge distillation from different PRMs. However, the paper could benefit from a deeper discussion on potential drawbacks or limitations of the PRM-KD method, as well as a more in-depth exploration of the real-world applicability and scalability of the proposed approach. Additionally, further exploration of the impact of varying hyper-parameters on different types of recommendation models may provide valuable insights for practical implementation.</p>
+<p>While the paper provides valuable contributions to the practical usage of PRMs in recommender systems, some potential limitations include: - The evaluation could benefit from including more diverse benchmark datasets to generalize the effectiveness of PRM-KD. - The parameter analyses and experiments on model efficiency could be further expanded to include more exhaustive configurations for a comprehensive understanding.</p>
+<p>Overall, the paper presents an important advancement in the utilization of PRMs in practical recommender systems, and the findings have significant implications for the development of effective and efficient recommendation models. However, further research and in-depth analysis are needed to address potential limitations and verify the scalability of PRM-KD in real-world applications.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.00797v1">https://browse.arxiv.org/html/2401.00797v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
 <td>11769</td>
 </tr>

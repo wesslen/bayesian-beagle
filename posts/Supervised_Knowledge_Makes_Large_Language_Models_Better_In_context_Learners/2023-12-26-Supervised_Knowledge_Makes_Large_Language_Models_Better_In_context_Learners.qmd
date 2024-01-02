@@ -1,13 +1,12 @@
 
 ---
 title: "Supervised Knowledge Makes Large Language Models Better In-context Learners"
-description: "LLMs improve in-context learning with task-specific fine-tuned models, enhancing generalizability and factuality in language applications."
-author: "gpt-3.5-turbo-1106"
+description: "TL;DR: A framework enhances Large Language Models' reliability, generalizability, and factuality, using discriminative models during inference."
+author: "['Linyi Yang', 'Shuibai Zhang', 'Zhuohao Yu', 'Guangsheng Bao', 'Yidong Wang', 'Jindong Wang', 'Ruochen Xu', 'Wei Ye', 'Xing Xie', 'Weizhu Chen', 'Yue Zhang']"
 date: "2023-12-26"
-link: "https://browse.arxiv.org/html/2312.15918v1"
 image: "https://browse.arxiv.org/html/2312.15918v1/x1.png"
 categories: ['prompt engineering']
-file-modified: 2024-01-02
+authors: Linyi Yang, Shuibai Zhang, Zhuohao Yu, Guangsheng Bao, Yidong Wang, Jindong Wang, Ruochen Xu, Wei Ye, Xing Xie, Weizhu Chen, Yue Zhang
 format:
   html:
     code-overflow: wrap
@@ -15,50 +14,42 @@ format:
 
 ![](https://browse.arxiv.org/html/2312.15918v1/x1.png)
 
-## Summary
+# Supervised Knowledge in Large Language Models
 
-The paper introduces SuperContext, a strategy to enhance the reliability of Large Language Models (LLMs) by integrating supervised knowledge from task-specific fine-tuned models during the inference stage. The study examines Natural Language Understanding (NLU) and Question Answering (QA) tasks, demonstrating that SuperContext can significantly improve LLM performance concerning generalizability and factuality.
+## Key Findings
+- **Large Language Models (LLMs)** demonstrate emerging in-context learning abilities through prompt engineering and have garnered significant performance across diverse tasks.
+- The study introduces **SuperContext**, a framework that uses task-Specific fine-tuned Language Models (SLMs) to improve LLMs' in-context learning during the inference stage.
+- Using SuperContext, **enhanced versions of Llama 2 and ChatGPT surpass their original versions regarding generalizability and factuality**.
 
-### Three Major Takeaways
-1. **Supervised Knowledge Enhancement**: SuperContext leverages task-specific fine-tuned models to provide supervised knowledge to enhance LLMs, leading to improved generalization and factuality.
-2. **Improved Out-of-distribution Generalizability**: The study reveals that SuperContext outperforms traditional in-context learning methods, particularly in managing out-of-distribution data and minimizing hallucinations.
-3. **Task-Specific Adaptability**: The paper demonstrates the efficacy of SuperContext across diverse tasks, showing its potential in fostering more reliable LLMs.
+## Introduction
+- **Large language models (LLMs)** have shown robust performance across various tasks, but face challenges such as substantial resources for training and deployment, slow inference times, and susceptibility to hallucinations.
 
 ## Method
-
-### In-context Learning Baseline
-- In-context learning serves as the cornerstone for stimulating the in-context learning ability of LLMs by providing in-domain data for several NLU tasks with 16-shot examples.
-- It sets the groundwork for the evaluation of traditional in-context learning and the proposed SuperContext method.
-
-### SuperContext
-- SuperContext is introduced as a simple and general approach for in-context learning, integrating the auxiliary knowledge from a small, discriminative model with LLMs during predictions.
-- The method involves incorporating the predictive results and confidence of a discriminative model in the LLM's inference process.
+- **In-context Learning Baseline**: Traditional in-context learning involves using in-domain data for several Natural Language Understanding (NLU) tasks with 16-shot examples.
+- **SuperContext**: A simple and general approach that incorporates the auxiliary knowledge from a small, discriminative model with LLMs when making predictions for new tasks.
 
 ## Experiments
-
-### Setup
-- The experiments involve source models, datasets, and baselines for NLU and QA tasks, with a focus on GLUE-X and SQuAD 2.0 for evaluation.
-
-### NLU Results
-- SuperContext outperforms both fine-tuned task-specific models and traditional in-context learning methods in NLU tasks, showcasing its superior capability.
-- Task-level analysis reveals performance improvements across various NLU tasks, indicating the potential of SuperContext in diverse scenarios.
-
-### QA Results
-- In Question Answering tasks, SuperContext shows significant improvements over traditional in-context learning methods, particularly in minimizing hallucinations and enhancing accuracy for open questions.
+- **Setup**: Tested on 8 NLU tasks and 1 generation task to validate SuperContext on GLUE-X benchmark and SQuAD 2.0.
+- **NLU Results**: SuperContext outperformed both SLMs and LLMs across NLU tasks, surpassing the supervised task-specific model, ELECTRA-large, as well.
+- **QA Results**: SuperContext significantly improved accuracy for open questions in the QA task.
 
 ## Analysis and Discussion
-
-The paper discusses reversed predictions, interpretation analysis, and the effect of SLM confidence. It emphasizes the critical role of SLM confidence in the prompt design of SuperContext and highlights the interpretability and reliability of the proposed method.
+- **Reversed Predictions**: SuperContext lead to the correction of predictions made by LLMs in both NLU and QA tasks.
+- **Interpretation Analysis**: LLMs demonstrated the ability to recall influential in-context examples and output rationales, with SuperContext resulting in higher performance and overlap with human rationale.
+- **The Effect of SLM Confidence**: There is a positive correlation between SLM confidence and LLM performance, emphasizing the importance of including both prediction and confidence in the prompt design.
 
 ## Critique
+- The study lacked a comparison with other large-scale language models, potentially limiting the generalizability of the findings.
+- The effectiveness of SuperContext was not evaluated in real-world applications, limiting its practical implications.
 
-The paper provides a comprehensive framework for enhancing LLMs, but it could benefit from further exploration of the limitations and ethical considerations of the proposed method. Additionally, a more detailed comparison with existing methods and analyses, especially in the discussion of reversed predictions, would strengthen the paper's findings.
+Overall, the study sheds light on the potential of incorporating supervised knowledge from SLMs to enhance the performance of LLMs in various NLU and QA tasks. The findings highlight the importance of leveraging discriminative models for improving the reliability and factuality of LLMs.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
 | Date Generated     | 2024-01-02       |
-| HTML     | [https://browse.arxiv.org/html/2312.15918v1](https://browse.arxiv.org/html/2312.15918v1)       |
+| HTML     | []()       |
 | Truncated       | False       |
-| Word Count       | 6466       |
+| Word Count       | 12183       |

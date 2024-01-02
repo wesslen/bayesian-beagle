@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Jason Vega’, ‘Isha Chaudhary’, ‘Changming Xu’, ‘Gagandeep Singh’]">
 <meta name="dcterms.date" content="2023-12-19">
-<meta name="description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
+<meta name="description" content="LLMs lack safety training and are vulnerable to priming attacks, effectively bypassing alignment, increasing attack success rate.">
 
 <title>Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta property="og:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
+<meta property="og:description" content="LLMs lack safety training and are vulnerable to priming attacks, effectively bypassing alignment, increasing attack success rate.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Bypassing the Safety Training of Open-Source LLMs with Priming Attacks">
-<meta name="twitter:description" content="LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.">
+<meta name="twitter:description" content="LLMs lack safety training and are vulnerable to priming attacks, effectively bypassing alignment, increasing attack success rate.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    LLMs need safety training due to vulnerability to priming attacks bypassing safety measures, with an improved attack success rate.
+    LLMs lack safety training and are vulnerable to priming attacks, effectively bypassing alignment, increasing attack success rate.
   </div>
 </div>
 
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Jason Vega, Isha Chaudhary, Changming Xu, Gagandeep Singh </p>
           </div>
   </div>
     
@@ -156,59 +156,70 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.12321v1/extracted/5284390/images/llm_attack_final_bold.png" class="img-fluid"></p>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
+<section id="paper-summary-bypassing-the-safety-training-of-open-source-llms-with-priming-attacks" class="level3">
+<h3 class="anchored" data-anchor-id="paper-summary-bypassing-the-safety-training-of-open-source-llms-with-priming-attacks">Paper Summary: “Bypassing the Safety Training of Open-Source LLMs with Priming Attacks”</h3>
+<section id="major-takeaways" class="level4">
+<h4 class="anchored" data-anchor-id="major-takeaways">Major Takeaways:</h4>
 <ol type="1">
-<li><p><strong>Priming attacks</strong> are shown to be effective in bypassing safety training for open-source Large Language Models (LLMs), resulting in a significant increase in the Attack Success Rate on Harmful Behaviors.</p></li>
-<li><p>The study highlights the ease with which adversaries can coerce open-source LLMs to comply with harmful requests, undermining the efficacy of safety measures in current LLMs, and raising pivotal concerns for the future of open-sourcing LLMs.</p></li>
-<li><p>The research contributes to demonstrating the fragility of existing safety measures for LLMs and emphasizes the need for further exploration of novel methods for safer open-sourcing.</p></li>
+<li><strong>Priming attacks</strong> are shown to efficiently bypass safety training of open-source Language Model Models (LLMs), leading to a significant increase in the Attack Success Rate on Harmful Behaviors.</li>
+<li>The paper highlights the <strong>fragility</strong> of current safety measures for LLMs and raises concerns about the <strong>safety of open-sourcing LLMs</strong> under practical assumptions.</li>
+<li>Through automated evaluation and experiments, the study demonstrates how adversaries can easily manipulate open-source LLMs to comply with arbitrary harmful requests, emphasizing the need for novel methods for safer open-sourcing.</li>
 </ol>
+<hr>
+</section>
 </section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <ul>
-<li>Autoregressive Large Language Models (LLMs) have become ubiquitous in user-facing applications, prompting extensive safety training to ensure human alignment and prevent nefarious usage.</li>
-<li>Current safety measures, such as RLHF techniques and fine-tuning, may still be circumvented, leading to harmful outputs or compliance with harmful behavior requests.</li>
-<li>The paper challenges the assumption that attackers are limited to specific input formats, advocating for unrestricted inputs in the extraction of harmful behavior content from open-source models.</li>
+<li>The paper investigates the vulnerability of state-of-the-art open-source LLMs to <strong>priming attacks</strong>, aiming to bypass safety training and obtain harmful outputs.</li>
+<li>Previous work has shown the potential to generate prompts that attack popular open-source aligned LLMs, raising concerns about the effectiveness of safety alignment efforts.</li>
 </ul>
 </section>
 <section id="methodology-results" class="level3">
 <h3 class="anchored" data-anchor-id="methodology-results">Methodology &amp; Results</h3>
 <ul>
-<li>The study presents a threat model that allows successful low-resource attacks via <strong>priming attacks</strong> on open-source LLMs, leveraging API query access and the autoregressive nature of LLMs to fulfill harmful requests.</li>
-<li>Few-shot prompting using a helper LLM is employed to generate priming attacks, demonstrating significant improvements in the Attack Success Rate compared to baseline methods.</li>
-<li>Experiment results reveal the effectiveness of priming attacks in bypassing safety measures for LLMs, with the attack outperforming baselines across different model families and sizes.</li>
+<li>The study utilizes a <strong>few-shot priming attack</strong> approach, prompting a non-safety-trained helper LLM with examples to generate priming attacks for harmful behaviors on target LLMs.</li>
+<li>The experimental setup involves using pre-trained LLMs and comparing the attack success rate of priming attacks with baselines, showing significant improvements in attack success rate for all models.</li>
 </ul>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
 <ul>
-<li>The paper concludes by emphasizing how priming attacks highlight the vulnerability of current safety measures and the need for further research into safer methods for open-sourcing LLMs.</li>
+<li>The paper emphasizes the effectiveness of priming attacks in circumventing the alignment of open-source LLMs and raises concerns about the current safety measures.</li>
+<li>The study advocates for further research into novel methods for safer open-sourcing of LLMs.</li>
 </ul>
+<hr>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The use of automated evaluation processes and the absence of a rigorous human study to systematically study the priming process may raise concerns regarding the robustness and real-world applicability of the findings. Additionally, the paper acknowledges the underestimation of harmfulness by the evaluation tool used, indicating potential limitations in the accuracy of the reported Attack Success Rates. Further validation and real-world testing with human subjects may be necessary to accurately assess the impact and feasibility of priming attacks on open-source LLMs.</p>
+<ul>
+<li>The paper presents a compelling case for the vulnerability of open-source LLMs to priming attacks, but the reliance on automated evaluation and absence of rigorous human studies might limit the generalizability of the findings.</li>
+<li>The study’s focus on efficiency and attack success rate raises questions about the broader ethical and societal implications of these vulnerabilities, which could be further explored.</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.12321v1">https://browse.arxiv.org/html/2312.12321v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
-<td>2072</td>
+<td>3431</td>
 </tr>
 </tbody>
 </table>

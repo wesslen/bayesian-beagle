@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Sondos Mahmoud Bsharat’, ‘Aidar Myrzakhan’, ‘Zhiqiang Shen’]">
 <meta name="dcterms.date" content="2023-12-26">
-<meta name="description" content="26 principles simplify querying large language models, with a focus on understanding and enhancing user comprehension. Experiments validate the effectiveness on various models.">
+<meta name="description" content="This paper presents 26 principles for querying large language models, validated through experiments on different models.">
 
 <title>Bayesian beagle - Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4">
-<meta property="og:description" content="26 principles simplify querying large language models, with a focus on understanding and enhancing user comprehension. Experiments validate the effectiveness on various models.">
+<meta property="og:description" content="This paper presents 26 principles for querying large language models, validated through experiments on different models.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.16171v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4">
-<meta name="twitter:description" content="26 principles simplify querying large language models, with a focus on understanding and enhancing user comprehension. Experiments validate the effectiveness on various models.">
+<meta name="twitter:description" content="This paper presents 26 principles for querying large language models, validated through experiments on different models.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.16171v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    26 principles simplify querying large language models, with a focus on understanding and enhancing user comprehension. Experiments validate the effectiveness on various models.
+    This paper presents 26 principles for querying large language models, validated through experiments on different models.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Sondos Mahmoud Bsharat, Aidar Myrzakhan, Zhiqiang Shen </p>
           </div>
   </div>
     
@@ -157,51 +157,68 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="https://browse.arxiv.org/html/2312.16171v1/x1.png" class="img-fluid"></p>
 <section id="major-takeaways" class="level3">
 <h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ol type="1">
+<li>Large language models (LLMs) like ChatGPT have demonstrated impressive abilities but there is a challenge in designing optimal instructions or prompts for them, especially for common users.</li>
+<li>The paper introduces 26 guiding principles for formulating queries and prompts to enhance user comprehension and improve the quality of responses from pretrained LLMs.</li>
+<li>Extensive experiments on LLaMA-1/2, GPT-3.5/4 show that the proposed principles can significantly improve the quality, accuracy, and correctness of LLM responses.</li>
+</ol>
+</section>
+<section id="principles" class="level3">
+<h3 class="anchored" data-anchor-id="principles">Principles</h3>
 <ul>
-<li>This paper introduces 26 <strong>principled instructions</strong> for querying and prompting large language models to streamline the process and enhance user comprehension.</li>
-<li>The authors show that <strong>larger models</strong> possess a considerable capacity for simulation, and the more precise the task or directive provided, the more effectively the model performs.</li>
-<li>The paper presents comprehensive experiments and results that demonstrate the effectiveness of the proposed principles in improving the quality, accuracy, and complexity of responses from large language models.</li>
+<li><strong>Motivation</strong>: Crafting prompts that LLMs can comprehend and respond to effectively to program the interaction between a user and the LLM.</li>
+<li><strong>Conciseness and Clarity</strong>: Prompts should be concise, specific, and clear to guide the model effectively.</li>
+<li><strong>Contextual Relevance</strong>: Providing context that helps the model understand the background and domain of the task.</li>
+<li><strong>Task Alignment</strong>: Phrasing prompts to clearly indicate the nature of the task to the model.</li>
+<li><strong>Avoiding Bias</strong>: Design prompts to minimize biases and use neutral language for sensitive topics.</li>
+<li><strong>Incremental Prompting</strong>: Structuring prompts to guide the model through a sequence of steps.</li>
 </ul>
 </section>
-<section id="principles-for-prompts-and-instructions" class="level3">
-<h3 class="anchored" data-anchor-id="principles-for-prompts-and-instructions">Principles for Prompts and Instructions</h3>
+<section id="experiments-and-results" class="level3">
+<h3 class="anchored" data-anchor-id="experiments-and-results">Experiments and Results</h3>
 <ul>
-<li><strong>Motivation</strong>: The quality of responses generated by a pretrained large language model is directly relevant to the quality of the prompts or instructions provided by the users.</li>
-<li><strong>Overview</strong>: The 26 principles are grouped into categories including prompt structure and clarity, specificity and information, user interaction and engagement, content and language style, and complex tasks and coding prompts.</li>
-<li><strong>Design Principles</strong>: The study establishes guiding principles for formulating prompts and instructions, such as conciseness and clarity, contextual relevance, task alignment, example demonstrations, avoiding bias, incremental prompting, and advanced programming-like logic.</li>
+<li>The experiments show that the proposed principles lead to a significant improvement in the quality, accuracy, and correctness of LLM responses across different model scales.</li>
+<li>The boosts in response quality and correctness are particularly pronounced in larger-scale models such as GPT-3.5/4.</li>
 </ul>
 </section>
-<section id="experiment-results" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-results">Experiment Results</h3>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
 <ul>
-<li>The authors designed experiments to evaluate the effectiveness of the principled instructions on LLMs’ responses, showcasing improvements in boosting and correctness across various scales of LLMs.</li>
-<li>The results demonstrate the potential for significant <strong>performance gains</strong> when applying principled prompts, with improvement averaging 57.7% in response quality and 67.3% in accuracy, particularly in large-scale models.</li>
+<li>The paper demonstrates that carefully crafted principled instructions can significantly enhance the relevance, brevity, and objectivity of LLM responses.</li>
+<li>Future exploration could involve refining base models to align with principled instructions further with alternative strategies and integrating successful strategies into standard LLM operations.</li>
 </ul>
 </section>
-<section id="critique-and-limitations" class="level3">
-<h3 class="anchored" data-anchor-id="critique-and-limitations">Critique and Limitations</h3>
-<p>The paper’s findings are based on the evaluation of a limited selection of questions, and the effectiveness of the proposed principles may diminish when dealing with highly specialized or complex queries. Additionally, the study’s generalizability to models with architectures different from those tested remains unclear, suggesting a need for broader testing and evaluation.</p>
-<p>Overall, the paper provides valuable insights into the design of prompts and instructions for large language models, but future research should focus on addressing the identified limitations to enhance the applicability and robustness of the proposed principles.</p>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<ul>
+<li>The effectiveness of the principles may diminish with complex or highly specialized questions, and different LLM architectures may respond differently to these principles.</li>
+<li>The assessment of the principles was based on a limited selection of questions, and expanding the question set in future research could yield more generalized findings.</li>
+</ul>
+<p>In summary, the paper provides valuable insights into the design of prompts for large language models and presents evidence for the effectiveness of principled instructions in improving LLM performance. However, it is important to consider potential limitations and acknowledge the need for further research to validate the principles across different models and a wider range of question types.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.16171v1">https://browse.arxiv.org/html/2312.16171v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
-<td>3023</td>
+<td>5205</td>
 </tr>
 </tbody>
 </table>

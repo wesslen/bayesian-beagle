@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="gpt-3.5-turbo-1106">
+<meta name="author" content="[‘Changmao Li’, ‘Jeffrey Flanigan’]">
 <meta name="dcterms.date" content="2023-12-26">
-<meta name="description" content="Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task contamination on LLMs’ performance over time.">
+<meta name="description" content="Large language models (LLMs) perform better in zero-shot and few-shot tasks on datasets released before their training data creation date, possibly due to task contamination.">
 
 <title>Bayesian beagle - Task Contamination: Language Models May Not Be Few-Shot Anymore</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Task Contamination: Language Models May Not Be Few-Shot Anymore">
-<meta property="og:description" content="Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task contamination on LLMs’ performance over time.">
+<meta property="og:description" content="Large language models (LLMs) perform better in zero-shot and few-shot tasks on datasets released before their training data creation date, possibly due to task contamination.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.16337v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Task Contamination: Language Models May Not Be Few-Shot Anymore">
-<meta name="twitter:description" content="Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task contamination on LLMs’ performance over time.">
+<meta name="twitter:description" content="Large language models (LLMs) perform better in zero-shot and few-shot tasks on datasets released before their training data creation date, possibly due to task contamination.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.16337v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Large language models (LLMs) excel in zero-shot and few-shot tasks, but their success may be affected by task contamination. This paper investigates the impact of task contamination on LLMs’ performance over time.
+    Large language models (LLMs) perform better in zero-shot and few-shot tasks on datasets released before their training data creation date, possibly due to task contamination.
   </div>
 </div>
 
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>gpt-3.5-turbo-1106 </p>
+             <p>Changmao Li, Jeffrey Flanigan </p>
           </div>
   </div>
     
@@ -155,105 +155,55 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.16337v1/x1.png" class="img-fluid"></p>
-<section id="task-contamination-language-models-may-not-be-few-shot-anymore" class="level1">
-<h1>Task Contamination: Language Models May Not Be Few-Shot Anymore</h1>
-<section id="major-findings" class="level2">
-<h2 class="anchored" data-anchor-id="major-findings">Major Findings</h2>
-<ul>
-<li>Large language models (LLMs) demonstrate <strong>inflated performance</strong> in zero-shot or few-shot evaluation due to <strong>task contamination</strong>.</li>
-<li>Closed-source models may not be trustworthy baselines in these settings, especially those including <strong>instruction fine-tuning</strong> or <strong>reinforcement learning with human feedback (RLHF)</strong>.</li>
-<li>Models show little to no statistically significant improvements over <strong>majority baselines</strong> for tasks without demonstrated possibility of task contamination.</li>
-</ul>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>The paper explores the phenomenon of task contamination in large language models (LLMs), which affects their zero-shot and few-shot performance. The study uses a range of LLMs and tasks to demonstrate how LLMs may be exposed to task examples during pre-training, leading to inflated performance in zero-shot and few-shot settings. The authors employ various methods, such as training data inspection, task example extraction, and chronological analysis, to provide evidence of task contamination. The results indicate that closed-sourced models may demonstrate inflated performance in zero-shot or few-shot evaluation, and are therefore not trustworthy baselines in these settings. Additionally, the paper uncovers challenges in assessing task contamination due to different formats of training data and the difficulty in extracting task examples. The findings suggest a need for caution in relying on LLMs for zero-shot and few-shot tasks and call for additional research to understand the extent of task contamination for large language models.</p>
 </section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Large language models (LLMs), such as GPT-3 series models, have garnered attention for their impressive performance in zero-shot and few-shot settings. However, concerns about <strong>data contamination</strong> have been raised, particularly related to <strong>task contamination</strong> – the inclusion of task training examples in the pre-training data, thereby affecting the zero-shot and few-shot performance.</p>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ol type="1">
+<li>Closed-sourced models may demonstrate inflated performance in zero-shot or few-shot evaluation, casting doubt on their trustworthiness as baselines in these settings.</li>
+<li>LLMs rarely show statistically significant improvements over majority baselines in both zero and few-shot settings for tasks without demonstrated possibility of task contamination.</li>
+<li>The observed increase over time in the zero-shot or few-shot performance of LLMs, especially in the GPT-3 series, is likely due to task contamination.</li>
+</ol>
 </section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<ul>
-<li>Four methods of measuring task contamination:
-<ul>
-<li><strong>Training data inspection</strong>: Search through the training data to find task training examples.</li>
-<li><strong>Task example extraction</strong>: Extract task examples from an existing model.</li>
-<li><strong>Membership inference</strong>: Check if the model generated content for an input instance exactly matches the original dataset.</li>
-<li><strong>Chronological analysis</strong>: Measure performance on a dataset with a known release date and check for evidence of contamination.</li>
-</ul></li>
-</ul>
-</section>
-<section id="models-and-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="models-and-datasets">Models and Datasets</h2>
-<ul>
-<li>Experimented with 12 models, including both proprietary GPT-3 series models and open models with free access to their weights.</li>
-<li>Datasets were divided into pre-2021 and post-2021 categories for analyzing zero-shot or few-shot performance difference.</li>
-</ul>
-</section>
-<section id="chronological-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="chronological-analysis">Chronological Analysis</h2>
-<ul>
-<li>Analyzed performance on datasets released before and after the model training data collection date.</li>
-<li>GPT-3 series models demonstrated a significant increase in performance on earlier datasets, indicating possible task contamination.</li>
-</ul>
-</section>
-<section id="training-data-inspection" class="level2">
-<h2 class="anchored" data-anchor-id="training-data-inspection">Training Data Inspection</h2>
-<ul>
-<li>Conducted on two instruction fine-tuned open LLMs (Alpaca and Vicuna) for various classification tasks.</li>
-<li>Performance improved for models with more task-specific training examples, indicating <strong>contaminated performance</strong>.</li>
-</ul>
-</section>
-<section id="task-example-extraction" class="level2">
-<h2 class="anchored" data-anchor-id="task-example-extraction">Task Example Extraction</h2>
-<ul>
-<li>Attempted to extract task examples from the LLM.</li>
-<li>GPT-3 series models, starting from davinci-001, were able to generate task-specific training examples, providing evidence of task contamination.</li>
-</ul>
-</section>
-<section id="llm-performance-on-tasks-with-no-contamination" class="level2">
-<h2 class="anchored" data-anchor-id="llm-performance-on-tasks-with-no-contamination">LLM Performance on Tasks With No Contamination</h2>
-<ul>
-<li>Rarely show statistically significant improvements over majority baselines for tasks without demonstrated possibility of task contamination.</li>
-</ul>
-</section>
-<section id="membership-inference" class="level2">
-<h2 class="anchored" data-anchor-id="membership-inference">Membership Inference</h2>
-<ul>
-<li>Strongly indicates increased contamination is related to increased performance for the semantic parsing task.</li>
-</ul>
-</section>
-<section id="critique" class="level2">
-<h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<ul>
-<li><strong>Low recall</strong> for methods detecting task contamination.</li>
-<li>Difficulty in analyzing task contamination especially for models without instruction tuning.</li>
-</ul>
-<p>In conclusion, the paper reveals evidence of task contamination for LLMs and recommends additional research on this issue.</p>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<p>The paper provides valuable insights into the phenomenon of task contamination in large language models, but there are some potential limitations and areas for improvement:</p>
+<ol type="1">
+<li>The study focuses primarily on the chronological analysis and task contamination for specific models, potentially limiting the generalizability of the findings to a broader range of LLMs and tasks.</li>
+<li>The challenges and limitations of the methods used for detecting task contamination, such as training data inspection and task example extraction, raise concerns about the reliability and completeness of the evidence presented.</li>
+<li>The paper lacks a comprehensive discussion of potential strategies or solutions to mitigate task contamination in large language models, leaving an opportunity for further exploration in future research.</li>
+</ol>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
 <td>Date Generated</td>
 <td>2024-01-02</td>
 </tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.16337v1">https://browse.arxiv.org/html/2312.16337v1</a></td>
-</tr>
 <tr class="odd">
+<td>HTML</td>
+<td><a href=""></a></td>
+</tr>
+<tr class="even">
 <td>Truncated</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Word Count</td>
-<td>5492</td>
+<td>8991</td>
 </tr>
 </tbody>
 </table>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -9,7 +9,11 @@ from summarizer import (
     is_valid_arxiv_id,
     count_words,
     get_url_content,
+    OpenAIAssistant,
+    remove_double_quotes,
 )
+
+from unittest.mock import patch
 
 
 def test_extract_text_from_html():
@@ -66,6 +70,23 @@ def test_is_valid_arxiv_id():
     assert not is_valid
 
 
+def test_remove_double_quotes():
+    # Test with double quotes in the string
+    assert remove_double_quotes('Hello "World"') == "Hello World"
+
+    # Test with no double quotes in the string
+    assert remove_double_quotes("Hello World") == "Hello World"
+
+    # Test with only double quotes
+    assert remove_double_quotes('""') == ""
+
+    # Test with an empty string
+    assert remove_double_quotes("") == ""
+
+    # Test with a string consisting only of double quotes
+    assert remove_double_quotes('"""') == ""
+
+
 def test_valid_arxiv_html():
     valid_id = "https://browse.arxiv.org/html/2312.16171v1"  # replace with a real valid ID for the test
     response = get_url_content(valid_id)
@@ -76,4 +97,12 @@ def test_valid_arxiv_html():
     assert not (response is None)
 
 
-# More tests can be added as needed
+# For the OpenAI integration, you would mock the API call and any network-related functionalities
+@patch("summarizer.OpenAIAssistant.process_text")
+def test_process_text(mock_process_text):
+    mock_process_text.return_value = "summarized text"
+
+    assistant = OpenAIAssistant()
+    summary = assistant.process_text("A long academic text", "summarize")
+    assert summary == "summarized text"
+    mock_process_text.assert_called_once()

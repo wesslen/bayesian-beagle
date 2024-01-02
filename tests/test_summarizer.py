@@ -11,6 +11,7 @@ from summarizer import (
     get_url_content,
     OpenAIAssistant,
     remove_double_quotes,
+    extract_first_png_image,
 )
 
 from unittest.mock import patch
@@ -106,3 +107,26 @@ def test_process_text(mock_process_text):
     summary = assistant.process_text("A long academic text", "summarize")
     assert summary == "summarized text"
     mock_process_text.assert_called_once()
+
+
+def test_extract_first_png_image():
+    # Example HTML content with a .png image in the first 'ltx_section'
+    html_content = """
+    <html>
+        <body>
+            <section class="ltx_section">
+                <img src="http://example.com/image1.png" />
+                <img src="http://example.com/image2.jpg" />
+            </section>
+            <section class="ltx_section">
+                <img src="http://example.com/image3.png" />
+            </section>
+        </body>
+    </html>
+    """
+
+    # Expected URL of the first .png image
+    expected_url = "http://example.com/image1.png"
+
+    # Assert that the function returns the correct URL
+    assert extract_first_png_image(html_content) == expected_url

@@ -14,7 +14,7 @@ description: "{{ example['meta']['subtitle'] }}"
 author: "{{ example['meta']['model'] }}"
 date: "{{ example['meta']['publish_date'] }}"
 link: "{{ example['meta']['url'] }}"
-image: "{{ image }}"
+image: "{{ example['meta']['image'] }}"
 categories: {{ example['meta']['categories'] }}
 file-modified: {{ timestamp.strftime('%Y-%m-%d') }}
 format:
@@ -22,13 +22,16 @@ format:
     code-overflow: wrap
 ---
 
+![]({{ example['meta']['image'] }})
+
 {{ example['text'] }}
 
 ## Appendix
 
 |          |          |
 |----------|----------|
-| Link     | [{{ example['meta']['url'] }}]({{ example['meta']['url'] }})       |
+| Date Generated     | {{ timestamp.strftime('%Y-%m-%d') }}       |
+| HTML     | [{{ example['meta']['url'] }}]({{ example['meta']['url'] }})       |
 | Truncated       | {{ example['meta']['is_truncated'] }}       |
 | Word Count       | {{ example['meta']['word_count'] }}       |
 """

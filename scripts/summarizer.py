@@ -299,7 +299,7 @@ def summarize(
                         "html": url,
                         "abs": first_result.entry_id,
                     },
-                    "authors": first_result.authors,
+                    "authors": [author.name for author in first_result.authors],
                     "title": remove_double_quotes(first_result.title),
                     "subtitle": remove_double_quotes(tldr),
                     "categories": categories,

@@ -114,6 +114,15 @@ def extract_text_from_html(html_content: str) -> str:
 
 
 def remove_double_quotes(input_string):
+    """
+    Removes all double quotes from the input string.
+
+    Args:
+    input_string (str): The string from which to remove double quotes.
+
+    Returns:
+    str: The input string with all double quotes removed.
+    """
     return input_string.replace('"', "")
 
 

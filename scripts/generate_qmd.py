@@ -15,7 +15,6 @@ author: "{{ example['meta']['authors'] }}"
 date: "{{ example['meta']['publish_date'] }}"
 image: "{{ image }}"
 categories: {{ example['meta']['categories'] }}
-authors: {{ authors }}
 format:
   html:
     code-overflow: wrap
@@ -31,7 +30,7 @@ format:
 |----------|----------|
 | Model     | {{ example['meta']['model'] }}       |
 | Date Generated     | {{ timestamp.strftime('%Y-%m-%d') }}       |
-| HTML     | [{{ example['meta']['url'] }}]({{ example['meta']['url'] }})       |
+| HTML     | {{ example['meta']['url'] }}       |
 | Truncated       | {{ example['meta']['is_truncated'] }}       |
 | Word Count       | {{ example['meta']['word_count'] }}       |
 """

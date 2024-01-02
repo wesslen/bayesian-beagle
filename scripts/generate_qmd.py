@@ -103,7 +103,9 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
 def generate_qmd(
     input_jsonl: str,
     output_folder: str,
-    force_generate_all: bool = typer.Option(False, "-f", "--force-generate-all"),
+    force_generate_all: bool = typer.Option(
+        False, "-f", "--force-generate-all"
+    ),
 ):
     """
     Generate QMD files from a JSONL file

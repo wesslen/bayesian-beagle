@@ -74,6 +74,27 @@ def is_valid_arxiv_id(arxiv_id: str) -> bool:
         return False, None
 
 
+def get_url_content(url: str):
+    """
+    Fetch the content from the provided URL.
+
+    :param url: The URL to fetch the content from.
+    :return: The content of the response if successful, None otherwise.
+    """
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            return response.content.decode("utf-8")
+        else:
+            logger.error(
+                f"Bad response from {url}, status code: {response.status_code}"
+            )
+            return None
+    except requests.RequestException as e:
+        logger.error(f"An error occurred while fetching {url}: {e}")
+        return None
+
+
 def extract_text_from_html(html_content: str) -> str:
     stripped = strip_tags(
         html_content,
@@ -93,6 +114,15 @@ def extract_text_from_html(html_content: str) -> str:
 
 
 def remove_double_quotes(input_string):
+    """
+    Removes all double quotes from the input string.
+
+    Args:
+    input_string (str): The string from which to remove double quotes.
+
+    Returns:
+    str: The input string with all double quotes removed.
+    """
     return input_string.replace('"', "")
 
 
@@ -184,7 +214,11 @@ def summarize(input_jsonl: str, output_file_path: str = "data/output.jsonl"):
                 continue
 
             url = f"https://browse.arxiv.org/html/{arxiv_id}"
-            response = requests.get(url)
+            response = get_url_content(url)
+            if response is None:
+                logging.info(f"HTML output not available for {arxiv_id}")
+                continue
+
             html_content = response.content.decode("utf-8")
             text = extract_text_from_html(html_content)
 

@@ -1,0 +1,50 @@
+
+---
+title: "Context-aware Decoding Reduces Hallucination in Query-focused Summarization"
+description: "Query-focused summarization explores methods like Context-aware Decoding to improve summarization quality without generating false information."
+author: "gpt-3.5-turbo-1106"
+date: "2023-12-21"
+link: "https://browse.arxiv.org/html/2312.14335v1"
+image: "../../../bayesian-beagle.png"
+categories: ['robustness']
+file-modified: 2024-01-02
+format:
+  html:
+    code-overflow: wrap
+---
+
+### Major Takeaways
+- **Context-aware Decoding (CAD)** is a decoding method that reduces factual mistakes/hallucinations while mostly retaining the match of lexical patterns in query-focused summarization (QFS) datasets.
+- The study demonstrates that CAD can improve news summarization quality and reduce hallucination/factuality errors in QFS.
+- Despite the benefits, CAD also introduces additional inference-time FLOPs and potentially slows down decoding speed, and the choice of hyperparameter α affects the performance.
+
+### Introduction
+- Query-focused summarization (QFS) aims to provide a summary of a single/multiple documents satisfying the information needs of a given query.
+- Large language models (LLMs) in QFS/RAG pipeline can lead to the hallucination problem where the generated summary contains information contradicting the source documents.
+- There is growing interest in developing decoding methods, such as CAD, to improve generation quality and reduce hallucination.
+
+### Background
+- **Context-aware Decoding (CAD)** leverages the idea of pointwise mutual information (PMI) and proposes a product-of-experts enhancement to make the generation more conditioned on the input evidence.
+- The computational cost of CAD is analyzed in terms of FLOPs in comparison to vanilla decoding.
+
+### Experiments
+- The study conducts experiments on QFS datasets and news summarization datasets with different choices of language models, including pre-trained and instruction finetuned models.
+- Hyperparameters are set for decoding, including temperature, sampling strategies, and α for studying the effectiveness of CAD.
+
+### Results and Analysis
+- CAD improves ROUGE scores and reduces factuality errors on news summarization datasets, but the improved FactKB scores are not reflected consistently in QFS datasets.
+- The choice of α affects the trade-off between factuality errors and ROUGE scores.
+- CAD slows down the decoding speed or requires more CUDA memory despite improving generation quality.
+
+### Critique
+The study provides valuable insights into CAD's effectiveness in reducing hallucination and improving QFS quality. However, the findings are limited to language models no larger than 11B, and the trade-off between improved quality and increased computational complexity could be a concern that needs further investigation.
+
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Link     | [https://browse.arxiv.org/html/2312.14335v1](https://browse.arxiv.org/html/2312.14335v1)       |
+| Truncated       | False       |
+| Word Count       | 2884       |

@@ -1,0 +1,56 @@
+
+---
+title: "GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements"
+description: "Programmers should clarify function purposes using a heuristic, comparing it with GitHub Copilot's Chat, and providing an open-source implementation."
+author: "gpt-3.5-turbo-1106"
+date: "2023-12-13"
+link: "https://browse.arxiv.org/html/2312.08189v1"
+image: "https://browse.arxiv.org/html/2312.08189v1/extracted/5251769/copilot-chat.png"
+categories: ['prompt engineering', 'programming']
+file-modified: 2024-01-02
+format:
+  html:
+    code-overflow: wrap
+---
+
+### Major Takeaways
+
+1. **GuardRails** is a novel heuristic that leverages Large Language Models (LLMs) to suggest inputs for ambiguous purpose statements, aiding programmers in clarifying the intended behavior of functions.
+2. GuardRails compares favorably against **GitHub Copilot**'s Chat feature in identifying potential ambiguities in purpose statements, explicitly highlighting ambiguous inputs and outperforming Copilot Chat in several cases.
+3. The tool has the potential to be especially helpful for **novice programmers and instructors**, aiding in the identification and clarification of ambiguities in purpose statements.
+
+### Introduction and Motivating Example
+- Large Language Models (LLMs) can generate code from natural language prompts, with the ability to outperform novice programmers on simple code-writing tasks.
+- The purpose statement for a Python function is illustrated with a motivating example, demonstrating potential ambiguities with ambiguous inputs.
+
+### Research Questions
+- **RQ1**: Examines the abilities of Copilot Chat and GuardRails to suggest inputs from known Ambiguous Input Classes (AICs), with guardrails often outperforming Copilot Chat.
+- **RQ2**: Investigates the percentage of inputs from known AICs as program details progress from simple function signatures to including functional examples.
+
+### Related Work
+- GuardRails addresses the need for realistic problem specifications containing ambiguities and the potential impact of LLMs on CS1 tasks.
+- The tool integrates ideas from software testing (property-based testing and mutation testing) to identify potential ambiguities in purpose statements.
+
+### Heuristic and Implementation
+- GuardRails' heuristic is based on using LLMs to suggest implementations and leveraging functional examples to filter out incorrect implementations, with the implementation detailed in steps.
+
+### Comparison with Copilot Chat
+- GuardRails compares favorably against Copilot Chat, with the ability to identify potential ambiguities and improve performance as detail levels progress.
+
+### Limitations
+- GuardRails is limited to Python and simple problems, with non-deterministic results from underlying LLMs and Hypothesis posing occasional challenges.
+
+### Discussion and Future Work
+- GuardRails has potential uses for instructors in creating code-writing tasks and empowering novice programmers to identify ambiguities.
+- The tool could be enhanced to support a broader range of problems and incorporated into professionally developed tools like GitHub Copilot.
+
+### Critique
+The comparison between GuardRails and Copilot Chat, while generally positive, may be limited by its focus on Python and simple problems. The use of non-deterministic components in GuardRails and the LLMs' results also pose potential challenges for wider adoption and consistent performance. Further research and testing in complex programming tasks and other programming languages are needed to understand the tool's broader applicability and potential limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Link     | [https://browse.arxiv.org/html/2312.08189v1](https://browse.arxiv.org/html/2312.08189v1)       |
+| Truncated       | False       |
+| Word Count       | 3094       |

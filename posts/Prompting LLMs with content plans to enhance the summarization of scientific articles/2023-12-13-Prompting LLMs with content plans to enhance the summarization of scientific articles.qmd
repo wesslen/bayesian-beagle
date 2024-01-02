@@ -1,0 +1,56 @@
+
+---
+title: "Prompting LLMs with content plans to enhance the summarization of scientific articles"
+description: "Novel prompting techniques improve scientific article summarization, providing key terms to guide summarization systems for better performance."
+author: "gpt-3.5-turbo-1106"
+date: "2023-12-13"
+link: "https://browse.arxiv.org/html/2312.08282v2"
+image: "../../../bayesian-beagle.png"
+categories: ['prompt engineering']
+file-modified: 2024-01-02
+format:
+  html:
+    code-overflow: wrap
+---
+
+## Summary
+
+### Major Findings
+1. **Scientific Summarization Challenge**: Summarizing scientific articles presents unique challenges, given their length, complexity, and irregular organizational structures, making it a remarkably challenging domain within automatic text summarization.
+2. **Proposed Prompting Techniques**: The study proposes novel prompting techniques to provide contextual information to aid scientific summarization systems, yielding consistent performance gains, especially for smaller models summarizing sections separately.
+3. **Implications and Future Directions**: The study suggests that smaller summarization models benefit from prompts and provides opportunities for further research in exploring different prompt generation techniques and attention mechanisms.
+
+### Introduction
+- Automatic text summarization aims to produce shortened versions of documents while retaining relevant information.
+- Scientific article summarization is especially challenging due to their length, complexity, and irregular organizational structures.
+
+### Related Work
+- Prior work heavily relied on extractive methods but has shifted towards abstractive methods using neural network architectures, motivating the study's focus on enhancing abstractive scientific summarizers based on transformer models.
+
+### Methods
+- **Prompting Technique Dimension**: The study compares approaches for generating prompts, providing lists of salient terms through unsupervised extraction from input texts and evaluates five distinct prompting techniques.
+- **Model Dimension**: The study integrates prompting techniques with a range of current state-of-the-art transformer models for scientific summarization.
+- **Input Text Dimension**: The study explores different text input conditions for summarization, including I+D (concatenation of introduction and discussion texts), S-n/a (summarizing sections separately), and S-w/a (similar to S-n/a, with added section type identifiers).
+
+### Results
+- Consistent ROUGE improvements were observed in smaller models, especially when summarizing sections independently, suggesting that supplied terms offer valuable global context.
+- Smaller models showed significant declines in quality when exposed to unrelated prompts in confusion testing, indicating active utilization of supplied informative terms.
+- No single prompting technique consistently outperformed across all settings, suggesting that the optimal selection depends on specific architectures and tasks.
+
+### Discussion
+- The findings indicate that focused local contexts derive the greatest benefit from global information provided through prompts.
+- The ETC attention mechanism shows advancements compared to sliding window attention, highlighting the importance of adopting an attention architecture that ensures continuous access to the instruction throughout the summarization process.
+
+### Future Work
+- Opportunities for future research include exploring additional prompting techniques, investigating automatic entity prompt generation, and adapting global attention to directly focus on prompt token positions to enhance prompt utilization.
+
+### Conclusion
+- The study introduces prompting as a technique to enhance scientific summarization systems and demonstrates particular utility for improving fundamental deficiencies of smaller models in appropriate contexts, providing implications for resource-limited applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Link     | [https://browse.arxiv.org/html/2312.08282v2](https://browse.arxiv.org/html/2312.08282v2)       |
+| Truncated       | False       |
+| Word Count       | 4878       |

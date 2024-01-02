@@ -1,0 +1,42 @@
+
+---
+title: "Large Language Models are Not Stable Recommender Systems"
+description: "LLMs have potential for recommender systems, but suffer from position bias. Experimental Bayesian model STELLA mitigates bias for better performance."
+author: "gpt-3.5-turbo-1106"
+date: "2023-12-25"
+link: "https://browse.arxiv.org/html/2312.15746v1"
+image: "https://browse.arxiv.org/html/2312.15746v1/x1.png"
+categories: ['recommender']
+file-modified: 2024-01-02
+format:
+  html:
+    code-overflow: wrap
+---
+
+### Main Findings
+
+1. **Positional Bias in LLMs**: The study identifies consistent patterns of positional bias in large language models (LLMs) when used as recommender systems, leading to unstable recommendation results that are sensitive to the order of input candidate items.
+   
+2. **STELLA Framework**: The paper proposes the STELLA (Stable LLM for Recommendation) framework, which involves a two-stage pipeline for using LLMs as recommender systems. It employs a probing stage to identify bias patterns and a recommendation stage using a Bayesian updating strategy to calibrate biased output and enhance recommendation performance.
+   
+3. **Effectiveness of STELLA**: Extensive experiments validate the effectiveness of the STELLA framework, significantly reducing variance and improving overall recommendation performance of LLMs.
+
+### Critique
+
+While the paper introduces an innovative framework for addressing the instability of LLMs as recommender systems, there are potential limitations and concerns in the study:
+
+1. **Experiment Scalability**: The experiments are conducted using relatively smaller-scale LLMs, and the scalability of the proposed framework to larger models is not addressed. The effectiveness of STELLA on larger, more complex LLMs may need to be further investigated.
+
+2. **Dataset Selection**: The paper uses a limited number of datasets for evaluation. Additional diverse and more extensive datasets could provide a more comprehensive understanding of the framework's performance across different domains and user preferences.
+
+3. **Applicability**: The study mainly focuses on post-processing techniques for LLM-based recommendations and does not delve into the potential challenges or limitations in real-world implementation. Understanding the practical applicability and potential trade-offs of integrating STELLA into existing recommender systems is crucial for its adoption in industry.
+
+Overall, while the paper presents a promising solution to address the instability of LLMs in recommendations, further research and real-world application testing may be necessary to fully assess its effectiveness and practical utility.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Link     | [https://browse.arxiv.org/html/2312.15746v1](https://browse.arxiv.org/html/2312.15746v1)       |
+| Truncated       | False       |
+| Word Count       | 4797       |

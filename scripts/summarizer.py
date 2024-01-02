@@ -295,17 +295,9 @@ def summarize(
                 "text": summary,
                 "meta": {
                     "links": {
-                        "pdf": next(
-                            link.href
-                            for link in first_result.links
-                            if link.title == "pdf"
-                        ),
+                        "pdf": first_result.links[1].href,
                         "html": url,
-                        "abs": next(
-                            link.href
-                            for link in first_result.links
-                            if link.title == "abs"
-                        ),
+                        "abs": first_result.entry_id,
                     },
                     "authors": first_result.authors,
                     "title": remove_double_quotes(first_result.title),

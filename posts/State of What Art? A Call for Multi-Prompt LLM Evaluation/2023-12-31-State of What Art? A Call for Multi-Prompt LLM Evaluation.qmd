@@ -1,0 +1,60 @@
+
+---
+title: "State of What Art? A Call for Multi-Prompt LLM Evaluation"
+description: "Analysis of single-prompt evaluations on language models, proposing diverse prompts and tailored metrics for robust assessment."
+author: "gpt-3.5-turbo-1106"
+date: "2023-12-31"
+link: "https://browse.arxiv.org/html/2401.00595v1"
+image: "https://browse.arxiv.org/html/2401.00595v1/extracted/5324720/figures/swfigure12.png"
+categories: ['robustness', 'prompt engineering']
+file-modified: 2024-01-02
+format:
+  html:
+    code-overflow: wrap
+---
+
+### Major Takeaways
+
+1. **Single-prompt evaluations for large language models (LLMs) are unreliable**: The paper showcases that the performance and ranking of LLMs on specific tasks can significantly vary based on the chosen prompt or instruction template. This inconsistency highlights the brittleness of single-prompt evaluations.
+
+2. **Proposal for multi-prompt evaluation metrics**: The paper proposes a shift towards evaluating LLMs with a diverse set of prompt or instruction templates, offering different evaluation metrics for varied use cases. Metrics such as maximum performance, average performance, saturation, and combined performance score are suggested as more robust approaches.
+
+3. **Demonstrated sensitivity of LLMs to prompt paraphrasing**: The paper not only identifies the sensitivity of LLMs to prompt paraphrasing, but it also extends the analysis to showcase that popular LLMs, including OpenAI models, exhibit significant performance variations with slight prompt modifications.
+
+### Sections Summary
+
+#### Introduction
+- Addresses the issue of variations in LLM performance based on different instruction templates and proposes a multi-prompt evaluation approach.
+
+#### Background and Definitions
+- Discusses the differences in task instructions, samples, and input-output exemplars and the prevalence of single-instruction evaluations in current LLM evaluation benchmarks.
+- Highlights the need for novel evaluation benchmarks and methods based on the observed brittleness of single-prompt evaluations.
+
+#### Experimental Setup
+- Describes the tasks and models evaluated and the methods used to measure LLM performance on different instruction templates and prompts.
+
+#### Single-Prompt Evaluation Leads to Inconsistent Results
+- Demonstrates the inconsistencies in LLM performance and ranking based on single-instruction evaluations, leading to a call for multi-prompt evaluation metrics.
+
+#### Different Use Cases Merit Different Metrics
+- Proposes and discusses various evaluation metrics for specific use cases, emphasizing the need for nuanced evaluation methods tailored to different purposes.
+
+#### Multi-Prompt Evaluation
+- Presents an evaluation of models based on the proposed multi-prompt evaluation metrics, illustrating differences in model rankings and performances.
+
+#### Small-Scale Evaluation of OpenAI Models on Prompt Paraphrasing
+- Provides additional evidence of sensitivity to prompt paraphrasing, particularly in OpenAI models.
+
+#### Conclusions
+- Emphasizes the necessity of a shift towards more consistent and comparable LLM evaluations, emphasizing the importance of robust evaluation methods.
+
+### Critique
+The paper effectively highlights the limitations of single-prompt evaluations for LLMs and proposes alternative metrics. However, the paper could benefit from a more detailed comparison of the proposed multi-prompt evaluation approach with existing evaluation methods. Additionally, while the paper presents evidence of inconsistency in LLM performances, further exploration of potential causes or underlying mechanisms could strengthen the findings. Some sections, such as the experimental setup, could provide more detail to enhance clarity and reproducibility. Lastly, the paper should discuss potential limitations or challenges in implementing multi-prompt evaluations in real-world LLM uses.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Link     | [https://browse.arxiv.org/html/2401.00595v1](https://browse.arxiv.org/html/2401.00595v1)       |
+| Truncated       | False       |
+| Word Count       | 10053       |

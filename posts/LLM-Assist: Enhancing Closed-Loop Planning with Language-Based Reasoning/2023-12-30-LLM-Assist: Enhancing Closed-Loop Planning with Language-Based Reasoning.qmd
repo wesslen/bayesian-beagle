@@ -1,0 +1,42 @@
+
+---
+title: "LLM-Assist: Enhancing Closed-Loop Planning with Language-Based Reasoning"
+description: "Using language models like GPT4, a hybrid planner combines rule-based and LLM-based approaches for effective self-driving."
+author: "gpt-3.5-turbo-1106"
+date: "2023-12-30"
+link: "https://browse.arxiv.org/html/2401.00125v1"
+image: "https://browse.arxiv.org/html/2401.00125v1/extracted/5322933/fig/arch.png"
+categories: ['robustness', 'prompt engineering']
+file-modified: 2024-01-02
+format:
+  html:
+    code-overflow: wrap
+---
+
+### Major Takeaways
+- The paper proposes LLM-Assist, a novel hybrid planning approach that integrates Large Language Models (LLMs) into self-driving vehicle planning to address the limitations of existing learning- and rule-based planners.
+- LLM-Assist achieves state-of-the-art performance on the nuPlan benchmark, outperforming all existing pure learning- and rule-based methods across most metrics.
+- The paper demonstrates the effectiveness of LLM-Assist in navigating complex scenarios and generating well-reasoned outputs, while also remaining grounded through working alongside the rule-based approach.
+
+### Introduction
+- Self-driving vehicles face challenges in developing planning algorithms capable of handling unconstrained driving environments despite advances in deep learning and sensing technologies.
+- The shortcomings of learning-based and rule-based planners suggest a need for a new approach to leverage the strengths of both methods.
+
+### Method
+- LLM-Assist is a hybrid planning approach that leverages a state-of-the-art rule-based planner, PDM-Closed, for common scenarios and a novel LLM-based planner for challenging high-uncertainty scenarios.
+- The LLM-assisted planner proposes two modes: one where the LLM directly generates a safe trajectory and another where it provides parameters for the rule-based planner to plan a safe trajectory.
+
+### Results
+- LLM-Assist achieves state-of-the-art performance on the nuPlan benchmark in both reactive and non-reactive settings, reducing dangerous driving events and demonstrating complex maneuvers in challenging scenarios.
+- The paper provides ablation studies highlighting the importance of the base planner, the LLM's control over the emergency brake function, and the impact of LLM temperature on planning performance.
+
+### Critique
+The paper presents a novel and promising approach to address the limitations of existing self-driving vehicle planners. However, it would benefit from further exploration of the limitations and potential failures of the LLM-Assist approach. Additionally, the practical implementation, computational overhead, and real-world feasibility of integrating LLMs into self-driving systems should be considered. Further discussion of the paper's limitations and potential ethical concerns related to relying on language models for critical decision-making in autonomous driving is warranted.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Link     | [https://browse.arxiv.org/html/2401.00125v1](https://browse.arxiv.org/html/2401.00125v1)       |
+| Truncated       | False       |
+| Word Count       | 9991       |

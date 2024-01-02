@@ -1,0 +1,58 @@
+
+---
+title: "RAGTruth: A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models"
+description: "Using RAGTruth dataset for word-level hallucination detection improves LLM performance in preventing unsupported claims."
+author: "gpt-3.5-turbo-1106"
+date: "2023-12-31"
+link: "https://browse.arxiv.org/html/2401.00396v1"
+image: "https://browse.arxiv.org/html/2401.00396v1/x1.png"
+categories: ['dataset', 'prompt engineering']
+file-modified: 2024-01-02
+format:
+  html:
+    code-overflow: wrap
+---
+
+### Major Takeaways
+
+1. **RAGTruth** is a large-scale corpus designed for the analysis of word-level hallucinations specifically in the context of **Retrieval-Augmented Generation (RAG)** scenarios.
+2. The paper presents comprehensive benchmarks for **hallucination detection** methods and establishes the potential of developing better **hallucination detection methods** using the RAGTruth dataset.
+3. The results demonstrate the effectiveness of using the dataset to **fine-tune a relatively small LLM** and achieve competitive hallucination detection performance compared to existing prompt-based approaches.
+
+### Introduction to Hallucination in Large Language Models
+
+- **Large language models (LLMs)** have been successful in various tasks but are prone to **hallucinate**, generating content not based on factual or accurate information.
+- Various methods for **hallucination detection** exist, including examining the model's intrinsic state, comparing it with external data, and utilizing the model’s inherent capabilities for self-checking.
+- **Retrieval-augmented generation (RAG)** is widely used to supply LLMs with updated, relevant knowledge, but LLMs still produce unfounded or contradictory statements.
+
+### The Need for RAGTruth
+
+- Lack of high-quality, large-scale datasets tailored for **hallucination detection** in RAG settings hampers progress in this area.
+- Most existing datasets for hallucination detection are either synthesized or of limited size and not specifically focused on RAG scenarios.
+
+### Construction Process of RAGTruth
+
+- **Response generation**: Utilized LLMs to produce nearly 18,000 fully annotated natural responses across tasks like summarization, question answering, and data-to-text generation.
+- **Human annotation**: Spans of the generated text containing hallucinated information were annotated based on four types of criteria.
+- **Annotations for adaptive evaluation**: Additional annotations were provided for contentious cases to support various evaluation strategies.
+
+### Hallucination Benchmark Analysis
+
+- Detailed statistics and analysis of hallucination occurrences across different tasks, models, lengths, and positions within responses were provided.
+
+### Experimental Results
+
+- Conducted experiments with various **hallucination detection algorithms** and **fine-tuned LLM**, demonstrating the effectiveness of the dataset in improving detection ability.
+- **Hallucination suppression**: Showed significant reductions in **hallucination rates** using the finetuned hallucination detector, indicating the potential for developing trustworthy RAG LLMs.
+
+### Critique
+
+The paper provides a comprehensive analysis and benchmarking of hallucination detection in the context of RAG, but it would benefit from addressing potential biases in the dataset and expanding on the limitations of the experimental setup. Consideration of potential ethical implications related to the fine-tuning of LLMs for hallucination detection could also enrich the discussion.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Link     | [https://browse.arxiv.org/html/2401.00396v1](https://browse.arxiv.org/html/2401.00396v1)       |
+| Truncated       | False       |
+| Word Count       | 6757       |

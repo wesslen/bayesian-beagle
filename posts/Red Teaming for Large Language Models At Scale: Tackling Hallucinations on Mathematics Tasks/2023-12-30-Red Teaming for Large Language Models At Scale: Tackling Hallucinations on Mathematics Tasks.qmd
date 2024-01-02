@@ -1,0 +1,67 @@
+
+---
+title: "Red Teaming for Large Language Models At Scale: Tackling Hallucinations on Mathematics Tasks"
+description: "Prompting techniques affect LLM performance. Structured reasoning and examples improve quality, but some models still struggle with basic tasks."
+author: "gpt-3.5-turbo-1106"
+date: "2023-12-30"
+link: "https://browse.arxiv.org/html/2401.00290v1"
+image: "../../../bayesian-beagle.png"
+categories: ['security', 'robustness']
+file-modified: 2024-01-02
+format:
+  html:
+    code-overflow: wrap
+---
+
+### Major Findings
+
+1. Red teaming LLMs on elementary calculations and algebraic tasks revealed that **gpt-3.5-turbo** and **gpt-4 models** are not well suited for these tasks, even when red teamed. 
+2. **Structured reasoning and providing worked-out examples** were found to slow down the deterioration of the quality of answers but did not significantly improve the performance of the models.
+3. The models' numerical abilities seemed to stem mostly from **memorization**, rather than their ability to follow simple algorithms.
+
+### Introduction
+
+- Red teaming is used to systematically find backdoors in Large Language Models (LLMs) to elicit irresponsible responses.
+- Red teaming at scale can be challenging as the model’s answers often require manual verification, especially in contexts involving potential harm.
+
+### Related Work
+
+- **Safety of LLMs**: Modern LLMs are far from safe, and are prone to hallucinations, posing significant threats.
+- **Mathematical Reasoning in LLMs**: Previous work has shown that advanced LLMs tend to be inconsistent on mathematics tasks.
+
+### Methods
+
+- The study uses the gpt-4 and gpt-3.5-turbo models accessed through the OpenAI API to evaluate their performance on mathematics tasks.
+- They develop a Python framework for automatic red teaming at scale and conduct two experiments: Elementary Mathematics and Algebraic Reasoning.
+
+### Results
+
+- **Experiment 1**: Easy calculations were completed with high accuracy, while the performance on harder calculations dropped significantly. Red teaming techniques generally degraded the models' performance.
+- **Experiment 2**: Providing examples led to an increase in performance on almost all metrics, with some techniques benefiting more than others.
+
+### Discussion
+
+- The findings suggest that the models are generally not suited for mathematics tasks, and at best, red teaming techniques slightly improved performance.
+- Prompts with red teaming tended to be much longer, likely detracting from the problem at hand.
+
+### Conclusion and Limitations
+
+- The study develops a Python framework for automatic red teaming of LLMs at scale and evaluates two GPT models at school-level calculations and puzzles.
+- **Limitations**: The evaluation only covers one type of LLM and the training data is not publicly available.
+
+### Critique
+
+The paper provides valuable insights into the limitations of current LLMs in handling elementary mathematics and algebraic reasoning tasks. However, potential problems and limitations include:
+
+- The study only uses two specific LLM models, and the generalizability of the findings to other models may be limited.
+- The paper does not delve into potential solutions or improvements to address the observed limitations in the models' performance.
+
+Overall, while the study highlights important shortcomings of LLMs, further research is needed to address these limitations and develop more robust models for mathematical reasoning tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Link     | [https://browse.arxiv.org/html/2401.00290v1](https://browse.arxiv.org/html/2401.00290v1)       |
+| Truncated       | False       |
+| Word Count       | 7380       |

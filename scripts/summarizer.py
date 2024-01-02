@@ -292,7 +292,12 @@ def summarize(
                 "id": arxiv_id,
                 "text": summary,
                 "meta": {
-                    "url": url,
+                    "links": {
+                        "pdf": next(link.href for link in first_result.links if link.title == 'pdf'),
+                        "html": url,
+                        "abs": next(link.href for link in first_result.links if link.title == 'abs'),
+                    },
+                    "authors": first_result.authors,
                     "title": remove_double_quotes(first_result.title),
                     "subtitle": remove_double_quotes(tldr),
                     "categories": categories,

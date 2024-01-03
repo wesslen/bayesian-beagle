@@ -1,0 +1,45 @@
+
+---
+title: "Differentially Private Low-Rank Adaptation of Large Language Model Using Federated Learning"
+description: "LLM fine-tuning raises privacy concerns. DP-LoRA, a federated learning algorithm, addresses privacy and communication overhead challenges effectively."
+author: Xiao-Yang Liu, Rongyi Zhu, Daochen Zha, Jiechao Gao, Shan Zhong, Meikang Qiu
+date: "2023-12-29"
+image: "https://browse.arxiv.org/html/2312.17493v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.17493v1/x1.png)
+
+### Major Takeaways
+1. Federated learning becomes a natural choice for ensuring data privacy when multiple stakeholders aim to collaboratively enhance large language models (LLMs) using sensitive data without exposing raw data to central servers.
+2. The DP-LoRA algorithm preserves data privacy by employing a Gaussian mechanism that adds noise in weight updates, maintaining individual data privacy while facilitating collaborative model training.
+3. DP-LoRA optimizes communication efficiency via low-rank adaptation, minimizing the transmission of updated weights during distributed training.
+
+### Introduction
+The interest in large language models (LLMs), like GPT-2, has led to a focus on domain-specific applications, such as finance and medical science. However, concerns about data privacy arise when multiple stakeholders aim to collaboratively enhance LLMs using sensitive data.
+
+### Challenges and Proposed Solution
+The paper proposes DP-LoRA, a novel federated learning algorithm tailored for LLMs. DP-LoRA employs a Gaussian mechanism to add noise in weight updates to ensure minimal changes in publicly visible information. Additionally, it optimizes communication efficiency via low-rank adaptation, minimizing the transmission of updated weights during distributed training.
+
+### Related Work
+The paper discusses privacy issues of LLMs, the shift from general-purpose LLMs to domain-specific LLMs, parameter-efficient tuning of LLMs, federated learning, and differential privacy.
+
+### Performance Evaluation
+The paper evaluates the proposed DP-LoRA algorithm using various datasets across different fields, aligning with the training data used.
+
+### Critique
+While the paper introduces a novel algorithm for ensuring privacy and reducing communication overhead in LLM fine-tuning, it lacks a detailed analysis of the limitations of the proposed approach. Additionally, the paper could benefit from more comprehensive evaluations across a wider range of LLMs and datasets to demonstrate the broader applicability of DP-LoRA. Finally, providing insights into potential scenarios or use cases where the proposed algorithm may not be as effective would enhance the paper's contributions.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.17493v1](http://arxiv.org/abs/2312.17493v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17493v1](https://browse.arxiv.org/html/2312.17493v1)       |
+| Truncated       | True       |
+| Word Count       | 15580       |

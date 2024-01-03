@@ -1,0 +1,59 @@
+
+---
+title: "E-chat: Emotion-sensitive Spoken Dialogue System with Large Language Models"
+description: "Study introduces Emotional chat Model (E-chat) for emotion-sensitive spoken dialogue, outperforming baseline models."
+author: Hongfei Xue, Yuhao Liang, Bingshen Mu, Shiliang Zhang, Qian Chen, Lei Xie
+date: "2023-12-31"
+image: "https://browse.arxiv.org/html/2401.00475v1/x1.png"
+categories: ['social-sciences', 'hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.00475v1/x1.png)
+
+### Major Takeaways
+1. **E-chat** is a emotion-sensitive spoken dialogue system that leverages Large Language Models (LLMs) to comprehend and respond to emotions conveyed in speech.
+2. The model outperforms baseline LLMs in terms of emotional comprehension and human-machine interaction, as indicated by various evaluation metrics.
+3. The development of **E-chat200 dataset** addresses the lack of existing resources for emotional spoken dialogue, supporting the successful training of the E-chat model.
+
+### Introduction to Emotion-Sensitive Spoken Dialogue
+- Emotion recognition in speech is crucial for enhancing naturalness and effectiveness of human-machine interactions.
+- Large Language Models (LLMs) have advanced dialogue systems by integrating audio and image signals for understanding non-textual data formats.
+
+### Related Work
+- Prior efforts have integrated audio input features into LLMs through connection modules and adapters to enhance their understanding of complex audio signals.
+- Existing models often lack the capability to generate appropriate responses based on emotions, limiting their practicality.
+
+### E-chat Architecture
+- **Speech encoder** extracts speech and emotion features to enrich the decoder input, enabling the model to generate contextually relevant and emotionally attuned responses.
+- A **connection module** is used to map speech features to the textual space, essential for coherent text generation from spoken input.
+- The **LLM decoder** processes the transformed speech features and emotion embeddings to generate emotion-based responses.
+
+### Echat-200h Dataset
+- The **E-chat200 dataset** comprises tuples of (question text, response, emotion, speech) designed for emotion-sensitive spoken dialogue applications.
+- The dataset fills a critical gap in existing resources and has been pivotal for the successful training of the E-chat model.
+
+### Experiments
+- The model undergoes two-stage training, where the connection module is first trained using extensive Automatic Speech Recognition (ASR) data and then fine-tuned using the E-chat200 dataset.
+- Objective and subjective evaluation methods demonstrate the model's superior emotion and speech understanding capabilities, along with high marks for the naturalness and accuracy of its emotional expressions.
+
+### Analysis and Discussion
+- The two-stage training approach proves crucial in ensuring the model's effectiveness in transforming speech embeddings into a feature space suitable for LLM input.
+- E-chat achieves a commendable accuracy rate of 74.1% in emotion recognition, validating its effectiveness in comprehending various emotions.
+
+### Critique
+While the study presents promising results for emotion-sensitive spoken dialogue, it is essential to address the limitations in handling audio with mixed emotions and ensure the model's applicability in more complex emotional speech scenarios. Additionally, further research and experimentation are required to validate the model's real-world performance and scalability in diverse human-machine interaction scenarios.
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2401.00475v1](http://arxiv.org/abs/2401.00475v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.00475v1](https://browse.arxiv.org/html/2401.00475v1)       |
+| Truncated       | False       |
+| Word Count       | 4854       |

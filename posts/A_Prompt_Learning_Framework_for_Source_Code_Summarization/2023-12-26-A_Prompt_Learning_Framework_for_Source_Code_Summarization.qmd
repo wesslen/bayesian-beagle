@@ -1,0 +1,87 @@
+
+---
+title: "A Prompt Learning Framework for Source Code Summarization"
+description: "PromptCS improves code summarization using continuous prompts for LLMs, outperforming other schemes with faster training and better summaries."
+author: Weisong Sun, Chunrong Fang, Yudu You, Yuchen Chen, Yi Liu, Chong Wang, Jian Zhang, Quanjun Zhang, Hanwei Qian, Wei Zhao, Yang Liu, Zhenyu Chen
+date: "2023-12-26"
+image: "https://browse.arxiv.org/html/2312.16066v1/x1.png"
+categories: ['prompt-engineering', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.16066v1/x1.png)
+
+### Major Findings
+
+1. **Effectiveness of PromptCS**: PromptCS significantly outperforms instruction prompting schemes (including zero-shot learning and few-shot learning) on all four widely used metrics: BLEU, METEOR, ROUGH-L, and SentenceBERT. The framework is also comparable to the task-oriented fine-tuning scheme.
+2. **Efficiency and Training Cost**: PromptCS demonstrates training efficiency faster than the task-oriented fine-tuning scheme, with a more pronounced advantage on larger Language Model Models (LLMs).
+3. **Generalization Ability**: PromptCS showcases generalization abilities across multiple programming languages, showing consistent efficacy in JavaScript and Python datasets. 
+
+### Background
+
+#### Source Code Summarization
+
+- Source code summarization involves automatically generating natural language summaries for code snippets. It is crucial for program comprehension and software maintenance.
+- Large Language Models (LLMs), such as Codex, StarCoder, and CodeGen, have been increasingly applied in code summarization tasks.
+
+#### Large Language Model
+
+- Scaling pre-trained language models (PLMs) including large language models (LLMs) can enhance model capacity for solving downstream tasks.
+
+### PromptCS: A Novel Framework for Code Summarization
+
+#### Introduction
+
+Source code comments play a critical role in facilitating program comprehension and software maintenance. However, existing research demonstrates that lack of high-quality code comments is a common problem in the software industry. PromptCS is a novel prompt learning framework for code summarization.
+
+#### Methodology
+
+- **Code Embedding Generation**: Utilizes the LLM's tokenizer and input embedding layer to encode code snippets.
+- **Prompt Embedding Generation**: Utilizes a Deep Learning (DL) based prompt encoder, taking a pseudo prompt as input and producing a prompt embedding.
+- **Fusion Embedding Generation**: Concatenates prompt and code embeddings to produce fusion embeddings.
+- **Model Training**: Trains the prompt agent under a loss function comparing predicted and ground-truth summaries.
+
+### Evaluation and Analysis
+
+#### RQ1: Effectiveness of PromptCS
+
+- PromptCS significantly outperforms instruction prompting schemes and is comparable to task-oriented fine-tuning in terms of metrics such as BLEU, METEOR, ROUGE-L, and SentenceBERT.
+- The performance of PromptCS is better or comparable to task-oriented fine-tuning and outperforms instruction prompting schemes on some LLMs.
+
+#### RQ2: Influence of Key Configurations on PromptCS
+
+- Different combinations of prompt length and concatenation mode affect the effectiveness of PromptCS, with varying effects observed.
+
+#### RQ3: Influence of the Network Architecture used in the Prompt Encoder on PromptCS
+
+- Building the prompt encoder on a Transformer enhances performance improvements to PromptCS in some cases and may lead to performance degradation in others.
+
+#### RQ4: Influence of Training Data Size on PromptCS
+
+- PromptCS's performance improves with an increase in the size of the training set, but the increase is not significant. The framework demonstrates superior adaptability and generalization capabilities even on small-scale datasets.
+
+#### RQ5: Effectiveness in Other Programming Languages
+
+- PromptCS showcases generalization abilities across multiple programming languages, demonstrating consistent efficacy in JavaScript and Python datasets. 
+
+### Critique
+
+While the study presents significant findings on the effectiveness of PromptCS for source code summarization, several potential limitations need to be considered:
+- The evaluation metrics for code summarization may not capture all nuances of code understanding and comprehension needed in practical development scenarios.
+- The impact of specific programming language syntax and conventions on the performance of PromptCS needs further investigation.
+- As the study heavily relies on large language models, it raises questions around ethical implications, interpretability, and potential biases in the code summarization process.
+
+Overall, the paper provides valuable insights into the effectiveness of PromptCS for source code summarization and offers important contributions to the field. However, to ensure the robustness and applicability of PromptCS in various software engineering scenarios, further research and thorough validation are necessary.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.16066v1](http://arxiv.org/abs/2312.16066v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.16066v1](https://browse.arxiv.org/html/2312.16066v1)       |
+| Truncated       | True       |
+| Word Count       | 16076       |

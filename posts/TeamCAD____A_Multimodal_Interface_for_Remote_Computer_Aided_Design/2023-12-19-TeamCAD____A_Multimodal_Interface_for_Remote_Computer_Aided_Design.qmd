@@ -1,0 +1,68 @@
+
+---
+title: "TeamCAD -- A Multimodal Interface for Remote Computer Aided Design"
+description: "TeamCAD allows remote collaboration in spatial design via webcam and microphone input, integrating speech and gesture recognition for a user-friendly experience."
+author: Demircan Tas, Dimitrios Chatzinikolis
+date: "2023-12-19"
+image: "https://browse.arxiv.org/html/2312.12309v1/extracted/5305689/figures/f11p.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.12309v1/extracted/5305689/figures/f11p.png)
+
+### Main Findings
+
+1. **Remote Collaboration and Computer Aided Design:** TeamCAD presents a user experience for online remote collaboration that simulates working on a table, combining **speech and gesture recognition** for computer-aided design (CAD) processes. The interface is intuitive and suitable for collaborators with or without prior experience in three-dimensional modeling applications.
+
+2. **Challenges in Modality Use:** While the combination of modalities provided a fluent experience for users with varying skill levels, **speech recognition posed challenges** due to limitations in robustness and latency. In contrast, **gesture recognition** provided robust results with regards to different user demographics.
+
+3. **Performance of TeamCAD:** Users spent the most time manipulating objects, and speech recognition occupied substantially more time than gestures. However, the multi-modal approach equalized the time spent by users with varying levels of experience in completing similar tasks, indicating the potential of the interface for design teams with members of different skill levels.
+
+### Introduction
+
+- Online collaboration for spatial design processes became predominant during the COVID-19 pandemic, but existing tools for verbal communication have limitations in visual design activities.
+- Physical models and sketches enable equal collaboration, particularly in early design exploration, emphasizing the need for a similar experience in online remote working scenarios.
+- TeamCAD proposes an interface that allows users to work on three-dimensional modeling or CAD environments through **speech and gesture recognition**.
+
+### System Description
+
+- TeamCAD relies on **speech recognition and hand feature detection** using the Python SpeechRecognition library, MediaPipe, and OpenCV for webcam images. Voice commands and gestures are translated to 3D animation/modeling or CAD software as input.
+- The system uses a heads-up display to present a library of voice commands and enables users to manipulate objects through hand gestures.
+
+### How it Works
+
+- TeamCAD uses **speech recognition** to extract strings from users’ voice and **MediaPipe and OpenCV** to detect hand features from webcam images in real-time. These inputs are translated to virtual mouse and keyboard outputs to manipulate objects and run commands in Blender.
+
+### User Studies
+
+- Three user study iterations were conducted at prototype, implementation, and final studio phases, with users asked to create arch models in Blender. The time spent on warming up, creating and manipulating objects, and camera movement/navigation was recorded, as well as the time spent on speech and gesture commands.
+
+### Performance
+
+- Users spent the most time manipulating objects, while speech recognition occupied substantially more time than gestures due to robustness and flexibility limitations in the implemented model. However, the **multi-modal approach equalized the time spent** by users with varying levels of experience.
+- Users’ prior experience did not consistently align with how much time they spent building an arch, indicating the potential of **speech and gesture recognition** to facilitate a more fluid pace.
+
+### Conclusion & Discussion
+
+- TeamCAD presents a common denominator for design teams with varying skill levels, and future efforts will focus on further improving speech response and conducting additional user testing.
+
+### Critique
+
+The paper presents a promising interface for remote collaboration in CAD processes, but there are some potential problems to consider:
+- The limitations and challenges of **speech recognition** pose a significant obstacle to the interface's usability and may require further refinement.
+- The study's reliance on user testing from a specific cohort of graduate students and the lack of diversity in testing participants may limit the generalizability of the findings.
+- Future work should address the need for more robust and **flexible speech recognition** to ensure a smoother user experience, especially for international users with diverse accents.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.12309v1](http://arxiv.org/abs/2312.12309v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.12309v1](https://browse.arxiv.org/html/2312.12309v1)       |
+| Truncated       | False       |
+| Word Count       | 4768       |

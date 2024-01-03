@@ -1,0 +1,73 @@
+
+---
+title: "SMoT: Think in State Machine"
+description: "New approach uses State Machine of Thought (SMoT) and expert knowledge to improve language model reasoning accuracy."
+author: Jia Liu, Jie Shuai
+date: "2023-12-29"
+image: "https://browse.arxiv.org/html/2312.17445v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.17445v1/x1.png)
+
+### Major Takeaways
+
+1. **SMoT Paradigm**: The State Machine of Thought (SMoT) paradigm leverages pre-existing knowledge in the form of predefined state machines to guide Large Language Models (LLMs) in effective problem-solving.
+  
+2. **Multi-Agent Mechanism**: SMoT employs a multi-agent mechanism to delegate different objectives to different agents, enhancing the reasoning accuracy of the LLM.
+
+3. **Performance Improvement**: Experimental results demonstrate that SMoT outperforms state-of-the-art baseline methods, achieving significant improvements in accuracy and efficiency, particularly in array reasoning and classical reinforcement learning tasks.
+
+### Introduction
+
+In recent years, advancements in large language models (LLMs) have prompted various research topics aiming to unlock their full potential and enhance their problem-solving abilities. While existing approaches, such as Chain-of-Thoughts (CoT), have shown effectiveness, they sometimes struggle with complex problems, leading to the proposed State Machine of Thought (SMoT) paradigm.
+
+### Related Work
+
+- **Task Decomposition and Planning**: Previous research has explored prompting LLMs to decompose complex problems into subtasks gradually completing them via chains-of-thought prompting, and in-domain planners have been utilized for designing effective plans for domain-specific tasks.
+  
+- **Reflection and Refinement**: Existing LLMs possess strong capabilities for task planning, with researchers proposing reflection mechanisms and utilizing external feedback for correct evaluation of current reasoning paths.
+
+### State Machine of Thoughts
+
+- **The Design of LLM-driven State Machines**: SMoT incorporates LLM thinking in state machines and involves state definition and state transition optimization to enhance reasoning accuracy.
+
+- **Planning Agent and Action Agent**: SMoT utilizes a division of labor between Planning Agent (PlAgt) and Action Agent (ActAgt) to break down complex sequential problems into discrete state transitions.
+
+### Comparison with Existing Prompting Approaches
+
+- **Comparison**: SMoT significantly outperforms existing prompting approaches such as CoT, CoT-SC, ToT, and GoT, particularly in accuracy and efficiency for various reasoning tasks.
+
+### Example Use Cases
+
+- **The Greatest Sum Divisible by Three**: SMoT effectively solves this array reasoning task, showcasing the successful implementation of the paradigm.
+
+- **Taxi**: SMoT outperforms CoT and ToT methods in a classical reinforcement learning task, demonstrating superior accuracy and efficiency.
+
+### Experiments
+
+- **Performance**: SMoT outperforms baselines in determining the greatest sum divisible by three and successfully navigates the taxi in challenging scenarios with high accuracy and efficiency.
+
+### Limitations
+
+- **Limitations**: SMoT has limitations in handling problems that do not involve state transitions, faces challenges in parallel partitioning of the reasoning process, and requires manual design of state machines.
+
+### Critique
+
+The article effectively introduces the novel SMoT paradigm and demonstrates its effectiveness through experiments. However, it would benefit from a more detailed comparison with other state-of-the-art methods, potential real-world applications, and a discussion on meta-learning or transfer learning aspects.
+
+Overall, the paper provides valuable insights into leveraging pre-existing knowledge for guiding LLM reasoning and presents a promising approach in enhancing problem-solving capabilities. However, addressing the limitations and exploring broader applications would add depth to the paper.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.17445v1](http://arxiv.org/abs/2312.17445v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17445v1](https://browse.arxiv.org/html/2312.17445v1)       |
+| Truncated       | False       |
+| Word Count       | 11018       |

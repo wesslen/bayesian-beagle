@@ -1,0 +1,68 @@
+
+---
+title: "Cooperation on the Fly: Exploring Language Agents for Ad Hoc Teamwork in the Avalon Game"
+description: "LLMs show promise in ad hoc teamwork but may suffer from communication issues. CodeAct aims to address this with enhanced memory and code-driven reasoning."
+author: Zijing Shi, Meng Fang, Shunfeng Zheng, Shilong Deng, Ling Chen, Yali Du
+date: "2023-12-29"
+image: "https://browse.arxiv.org/html/2312.17515v1/extracted/5321879/figure/avalonplayV4.png"
+categories: ['hci', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.17515v1/extracted/5321879/figure/avalonplayV4.png)
+
+**Major Findings:**
+
+1. **Cooperation and Language Models**: The study explores the use of Large Language Models (LLMs) in ad hoc teamwork, finding specific challenges related to communication in natural language. The study highlights the potential of LLM agents in team collaboration and identifies issues related to hallucinations in communication.
+2. **CodeAct Development**: The study introduces CodeAct, a general agent that equips LLM with enhanced memory and code-driven reasoning, enabling rapid adaptation to new teammates in environments without explicit coordination protocols.
+3. **AvalonPlay Benchmark**: The study introduces the AvalonPlay benchmark, a language-based, multi-agent platform for evaluating the performance of LLM agents in ad hoc teamwork scenarios.
+
+# Introduction
+- Large Language Models (LLMs) show potential in autonomous agents with reasoning abilities.
+- Ad hoc teamwork (AHT) problem necessitates swift adaptation and on-the-fly cooperation in dynamic environments.
+- LLM agents can directly communicate with their teammates in natural language.
+- The study focuses on the AHT problem in environments driven by natural language.
+
+# The AvalonPlay Benchmark
+- The benchmark is a language-based, multi-agent platform for multi-round tasks with limited knowledge about teammates' roles.
+- The benchmark includes teammate roles, pipeline phases, and observation understanding.
+
+# Methodology
+- CodeAct is introduced, incorporating memory retrieval, code-driven reasoning with action, and code execution with self-debug.
+- Memory retrieval is implemented to extract factual data from previous interactions.
+- Code-driven reasoning with action uses code-like format for reasoning substeps.
+- Code execution with self-debug allows the leader to refine their programs.
+
+# Experiments
+- Baseline evaluation of different backend LLMs and their performance in AHT scenarios.
+- Comparison of scenarios with and without communication protocols in AvalonPlay.
+- Comparison of CodeAct with semantic reasoning methods in team selection accuracy.
+
+# Quantitative Analysis
+- Observations of LLM agents' forgetting early information and generating hallucinations in communication scenarios.
+- Performance comparison of different LLMs and the impact of communication.
+
+# Related Work
+- LLMs and agents, multi-agent interaction, and ad hoc teamwork in the context of language models.
+
+# Conclusion and Future Work
+- The study highlights the potential of LLM agents in ad hoc teamwork and introduces CodeAct as an effective agent for collaboration.
+- Future work includes addressing the limitations of the study and developing robust strategies for autonomous communication.
+
+**Critique:**
+- **Limited Human Experience**: The study does not incorporate experience pools from human players, which could impact the robustness of the findings in comparison to human performance.
+- **Communication Protocols**: While the study compares scenarios with and without communication protocols, it does not delve into the autonomous decision-making ability of agents in communication.
+- **Hallucination Management**: The study identifies issues related to hallucinations in LLM agent communication, but further investigation is needed to address these challenges effectively.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.17515v1](http://arxiv.org/abs/2312.17515v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17515v1](https://browse.arxiv.org/html/2312.17515v1)       |
+| Truncated       | False       |
+| Word Count       | 7222       |

@@ -1,0 +1,56 @@
+
+---
+title: "Social-Transmotion: Promptable Human Trajectory Prediction"
+description: "Social-Transmotion model uses transformers to improve human trajectory prediction by leveraging non-verbal social cues."
+author: Saeed Saadatnejad, Yang Gao, Kaouther Messaoud, Alexandre Alahi
+date: "2023-12-26"
+image: "https://browse.arxiv.org/html/2312.16168v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.16168v1/x1.png)
+
+### Major Takeaways
+
+1. **Social-Transmotion** is a generic model that leverages transformers to handle diverse and numerous visual cues, capturing the multi-modal nature of human behavior, leading to enhanced human trajectory prediction.
+2. The model exhibits flexibility and adaptability by capturing spatiotemporal interactions between pedestrians based on the available visual cues, whether they are poses, bounding boxes, or a combination thereof.
+3. The use of 3d poses led to better improvements compared to 2d poses, and the incorporation of 2d bounding boxes alongside trajectories improved prediction accuracy.
+
+### Introduction
+Accurate human trajectory prediction is crucial for applications such as autonomous vehicles, robotics, and surveillance systems. However, existing models often fail to fully leverage the non-verbal social cues human subconsciously communicate when navigating the space.
+
+### Social-Transmotion: A Generic Model
+- **Social-Transmotion** is a generic and adaptable transformer-based model for human trajectory prediction that integrates various types and quantities of visual cues, enhancing adaptability to diverse data modalities and exploiting rich information for improved prediction performance.
+- The model incorporates two transformers: the **Cross-Modality Transformer (CMT)** handles various inputs embedding vectors, while the **Social Transformer (ST)** integrates motion tensors from the CMT across all agents to capture interactions between agents.
+
+### Problem Formulation
+The trajectory sequence of pedestrian i is denoted as 𝐱𝐢𝐓, the 3d and 2d local pose coordinates as 𝐱𝐢𝟑⁢𝐝⁢𝐏 and 𝐱𝐢𝟐⁢𝐝⁢𝐏, and the 3d and 2d bounding box coordinates as 𝐱𝐢𝟑⁢𝐝⁢𝐁 and 𝐱𝐢𝟐⁢𝐝⁢𝐁. The network input comprises these various cues, and the output contains the predicted future trajectory of the primary pedestrian.
+
+### Method
+- **Cross-Modality Transformer (CMT):** Processes various inputs embedding vectors and encodes a comprehensive and informative representation of the agent’s motion dynamics.
+- **Social Transformer (ST):** Integrates the motion tensors from the CMT across all agents to create a comprehensive representation of the collective behavior, considering the influence and interactions among the agents.
+- **Input Masking:** Ensures the generality and adaptability of the network by masking different types and quantities of visual cues during training.
+
+### Experiments
+The model was validated on multiple datasets, including JTA, JRDB, Pedestrians, and Cyclists in Road Traffic, and ETH-UCY, showcasing its superior performance compared to previous models. The study also analyzed various visual representations and identified the significance of different keypoint types and frames for optimizing human trajectory prediction.
+
+### Conclusion
+The study presents **Social-Transmotion** as a pioneering generic Transformer-based model for promptable human trajectory prediction, designed to flexibly utilize various visual cues for improved accuracy, even in the absence of certain cues. The limitations and suggestions for future research are also discussed.
+
+### Critique
+- The masking technique for handling incomplete or imperfect input is essential, but the potential impact of noisy or incorrect input on model performance needs further investigation.
+- The study primarily focused on deterministic prediction, and it could benefit from discussing the potential for probabilistic trajectory prediction.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.16168v1](http://arxiv.org/abs/2312.16168v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.16168v1](https://browse.arxiv.org/html/2312.16168v1)       |
+| Truncated       | False       |
+| Word Count       | 10818       |

@@ -1,0 +1,52 @@
+
+---
+title: "An Adaptive Framework of Geographical Group-Specific Network on O2O Recommendation"
+description: "User and service spatiotemporal info requires personalized models. GeoGrouse improves group-specific recommendation by studying user preferences."
+author: Luo Ji, Jiayu Mao, Hailong Shi, Qian Li, Yunfei Chu, Hongxia Yang
+date: "2023-12-28"
+image: "https://browse.arxiv.org/html/2312.17072v1/extracted/5320701/example_geo.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.17072v1/extracted/5320701/example_geo.png)
+
+### Summary
+
+#### Major Takeaways
+- The paper introduces GeoGrouse, a method for O2O recommendation that applies self-adaptive **user group-specification** for better personalization.
+- GeoGrouse outperforms several baselines in both **offline experiments** and **online A/B testing** in terms of key performance metrics such as click-through rate and add-to-cart rate.
+- The approach can be generalized to any grouping considerations, not limited to geographical factors.
+
+### Introduction
+- O2O platforms like Uber and Meituan are influenced by spatiotemporal factors, presenting challenges for personalized user service.
+- Existing unified model architectures for O2O recommendations may suffer performance degradation due to non-uniform data distribution across geographical areas and time periods.
+
+### Method
+- GeoGrouse is a framework that includes a shared-central network and group-specific networks tailored to specific user groups.
+- The approach utilizes reinforcement learning (RL) and implements user group-specific modules using methods such as K-Means, Prototypical Networks, and Co-Action Network.
+- The authors propose an algorithm for approximating the solution using Expectation-Maximization method (EM).
+
+### Experiment
+- **Offline Experiment**: GeoGrouse outperforms various baselines on metrics such as Area Under Curve (AUC), Normalized Discounted Cumulative Gain (NDCG), and Hit Rate.
+- **Online A/B Test**: GeoGrouse substantially improves all key performance indices (CTR, ACR, impress-UV, click-UV, cart-UV) compared to the baseline method (StEN).
+
+### Conclusion
+- The paper proposes an adaptive user group modeling method (GeoGrouse) for O2O recommendation, demonstrating its effectiveness through realistic live experiments.
+- The authors acknowledge limitations, including increased model size due to multiple group-specific modules, and suggest future directions for research.
+
+### Critique
+The paper provides a comprehensive overview of the GeoGrouse method and its experimental validations. However, the technical details in the Method section may be too complex for non-specialist readers, and the paper could benefit from a clearer presentation of these methods. Additionally, more contextualization of the significance of the findings within the broader field of O2O recommendation systems would strengthen the paper.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.17072v1](http://arxiv.org/abs/2312.17072v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17072v1](https://browse.arxiv.org/html/2312.17072v1)       |
+| Truncated       | False       |
+| Word Count       | 5196       |

@@ -1,0 +1,57 @@
+
+---
+title: "Open-Set: ID Card Presentation Attack Detection using Neural Transfer Style"
+description: "Study explores using GANs to improve ID card Presentation Attack detection, showing effectiveness in training fraud detection systems."
+author: Reuben Markham, Juan M. Espin, Mario Nieto-Hidalgo, Juan E. Tapia
+date: "2023-12-21"
+image: "https://browse.arxiv.org/html/2312.13993v1/extracted/5310724/figures/markham1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.13993v1/extracted/5310724/figures/markham1.png)
+
+### Summary of "Open-Set: ID Card Presentation Attack Detection using Neural Transfer Style"
+
+#### Key Findings
+1. The study explores the use of Generative Adversarial Networks (GANs) to generate synthetic Presentation Attack (PA) samples for Image classification to distinguish between bona fide and PA images of ID cards for digital onboarding or authentication.
+2. The results show that synthetic attack presentations are an adequate complement for additional real attack presentations, leading to an increase in performance for print attacks and a reduction in loss for screen capture attacks.
+3. Various GAN models, including pix2pix, pix2pixHD, CycleGAN, and CUT, are explored to increase the number of presentation attack samples in the training dataset. The results indicate that unsupervised methods outperformed supervised methods, with CycleGAN performing the best.
+
+#### Introduction
+- The digitalization of processes that traditionally required physical attendance and the presentation of official ID documents has increased due to technological advances and legal regulations. This has also led to an increase in cybercriminals attempting to bypass authentication systems by presenting manipulated ID documents, referred to as Presentation Attacks (PA).
+
+#### Related Work
+- The paper discusses the use of GAN models for generating synthetic PA samples and briefly presents fake ID detection systems found in recent literature.
+- Different GAN models such as pix2pix, pix2pixHD, CycleGAN, and CUT are introduced for image-to-image translation tasks.
+
+#### Methods
+- The study uses datasets of video clips containing presentations of ID documents and explores six different networks trained on different combinations of real and synthetic data. Supervised and unsupervised image-to-image translation models based on Generative Adversarial Networks (GANs) are explored to increase the number of presentation attack samples in the training dataset.
+
+#### Datasets
+- The study leverages open-source datasets of video clips containing presentations of ID documents of fake subjects to ascertain the impact of augmenting the training set with synthetic presentation attack samples instead of bona fide samples.
+
+#### Synthetic Image Quality Evaluation
+- The study evaluates the quality of synthesized PA by comparing them to sets of real PA using the Fréchet Inception Distance (FID) metric. The results indicate that the CycleGAN method for generating synthetic PA performs the best for both print and screen tasks.
+
+#### PAD Performance Experiments
+- The study runs experiments to evaluate PAD predictive performance on both print and screen tasks using different combinations of real and synthetic datasets. The results indicate that using synthetic data can lead to an increase in performance for print attacks and a reduction in loss for screen capture attacks.
+
+#### Conclusions and Potential Problems
+- The study suggests that the use of synthetic data can be an effective substitute for real data for training PAD models. However, the results vary between tasks, with unsupervised methods performing better than supervised methods. The limitations include challenges in directly comparing the results with SOTA due to variations in dataset sources and types of ID cards used.
+
+### Critique
+The article provides valuable insights into the use of synthetic data generated through GAN models for improving ID card Presentation Attack Detection systems. However, some potential problems with the study include the lack of direct comparability with SOTA results due to variations in datasets and the limited exploration of potential challenges or biases introduced by the use of synthetic data. Additionally, the study could benefit from a more in-depth discussion of the practical implications and limitations of using synthetic data for PAD systems.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.13993v1](http://arxiv.org/abs/2312.13993v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.13993v1](https://browse.arxiv.org/html/2312.13993v1)       |
+| Truncated       | True       |
+| Word Count       | 14697       |

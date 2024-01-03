@@ -1,0 +1,45 @@
+
+---
+title: "Timeliness: A New Design Metric and a New Attack Surface"
+description: "5G/6G networks rely on timely information updates, but optimizing age of information can create new vulnerabilities. This article explores threats and future directions for safeguarding networks."
+author: Priyanka Kaswan, Sennur Ulukus
+date: "2023-12-28"
+image: "https://browse.arxiv.org/html/2312.17220v1/x1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.17220v1/x1.png)
+
+### Three Major Takeaways
+1. **Timeliness Metric**: The paper introduces the concept of age of information (AoI) as a new metric to assess the freshness of updates at a receiver node, especially in time-sensitive applications such as autonomous driving and remote healthcare.
+2. **Unique Vulnerabilities**: The paper highlights how the design metric for timeliness introduces vulnerabilities in networks, with threats including timestomping attacks, jamming attacks, and the propagation of misinformation. 
+3. **Adversarial Robustness**: The article comprehensively discusses diverse threats faced by age-based systems, from densely interconnected networks to simpler network settings, and it provides insights into potential future directions to address challenges posed by more intelligent adversaries.
+
+### Attacks on Dense Gossip Networks
+- **Timestomping Attacks**
+    - Timestomping can manipulate timestamps of packets to increase their age, impacting the freshness of information in a network. The impact of timestomping attacks is analyzed in fully connected and unidirectional ring networks.
+- **Jamming Attacks**
+    - The paper examines how the sum of age of all network nodes varies in the presence of jammers. It demonstrates the robustness of ring and fully connected networks to different levels of jamming attacks.
+
+### Threats in Simpler Age-Based Systems
+- **Dynamic Jamming Game**
+    - The paper explores a dynamic jamming game between an attacker and a transmitter, analyzing the impact of jamming on the delivery of timely updates.
+- **Privacy Concerns**
+    - The trade-offs between privacy and age for specific server policies are investigated, highlighting the privacy concerns associated with sending timely updates in time-sensitive systems.
+
+### Critique
+The paper offers a comprehensive overview of threats to age-based systems and provides valuable insights into potential future directions. However, a potential problem is the focus on theoretical models and simulations without practical validation in real-world scenarios. Additionally, the paper could benefit from more discussion on mitigation strategies and countermeasures to address the identified vulnerabilities. Greater emphasis on practical implications and real-world applicability would enhance the significance of the findings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.17220v1](http://arxiv.org/abs/2312.17220v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17220v1](https://browse.arxiv.org/html/2312.17220v1)       |
+| Truncated       | False       |
+| Word Count       | 8673       |

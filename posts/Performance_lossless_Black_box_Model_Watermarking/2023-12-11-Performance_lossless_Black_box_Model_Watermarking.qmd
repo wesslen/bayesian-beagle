@@ -1,0 +1,63 @@
+
+---
+title: "Performance-lossless Black-box Model Watermarking"
+description: "Propose watermarking protocol protects model IP with branch backdoor-based method, verified with language generation task."
+author: Na Zhao, Kejiang Chen, Weiming Zhang, Nenghai Yu
+date: "2023-12-11"
+image: "https://browse.arxiv.org/html/2312.06488v1/extracted/5288023/imgs/threat.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.06488v1/extracted/5288023/imgs/threat.png)
+
+### Summary
+
+**Performance-lossless Black-box Model Watermarking**
+
+#### Major Takeaways
+1. In the era of deep learning, protecting high-value and high-cost models from intellectual property infringement is crucial. Black-box model watermarking, which is used to protect intellectual property, relies on backdoor techniques. Existing methods mainly rely on using backdoor techniques, but these tend to impact the accuracy of the models.
+2. The proposed branch backdoor-based model watermarking protocol aims to protect model intellectual property without affecting the model’s original functionality. It uses a construction based on a message authentication scheme as the branch indicator, proving the lossless performance of the protocol by reduction.
+3. The paper provides a comprehensive description of the threat model, the proposed model watermarking protocol, and analyzes potential attacks that the protocol may face. The work also includes a concrete example of the branch backdoor-based watermarking protocol for a language model and investigates possible attacks and a more secure instantiation strategy.
+
+---
+
+#### Introduction
+- The development of deep learning technology, including GPTs, GANs, and diffusion models, has led to valuable and costly models, making intellectual property protection a key concern.
+- Black-box model watermarking, used for protecting intellectual property, relies on backdoor techniques. However, existing methods may impact the accuracy of the models, especially when embedding watermarks.
+
+#### Related Work
+- Backdoor attacks, particularly training-based and training-free backdoor methods, are prevalent in the context of model security.
+- Model watermarking can be categorized into black-box and no-box watermarking, where the verifier’s knowledge and control of the model differ.
+- Backdoor techniques are commonly used for black-box model watermarking, but they can impact the functionality of the original model.
+
+#### A Performance-lossless Branch Watermarking Protocol for Model
+- The paper details a branch watermarking protocol that aims to protect model intellectual property without affecting the original model's functionality. It describes the threat model, proposed model watermarking protocol, and analyzes potential attacks.
+- The protocol includes two main modules: the model and the watermark, with several sub-modules. It introduces a formal security analysis that demonstrates the lossless performance of the model watermarking protocol.
+
+#### Performance-lossless and Secure Watermarking for Language Model
+- A concrete example of the branch backdoor-based watermarking protocol for a language model is provided, demonstrating the protocol's implementation in practice.
+- The paper further analyzes possible attacks against the watermarking protocol and proposes a more secure instantiation strategy.
+
+---
+
+### Critique
+The paper provides a comprehensive overview of the proposed branch backdoor-based model watermarking protocol and offers a detailed analysis of its implementation for language models. However, there are several potential issues and areas for improvement:
+1. **Complexity of Cryptographic Primitives:** The use of advanced cryptographic primitives like MAC and ECDSA may introduce complexity and potential implementation challenges in practical scenarios, which should be addressed.
+2. **Practical Implementation Challenges:** The paper should address the practicality and potential challenges of implementing the proposed model watermarking protocol in real-world scenarios, considering factors such as computational overhead and resource constraints.
+3. **Evaluation and Validation:** While the paper outlines the theoretical aspects of the protocol, it would benefit from empirical validation and testing in real-world settings to demonstrate its effectiveness and practical utility.
+
+Overall, the paper presents a comprehensive theoretical framework for a performance-lossless branch watermarking protocol, but it could benefit from addressing the practical implementation challenges and providing empirical evidence of its real-world performance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.06488v1](http://arxiv.org/abs/2312.06488v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.06488v1](https://browse.arxiv.org/html/2312.06488v1)       |
+| Truncated       | True       |
+| Word Count       | 16235       |

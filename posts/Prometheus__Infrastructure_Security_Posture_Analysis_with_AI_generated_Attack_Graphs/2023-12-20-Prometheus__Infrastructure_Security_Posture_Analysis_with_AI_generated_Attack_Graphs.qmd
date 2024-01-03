@@ -1,0 +1,78 @@
+
+---
+title: "Prometheus: Infrastructure Security Posture Analysis with AI-generated Attack Graphs"
+description: "TL;DR: Cybersecurity breaches demand a holistic security solution. Prometheus system assesses vulnerabilities and attack paths comprehensively."
+author: Xin Jin, Charalampos Katsis, Fan Sang, Jiahao Sun, Elisa Bertino, Ramana Rao Kompella, Ashish Kundu
+date: "2023-12-20"
+image: "https://browse.arxiv.org/html/2312.13119v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.13119v1/x1.png)
+
+### Key Findings
+
+1. **Security Posture Analysis Using Attack Graphs:**
+   - Attack graphs provide a holistic overview of potential security threats within a system.
+   - They enable simulation environments to explore hypothetical scenarios when addressing threats and provide insights to optimize resource allocation for mitigating threats.
+
+2. **Challenges in Developing Automated Security Posture Analyzer:**
+   - The vulnerabilities are typically described in natural language, requiring a systematic approach to capture the vulnerability semantics and convert them into suitable formats for further analysis.
+   - The formulation of attack paths requiring the least manual effort to connect vulnerabilities and identify the state of the system post-exploitation is challenging.
+   - Coming up with security quantification metrics that capture both the criticality of vulnerabilities and the impact on the system under analysis is complex.
+
+3. **Prometheus Framework:**
+   - Introduces an innovative fully-automated security posture analyzer designed to generate attack graphs for computing infrastructures.
+   - Adopts a comprehensive strategy for analyzing security postures in a multi-layered fashion which combines them into one unified analysis.
+   - Proposes risk scoring methods for tailored analysis of the underlying network infrastructure.
+
+---
+
+### System Overview
+
+- **Prometheus Pipeline:**
+  - Data Curation
+  - ML Processing
+  - Attack Graph Construction
+  - Risk Analysis
+
+- **Automated Attack Graph Generation:**
+  - Attack Graph Node Identification using Named Entity Recognition (NER)
+  - Attack Graph Edge Connection using Word Embeddings
+  - Attack Graph Construction and Partition
+
+- **Risk Scoring System:**
+  - Computing graph exploitability, risk, and impact scores
+  - Identifying the shortest paths and high severity attack paths
+  - Identifying the key vulnerabilities requiring immediate patching
+  - Identifying the minimum set of vulnerabilities that cover all the attack paths
+
+- **Implementation:**
+  - Comprised of five microservices: Dashboard MS, Graph MS, Machine Learning MS, Risk Scoring MS, and Database MS
+  - Utilizes Python for implementation
+
+---
+
+### Critique
+
+The paper provides a comprehensive framework for automated security posture analysis, leveraging attack graphs for computing infrastructures. However, a potential critique includes:
+
+- **Real-World Implementation:** The real-world implementation and scaling of the proposed system need to be evaluated for practical use in large-scale networks.
+- **User Interface Design:** While the dashboard interfaces are mentioned, their usability, intuitiveness, and user-friendliness should be thoroughly discussed.
+- **Scalability and Performance:** The paper should address the system's performance in handling large datasets and the scalability of the proposed solution in complex network infrastructures.
+
+Overall, the paper presents a promising framework for automated security posture analysis, but its practical implementation and scalability need further exploration.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.13119v1](http://arxiv.org/abs/2312.13119v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.13119v1](https://browse.arxiv.org/html/2312.13119v1)       |
+| Truncated       | True       |
+| Word Count       | 18677       |

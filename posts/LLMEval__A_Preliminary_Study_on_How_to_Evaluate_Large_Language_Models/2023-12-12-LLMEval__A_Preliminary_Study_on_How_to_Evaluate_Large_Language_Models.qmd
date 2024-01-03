@@ -1,0 +1,60 @@
+
+---
+title: "LLMEval: A Preliminary Study on How to Evaluate Large Language Models"
+description: "This paper examines Large Language Model (LLM) evaluation methods, proposes a new dataset, and provides insights."
+author: Yue Zhang, Ming Zhang, Haipeng Yuan, Shichun Liu, Yongyao Shi, Tao Gui, Qi Zhang, Xuanjing Huang
+date: "2023-12-12"
+image: "https://browse.arxiv.org/html/2312.07398v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.07398v1/x1.png)
+
+# LLMEval: A Preliminary Study on How to Evaluate Large Language Models
+
+## Major Takeaways
+1. The evaluation of Large Language Models (LLMs) has become a prominent area of research, with a focus on determining how to assess their capabilities and limitations.
+2. Existing research primarily addresses "what" tasks to assign and "where" to evaluate LLMs, but less attention has been given to determining "how" to evaluate, including scoring methods, ranking systems, and type of annotators to use.
+3. The study analyzes evaluation methods by comparing various criteria, different types of annotators, rating methods, and ranking approaches. It also introduces a new dataset, LLMEval, and provides insights for future LLM evaluation.
+
+## Introduction
+- Introduction to the emergence of LLMs as a significant area of research and the need to assess their performance and limitations.
+- Existing research focuses on "what" tasks and "where" to evaluate LLMs, but little has been discussed about "how" to evaluate, including scoring methods, ranking systems, and annotator types.
+- Study's emphasis on evaluating LLMs using various criteria, different types of annotators, rating methods, and ranking approaches, leading to the introduction of the LLMEval dataset.
+
+## Design
+- Criteria: The paper introduced new criteria for evaluating LLMs, including accuracy, fluency, informativeness, logical coherence, and harmlessness.
+- Annotation Method: The study employed star scoring for onsite annotators, pairwise comparison for crowd-sourcing and public annotators, and GPT-4 for automatic evaluation. It found onsite evaluations to exhibit superior accuracy and consistency.
+- Ranking System: The study compared the Elo rating system and the Points scoring system for evaluating LLMs, noting poor stability with the Elo rating system.
+
+## Experiments
+- Dataset: The study utilized two datasets, LLMEval-1 and LLMEval-2, to evaluate LLMs across various tasks and subjects.
+- Metrics: Accuracy and consistency were used to assess the annotation methods, with a focus on alignment between manual and automated evaluation.
+
+## Results
+- Comparison of Criteria: Findings showed that accuracy and informativeness are the most distinguishing criteria, and that conversation tasks best differentiate model capabilities.
+- Comparison of Annotation Methods: Onsite annotators demonstrated the best quality in terms of accuracy and consistency, while public annotators exhibited the lowest level of consistency and accuracy.
+- Comparison of Ranking Systems: The Elo rating system exhibited significant instability and sequence dependence, and was sensitive to the order of matches.
+
+## Discussion
+- The study emphasizes the need to prioritize informativeness and accuracy in future evaluations, considers onsite evaluations as optimal, and suggests automated evaluation as a complementary approach. It also highlights the challenges in evaluating LLMs in subjective questions.
+
+## Appendix
+- The study provides detailed implementation, including dataset specifics, mathematical proof of Elo rating instability, details of LLMEval-1 and LLMEval-2, and the implementation of scoring and ranking systems.
+
+## Critique
+The paper provides a comprehensive analysis of LLM evaluation methods, but it lacks a discussion on potential biases in the dataset, such as language-specific nuances or biases introduced by the annotators. Additionally, the paper could benefit from a more in-depth comparison to existing evaluation methods and a broader discussion of the limitations of the proposed evaluation framework.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.07398v1](http://arxiv.org/abs/2312.07398v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.07398v1](https://browse.arxiv.org/html/2312.07398v1)       |
+| Truncated       | False       |
+| Word Count       | 12912       |

@@ -1,0 +1,68 @@
+
+---
+title: "Learning to Generate Text in Arbitrary Writing Styles"
+description: "Text generation to mimic specific author styles using contrastively-trained representations and discriminative control is effective and versatile."
+author: Aleem Khan, Andrew Wang, Sophia Hager, Nicholas Andrews
+date: "2023-12-28"
+image: "https://browse.arxiv.org/html/2312.17242v1/x1.png"
+categories: ['hci', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.17242v1/x1.png)
+
+# Learning to Generate Text in Arbitrary Writing Styles
+
+## Major Findings
+- **Instruction-tuned language models** struggle to reproduce author-specific style in a few-shot setting, even with recent large LMs such as GPT-3.5.
+- A proposed approach using **contrastively-trained representations** and a combination of generative re-scoring and discriminative control can effectively generate text in an author-specific style in various conditions, including unconditional generation and style transfer.
+- The proposed style transfer approach can be adapted to serve as an effective **author anonymization** technique, defeating authorship attribution while preserving meaning.
+
+## Introduction
+- The paper discusses the problem of generating text in the style of an arbitrary author based on a small writing sample, emphasizing the difficulty of this task due to the sparse signal of stylometric features.
+
+## Preliminaries
+- The goal is to produce text in a particular target style while satisfying other criteria, such as diverse outputs and meaning preservation.
+- The proposed approach involves future regressors and energy-based models for non-autoregressive generation.
+
+## Guiding generations towards a target style representation
+- Using a **regression model** to guide a language model to produce text in a target style.
+- The resulting author-specific LM can be incorporated in an **energy-based model** for non-autoregressive generation.
+
+## Style Control
+- The proposed decoding strategy (EBM) performs competitively with large instruction-tuned LMs, outperforming in-context learning.
+- Interpolating between two target author style vectors yields interpretable results, indicating that control vectors capture intuitive stylistic features and can successfully reproduce those features in generated text.
+- Samples from the proposed approach circumvent machine-generated text detectors at a higher rate and address concerns with producing more in-domain detection data.
+
+## Style Transfer
+- The proposed approach achieves style accuracy comparable to large LMs while requiring only a fraction of the number of parameters.
+- The trade-off between stylistic accuracy and content preservation is observed.
+
+## Anonymization
+- The proposed style transfer approach succeeds in reducing the detection rate through style transfer, serving as an effective author anonymization technique.
+
+## Detection of Generated Text
+- Detection of LM generated text becomes more tractable with basic classification approaches when more in-domain data is available.
+
+## Related Work
+- The paper discusses the limitations of automatic evaluation metrics and the use of discriminative models to guide generation.
+
+## Conclusion
+The paper addresses the potential applications and broader impact of style-controlled text generation, acknowledging both positive and potential misuse concerns regarding machine-text detection.
+
+## Critique
+- The use of automatic metrics for evaluation may not fully capture the nuanced aspects of author-specific style and meaning preservation.
+- The heavy reliance on large corpora of social media data for training style representations might introduce biases and privacy concerns.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2312.17242v1](http://arxiv.org/abs/2312.17242v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17242v1](https://browse.arxiv.org/html/2312.17242v1)       |
+| Truncated       | False       |
+| Word Count       | 12839       |

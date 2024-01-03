@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Weisong Sun, Chunrong Fang, Yudu You, Yuchen Chen, Yi Liu, Chong Wang, Jian Zhang, Quanjun Zhang, Hanwei Qian, Wei Zhao, Yang Liu, Zhenyu Chen">
+<meta name="dcterms.date" content="2023-12-26">
+<meta name="description" content="PromptCS improves code summarization using continuous prompts for LLMs, outperforming other schemes with faster training and better summaries.">
+
+<title>Bayesian beagle - A Prompt Learning Framework for Source Code Summarization</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bayesian beagle - A Prompt Learning Framework for Source Code Summarization">
+<meta property="og:description" content="PromptCS improves code summarization using continuous prompts for LLMs, outperforming other schemes with faster training and better summaries.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.16066v1/x1.png">
+<meta property="og:site-name" content="Bayesian beagle">
+<meta name="twitter:title" content="Bayesian beagle - A Prompt Learning Framework for Source Code Summarization">
+<meta name="twitter:description" content="PromptCS improves code summarization using continuous prompts for LLMs, outperforming other schemes with faster training and better summaries.">
+<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.16066v1/x1.png">
+<meta name="twitter:creator" content="@ryanwesslen">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bayesian beagle</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">Bayesian beagle</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/wesslen/bayesian-beagle" rel="" target=""><i class="bi bi-github" role="img" aria-label="github">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">A Prompt Learning Framework for Source Code Summarization</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">prompt-engineering</div>
+    <div class="quarto-category">programming</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    PromptCS improves code summarization using continuous prompts for LLMs, outperforming other schemes with faster training and better summaries.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Weisong Sun, Chunrong Fang, Yudu You, Yuchen Chen, Yi Liu, Chong Wang, Jian Zhang, Quanjun Zhang, Hanwei Qian, Wei Zhao, Yang Liu, Zhenyu Chen </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 26, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="https://browse.arxiv.org/html/2312.16066v1/x1.png" class="img-fluid"></p>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
+<ol type="1">
+<li><strong>Effectiveness of PromptCS</strong>: PromptCS significantly outperforms instruction prompting schemes (including zero-shot learning and few-shot learning) on all four widely used metrics: BLEU, METEOR, ROUGH-L, and SentenceBERT. The framework is also comparable to the task-oriented fine-tuning scheme.</li>
+<li><strong>Efficiency and Training Cost</strong>: PromptCS demonstrates training efficiency faster than the task-oriented fine-tuning scheme, with a more pronounced advantage on larger Language Model Models (LLMs).</li>
+<li><strong>Generalization Ability</strong>: PromptCS showcases generalization abilities across multiple programming languages, showing consistent efficacy in JavaScript and Python datasets.</li>
+</ol>
+</section>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<section id="source-code-summarization" class="level4">
+<h4 class="anchored" data-anchor-id="source-code-summarization">Source Code Summarization</h4>
+<ul>
+<li>Source code summarization involves automatically generating natural language summaries for code snippets. It is crucial for program comprehension and software maintenance.</li>
+<li>Large Language Models (LLMs), such as Codex, StarCoder, and CodeGen, have been increasingly applied in code summarization tasks.</li>
+</ul>
+</section>
+<section id="large-language-model" class="level4">
+<h4 class="anchored" data-anchor-id="large-language-model">Large Language Model</h4>
+<ul>
+<li>Scaling pre-trained language models (PLMs) including large language models (LLMs) can enhance model capacity for solving downstream tasks.</li>
+</ul>
+</section>
+</section>
+<section id="promptcs-a-novel-framework-for-code-summarization" class="level3">
+<h3 class="anchored" data-anchor-id="promptcs-a-novel-framework-for-code-summarization">PromptCS: A Novel Framework for Code Summarization</h3>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
+<p>Source code comments play a critical role in facilitating program comprehension and software maintenance. However, existing research demonstrates that lack of high-quality code comments is a common problem in the software industry. PromptCS is a novel prompt learning framework for code summarization.</p>
+</section>
+<section id="methodology" class="level4">
+<h4 class="anchored" data-anchor-id="methodology">Methodology</h4>
+<ul>
+<li><strong>Code Embedding Generation</strong>: Utilizes the LLM’s tokenizer and input embedding layer to encode code snippets.</li>
+<li><strong>Prompt Embedding Generation</strong>: Utilizes a Deep Learning (DL) based prompt encoder, taking a pseudo prompt as input and producing a prompt embedding.</li>
+<li><strong>Fusion Embedding Generation</strong>: Concatenates prompt and code embeddings to produce fusion embeddings.</li>
+<li><strong>Model Training</strong>: Trains the prompt agent under a loss function comparing predicted and ground-truth summaries.</li>
+</ul>
+</section>
+</section>
+<section id="evaluation-and-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation-and-analysis">Evaluation and Analysis</h3>
+<section id="rq1-effectiveness-of-promptcs" class="level4">
+<h4 class="anchored" data-anchor-id="rq1-effectiveness-of-promptcs">RQ1: Effectiveness of PromptCS</h4>
+<ul>
+<li>PromptCS significantly outperforms instruction prompting schemes and is comparable to task-oriented fine-tuning in terms of metrics such as BLEU, METEOR, ROUGE-L, and SentenceBERT.</li>
+<li>The performance of PromptCS is better or comparable to task-oriented fine-tuning and outperforms instruction prompting schemes on some LLMs.</li>
+</ul>
+</section>
+<section id="rq2-influence-of-key-configurations-on-promptcs" class="level4">
+<h4 class="anchored" data-anchor-id="rq2-influence-of-key-configurations-on-promptcs">RQ2: Influence of Key Configurations on PromptCS</h4>
+<ul>
+<li>Different combinations of prompt length and concatenation mode affect the effectiveness of PromptCS, with varying effects observed.</li>
+</ul>
+</section>
+<section id="rq3-influence-of-the-network-architecture-used-in-the-prompt-encoder-on-promptcs" class="level4">
+<h4 class="anchored" data-anchor-id="rq3-influence-of-the-network-architecture-used-in-the-prompt-encoder-on-promptcs">RQ3: Influence of the Network Architecture used in the Prompt Encoder on PromptCS</h4>
+<ul>
+<li>Building the prompt encoder on a Transformer enhances performance improvements to PromptCS in some cases and may lead to performance degradation in others.</li>
+</ul>
+</section>
+<section id="rq4-influence-of-training-data-size-on-promptcs" class="level4">
+<h4 class="anchored" data-anchor-id="rq4-influence-of-training-data-size-on-promptcs">RQ4: Influence of Training Data Size on PromptCS</h4>
+<ul>
+<li>PromptCS’s performance improves with an increase in the size of the training set, but the increase is not significant. The framework demonstrates superior adaptability and generalization capabilities even on small-scale datasets.</li>
+</ul>
+</section>
+<section id="rq5-effectiveness-in-other-programming-languages" class="level4">
+<h4 class="anchored" data-anchor-id="rq5-effectiveness-in-other-programming-languages">RQ5: Effectiveness in Other Programming Languages</h4>
+<ul>
+<li>PromptCS showcases generalization abilities across multiple programming languages, demonstrating consistent efficacy in JavaScript and Python datasets.</li>
+</ul>
+</section>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<p>While the study presents significant findings on the effectiveness of PromptCS for source code summarization, several potential limitations need to be considered: - The evaluation metrics for code summarization may not capture all nuances of code understanding and comprehension needed in practical development scenarios. - The impact of specific programming language syntax and conventions on the performance of PromptCS needs further investigation. - As the study heavily relies on large language models, it raises questions around ethical implications, interpretability, and potential biases in the code summarization process.</p>
+<p>Overall, the paper provides valuable insights into the effectiveness of PromptCS for source code summarization and offers important contributions to the field. However, to ensure the robustness and applicability of PromptCS in various software engineering scenarios, further research and thorough validation are necessary.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-03</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2312.16066v1">http://arxiv.org/abs/2312.16066v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2312.16066v1">https://browse.arxiv.org/html/2312.16066v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>16076</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wesslen/bayesian-beagle/edit/main/posts/A_Prompt_Learning_Framework_for_Source_Code_Summarization/2023-12-26-A_Prompt_Learning_Framework_for_Source_Code_Summarization.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>

@@ -1,0 +1,65 @@
+
+---
+title: "LaFFi: Leveraging Hybrid Natural Language Feedback for Fine-tuning Language Models"
+description: "LLMs trained with LaFFi reflect on the feedback they'll receive, improving question-answering accuracy. Experiments show the potential of natural language feedback."
+author: Qianxi Li, Yingyue Cao, Jikun Kang, Tianpei Yang, Xi Chen, Jun Jin, Matthew E. Taylor
+date: "2023-12-31"
+image: "https://browse.arxiv.org/html/2401.00907v1/x1.png"
+categories: ['social-sciences', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.00907v1/x1.png)
+
+### Major Takeaways
+
+1. **LaFFi** framework introduces a novel approach to fine-tune Large Language Models (LLMs) by integrating **natural language feedback** within the Supervised Fine-Tuning (SFT) paradigm, significantly improving accuracy in in-domain question-answering tasks.
+
+2. The study presents a fine-tuning framework consisting of four key stages: **Answer prediction, Feedback Annotation, Supervised Feedback Prediction, and LoRA fine-tuning** to efficiently leverage natural language feedback and improve LLM performance.
+
+3. LaFFi surpasses non-fine-tuned models and SFT, particularly in low-data scenarios, demonstrating substantial performance improvements and capturing both **global and local token dependencies**, enhancing few-shot learning.
+
+### Abstract
+
+- Fine-tuning of Large Language Models (LLMs) via Supervised Fine-Tuning (SFT) often results in simple mistakes and hallucinations on reasoning tasks, especially in the absence of external feedback. This paper introduces **LaFFi**, an alternative to SFT that integrates natural language feedback to improve the accuracy of LLMs in question-answering tasks, even with limited datasets.
+
+### Introduction
+
+- Large language models (LLMs) have become widely adopted due to their effectiveness in natural language processing tasks. The **transformer architecture** has facilitated a wide range of applications, with LLMs being fine-tuned on specific downstream tasks to tailor them to user requirements.
+
+### Methodology
+
+- The LaFFi framework involves **four key steps**: Answer prediction, Feedback Annotation, Supervised Feedback Prediction, and LoRA Fine-tuning, to enable LLMs to efficiently predict and learn from natural language feedback.
+
+### Experiments
+
+- LaFFi outperforms both the non-fine-tuned models and SFT, demonstrating substantial performance improvements and capturing **global and local token dependencies**, enhancing few-shot learning.
+
+### Analysis
+
+- Visualizations indicate LaFFi's ability to capture **global and local token dependencies**, potentially improving performance by refining LLM's capabilities in capturing finer token-wise dependencies within the attention blocks.
+
+### Related Work
+
+- Several relevant works in leveraging human natural language feedback for fine-tuning LLMs are listed, demonstrating the growing interest in incorporating natural language feedback to enhance LLM performance.
+
+### Conclusion
+
+- LaFFi delivers substantial performance improvements, surpassing non-fine-tuned models and SFT, especially in low-data scenarios. The study provides insights into the influence of human feedback on Large Language Models and calls for further research in this area.
+
+### Critique
+
+The study's reliance on the SQuAD 2.0 dataset may limit its generalizability, and the resource-intensive nature of human annotation presents a limitation in scalability. Additionally, future research should consider diversifying datasets and evaluating out-of-domain tasks to further validate LaFFi's efficacy.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-03       |
+| Abstract | [http://arxiv.org/abs/2401.00907v1](http://arxiv.org/abs/2401.00907v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.00907v1](https://browse.arxiv.org/html/2401.00907v1)       |
+| Truncated       | False       |
+| Word Count       | 4606       |

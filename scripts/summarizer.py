@@ -263,7 +263,7 @@ def summarize(
 
             # count words, if longer than 15,000 then truncate
             word_count = count_token(text)
-            THRESHOLD = 15000
+            THRESHOLD = 13500
             if word_count > THRESHOLD:
                 logging.info(
                     f"Warning: HTML content for {arxiv_id} exceeds {THRESHOLD} tokens. Truncating."

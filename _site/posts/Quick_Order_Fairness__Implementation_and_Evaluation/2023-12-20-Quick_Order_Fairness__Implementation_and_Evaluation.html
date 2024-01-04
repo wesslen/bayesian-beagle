@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tianyi Chen, Qidi Wang, Zhen Dong, Liwei Shen, Xin Peng">
-<meta name="dcterms.date" content="2023-12-13">
-<meta name="description" content="Recent work on program synthesis uses deep neural networks and language models to generate programs, addressing challenges with partially observed environments.">
+<meta name="author" content="Christian Cachin, Jovana Micic">
+<meta name="dcterms.date" content="2023-12-20">
+<meta name="description" content="Decentralized finance tackles trust issues using blockchain but faces front-running vulnerabilities. QOF protocol mitigates attacks but adds complexity.">
 
-<title>Bayesian beagle - Enhancing Robot Program Synthesis Through Environmental Context</title>
+<title>Bayesian beagle - Quick Order Fairness: Implementation and Evaluation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,9 +65,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Bayesian beagle - Enhancing Robot Program Synthesis Through Environmental Context">
-<meta property="og:description" content="Recent work on program synthesis uses deep neural networks and language models to generate programs, addressing challenges with partially observed environments.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2312.08250v1/x1.png">
+<meta property="og:title" content="Bayesian beagle - Quick Order Fairness: Implementation and Evaluation">
+<meta property="og:description" content="Decentralized finance tackles trust issues using blockchain but faces front-running vulnerabilities. QOF protocol mitigates attacks but adds complexity.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.13107v1/extracted/5308057/imgs/fig-consensus-1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
 
@@ -117,15 +117,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Enhancing Robot Program Synthesis Through Environmental Context</h1>
+<h1 class="title">Quick Order Fairness: Implementation and Evaluation</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">robustness</div>
+    <div class="quarto-category">security</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Recent work on program synthesis uses deep neural networks and language models to generate programs, addressing challenges with partially observed environments.
+    Decentralized finance tackles trust issues using blockchain but faces front-running vulnerabilities. QOF protocol mitigates attacks but adds complexity.
   </div>
 </div>
 
@@ -135,14 +135,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Tianyi Chen, Qidi Wang, Zhen Dong, Liwei Shen, Xin Peng </p>
+             <p>Christian Cachin, Jovana Micic </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 13, 2023</p>
+      <p class="date">December 20, 2023</p>
     </div>
   </div>
   
@@ -152,53 +152,26 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><img src="https://browse.arxiv.org/html/2312.08250v1/x1.png" class="img-fluid"></p>
-<section id="summary-of-enhancing-robot-program-synthesis-through-environmental-context" class="level3">
-<h3 class="anchored" data-anchor-id="summary-of-enhancing-robot-program-synthesis-through-environmental-context">Summary of “Enhancing Robot Program Synthesis Through Environmental Context”</h3>
-<section id="major-takeaways" class="level4">
-<h4 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h4>
+<p><img src="https://browse.arxiv.org/html/2312.13107v1/extracted/5308057/imgs/fig-consensus-1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p><strong>Title:</strong> Quick Order Fairness: Implementation and Evaluation</p>
+<p><strong>Authors:</strong> [Anonymous]</p>
+<p>This paper revisits the Quick Order-Fair Atomic Broadcast (QOF) protocol and describes a modular implementation using a generic consensus component. An empirical evaluation is performed to compare the performance of QOF to a consensus protocol without fairness. The paper also discusses the deployment of the QOF protocol into practical systems, offering two integration approaches. The authors evaluate the efficacy of the QOF protocol in terms of scalability, throughput, and latency. The benchmark results indicate that QOF reduces throughput by at most 5% and increases latency by about 50ms with four servers, reflecting the impact of the algorithm’s increased complexity in an ideal, emulated network.</p>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
 <ol type="1">
-<li><strong>EVAPS Outperforms Other Methods:</strong>
-<ul>
-<li>The Environmental-context Validated lAtent Program Synthesis framework (EVAPS) outperforms other methods in robot program synthesis across various metrics, showcasing its superior capability in resolving semantic conflicts and achieving greater generalization ability.</li>
-</ul></li>
-<li><strong>Partial Observations and Code Symbol Alignment Enhance Program Synthesis:</strong>
-<ul>
-<li>The incorporation of both partial environmental observations and code symbol alignment modules significantly improves the joint semantic and syntax modeling ability, leading to enhanced performance in program synthesis.</li>
-</ul></li>
-<li><strong>EVAPS Demonstrates Robustness to Noise and Complexity:</strong>
-<ul>
-<li>EVAPS exhibits robustness when encountering noise and demonstrates better performance in handling complex tasks compared to other methods, showcasing its potential for real-world applications in robot program synthesis.</li>
-</ul></li>
+<li><p><strong>Decentralized Finance and Vulnerabilities:</strong> The paper addresses the vulnerabilities in decentralized finance, notably front-running by malicious actors, and presents the QOF protocol as a solution to prevent such attacks.</p></li>
+<li><p><strong>QOF Protocol Implementation:</strong> The paper provides a modular implementation of the QOF protocol, including components such as Byzantine consistent broadcast, validated Byzantine consensus, and a graph module. This implementation is aimed at validating the theoretical base of the proposed solution.</p></li>
+<li><p><strong>Empirical Evaluation:</strong> The paper conducts an empirical evaluation of the QOF protocol, showcasing its performance in terms of scalability, throughput, and latency. It compares QOF to a consensus protocol without fairness and also discusses the impact of transaction payload size and network delay on the protocol’s performance.</p></li>
 </ol>
 </section>
-<section id="introduction" class="level4">
-<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
-<p>Program synthesis aims to automatically generate executable programs based on given specifications, often using input/output examples. Robot program synthesis, in particular, is challenging due to limited environmental observations, making it difficult to assess the global impact of the generated program tokens.</p>
-</section>
-<section id="problem-formulation" class="level4">
-<h4 class="anchored" data-anchor-id="problem-formulation">Problem Formulation</h4>
-<p>In the VizDoom domain, a robot operates in a 3D world with a DSL comprising action primitives, perception primitives, and control flows. The challenge arises from the limited and partial observations available to the robot, impacting its ability to synthesize effective programs.</p>
-</section>
-<section id="methodology" class="level4">
-<h4 class="anchored" data-anchor-id="methodology">Methodology</h4>
-<p>The Environmental-context Validated lAtent Program Synthesis framework (EVAPS) leverages partial environmental observations and code symbol alignment to rectify potentially erroneous program segments in robot programming. It involves the use of convolutional network layers to capture hidden environment representations and a graph attention mechanism to align code symbols with partial observations.</p>
-</section>
-<section id="experiment" class="level4">
-<h4 class="anchored" data-anchor-id="experiment">Experiment</h4>
-<ul>
-<li><p><strong>Experimental Setup</strong>: The framework is evaluated in the partially observed VizDoom domain using a dataset of distinct samples. The performance is assessed using metrics such as Exact Match, Semantic Match, and Generalization Match, across different levels of task complexity and noise levels.</p></li>
-<li><p><strong>Results</strong>: EVAPS outperforms other methods, showcasing its superior capability in resolving semantic conflicts and achieving greater generalization ability. It also demonstrates robustness when encountering noise and handles complex tasks efficiently.</p></li>
-</ul>
-</section>
-<section id="related-work" class="level4">
-<h4 class="anchored" data-anchor-id="related-work">Related Work</h4>
-<p>The paper provides a thorough discussion of related work, emphasizing the significance of incorporating partial environmental observations into program synthesis, especially in the context of robot programming. It highlights the distinct advantages of EVAPS over existing approaches and its potential for practical applications.</p>
-</section>
-</section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper does an excellent job of introducing a novel approach for enhancing robot program synthesis through the incorporation of partial environmental observations. However, it could benefit from more in-depth analysis of the practical challenges and limitations of implementing EVAPS in real-world robot programming scenarios. Additionally, the comparison with existing methods could be further strengthened with a broader range of benchmark datasets and real-world robot programming scenarios. Finally, the experiment section would benefit from a more detailed exploration of the computational requirements and scalability of the proposed approach.</p>
+<section id="evaluation-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation-and-critique">Evaluation and Critique</h3>
+<p><strong>Strengths:</strong> - The paper provides a comprehensive description of the QOF protocol’s implementation, including its components and integration into real-world systems. - The empirical evaluation offers valuable insights into the performance of the QOF protocol, especially its scalability, throughput, and latency. - The comparison with other protocols provides context and helps contextualize the performance of QOF in relation to existing solutions.</p>
+<p><strong>Weaknesses:</strong> - The paper lacks transparency regarding the authors’ identities, affiliations, and acknowledgments, which could affect its credibility. - The paper’s evaluation could benefit from a more diverse benchmark setup, including real-world network environments and various transaction types, to provide a more comprehensive analysis of the QOF protocol’s performance.</p>
+<p>Overall, while the paper makes significant contributions to the understanding and practical implementation of the QOF protocol, addressing the identified weaknesses could enhance its credibility and applicability in real-world scenarios.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -214,19 +187,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2312.08250v1">http://arxiv.org/abs/2312.08250v1</a></td>
+<td><a href="http://arxiv.org/abs/2312.13107v1">http://arxiv.org/abs/2312.13107v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.08250v1">https://browse.arxiv.org/html/2312.08250v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2312.13107v1">https://browse.arxiv.org/html/2312.13107v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
-<td>False</td>
+<td>True</td>
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>12023</td>
+<td>13817</td>
 </tr>
 </tbody>
 </table>
@@ -472,4 +445,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wesslen/bayesian-beagle/edit/main/posts/Enhancing_Robot_Program_Synthesis_Through_Environmental_Context/2023-12-13-Enhancing_Robot_Program_Synthesis_Through_Environmental_Context.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wesslen/bayesian-beagle/edit/main/posts/Quick_Order_Fairness__Implementation_and_Evaluation/2023-12-20-Quick_Order_Fairness__Implementation_and_Evaluation.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>

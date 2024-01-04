@@ -116,6 +116,7 @@ def extract_text_from_html(html_content: str) -> str:
             ".package-alerts",
             ".section", # remove license;arxiv number header
             ".ltx_table", # remove tables
+            ".ltx_tabular",
             ".ltx_listing",
             ".ltx_picture",
             ".ltx_equation", # remove math

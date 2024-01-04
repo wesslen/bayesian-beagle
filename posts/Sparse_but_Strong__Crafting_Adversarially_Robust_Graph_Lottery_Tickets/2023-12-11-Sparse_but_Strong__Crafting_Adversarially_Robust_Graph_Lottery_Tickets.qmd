@@ -1,0 +1,48 @@
+
+---
+title: "Sparse but Strong: Crafting Adversarially Robust Graph Lottery Tickets"
+description: "Graph Lottery Tickets (GLTs) reduce latency and footprint, but are vulnerable to structure attacks. A framework called ARGS enhances robustness."
+author: Subhajit Dutta Chowdhury, Zhiyu Ni, Qingyuan Peng, Souvik Kundu, Pierluigi Nuzzo
+date: "2023-12-11"
+image: "https://browse.arxiv.org/html/2312.06568v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.06568v1/x1.png)
+
+### Summary
+
+#### Main Findings
+- **Graph Lottery Tickets (GLTs)**, which pair a sparse adjacency matrix with a sparse graph neural network (GNN), perform poorly against adversarial structure perturbations.
+- The proposed **Adversarially Robust Graph Sparsification (ARGS)** framework improves the robustness of GLTs by jointly pruning the adjacency matrix and GNN model weights.
+- ARGS-generated Adversarially Robust Graph Lottery Tickets (ARGLTs) achieve high sparsity while maintaining competitive performance against various poisoning structure attacks.
+
+#### Introduction
+- Graph neural networks (GNNs) are effective but suffer from high training cost, latency, and memory consumption on large, densely connected graphs.
+- Recent studies reveal that GNNs are vulnerable to **adversarial attacks** that perturb the graph structure or node features.
+
+#### Methodology
+- **Unified Graph Sparsification (UGS)** has been used to create GLTs, but UGS-identified GLTs are vulnerable to adversarial perturbations. 
+- **ARGS** introduces a novel loss function capturing the graph homophily property and information associated with train and test nodes to identify ARGLTs. 
+- The loss function removes adversarial and less-important non-adversarial edges from the graph and weights of the GNN.
+- Experiments on various GNN architectures and datasets attacked by **poisoning attacks** demonstrate that ARGS can significantly improve the robustness of GLTs under various poisoning attacks, achieving high sparsity without compromising performance.
+
+#### Evaluation
+- Evaluation on various benchmark datasets demonstrates that ARGLTs identified by ARGS achieve competitive performance while exhibiting high levels of sparsity under different poisoning attacks.
+
+### Critique
+The paper provides a comprehensive and thorough investigation into the vulnerability of GLTs to adversarial attacks and proposes a new framework, ARGS, to improve the robustness of GLTs. However, one potential concern is the absence of a comparison with other state-of-the-art adversarial defense techniques. Additionally, the paper could benefit from a more detailed discussion of the computational and memory requirements of ARGS, especially when applied to larger graph datasets. More details on the impact of hyperparameters on ARGS performance would further enhance the paper's contributions.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-04       |
+| Abstract | [http://arxiv.org/abs/2312.06568v1](http://arxiv.org/abs/2312.06568v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.06568v1](https://browse.arxiv.org/html/2312.06568v1)       |
+| Truncated       | False       |
+| Word Count       | 12768       |

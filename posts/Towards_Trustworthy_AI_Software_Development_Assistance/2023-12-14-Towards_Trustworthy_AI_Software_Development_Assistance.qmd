@@ -1,0 +1,59 @@
+
+---
+title: "Towards Trustworthy AI Software Development Assistance"
+description: "A new architecture aims to improve AI software development assistants' reliability and code quality. It includes a foundational LLM and a knowledge graph."
+author: Daniel Maninger, Krishna Narasimhan, Mira Mezini
+date: "2023-12-14"
+image: "https://browse.arxiv.org/html/2312.09126v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.09126v1/x1.png)
+
+### Major Takeaways
+1. **Current software development assistants have reliability issues** that lead to the production of incorrect, unsafe, or low-quality code.
+2. The proposed solution is a **holistic architecture for constructing, training, and using trustworthy AI software development assistants** which involves a foundational LLM trained on representative datasets, graph-based code representations, a knowledge graph, and a modular framework for constrained decoding, among other components.
+3. The paper outlines **five key challenges** in developing trustworthy AI software development assistants and proposes **five corresponding solutions** to address these challenges.
+
+### Introduction
+- AI software development assistants are seen as crucial in the face of the increasing digitalization of society and a scarcity of IT talent.
+- **Existing LLMs** have shown promise but have exhibited issues such as producing erroneous code suggestions and generating code with security vulnerabilities.
+
+### Challenges and Solutions
+1. **Representative Datasets**
+   - Addressing the lack of high-quality datasets by compiling and curating a comprehensive dataset reflecting real-world coding patterns and software structures.
+   - Annotating the dataset with qualitative metrics and using various techniques to ensure high-quality training code.
+
+2. **Capturing Code Structure and Semantics**
+   - Developing an analysis technique to assess how well models capture a program's semantics.
+   - Exploring different approaches to represent code in a graph-based format for better semantic comprehension.
+
+3. **Code Quality**
+   - Proposing an approach based on reinforcement learning to fine-tune code models for multiple quality criteria using utility functions and policy gradients.
+   - Considering critics for general best practices, security aspects, and readability metrics.
+
+4. **Explainability**
+   - Investigating the integration of code knowledge graphs into the AI SD assistant to provide accurate and appropriate explanations based on background knowledge.
+
+5. **Controlled Code Generation**
+   - Equipping the assistant with constrained decoding to provide guarantees for the generated code's correctness, security, and quality. It is a modular framework allowing the user to select rulesets appropriate for the programming language and domain.
+
+### Future Plans
+- The paper outlines that each idea will be pursued by different subgroups of researchers, leading to multiple papers and forming the groundwork for creating the described programming assistant.
+
+### Critique
+The paper offers a comprehensive and ambitious vision for developing trustworthy AI software development assistants. However, it lacks empirical evidence or experimentation to validate the proposed solutions. Implementing and evaluating the proposed solutions will be crucial to assess their effectiveness in addressing the identified challenges. Additionally, the paper does not address potential ethical considerations or societal implications of deploying AI software development assistants.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-04       |
+| Abstract | [http://arxiv.org/abs/2312.09126v1](http://arxiv.org/abs/2312.09126v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.09126v1](https://browse.arxiv.org/html/2312.09126v1)       |
+| Truncated       | False       |
+| Word Count       | 6324       |

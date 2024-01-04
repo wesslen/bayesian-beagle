@@ -8,7 +8,7 @@
 
 <meta name="author" content="Tianyi Chen, Qidi Wang, Zhen Dong, Liwei Shen, Xin Peng">
 <meta name="dcterms.date" content="2023-12-13">
-<meta name="description" content="Deep neural models can efficiently synthesize programs, even in partially observed environments, improving generalization and robustness.">
+<meta name="description" content="TL;DR: Framework uses neural models to rectify program errors with partially observed environments, improving program synthesis in robot programming.">
 
 <title>Bayesian beagle - Enhancing Robot Program Synthesis Through Environmental Context</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Enhancing Robot Program Synthesis Through Environmental Context">
-<meta property="og:description" content="Deep neural models can efficiently synthesize programs, even in partially observed environments, improving generalization and robustness.">
+<meta property="og:description" content="TL;DR: Framework uses neural models to rectify program errors with partially observed environments, improving program synthesis in robot programming.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.08250v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -119,14 +119,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Enhancing Robot Program Synthesis Through Environmental Context</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">programming</div>
     <div class="quarto-category">robustness</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Deep neural models can efficiently synthesize programs, even in partially observed environments, improving generalization and robustness.
+    TL;DR: Framework uses neural models to rectify program errors with partially observed environments, improving program synthesis in robot programming.
   </div>
 </div>
 
@@ -154,11 +153,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.08250v1/x1.png" class="img-fluid"></p>
-<p>ve, whereas EVAPS takes into account both environmental and syntactic information flow to improve the generalization capability. ii) SED corrects a program by adjusting the tokens that deviate from the expected execution results, whereas EVAPS rectifies a program by considering the potential effects of each program token based on the precondition, thereby correcting erroneous program fragments. While SED is competent in learning the latent execution status of partial programs, its generalization capability is not as robust as that of EVAPS. Moreover, the aforementioned effort indicates that SED succeeds in generating semantic programs, although it may encounter difficulties in generating token-wise accurate ones, especially in the presence of partial observations.</p>
-<p>Additionally, EVAPS outperforms both the Latent Execution and Transformer, as it leverages partial environmental contexts to rectify token semantic conflicts and aligns code symbol representations to facilitate a more comprehensive information flow. This enables the model to learn syntax and understand the long-range contextual relationships among program tokens, leading to better generalization ability.</p>
-<p><strong>Critique</strong></p>
-<p>The paper provides a comprehensive and innovative approach to addressing the challenge of program synthesis in robot programming through enhancing the synthesis process with environmental context. The paper’s major contributions lie in the proposal of the Environmental-context Validated Latent Program Synthesis framework (EVAPS), which effectively incorporates partially observed environments to rectify erroneous code segments, and utilizes a graph structure to align environmental and syntactic information flow. The extensive experimental evaluations and ablation studies demonstrate the method’s superior generalization capability across various tasks and its robustness in the face of noises.</p>
-<p>The paper, however, does not thoroughly address the potential challenges with real-world implementation, specifically in acquiring high-quality environmental data for training. Future works should explore solutions to efficiently obtain and maintain the quality of environmental data. Additionally, the paper could benefit from a more comprehensive comparison with other state-of-the-art approaches, including a more detailed discussion of the strengths and limitations of EVAPS compared to these methods. Finally, while the proposed approach showcases promise in handling noisy observations, future research should further investigate the robustness of EVAPS in more diverse and complex real-world environments.</p>
+<p>ve of the entire environment that may not always be feasible in reality. EVAPS overcomes this by leveraging partial environmental observations and aligning them with code syntax to provide more comprehensive guidance for program rectification. ii) EVAPS introduces a novel framework that learns an environment embedding space to implicitly evaluate the impacts of each program token based on the precondition. This enables the model to effectively assess the global impact of the generated program tokens toward the desired output, even with partial observations.</p>
+<p>While we recognize the need for further research and testing in real-world scenarios, the strong performance of EVAPS in a complex and noisy environment serves as a promising indication of its potential practical application.</p>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">

@@ -1,0 +1,68 @@
+
+---
+title: "Scalable and automated Evaluation of Blue Team cyber posture in Cyber Ranges"
+description: "Cyber ranges are vital for secure training. New automation proposal improves exercise evaluation and assessment."
+author: Federica Bianchi, Enrico Bassetti, Angelo Spognardi
+date: "2023-12-28"
+image: "../../../bayesian-beagle.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+### Major Takeaways
+
+1. **Cyber ranges** are virtual training environments used for secure exercises and simulating real or hypothetical scenarios. They facilitate the evaluation of defense tools and methodologies, while developing novel countermeasures against threats.
+
+2. The proposed **framework** automates the evaluation and assessment of cyber range exercise outcomes, with a specific focus on the Blue Team's actions and strategies. It overcomes the limitations of existing assessment models by leveraging well-known databases and custom reports.
+
+3. The research offers a comprehensive and scalable approach, using tree-based representation of attack and defense reports to evaluate cyber exercises. It enables automated comparison and evaluation of multiple Blue teams in parallel, providing efficient and objective assessment of various aspects and metrics related to the Blue Team.
+
+### Introduction
+
+- Cyber ranges serve as crucial training grounds for organizations to fortify their defenses against cyber threats.
+- The current evaluation methods rely on a combination of service metrics and manual grading, which is time-consuming and limits prompt feedback on Blue Team responses.
+- There is a pressing need for a robust evaluation metric, automated processes, and objective insights into Blue Team performance.
+
+### Automatic Evaluation of Exercises
+
+- The proposed approach leverages well-defined templates for Red and Blue Team reports, automatic scoring processes, and a visualization tool named Cyber Posture.
+- The pipeline for automatic evaluation involves the collection of reports, definition of Reference/Response Graphs from reports, automatic evaluation of multiple intermediate scores, and computation of the final score and the Cyber Posture.
+
+### Team Reports
+
+- The proposed structures for Blue and Red Team reports are based on the components of the **MITRE ATT&CK Matrix**, a database containing knowledge collected by the security community about tactics, techniques, and procedures used by attackers.
+- The Blue Team report template consists of presumed tactics, techniques, sub-techniques, applied mitigations, detection types, target attacked, and detection start time.
+
+### From Reports to ADTrees
+
+- The cyber range scoring system processes team reports to produce two graphs, Reference Graph and Response Graph, for each report. These graphs are used to calculate the total score assigned to each Blue Team.
+
+### Evaluation
+
+- The evaluation phase involves defining multiple intermediate scores and an aggregated final score for each Blue Team evaluation. Factors include attack management, attack strategy comprehension, knowledge of techniques, responsiveness, and metrics such as availability and integrity.
+- The final scores provide an overall picture of the capabilities that each Blue Team developed during the exercise, known as **Cyber Posture**.
+
+### Conclusion and Future Work
+
+- The proposed framework presents an automated solution that addresses the limitations of traditional manual evaluation methods.
+- Future work includes designing a fully working scoring platform, refining and expanding the evaluation metrics, and integrating machine learning and artificial intelligence techniques for intelligent analysis and interpretation of the evaluation results.
+
+### Critique
+
+- The paper provides a comprehensive and detailed framework for automating the evaluation of cyber range exercises. However, the practical implementation and scalability of the proposed approach would need to be thoroughly tested and validated in real-world cyber range exercises.
+- Additionally, the reliance on predefined templates and databases may limit the flexibility and adaptability of the evaluation framework to diverse cyber exercise scenarios and evolving cyber threats.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-04       |
+| Abstract | [http://arxiv.org/abs/2312.17221v1](http://arxiv.org/abs/2312.17221v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17221v1](https://browse.arxiv.org/html/2312.17221v1)       |
+| Truncated       | False       |
+| Word Count       | 3860       |

@@ -1,0 +1,51 @@
+
+---
+title: "Understanding the Instruction Mixture for Large Language Model"
+description: "Exploring the impact of different instruction types on large language models' performance reveals the need for careful instruction design."
+author: Renxi Wang, Minghao Wu, Yuxia Wang, Xudong Han, Chiyu Zhang, Haonan Li
+date: "2023-12-17"
+image: "https://browse.arxiv.org/html/2312.10793v1/x1.png"
+categories: ['education', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.10793v1/x1.png)
+
+## Major Findings
+
+- Specific types of **instructions** are more beneficial for particular uses, while they may cause harm to other aspects. 
+- Evaluating models with diverse benchmarks and alignment skills yielded insights into the impact of different **distributions** of instruction datasets on model performance across diverse aspects. 
+- Results suggest that researchers should carefully design the **instruction mixture** to maximize the model's performance on the target usage, taking model size into consideration.
+
+## Experimental Setup
+
+- **Supervised fine-tuning (SFT)** has been proven to be an effective approach to align large language models (LLMs) with human instructions, enhancing downstream task performance and facilitating code generation.
+- The study focused on evaluating the model’s performance in three key areas: **NLP downstream task performance**, **coding ability**, and **chat capabilities**.
+- Experiments were conducted using eight different **mixture settings** involving instruction datasets for NLP downstream tasks, code generation, and general-purpose instructions.
+
+## Results
+
+- Different types of specialized instructions improved the performance on the benchmarks they were designed for. 
+- Incorporating general instructions consistently improved coding performance, and larger models could better leverage various instructions. 
+- The mixture of instruction datasets had a significant impact on alignment skills, with general instructions providing better alignment skills and performance on NLP benchmarks.
+  
+## Critique
+
+The paper's potential limitations include:
+- Limited use of only LLaMA-2 7B and 13B models in the experiments, with the need for verification using different sizes of models.
+- The restriction to a specific instruction dataset size and mainly comparing the 1:1 ratio of all instruction types, leaving the exploration of the impact of more instructions and mixing ratios for future research.
+
+It is important to consider the potential variability in model behavior across different sizes and explore the impact of different instruction dataset sizes and mixing ratios on LLMs' performance for comprehensive understanding.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-04       |
+| Abstract | [http://arxiv.org/abs/2312.10793v1](http://arxiv.org/abs/2312.10793v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.10793v1](https://browse.arxiv.org/html/2312.10793v1)       |
+| Truncated       | False       |
+| Word Count       | 4269       |

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Demircan Tas, Dimitrios Chatzinikolis">
 <meta name="dcterms.date" content="2023-12-19">
-<meta name="description" content="TeamCAD allows remote collaboration in spatial design via webcam and microphone input, integrating speech and gesture recognition for a user-friendly experience.">
+<meta name="description" content="TL;DR: TeamCAD improves remote design collaboration with voice and gesture recognition for better user experience.">
 
 <title>Bayesian beagle - TeamCAD – A Multimodal Interface for Remote Computer Aided Design</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - TeamCAD – A Multimodal Interface for Remote Computer Aided Design">
-<meta property="og:description" content="TeamCAD allows remote collaboration in spatial design via webcam and microphone input, integrating speech and gesture recognition for a user-friendly experience.">
+<meta property="og:description" content="TL;DR: TeamCAD improves remote design collaboration with voice and gesture recognition for better user experience.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.12309v1/extracted/5305689/figures/f11p.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    TeamCAD allows remote collaboration in spatial design via webcam and microphone input, integrating speech and gesture recognition for a user-friendly experience.
+    TL;DR: TeamCAD improves remote design collaboration with voice and gesture recognition for better user experience.
   </div>
 </div>
 
@@ -153,57 +153,35 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.12309v1/extracted/5305689/figures/f11p.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p><strong>TeamCAD</strong> is a multimodal interface for remote computer-aided design that incorporates <strong>speech and gesture recognition</strong> to provide a collaborative user experience for spatial design processes. The interface aims to replicate the collaborative experience of working on a table in an online remote setting, utilizing state-of-the-art machine learning for voice and gesture recognition. The system’s performance was evaluated through user studies, revealing both the potential and drawbacks of the proposed interface.</p>
+</section>
 <section id="main-findings" class="level3">
 <h3 class="anchored" data-anchor-id="main-findings">Main Findings</h3>
 <ol type="1">
-<li><p><strong>Remote Collaboration and Computer Aided Design:</strong> TeamCAD presents a user experience for online remote collaboration that simulates working on a table, combining <strong>speech and gesture recognition</strong> for computer-aided design (CAD) processes. The interface is intuitive and suitable for collaborators with or without prior experience in three-dimensional modeling applications.</p></li>
-<li><p><strong>Challenges in Modality Use:</strong> While the combination of modalities provided a fluent experience for users with varying skill levels, <strong>speech recognition posed challenges</strong> due to limitations in robustness and latency. In contrast, <strong>gesture recognition</strong> provided robust results with regards to different user demographics.</p></li>
-<li><p><strong>Performance of TeamCAD:</strong> Users spent the most time manipulating objects, and speech recognition occupied substantially more time than gestures. However, the multi-modal approach equalized the time spent by users with varying levels of experience in completing similar tasks, indicating the potential of the interface for design teams with members of different skill levels.</p></li>
+<li><p><strong>Multi-Modal Collaboration</strong>: TeamCAD provides a user-friendly interface that enables remote collaboration in design processes through a combination of <strong>speech and gesture recognition</strong>. This approach aims to replicate the interactive and participatory nature of in-person design collaboration.</p></li>
+<li><p><strong>Challenges with Speech Recognition</strong>: While the multimodal approach proved to be beneficial for users with varying levels of experience, <strong>speech recognition</strong> posed challenges, particularly in terms of robustness and responsiveness. The limitations of the speech recognition system affected the overall usability and efficiency of the interface.</p></li>
+<li><p><strong>User Studies and Performance Evaluation</strong>: User studies conducted at different phases revealed insights into the performance and user experience of TeamCAD. The interface showed promise in equalizing the design process for users with varying skill levels, but also highlighted the need for further improvements in <strong>speech recognition</strong>.</p></li>
 </ol>
-</section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<ul>
-<li>Online collaboration for spatial design processes became predominant during the COVID-19 pandemic, but existing tools for verbal communication have limitations in visual design activities.</li>
-<li>Physical models and sketches enable equal collaboration, particularly in early design exploration, emphasizing the need for a similar experience in online remote working scenarios.</li>
-<li>TeamCAD proposes an interface that allows users to work on three-dimensional modeling or CAD environments through <strong>speech and gesture recognition</strong>.</li>
-</ul>
 </section>
 <section id="system-description" class="level3">
 <h3 class="anchored" data-anchor-id="system-description">System Description</h3>
 <ul>
-<li>TeamCAD relies on <strong>speech recognition and hand feature detection</strong> using the Python SpeechRecognition library, MediaPipe, and OpenCV for webcam images. Voice commands and gestures are translated to 3D animation/modeling or CAD software as input.</li>
-<li>The system uses a heads-up display to present a library of voice commands and enables users to manipulate objects through hand gestures.</li>
+<li><p><strong>Speech and Gesture Recognition</strong>: The system relies on speech recognition using the SpeechRecognition Python library, with real-time webcam gesture recognition using MediaPipe. This allows users to utilize voice commands and gestures to interact with a three-dimensional modeling or CAD software.</p></li>
+<li><p><strong>Interface Operation</strong>: TeamCAD uses a heads-up display (HUD) to present a library of voice commands and allows users to manipulate objects through gestures, such as using pinching gestures for selection and grabbing. The system also enables users to issue voice commands for specific transformations and manipulations.</p></li>
 </ul>
 </section>
-<section id="how-it-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-it-works">How it Works</h3>
+<section id="user-studies-and-performance" class="level3">
+<h3 class="anchored" data-anchor-id="user-studies-and-performance">User Studies and Performance</h3>
 <ul>
-<li>TeamCAD uses <strong>speech recognition</strong> to extract strings from users’ voice and <strong>MediaPipe and OpenCV</strong> to detect hand features from webcam images in real-time. These inputs are translated to virtual mouse and keyboard outputs to manipulate objects and run commands in Blender.</li>
-</ul>
-</section>
-<section id="user-studies" class="level3">
-<h3 class="anchored" data-anchor-id="user-studies">User Studies</h3>
-<ul>
-<li>Three user study iterations were conducted at prototype, implementation, and final studio phases, with users asked to create arch models in Blender. The time spent on warming up, creating and manipulating objects, and camera movement/navigation was recorded, as well as the time spent on speech and gesture commands.</li>
-</ul>
-</section>
-<section id="performance" class="level3">
-<h3 class="anchored" data-anchor-id="performance">Performance</h3>
-<ul>
-<li>Users spent the most time manipulating objects, while speech recognition occupied substantially more time than gestures due to robustness and flexibility limitations in the implemented model. However, the <strong>multi-modal approach equalized the time spent</strong> by users with varying levels of experience.</li>
-<li>Users’ prior experience did not consistently align with how much time they spent building an arch, indicating the potential of <strong>speech and gesture recognition</strong> to facilitate a more fluid pace.</li>
-</ul>
-</section>
-<section id="conclusion-discussion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion-discussion">Conclusion &amp; Discussion</h3>
-<ul>
-<li>TeamCAD presents a common denominator for design teams with varying skill levels, and future efforts will focus on further improving speech response and conducting additional user testing.</li>
+<li><p><strong>Experimental Phases</strong>: The user studies were conducted in three iterative phases, focusing on prototype, implementation, and final studio phases. The experiments involved tasks such as creating an arch in Blender 3D, recording users’ interactions, and measuring time spent on different activities.</p></li>
+<li><p><strong>Performance Evaluation</strong>: Users spent varying amounts of time on different tasks, with manipulating objects and using speech recognition occupying a substantial amount of time. The results showed that speech recognition was less efficient and posed challenges related to robustness and usability.</p></li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper presents a promising interface for remote collaboration in CAD processes, but there are some potential problems to consider: - The limitations and challenges of <strong>speech recognition</strong> pose a significant obstacle to the interface’s usability and may require further refinement. - The study’s reliance on user testing from a specific cohort of graduate students and the lack of diversity in testing participants may limit the generalizability of the findings. - Future work should address the need for more robust and <strong>flexible speech recognition</strong> to ensure a smoother user experience, especially for international users with diverse accents.</p>
+<p>While TeamCAD demonstrates the potential for multimodal interfaces in remote collaborative design, the paper acknowledges several challenges, particularly in the area of <strong>speech recognition</strong>. The limitations and biases observed in the performance of speech recognition algorithms need to be addressed to ensure a more robust and user-friendly interface. Additionally, the reliance on third-party libraries and technologies may introduce dependencies and potential compatibility issues in real-world applications. The need for further development and improvement in the performance of the <strong>speech recognition</strong> component is crucial for the successful implementation of TeamCAD in practical design settings.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -215,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-03</td>
+<td>2024-01-04</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

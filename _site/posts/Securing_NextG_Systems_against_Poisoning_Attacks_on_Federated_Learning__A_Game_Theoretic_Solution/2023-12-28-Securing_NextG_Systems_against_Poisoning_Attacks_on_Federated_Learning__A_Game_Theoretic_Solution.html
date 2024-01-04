@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tianyi Chen, Qidi Wang, Zhen Dong, Liwei Shen, Xin Peng">
-<meta name="dcterms.date" content="2023-12-13">
-<meta name="description" content="Recent work on program synthesis uses deep neural networks and language models to generate programs, addressing challenges with partially observed environments.">
+<meta name="author" content="Yalin E. Sagduyu, Tugba Erpek, Yi Shi">
+<meta name="dcterms.date" content="2023-12-28">
+<meta name="description" content="Study analyzes poisoning attacks in federated learning (FL) for wireless signal classification, proposing a defense mechanism against malicious clients.">
 
-<title>Bayesian beagle - Enhancing Robot Program Synthesis Through Environmental Context</title>
+<title>Bayesian beagle - Securing NextG Systems against Poisoning Attacks on Federated Learning: A Game-Theoretic Solution</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,9 +65,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Bayesian beagle - Enhancing Robot Program Synthesis Through Environmental Context">
-<meta property="og:description" content="Recent work on program synthesis uses deep neural networks and language models to generate programs, addressing challenges with partially observed environments.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2312.08250v1/x1.png">
+<meta property="og:title" content="Bayesian beagle - Securing NextG Systems against Poisoning Attacks on Federated Learning: A Game-Theoretic Solution">
+<meta property="og:description" content="Study analyzes poisoning attacks in federated learning (FL) for wireless signal classification, proposing a defense mechanism against malicious clients.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2312.17164v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
 
@@ -117,15 +117,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Enhancing Robot Program Synthesis Through Environmental Context</h1>
+<h1 class="title">Securing NextG Systems against Poisoning Attacks on Federated Learning: A Game-Theoretic Solution</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">robustness</div>
+    <div class="quarto-category">security</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Recent work on program synthesis uses deep neural networks and language models to generate programs, addressing challenges with partially observed environments.
+    Study analyzes poisoning attacks in federated learning (FL) for wireless signal classification, proposing a defense mechanism against malicious clients.
   </div>
 </div>
 
@@ -135,14 +135,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Tianyi Chen, Qidi Wang, Zhen Dong, Liwei Shen, Xin Peng </p>
+             <p>Yalin E. Sagduyu, Tugba Erpek, Yi Shi </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 13, 2023</p>
+      <p class="date">December 28, 2023</p>
     </div>
   </div>
   
@@ -152,53 +152,64 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><img src="https://browse.arxiv.org/html/2312.08250v1/x1.png" class="img-fluid"></p>
-<section id="summary-of-enhancing-robot-program-synthesis-through-environmental-context" class="level3">
-<h3 class="anchored" data-anchor-id="summary-of-enhancing-robot-program-synthesis-through-environmental-context">Summary of “Enhancing Robot Program Synthesis Through Environmental Context”</h3>
-<section id="major-takeaways" class="level4">
-<h4 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h4>
+<p><img src="https://browse.arxiv.org/html/2312.17164v1/x1.png" class="img-fluid"></p>
+<section id="key-findings" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings"><strong>Key Findings</strong></h3>
 <ol type="1">
-<li><strong>EVAPS Outperforms Other Methods:</strong>
-<ul>
-<li>The Environmental-context Validated lAtent Program Synthesis framework (EVAPS) outperforms other methods in robot program synthesis across various metrics, showcasing its superior capability in resolving semantic conflicts and achieving greater generalization ability.</li>
-</ul></li>
-<li><strong>Partial Observations and Code Symbol Alignment Enhance Program Synthesis:</strong>
-<ul>
-<li>The incorporation of both partial environmental observations and code symbol alignment modules significantly improves the joint semantic and syntax modeling ability, leading to enhanced performance in program synthesis.</li>
-</ul></li>
-<li><strong>EVAPS Demonstrates Robustness to Noise and Complexity:</strong>
-<ul>
-<li>EVAPS exhibits robustness when encountering noise and demonstrates better performance in handling complex tasks compared to other methods, showcasing its potential for real-world applications in robot program synthesis.</li>
-</ul></li>
+<li><p><strong>Federated Learning (FL)</strong>, which collectively trains a global model without exchanging individual data samples, is a promising approach for training deep learning models in the context of wireless signal classification for NextG communications.</p></li>
+<li><p>The paper discusses the vulnerability of FL systems to <strong>poisoning attacks</strong>, where malicious participants inject false or deceptive data into the model which can lead to biased or inaccurate results, and proposes a <strong>proactive defense mechanism</strong> to address this challenge.</p></li>
+<li><p>The paper formulates the interactions between the attack and the defense as a <strong>non-cooperative game</strong> and quantifies the vulnerability and resilience of FL for NextG signal classification with respect to poisoning attacks, providing insights into novel operational modes that safeguard FL systems against such attacks.</p></li>
 </ol>
 </section>
-<section id="introduction" class="level4">
-<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
-<p>Program synthesis aims to automatically generate executable programs based on given specifications, often using input/output examples. Robot program synthesis, in particular, is challenging due to limited environmental observations, making it difficult to assess the global impact of the generated program tokens.</p>
-</section>
-<section id="problem-formulation" class="level4">
-<h4 class="anchored" data-anchor-id="problem-formulation">Problem Formulation</h4>
-<p>In the VizDoom domain, a robot operates in a 3D world with a DSL comprising action primitives, perception primitives, and control flows. The challenge arises from the limited and partial observations available to the robot, impacting its ability to synthesize effective programs.</p>
-</section>
-<section id="methodology" class="level4">
-<h4 class="anchored" data-anchor-id="methodology">Methodology</h4>
-<p>The Environmental-context Validated lAtent Program Synthesis framework (EVAPS) leverages partial environmental observations and code symbol alignment to rectify potentially erroneous program segments in robot programming. It involves the use of convolutional network layers to capture hidden environment representations and a graph attention mechanism to align code symbols with partial observations.</p>
-</section>
-<section id="experiment" class="level4">
-<h4 class="anchored" data-anchor-id="experiment">Experiment</h4>
+<section id="i-introduction" class="level3">
+<h3 class="anchored" data-anchor-id="i-introduction"><strong>I Introduction</strong></h3>
 <ul>
-<li><p><strong>Experimental Setup</strong>: The framework is evaluated in the partially observed VizDoom domain using a dataset of distinct samples. The performance is assessed using metrics such as Exact Match, Semantic Match, and Generalization Match, across different levels of task complexity and noise levels.</p></li>
-<li><p><strong>Results</strong>: EVAPS outperforms other methods, showcasing its superior capability in resolving semantic conflicts and achieving greater generalization ability. It also demonstrates robustness when encountering noise and handles complex tasks efficiently.</p></li>
+<li><strong>Challenges in NextG Communications:</strong> NextG communications pose challenges for traditional analytical models, leading to the adoption of machine learning, particularly deep learning techniques.</li>
+<li><strong>Application of Federated Learning (FL):</strong> FL is employed for spectrum sensing, where a signal classification model is trained using data collected from edge devices. This approach ensures privacy and reduces communication load.</li>
+<li><strong>Concerns about Vulnerabilities:</strong> The increasing utilization of distributed clients makes FL systems susceptible to various exploits, attacks, and non-cooperative behaviors.</li>
 </ul>
 </section>
-<section id="related-work" class="level4">
-<h4 class="anchored" data-anchor-id="related-work">Related Work</h4>
-<p>The paper provides a thorough discussion of related work, emphasizing the significance of incorporating partial environmental observations into program synthesis, especially in the context of robot programming. It highlights the distinct advantages of EVAPS over existing approaches and its potential for practical applications.</p>
+<section id="ii-federated-learning-for-distributed-spectrum-monitoring" class="level3">
+<h3 class="anchored" data-anchor-id="ii-federated-learning-for-distributed-spectrum-monitoring"><strong>II Federated Learning for Distributed Spectrum Monitoring</strong></h3>
+<ul>
+<li>FL involves the server distributing the global model architecture and model weight to clients, who train their local models and transmit them back to the server for aggregation.</li>
+<li>The model trained through FL is used for wireless signal classification and aims to identify BPSK or QPSK signals obtained from diverse locations.</li>
+</ul>
 </section>
+<section id="iii-attack-and-defense-for-federated-learning" class="level3">
+<h3 class="anchored" data-anchor-id="iii-attack-and-defense-for-federated-learning"><strong>III Attack and Defense for Federated Learning</strong></h3>
+<ul>
+<li>The paper introduces the concept of poisoning attacks on FL and proposes a proactive defense approach focused on selecting clients for admission into the FL process to enhance the system’s resilience.</li>
+<li>The defense mechanism involves a client admission policy that aims to exclude poisoned clients and include unpoisoned clients to improve system accuracy.</li>
+</ul>
 </section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper does an excellent job of introducing a novel approach for enhancing robot program synthesis through the incorporation of partial environmental observations. However, it could benefit from more in-depth analysis of the practical challenges and limitations of implementing EVAPS in real-world robot programming scenarios. Additionally, the comparison with existing methods could be further strengthened with a broader range of benchmark datasets and real-world robot programming scenarios. Finally, the experiment section would benefit from a more detailed exploration of the computational requirements and scalability of the proposed approach.</p>
+<section id="iv-poisoning-attack-defense-game-for-two-clients" class="level3">
+<h3 class="anchored" data-anchor-id="iv-poisoning-attack-defense-game-for-two-clients"><strong>IV Poisoning Attack-Defense Game for Two Clients</strong></h3>
+<ul>
+<li>The interactions between the attack and the defense are formulated as a non-cooperative game involving the selection of actions by the attack and the defense.</li>
+<li>The paper delves into the performance bounds, strategies, and utilities in Nash equilibrium for the attack and defense for scenarios involving two clients.</li>
+</ul>
+</section>
+<section id="v-poisoning-attack-defense-game-for-more-than-two-clients" class="level3">
+<h3 class="anchored" data-anchor-id="v-poisoning-attack-defense-game-for-more-than-two-clients"><strong>V Poisoning Attack-Defense Game for More Than Two Clients</strong></h3>
+<ul>
+<li>The analysis is extended to accommodate an arbitrary number of clients, considering the best response of the attacker to the defender’s strategy and the best response of the defender to the attacker’s strategy.</li>
+</ul>
+</section>
+<section id="vi-conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="vi-conclusion"><strong>VI Conclusion</strong></h3>
+<ul>
+<li>The paper concludes by summarizing the contributions of the study in identifying resilient operation modes for FL and safeguarding it against poisoning attacks in NextG communication systems.</li>
+</ul>
+</section>
+<section id="critique-and-potential-problems" class="level3">
+<h3 class="anchored" data-anchor-id="critique-and-potential-problems"><strong>Critique and Potential Problems</strong></h3>
+<p>The paper provides a comprehensive analysis of the interactions between poisoning attacks and defense mechanisms in FL systems for NextG communications. However, potential issues or limitations include:</p>
+<ul>
+<li>The complexity of the proposed game-theoretic solution and its practical implementation.</li>
+<li>The need for empirical validation of the proposed defense mechanism and its effectiveness in real-world FL systems.</li>
+<li>The potential impact of varying network conditions and client behaviors on the proposed game-theoretic model.</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -214,11 +225,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2312.08250v1">http://arxiv.org/abs/2312.08250v1</a></td>
+<td><a href="http://arxiv.org/abs/2312.17164v1">http://arxiv.org/abs/2312.17164v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2312.08250v1">https://browse.arxiv.org/html/2312.08250v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2312.17164v1">https://browse.arxiv.org/html/2312.17164v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
@@ -226,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>12023</td>
+<td>8577</td>
 </tr>
 </tbody>
 </table>
@@ -472,4 +483,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wesslen/bayesian-beagle/edit/main/posts/Enhancing_Robot_Program_Synthesis_Through_Environmental_Context/2023-12-13-Enhancing_Robot_Program_Synthesis_Through_Environmental_Context.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wesslen/bayesian-beagle/edit/main/posts/Securing_NextG_Systems_against_Poisoning_Attacks_on_Federated_Learning__A_Game_Theoretic_Solution/2023-12-28-Securing_NextG_Systems_against_Poisoning_Attacks_on_Federated_Learning__A_Game_Theoretic_Solution.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>

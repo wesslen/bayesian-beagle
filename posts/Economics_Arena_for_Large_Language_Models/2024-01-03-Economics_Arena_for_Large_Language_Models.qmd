@@ -1,7 +1,7 @@
 
 ---
 title: "Economics Arena for Large Language Models"
-description: "Large language models (LLMs) are tested in competitive economics games, showing varying levels of rationality and strategic reasoning."
+description: "LLMs tested in competitive economics games show varying levels of rationality and strategic reasoning, with GPT-4 exhibiting faster convergence to Nash Equilibria."
 author: Shangmin Guo, Haoran Bu, Haochuan Wang, Yi Ren, Dianbo Sui, Yuming Shang, Siting Lu
 date: "2024-01-03"
 image: "https://browse.arxiv.org/html/2401.01735v1/x1.png"
@@ -13,32 +13,47 @@ format:
 
 ![](https://browse.arxiv.org/html/2401.01735v1/x1.png)
 
-mber guess) of agent i in round t, T is the total number of rounds in the game, and ρ(a)ρitalic_ρ(a) is the payoff of action a to the player. The denominator ρo⁢pitalic_ρo⁢p is the optimal payoff for the player when all players play rationally. The measure rirosso⁢psubscriptri=1T⁢∑t=1Tρ(a)ρo⁢psubscript𝑟𝑖1𝑇superscriptsubscript𝑡1𝑇𝜌subscript𝑎𝑖𝑡subscript𝜌𝑜𝑝, which is the average deviation distance from the NE, measure the rationality degree of agent i. A larger value indicates the agent acts more irrationally.
-To define the 5th-grade Nash equilibrium, we should consider payoffs rather than strategies, especially in LLMs where complex strategies are often hard to interpret and characterise.
-
-
-For actions of 0, 1 and 2, the payoff matrix is as follow:
+he mean deviation distance of player i𝑖iitalic_i; and N, the total number of players.
+When with history, LLMs are expected to bring down their mean deviation distances compared to without history, otherwise it is a reflection of a failure in learning from the past information. For competitive game theoretic reasoning, a lower mean deviation distance, where players are closer to following the NE, implies playing more rational strategies.
 
 
 
 
+A.3.2 Adaptation to Dynamic Environments
 
-ϕ1⁢(0)ϕ1⁢(1)ϕ1⁢(2)ϕ2⁢(0)11-1ϕ2⁢(1)-11ϕ2⁢(2)000,
-
-(2)
-
-
-
-
-
-which captures the payoffs of two players in a simple coordination game.
-If a player chooses 1 and the other 2, the payoffs violate the NE condition and indicate irrationally behaving.
-By taking the NE action of 1 and 2 into account, and define the respective NE payoffs to be 11, -11, -11 and 00, we can use the deviation distance measure to reflect the level of rationality.
-When all players maximise their payoffs, the deviation distance is 00 throughout, and higher deviations on average mean a less rational degree.
+In a dynamic environment, it is expected that the strategic ability of the agents would be put to test.
+The variation in game configurations would change transfer payoffs from one model to another.
+Furthermore, as configurations change, rationality is a quality of updating the strategy, and also of consistency of the strategy till it faces a more aggressive agent in the next round.
+Thus, strategic reasoning could be surmised from the consistency of the strategies across various game configurations and more so, varying player configurations.
+If a player has higher adaptive strategies, there would be a different quality of strategies over different adversaries, thus their mean deviation distances should be lower when playing with other players than when rationality assumption is already in place.
 
 
-A review of the rirosso⁢psubscriptri=1T⁢∑t=1Tρ⁢(ai⁢t)ρo⁢psubscript𝑟𝑖1𝑇superscriptsubscript𝑡1𝑇𝜌subscript𝑎𝑖𝑡subscript𝜌𝑜𝑝 measure for every agent reveals the rationality degree of several LLMs in Economics Arena.
-The rationality measure provided helps in evaluating how well LLMs are able to behave in a rational and strategic manner, and in identifying which LLMs are relatively more rational in competitive settings.
+
+
+A.3.3 Strategic Reasoning through Game History
+
+With game history available, it is expected that the average payoff and deviation distance from NE would reduce, given that agents learn from their past experiences, or learn quickly to achieve a similar level of rationality as when a rationality assumption is already in place.
+We expect, with history, models that have optimal strategy which are robust to the varying ranges to have much lower deviation distances than models with relatively more volatile strategies, and then to observe convergence over runs.
+We note that the faster the rate of convergence is, the higher the rationality of the agents, thus stronger realization of Nash equilibria.
+
+
+
+
+A.3.4 Natural Language Instructions Following Behaviours of LLMs
+
+It is essential for LLM-based agents to strictly follow the instructions described by the natural languages, as predicting and following commands is a task of everyday importance (Bender and Koller, 2020).
+The goal of this study is also to investigate the performance of these models in strictly adhering to natural language instructions.
+We will be calculating the frequency of rule-breaking and comparing it across the different LLM-based agents across the two game types as an insight into their ability in comprehending instructions in different contexts.
+The results would reflect their natural language understanding capabilities, and the ability to differentiate and execute different instructions based on the contexts.
+
+
+
+
+A.3.5 Other Variations
+
+The performance of a model is not only determined by the dynamics of the agent itself, but also by other factors such as the agent's memory capacity, and the temporal structure of the promp.
+To investigate the impact of Chain-of-Thought and variation in prompt language, we ran some of the same experiments under these variations and compared them to the main results.
+The findings will demonstrate the importance of these factors in shaping the performance of the LLMs and whether these variations can improve the strategic reasoning ability of the LLMs in the economics arena.
 
 ## Appendix
 
@@ -49,4 +64,4 @@ The rationality measure provided helps in evaluating how well LLMs are able to b
 | Abstract | [http://arxiv.org/abs/2401.01735v1](http://arxiv.org/abs/2401.01735v1)        |
 | HTML     | [https://browse.arxiv.org/html/2401.01735v1](https://browse.arxiv.org/html/2401.01735v1)       |
 | Truncated       | True       |
-| Word Count       | 16860       |
+| Word Count       | 16328       |

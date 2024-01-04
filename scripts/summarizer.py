@@ -38,14 +38,7 @@ class OpenAIAssistant:
 
         else:
             raise ValueError("Invalid task specified")
-
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {"role": "system", "content": system_message},
-                {"role": "user", "content": user_message},
-            ],
-        )
+        
 
         try:
             response = self.client.chat.completions.create(

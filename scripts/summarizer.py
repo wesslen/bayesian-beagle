@@ -119,6 +119,7 @@ def extract_text_from_html(html_content: str) -> str:
             ".ltx_tabular",
             ".ltx_listing",
             ".ltx_picture",
+            ".ltx_Math",
             ".ltx_equation", # remove math
             ".ltx_theorem",
         ],
@@ -259,6 +260,7 @@ def summarize(
 
             # count words, if longer than 15,000 then truncate
             word_count = count_token(text)
+            logging.info(f"Raw {word_count} word counts")
             THRESHOLD = 13500
             if word_count > THRESHOLD:
                 logging.info(
@@ -266,7 +268,7 @@ def summarize(
                 )
                 text = truncate_string(text, token_threshold=THRESHOLD)
 
-            logging.info(f"{word_count} word counts")
+            logging.info(f"Truncated: {word_count} word counts")
 
             summary = assistant.process_text(text, "summarize")
             if summary is None:

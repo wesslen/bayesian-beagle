@@ -118,6 +118,7 @@ def extract_text_from_html(html_content: str) -> str:
             ".ltx_table",
             ".ltx_listing",
             ".ltx_picture",
+            ".ltx_equation",
         ],
     )
 

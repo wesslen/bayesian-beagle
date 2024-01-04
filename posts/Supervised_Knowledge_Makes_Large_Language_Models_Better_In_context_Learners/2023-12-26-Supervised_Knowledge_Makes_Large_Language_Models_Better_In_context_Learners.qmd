@@ -1,11 +1,11 @@
 
 ---
 title: "Supervised Knowledge Makes Large Language Models Better In-context Learners"
-description: "TL;DR: A framework enhances Large Language Models' reliability, generalizability, and factuality, using discriminative models during inference."
+description: "LLMs' in-context learning is enhanced through task-specific fine-tuned Language Models, improving generalizability and factuality."
 author: Linyi Yang, Shuibai Zhang, Zhuohao Yu, Guangsheng Bao, Yidong Wang, Jindong Wang, Ruochen Xu, Wei Ye, Xing Xie, Weizhu Chen, Yue Zhang
 date: "2023-12-26"
 image: "https://browse.arxiv.org/html/2312.15918v1/x1.png"
-categories: ['prompt engineering']
+categories: ['prompt-engineering']
 format:
   html:
     code-overflow: wrap
@@ -13,42 +13,44 @@ format:
 
 ![](https://browse.arxiv.org/html/2312.15918v1/x1.png)
 
-# Supervised Knowledge in Large Language Models
+### Summary
 
-## Key Findings
-- **Large Language Models (LLMs)** demonstrate emerging in-context learning abilities through prompt engineering and have garnered significant performance across diverse tasks.
-- The study introduces **SuperContext**, a framework that uses task-Specific fine-tuned Language Models (SLMs) to improve LLMs' in-context learning during the inference stage.
-- Using SuperContext, **enhanced versions of Llama 2 and ChatGPT surpass their original versions regarding generalizability and factuality**.
+This paper introduces SuperContext, a method to enhance the in-context learning abilities of Large Language Models (LLMs) using task-specific fine-tuned Language Models (SLMs). The research demonstrates that SuperContext significantly improves generalizability and factuality of LLMs in natural language understanding and question answering tasks. The findings of the paper suggest that integrating SLM outputs into LLM prompts can lead to better performance in OOD generalizability and factuality.
 
-## Introduction
-- **Large language models (LLMs)** have shown robust performance across various tasks, but face challenges such as substantial resources for training and deployment, slow inference times, and susceptibility to hallucinations.
+### Key Findings
 
-## Method
-- **In-context Learning Baseline**: Traditional in-context learning involves using in-domain data for several Natural Language Understanding (NLU) tasks with 16-shot examples.
-- **SuperContext**: A simple and general approach that incorporates the auxiliary knowledge from a small, discriminative model with LLMs when making predictions for new tasks.
+1. **Enhanced Reliability**: SuperContext significantly improves the reliability of LLMs by generalizing out-of-distribution data, benefiting from discriminative models, and minimizing hallucinations in generative tasks.
 
-## Experiments
-- **Setup**: Tested on 8 NLU tasks and 1 generation task to validate SuperContext on GLUE-X benchmark and SQuAD 2.0.
-- **NLU Results**: SuperContext outperformed both SLMs and LLMs across NLU tasks, surpassing the supervised task-specific model, ELECTRA-large, as well.
-- **QA Results**: SuperContext significantly improved accuracy for open questions in the QA task.
+2. **Improved Performance**: The method outperforms traditional in-context learning methods, surpassing both original LLMs and SLMs, showing substantial benefits compared to few-shot in-context learning.
 
-## Analysis and Discussion
-- **Reversed Predictions**: SuperContext lead to the correction of predictions made by LLMs in both NLU and QA tasks.
-- **Interpretation Analysis**: LLMs demonstrated the ability to recall influential in-context examples and output rationales, with SuperContext resulting in higher performance and overlap with human rationale.
-- **The Effect of SLM Confidence**: There is a positive correlation between SLM confidence and LLM performance, emphasizing the importance of including both prediction and confidence in the prompt design.
+3. **Use of Supervised Knowledge**: SuperContext leverages supervised knowledge from fine-tuned discriminative models to improve the in-context learning of LLMs, demonstrating superior performance in managing OOD data and mitigating hallucinations.
 
-## Critique
-- The study lacked a comparison with other large-scale language models, potentially limiting the generalizability of the findings.
-- The effectiveness of SuperContext was not evaluated in real-world applications, limiting its practical implications.
+### Method
 
-Overall, the study sheds light on the potential of incorporating supervised knowledge from SLMs to enhance the performance of LLMs in various NLU and QA tasks. The findings highlight the importance of leveraging discriminative models for improving the reliability and factuality of LLMs.
+- **In-context Learning Baseline**: The paper discusses the traditional in-context learning baseline and contrasts it with the proposed SuperContext approach. 
+- **SuperContext**: The paper details the SuperContext method, which involves integrating fine-tuned discriminative model outputs into LLM prompts to facilitate in-context learning.
+
+### Experiments
+
+- **Setup**: The paper outlines the experimental setup, including the source models, datasets, and baselines used for evaluating the performance of SuperContext.
+- **NLU Results**: Results show that SuperContext significantly outperforms traditional in-context learning and performs well across various NLU tasks.
+- **QA Results**: SuperContext demonstrates substantial improvements in mitigating hallucination in question answering tasks.
+
+### Critique
+
+While the paper provides comprehensive empirical evidence of the effectiveness of SuperContext in enhancing LLMs, there are some potential concerns and limitations that should be addressed:
+- The paper could benefit from a more robust critique of the limitations and potential biases in the experimental setup.
+- Ethical implications and potential societal impacts of deploying advanced language models should be further discussed.
+- The paper may lack a detailed discussion of potential challenges or failure cases of the SuperContext method.
+
+Overall, the paper provides valuable insights into improving the generalizability and factuality of LLMs through the use of supervised knowledge and discriminative models. However, further research and discussion are needed to address potential ethical, societal, and methodological considerations.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-01-02       |
+| Date Generated     | 2024-01-04       |
 | Abstract | [http://arxiv.org/abs/2312.15918v1](http://arxiv.org/abs/2312.15918v1)        |
 | HTML     | [https://browse.arxiv.org/html/2312.15918v1](https://browse.arxiv.org/html/2312.15918v1)       |
 | Truncated       | False       |

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Tianhui Ma, Yuan Cheng, Hengshu Zhu, Hui Xiong">
 <meta name="dcterms.date" content="2023-12-25">
-<meta name="description" content="LLMs struggle as recommender systems due to position bias. STELLA framework mitigates bias, improving recommendation performance.">
+<meta name="description" content="LLMs’ positional bias hinders recommendation stability. Researchers propose STELLA, a Bayesian framework, to mitigate bias and improve recommendation performance in LLMs.">
 
 <title>Bayesian beagle - Large Language Models are Not Stable Recommender Systems</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Large Language Models are Not Stable Recommender Systems">
-<meta property="og:description" content="LLMs struggle as recommender systems due to position bias. STELLA framework mitigates bias, improving recommendation performance.">
+<meta property="og:description" content="LLMs’ positional bias hinders recommendation stability. Researchers propose STELLA, a Bayesian framework, to mitigate bias and improve recommendation performance in LLMs.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.15746v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Large Language Models are Not Stable Recommender Systems">
-<meta name="twitter:description" content="LLMs struggle as recommender systems due to position bias. STELLA framework mitigates bias, improving recommendation performance.">
+<meta name="twitter:description" content="LLMs’ positional bias hinders recommendation stability. Researchers propose STELLA, a Bayesian framework, to mitigate bias and improve recommendation performance in LLMs.">
 <meta name="twitter:image" content="https://browse.arxiv.org/html/2312.15746v1/x1.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    LLMs struggle as recommender systems due to position bias. STELLA framework mitigates bias, improving recommendation performance.
+    LLMs’ positional bias hinders recommendation stability. Researchers propose STELLA, a Bayesian framework, to mitigate bias and improve recommendation performance in LLMs.
   </div>
 </div>
 
@@ -155,44 +155,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.15746v1/x1.png" class="img-fluid"></p>
-<section id="major-takeaways" class="level3">
-<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<section id="main-findings" class="level3">
+<h3 class="anchored" data-anchor-id="main-findings">Main Findings</h3>
 <ul>
-<li><strong>Large language models (LLMs)</strong> are observed to exhibit <strong>position bias</strong>, affecting the stability and accuracy of their recommendations across various scenarios.</li>
-<li>The proposed <strong>STELLA framework</strong> employs a two-stage pipeline to address position bias in LLMs, using a Bayesian probabilistic framework to adjust biased output and enhance recommendation performance.</li>
-<li>Extensive experiments validate the effectiveness of the STELLA framework in <strong>reducing variance</strong> and <strong>enhancing recommendation performance</strong> of LLMs.</li>
+<li>Large language models (LLMs) used as recommender systems exhibit <strong>instability due to inherent position bias</strong> which leads to varying recommendation performance as the position of ground truth items changes.</li>
+<li>The paper presents a two-stage Bayesian probabilistic framework, STELLA, which identifies and addresses the positional bias, enhancing recommendation performance.</li>
 </ul>
 </section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <ul>
-<li>Recommender systems play a crucial role in various online services, and while traditional models have limitations in capturing user preferences in complex contexts, there is growing interest in exploring the use of LLMs for novel recommender systems.</li>
+<li>Recommender systems are critical for various online services, and traditional models have limited capability in capturing user preferences in complex scenarios.</li>
+<li>LLMs have gained attention for recommendation systems, but their inherent position bias leads to instability.</li>
 </ul>
 </section>
-<section id="position-bias-in-large-language-model" class="level3">
-<h3 class="anchored" data-anchor-id="position-bias-in-large-language-model">Position Bias in Large Language Model</h3>
+<section id="position-bias-in-large-language-models" class="level3">
+<h3 class="anchored" data-anchor-id="position-bias-in-large-language-models">Position Bias in Large Language Models</h3>
 <ul>
-<li>Using LLMs as recommender systems introduces <strong>position bias</strong>, making recommendation results sensitive to the order of input candidate items.</li>
-<li>The position bias problem in using LLMs for recommendation systems is still in its early stages and requires systematic exploration.</li>
+<li>LLMs exhibit <strong>consistent position bias</strong> affecting recommendation performance across various scenarios.</li>
+<li>Analysis shows sensitivity to prompt designs, candidate set sizes, and context of candidate items.</li>
 </ul>
 </section>
 <section id="calibrating-the-position-bias" class="level3">
 <h3 class="anchored" data-anchor-id="calibrating-the-position-bias">Calibrating the Position Bias</h3>
 <ul>
-<li>The proposed STELLA framework involves a <strong>probing stage</strong> to detect position biases and a <strong>recommendation stage</strong> that employs a Bayesian strategy to adjust biased output of LLMs with an entropy indicator.</li>
+<li><strong>Probing Stage</strong>: A probing set is used to identify patterns in a transition matrix, reflecting the position bias in LLMs.</li>
+<li><strong>Recommendation Stage</strong>: Bayesian updating is used to adjust biased output based on the transition matrix, improving recommendation accuracy.</li>
 </ul>
 </section>
 <section id="experiments" class="level3">
 <h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
 <ul>
-<li>Extensive experiments on various datasets demonstrate that the raw output of LLMs is highly unstable, but STELLA provides stable and consistent performance, significantly outperforming baseline approaches.</li>
+<li>Evaluation on four diverse datasets (movies, books, music, news) shows the effectiveness of STELLA in providing <strong>stable and accurate recommendations</strong>, outperforming the raw outputs and a baseline Bootstrapping strategy.</li>
+</ul>
+</section>
+<section id="ablation-study" class="level3">
+<h3 class="anchored" data-anchor-id="ablation-study">Ablation Study</h3>
+<ul>
+<li>The study demonstrates the importance of the transition matrix and the proper length of ensemble steps in the probing detection set for <strong>improving recommendation accuracy</strong>.</li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
 <ul>
-<li>The paper focuses on the effectiveness of the proposed framework but lacks a detailed analysis of potential limitations or trade-offs associated with implementing the STELLA framework.</li>
-<li>The language and technical complexity of the paper may pose challenges for readers with limited expertise in natural language processing and Bayesian frameworks.</li>
+<li>While the paper effectively presents the challenges of using LLMs as recommender systems and proposes an innovative solution, the evaluation is limited to a specific LLM (ChatGPT) and small-scale datasets. Further evaluation on larger-scale LLMs and real-world data is needed to validate the effectiveness of STELLA in diverse scenarios.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -205,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-02</td>
+<td>2024-01-04</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Aldan Creo, Manuel Lama, Juan C. Vidal">
 <meta name="dcterms.date" content="2023-12-13">
-<meta name="description" content="Novel prompting techniques improve summarization systems for scientific articles, especially for smaller models summarizing sections separately.">
+<meta name="description" content="Novel prompting techniques improve scientific article summarization by providing contextual information, showing performance gains for smaller models.">
 
 <title>Bayesian beagle - Prompting LLMs with content plans to enhance the summarization of scientific articles</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Prompting LLMs with content plans to enhance the summarization of scientific articles">
-<meta property="og:description" content="Novel prompting techniques improve summarization systems for scientific articles, especially for smaller models summarizing sections separately.">
+<meta property="og:description" content="Novel prompting techniques improve scientific article summarization by providing contextual information, showing performance gains for smaller models.">
 <meta property="og:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Prompting LLMs with content plans to enhance the summarization of scientific articles">
-<meta name="twitter:description" content="Novel prompting techniques improve summarization systems for scientific articles, especially for smaller models summarizing sections separately.">
+<meta name="twitter:description" content="Novel prompting techniques improve scientific article summarization by providing contextual information, showing performance gains for smaller models.">
 <meta name="twitter:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -121,13 +121,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Prompting LLMs with content plans to enhance the summarization of scientific articles</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">prompt engineering</div>
+    <div class="quarto-category">prompt-engineering</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Novel prompting techniques improve summarization systems for scientific articles, especially for smaller models summarizing sections separately.
+    Novel prompting techniques improve scientific article summarization by providing contextual information, showing performance gains for smaller models.
   </div>
 </div>
 
@@ -155,68 +155,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="None.png" class="img-fluid"></p>
-<section id="prompting-llms-with-content-plans-to-enhance-the-summarization-of-scientific-articles" class="level1">
-<h1>Prompting LLMs with Content Plans to Enhance the Summarization of Scientific Articles</h1>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
-<ul>
-<li>The study introduces novel <strong>prompting techniques</strong> to improve the performance of <strong>automatic summarization systems</strong> for <strong>scientific articles</strong>, demonstrating consistent performance improvements from prompting techniques on smaller models</li>
-<li>Results show that <strong>smaller models</strong> obtain <strong>ROUGE-1 score increases</strong> around 0.1-0.4 when summarizing sections aided by prompts, indicating the effectiveness of prompting to overcome the limitations of smaller, less capable summarization systems</li>
-<li>The study suggests that rather than large models, <strong>lightweight models supplemented with prompts</strong> may be preferable in resource-constrained contexts like mobile devices.</li>
-</ul>
+<section id="prompting-llms-with-content-plans-to-enhance-summarization-of-scientific-articles" class="level1">
+<h1>Prompting LLMs with Content Plans to Enhance Summarization of Scientific Articles</h1>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>This paper introduces novel prompting techniques to improve the performance of automatic summarization systems for scientific articles, which are often challenging due to their complexity and length. The paper evaluates various prompting techniques and their impact on different summarization models and input texts. The results show performance gains, particularly for smaller models summarizing sections separately. The findings introduce a new research direction of using prompts to aid smaller models in summarizing scientific articles.</p>
 </section>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>The paper presents novel prompting techniques to enhance automatic summarization systems for scientific articles, addressing the challenges posed by the length and complexity of these documents. The study tests the techniques with various summarization models and input texts, showing consistent performance gains, especially for smaller models summarizing sections separately.</p>
+<section id="findings" class="level2">
+<h2 class="anchored" data-anchor-id="findings">Findings</h2>
+<ol type="1">
+<li><strong>Challenges of Scientific Article Summarization</strong>: Scientific articles pose difficulties for summarization due to their length, technical vocabulary, complex structures, and irregular organizational formats. This makes summarization challenging for even state-of-the-art natural language processing systems.</li>
+<li><strong>Effectiveness of Prompting Techniques</strong>: The paper proposes and evaluates five prompting techniques, showing consistent performance improvements from prompting techniques on smaller models, especially when summarizing sections independently. Smaller models exhibit increases in ROUGE-1 score around 0.1-0.4 when aided by prompts. The results suggest that prompting is an effective approach for overcoming the limitations of smaller summarization systems.</li>
+<li><strong>Implications of the Findings</strong>: The findings suggest that prompting techniques enhance the focus of summarization models on core concepts, especially for smaller models, indicating the potential of prompts to aid smaller models in resource-constrained contexts like mobile devices.</li>
+</ol>
 </section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<ul>
-<li><strong>Automatic text summarization</strong> aims to produce shortened versions of documents while retaining relevant information, with current systems based on abstractive summarization models, such as transformer architectures.</li>
-<li>Summarizing scientific articles is particularly challenging due to their length, linguistic complexity, and irregular organizational structures.</li>
-<li>The study introduces novel prompting techniques to provide <em>key term context</em> and enhance scientific literature summarizers, aiming to address the limitations of less powerful systems.</li>
-</ul>
-</section>
-<section id="related-work" class="level2">
-<h2 class="anchored" data-anchor-id="related-work">Related Work</h2>
-<ul>
-<li>Conventional approaches to automatic summarization heavily relied on <strong>extractive methods</strong> but current dominant paradigm has shifted toward <strong>abstractive methods</strong> using neural network architectures.</li>
-<li>The study contextualizes the work by summarizing prior studies and techniques in automatic text summarization, particularly focusing on prompting and section-level summarization.</li>
-</ul>
-</section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<ul>
-<li>The study details three key evaluation dimensions: <strong>prompting technique dimension</strong>, <strong>model dimension</strong>, and <strong>input text dimension</strong>.</li>
-<li>Different approaches for generating prompts are compared, various state-of-the-art transformer models are evaluated, and three main text input conditions are studied.</li>
-</ul>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<ul>
-<li>Experiment results demonstrate consistent performance improvements from prompting techniques on smaller summarization models. The study also highlights the benefits of prompting based on the attention mechanism and the input text dimension.</li>
-</ul>
-</section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
-<ul>
-<li>The findings reveal that smaller models demonstrate significant performance improvements when subjected to prompting techniques, particularly for section-level summarization.</li>
-<li>The study discusses the implications of the results, highlighting the potential of prompting as a technique for enhancing small neural network summarizers and its practical applications.</li>
-</ul>
-</section>
-<section id="future-work" class="level2">
-<h2 class="anchored" data-anchor-id="future-work">Future Work</h2>
-<ul>
-<li>The study outlines future research opportunities, including exploring new prompting techniques, investigating automated prompt generation, and adapting attention mechanisms.</li>
-<li>High-level directions for future work are suggested based on the observations and implications of the study.</li>
-</ul>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<ul>
-<li>The paper introduces and evaluates <strong>prompting techniques</strong> as an effective approach to enhancing scientific summarization systems, particularly for smaller models and section-level summarization.</li>
-<li>The study provides valuable insights into the potential of prompting and suggests promising opportunities for future research. It also acknowledges the support received for the work.</li>
-</ul>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<p>The paper provides valuable insights into the effectiveness of prompting techniques for scientific article summarization. However, the study primarily focuses on model performance metrics and lacks a comprehensive analysis of the semantic quality of the summaries generated. Furthermore, the paper could benefit from discussing potential limitations and challenges in the practical implementation of the proposed prompting techniques. This could include addressing how the approach handles ambiguous or polysemous terms and potential biases in the extraction of key terms from scientific articles. Additionally, the paper could further elaborate on future research directions beyond the specific techniques evaluated in the study.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -228,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-02</td>
+<td>2024-01-04</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

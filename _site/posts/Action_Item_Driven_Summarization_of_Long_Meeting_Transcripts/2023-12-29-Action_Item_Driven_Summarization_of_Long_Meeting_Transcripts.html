@@ -8,7 +8,7 @@
 
 <meta name="author" content="Logan Golia, Jugal Kalita">
 <meta name="dcterms.date" content="2023-12-29">
-<meta name="description" content="Automated abstractive meeting summary algorithm for action items, achieving improved BERTScore on AMI corpus.">
+<meta name="description" content="Novel algorithm generates abstractive meeting summaries driven by action items, using sectional summaries and topic-based division method. Improved BERTScore.">
 
 <title>Bayesian beagle - Action-Item-Driven Summarization of Long Meeting Transcripts</title>
 <style>
@@ -66,11 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Action-Item-Driven Summarization of Long Meeting Transcripts">
-<meta property="og:description" content="Automated abstractive meeting summary algorithm for action items, achieving improved BERTScore on AMI corpus.">
+<meta property="og:description" content="Novel algorithm generates abstractive meeting summaries driven by action items, using sectional summaries and topic-based division method. Improved BERTScore.">
 <meta property="og:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta name="twitter:title" content="Bayesian beagle - Action-Item-Driven Summarization of Long Meeting Transcripts">
-<meta name="twitter:description" content="Automated abstractive meeting summary algorithm for action items, achieving improved BERTScore on AMI corpus.">
+<meta name="twitter:description" content="Novel algorithm generates abstractive meeting summaries driven by action items, using sectional summaries and topic-based division method. Improved BERTScore.">
 <meta name="twitter:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta name="twitter:creator" content="@ryanwesslen">
 <meta name="twitter:card" content="summary_large_image">
@@ -121,13 +121,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Action-Item-Driven Summarization of Long Meeting Transcripts</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">prompt engineering</div>
+    <div class="quarto-category">prompt-engineering</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Automated abstractive meeting summary algorithm for action items, achieving improved BERTScore on AMI corpus.
+    Novel algorithm generates abstractive meeting summaries driven by action items, using sectional summaries and topic-based division method. Improved BERTScore.
   </div>
 </div>
 
@@ -158,51 +158,36 @@ ul.task-list li input[type="checkbox"] {
 <section id="major-takeaways" class="level3">
 <h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
 <ol type="1">
-<li>The paper introduces a novel approach to automate the generation of meeting summaries by focusing on <strong>abstractive summarization</strong> driven by <strong>action items</strong> contained in the meeting transcript.</li>
-<li>The study develops three novel <strong>topic segmentation algorithms</strong> and an effective <strong>action-item extraction algorithm</strong> to improve the time efficiency of the summarization algorithm.</li>
-<li>The proposed <strong>recursive meeting summarization algorithm</strong> outperforms current state-of-the-art models by approximately 4.98% in terms of the BERTScore metric, showcasing the effectiveness of the action-item-driven summaries in capturing the semantic meaning of the reference summaries.</li>
+<li><p><strong>Increase in Meeting Summary Automation</strong>: The paper presents a novel approach to automatically generate meeting summaries. The proposed method focuses on <strong><em>abstractive summarization driven by action items</em></strong>, contributing to more informative and coherent summaries.</p></li>
+<li><p><strong>Focus on Topic Segmentation</strong>: The study introduces <strong><em>three novel methods for dividing long transcripts into topic-based sections</em></strong>, addressing issues with long-term dependencies and time efficiency of existing models.</p></li>
+<li><p><strong>Significant Performance Improvement</strong>: The proposed approach achieved a <strong><em>4.98% increase in BERTScore</em></strong> compared to the current state-of-the-art model, indicating a substantial enhancement in summary quality.</p></li>
 </ol>
 </section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<ul>
-<li>Increased prevalence of online meetings has led to the need for automatic generation of meeting summaries, which is fundamentally different from dialogue summarization due to its additional features such as action items, main topics, and decisions made.</li>
-<li>Current approaches produce general and vague summaries and lack effective <strong>topic segmentation methods</strong> for meeting summarization.</li>
-</ul>
+<p>The paper lays the groundwork by highlighting the increased prevalence of online meetings and the need for automating meeting summary generation. It emphasizes the difference between dialogue and meeting summarization, emphasizing the need for incorporating additional features such as action items, main topics, and decisions made.</p>
 </section>
 <section id="related-work" class="level3">
 <h3 class="anchored" data-anchor-id="related-work">Related Work</h3>
-<ul>
-<li>Existing methods for meeting summarization either use extractive or abstractive summarization techniques, where abstractive summarization leads to better summaries.</li>
-<li>The paper proposes novel techniques for <strong>recursive summarization</strong> and evaluates the performance against existing models and datasets.</li>
-</ul>
+<p>The paper elaborates on existing approaches to meeting summarization, including extractive and abstractive techniques. It also discusses the limitations of current models in capturing long-term dependencies and the shortcomings of linear segmentation methods.</p>
 </section>
 <section id="approach" class="level3">
 <h3 class="anchored" data-anchor-id="approach">Approach</h3>
-<ul>
-<li>The paper introduces <strong>topic segmentation</strong> techniques including chunked linear segmentation, simple cosine segmentation, and complex cosine segmentation to effectively divide long meeting transcripts.</li>
-<li>The approach involves <strong>action-item extraction</strong> using a fine-tuned BERT model and <strong>context resolution</strong> to extract meaningful action items from the meeting transcript.</li>
-<li>A <strong>recursive summarization algorithm</strong> combines sectional summaries using the BART model to create a coherent and action-item-driven summary.</li>
-</ul>
+<p>The study introduces three novel topic segmentation algorithms and outlines their effectiveness in improving summarization performance. It details the process of action-item extraction and proposes a technique called “neighborhood summarization” to address context resolution for extracting meaningful action items.</p>
 </section>
 <section id="results-and-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="results-and-analysis">Results and Analysis</h3>
-<ul>
-<li>The <strong>topic segmentation techniques</strong> outperform linear segmentation, with the complex cosine segmentation method showing the best performance.</li>
-<li>The proposed <strong>recursive summarization algorithm</strong> outperforms the state-of-the-art model by approximately 4.98% in terms of the BERTScore metric, demonstrating the effectiveness of the action-item-driven summaries.</li>
-<li><strong>Action-item-driven summaries</strong> achieve slightly higher BERTScores than general summaries, highlighting the value of including action items in the summaries.</li>
-</ul>
+<p>The results showcase the superior performance of the proposed methods, with the action-item-driven summaries achieving slightly higher BERTScores. The study also provides examples to demonstrate the effectiveness of the action-item extraction technique.</p>
 </section>
 <section id="future-research" class="level3">
 <h3 class="anchored" data-anchor-id="future-research">Future Research</h3>
-<ul>
-<li>Future research should focus on incorporating additional components of a good meeting summary, developing advanced <strong>topic segmentation</strong> methods, and exploring techniques for efficient <strong>action-item extraction</strong>.</li>
-</ul>
+<p>The paper identifies potential areas of future research, including the incorporation of additional components in meeting summaries such as decisions made and main topics. It also highlights the need for more advanced topic segmentation methods and expanded exploration of action-item extraction techniques.</p>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
 <ul>
-<li>The paper lacks a thorough discussion of the potential limitations of the proposed algorithms and techniques, and it could benefit from including a robust evaluation of the effectiveness of the proposed methods in real-world scenarios.</li>
+<li>The study heavily relies on the BERTScore metric for evaluation, which may not fully capture the nuances of summary quality.</li>
+<li>The paper does not address potential limitations or challenges in implementing the proposed approach in real-world settings, such as computational resource requirements or generalizability to diverse meeting contexts.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -215,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-02</td>
+<td>2024-01-04</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

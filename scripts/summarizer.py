@@ -114,11 +114,12 @@ def extract_text_from_html(html_content: str) -> str:
             ".ltx_authors",
             ".ltx_bibliography",
             ".package-alerts",
-            ".section",
-            ".ltx_table",
+            ".section", # remove license;arxiv number header
+            ".ltx_table", # remove tables
             ".ltx_listing",
             ".ltx_picture",
-            ".ltx_equation",
+            ".ltx_equation", # remove math
+            ".ltx_theorem",
         ],
     )
 

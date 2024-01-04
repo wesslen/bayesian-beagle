@@ -8,7 +8,7 @@
 
 <meta name="author" content="Taeyoon Kwon, Kai Tzu-iunn Ong, Dongjin Kang, Seungjun Moon, Jeong Ryong Lee, Dosik Hwang, Yongsik Sim, Beomseok Sohn, Dongha Lee, Jinyoung Yeo">
 <meta name="dcterms.date" content="2023-12-12">
-<meta name="description" content="Proposing a time-efficient framework for clinical reasoning in disease diagnosis using prompt-based learning and machine-generated rationales.">
+<meta name="description" content="Proposes a diagnosis framework using prompt-based learning for clinical reasoning in disease diagnosis, evaluating machine-generated rationales for real-world clinical settings.">
 
 <title>Bayesian beagle - Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales</title>
 <style>
@@ -66,14 +66,9 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales">
-<meta property="og:description" content="Proposing a time-efficient framework for clinical reasoning in disease diagnosis using prompt-based learning and machine-generated rationales.">
+<meta property="og:description" content="Proposes a diagnosis framework using prompt-based learning for clinical reasoning in disease diagnosis, evaluating machine-generated rationales for real-world clinical settings.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.07399v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta name="twitter:title" content="Bayesian beagle - Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales">
-<meta name="twitter:description" content="Proposing a time-efficient framework for clinical reasoning in disease diagnosis using prompt-based learning and machine-generated rationales.">
-<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.07399v1/x1.png">
-<meta name="twitter:creator" content="@ryanwesslen">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -83,6 +78,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../icon.jpg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bayesian beagle</span>
     </a>
@@ -121,13 +119,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Large Language Models are Clinical Reasoners: Reasoning-Aware Diagnosis Framework with Prompt-Generated Rationales</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">prompt engineering</div>
+    <div class="quarto-category">prompt-engineering</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Proposing a time-efficient framework for clinical reasoning in disease diagnosis using prompt-based learning and machine-generated rationales.
+    Proposes a diagnosis framework using prompt-based learning for clinical reasoning in disease diagnosis, evaluating machine-generated rationales for real-world clinical settings.
   </div>
 </div>
 
@@ -155,57 +153,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2312.07399v1/x1.png" class="img-fluid"></p>
-<section id="findings" class="level3">
-<h3 class="anchored" data-anchor-id="findings">Findings</h3>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
 <ol type="1">
-<li><p>Large Language Models (LLMs) demonstrate the capability for clinical reasoning in disease diagnosis via prompt-based learning, resulting in better performance in disease diagnosis through extensive experiments and analyses.</p></li>
-<li><p>Reasoning-aware diagnosis framework has shown potential in data-scarce scenarios, with multimodal student models consistently outperforming vision-only and vision-language baseline models even with limited training data.</p></li>
-<li><p>Ethical considerations were highlighted, and potential societal impacts such as data bias, accountability, and legal challenges were acknowledged before applying the method to real clinical settings.</p></li>
+<li><strong>Reasoning-Aware Diagnosis Framework</strong>: The paper presents a framework that rationalizes the diagnostic process via prompt-based learning in a time- and labor-efficient manner, and learns to reason over the prompt-generated rationales.</li>
+<li><strong>Exploiting Large Language Models for Clinical Reasoning</strong>: The study investigates the ability of large language models (LLMs) in clinical reasoning for disease diagnosis through experiments and analyses on both rationale generation and disease diagnosis in various settings.</li>
+<li><strong>Evaluation of Machine-Generated Rationales</strong>: The paper proposes a novel set of criteria specifically designed to evaluate machine-generated rationales for clinical diagnosis, facilitating future research in this area.</li>
 </ol>
 </section>
-<section id="methodology" class="level3">
-<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
+<section id="abstract" class="level3">
+<h3 class="anchored" data-anchor-id="abstract">Abstract</h3>
+<p>The study presents a “reasoning-aware” diagnosis framework that rationalizes the diagnostic process via prompt-based learning and explores the clinical reasoning for disease diagnosis using large language models (LLMs), demonstrating the ability of LLMs/LMs’ clinical reasoning through extensive experiments and analyses on rationale generation and disease diagnosis. Furthermore, the paper proposes a novel set of criteria for evaluating machine-generated rationales’ potential for real-world clinical settings, benefiting future research in this area.</p>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <ul>
-<li>Reasoning in clinical reasoning, also known as clinical reasoning or diagnostic reasoning, is a dynamic thinking process between the observed clinical evidence and the identification of disease.</li>
-<li>Machine reasoning has been exploited in the framework for reasoning-aware diagnosis. The diagnosis, based on the patient description and the rationale, is formulated as chain-of-thought reasoning, specifically Clinical Chain-of-Thought (Clinical CoT).</li>
+<li><strong>Importance of Clinical Reasoning</strong>: Effective clinical reasoning is crucial for diagnosis in real clinical settings, and poor clinical reasoning has been linked to misdiagnoses and adverse events.</li>
+<li><strong>Shortcomings of Existing Approaches</strong>: The predominant portion of existing approaches for disease diagnosis neglects clinical reasoning and focuses on image or text classification, which can be limited by the data-scarcity problem in biomedical domains.</li>
+<li><strong>Potential of Large Language Models</strong>: Large language models have demonstrated the ability to perform multi-step reasoning and present the thinking process behind it in various domains.</li>
 </ul>
 </section>
-<section id="framework-overview" class="level3">
-<h3 class="anchored" data-anchor-id="framework-overview">Framework Overview</h3>
+<section id="problem-formulation" class="level3">
+<h3 class="anchored" data-anchor-id="problem-formulation">Problem Formulation</h3>
 <ul>
-<li><strong>Module I: Clinical Rationalization</strong>
+<li><strong>Clinical Reasoning for Disease Diagnosis</strong>: The paper addresses the absence of effective clinical reasoning in disease diagnosis and explores the use of LLMs’ reasoning capacity in clinical diagnosis to improve diagnostic accuracy and reliability.</li>
+</ul>
+</section>
+<section id="testbed-alzheimers-disease-diagnosis" class="level3">
+<h3 class="anchored" data-anchor-id="testbed-alzheimers-disease-diagnosis">Testbed: Alzheimer’s Disease Diagnosis</h3>
 <ul>
-<li>Generating clinical CoT rationales by prompting a LLM to rationalize the presented clinical data.</li>
-</ul></li>
-<li><strong>Module II-1: Few-shot CoT Reasoning</strong>
+<li><strong>Significance of Alzheimer’s Disease Diagnosis</strong>: The study uses the Alzheimer’s Disease diagnosis task as the testbed for clinical reasoning, explicating the importance of understanding various aspects of the disease and the components of patient descriptions for diagnosis.</li>
+</ul>
+</section>
+<section id="reasoning-aware-diagnosis-framework" class="level3">
+<h3 class="anchored" data-anchor-id="reasoning-aware-diagnosis-framework">Reasoning-Aware Diagnosis Framework</h3>
 <ul>
-<li>Investigating the success of LLMs in clinical reasoning with few-shot disease diagnosis.</li>
-</ul></li>
-<li><strong>Module II-2: Unimodal-Student Distillation</strong>
-<ul>
-<li>Distilling the knowledge of diagnostic reasoning from the LLM into smaller language models for real clinical settings.</li>
-</ul></li>
-<li><strong>Module II-3: Multimodal-Student Distillation</strong>
-<ul>
-<li>Extending knowledge distillation in clinical diagnosis to vision-language models.</li>
-</ul></li>
+<li><strong>Framework Overview</strong>: The paper proposes a reasoning-aware diagnosis framework, involving modules addressing different approaches to facilitate clinical reasoning, such as clinical rationalization, few-shot CoT reasoning, and knowledge distillation.</li>
+<li><strong>Implementation Details of Student Models</strong>: The study provides implementation details for the experiments conducted on student models, discussing the experimental settings, datasets used, and the LLMs adopted.</li>
 </ul>
 </section>
 <section id="experiments" class="level3">
 <h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
 <ul>
-<li>Extensive evaluation and analysis of generated rationales demonstrate the potential of LLMs and distilled models to replicate the reasoning of clinical professionals in a human-like manner.</li>
-<li>Human evaluations and analysis of generated rationales establish the potential of utilizing LLMs to model clinical reasoning in disease diagnosis.</li>
+<li><strong>Experimental Settings</strong>: The study provides details on the datasets (ADNI and AIBL) used, the transformation of MRIs into textual descriptions, and the statistics of the collected data.</li>
+<li><strong>Performance, Knowledge Distillation, and Data Efficiency</strong>: The paper presents the empirical findings of the research questions guiding the experiments (RQ1, RQ2, RQ3, RQ4), showcasing the impact of clinical rationales on AD diagnosis and the benefits of knowledge distillation and data efficiency in clinical diagnostic reasoning.</li>
+<li><strong>Quality of Machine-Generated Rationales</strong>: The study conducted human evaluations and analysis of the quality of machine-generated clinical rationales, demonstrating the effective replication of clinical reasoning of radiologists and the clinical potential of the rationales for real-world applications.</li>
+</ul>
+</section>
+<section id="related-work" class="level3">
+<h3 class="anchored" data-anchor-id="related-work">Related Work</h3>
+<ul>
+<li><strong>Alzheimer’s Disease Diagnosis, Clinical NLP</strong>: The paper discusses the limitations of existing methods for AD diagnosis and the prior work on DL-based methods for AD diagnosis, clinical NLP, and LLMs in biomedical fields, laying the groundwork for the need and significance of the proposed reasoning-aware diagnosis framework.</li>
+</ul>
+</section>
+<section id="conclusion-and-appendix" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-and-appendix">Conclusion and Appendix</h3>
+<ul>
+<li><strong>Conclusion and Limitations</strong>: The study concludes by highlighting the limitations of the research and the need for societal impact assessment, and acknowledges the support received for the study.</li>
+<li><strong>Appendix</strong>: Appendices A, B, and C provide additional details on the datasets used, prompts for rationale generation and diagnosis, and the implementation details of student models used in the experiments.</li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<ul>
-<li>Length restriction in prompt-based learning might affect models’ performance in rationale generation and diagnosis.</li>
-<li>Lack of exploration of paradigms, such as jointly predicting the rationale generation and diagnosis via multi-task learning or dividing them into separate stages.</li>
-<li>No incorporation of the framework into real-world clinical settings.</li>
-</ul>
-<p>The paper introduces an innovative approach emerging from the findings and leverages the capabilities to demonstrate the significance of using prompt-based learning. The emphasis on real-world applications and ethical considerations denotes a strong foundation for future research. However, the study’s potential limitations and lack of integration into clinical settings must be addressed for practical use.</p>
+<p>The paper presents a comprehensive and detailed framework for reasoning-aware diagnosis, addressing the limitations of existing approaches and demonstrating the potential of LLMs in clinical reasoning. However, the study could benefit from a more detailed discussion of potential biases in the datasets used, and the limitations of the proposed framework in real-world clinical settings. Additionally, further exploration of alternative paradigms for reasoning-aware diagnosis beyond autoregressive generation and data efficiency explanations in the experimental results would enhance the paper’s impact.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -217,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-02</td>
+<td>2024-01-04</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

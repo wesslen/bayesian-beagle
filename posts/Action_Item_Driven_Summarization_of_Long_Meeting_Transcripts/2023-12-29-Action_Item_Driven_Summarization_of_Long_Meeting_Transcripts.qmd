@@ -1,11 +1,11 @@
 
 ---
 title: "Action-Item-Driven Summarization of Long Meeting Transcripts"
-description: "Automated abstractive meeting summary algorithm for action items, achieving improved BERTScore on AMI corpus."
+description: "Novel algorithm generates abstractive meeting summaries driven by action items, using sectional summaries and topic-based division method. Improved BERTScore."
 author: Logan Golia, Jugal Kalita
 date: "2023-12-29"
 image: "../../../bayesian-beagle.png"
-categories: ['prompt engineering']
+categories: ['prompt-engineering']
 format:
   html:
     code-overflow: wrap
@@ -14,40 +14,38 @@ format:
 ![](None)
 
 ### Major Takeaways
-1. The paper introduces a novel approach to automate the generation of meeting summaries by focusing on **abstractive summarization** driven by **action items** contained in the meeting transcript.
-2. The study develops three novel **topic segmentation algorithms** and an effective **action-item extraction algorithm** to improve the time efficiency of the summarization algorithm.
-3. The proposed **recursive meeting summarization algorithm** outperforms current state-of-the-art models by approximately 4.98% in terms of the BERTScore metric, showcasing the effectiveness of the action-item-driven summaries in capturing the semantic meaning of the reference summaries.
+
+1. **Increase in Meeting Summary Automation**: The paper presents a novel approach to automatically generate meeting summaries. The proposed method focuses on ***abstractive summarization driven by action items***, contributing to more informative and coherent summaries.
+
+2. **Focus on Topic Segmentation**: The study introduces ***three novel methods for dividing long transcripts into topic-based sections***, addressing issues with long-term dependencies and time efficiency of existing models.
+
+3. **Significant Performance Improvement**: The proposed approach achieved a ***4.98% increase in BERTScore*** compared to the current state-of-the-art model, indicating a substantial enhancement in summary quality.
 
 ### Introduction
-- Increased prevalence of online meetings has led to the need for automatic generation of meeting summaries, which is fundamentally different from dialogue summarization due to its additional features such as action items, main topics, and decisions made.
-- Current approaches produce general and vague summaries and lack effective **topic segmentation methods** for meeting summarization.
+The paper lays the groundwork by highlighting the increased prevalence of online meetings and the need for automating meeting summary generation. It emphasizes the difference between dialogue and meeting summarization, emphasizing the need for incorporating additional features such as action items, main topics, and decisions made.
 
 ### Related Work
-- Existing methods for meeting summarization either use extractive or abstractive summarization techniques, where abstractive summarization leads to better summaries.
-- The paper proposes novel techniques for **recursive summarization** and evaluates the performance against existing models and datasets.
+The paper elaborates on existing approaches to meeting summarization, including extractive and abstractive techniques. It also discusses the limitations of current models in capturing long-term dependencies and the shortcomings of linear segmentation methods.
 
 ### Approach
-- The paper introduces **topic segmentation** techniques including chunked linear segmentation, simple cosine segmentation, and complex cosine segmentation to effectively divide long meeting transcripts.
-- The approach involves **action-item extraction** using a fine-tuned BERT model and **context resolution** to extract meaningful action items from the meeting transcript. 
-- A **recursive summarization algorithm** combines sectional summaries using the BART model to create a coherent and action-item-driven summary.
+The study introduces three novel topic segmentation algorithms and outlines their effectiveness in improving summarization performance. It details the process of action-item extraction and proposes a technique called "neighborhood summarization" to address context resolution for extracting meaningful action items.
 
 ### Results and Analysis
-- The **topic segmentation techniques** outperform linear segmentation, with the complex cosine segmentation method showing the best performance.
-- The proposed **recursive summarization algorithm** outperforms the state-of-the-art model by approximately 4.98% in terms of the BERTScore metric, demonstrating the effectiveness of the action-item-driven summaries.
-- **Action-item-driven summaries** achieve slightly higher BERTScores than general summaries, highlighting the value of including action items in the summaries.
+The results showcase the superior performance of the proposed methods, with the action-item-driven summaries achieving slightly higher BERTScores. The study also provides examples to demonstrate the effectiveness of the action-item extraction technique.
 
 ### Future Research
-- Future research should focus on incorporating additional components of a good meeting summary, developing advanced **topic segmentation** methods, and exploring techniques for efficient **action-item extraction**.
+The paper identifies potential areas of future research, including the incorporation of additional components in meeting summaries such as decisions made and main topics. It also highlights the need for more advanced topic segmentation methods and expanded exploration of action-item extraction techniques.
 
 ### Critique
-- The paper lacks a thorough discussion of the potential limitations of the proposed algorithms and techniques, and it could benefit from including a robust evaluation of the effectiveness of the proposed methods in real-world scenarios.
+- The study heavily relies on the BERTScore metric for evaluation, which may not fully capture the nuances of summary quality.
+- The paper does not address potential limitations or challenges in implementing the proposed approach in real-world settings, such as computational resource requirements or generalizability to diverse meeting contexts.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-01-02       |
+| Date Generated     | 2024-01-04       |
 | Abstract | [http://arxiv.org/abs/2312.17581v1](http://arxiv.org/abs/2312.17581v1)        |
 | HTML     | [https://browse.arxiv.org/html/2312.17581v1](https://browse.arxiv.org/html/2312.17581v1)       |
 | Truncated       | False       |

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Zhichao Xu">
 <meta name="dcterms.date" content="2023-12-21">
-<meta name="description" content="Query-focused summarization (QFS) benefits from new decoding techniques, improving quality but with increased complexity and reduced speed.">
+<meta name="description" content="Query-focused summarization (QFS) uses Context-aware Decoding (CAD) to improve generation quality for QFS tasks.">
 
 <title>Bayesian beagle - Context-aware Decoding Reduces Hallucination in Query-focused Summarization</title>
 <style>
@@ -66,14 +66,9 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Context-aware Decoding Reduces Hallucination in Query-focused Summarization">
-<meta property="og:description" content="Query-focused summarization (QFS) benefits from new decoding techniques, improving quality but with increased complexity and reduced speed.">
+<meta property="og:description" content="Query-focused summarization (QFS) uses Context-aware Decoding (CAD) to improve generation quality for QFS tasks.">
 <meta property="og:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta name="twitter:title" content="Bayesian beagle - Context-aware Decoding Reduces Hallucination in Query-focused Summarization">
-<meta name="twitter:description" content="Query-focused summarization (QFS) benefits from new decoding techniques, improving quality but with increased complexity and reduced speed.">
-<meta name="twitter:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
-<meta name="twitter:creator" content="@ryanwesslen">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -83,6 +78,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../icon.jpg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bayesian beagle</span>
     </a>
@@ -127,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Query-focused summarization (QFS) benefits from new decoding techniques, improving quality but with increased complexity and reduced speed.
+    Query-focused summarization (QFS) uses Context-aware Decoding (CAD) to improve generation quality for QFS tasks.
   </div>
 </div>
 
@@ -157,66 +155,59 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="None.png" class="img-fluid"></p>
 <section id="major-takeaways" class="level3">
 <h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
-<ol type="1">
-<li><p><strong>Query-focused summarization (QFS)</strong> aims to provide a summary of a single document/multiple documents that satisfy the information needs of a given query. The dominant QFS pipeline consists of a retriever (sparse or dense retrieval) and a generator based on large language models (LLM).</p></li>
-<li><p>The deployment of LLMs in QFS potentially leads to <strong>hallucination</strong>, where the generated summary contains information contradicting the source documents/evidence, impacting the quality of the generated summary.</p></li>
-<li><p>The paper focuses on <strong>Context-aware Decoding (CAD)</strong> as a decoding method to improve QFS quality and reduce hallucination. Through experiments, it is shown that CAD improves QFS quality by reducing factual mistakes/hallucinations while mostly retaining the match of lexical patterns, with the caveat of increased inference-time FLOPs and reduced decoding speed.</p></li>
-</ol>
+<ul>
+<li>Query-focused summarization (QFS) has significant real-world applications such as abstractive snippet generation and retrieval augmented generation.</li>
+<li>Large language models (LLMs) used in QFS may suffer from hallucination, generating information that contradicts the source documents.</li>
+<li>Context-aware Decoding (CAD) has been proposed as a decoding method to reduce hallucination and improve generation quality in QFS.</li>
+</ul>
 </section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <ul>
-<li>QFS is important for real-world applications like abstractive snippet generation and augmented generation.</li>
-<li>Mainstream search engines still use extractive snippets due to problems with deploying generative models.</li>
-<li>Research interest has grown in developing decoding methods to improve generation quality and reduce hallucination.</li>
+<li>QFS aims to provide a summary of a single/multiple documents satisfying a given query, relevant for real-world applications.</li>
+<li>Large language models (LLMs) used in QFS may lead to hallucinations, contradicting the source documents.</li>
+<li>Different decoding methods have been explored to improve generation quality and reduce hallucination, with growing interest in CAD.</li>
 </ul>
 </section>
 <section id="background" class="level3">
 <h3 class="anchored" data-anchor-id="background">Background</h3>
 <ul>
-<li><strong>Context-aware Decoding (CAD)</strong> leverages pointwise mutual information and proposes a product-of-experts enhancement to make generation more conditioned on the input evidence.</li>
-<li>The paper explains the computational cost and trade-offs involved in using CAD.
-<ul>
-<li>It presents the FLOPs per token in the forward pass and the impact on decoding speed.</li>
-</ul></li>
+<li>Context-aware Decoding (CAD) leverages pointwise mutual information and introduces a product-of-experts enhancement to condition generation on input evidence.</li>
+<li>The use of PMI in CAD aims to measure the association of predicting specific tokens and the presence of input context.</li>
+<li>The computational cost in CAD is analyzed, and the additional complexity in terms of FLOPs is discussed.</li>
 </ul>
 </section>
 <section id="experiments" class="level3">
 <h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
 <ul>
-<li>The paper conducts experiments on QFS and news summarization datasets with different choices of language models.</li>
-<li>It uses various language models, including pre-trained and instruction finetuned models.</li>
-<li>The hyperparameter settings for decoding are also detailed, along with the specific prompting templates used.</li>
+<li>Experiments are conducted on QFS datasets and news summarization datasets using different language models, including pre-trained and instruction finetuned models.</li>
+<li>Prompting templates and experiment setup, including datasets, language models, evaluation metrics, and hyperparameters, are detailed.</li>
 </ul>
 </section>
 <section id="results-and-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="results-and-analysis">Results and Analysis</h3>
 <ul>
-<li>CAD’s effectiveness in QFS and news summarization is evaluated using metrics like ROUGE F1, BERTScore-precision, and FactKB.</li>
-<li>The paper discusses the choice of hyperparameter <strong>α</strong> and its impact on model performance.
-<ul>
-<li>There’s a trade-off between FactKB score and ROUGE score as α increases.</li>
-</ul></li>
+<li>CAD improves news summarization performance and reduces factuality errors, as evidenced by improved ROUGE scores and FactKB scores on multiple language models.</li>
+<li>Trade-offs between FactKB and ROUGE scores are observed with varying hyperparameter α, with optimal performance at α=0.3.</li>
+<li>CAD introduces additional inference-time FLOPs and reduces decoding speed, impacting performance on real-world datasets.</li>
 </ul>
 </section>
 <section id="related-work" class="level3">
 <h3 class="anchored" data-anchor-id="related-work">Related Work</h3>
 <ul>
-<li>The paper discusses other research on hallucination in natural language generation and decoding methods to improve generation quality.</li>
+<li>Other works have focused on addressing hallucination in natural language generation and developing decoding methods to improve generation quality.</li>
 </ul>
 </section>
 <section id="conclusion-and-limitations" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion-and-limitations">Conclusion and Limitations</h3>
 <ul>
-<li>The reproducibility study shows that CAD improves QFS and news summarization quality but comes with additional computational complexity and reduced decoding speed.</li>
-<li>The paper acknowledges limitations like the limited bandwidth and resources for experimenting with larger language models.</li>
+<li>The study provides insights into the effectiveness of CAD in QFS and news summarization, but is limited to language models no larger than 11B.</li>
 </ul>
 </section>
 <section id="critique" class="level3">
 <h3 class="anchored" data-anchor-id="critique">Critique</h3>
 <ul>
-<li>The paper could benefit from a more in-depth discussion of the potential implications and limitations of using CAD in real-world applications.</li>
-<li>The trade-offs between improved quality and increased computational cost could be further explored, offering more nuanced insights.</li>
+<li>This paper provides a comprehensive study on the effectiveness of CAD in reducing hallucination and improving generation quality in QFS. However, the paper could benefit from a more in-depth analysis of trade-offs between different decoding methods and a thorough investigation of the impact of CAD on different types of documents beyond news and QFS datasets. More discussions on potential limitations and challenges in the deployment of CAD in real-world applications would also enhance the paper’s practical implications.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -229,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-02</td>
+<td>2024-01-04</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

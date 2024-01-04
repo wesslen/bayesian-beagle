@@ -1,7 +1,7 @@
 
 ---
 title: "Context-aware Decoding Reduces Hallucination in Query-focused Summarization"
-description: "Query-focused summarization (QFS) benefits from new decoding techniques, improving quality but with increased complexity and reduced speed."
+description: "Query-focused summarization (QFS) uses Context-aware Decoding (CAD) to improve generation quality for QFS tasks."
 author: Zhichao Xu
 date: "2023-12-21"
 image: "../../../bayesian-beagle.png"
@@ -15,49 +15,44 @@ format:
 
 ### Major Takeaways
 
-1. **Query-focused summarization (QFS)** aims to provide a summary of a single document/multiple documents that satisfy the information needs of a given query. The dominant QFS pipeline consists of a retriever (sparse or dense retrieval) and a generator based on large language models (LLM).
-
-2. The deployment of LLMs in QFS potentially leads to **hallucination**, where the generated summary contains information contradicting the source documents/evidence, impacting the quality of the generated summary.
-
-3. The paper focuses on **Context-aware Decoding (CAD)** as a decoding method to improve QFS quality and reduce hallucination. Through experiments, it is shown that CAD improves QFS quality by reducing factual mistakes/hallucinations while mostly retaining the match of lexical patterns, with the caveat of increased inference-time FLOPs and reduced decoding speed.
+- Query-focused summarization (QFS) has significant real-world applications such as abstractive snippet generation and retrieval augmented generation.
+- Large language models (LLMs) used in QFS may suffer from hallucination, generating information that contradicts the source documents.
+- Context-aware Decoding (CAD) has been proposed as a decoding method to reduce hallucination and improve generation quality in QFS.
 
 ### Introduction
-- QFS is important for real-world applications like abstractive snippet generation and augmented generation.
-- Mainstream search engines still use extractive snippets due to problems with deploying generative models.
-- Research interest has grown in developing decoding methods to improve generation quality and reduce hallucination.
+- QFS aims to provide a summary of a single/multiple documents satisfying a given query, relevant for real-world applications.
+- Large language models (LLMs) used in QFS may lead to hallucinations, contradicting the source documents.
+- Different decoding methods have been explored to improve generation quality and reduce hallucination, with growing interest in CAD.
 
 ### Background
-- **Context-aware Decoding (CAD)** leverages pointwise mutual information and proposes a product-of-experts enhancement to make generation more conditioned on the input evidence.
-- The paper explains the computational cost and trade-offs involved in using CAD.
-  - It presents the FLOPs per token in the forward pass and the impact on decoding speed.
+- Context-aware Decoding (CAD) leverages pointwise mutual information and introduces a product-of-experts enhancement to condition generation on input evidence.
+- The use of PMI in CAD aims to measure the association of predicting specific tokens and the presence of input context.
+- The computational cost in CAD is analyzed, and the additional complexity in terms of FLOPs is discussed.
 
 ### Experiments
-- The paper conducts experiments on QFS and news summarization datasets with different choices of language models.
-- It uses various language models, including pre-trained and instruction finetuned models.
-- The hyperparameter settings for decoding are also detailed, along with the specific prompting templates used.
+- Experiments are conducted on QFS datasets and news summarization datasets using different language models, including pre-trained and instruction finetuned models.
+- Prompting templates and experiment setup, including datasets, language models, evaluation metrics, and hyperparameters, are detailed.
 
 ### Results and Analysis
-- CAD's effectiveness in QFS and news summarization is evaluated using metrics like ROUGE F1, BERTScore-precision, and FactKB.
-- The paper discusses the choice of hyperparameter **α** and its impact on model performance.
-  - There's a trade-off between FactKB score and ROUGE score as α increases.
+- CAD improves news summarization performance and reduces factuality errors, as evidenced by improved ROUGE scores and FactKB scores on multiple language models.
+- Trade-offs between FactKB and ROUGE scores are observed with varying hyperparameter α, with optimal performance at α=0.3.
+- CAD introduces additional inference-time FLOPs and reduces decoding speed, impacting performance on real-world datasets.
 
 ### Related Work
-- The paper discusses other research on hallucination in natural language generation and decoding methods to improve generation quality.
+- Other works have focused on addressing hallucination in natural language generation and developing decoding methods to improve generation quality.
 
 ### Conclusion and Limitations
-- The reproducibility study shows that CAD improves QFS and news summarization quality but comes with additional computational complexity and reduced decoding speed.
-- The paper acknowledges limitations like the limited bandwidth and resources for experimenting with larger language models.
+- The study provides insights into the effectiveness of CAD in QFS and news summarization, but is limited to language models no larger than 11B.
 
 ### Critique
-- The paper could benefit from a more in-depth discussion of the potential implications and limitations of using CAD in real-world applications.
-- The trade-offs between improved quality and increased computational cost could be further explored, offering more nuanced insights.
+- This paper provides a comprehensive study on the effectiveness of CAD in reducing hallucination and improving generation quality in QFS. However, the paper could benefit from a more in-depth analysis of trade-offs between different decoding methods and a thorough investigation of the impact of CAD on different types of documents beyond news and QFS datasets. More discussions on potential limitations and challenges in the deployment of CAD in real-world applications would also enhance the paper's practical implications.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-01-02       |
+| Date Generated     | 2024-01-04       |
 | Abstract | [http://arxiv.org/abs/2312.14335v1](http://arxiv.org/abs/2312.14335v1)        |
 | HTML     | [https://browse.arxiv.org/html/2312.14335v1](https://browse.arxiv.org/html/2312.14335v1)       |
 | Truncated       | False       |

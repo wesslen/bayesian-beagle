@@ -8,7 +8,7 @@
 
 <meta name="author" content="Ruifeng Yuan, Shichao Sun, Zili Wang, Ziqiang Cao, Wenjie Li">
 <meta name="dcterms.date" content="2023-12-22">
-<meta name="description" content="AI assistant ChatGPT with verbal long-term memory for improved responses using GPT-4.">
+<meta name="description" content="AI assistants like ChatGPT with long-term memory improve responses using past dialogue, tested on different datasets.">
 
 <title>Bayesian beagle - Evolving Large Language Model Assistant with Long-Term Conditional Memory</title>
 <style>
@@ -66,14 +66,9 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Evolving Large Language Model Assistant with Long-Term Conditional Memory">
-<meta property="og:description" content="AI assistant ChatGPT with verbal long-term memory for improved responses using GPT-4.">
+<meta property="og:description" content="AI assistants like ChatGPT with long-term memory improve responses using past dialogue, tested on different datasets.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2312.17257v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
-<meta name="twitter:title" content="Bayesian beagle - Evolving Large Language Model Assistant with Long-Term Conditional Memory">
-<meta name="twitter:description" content="AI assistant ChatGPT with verbal long-term memory for improved responses using GPT-4.">
-<meta name="twitter:image" content="https://browse.arxiv.org/html/2312.17257v1/x1.png">
-<meta name="twitter:creator" content="@ryanwesslen">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -83,6 +78,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../icon.jpg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Bayesian beagle</span>
     </a>
@@ -127,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    AI assistant ChatGPT with verbal long-term memory for improved responses using GPT-4.
+    AI assistants like ChatGPT with long-term memory improve responses using past dialogue, tested on different datasets.
   </div>
 </div>
 
@@ -157,79 +155,53 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="https://browse.arxiv.org/html/2312.17257v1/x1.png" class="img-fluid"></p>
 <section id="evolving-large-language-model-assistant-with-long-term-conditional-memory" class="level1">
 <h1>Evolving Large Language Model Assistant with Long-Term Conditional Memory</h1>
-<section id="major-findings" class="level2">
-<h2 class="anchored" data-anchor-id="major-findings">Major Findings</h2>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
 <ul>
-<li>The paper presents a new evolving large language model (LLM) assistant that uses long-term memory to preserve knowledge and experiences from past dialogues to improve future responses.</li>
-<li>The model utilizes a memory-based framework with three main components: an existing LLM assistant, a memory, and a prompt-based interaction between the assistant and the memory.</li>
-<li>The proposed <strong>conditional memory</strong> approach is the most effective for learning new knowledge and from human feedback, while a combination of conditional memory and summary-based memory improves performance for continuing previous dialogue.</li>
+<li>The paper presents an evolving large language model assistant that utilizes <strong>verbal long-term memory</strong> to preserve knowledge and experience from previous dialogues to improve future responses.</li>
+<li><strong>Conditional memory</strong> is proposed as a new memorizing mechanism to address the shortcomings of existing methods in preserving and utilizing critical information from dialogues.</li>
+<li>The study evaluates the model on three constructed test datasets focusing on different abilities required by an AI assistant with long-term memory and finds that conditional memory achieves relatively better results.</li>
 </ul>
-</section>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>The paper introduces an evolving large language model assistant that leverages long-term conditional memory to enhance the quality of responses in future dialogues. The model generates and stores records for each dialogue to be used in later interactions. The paper examines different mechanisms for constructing and utilizing memory and evaluates the assistant on three test datasets focusing on various abilities required by an AI assistant with long-term memory.</p>
 </section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <ul>
-<li>Large language models (LLMs), such as ChatGPT, have become popular in providing assistance and engaging in chit-chat with users.</li>
-<li>The main problem is that current AI assistants do not retain information from previous dialogues, hindering their ability to learn from past interactions and improve future responses.</li>
-<li>The evolving LLM assistant aims to address this by using a memory-based framework to store and retrieve dialogue history.</li>
+<li>The rapid development of large language models has led to the widespread use of AI assistants such as ChatGPT, which provide assistance through dialogue interactions.</li>
+<li>However, current AI assistants lack the ability to preserve information from previous dialogue sessions, hindering their capacity to learn and improve responses over time.</li>
 </ul>
 </section>
-<section id="related-work" class="level2">
-<h2 class="anchored" data-anchor-id="related-work">Related Work</h2>
+<section id="proposed-framework" class="level2">
+<h2 class="anchored" data-anchor-id="proposed-framework">Proposed Framework</h2>
 <ul>
-<li>Existing research in retrieval-based dialogue systems and conversational question answering has long focused on integrating retrieved dialogue and external knowledge into the generation process.</li>
+<li>The evolving large language model assistant is made up of an existing LLM assistant, a <strong>memory</strong>, and a prompt-based wrapper responsible for interactions between the assistant and the memory.</li>
+<li>The wrapper constructs memory records from ongoing dialogues and stores them in the memory, which is later retrieved to enhance the quality of responses.</li>
 </ul>
 </section>
-<section id="method" class="level2">
-<h2 class="anchored" data-anchor-id="method">Method</h2>
-<section id="memory-construction" class="level3">
-<h3 class="anchored" data-anchor-id="memory-construction">Memory Construction</h3>
+<section id="memory-construction" class="level2">
+<h2 class="anchored" data-anchor-id="memory-construction">Memory Construction</h2>
 <ul>
-<li>The paper explores three types of memory construction: history-based memory, summary-based memory, and conditional memory, with conditional memory demonstrating the most promising results. ### Memory Retrieval and Application</li>
-<li>The memory retrieval process involves utilizing dense retrieval and a self-reflection mechanism to determine the usefulness of retrieved information.</li>
+<li>The study explores three types of memory construction mechanisms: History-Based Memory, Summary-Based Memory, and <strong>Conditional Memory</strong>.</li>
+<li>Conditional Memory is proposed to selectively memorize crucial information based on the importance of each utterance.</li>
 </ul>
 </section>
-</section>
-<section id="dataset" class="level2">
-<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<section id="memory-retrieval-and-application" class="level2">
+<h2 class="anchored" data-anchor-id="memory-retrieval-and-application">Memory Retrieval and Application</h2>
 <ul>
-<li>The experiment involves constructing three test datasets focusing on different aspects: continuing previous dialogue, learning new knowledge, and learning from user feedback.</li>
+<li>The retrieval of memory records is conducted using dense retrieval, and a <strong>self-reflection mechanism</strong> is employed to determine the usefulness of retrieved information in response generation.</li>
 </ul>
 </section>
-<section id="experiment" class="level2">
-<h2 class="anchored" data-anchor-id="experiment">Experiment</h2>
+<section id="evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
 <ul>
-<li>The study uses GPT-4 as the backbone for evaluation and employs various GPT-4 evaluations, including scoring, comparing, and multiple choice.</li>
-<li>Results indicate that conditional memory outperforms other forms of memory and that the combination of conditional memory and summary-based memory enhances performance.</li>
-<li><strong>Self-reflection retrieval</strong> is effective, especially for summary-based memory.</li>
-</ul>
-</section>
-<section id="appendix-a-method-details" class="level2">
-<h2 class="anchored" data-anchor-id="appendix-a-method-details">Appendix A: Method Details</h2>
-<ul>
-<li>It provides detailed prompts for memory construction, self-reflection retrieval, and dataset construction.</li>
-</ul>
-</section>
-<section id="appendix-b-dataset-construction-details" class="level2">
-<h2 class="anchored" data-anchor-id="appendix-b-dataset-construction-details">Appendix B: Dataset Construction Details</h2>
-<ul>
-<li>It presents prompts for constructing test datasets focusing on continuing previous dialogue, learning new knowledge, and learning from human feedback.</li>
-</ul>
-</section>
-<section id="appendix-c-gpt-evaluation-details" class="level2">
-<h2 class="anchored" data-anchor-id="appendix-c-gpt-evaluation-details">Appendix C: GPT Evaluation Details</h2>
-<ul>
-<li>It outlines prompts for GPT-4 evaluations, such as scoring, comparing, and multiple choice.</li>
+<li>The model is evaluated on three test datasets focusing on different aspects: continuing previous dialogues, learning new knowledge, and learning from human feedback.</li>
+<li>The results show that conditional memory outperforms other forms of memory in learning new knowledge and learning from human feedback.</li>
 </ul>
 </section>
 <section id="critique" class="level2">
 <h2 class="anchored" data-anchor-id="critique">Critique</h2>
 <ul>
-<li>The study uses small-scale datasets for testing due to the high cost of GPT-4 usage, which may limit the generalizability of the findings.</li>
-<li>The paper acknowledges that other key points, such as time stamp or forgetting mechanism, are yet to be explored, suggesting that the study is still in the foundational stage.</li>
+<li>The study relies on small-scale test datasets, limiting the generalizability of the findings to real-world scenarios with larger and more diverse data.</li>
+<li>The paper mainly investigates the foundational aspects of the proposed idea, leaving other key aspects such as the time stamp or forgetting mechanism unexplored.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -242,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-02</td>
+<td>2024-01-04</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

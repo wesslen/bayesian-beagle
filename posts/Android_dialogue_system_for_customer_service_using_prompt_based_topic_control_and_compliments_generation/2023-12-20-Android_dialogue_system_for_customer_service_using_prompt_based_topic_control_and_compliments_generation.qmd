@@ -1,11 +1,11 @@
 
 ---
 title: "Android dialogue system for customer service using prompt-based topic control and compliments generation"
-description: "Dialogue system for trip planning uses ChatGPT-API to control topics and generate compliments, evaluated positively in a travel agency."
+description: "A chatbot system for trip planning uses AI to control conversation topics and generate personalized compliments, showing effectiveness in a preliminary evaluation."
 author: Miyama Tamotsu, Okada Shogo
 date: "2023-12-20"
 image: "https://browse.arxiv.org/html/2312.12924v1/extracted/5307376/fig/dialogue_flow.png"
-categories: ['hci', 'prompt engineering']
+categories: ['hci', 'prompt-engineering']
 format:
   html:
     code-overflow: wrap
@@ -13,53 +13,35 @@ format:
 
 ![](https://browse.arxiv.org/html/2312.12924v1/extracted/5307376/fig/dialogue_flow.png)
 
-### Major Takeaways
-1. The paper describes the development of a **dialogue system for customer service, integrating topic control, compliment generation, and trip planning** using the ChatGPT-API.
-2. The system employs **generative AI (GPT-3.5-turbo and GPT-4)** for controlling topics, creating dialogue prompts, and generating travel plans based on user preferences.
-3. Preliminary evaluations conducted in a travel agency’s actual store demonstrated the **effectiveness of the proposed system**, ranking it first in both satisfaction and plan ratings.
+### Major Findings
+- The dialogue system developed for the Dialogue Robot Competition 2023 achieved **topic control for trip planning** by inserting text into prompts using the ChatGPT-API.
+- The system is capable of **generating compliments** for the user based on recognition of the user’s appearance and creating travel plans by extracting knowledge about the user’s preferences from the history of the user’s utterances.
+- The system was evaluated in a preliminary round at a travel agency’s actual store, and the results showed the **effectiveness** of the proposed system in terms of customer satisfaction and plan creation.
 
-### I. Introduction
-- Development of dialogue system for the Dialogue Robot Competition 2023
-- Importance of hospitality and social implementation in customer service
-- Necessity to construct a dialogue system with various elements of hospitality service and evaluate users
+### Proposed System
+- **Controlling topics with ChatGPT prompts**
+  - Utilized GPT-3.5-turbo and GPT-4 to create a travel plan by inserting fixed text in the prompts.
+- **Dialogue Flow**
+  - Elicited customer requests, determined tourist destinations, confirmed customer requirements, and discussed a travel plan that meets the customer’s needs.
+- **Function to complement a user’s physical appearance**
+  - Recognized and praised the user’s appearance characteristics such as clothing color, shade, eyeglasses, beauty quotient, and personality.
+- **Control using user’s past speech**
+  - Extracted information from the user’s past speech to create travel plans and decisions on sightseeing spots.
 
-### II. Proposed System
-#### A. Controlling topics with ChatGPT prompts
-- Utilization of GPT-3.5-turbo and GPT-4 for creating a travel plan
-- Inserting fixed text in the prompts to direct the topic toward travel planning
-
-#### B. Dialogue Flow
-- Eliciting customer requests through questions and determining tourist destinations
-- Confirming customer requirements for the travel plan and discussing a suitable plan
-
-#### C. Function to complement a user’s physical appearance
-- Recognition of user's appearance characteristics using CLIP model and Face++
-- Automatic generation of compliments based on user's appearance characteristics
-
-#### D. Control using user’s past speech
-- Utilizing ChatGPT to determine sightseeing spots and create travel plans based on user’s past speech information
-
-#### E. Overall Configuration
-- System configuration presenting the overall structure
-
-### III. User Evaluation and Preliminary Results
-- Evaluation items including satisfaction and plan ratings
-- System ranked first in both satisfaction and plan ratings during the preliminary round
-
-### IV. Conclusion
-- Summary of the system's dialogue control and usage of ChatGPT
-- Ranking first in the preliminary round evaluations
+### User Evaluation and Preliminary Results
+- The system was evaluated based on satisfaction and plan creation, and it ranked first in both satisfaction rating and plan rating in the preliminary round.
 
 ### Critique
-- The paper lacks a detailed discussion of the limitations or potential challenges faced during the development and implementation of the dialogue system.
-- Further insights into the scalability and adaptability of the system in diverse customer service scenarios could enhance the paper's depth and applicability.
+- The paper lacks in-depth technical details regarding the **implementation of ChatGPT** and its integration with the dialogue system.
+- The evaluation of the system was based on a single round of testing, which may not be sufficient to draw definitive conclusions regarding its efficacy in the long term.
+- The **generalizability** of the system's performance across different customer service scenarios and user demographics is not discussed.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-01-02       |
+| Date Generated     | 2024-01-04       |
 | Abstract | [http://arxiv.org/abs/2312.12924v1](http://arxiv.org/abs/2312.12924v1)        |
 | HTML     | [https://browse.arxiv.org/html/2312.12924v1](https://browse.arxiv.org/html/2312.12924v1)       |
 | Truncated       | False       |

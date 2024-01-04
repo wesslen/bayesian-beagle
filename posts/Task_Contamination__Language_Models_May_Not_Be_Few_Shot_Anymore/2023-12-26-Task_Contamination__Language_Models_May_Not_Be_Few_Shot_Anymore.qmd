@@ -1,11 +1,11 @@
 
 ---
 title: "Task Contamination: Language Models May Not Be Few-Shot Anymore"
-description: "Large language models (LLMs) perform better in zero-shot and few-shot tasks on datasets released before their training data creation date, possibly due to task contamination."
+description: "Large language models (LLMs) perform better on older datasets, suggesting task contamination affects zero-shot and few-shot tasks."
 author: Changmao Li, Jeffrey Flanigan
 date: "2023-12-26"
 image: "https://browse.arxiv.org/html/2312.16337v1/x1.png"
-categories: ['prompt engineering']
+categories: ['prompt-engineering']
 format:
   html:
     code-overflow: wrap
@@ -13,30 +13,34 @@ format:
 
 ![](https://browse.arxiv.org/html/2312.16337v1/x1.png)
 
-### Summary
+### Task Contamination: Language Models May Not Be Few-Shot Anymore
 
-The paper explores the phenomenon of task contamination in large language models (LLMs), which affects their zero-shot and few-shot performance. The study uses a range of LLMs and tasks to demonstrate how LLMs may be exposed to task examples during pre-training, leading to inflated performance in zero-shot and few-shot settings. The authors employ various methods, such as training data inspection, task example extraction, and chronological analysis, to provide evidence of task contamination. The results indicate that closed-sourced models may demonstrate inflated performance in zero-shot or few-shot evaluation, and are therefore not trustworthy baselines in these settings. Additionally, the paper uncovers challenges in assessing task contamination due to different formats of training data and the difficulty in extracting task examples. The findings suggest a need for caution in relying on LLMs for zero-shot and few-shot tasks and call for additional research to understand the extent of task contamination for large language models.
+#### Summary
+In this paper, the authors investigate the impact of task contamination on the zero-shot and few-shot performance of large language models (LLMs). Task contamination refers to the inclusion of task training examples in the pre-training data, affecting the model's zero or few-shot evaluation. The authors systematically analyze this problem by measuring the scope of task contamination across various models and tasks, conducting training data inspection, task example extraction, and a membership inference attack. They find strong evidence of task contamination for some combinations of models and datasets, particularly in GPT-3 series models.
 
-### Major Takeaways
+#### Major Takeaways
+1. **Closed models may demonstrate inflated performance** in zero-shot or few-shot evaluation due to task contamination, raising concerns about the trustworthiness of their baselines in these settings.
+2. For classification tasks **without demonstrated possibility of task contamination**, LLMs rarely show statistically significant improvements over majority baselines, indicating limited performance improvements in both zero and few-shot settings.
+3. The observed increase in **zero-shot or few-shot performance over time** for GPT-3 series models is likely due to task contamination, posing a challenge for fair evaluation in these settings.
 
-1. Closed-sourced models may demonstrate inflated performance in zero-shot or few-shot evaluation, casting doubt on their trustworthiness as baselines in these settings.
-2. LLMs rarely show statistically significant improvements over majority baselines in both zero and few-shot settings for tasks without demonstrated possibility of task contamination.
-3. The observed increase over time in the zero-shot or few-shot performance of LLMs, especially in the GPT-3 series, is likely due to task contamination.
+#### Critique
+While the paper provides valuable insights into the impact of task contamination on LLM performance, there are limitations to consider:
+- The study relies on empirical evaluations without a comprehensive exploration of the extent and impact of task contamination.
+- The methodology suffers from low recall in detecting task contamination, underscoring the challenges of accurately identifying contamination issues.
+- The paper emphasizes the need for publicly releasing training datasets but does not delve into potential solutions or interventions to mitigate task contamination.
 
-### Critique
+#### Related Work
+The paper aligns with previous research on data contamination in LLMs, adding to existing knowledge by providing a comprehensive evaluation of task contamination for zero and few-shot learning scenarios.
 
-The paper provides valuable insights into the phenomenon of task contamination in large language models, but there are some potential limitations and areas for improvement:
-
-1. The study focuses primarily on the chronological analysis and task contamination for specific models, potentially limiting the generalizability of the findings to a broader range of LLMs and tasks.
-2. The challenges and limitations of the methods used for detecting task contamination, such as training data inspection and task example extraction, raise concerns about the reliability and completeness of the evidence presented.
-3. The paper lacks a comprehensive discussion of potential strategies or solutions to mitigate task contamination in large language models, leaving an opportunity for further exploration in future research.
+#### Potential Future Work
+The authors recommend additional research be conducted on task contamination for zero and few-shot settings to reveal the extent and impact of task contamination for large language models in these settings. This future work holds promise for addressing the limitations and advancing the understanding of task contamination in LLMs.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-01-02       |
+| Date Generated     | 2024-01-04       |
 | Abstract | [http://arxiv.org/abs/2312.16337v1](http://arxiv.org/abs/2312.16337v1)        |
 | HTML     | [https://browse.arxiv.org/html/2312.16337v1](https://browse.arxiv.org/html/2312.16337v1)       |
 | Truncated       | False       |

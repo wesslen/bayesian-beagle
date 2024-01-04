@@ -14,7 +14,6 @@ description: "{{ example['meta']['subtitle'] }}"
 author: {{ authors }}
 date: "{{ example['meta']['publish_date'] }}"
 image: "{{ image }}"
-filename: "{{ example['meta']['model'] }}"
 categories: {{ example['meta']['categories'] }}
 format:
   html:

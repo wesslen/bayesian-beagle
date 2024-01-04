@@ -47,8 +47,8 @@ jobs:
         # Sort the key files
         sort keys_input.txt > sorted_keys_input.txt
         sort keys_input_new.txt > sorted_keys_input_new.txt
-        # Find keys that are in input.jsonl but not in input_new.jsonl
-        comm -23 sorted_keys_input.txt sorted_keys_input_new.txt > unique_keys.txt
+        # Find keys that are in input_new.jsonl but not in input.jsonl
+        comm -23 sorted_keys_input_new.txt sorted_keys_input.txt > unique_keys.txt
         # Check if unique_keys.txt is not empty
         if [ -s unique_keys.txt ]; then
           # Extract objects with unique keys and append

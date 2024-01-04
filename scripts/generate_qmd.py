@@ -10,6 +10,7 @@ app = typer.Typer()
 QMD_TEMPLATE = """
 ---
 title: "{{ example['meta']['title'] }}"
+id: "{{ example['id'] }}"
 description: "{{ example['meta']['subtitle'] }}"
 author: {{ authors }}
 date: "{{ example['meta']['publish_date'] }}"

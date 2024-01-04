@@ -53,7 +53,7 @@ jobs:
         if [ -s unique_keys.txt ]; then
           # Extract objects with unique keys and append
           while read key; do
-            jq -c --arg id "$key" '. | select(.id == $id)' data/input.jsonl >> new_records.jsonl
+            jq -c --arg id "$key" '. | select(.id == $id)' input_new.jsonl >> new_records.jsonl
           done < unique_keys.txt
           cat new_records.jsonl >> data/input.jsonl
           git config user.name "Automated"

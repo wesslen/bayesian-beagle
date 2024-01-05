@@ -1,0 +1,63 @@
+
+---
+title: "KernelGPT: Enhanced Kernel Fuzzing via Large Language Models"
+id: "2401.00563v1"
+description: "KernelGPT automates syscall specification generation for enhanced kernel fuzzing, improving coverage and finding new bugs."
+author: Chenyuan Yang, Zijie Zhao, Lingming Zhang
+date: "2023-12-31"
+image: "https://browse.arxiv.org/html/2401.00563v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.00563v1/x1.png)
+
+# KernelGPT: Enhanced Kernel Fuzzing via Large Language Models
+
+## Key Findings
+
+1. **Automatic Inference of Syzkaller Specifications**: KernelGPT, using Large Language Models (LLMs), automates the inference of all necessary specification components for kernel drivers, significantly improving coverage and detecting multiple previously unknown bugs.
+
+2. **Iterative Approach for Specification Generation**: The paper introduces a novel iterative strategy to automatically infer driver descriptions based on kernel code analysis, leveraging state-of-the-art GPT4 to synthesize high-quality specifications.
+
+3. **Validation and Repair of Specifications**: KernelGPT validates and repairs the generated specifications by consulting LLMs with error messages encountered, resulting in enhanced coverage and bug detection.
+
+## Summary
+
+### Introduction
+- Kernel fuzzing is crucial for detecting potential kernel bugs or vulnerabilities, and Syzkaller is a popular tool for this purpose.
+- Existing approaches for automating syscall specifications are mostly manual and lead to incomplete coverage, and KernelGPT aims to address this issue.
+
+### Background and Related Work
+- Kernel and device drivers are critical for system functionality, and kernel fuzzing using techniques like Syzkaller has been effective in identifying vulnerabilities.
+- Existing techniques for syscall specification generation rely on static analysis or dynamic tracing with limitations in accuracy and efficiency.
+
+### Approach
+- KernelGPT utilizes an iterative approach to automatically infer driver specifications and further repair the descriptions with the validation feedback.
+- The process involves driver detection, specification generation, and specification validation and repair.
+
+### Implementation
+- The paper details the implementation of the source code extractor, analysis LLM, few-shot prompting, and driver selection in the experiment.
+
+### Evaluation
+- KernelGPT is evaluated based on the number and quality of generated specifications, comparison with baselines, and the detection of kernel bugs.
+
+### Conclusion
+- The paper concludes by summarizing the key contributions of KernelGPT and the future potential for leveraging LLMs in kernel fuzzing.
+
+## Critique
+
+The paper provides comprehensive details on the implementation and evaluation of KernelGPT, showcasing its effectiveness in enhancing kernel fuzzing. However, the experimental evaluation is preliminary, and the success could be influenced by the specific kernel version or configuration used in the study. Additionally, the potential limitations of using LLMs in this context, such as context size limitations and difficulties with complex code logic, should be further discussed for a comprehensive assessment of the approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-05       |
+| Abstract | [http://arxiv.org/abs/2401.00563v1](http://arxiv.org/abs/2401.00563v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.00563v1](https://browse.arxiv.org/html/2401.00563v1)       |
+| Truncated       | False       |
+| Word Count       | 12049       |

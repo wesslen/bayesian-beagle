@@ -1,0 +1,60 @@
+
+---
+title: "ICE-GRT: Instruction Context Enhancement by Generative Reinforcement based Transformers"
+id: "2401.02072v1"
+description: "Introduction of ICE-GRT, a model utilizing Reinforcement Learning from Human Feedback, performs well in domain-specific tasks and general capabilities."
+author: Chen Zheng, Ke Sun, Da Tang, Yukun Ma, Yuyu Zhang, Chenguang Xi, Xun Zhou
+date: "2024-01-04"
+image: "https://browse.arxiv.org/html/2401.02072v1/extracted/5329451/images/model_architecture.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.02072v1/extracted/5329451/images/model_architecture.png)
+
+### Major Takeaways
+- ICE-GRT, a Large Language Model (LLM), addresses limitations in domain-specific tasks by utilizing Reinforcement Learning from Human Feedback (RLHF) grounded in Proximal Policy Optimization (PPO).
+- ICE-GRT demonstrates exceptional performance in both general and domain-specific tasks, showcasing improved ability for detailed analysis, particularly in scenarios where smaller-sized LLMs fall short.
+- The success of ICE-GRT is dependent on crucial factors such as appropriate data, reward size scaling, KL-control, and advantage normalization.
+
+### Introduction
+- Large Language Models like ChatGPT and LLaMA face limitations in domain-specific tasks, lacking depth and accuracy.
+- ICE-GRT, leveraging RLHF based on PPO, excels in domain-specific scenarios without compromising general task performance.
+- The model displays profound understanding and reasoning abilities, going beyond Supervised Fine-Tuning (SFT) models.
+
+### Related Works
+- Recent advancements in Large Language Models have focused on instruction-tuning and RLHF to improve LLMs' capabilities in specialized tasks.
+
+### Model
+- ICE-GRT is built upon the ICE-Instruct model and utilizes RLHF for training the reward model and the entire ICE-GRT model.
+- The model components include the Actor, Reference, Reward, and Critic models.
+- Important training strategies such as data collection, reward size scaling, KL-control, and advantage normalization contribute to ICE-GRT's effectiveness.
+
+### Experimental Details
+- ICE-GRT's training process employs a multi-node, multi-GPU strategy and utilizes data collected from diverse sources, including in-domain data and public resources.
+- Evaluations involve general task benchmarks and manual annotation-based assessments.
+
+### Results and Analysis
+- ICE-GRT outperforms other models in general and in-domain tasks, demonstrating its superior performance and comprehension abilities.
+- ICE-GRT's training data significantly influences its performance, and strategies like advantage normalization contribute to its effectiveness.
+- Case studies illustrate ICE-GRT's comprehensive understanding and creative compliance in domain-specific tasks.
+
+### Conclusion
+- ICE-GRT represents a significant advancement in LLMs, especially in domain-specific performance, and offers insights into effective RLHF training methodologies.
+
+### Critique
+- The paper largely focuses on the capabilities of ICE-GRT without addressing potential limitations or challenges encountered during the development and implementation of the model.
+- The paper could benefit from a more extensive evaluation and comparison with a wider range of existing models to provide a more comprehensive understanding of ICE-GRT's positioning in the field.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-05       |
+| Abstract | [http://arxiv.org/abs/2401.02072v1](http://arxiv.org/abs/2401.02072v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.02072v1](https://browse.arxiv.org/html/2401.02072v1)       |
+| Truncated       | False       |
+| Word Count       | 8390       |

@@ -1,0 +1,51 @@
+
+---
+title: "LLaMA Pro: Progressive LLaMA with Block Expansion"
+id: "2401.02415v1"
+description: "We propose a new post-pretraining method for Large Language Models using an expansion of Transformer blocks, yielding LLaMA Pro-8.3B, excelling in general tasks, programming, and mathematics."
+author: Chengyue Wu, Yukang Gan, Yixiao Ge, Zeyu Lu, Jiahao Wang, Ye Feng, Ping Luo, Ying Shan
+date: "2024-01-04"
+image: "https://browse.arxiv.org/html/2401.02415v1/x2.png"
+categories: ['prompt-engineering', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.02415v1/x2.png)
+
+### Main Takeaways
+
+1. **Large Language Models (LLMs) Post-Pretraining**: The paper introduces a novel post-pretraining method for LLMs, termed "block expansion," which aims to inject new domain-specific knowledge while preserving the model's original general capabilities.
+
+2. **LLaMA Pro Model**: The study presents LLaMA Pro, an LLM with 8 added blocks, pre-trained on extensive code and math data, which excels in both general and domain-specific tasks.
+
+3. **Superior Performance**: LLaMA Pro's instruction-following counterpart achieves state-of-the-art performance across a wide variety of tasks, demonstrating its superiority over existing open models in the LLaMA family and its potential as an intelligent agent.
+
+### Related Work
+- **Advancements in Large Language Models:** The paper builds upon the developments in large language models and provides a methodology for specializing large language models in the domain of code.
+- **Post-Pretraining:** The study discusses the two-step process of initial general-domain pretraining followed by domain-specific training observed in language model applications.
+- **Progressive Learning:** The paper highlights progressive training techniques that have gained attention for accelerating the training of large-scale models in NLP research.
+
+### Method
+- **Block Expansion:** The paper details the block expansion method for LLMs, incorporating an identity block after each block in the original model. This method aims to enhance the model's domain-specific abilities while preserving its original general capabilities.
+- **SFT Results:** LLaMA Pro - Instruct attains state-of-the-art performance compared to other fine-tuned models, showcasing its more comprehensive capabilities.
+
+### Experiments
+- **Pretrain Results:** LLaMA Pro effectively balances natural language processing and coding capabilities, maintaining its general performance while excelling in code-related tasks. It outperforms both general-purpose and code-oriented pretrained models.
+- **SFT Results:** LLaMA Pro - Instruct achieves superior performance in code and math tasks, as well as in multi-turn interactions and chatbot scenarios, compared to other models in the LLaMA family.
+- **Ablation Study:** The study evaluates various training strategies, including LoRA, fine-tuning, and block expansion, and demonstrates the scalability and adaptive performance of the block expansion method with added blocks.
+
+### Critique
+The paper provides valuable insights into post-pretraining methods for LLMs and presents a promising approach for developing advanced language agents. However, some potential problems include the extensive computational resources and domain-specific datasets required for pretraining and the potential trade-offs between preserving general capabilities and enhancing domain-specific knowledge. Additionally, the scalability and effectiveness of the block expansion method need to be further validated across different domains and tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-05       |
+| Abstract | [http://arxiv.org/abs/2401.02415v1](http://arxiv.org/abs/2401.02415v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.02415v1](https://browse.arxiv.org/html/2401.02415v1)       |
+| Truncated       | False       |
+| Word Count       | 8377       |

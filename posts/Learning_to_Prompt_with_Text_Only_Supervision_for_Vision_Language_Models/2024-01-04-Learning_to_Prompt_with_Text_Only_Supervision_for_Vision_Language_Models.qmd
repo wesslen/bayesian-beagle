@@ -1,0 +1,70 @@
+
+---
+title: "Learning to Prompt with Text Only Supervision for Vision-Language Models"
+id: "2401.02418v1"
+description: "Foundational vision-language models like CLIP have excellent generalization, but adapting for downstream tasks is challenging. Proposed method learns prompts using text only data for better generalization and zero-shot transfer."
+author: Muhammad Uzair Khattak, Muhammad Ferjad Naeem, Muzammal Naseer, Luc Van Gool, Federico Tombari
+date: "2024-01-04"
+image: "https://browse.arxiv.org/html/2401.02418v1/x1.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.02418v1/x1.png)
+
+# Learning to Prompt with Text Only Supervision for Vision-Language Models
+
+## Abstract:
+Vision-language models such as CLIP have shown excellent generalization abilities, but adapting these models for downstream tasks while maintaining their generalization remains a challenge. In this work, the authors propose a method, ProText, which learns prompts using only text data derived from large language models (LLMs). This approach enables zero-shot transfer of prompts to new classes and datasets, potentially reducing the LLM prompt engineering cost. Extensive evaluations show that ProText improves upon prior ensembling works and is competitive with those utilizing labeled images.
+
+## 1 Introduction
+
+- Vision-language models (VLMs) like CLIP leverage contrastive pre-training on massive image-text pairs from the internet.
+- Adapting CLIP for downstream tasks while maintaining its generalization is challenging.
+- Most methods for adapting CLIP require annotated image labels, which is impractical in real-world scenarios.
+
+## 2 Related Work
+
+- Foundational Vision-Language models (VLMs) leverage joint image-text pretraining using internet-scale data in a self-supervised fashion.
+- Prompt Learning [6, 49, 50, 27, 9, 41, 40] and Training-Free Text Prompt Enhancement are effective fine-tuning strategies for VLMs.
+
+## 3 Method
+
+### 3.1 Preliminaries
+
+- CLIP consists of an image encoder and a text encoder which maps image and text input into visual and textual features respectively.
+- Existing prompt learning methods require visual samples with labels to optimize prompts using cross-entropy loss.
+
+### 3.2 Prompt Learning with Text-Only Supervision
+
+- ProText employs a contextual mapping strategy that effectively learns a mapping function that embeds rich contextual knowledge from LLM data within the prompts.
+- At inference, the learned prompts are used with class-name templates for zero-shot inference.
+
+## 4 Experiments
+
+- ProText improves the generalization of CLIP across various settings and is competitive with approaches that explicitly use labeled image samples for training.
+- Achieves substantial gains over CLIP and CuPL in cross-dataset transfer settings.
+
+### 4.7 Ablative Analysis
+
+- Contextual mapping loss allows learnable prompts to exploit internal knowledge of CLIP's text encoder for generalized context from the LLM descriptions.
+
+## Conclusion
+
+ProText improves upon prior ensembling works and is competitive with approaches that utilize labeled images for training.
+
+# Critique
+The paper presents an innovative approach that addresses the challenges of adapting CLIP for downstream tasks. However, it could benefit from further discussion on the limitations of ProText, potential areas for improvement, and comparisons with other state-of-the-art text-only methods for vision-language models. Additionally, the paper lacks a detailed discussion on potential biases introduced by using LLM-generated text data and the implications of zero-shot transfer on task-specific performance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-05       |
+| Abstract | [http://arxiv.org/abs/2401.02418v1](http://arxiv.org/abs/2401.02418v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.02418v1](https://browse.arxiv.org/html/2401.02418v1)       |
+| Truncated       | False       |
+| Word Count       | 12266       |

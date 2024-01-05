@@ -1,0 +1,64 @@
+
+---
+title: "Using LLM to select the right SQL Query from candidates"
+id: "2401.02115v1"
+description: "Automatic test case generation improves text-to-SQL model performance by re-ranking queries based on execution results and generation probabilities."
+author: Zhenwen Li, Tao Xie
+date: "2024-01-04"
+image: "https://browse.arxiv.org/html/2401.02115v1/x1.png"
+categories: ['prompt-engineering', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.02115v1/x1.png)
+
+### Summary of "Using LLM to select the right SQL Query from candidates"
+
+#### Major Findings
+1. **Automatic Test Case Generation**: The paper proposes a method to automatically generate test cases for text-to-SQL, without ground truth SQL queries, and conducts experiments to explore how to generate easily predicted databases for large language models (LLMs) and design easy-to-understand prompts.
+2. **Re-rank Method**: The paper introduces a re-rank method to select the right SQL query from a candidate list and demonstrates its effectiveness on the validation dataset of Spider, showing a 3.6% improvement in the performance of state-of-the-art text-to-SQL models.
+3. **Hyper-parameter Optimization**: Through experiments, the study identifies optimal hyper-parameters for generating test cases, such as database size, naturalness of database contents, format of database contents, and number of examples. It also highlights the effectiveness of constraining the range of numbers in database columns participating in aggregation/sort operations.
+
+#### Introduction
+- Text-to-SQL is the task of translating natural language into a SQL query, and the top-performing models often generate a list of candidate SQL queries, with the best query not always at the top of the list.
+- Previous studies have focused on re-ranking the candidate SQL queries, but automatic test case generation for text-to-SQL is an understudied field.
+
+#### Test Case Generation
+- The method consists of database generation and using LLMs to predict the expected execution results.
+- Database generation involves fuzzing and random selection methods, exploring the impact of maximum table size and naturalness of database contents.
+- LLMs are guided by prompts containing the NL question, database representation, and examples to predict expected execution results.
+
+#### Candidate Selection
+- The paper proposes a three-step method to select the right SQL query, involving candidate list classification, test suite generation, and re-ranking based on pass numbers on test cases and their generation probabilities.
+
+#### Experiment
+- The study conducts experiments on the Spider dataset, using GPT-4-turbo and GPT-4 to generate test cases and state-of-the-art models like DAIL-SQL and RESDSQL to generate candidate lists.
+- Results indicate a 3.6% improvement for DAIL-SQL and a 2% improvement for RESDSQL after applying the proposed re-rank methods.
+
+#### Hyper-parameter Optimization
+- The study explores hyper-parameters related to database generation and prompt design, identifying optimal values and showing the effectiveness of constraining number ranges in certain columns.
+
+#### Related Work
+- The paper discusses the use of LLMs in text-to-SQL, the relationship to previous re-ranking studies, and the advantages of its database generation algorithm compared to previous work.
+
+#### Conclusion
+- The study emphasizes the efficacy of using test cases to re-rank candidate lists for text-to-SQL, calling for further exploration in this research direction.
+
+### Critique
+The paper presents an innovative approach to test case generation and re-ranking of candidate SQL queries, demonstrating notable improvements in model performance. However, there are some potential limitations:
+1. **Prediction Accuracy of LLMs**: The study acknowledges that only about 60% of the test cases generated are correct, raising questions about the overall reliability of using LLMs to predict expected execution results.
+2. **Complexity and Token Consumption**: The re-rank method's reliance on OpenAI's API for generating test cases multiple times highlights potential challenges in scalability and token consumption for large-scale applications.
+3. **Database Generation Limitations**: The limitations of the proposed database generation method, including its inability to distinguish some SQL queries, could impact the overall effectiveness of the test case generation process.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-05       |
+| Abstract | [http://arxiv.org/abs/2401.02115v1](http://arxiv.org/abs/2401.02115v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.02115v1](https://browse.arxiv.org/html/2401.02115v1)       |
+| Truncated       | False       |
+| Word Count       | 7353       |

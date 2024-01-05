@@ -1,0 +1,58 @@
+
+---
+title: "DCR-Consistency: Divide-Conquer-Reasoning for Consistency Evaluation and Improvement of Large Language Models"
+id: "2401.02132v1"
+description: "Proposes DCR framework for evaluating and improving Large Language Models text consistency, outperforming existing methods."
+author: Wendi Cui, Jiaxin Zhang, Zhuohang Li, Lopez Damien, Kamalika Das, Bradley Malin, Sricharan Kumar
+date: "2024-01-04"
+image: "https://browse.arxiv.org/html/2401.02132v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.02132v1/x1.png)
+
+## Summary
+
+**DCR-Consistency: Divide-Conquer-Reasoning for Consistency Evaluation and Improvement of Large Language Models**
+
+- **Findings**
+  - The paper proposes a new framework, DCR, for evaluating and improving the consistency of Large Language Model (LLM)-generated texts which outperforms state-of-the-art methods by a large margin in semantic, factual, and summarization consistency tasks.
+  - The framework employs three components: Divide-Conquer Evaluator (DCE), Auto-Metric Converter (AMC), and Reason-Assisted Improver (RAI) to evaluate and improve the consistency of generated responses.
+  - The DCR framework demonstrates high correlations with human judgments, reduces output inconsistencies, and shows promise for effective hallucination mitigation.
+
+- **Preliminaries**
+  - Conventional evaluation methods relying on token-level comparison fail to capture overall semantic meaning, leading to low correlation with human judgments.
+  - The consistency of LLMs is essential for AI safety and reliability, but current methods often overlook self-consistency failures.
+
+- **Divide-Conquer-Reasoning**
+  - DCE evaluates semantic consistency between reference and candidate paragraphs at a sentence level using a divide-and-conquer strategy.
+  - AMC converts the evaluation reasons into a numeric score for quantitative interpretation.
+  - RAI utilizes the outputs of DCE to generate new responses to mitigate inconsistencies.
+
+- **Experiments**
+  - The DCR framework outperforms baseline methods in semantic, factual, and summarization consistency evaluations, showing high correlations with human judgment.
+  - RAI significantly improves consistency, reducing nearly 90% of output inconsistencies.
+
+## Critique
+
+While the DCR framework shows promise in evaluating and improving LLM-generated texts' consistency, several limitations should be considered.
+
+- **Not Comprehensive**: The approach may not universally address all dimensions of text evaluation, such as coherence and relevance. 
+- **Input Dependence**: The accuracy of the framework is inherently limited by the correctness of the input paragraphs, potentially affecting the detection of non-factual statements.
+- **Manual Prompting**: The requirement for hand-crafted prompts for specific tasks may limit the scalability and automation of the framework.
+
+Overall, the paper provides valuable insights into consistency evaluation and improvement for LLM-generated texts, but further research is needed to address the identified limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-05       |
+| Abstract | [http://arxiv.org/abs/2401.02132v1](http://arxiv.org/abs/2401.02132v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.02132v1](https://browse.arxiv.org/html/2401.02132v1)       |
+| Truncated       | False       |
+| Word Count       | 9608       |

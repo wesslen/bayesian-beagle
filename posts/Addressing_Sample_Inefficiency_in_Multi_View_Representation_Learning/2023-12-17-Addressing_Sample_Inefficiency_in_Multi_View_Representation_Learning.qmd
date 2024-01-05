@@ -1,0 +1,59 @@
+
+---
+title: "Addressing Sample Inefficiency in Multi-View Representation Learning"
+id: "2312.10725v1"
+description: "Non-contrastive self-supervised learning (NC-SSL) insights improve representation learning efficiency and performance in computer vision."
+author: Kumar Krishna Agrawal, Arna Ghosh, Adam Oberman, Blake Richards
+date: "2023-12-17"
+image: "https://browse.arxiv.org/html/2312.10725v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.10725v1/x1.png)
+
+# Addressing Sample Inefficiency in Multi-View Representation Learning
+
+## Key Findings
+1. **The orthogonality of features** is more crucial than projector dimensionality for learning good representations.
+2. **Using multiple data augmentations** better represents the self-supervised learning (SSL) objective, improving representation quality and trainability. It leads to faster optimization convergence and better features emerging earlier in the training.
+3. A **multi-augmentation framework** can improve sample efficiency, allowing for similar performance with significantly fewer unlabeled samples in the pretraining dataset.
+
+## Introduction
+- Unsupervised representation learning is essential for progress in computer vision.
+- Non-contrastive self-supervised learning (NC-SSL) methods eliminate the need for negative samples.
+- Methods like **BarlowTwins** and **VICReg** enforce orthogonality among learned features and have become preferred for representation learning.
+
+## Theoretical Foundations
+- Theoretical insights into the implicit bias of NC-SSL algorithms, explaining essential design heuristics.
+- **Low-dimensional projectors** are sufficient for good feature learning with appropriate orthogonalization.
+- Using **more data augmentations** improves estimation of the augmentation-defined data covariance kernel.
+
+## Practical Recommendations
+- Recommendations for practical pretraining, improving wall-clock time and performance on benchmark datasets using a ResNet-50 backbone.
+
+## Experiments
+- Empirical support for theoretical insights, demonstrating the sufficiency of **low-dimensional projectors** and the benefits of **multiple augmentations** on representation learning performance and convergence.
+
+## Discussion
+- The **Pareto Optimal SSL** approach suggests using the number of augmentations as a control for sample efficiency.
+- Exciting opportunities to extend the analysis to other categories of SSL algorithms and explore sample-efficient methods in critical domains such as medical imaging.
+
+## Appendix
+- Details on the augmentation graph perspective of non-contrastive SSL, implementation specifics, and empirical results supporting the multi-augmentation framework.
+
+## Critique
+The paper presents strong theoretical insights and empirical evidence, but it would benefit from addressing additional domains beyond computer vision to generalize its findings. Additionally, further exploration of computational efficiency is recommended to improve the proposed framework.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-05       |
+| Abstract | [http://arxiv.org/abs/2312.10725v1](http://arxiv.org/abs/2312.10725v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.10725v1](https://browse.arxiv.org/html/2312.10725v1)       |
+| Truncated       | False       |
+| Word Count       | 9538       |

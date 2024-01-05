@@ -1,0 +1,52 @@
+
+---
+title: "Factoring Expertise, Workload, and Turnover into Code Review Recommendation"
+id: "2312.17236v1"
+description: "Code review recommendation can distribute knowledge and mitigate turnover, reducing workload concentration and files at risk."
+author: Fahimeh Hajari, Samaneh Malmir, Ehsan Mirsaeedi, Peter C. Rigby
+date: "2023-12-28"
+image: "https://browse.arxiv.org/html/2312.17236v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.17236v1/x1.png)
+
+## Summary
+
+### Key Findings
+1. Developer turnover on software projects leads to knowledge loss, reduced productivity, and increased defects.
+2. Distributed knowledge and reduced turnover risk are achieved through code review recommendations that are **aware of code ownership, workload, and knowledge distribution**.
+3. Existing code review recommenders focused solely on finding experts concentrate knowledge on a small group of developers, increasing the risk of knowledge loss from turnover.
+
+
+### Historical Analysis
+- Use of code review naturally distributes knowledge and reduces the number of files at risk to turnover.
+- Recommending reviewers based on ownership increases expertise but raises the number of files at risk to turnover, indicating concentration of knowledge.
+- Workload is not evenly distributed across developers, with top reviewers bearing the majority of the workload.
+
+
+### Simulation Results
+- **LearnRec:** Decreases expertise, distributes workload unevenly, and increases the files at risk to turnover.
+- **RetentionRec:** Increases expertise, slightly increases workload concentration, and reduces the files at risk to turnover.
+- **Sofia:** Increases expertise, slightly increases workload concentration, and reduces the files at risk to turnover.
+- **WhoDo:** Increases expertise, decreases workload concentration, but increases the files at risk to turnover.
+- **SofiaWL:** Increases expertise, decreases workload concentration, and reduces the files at risk to turnover.
+
+### Critique
+The paper provided valuable insights into code review recommendations, but the impact of the proposed recommenders on developer satisfaction, team dynamics, and long-term project outcomes was not addressed. The focus on reducing the number of files at risk to turnover may inadvertently increase the workload for some developers, potentially leading to burnout and reduced productivity. Additionally, the study did not consider factors such as team diversity and collaboration, which could have significant implications for project success.
+
+The paper could benefit from further exploration of the potential unintended consequences of workload distribution and turnover reduction on team dynamics and developer well-being. It would also be valuable to address practical implementation challenges and potential trade-offs associated with adopting the proposed code review recommenders in real-world software development settings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-05       |
+| Abstract | [http://arxiv.org/abs/2312.17236v1](http://arxiv.org/abs/2312.17236v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17236v1](https://browse.arxiv.org/html/2312.17236v1)       |
+| Truncated       | True       |
+| Word Count       | 17921       |

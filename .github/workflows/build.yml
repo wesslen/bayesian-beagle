@@ -1,9 +1,6 @@
 name: Rebuild Site
 
 on:
-  push:
-    paths:
-      - 'data/output.jsonl'
   workflow_dispatch:
     inputs:
       force_generate_all:
@@ -11,6 +8,8 @@ on:
         required: false
         type: boolean
         default: true
+  schedule:
+  - cron:  '0 11 * * *'
     
 jobs:
   scheduled:

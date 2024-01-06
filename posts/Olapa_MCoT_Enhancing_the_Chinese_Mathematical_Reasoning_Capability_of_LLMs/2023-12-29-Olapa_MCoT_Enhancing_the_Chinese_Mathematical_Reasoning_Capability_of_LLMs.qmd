@@ -1,0 +1,53 @@
+
+---
+title: "Olapa-MCoT: Enhancing the Chinese Mathematical Reasoning Capability of LLMs"
+id: "2312.17535v1"
+description: "CoT method improved for LLMs. Olapa-MCoT, based on llama2-13B, enhanced Chinese math reasoning by 36%. English reasoning also improved."
+author: Shaojie Zhu, Zhaobin Wang, Chengxiang Zhuo, Hui Lu, Bo Hu, Zang Li
+date: "2023-12-29"
+image: "https://browse.arxiv.org/html/2312.17535v1/extracted/5315963/workflow_of_Olapa_MCoT.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.17535v1/extracted/5315963/workflow_of_Olapa_MCoT.png)
+
+### Major Takeaways
+1. **Olapa-MCoT** is proposed to enhance the Chinese mathematical reasoning ability of Large Language Models (LLMs), achieving significant results with a 36% rise in accuracy compared to llama2-13B for Chinese mathematical reasoning and a nearly 4% increase in English reasoning ability.
+2. Recent studies have focused on improving mathematical reasoning capabilities of LLMs through optimizing prompts, aggregating reasoning paths, and alignment training.
+3. The proposed SimRRHF algorithm and Incorrect Data Relearning have improved the accuracy and stability of alignment learning during the alignment training stage for enhancing Olapa-MCoT's Chinese mathematical reasoning ability.
+
+### Introduction
+- Large Language Models (LLMs) such as GPT-4 OpenAI have shown remarkable performance in various Natural Language Processing (NLP) tasks but still face challenges in complex NLP tasks like mathematical reasoning, especially in Chinese reasoning tasks.
+
+### Related Works
+- Recent studies have focused on improving mathematical reasoning capabilities of LLMs through optimizing prompts, aggregating reasoning paths, and alignment training.
+
+### Methods
+- **Olapa-SFT**: The method initially involves supervised finetuning on Chinese mathematical reasoning samples to achieve a certain level of Chinese mathematical reasoning ability.
+- **Olapa-Alignment**:
+    - **SimRRHF**: This method involves aligning the finetuned output of the model with the top rated response using ranking loss, Length-normalized SFT loss, and similarity loss.
+    - **IDRL (Incorrect Data Relearning)**: This method involves training the model to understand difficult reasoning knowledge by collecting incorrect inferences in the training dataset and supplementing them with new samples for the next round of learning.
+
+### Experiments
+- The experiments utilized the ape210K mathematical reasoning dataset and evaluated the accuracy and stability of Olapa-MCoT compared to baseline LLMs using various datasets and models.
+- The results demonstrated that Olapa-MCoT achieved a 36% increase in Chinese mathematical reasoning accuracy compared to llama2-13B and almost 4% increase in English reasoning ability. The proposed SimRRHF and IDRL methods contributed to the stability and accuracy of model convergence and learning of difficult knowledge, respectively.
+
+### Conclusion
+- **Olapa-MCoT** demonstrated significant improvements in Chinese mathematical reasoning and stability, and the proposed methods pave the way for specialized task LLM finetuning and alignment optimization.
+
+### Critique
+- The paper could benefit from clearer organization and more concise descriptions of the methods and results to improve readability and understanding. The experimental design and evaluation metrics should be discussed to ensure the validity and generalizability of the findings. Additionally, addressing any potential limitations or challenges encountered in the study would enhance the paper's comprehensive analysis.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2312.17535v1](http://arxiv.org/abs/2312.17535v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17535v1](https://browse.arxiv.org/html/2312.17535v1)       |
+| Truncated       | False       |
+| Word Count       | 5510       |

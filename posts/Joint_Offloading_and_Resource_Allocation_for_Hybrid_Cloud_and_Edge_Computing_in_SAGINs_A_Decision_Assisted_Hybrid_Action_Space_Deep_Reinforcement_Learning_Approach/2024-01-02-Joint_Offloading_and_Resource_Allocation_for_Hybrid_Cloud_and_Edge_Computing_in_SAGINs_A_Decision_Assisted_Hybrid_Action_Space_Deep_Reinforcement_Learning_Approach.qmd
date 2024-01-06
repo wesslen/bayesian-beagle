@@ -1,0 +1,77 @@
+
+---
+title: "Joint Offloading and Resource Allocation for Hybrid Cloud and Edge Computing in SAGINs: A Decision Assisted Hybrid Action Space Deep Reinforcement Learning Approach"
+id: "2401.01140v1"
+description: "Research on space-air-ground integrated networks (SAGINs) using deep reinforcement learning to optimize offloading and resource allocation in cloud and edge computing scenarios."
+author: Chong Huang, Gaojie Chen, Pei Xiao, Yue Xiao, Zhu Han, Jonathon A. Chambers
+date: "2024-01-02"
+image: "https://browse.arxiv.org/html/2401.01140v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.01140v1/x1.png)
+
+# Joint Offloading and Resource Allocation for Hybrid Cloud and Edge Computing in SAGINs
+
+## Major Takeaways
+1. The paper introduces a deep reinforcement learning (DRL)-based approach for joint optimization of offloading and resource allocation in hybrid cloud and multi-access edge computing (MEC) scenarios within space-air-ground integrated networks (SAGINs).
+2. The proposed algorithm leverages a decision-assisted hybrid multi-agent soft actor-critic (SAC) algorithm to optimize offloading strategy and resource allocation in the MEC infrastructure within SAGIN, achieving energy consumption reduction and latency minimization.
+3. Simulation results demonstrate the efficacy of the proposed learning-based scheme, outperforming benchmark methods and highlighting its superior performance and potential for practical applications.
+
+## I Introduction
+
+### I-A Background
+- Satellite communication has become integral for global communication systems, leading to the emergence of space-air-ground integrated networks (SAGINs).
+- Multi-access edge computing (MEC) in wireless communications aims to meet the increasing demand for low-latency and high-bandwidth applications and services.
+- Previous work has explored the benefits of integrating satellite communication within MEC frameworks, but does not address dynamic grouping and access capabilities of UAVs within the aerial layer, and the substantial computational power provided by cloud servers.
+
+### I-B Related Work
+- Previous research has explored the advantages of integrating satellite communication within MEC frameworks and studied the performance of MEC under the SAGIN architecture.
+- A range of DRL-based algorithms and resource allocation methods have been proposed for optimizing MEC frameworks in SAGINs.
+
+### I-C Motivation and Contributions
+- The paper addresses a research gap by integrating dynamic access capability of UAVs, multi-satellite access in hybrid cloud environments, cloud service selection and MEC resource allocation simultaneously. 
+- Contributions include multi-task scheduling based on Directed Acyclic Graphs (DAGs) and consideration of partial offloading, task dependency and cloud selection in MEC.
+
+## II System Model and Problem Formulation
+- The system model encompasses ground users, UAVs, LEO satellites, cloud servers, and considers communication, LEO coverage, and computation models.
+- Two optimization problems are formulated: minimizing overall energy consumption while satisfying latency constraints, and minimizing average latency while satisfying energy consumption constraints.
+
+## III Decision-Assisted Hybrid Action Space DRL-Based Optimization
+
+### III-A SAC Algorithm for MEC in SAGIN
+- The proposed algorithm leverages the Soft Actor-Critic (SAC) algorithm to optimize offloading and resource allocation in MEC within SAGIN, with reward functions designed for each optimization problem.
+- The SAC algorithm is utilized for long-term optimization and non-convex problems, addressing the challenge of hybrid discrete-continuous action spaces.
+
+### III-B Hybrid Action Space SAC Algorithm
+- Action decoupling is introduced to address the hybrid discrete-continuous action space challenges, allowing agents to focus on specific aspects of optimization, facilitating collaborative training.
+- The hybrid action space SAC algorithm effectively addresses the challenges of the hybrid action space in the proposed optimization problems.
+
+### III-C Decision-Assisted DRL
+- The decision-assisted DRL algorithm is introduced to mitigate the negative impact of unavailable actions on the training process of DRL, utilizing prior knowledge in deep learning to train neural networks.
+- The algorithm reduces the exploration range for agents and improves convergence efficiency.
+
+## IV Simulation Results
+- Simulation results demonstrate the superior performance of the proposed DM-SAC-H algorithm in minimizing energy consumption and average latency, outperforming benchmark methods in various scenarios.
+
+## V Conclusion
+
+### Critique and Potential Problems
+- The paper provides a comprehensive approach to joint offloading and resource allocation, but further validation in real-world deployments would enhance the practical applicability of the proposed algorithm.
+- The simulation results showcase the effectiveness of the proposed algorithm, but further comparative studies with additional state-of-the-art algorithms would strengthen the paper's contributions.
+
+The paper presents an in-depth investigation into joint offloading and resource allocation in hybrid cloud and MEC environments within SAGINs, demonstrating the efficacy of the proposed decision-assisted hybrid action space DRL approach through comprehensive simulation results. Further real-world validation and comparative studies would enhance the robustness and applicability of the proposed algorithm.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2401.01140v1](http://arxiv.org/abs/2401.01140v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.01140v1](https://browse.arxiv.org/html/2401.01140v1)       |
+| Truncated       | False       |
+| Word Count       | 12913       |

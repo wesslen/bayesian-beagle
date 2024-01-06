@@ -1,0 +1,55 @@
+
+---
+title: "Navigating Uncertainty: Optimizing API Dependency for Hallucination Reduction in Closed-Book Question Answering"
+id: "2401.01780v1"
+description: "TL;DR: Proposed LLM can self-determine when to use external sources, achieving 78.2% direct answers and minimizing search to 77.2%."
+author: Pierre Erbacher, Louis Falissar, Vincent Guigue, Laure Soulier
+date: "2024-01-03"
+image: "https://browse.arxiv.org/html/2401.01780v1/extracted/5328477/images/cute3.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.01780v1/extracted/5328477/images/cute3.png)
+
+### Major Findings
+1. **Large Language Models (LLM) are prone to producing inaccurate or false responses**, commonly known as hallucinations, when faced with factual questions.
+2. **Searching in a large collection of documents introduces additional computational and time costs** in augmenting LLMs with the ability to search on external information sources.
+3. The proposed model self-estimates its ability to answer directly or request an external tool resulting in the API being utilized only 62% of the time.
+
+### Introduction
+- Language models have demonstrated remarkable performances in natural language processing tasks.
+- Large language models are prone to hallucinations, and the existing approaches to tackle this issue involve using external techniques to detect and mitigate hallucinations.
+
+### Learning when to search with LLMs
+- Problem formalization involves training an LLM to query external resources instead of generating hallucinations or to generate answers directly.
+- The paper proposes a Hallucination Masking Mechanism (HalM) allowing to mask wrong answers with an API call token instead of hallucinating an answer.
+
+### Evaluation protocol
+- **Datasets**: Natural Question Open (NQ) and TriviaQA (TQA) datasets are considered for the experiments.
+- **Metrics**: F1-scores are used to evaluate model performances.
+
+### Results
+- The proposed Hallucination Masking Mechanism (HalM) reduces hallucinations and enables LLMs to internally assess their ability to answer queries.
+- The LoRA strategy consistently outperforms the PPL-T strategy for most metrics.
+
+### Conclusion
+- The proposed approach enables LLMs to endogenously identify their potential for hallucination better than perplexity-based methods.
+- The approach also enables large language models to condition their generation on their ability to answer appropriately, a crucially important feature in reducing hallucinations.
+
+### Critique
+- The experiments are limited to in-domain hallucination detection, potentially reducing the generalizability of the findings.
+- The paper should provide a more comprehensive comparison with existing state-of-the-art approaches to reducing hallucinations in language models.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2401.01780v1](http://arxiv.org/abs/2401.01780v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.01780v1](https://browse.arxiv.org/html/2401.01780v1)       |
+| Truncated       | False       |
+| Word Count       | 6011       |

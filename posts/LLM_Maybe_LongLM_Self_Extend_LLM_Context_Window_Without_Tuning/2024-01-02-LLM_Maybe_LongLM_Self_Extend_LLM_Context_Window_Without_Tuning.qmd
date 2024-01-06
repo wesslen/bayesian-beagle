@@ -1,0 +1,56 @@
+
+---
+title: "LLM Maybe LongLM: Self-Extend LLM Context Window Without Tuning"
+id: "2401.01325v1"
+description: "LLMs can handle long contexts without fine-tuning. Self-Extend extends their context window effortlessly."
+author: Hongye Jin, Xiaotian Han, Jingfeng Yang, Zhimeng Jiang, Zirui Liu, Chia-Yuan Chang, Huiyuan Chen, Xia Hu
+date: "2024-01-02"
+image: "https://browse.arxiv.org/html/2401.01325v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.01325v1/x1.png)
+
+### Major Takeaways
+
+1. **Self-Extend Approach**: The paper introduces the Self-Extend method, a plug-and-play technique that extends the context window of Large Language Models (LLMs) without requiring any fine-tuning.
+2. **Inherent Long Context Capability of LLMs**: The paper argues that LLMs have an inherent capability to handle long contexts and proposes Self-Extend to stimulate this long context handling potential based on the belief that LLMs should be able to extend their context window without the need for fine-tuning.
+3. **Superior Performance**: Self-Extend demonstrates superior performance in improving LLMs’ ability to handle long contexts compared to existing fine-tuning-based methods and achieves comparable or even better performance on real-world long context tasks.
+
+### Introduction
+- Existing LLMs are limited in their context window length, resulting in unpredictable behavior and severe performance degradation when faced with longer input sequences during inference.
+- Various methods, including fine-tuning and fine-tuning-free approaches, have been developed to extend the context window size of pretrained LLMs, but these methods have limitations such as resource-intensiveness and lack of generalizability.
+- The paper proposes that LLMs have inherent capabilities to handle long contexts and introduces the Self-Extend approach to stimulate this capability.
+
+### Proposal: Self-Extend Context Window
+- The paper argues that LLMs exhibit an inherent long context capability, attributing past limitations to out-of-distribution positional encoding issues.
+- Self-Extend addresses the positional out-of-distribution issue by using the floor operation as a mapping function to extend LLMs' context window without fine-tuning.
+- The Self-Extend method utilizes grouped attention and normal attention to effectively handle long-distance information without precise position information.
+
+### Experiments and Results
+- Self-Extend is evaluated on language modeling, synthetic long context tasks, real long context tasks, and short context tasks.
+- The paper demonstrates that Self-Extend significantly improves LLMs’ long context understanding ability and even outperforms fine-tuning-based methods on some tasks.
+- The method maintains performance on short-context tasks, showcasing its plug-and-play nature and dynamic adaptability.
+
+### Critique and Future Work
+- Limitations of the proposed Self-Extend method include the lack of implementation of Flash Attention and the performance degradation with too large group size.
+- Future work is planned to implement Flash Attention, test Self-Extend on models using other positional encoding, and consider more sophisticated mapping methods.
+
+### Critique
+The paper successfully introduces the innovative Self-Extend method and demonstrates its effectiveness in extending LLMs' context windows. However, the lack of evaluation consensus for long context tasks and the need for more computational resources for future work may limit the generalizability of the findings.
+
+Overall, the paper provides valuable insights into LLMs’ inherent capabilities and presents a promising approach to extend their context windows without fine-tuning.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2401.01325v1](http://arxiv.org/abs/2401.01325v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.01325v1](https://browse.arxiv.org/html/2401.01325v1)       |
+| Truncated       | False       |
+| Word Count       | 8504       |

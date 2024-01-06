@@ -1,0 +1,51 @@
+
+---
+title: "ICL Markup: Structuring In-Context Learning using Soft-Token Tags"
+id: "2312.07405v1"
+description: "TL;DR: Soft-token tags simplify model adaptation for various tasks, improving LLM performance in enterprise applications."
+author: Marc-Etienne Brunet, Ashton Anderson, Richard Zemel
+date: "2023-12-12"
+image: "https://browse.arxiv.org/html/2312.07405v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.07405v1/x1.png)
+
+### Summary of "ICL Markup: Structuring In-Context Learning using Soft-Token Tags"
+
+#### Key Findings
+1. Large pretrained language models (LLMs) combined with in-context learning (ICL) offer impressive flexibility and power for adapting to new tasks with minimal demonstrations and natural language instructions.
+2. ICL suffers from a lack of robustness across arbitrary choices, leading to varying performance based on prompt changes.
+3. "ICL Markup" introduces soft-token tags to compose prompt templates, reducing arbitrary decisions and improving LLM performance on intent detection, news, and legal text classification tasks.
+
+#### Introduction
+- Large pretrained language models (LLMs) combined with in-context learning (ICL) are effective for adapting to new tasks with minimal demonstrations and natural language instructions.
+
+#### ICL Markup
+- ICL Markup introduces soft-token tags to compose prompt templates, reducing arbitrary decisions and improving LLM performance in various tasks, such as intent detection, news, and legal text classification.
+- Soft-token tags are learned in advance during parameter-efficient fine-tuning and can be used in templates for ICL on new tasks without additional fine-tuning.
+- The approach mimics the structure of markup languages like HTML to separate content from presentation, improving the consistency and performance of ICL.
+
+#### Experiments and Results
+- In the few-shot news headline classification experiment, ICL Markup demonstrated improved performance and reduced performance variability compared to hand-crafted prompts.
+- In intent detection tasks, ICL Markup improved LLM performance and outperformed other few-shot methods, such as Prototypical Networks and Prompt Tuning, across various configurations.
+- ICL Markup also showed promising results in open-world (few-shot) intent detection tasks, outperforming previous baselines in most configurations.
+- The experiment with legal text classification showed that the soft token tags improved LLM performance beyond the nearest neighbor baseline.
+
+#### Critique
+- The study is limited to smaller LLM sizes and classification tasks, so the findings may not generalize to larger LLMs or other types of tasks.
+- As the study is highly technical and focused on specific model adjustments, the broader implications of the findings are not fully explored.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2312.07405v1](http://arxiv.org/abs/2312.07405v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.07405v1](https://browse.arxiv.org/html/2312.07405v1)       |
+| Truncated       | False       |
+| Word Count       | 12688       |

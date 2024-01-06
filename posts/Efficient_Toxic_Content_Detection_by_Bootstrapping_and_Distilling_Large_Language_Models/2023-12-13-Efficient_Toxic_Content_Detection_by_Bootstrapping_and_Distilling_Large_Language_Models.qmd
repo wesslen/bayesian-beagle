@@ -1,0 +1,71 @@
+
+---
+title: "Efficient Toxic Content Detection by Bootstrapping and Distilling Large Language Models"
+id: "2312.08303v1"
+description: "BD-LLM improves toxic content detection accuracy by using Decision-Tree-of-Thought prompting and student LMs."
+author: Jiang Zhang, Qiong Wu, Yiming Xu, Cheng Cao, Zheng Du, Konstantinos Psounis
+date: "2023-12-13"
+image: "https://browse.arxiv.org/html/2312.08303v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.08303v1/x1.png)
+
+# Efficient Toxic Content Detection by Bootstrapping and Distilling Large Language Models
+
+## Major Takeaways
+- The paper proposes a novel approach called BD-LLM to address the challenges of efficiently designing prompts for Large Language Models (LLMs) for toxic content detection.
+- The Decision-Tree-of-Thought (DToT) method is introduced to bootstrap LLMs’ detection performance and extract high-quality rationales, leading to improved accuracy of LLMs and student LMs.
+- The study demonstrates that fine-tuning student LMs with DToT-extracted rationales leads to up to 16.9% accuracy improvement, while being more than 60 times smaller than conventional LLMs.
+
+## Introduction
+- Toxic content detection is important for online services to protect users from harmful and offensive content.
+- Existing supervised learning ML solutions face challenges such as obtaining training data with labels and limited transferability to other datasets.
+- Large Language Models (LLMs) have shown promise in toxic content detection but face challenges in prompt design and high run-time costs.
+
+## Approach
+- **DToT Prompting**
+  - A novel prompting approach that iteratively selects more fine-grained context to re-prompt LLMs and enhance their detection performance.
+  - DToT prompting consists of four modules: confidence checker, context tree, context selector, and prompt generator for both black-box and white-box LLMs.
+- **Rationale Distillation**
+  - Student LMs are fine-tuned with both labels and rationales extracted via DToT prompting, leading to improved detection performance.
+
+## Related Work
+- Prior works on toxic content detection focus on creating benchmark datasets and proposing novel approaches to fine-tune LMs for toxic content.
+- Existing works on prompting LLMs have demonstrated superior zero-shot/few-shot in-context learning capabilities but heavily rely on the quality of input prompts.
+- Some recent works have focused on distilling LLMs into smaller LMs for domain-specific tasks.
+
+## Experimental Setup
+- Evaluation is conducted on three public datasets and an Amazon internal dataset using different models and baselines.
+- The effectiveness of DToT prompting and rationale distillation is thoroughly evaluated, demonstrating improvements in accuracy, F1 score, and AUC score.
+
+## Evaluation Results
+- **DToT Prompting**
+  - DToT prompting significantly enhances the zero-shot learning performance of LLMs across different datasets.
+  - Combining DToT with few-shot in-context learning and rationales further improves models’ performance.
+- **Rationale Distillation**
+  - Fine-tuning with DToT-extracted rationales leads to significant improvements in accuracy, F1 score, and AUC score for student LMs.
+  - The approach also improves the cross-dataset transferability of student LMs and demonstrates the impact of model size on performance.
+
+## Conclusions and Limitations
+- The paper proposes an end-to-end approach for toxic content detection, showcasing the effectiveness of DToT prompting and rationale distillation.
+- Limitations include the context selector conducting a greedy search and the use of a pre-defined context tree.
+
+## Critique
+The paper effectively presents a series of novel approaches and provides comprehensive evaluations. However, more detailed analysis on the potential limitations and challenges of the proposed approaches could further strengthen the paper.
+
+For instance, the study could benefit from a more in-depth discussion on the generalizability of the results, potential biases in the evaluation, and the robustness of the proposed method in real-world scenarios. Furthermore, a comparison with state-of-the-art methods in the field could enhance the paper's contributions and significance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2312.08303v1](http://arxiv.org/abs/2312.08303v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.08303v1](https://browse.arxiv.org/html/2312.08303v1)       |
+| Truncated       | False       |
+| Word Count       | 8732       |

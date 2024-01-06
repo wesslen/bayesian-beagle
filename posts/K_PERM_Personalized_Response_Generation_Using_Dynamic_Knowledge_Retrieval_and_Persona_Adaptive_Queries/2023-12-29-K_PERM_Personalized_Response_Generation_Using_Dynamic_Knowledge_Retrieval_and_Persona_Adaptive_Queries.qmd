@@ -1,0 +1,49 @@
+
+---
+title: "K-PERM: Personalized Response Generation Using Dynamic Knowledge Retrieval and Persona-Adaptive Queries"
+id: "2312.17748v1"
+description: "Personalizing conversational agents with external knowledge improves user engagement and quality of conversations. K-PERM achieves state-of-the-art performance."
+author: Kanak Raj, Kaushik Roy, Manas Gaur
+date: "2023-12-29"
+image: "../../../bayesian-beagle.png"
+categories: ['social-sciences', 'hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+### Major Findings
+1. **Personalization in Conversational AI**: The paper proposes 𝒦𝒦-K-PERM, a dynamic conversational agent that integrates user personas and supplemental information from a knowledge source to generate personalized responses. It achieves state-of-the-art performance on the FoCus dataset and improves performance in state-of-the-art LLMs by 10.5%, highlighting the impact of personalizing chatbots.
+2. **Two-Step Approach**: The 𝒦𝒦-K-PERM model involves a two-step approach, including understanding conversation context using Dense Passage Retrieval (DPR) and incorporating appropriate personas using a selector module. The model architecture comprises a Persona Selector and Knowledge Extractor.
+3. **Reward Modulation for Response Generation**: Response generation in 𝒦𝒦-K-PERM is facilitated through reward modulation, which involves pairing a BART(Base) generator with an ELECTRA(Base) evaluator to balance generative capabilities and fidelity to the ground truth responses.
+
+### Methodology
+- **Understanding Conversation Context**: Utilizes Dense Passage Retrieval (DPR) to select pertinent information from a larger text corpus containing real-world information.
+- **Incorporating Appropriate Personas**: Introduction of a selector module capable of choosing a persona aligned with the user query.
+- **Response Generation through Reward Modulation**: Response generation is achieved using a BART(Base) generator paired with an ELECTRA(Base) evaluator, modulated by a balancing reward function.
+
+### 𝒦𝒦-K-PERM
+- **Knowledge Retriever**: Utilizes DPR for dynamically retrieving passages based on the conversation history and improves it through a process called DPR.
+- **Persona Selector**: Models persona selection as a commonsense inference task and achieves this through a multi-label classifier model.
+- **Reward Function**: Introduces a reward function that involves BLEU score, Word Mover Distance, and loss function for persona-tailored reward.
+
+### Experiments
+- **Comparison with Baselines**: 𝒦𝒦-K-PERM significantly outperformed other models, achieving superior syntactic generation quality and semantic similarity.
+- **Evaluation Criteria**: Used Rouge–1/2/L/L-Sum, BLEU scores, BERTScore, and NUBIA for evaluating natural language generation. Showcased higher semantic relations, logical agreement, and lower contradiction and irrelevancy.
+- **Augmentation of GPT 3.5**: When combined with 𝒦𝒦-K-PERM, GPT 3.5 improved its performance significantly by 10.5% in a zero-shot setting.
+
+### Critique
+The paper presents a robust methodology for personalized response generation but could benefit from broader evaluation on diverse datasets and comparisons with additional state-of-the-art models such as Llama and Mistral. Additionally, the limitations in the persona-tailored reward function should be addressed to improve the model's overall performance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2312.17748v1](http://arxiv.org/abs/2312.17748v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17748v1](https://browse.arxiv.org/html/2312.17748v1)       |
+| Truncated       | False       |
+| Word Count       | 8655       |

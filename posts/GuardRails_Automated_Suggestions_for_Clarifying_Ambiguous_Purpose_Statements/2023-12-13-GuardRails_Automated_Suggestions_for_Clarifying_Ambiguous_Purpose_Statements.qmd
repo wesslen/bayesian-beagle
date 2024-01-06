@@ -1,0 +1,62 @@
+
+---
+title: "GuardRails: Automated Suggestions for Clarifying Ambiguous Purpose Statements"
+id: "2312.08189v1"
+description: "Purpose statements for functions may be ambiguous; a heuristic is proposed to suggest clarifications using language models."
+author: Mrigank Pawagi, Viraj Kumar
+date: "2023-12-13"
+image: "https://browse.arxiv.org/html/2312.08189v1/extracted/5251769/copilot-chat.png"
+categories: ['prompt-engineering', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.08189v1/extracted/5251769/copilot-chat.png)
+
+### Major Takeaways
+1. **GuardRails** is a proposed tool aimed at clarifying ambiguous purpose statements in programming, particularly targeting novice programmers and instructors. The tool suggests inputs using Large Language Models (LLMs) to help programmers clarify the purpose statement by providing use cases.
+2. The authors compare GuardRails against GitHub Copilot’s Chat feature and demonstrate GuardRails' ability to identify potential ambiguities in purpose statements and its potential to outperform Copilot Chat in doing so.
+3. The paper highlights the potential of GuardRails in enhancing software development productivity, empowering novice programmers, and supporting new approaches to computer science (CS) pedagogy and assessment that expose students to deliberately ambiguous problem specifications.
+
+### Introduction
+- **Background**: Large Language Models (LLMs) have shown promise in generating code from natural language prompts, prompting a need for reviewing educational practices. The paper focuses on aiding programmers in defining function purpose statements and working through functional examples.
+  
+### Motivating Example
+- The purpose statement in a Python function provided an ambiguous situation that was resolved differently by GitHub Copilot and GuardRails. GuardRails could identify potential ambiguities and suggest inputs to clarify the purpose statement.
+
+### Research Questions
+- **RQ1**: Compares the abilities of Copilot Chat and GuardRails to suggest inputs from known Ambiguous Input Classes (AICs) across various functions.
+- **RQ2**: Investigates the relationship between the level of detail provided and the identification of inputs from known AICs.
+
+### Related Work
+- Prior work attests to the importance of realistic problem specifications with ambiguities, as well as the potential of LLMs like Codex in improving CS education.
+
+### Heuristic and Implementation
+- **Heuristic**: Based on using LLMs to suggest multiple function implementations and identify functionally inequivalent implementations to reveal possible ambiguities in the purpose statement.
+- **Implementation**: Detailed steps including using LLMs, mutating initial implementations, fuzzing each implementation, and collating recorded inputs.
+
+### Comparison with Copilot Chat
+- **Relative Performance**: A comparison across 15 functions showed similarities and differences in the abilities of Copilot Chat and GuardRails to identify inputs from AICs.
+- **Absolute Performance by Variant**: Both tools leveraged increasing levels of detail to a similar extent, with GuardRails starting from a higher base and achieving higher performance at the most detailed level.
+
+### Limitations
+- GuardRails is limited to Python and simple problems, relies on non-deterministic components, and requires type hinting.
+
+### Discussion and Future Work
+- Discusses the potential use of GuardRails by instructors and novice programmers, highlighting its utility in identifying ambiguities and aiding in CS pedagogy and assessment.
+
+### Critique
+- The study is limited to Python and simple problems, limiting its generalizability to more complex scenarios or other programming languages.
+- The comparison with Copilot Chat is informative, but the study could benefit from a broader comparison against other similar tools or approaches in the field.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2312.08189v1](http://arxiv.org/abs/2312.08189v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.08189v1](https://browse.arxiv.org/html/2312.08189v1)       |
+| Truncated       | False       |
+| Word Count       | 5188       |

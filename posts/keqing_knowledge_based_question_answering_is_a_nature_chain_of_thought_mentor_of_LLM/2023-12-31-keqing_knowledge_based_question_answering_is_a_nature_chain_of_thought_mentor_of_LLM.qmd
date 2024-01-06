@@ -1,0 +1,59 @@
+
+---
+title: "keqing: knowledge-based question answering is a nature chain-of-thought mentor of LLM"
+id: "2401.00426v1"
+description: "LLMs struggle with knowledge gaps. Keqing assists by retrieving relevant info and guiding logical answering paths."
+author: Chaojie Wang, Yishi Xu, Zhong Peng, Chenxi Zhang, Bo Chen, Xinrun Wang, Lei Feng, Bo An
+date: "2023-12-31"
+image: "https://browse.arxiv.org/html/2401.00426v1/x1.png"
+categories: ['education', 'hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.00426v1/x1.png)
+
+### Major Takeaways:
+
+1. **Knowledge-based Question Answering (KBQA)** is a novel framework named Keqing, which assists Large Language Models (LLMs) to retrieve question-related structured information on the knowledge graph. It improves the reliability of LLM’s responses on KBQA tasks through Question Decomposition, Knowledge Retrieval, Candidate Reasoning, and Response Generation.
+
+2. Keqing addresses the issue of "hallucination" where LLMs tend to generate incorrect or nonsensical text. It leverages the logical chains on the knowledge graph to guide LLMs to decompose complex questions into sub-questions, providing multiple reasoning paths to achieve potential answer candidates.
+
+3. The experimental results show that Keqing achieves competitive performance on popular KBQA benchmarks and increases the interpretability of LLM responses by illustrating the logic of answering each question.
+
+### Methodology:
+
+#### Introduction 
+- Large Language Models (LLMs) have shown remarkable performance in natural language processing tasks but face issues like "hallucination," where they generate incorrect or nonsensical text.
+  
+#### Knowledge Retrieval 
+- Existing retrieval-augmented LMs rely on embedding-based methods, but Keqing proposes a retrieval module operating on the knowledge graph to collect relevant triplets, offering high-quality context for LLMs.
+
+#### Question Decomposition and Candidate Reasoning
+- Keqing decomposes complex questions into simpler sub-questions using predefined question templates and then retrieves logical chains on the knowledge graph to guide LLMs.
+
+#### Response Generation
+- Keqing's Response Generation module summarizes the inference process, improving the interpretability of KBQA outcomes.
+
+#### Experiments
+- The paper evaluates Keqing on KBQA benchmark datasets and compares its performance with existing LLM-based methods. The results demonstrate the superiority of Keqing's workflow.
+
+### Critique:
+
+- The paper lacks a detailed comparison with a wider range of existing KBQA methods to establish the uniqueness and superiority of Keqing.
+- The absence of extensive analysis on dataset diversity, model robustness, and generalization hinders the comprehensive evaluation of Keqing's effectiveness.
+- The paper would benefit from a more in-depth exploration of potential limitations and challenges in implementing Keqing in real-world applications.
+
+Overall, while Keqing presents a promising framework for KBQA, further empirical evidence and theoretical discussions are essential to solidify its contributions in the field.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2401.00426v1](http://arxiv.org/abs/2401.00426v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.00426v1](https://browse.arxiv.org/html/2401.00426v1)       |
+| Truncated       | False       |
+| Word Count       | 6677       |

@@ -1,0 +1,37 @@
+
+---
+title: "Improving Code Reviewer Recommendation: Accuracy, Latency, Workload, and Bystanders"
+id: "2312.17169v1"
+description: "Code review system at Meta improved through experiments, with emphasis on author-reviewer familiarity and balancing workloads. Bystander effect mitigated."
+author: Peter C. Rigby, Seth Rogers, Sadruddin Saleem, Parth Suresh, Daniel Suskin, Patrick Riggs, Chandra Maddila, Nachiappan Nagappan
+date: "2023-12-28"
+image: "../../../bayesian-beagle.png"
+categories: ['hci', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+### Summary
+This paper presents a series of experiments conducted at Meta to improve code reviewer recommendation. The company's existing recommender, RevRecV1, was found to be inaccurate and slow due to its reliance on file authorship frequency for reviewer assignment. The authors developed RevRecV2, which uses author-reviewer familiarity, reviewer workload, and the bystander effect factors to improve accuracy and latency. They found significant improvements in accuracy (14 percentage points) and reduction in latency (14 times) with RevRecV2. RevRecWL, designed to balance reviewer workload, showed a reduction in workload when a reasonable candidate with lower workload was available. However, there were no statistically significant changes in review cycle time or latency. The BystanderRecRnd, designed to reduce the bystander effect, reduced time-in-review by 11.6% with no regressions in guardrail metrics.
+
+### Major Takeaways
+1. **Improvements in Accuracy and Latency with RevRecV2**: RevRecV2 led to a 14 percentage point improvement in accuracy and a 14 times reduction in latency at the 90th percentile, with recommendations being selected by authors 27% more often.
+2. **Balancing Reviewer Workload with RevRecWL**: RevRecWL showed a reduction in workload when a reasonable candidate with lower workload was available, but no statistically significant changes in review cycle time or latency were observed.
+3. **Reducing the Bystander Effect with BystanderRecRnd**: BystanderRecRnd reduced time-in-review by 11.6% without any regressions in guardrail metrics.
+
+### Critique
+One potential problem with the paper is the dependency on historical data for simulating reviewer performance, which may not fully represent real-world conditions. Additionally, although the experiments showed improvements in accuracy and latency, the impact on overall review cycle time was not clearly reported. It would have been beneficial to see a more detailed comparison of the new approach against existing systems in the literature.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2312.17169v1](http://arxiv.org/abs/2312.17169v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17169v1](https://browse.arxiv.org/html/2312.17169v1)       |
+| Truncated       | False       |
+| Word Count       | 11269       |

@@ -1,0 +1,55 @@
+
+---
+title: "RAGTruth: A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models"
+id: "2401.00396v1"
+description: "RAGTruth is a dataset for analyzing hallucinations in large language models, helping measure and prevent unsupported claims in retrieved content."
+author: Yuanhao Wu, Juno Zhu, Siliang Xu, Kashun Shum, Cheng Niu, Randy Zhong, Juntong Song, Tong Zhang
+date: "2023-12-31"
+image: "https://browse.arxiv.org/html/2401.00396v1/x1.png"
+categories: ['dataset', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.00396v1/x1.png)
+
+### Major Takeaways
+
+1. **RAGTruth** is a corpus specifically designed to analyze word-level hallucinations in various domains and tasks within the standard RAG frameworks for Large Language Model (LLM) applications.
+2. The paper presents a comprehensive comparison of different hallucination detection methods at both the passage and word levels, demonstrating the effectiveness of the RAGTruth dataset in fine-tuning LLMs for competitive performance in hallucination detection.
+3. The study shows the potential of developing better hallucination detection methods using RAGTruth, as it can significantly reduce the occurrence of hallucinations in the responses from LLMs, even for models with inherently low hallucination rates.
+
+### Introduction
+- **Hallucination Challenges in LLMs**: Large Language Models (LLMs) are prone to generating content that is not based on factual or accurate information, leading to hallucinations. Various methods have been developed to mitigate hallucinations, but reliable detection remains a challenge.
+- **Need for Benchmark Datasets**: The lack of high-quality, large-scale datasets specifically designed for hallucination detection, particularly in RAG settings, is a key challenge.
+
+### Construction Process of RAGTruth
+- **Response Generation**: Responses were generated using six models for Summarization, Question Answering, and Data-to-Text tasks.
+- **Human Annotation**: Annotators manually annotated specific spans of text containing hallucinated information and categorized them into four types. Additional annotations were provided for adaptive evaluation.
+- **Annotations for Adaptive Evaluation**: Two additional annotations, "Incorrectly Refusing to Answer" and "Differences in Handling Null Value," were provided to accurately reflect contentious situations.
+
+### Hallucination Benchmark Analysis
+- **Basic Statistics**: RAGTruth is considerably large in scale, contains longer prompt and response lengths, and features a higher frequency of baseless info hallucinations.
+- **Hallucination Statistics**: The data-to-text task exhibited the highest frequency of hallucinations, especially influenced by stereotypes inherent in the business data.
+- **Hallucination vs Models**: OpenAI’s models demonstrated notably lower hallucination rates compared to others, and a negative correlation was observed between the model scale and the hallucination density.
+- **Hallucination Suppression**: Strategies utilizing the hallucination detector significantly reduced the hallucination rate across different LLMs and tasks.
+
+### Experimental Results
+- **Response-level Detection**: Fine-tuning Llama-2-13B using the RAGTruth dataset achieved the best performance in response-level detection, demonstrating the dataset's effectiveness in improving the model’s detection ability for hallucinations.
+- **Span-level Detection**: Span-level detection remained challenging, with the fine-tuned model showing improved capability, though still falling short of perfect detection.
+- **Hallucination Suppression**: Strategies employing the fine-tuned hallucination detector significantly reduced the rate of hallucinations across different LLMs and tasks.
+
+### Critique
+- The study demonstrates advancements in the detection and suppression of hallucinations in LLMs, but more comprehensive evaluation metrics and real-world applicability of the findings could add strength to the conclusions. Additionally, the dataset's generalizability to different types of hallucinations and the potential bias in the annotators' judgment could be potential areas of concern.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2401.00396v1](http://arxiv.org/abs/2401.00396v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.00396v1](https://browse.arxiv.org/html/2401.00396v1)       |
+| Truncated       | False       |
+| Word Count       | 6757       |

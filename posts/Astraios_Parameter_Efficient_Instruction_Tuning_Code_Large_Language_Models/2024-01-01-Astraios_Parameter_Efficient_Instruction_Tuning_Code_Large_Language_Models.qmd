@@ -1,0 +1,47 @@
+
+---
+title: "Astraios: Parameter-Efficient Instruction Tuning Code Large Language Models"
+id: "2401.00788v1"
+description: "Astraios compares fine-tuning methods for large language models and finds full-parameter fine-tuning generally leads to best performance."
+author: Terry Yue Zhuo, Armel Zebaze, Nitchakarn Suppattarachai, Leandro von Werra, Harm de Vries, Qian Liu, Niklas Muennighoff
+date: "2024-01-01"
+image: "https://browse.arxiv.org/html/2401.00788v1/x2.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.00788v1/x2.png)
+
+## Summary
+
+### Major Findings
+- The study introduces Astraios, a suite of 28 instruction-tuned OctoCoder models using 7 tuning methods and 4 model sizes up to 16 billion parameters.
+- Full-parameter fine-tuning (FFT) generally leads to the best downstream performance across all scales, and parameter-efficient fine-tuning (PEFT) methods differ significantly in their efficacy based on the model scale.
+- LoRA usually offers the most favorable trade-off between cost and performance.
+
+### Astraios Suite and Benchmark
+- **Model**: The StarCoder series is selected as the base model, and 3 kinds of PEFT methods are focused on: adapter-based tuning, prompt-based tuning, and intrinsic-rank-based tuning. 
+- **Instruction Tuning**: The CommitPackFT+OASST dataset is selected for instruction tuning, and various training configurations and evaluations are implemented for code comprehension, code generation, model robustness, and code security.
+
+### Preliminary Study: Cross-Entropy Loss
+- The study investigates the relationships between updated parameters, cross-entropy loss, and task performance.
+
+### Main Results: Task Performance
+- Code comprehension tasks do not align with patterns observed in code generation tasks, and larger PEFT Code LLMs perform better on code generation tasks.
+
+## Critique
+
+The paper provides a comprehensive analysis of parameter-efficient instruction-tuning of Large Language Models (LLMs) but lacks a clear analysis of the limitations and potential biases in the experimental setup. The study's heavy reliance on single-run evaluations and the lack of validation for data scaling and model architecture raise concerns about the robustness and generalizability of the findings. Further, while addressing the limitations and providing a detailed analysis of model architecture and data scaling were considered in the future work, the critique emphasizes the need for more thorough and varied experimental setups to improve the study's comprehensive representation and generalizability.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2401.00788v1](http://arxiv.org/abs/2401.00788v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.00788v1](https://browse.arxiv.org/html/2401.00788v1)       |
+| Truncated       | False       |
+| Word Count       | 12057       |

@@ -1,0 +1,49 @@
+
+---
+title: "Generalist embedding models are better at short-context clinical semantic search than specialized embedding models"
+id: "2401.01943v1"
+description: "Large Language Models (LLMs) in medicine raise concerns about robustness and reliability. Benchmarking shows generalist models perform better."
+author: Jean-Baptiste Excoffier, Tom Roehr, Alexei Figueroa, Michalis Papaaioannou, Keno Bressem, Matthieu Ortala
+date: "2024-01-03"
+image: "https://browse.arxiv.org/html/2401.01943v1/extracted/5328887/Figures/embedding_size_vs_exact_code_matching.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.01943v1/extracted/5328887/Figures/embedding_size_vs_exact_code_matching.png)
+
+### Major Findings
+
+1. **Generalist embedding models outperformed specialized clinical embedding models** in a semantic search task, suggesting that clinical models are more sensitive to small changes in input that confuse them. This sensitivity may be due to inadequate training data and a lack of diverse datasets necessary for reliable global language understanding in the medical domain.
+2. The best performing embedding models for short-context clinical semantic search were jina-embeddings-v2-base-en, e5-small-v2, and e5-large-v2, all of which are **generalist models**.
+3. The experiment highlighted the need for an appropriate training phase that matches the final needs, indicating that **generalist sentence-transformer models** were more accurate than specialized models even in a clinical context.
+
+### Methodology
+- **Generated dataset**: A dataset based on ICD-10-CM code descriptions was constructed, consisting of 100 codes with ten reformulations for each, which was made publicly available.
+- **Semantic search**: The retrieval of top one code description and associated code using embedding models was evaluated using performance metrics, including exact matching, category matching, and character error rate (CER).
+- **Embedding models**: A total of 19 embedding models, including both generalist and clinical models, were used for the benchmarking experiment.
+- **Metrics**: Performance was assessed based on exact matching, category matching, and CER, with a focus on the average of all reformulations and distinguishing between total CER and incorrect CER.
+
+### Results
+- The **top performing** embedding models for short-context clinical semantic search were generalist models, with jina-embeddings-v2-base-en, e5-small-v2, and e5-large-v2 exhibiting the highest performance.
+- Visual performance analysis indicated that a smaller embedding vector size was associated with higher performance, particularly for exact matching rate and incorrect CER metrics.
+- The study presented selected examples of top performing generalist and clinical embedding models, highlighting the superiority of generalist models in terms of exact matching rates.
+  
+### Critique
+The study provides valuable insights into the performance of generalist and specialized embedding models in a clinical semantic search tasks. However, the limitations of the study include:
+- The focus on short-context semantic search may not fully generalize to longer medical texts or broader clinical tasks.
+- The study did not include fully clinical sentence-transformer embedding models, which could impact the overall comparison and conclusions.
+- The reproducibility of the results may be limited by the selection of embedding models based on computational resources and availability, potentially leading to biases in the model comparison.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2401.01943v1](http://arxiv.org/abs/2401.01943v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.01943v1](https://browse.arxiv.org/html/2401.01943v1)       |
+| Truncated       | False       |
+| Word Count       | 4480       |

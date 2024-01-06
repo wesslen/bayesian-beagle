@@ -1,0 +1,57 @@
+
+---
+title: "Aligning Large Language Models with Human Preferences through Representation Engineering"
+id: "2312.15997v1"
+description: "Aligning large language models with human preferences is crucial. Representation Alignment from Human Feedback (RAHF) effectively manipulates model representations to align with diverse human preferences."
+author: Wenhao Liu, Xiaohua Wang, Muling Wu, Tianlong Li, Changze Lv, Zixuan Ling, Jianhao Zhu, Cenyuan Zhang, Xiaoqing Zheng, Xuanjing Huang
+date: "2023-12-26"
+image: "https://browse.arxiv.org/html/2312.15997v1/extracted/5314152/figures/schematic.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.15997v1/extracted/5314152/figures/schematic.png)
+
+### Major Takeaways
+
+1. **Aligning LLMs with human preferences is crucial** for enhancing their utility in terms of helpfulness, truthfulness, safety, harmlessness, and interestingness. Existing methods for this alignment often involve employing reinforcement learning from human feedback (RLHF), which presents challenges in implementation and instability during fine-tuning.
+
+2. This study proposes a novel approach called **Representation Alignment from Human Feedback (RAHF)**, drawing inspiration from representation engineering. RAHF proves to be effective, computationally efficient, and easy to implement, capturing and manipulating representations to align with a broad spectrum of human preferences.
+
+3. The study compares RAHF with RL-based methods and other reward-free fine-tuning methods, demonstrating that RAHF outperforms other RL-free approaches in human evaluations and automated metrics, achieving results comparable to RLHF while exhibiting simplicity in implementation and training.
+
+### Related Work
+
+- **Existing methods for aligning LLMs with human preferences** include reinforcement learning from human feedback (RLHF), contrastive learning, and hindsight instruction relabeling. These methods often face challenges such as instability during training or susceptibility to noisy data and incorrect labels in the training set.
+- **Representation engineering (RepE)** has been previously used to enhance transparency and controllability of neural networks. This study extends the application of RepE to aligning LLMs with a wide spectrum of human preferences, introducing two novel methods for this purpose.
+
+### Method
+
+#### Instructing LLMs on Human Preferences
+- The study explores two methods for instructing LLMs on human preferences: the Single LLM Method involves training a single large language model using contrastive instruction tuning, while the Dual LLMs method fine-tunes two LLMs with distinct tendencies, one for preferred responses and the other for dispreferred responses.
+- Diverse responses are used to glean insights into alignment with human preferences and distinguish activity patterns linked to human-preferred and dispreferred responses.
+
+#### Collecting Activity Patterns
+- The study utilizes stimulus pairs to elicit representations from the LLMs, extracting the differences in activity patterns arising from preferred and dispreferred stimuli and perturbing the model’s original representation to align with human preferences.
+
+#### Constructing Final Models
+- The collected activation patterns are leveraged to train a target model that aligns with human preferences, employing a specialized loss function and fine-tuning to incorporate the activation patterns into the model.
+
+### Automatic Evaluation
+- Automatic evaluations were conducted using reward models as proxies for human preferences, and the results demonstrated that RAHF-DualLLMs surpassed other baseline models, maintaining greater consistency with the reward models, while achieving results comparable to RLHF.
+
+### Critique
+- The paper provides valuable insights and proposes a novel approach for aligning LLMs with human preferences. However, it would benefit from providing more detailed insights into potential limitations or challenges faced during the implementation of RAHF, as well as comparisons with other state-of-the-art methods beyond the baselines used in the study. Additionally, the paper could benefit from providing a more comprehensive analysis of the limitations of RL-based methods and other reward-free fine-tuning methods, as well as a more thorough discussion of the broader implications and future directions for research in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2312.15997v1](http://arxiv.org/abs/2312.15997v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.15997v1](https://browse.arxiv.org/html/2312.15997v1)       |
+| Truncated       | False       |
+| Word Count       | 6563       |

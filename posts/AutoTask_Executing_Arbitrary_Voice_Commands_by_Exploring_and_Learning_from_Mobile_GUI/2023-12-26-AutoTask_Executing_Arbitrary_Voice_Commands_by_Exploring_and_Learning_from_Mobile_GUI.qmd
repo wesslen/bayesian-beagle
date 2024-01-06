@@ -1,0 +1,55 @@
+
+---
+title: "AutoTask: Executing Arbitrary Voice Commands by Exploring and Learning from Mobile GUI"
+id: "2312.16062v1"
+description: "AutoTask is a voice command interface that automates any mobile app task without prior knowledge or configuration."
+author: Lihang Pan, Bowen Wang, Chun Yu, Yuxuan Chen, Xiangyu Zhang, Yuanchun Shi
+date: "2023-12-26"
+image: "https://browse.arxiv.org/html/2312.16062v1/extracted/5317299/imgs/pipeline.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.16062v1/extracted/5317299/imgs/pipeline.png)
+
+### Major Takeaways:
+
+1. **AutoTask** is a voice command interface capable of automating any task in a mobile application with no need for modification or configuration by developers or end users.
+
+2. AutoTask addresses the lack of knowledge by employing a **trial and error** strategy, exploring the GUI and learning from the environment. It accumulates experiences during exploration and summarizes correct knowledge from these experiences.
+
+3. The paper conducts an evaluation study, which proves the feasibility and usability of AutoTask in executing arbitrary voice commands.
+
+### Introduction
+The paper introduces **AutoTask**, a voice command interface designed to automate tasks in mobile applications without requiring modifications or configurations. It highlights the challenges of constructing voice command interfaces and the limitations of existing VCIs to cover the actual needs of users.
+
+### Related Work
+The paper compares AutoTask with existing VCIs in terms of supported intents, understanding user commands, executing the command, and self-improvement. It highlights the limitations of current VCIs and how AutoTask differs from them.
+
+### Problem Formulation & Solution
+The paper discusses the challenges of completing unknown tasks in an unknown environment and proposes the **explore-learn** strategy for AutoTask, whereby the system learns from its exploration of the environment and accumulates experiences to enhance its capabilities.
+
+### System Design
+The system design of AutoTask is detailed, covering modules such as understanding, deciding, executing, backtracking, and checking. It explains how AutoTask comprehends and interacts with the GUI, understands user commands, decides the most probable operations, executes and backtracks when necessary, and checks for correctness.
+
+### Implementation
+The implementation section provides details on how AutoTask utilizes **large language models** (LLMs) for tasks such as embedding and similarity, text completion, and providing answers from multiple candidates.
+
+### Evaluation Study
+The paper conducts an evaluation study to compare the performance of AutoTask with a baseline approach. It provides details about the apparatus, tasks, metrics, procedures, results, and performance improvement through knowledge accumulation.
+
+### Critique
+While the paper presents an innovative approach to solving the challenges of voice command interfaces, it lacks information about privacy and security considerations, potential edge cases, and real-world user testing. Additionally, the specific details of the evaluation study design are not clarified, and the paper could benefit from a discussion of practical applications and limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2312.16062v1](http://arxiv.org/abs/2312.16062v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.16062v1](https://browse.arxiv.org/html/2312.16062v1)       |
+| Truncated       | True       |
+| Word Count       | 15489       |

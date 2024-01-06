@@ -1,0 +1,56 @@
+
+---
+title: "A Generative AI Assistant to Accelerate Cloud Migration"
+id: "2401.01753v1"
+description: "Tool uses generative AI to speed up on-premises app migration to the cloud, helping users find the right migration strategy."
+author: Amal Vaidya, Mohan Krishna Vankayalapati, Jacky Chan, Senad Ibraimoski, Sean Moran
+date: "2024-01-03"
+image: "https://browse.arxiv.org/html/2401.01753v1/extracted/5328373/output3.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.01753v1/extracted/5328373/output3.png)
+
+### Major Takeaways
+1. The paper introduces a **Cloud Migration Large Language Model (LLM)** that uses generative AI to accelerate the migration of on-premises applications to the cloud.
+2. The LLM **generates migration profiles and architecture diagrams** based on user-specified parameters, aiding inexperienced users in finding the right cloud migration profile and avoiding complexities of manual approaches.
+3. The paper highlights the potential of leveraging LLMs to reduce the manual work required for complex tasks, but also acknowledges the need for **human oversight due to potential inaccuracies**.
+
+### Introduction
+- Access to powerful large language models (LLMs) via APIs, such as GPT4, has driven the demand for various LLM-based tools.
+- The motivation for migrating to the public cloud includes cost savings, scalability and flexibility, global reach, and availability.
+- Determining a migration strategy for public cloud adoption can be time-consuming, especially for application owners unfamiliar with various cloud products.
+
+### Method Outline
+#### 1. Defining a migration profile
+- A simple data schema was created to standardize the language modeling task, with migration profiles defined as specific key-value pairs representing migration strategy options.
+#### 2. Prompt engineering
+- Designing suitable prompts is crucial to ensure accurate and reliable task performance by the LLM.
+- Prompt engineering techniques, such as one-shot and few-shot prompting, help improve LLM performance, while strategies to mitigate hallucination are also explored.
+#### 3. Architecture diagrams and documentation
+- The tool generates both architecture diagrams and links to relevant internal engineering documentation based on the generated migration profile.
+#### 4. Validation studies
+- Two different prompt strategies were compared in terms of accuracy, latency, and cost, with the structured strategy proving more accurate but at the expense of longer latency and higher cost.
+#### 5. Deployment infrastructure
+- An implemented cloud-native design pattern ensures scalability, reliability, and cost-efficiency, with a 3-tier architecture adopted to achieve independent scalability and enhance database security.
+
+### Conclusion
+- The use of LLMs demonstrates the potential to significantly reduce manual work for complex tasks, but different prompt strategies can impact the accuracy, cost, and latency of the tool.
+
+### Critique
+- The paper's disclaimer states that the work is a prototype and not a production deployed system, highlighting the need for further validation and development. 
+- The potential inaccuracies and need for human oversight suggested in the conclusion are significant concerns that should be addressed in future iterations of the tool. Additionally, the potential trade-offs between accuracy, latency, and cost warrant further exploration and discussion.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2401.01753v1](http://arxiv.org/abs/2401.01753v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.01753v1](https://browse.arxiv.org/html/2401.01753v1)       |
+| Truncated       | False       |
+| Word Count       | 2081       |

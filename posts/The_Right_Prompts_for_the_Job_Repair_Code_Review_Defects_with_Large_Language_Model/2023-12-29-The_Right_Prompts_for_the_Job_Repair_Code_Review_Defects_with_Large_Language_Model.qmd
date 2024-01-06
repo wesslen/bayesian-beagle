@@ -1,0 +1,72 @@
+
+---
+title: "The Right Prompts for the Job: Repair Code-Review Defects with Large Language Model"
+id: "2312.17485v1"
+description: "LLMs effectively repair code review defects, achieving 72.97% repair rate, improving automatic repair practicality."
+author: Zelin Zhao, Zhaogui Xu, Jialong Zhu, Peng Di, Yuan Yao, Xiaoxing Ma
+date: "2023-12-29"
+image: "https://browse.arxiv.org/html/2312.17485v1/x1.png"
+categories: ['hci', 'prompt-engineering', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.17485v1/x1.png)
+
+# The Right Prompts for the Job: Repair Code-Review Defects with Large Language Model
+
+## Major Findings
+1. **Limited accuracy and considerable time costs** associated with existing Automatic Program Repair (APR) techniques hinder their adoption in industrial practice.
+2. Advanced Large Language Models (LLMs) can **comprehend natural and programming languages**, making them capable of generating patches based on review comments, demonstrating a remarkable repair rate of **72.97%** with the best prompt.
+3. Incorporating **review comments and fix ranges** significantly aids in repairing Code Review (CR) defects, leading to progressive enhancement in the models’ ability to address the defects.
+
+## Introduction
+- Continuous Integration/Continuous Deployment (CI/CD) pipelines control the software development process, with **Code Review (CR)** serving as a pivotal node.
+- **Automatic Program Repair (APR)** aims to offer a fully automated solution for defect repair, but its inherent time-consuming nature poses challenges for integration within time-sensitive CI/CD pipelines.
+- Limitations of traditional approaches (search-based, constraint-based, and template-based methods) in effectively utilizing the insights from **review comments** expressed in natural language led to the exploration of **AI-based APR** approaches with Large Language Models (LLMs).
+
+## Code Review
+- Defect identification process involves human reviewers and automated checkers, with both providing comments describing identified defects and, in some cases, offering suggestions on rectifying them.
+
+## Repairing
+- **Defect repair** predominantly relies on manual effort, calling for the need for a semi-automated paradigm to leverage APR techniques effectively in the CR process.
+- Traditional approaches face challenges in effectively utilizing information from review comments. **AI-based APR approaches** with LLMs are seen as a promising solution to effectively address the underlying problem.
+
+## Research Questions and Experiment Settings
+- **Effectiveness of LLMs**: Explored using various LLMs for repairing CR defects using zero-shot learning or finetuning.
+- **Impact of different prompts**: Investigated the performance of LLMs with different prompts containing varied information.
+- **Performance of LLMs in repairing defects** varying with different model sizes.
+- **Impact of different datasets**: Explored the capacity to rectify defects and interchangeably employ these datasets.
+
+## Experiment Results
+1. **Overall Effectiveness (RQ1)**
+   - Zero-shot learning resulted in improved repair rates using **review comments**.
+   - Designed prompts demonstrated that review comments and fix ranges were the most effective prompts.
+   - Model performance improves with successive prompts, with the best performance achieved in prompt P7.
+
+2. **Prompt Comparison (RQ2)**
+   - Overall improvement in ECM from prompt P3 to P7, showcasing the incremental benefits of incorporating different cues.
+
+3. **Model Size Comparison (RQ3)**
+   - Gradual increases noticed in both ECM and Code BLEU scores as the model sizes increase, with 6-7B LLMs showing a favorable balance between efficiency and effectiveness.
+
+4. **Impacts of Datasets (RQ4)**
+   - Optimal performance achieved when finetuning and evaluating models on the appropriate datasets, highlighting the necessity of diverse datasets in the finetuning process.
+
+## Critique
+- The study focuses on a specific range of LLMs and model sizes, potentially limiting the generalizability of the findings to other models in the open source community.
+- The study acknowledges the necessity of ensuring data quality but does not delve into potential biases in the datasets that could affect model performance.
+
+Overall, the study provides valuable insights into leveraging LLMs for repairing CR defects, highlighting the importance of review comments and fix ranges in improving the effectiveness of APR techniques. Further research could explore the potential biases in the datasets and consider a wider range of LLMs to enhance the generalizability of the findings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2312.17485v1](http://arxiv.org/abs/2312.17485v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.17485v1](https://browse.arxiv.org/html/2312.17485v1)       |
+| Truncated       | False       |
+| Word Count       | 12983       |

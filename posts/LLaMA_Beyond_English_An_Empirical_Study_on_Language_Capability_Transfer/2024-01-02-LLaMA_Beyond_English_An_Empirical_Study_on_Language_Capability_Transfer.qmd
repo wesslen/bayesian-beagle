@@ -1,0 +1,44 @@
+
+---
+title: "LLaMA Beyond English: An Empirical Study on Language Capability Transfer"
+id: "2401.01055v1"
+description: "Transfer English LLM capabilities to non-English languages with minimal pretraining data, achieving comparable performance."
+author: Jun Zhao, Zhihao Zhang, Qi Zhang, Tao Gui, Xuanjing Huang
+date: "2024-01-02"
+image: "https://browse.arxiv.org/html/2401.01055v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.01055v1/x1.png)
+
+### Major Findings
+
+- **Vocabulary Extension**: The study found that further pretraining with a large volume of tokens outperformed performance on extended vocabulary, suggesting that vocabulary extension might not be a suitable choice for small-scale incremental pretraining.
+- **Training Scales**: The research identified that enhancing response quality primarily stems from an improvement in language generation prowess rather than an elevation in knowledge level, and more further pretraining could accelerate the model’s alignment with human instructions.
+- **English Capabilities Impact**: The study discovered that exclusive reliance on Chinese corpora for transfer training markedly compromises LLaMA’s original English proficiency, which is mitigated effectively through multilingual joint training.
+
+### Background and Overview
+The paper addresses the limitations of mainstream LLMs pre-trained on English-dominant corpora, hindering their performance in non-English languages. It investigates the impact of vocabulary extension, further pretraining, and instruction tuning on the transfer of language capabilities to non-English languages, aiming to minimize costs in the process.
+
+### Experimental Setup
+The study conducts experiments using LLaMA, LLaMA2, Chinese LLaMA, and Open Chinese LLaMA, evaluating the impact of vocabulary extension and training scales for effective transfer. It employs instruction datasets BELLE and Bactrain-X for training and evaluates the models based on response quality and knowledge level using standardized testing benchmarks.
+
+### Main Results
+The study reveals that vocabulary extension has a negative impact on language transferability within certain pretraining scales. It also identifies that enhancing response quality primarily stems from an improvement in language generation prowess, and more further pretraining accelerates the model’s alignment with human instructions. Additionally, it was found that the improvement in Chinese proficiency negatively affects the existing English capabilities of LLaMA.
+
+### Critique
+The paper provides valuable insights into language capability transfer in LLMs. However, it could benefit from addressing the limitations of the evaluation methodologies used and considering potential biases in the experimental setup. Additionally, the study could explore the practical implications of the findings and the real-world applications of non-English LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-06       |
+| Abstract | [http://arxiv.org/abs/2401.01055v1](http://arxiv.org/abs/2401.01055v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.01055v1](https://browse.arxiv.org/html/2401.01055v1)       |
+| Truncated       | False       |
+| Word Count       | 7734       |

@@ -38,6 +38,32 @@ format:
 """
 
 
+def remove_unicode_accents(input_str):
+    return input_str.replace("\\'", "")
+
+
+def remove_accents(input_str):
+    # Mapping of accented characters to their unaccented counterparts
+    accents_mapping = {
+        "á": "a",
+        "é": "e",
+        "í": "i",
+        "ó": "o",
+        "ú": "u",
+        "Á": "A",
+        "É": "E",
+        "Í": "I",
+        "Ó": "O",
+        "Ú": "U",
+        "ñ": "n",
+        "Ñ": "N",
+        # Add more mappings as needed
+    }
+
+    # Replace each accented character with its unaccented counterpart
+    return "".join(accents_mapping.get(char, char) for char in input_str)
+
+
 def convert_to_folder_name(title):
     """
     Convert a given string to a folder name format by replacing spaces, slashes,
@@ -56,6 +82,7 @@ def convert_to_folder_name(title):
     # Remove special characters and replace spaces with underscores
     sanitized = "".join(char for char in title if char not in special_chars)
 
+    sanitized = remove_accents(sanitized)
     sanitized = sanitized.replace(" ", "_")
     sanitized = sanitized.replace("-", "_")
     sanitized = sanitized.replace("'", "")
@@ -67,8 +94,11 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
     """
     Create a .qmd file from a JSON dictionary
     """
-    title = example["meta"]["title"]
+    title = remove_unicode_accents(example["meta"]["title"])
     folder_name = convert_to_folder_name(title)
+    example["meta"]["subtitle"] = remove_unicode_accents(
+        example["meta"]["subtitle"]
+    )
     current_date = example["meta"]["publish_date"]
     image = (
         "../../../bayesian-beagle.png"

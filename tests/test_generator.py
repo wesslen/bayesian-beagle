@@ -52,8 +52,8 @@ def test_convert_to_folder_name():
     folder_name = convert_to_folder_name("Title,with,commas")
     assert folder_name == "Titlewithcommas"
 
-    folder_name = convert_to_folder_name("Title with acc'ents")
-    assert folder_name == "Title_with_accents"
+    folder_name = convert_to_folder_name("Rényi Pufferfish")
+    assert folder_name == "Renyi_Pufferfish"
 
     folder_name = convert_to_folder_name("Title-with-hyphens")
     assert folder_name == "Title_with_hyphens"

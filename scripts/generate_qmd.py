@@ -50,7 +50,7 @@ def convert_to_folder_name(title):
     str: The converted folder name.
     """
     # Characters to be replaced
-    replace_chars = " /?:,'-"
+    replace_chars = " /\?:,'-"
 
     # Create a translation table for replacing characters
     trans_table = str.maketrans(replace_chars, "_" * len(replace_chars))

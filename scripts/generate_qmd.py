@@ -49,16 +49,18 @@ def convert_to_folder_name(title):
     Returns:
     str: The converted folder name.
     """
-    # Characters to be replaced
-    replace_chars = " /\?:,'-"
 
-    # Create a translation table for replacing characters
-    trans_table = str.maketrans(replace_chars, "_" * len(replace_chars))
+    # Characters to be removed from the string
+    special_chars = ":{}[],&*#?|><=%@`/"
 
-    # Replace specified characters with underscores
-    folder_name = title.translate(trans_table)
+    # Remove special characters and replace spaces with underscores
+    sanitized = "".join(char for char in title if char not in special_chars)
 
-    return folder_name
+    sanitized = sanitized.replace(" ", "_")
+    sanitized = sanitized.replace("-", "_")
+    sanitized = sanitized.replace("'", "")
+
+    return sanitized
 
 
 def create_qmd_file(example, output_folder, force_generate_all=False):

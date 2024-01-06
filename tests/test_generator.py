@@ -14,7 +14,7 @@ EXAMPLE_JSON = {
         "model": "Example Model",
         "publish_date": "2022-01-01",
         "links": {
-            "abs":"https://arxiv.org/abs/2401.00741v1",
+            "abs": "https://arxiv.org/abs/2401.00741v1",
             "html": "https://browse.arxiv.org/html/2401.00741v1",
             "pdf": "https://arxiv.org/pdf/2401.00741v1.pdf",
         },
@@ -41,16 +41,19 @@ def test_convert_to_folder_name():
     assert folder_name == "Title_with_spaces"
 
     folder_name = convert_to_folder_name("Title/with/slashes")
-    assert folder_name == "Title_with_slashes"
+    assert folder_name == "Titlewithslashes"
 
     folder_name = convert_to_folder_name("Title?with?question?marks")
-    assert folder_name == "Title_with_question_marks"
+    assert folder_name == "Titlewithquestionmarks"
 
     folder_name = convert_to_folder_name("Title:with:colons")
-    assert folder_name == "Title_with_colons"
+    assert folder_name == "Titlewithcolons"
 
     folder_name = convert_to_folder_name("Title,with,commas")
-    assert folder_name == "Title_with_commas"
+    assert folder_name == "Titlewithcommas"
+
+    folder_name = convert_to_folder_name("Title with acc'ents")
+    assert folder_name == "Title_with_accents"
 
     folder_name = convert_to_folder_name("Title-with-hyphens")
     assert folder_name == "Title_with_hyphens"

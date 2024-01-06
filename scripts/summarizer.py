@@ -38,7 +38,6 @@ class OpenAIAssistant:
 
         else:
             raise ValueError("Invalid task specified")
-        
 
         try:
             response = self.client.chat.completions.create(
@@ -114,13 +113,13 @@ def extract_text_from_html(html_content: str) -> str:
             ".ltx_authors",
             ".ltx_bibliography",
             ".package-alerts",
-            ".section", # remove license;arxiv number header
-            ".ltx_table", # remove tables
+            ".section",  # remove license;arxiv number header
+            ".ltx_table",  # remove tables
             ".ltx_tabular",
             ".ltx_listing",
             ".ltx_picture",
             ".ltx_Math",
-            ".ltx_equation", # remove math
+            ".ltx_equation",  # remove math
             ".ltx_theorem",
         ],
     )
@@ -170,7 +169,7 @@ def truncate_string(text, token_threshold):
 
 def extract_first_png_image(html_content):
     """
-    Extract the first .png image URL from the HTML content, searching through each 
+    Extract the first .png image URL from the HTML content, searching through each
     <section class="ltx_section"> until a .png image is found.
 
     :param html_content: A string containing HTML content.
@@ -190,6 +189,7 @@ def extract_first_png_image(html_content):
     except Exception as e:
         logger.error(f"An error occurred: {e}")
         raise
+
 
 @app.command()
 def summarize(
@@ -293,7 +293,9 @@ def summarize(
                         "html": url,
                         "abs": first_result.entry_id,
                     },
-                    "authors": [author.name for author in first_result.authors],
+                    "authors": [
+                        author.name for author in first_result.authors
+                    ],
                     "title": remove_double_quotes(first_result.title),
                     "subtitle": remove_double_quotes(tldr),
                     "categories": categories,

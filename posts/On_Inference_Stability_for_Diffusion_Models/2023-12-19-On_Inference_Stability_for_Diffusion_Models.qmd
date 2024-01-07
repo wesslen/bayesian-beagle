@@ -1,0 +1,57 @@
+
+---
+title: "On Inference Stability for Diffusion Models"
+id: "2312.12431v1"
+description: "TL;DR: Denoising Probabilistic Models (DPMs) improve image generation with a new sequence-aware loss, yielding better results than traditional methods."
+author: Viet Nguyen, Giang Vu, Tung Nguyen Thanh, Khoat Than, Toan Tran
+date: "2023-12-19"
+image: "https://browse.arxiv.org/html/2312.12431v1/x1.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.12431v1/x1.png)
+
+### Summary of "On Inference Stability for Diffusion Models"
+
+#### Key Findings
+1. **Diffusion Probabilistic Models (DPMs)** have shown to be effective in generating high-quality images, but they suffer from slow sampling speed and lack of correlation between timesteps. The proposed **sequence-aware loss** technique significantly improves image generalization quality on various benchmark datasets.
+  
+2. Existing approaches focusing on accelerating the generation process by applying non-Markovian diffusion processes or utilizing higher-order solvers for ordinary differential equations can be complemented with the proposed method to achieve even better image quality.
+
+3. The study introduces a theoretical connection between the denoising process and solving ordinary differential equations, leading to the development of the sequence-aware loss that noticeably enhances the estimation gap and ultimately improves the sampling quality in DPMs.
+
+---
+
+### Introduction
+- **Diffusion Probabilistic Models (DPMs)** are effective generative models. However, they suffer from slow sampling speed, and correlation between timesteps is often neglected.
+- Prior methods have focused on accelerating the generation process and refining inefficient sampling trajectories.
+
+### Background
+- DPMs consist of a forward process that adds noise to the original data distribution and a reverse process that reconstructs a data instance from the noises.
+- Various attempts to refine inefficient sampling trajectories have been made, including estimating the optimal variance to correct potential bias caused by imperfect mean estimation.
+
+### Methodology
+- The study identifies the **estimation gap** between predicted and actual sampling trajectories and introduces a novel **sequence-aware loss** to minimize this gap.
+- The proposed loss function is theoretically proven to be a tighter upper bound of the estimation gap compared to conventional loss functions in DPMs.
+
+### Experiments
+- Experimental results demonstrate significant improvements in **FID** (Fréchet Inception Distance) and **Inception Score** when employing the sequence-aware loss in multiple DPM frameworks on various benchmark datasets, including CIFAR10, CelebA, and CelebA-HQ.
+- The proposed loss function shows promise in accelerating the sampling process and enhancing image quality, both individually and in combination with advanced techniques.
+
+### Critique
+- The proposed sequence-aware loss function requires calculation of the network's output at multiple timesteps, resulting in longer training times compared to conventional loss functions.
+- The study focuses on image quality metrics, and additional evaluation on other aspects, such as model robustness and scalability, would provide a more comprehensive understanding of the proposed method.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-07       |
+| Abstract | [http://arxiv.org/abs/2312.12431v1](http://arxiv.org/abs/2312.12431v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.12431v1](https://browse.arxiv.org/html/2312.12431v1)       |
+| Truncated       | False       |
+| Word Count       | 6949       |

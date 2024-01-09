@@ -1,0 +1,72 @@
+
+---
+title: "An Investigation of Large Language Models for Real-World Hate Speech Detection"
+id: "2401.03346v1"
+description: "Large language models (LLMs) show promise in detecting hate speech, but effective prompting strategies are crucial for leveraging their knowledge base."
+author: Keyan Guo, Alexander Hu, Jaden Mu, Ziheng Shi, Ziming Zhao, Nishant Vishwamitra, Hongxin Hu
+date: "2024-01-07"
+image: "../../../bayesian-beagle.png"
+categories: ['robustness', 'prompt-engineering', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+**Key Takeaways**
+
+- Large language models (LLMs) have demonstrated strong performance in identifying hate speech, even surpassing benchmark machine learning models in some cases.
+- The choice of **prompting strategies** significantly impacts the effectiveness of LLMs in detecting hate speech, with a carefully crafted reasoning prompt showing the most promising results.
+- LLMs show proficiency in detecting hate speech in English but underperform in non-English text, highlighting the need for further investigation into multilingual hate speech detection.
+
+
+# Introduction
+
+- Hate speech is a significant issue in online spaces, and existing methods for detecting it are limited in capturing contextual nuances.
+- Large language models (LLMs) have shown promise in addressing this limitation due to their extensive training on natural language data, but there is a lack of studies on effectively prompting LLMs for hate speech detection.
+  
+
+# Background and Related Work
+
+## Hate Speech Detection
+- Hate speech online has become a critical threat, with current AI/ML detectors primarily relying on supervised learning techniques and facing limitations in capturing the contextual diversity of hate speech.
+
+## LLMs and Prompts-based Hate Speech Detection
+- LLMs, like ChatGPT, have shown proficiency in natural language tasks, and prompting strategies have been found effective in guiding LLMs for specific tasks.
+- Prior studies have explored LLMs for hate speech detection but there is a need for a more comprehensive understanding of LLMs' proficiency, especially with varied prompting strategies.
+
+# Hate Speech Datasets
+- The study employs five diverse hate speech datasets, each with specific characteristics and compositions, providing a comprehensive basis for evaluation.
+
+# Prompt-engineering for Hate Speech Detection
+- The study introduces four diverse prompting strategies - general prompt, general prompt with hate speech definition, few-shot learning prompt, and chain-of-thought prompt.
+
+# Measuring the Effectiveness of Prompting Strategies
+
+##  LLM-based General Prompting Strategy vs. Baselines
+- LLMs consistently outperform benchmark models, demonstrating higher accuracy and F1 scores in hate speech detection.
+
+## Analysis of Different Prompts
+- Different prompts show varying levels of effectiveness, with the chain-of-thought reasoning prompt outperforming others, indicating the high impact of prompt design on model performance.
+
+## Effectiveness of LLMs against multilingual hate speech
+- LLMs show proficiency in detecting hate speech in English but underperform in non-English text, highlighting the need for further investigation into multilingual hate speech detection.
+
+# Conclusion and Future Work
+- The study fills an important gap in exploring effective LLM prompting strategies for hate speech detection, with potential future research in multilingual settings and multimodal hate speech detection.  
+
+**Critique and Potential Problems**
+- The study is limited to specific prompting strategies and datasets, potentially overlooking other effective strategies and diverse hate speech instances. 
+- The findings may not be generalizable to all LLMs or applicable to all hate speech contexts.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-09       |
+| Abstract | [http://arxiv.org/abs/2401.03346v1](http://arxiv.org/abs/2401.03346v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.03346v1](https://browse.arxiv.org/html/2401.03346v1)       |
+| Truncated       | False       |
+| Word Count       | 6521       |

@@ -1,0 +1,62 @@
+
+---
+title: "Venn: Resource Management Across Federated Learning Jobs"
+id: "2312.08298v1"
+description: "TL;DR: Venn is an FL resource manager that efficiently schedules devices among FL jobs, improving job completion time."
+author: Jiachen Liu, Fan Lai, Ding Ding, Yiwen Zhang, Mosharaf Chowdhury
+date: "2023-12-13"
+image: "https://browse.arxiv.org/html/2312.08298v1/x1.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2312.08298v1/x1.png)
+
+# Venn: Resource Management Across Federated Learning Jobs
+
+## Key takeaways
+1. **Federated Learning (FL)** is growing in popularity, bringing the challenge of managing resource contention among multiple FL jobs training on the same device population.
+2. Existing resource managers for FL jobs opt for **random assignment** of devices to FL jobs for simplicity and scalability, leading to poor performance.
+3. Venn, an **FL resource manager**, efficiently schedules heterogeneous devices among many FL jobs, improving the average job completion time (JCT) by up to 1.88×.
+
+## Introduction
+- FL enables distributed edge devices to perform collaborative machine learning without moving raw data into the cloud.
+- Resource management in FL involves several unique characteristics like dynamic availability and heterogeneous resource pools.
+
+## FL Resources
+- FL resources exhibit high variance in availability and capacity, as shown by diurnal device availability and device hardware heterogeneity.
+
+## FL Jobs
+- An FL job is executed in multiple rounds that run sequentially for synchronous FL training. The job completion time of an FL job is significantly affected by both scheduling delay and response collection time.
+
+## Venn Overview
+- Venn operates at a layer above all FL jobs, allocating each checked-in resource to individual jobs, optimizing the job-to-device assigning phase. It prioritizes **small jobs** requiring scarce resources and employs a **resource-aware device-to-job matching heuristic** to reduce response collection time.
+
+## Resource Scheduling in Venn
+- **Intersection Resource Scheduling (IRS)**: Venn addresses the intricate resource contention among FL jobs by formulating it as an IRS problem. It prioritizes jobs within each job group based on their remaining resource demand and employs a two-step approach to optimize the average JCT.
+
+## Device Matching
+- **Resource-aware tier-based device-to-job matching solution**: Venn partitions eligible devices into tiers based on their hardware capabilities and matches devices with jobs to reduce response collection time.
+
+## Enhancements
+- Venn addresses dynamic resource supply and starvation prevention to improve fairness for different job sizes and eligibility types.
+
+## Evaluation
+- Venn improves average JCT across various real-world FL workloads and provides breakdowns to evaluate its scheduling and matching algorithms.
+
+## Critique
+- The paper did not address potential challenges or limitations associated with the proposed Venn resource management approach.
+- There was no mention of any empirical testing or real-world applications where Venn was deployed and analyzed for performance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-10       |
+| Abstract | [http://arxiv.org/abs/2312.08298v1](http://arxiv.org/abs/2312.08298v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.08298v1](https://browse.arxiv.org/html/2312.08298v1)       |
+| Truncated       | False       |
+| Word Count       | 13457       |

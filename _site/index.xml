@@ -10,7 +10,1591 @@
 <atom:link href="https://bayesian-beagle.netlify.app/index.xml" rel="self" type="application/rss+xml"/>
 <description>Quarto blog of LLM-generated summaries of Arxiv preprints</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Mon, 08 Jan 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 09 Jan 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Large Language Models for Robotics: Opportunities, Challenges, and Perspectives</title>
+  <dc:creator>Jiaqi Wang, Zihao Wu, Yiwei Li, Hanqi Jiang, Peng Shu, Enze Shi, Huawen Hu, Chong Ma, Yiheng Liu, Xuhui Wang, Yincheng Yao, Xuan Liu, Huaqin Zhao, Zhengliang Liu, Haixing Dai, Lin Zhao, Bao Ge, Xiang Li, Tianming Liu, Shu Zhang</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Large_Language_Models_for_Robotics_Opportunities_Challenges_and_Perspectives/2024-01-09-Large_Language_Models_for_Robotics_Opportunities_Challenges_and_Perspectives.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/Large_Language_Models_for_Robotics_Opportunities_Challenges_and_Perspectives/https:/browse.arxiv.org/html/2401.04334v1/x1.png" class="img-fluid"></p>
+<section id="large-language-models-for-robotics-opportunities-challenges-and-perspectives" class="level1">
+<h1>Large Language Models for Robotics: Opportunities, Challenges, and Perspectives</h1>
+<section id="takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="takeaways">Takeaways:</h2>
+<ol type="1">
+<li><strong>LLMs</strong> have been increasingly integrated into robotic task planning due to their advanced reasoning and language comprehension capabilities.</li>
+<li>The integration of <strong>multimodal GPT-4V</strong> has shown promise in enhancing robot performance in embodied tasks, as demonstrated by diverse datasets.</li>
+<li>LLM-centric embodied intelligence holds potential for various applications, such as precision agriculture, healthcare, and brain-computer interfaces.</li>
+</ol>
+</section>
+<section id="i-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="i-introduction">I Introduction</h2>
+<ul>
+<li>Large pre-trained models have demonstrated remarkable capabilities across complex tasks in various domains.</li>
+<li>The utilization of <strong>instruction tuning</strong> and <strong>alignment tuning</strong> has become the primary approach to adapt LLMs for specific objectives.</li>
+</ul>
+</section>
+<section id="ii-related-work" class="level2">
+<h2 class="anchored" data-anchor-id="ii-related-work">II Related Work</h2>
+<section id="ii-a-llm-for-robotics" class="level3">
+<h3 class="anchored" data-anchor-id="ii-a-llm-for-robotics">II-A LLM for Robotics</h3>
+<ul>
+<li>LLMs exhibit exceptional natural language understanding and commonsense reasoning capabilities, contributing to enhanced comprehension and execution for robots.</li>
+</ul>
+</section>
+<section id="ii-b-multimodal-task-planning-with-llms" class="level3">
+<h3 class="anchored" data-anchor-id="ii-b-multimodal-task-planning-with-llms">II-B Multimodal Task Planning with LLMs</h3>
+<ul>
+<li>Multimodal LLMs excel in interpreting and correlating multiple data streams, broadening their role from language processing to more integrative functions.</li>
+</ul>
+</section>
+</section>
+<section id="iii-scope-of-robotic-tasks" class="level2">
+<h2 class="anchored" data-anchor-id="iii-scope-of-robotic-tasks">III Scope of Robotic Tasks</h2>
+<section id="iii-a-planning" class="level3">
+<h3 class="anchored" data-anchor-id="iii-a-planning">III-A Planning</h3>
+<section id="iii-a1-natural-language-understanding" class="level4">
+<h4 class="anchored" data-anchor-id="iii-a1-natural-language-understanding">III-A1 Natural Language Understanding</h4>
+<ul>
+<li>LLMs excel in interpreting natural language instructions and integrating multimodal information to create actionable guidance for virtual agents.</li>
+</ul>
+</section>
+<section id="iii-a2-complex-task-reasoning-and-decision-making" class="level4">
+<h4 class="anchored" data-anchor-id="iii-a2-complex-task-reasoning-and-decision-making">III-A2 Complex Task Reasoning and Decision-making</h4>
+<ul>
+<li>LLMs advance complex task reasoning and decision-making through reinforcement learning and collaboration with other modalities.</li>
+</ul>
+</section>
+<section id="iii-a3-human-robot-interaction" class="level4">
+<h4 class="anchored" data-anchor-id="iii-a3-human-robot-interaction">III-A3 Human-robot interaction</h4>
+<ul>
+<li>Integration of reinforcement learning with human feedback enables robots to continuously improve their task execution.</li>
+</ul>
+</section>
+</section>
+<section id="iii-b-manipulation" class="level3">
+<h3 class="anchored" data-anchor-id="iii-b-manipulation">III-B Manipulation</h3>
+<section id="iii-b1-natural-language-understanding" class="level4">
+<h4 class="anchored" data-anchor-id="iii-b1-natural-language-understanding">III-B1 Natural Language Understanding</h4>
+<ul>
+<li>LLMs help robots make common-sense analyses and enhance adaptability to new scenarios, agents, and tasks.</li>
+</ul>
+</section>
+<section id="iii-b2-interactive-strategies" class="level4">
+<h4 class="anchored" data-anchor-id="iii-b2-interactive-strategies">III-B2 Interactive Strategies</h4>
+<ul>
+<li>The use of LLMs in robot control focuses on generating interactive reward codes and extracting operants and constraints from LLMs.</li>
+</ul>
+</section>
+<section id="iii-b3-modular-approaches" class="level4">
+<h4 class="anchored" data-anchor-id="iii-b3-modular-approaches">III-B3 Modular Approaches</h4>
+<ul>
+<li>Modular approaches enhance system flexibility and adaptability to new tasks and environments.</li>
+</ul>
+</section>
+</section>
+<section id="iii-c-reasoning" class="level3">
+<h3 class="anchored" data-anchor-id="iii-c-reasoning">III-C Reasoning</h3>
+<section id="iii-c1-natural-language-understanding" class="level4">
+<h4 class="anchored" data-anchor-id="iii-c1-natural-language-understanding">III-C1 Natural Language Understanding</h4>
+<ul>
+<li>LLMs provide common sense insights crucial for various tasks, avoiding the need for costly data gathering and model training.</li>
+</ul>
+</section>
+<section id="iii-c2-complex-task-reasoning-and-decision-making" class="level4">
+<h4 class="anchored" data-anchor-id="iii-c2-complex-task-reasoning-and-decision-making">III-C2 Complex Task Reasoning and Decision-making</h4>
+<ul>
+<li>LLMs leverage high-level semantic knowledge to enhance task execution and demonstrate effective performance, even in tasks with intricate settings or specific requirements.</li>
+</ul>
+</section>
+<section id="iii-c3-interactive-strategies" class="level4">
+<h4 class="anchored" data-anchor-id="iii-c3-interactive-strategies">III-C3 Interactive Strategies</h4>
+<ul>
+<li>LLMs augment interactive multimodal perception and the development of advanced architectures and interaction patterns.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="iv-gpt-4v-empowered-embodied-task-planning" class="level2">
+<h2 class="anchored" data-anchor-id="iv-gpt-4v-empowered-embodied-task-planning">IV GPT-4V Empowered Embodied Task Planning</h2>
+<ul>
+<li><strong>GPT-4V</strong> has demonstrated impressive performance in multimodal task planning across diverse environments and scenarios.</li>
+</ul>
+</section>
+<section id="v-experimental-results" class="level2">
+<h2 class="anchored" data-anchor-id="v-experimental-results">V Experimental Results</h2>
+<ul>
+<li>The matching score for the generated task plans consistently reflects a high level of agreement between the LLM-generated plans and the ground truth demonstrations.</li>
+</ul>
+</section>
+<section id="vi-limitation-discussion-and-future-work" class="level2">
+<h2 class="anchored" data-anchor-id="vi-limitation-discussion-and-future-work">VI Limitation, Discussion and Future Work</h2>
+<ul>
+<li>Challenges include homogenous generated plans, the need for carefully crafted prompts, and the closed-source nature of the <strong>GPT-4V API</strong>.</li>
+<li>Future work focuses on addressing these challenges and developing more robust AGI robotic systems.</li>
+</ul>
+</section>
+<section id="vii-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="vii-conclusion">VII Conclusion</h2>
+<ul>
+<li>LLMs demonstrate impressive reasoning, language understanding, and multimodal processing abilities that can significantly enhance robotic comprehension and task execution.</li>
+</ul>
+</section>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<p>The paper provides a comprehensive overview and evaluation of LLMs and multimodal LLMs in robotic tasks. However, it would benefit from addressing potential biases in the evaluation process and considering the ethical implications of implementing advanced LLMs in robotics. Additionally, the critique would be enhanced by acknowledging potential limitations in the generalization of study results to real-world applications.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04334v1">http://arxiv.org/abs/2401.04334v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04334v1">https://browse.arxiv.org/html/2401.04334v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>14055</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>social-sciences</category>
+  <category>hci</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Large_Language_Models_for_Robotics_Opportunities_Challenges_and_Perspectives/2024-01-09-Large_Language_Models_for_Robotics_Opportunities_Challenges_and_Perspectives.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04334v1/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding</title>
+  <dc:creator>Zilong Wang, Hao Zhang, Chun-Liang Li, Julian Martin Eisenschlos, Vincent Perot, Zifeng Wang, Lesly Miculicich, Yasuhisa Fujii, Jingbo Shang, Chen-Yu Lee, Tomas Pfister</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Chain_of_Table_Evolving_Tables_in_the_Reasoning_Chain_for_Table_Understanding/2024-01-09-Chain_of_Table_Evolving_Tables_in_the_Reasoning_Chain_for_Table_Understanding.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/Chain_of_Table_Evolving_Tables_in_the_Reasoning_Chain_for_Table_Understanding/https:/browse.arxiv.org/html/2401.04398v1/x1.png" class="img-fluid"></p>
+<section id="chain-of-table-evolving-tables-in-the-reasoning-chain-for-table-understanding" class="level1">
+<h1>Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding</h1>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li><strong>Table-based reasoning</strong> requires extraction of underlying semantics from both free-form questions and semi-structured tabular data.</li>
+<li>The proposed <strong>Chain-of-Table framework</strong> achieves new state-of-the-art performance on WikiTQ, FeTaQA, and TabFact benchmarks across multiple LLM choices.</li>
+<li>The framework <strong>outperforms</strong> generic reasoning and program-aided reasoning methods on TabFact and WikiTQ.</li>
+</ul>
+</section>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>The paper discusses the challenges of table-based reasoning and introduces the Chain-of-Table framework to leverage tabular data in the reasoning chain. It explains the use of in-context learning to iteratively generate operations and update the table, leading to a chain showing the reasoning process for a given tabular problem. The study also presents the outperformance of Chain-of-Table on multiple benchmarks.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The introduction highlights the importance of table understanding and the promising direction of table-based reasoning with large language models (LLMs). The authors discuss the limitations of existing approaches and propose the Chain-of-Table framework as a solution.</p>
+</section>
+<section id="related-work" class="level2">
+<h2 class="anchored" data-anchor-id="related-work">Related Work</h2>
+<p>The section provides an overview of previous methods for fine-tuning language models for table understanding and program-aided reasoning for solving table-based tasks. It points out the shortcomings of existing methods in addressing complex table scenarios and sets the context for the proposed Chain-of-Table framework.</p>
+</section>
+<section id="chain-of-table-reasoning" class="level2">
+<h2 class="anchored" data-anchor-id="chain-of-table-reasoning">Chain-of-Table Reasoning</h2>
+<p>The paper delves into the Chain-of-Table reasoning, discussing the problem formulation, overview, dynamic planning, argument generation, and final query stages. It explains the specific table operations used in the framework and presents an ablation study to demonstrate their effectiveness.</p>
+</section>
+<section id="experiments" class="level2">
+<h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
+<p>The results of the experiments on WikiTQ, TabFact, and FeTaQA benchmarks are presented, along with comparisons with baseline methods. The performance analysis under different operation chain lengths and table sizes is discussed, showing the effectiveness of Chain-of-Table across various scenarios.</p>
+</section>
+<section id="efficiency-analysis-of-chain-of-table" class="level2">
+<h2 class="anchored" data-anchor-id="efficiency-analysis-of-chain-of-table">Efficiency Analysis of Chain-of-Table</h2>
+<p>The efficiency of the Chain-of-Table framework is analyzed in terms of the number of required generated samples compared to baseline methods. The study shows the improved efficiency of Chain-of-Table in generating queries for tabular reasoning.</p>
+</section>
+<section id="case-study" class="level2">
+<h2 class="anchored" data-anchor-id="case-study">Case Study</h2>
+<p>A case study is presented to illustrate the tabular reasoning process in Chain-of-Table, showcasing how the framework facilitates correct answers by dynamically planning an operation chain and accurately storing intermediate results.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The paper concludes by emphasizing the enhanced reasoning capability of LLMs with Chain-of-Table and the potential for leveraging tabular structure to express intermediate thoughts for table-based reasoning. Additionally, it highlights the role of Chain-of-Table in instructing LLMs to dynamically plan operation chains for improved table understanding.</p>
+</section>
+</section>
+<section id="critique" class="level1">
+<h1>Critique</h1>
+<p>The paper provides valuable insights into the challenges of table-based reasoning and offers a promising framework with the Chain-of-Table. However, it would benefit from including a more in-depth discussion of potential limitations or constraints of the proposed framework, as well as addressing any potential biases or shortcomings in the experimental design and data analysis. Additionally, the paper could expand on the scalability and generalizability of the proposed framework to various real-world applications and datasets.</p>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04398v1">http://arxiv.org/abs/2401.04398v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04398v1">https://browse.arxiv.org/html/2401.04398v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>9507</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <category>prompt-engineering</category>
+  <category>production</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Chain_of_Table_Evolving_Tables_in_the_Reasoning_Chain_for_Table_Understanding/2024-01-09-Chain_of_Table_Evolving_Tables_in_the_Reasoning_Chain_for_Table_Understanding.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04398v1/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>TransportationGames: Benchmarking Transportation Knowledge of (Multimodal) Large Language Models</title>
+  <dc:creator>Xue Zhang, Xiangyu Shi, Xinyue Lou, Rui Qi, Yufeng Chen, Jinan Xu, Wenjuan Han</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/TransportationGames_Benchmarking_Transportation_Knowledge_of_(Multimodal)_Large_Language_Models/2024-01-09-TransportationGames_Benchmarking_Transportation_Knowledge_of_(Multimodal)_Large_Language_Models.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/TransportationGames_Benchmarking_Transportation_Knowledge_of_(Multimodal)_Large_Language_Models/https:/browse.arxiv.org/html/2401.04471v1/x1.png" class="img-fluid"></p>
+<section id="major-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h2>
+<ol type="1">
+<li><p><strong>TransportationGames</strong> is a comprehensive evaluation benchmark designed to assess the capabilities of (M)LLMs in executing transportation-related tasks. It categorizes these tasks into three skill levels based on widely recognized Bloom’s cognitive models: Transportation knowledge memorization, understanding, and applying.</p></li>
+<li><p>Evaluation results show that while some models perform well in certain tasks, there is still much <strong>room for improvement</strong> overall. This suggests that (M)LLMs may not possess reliable transportation knowledge and struggle with transportation-related tasks.</p></li>
+<li><p>The study not only identifies the performance of various (M)LLMs but also analyzes the key factors affecting model performance. It hopes that the release of TransportationGames can serve as a foundation for future research, thereby accelerating the implementation and application of (M)LLMs in the <strong>transportation domain</strong>.</p></li>
+</ol>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<ul>
+<li>Large language models (LLMs) and multimodal large language models (MLLMs) have shown exceptional general capabilities and are increasingly being utilized across various professional domains.</li>
+<li>Evaluation benchmarks are crucial for assessing (M)LLMs and gaining insights into their strengths and weaknesses. Domain-specific benchmarks are especially important for driving practical progress and responsible implementation.</li>
+<li>There is a lack of systematic evaluation benchmarks for the transportation domain, prompting the introduction of TransportationGames to assess (M)LLMs in transportation-related tasks.</li>
+</ul>
+</section>
+<section id="benchmark-construction" class="level2">
+<h2 class="anchored" data-anchor-id="benchmark-construction">Benchmark Construction</h2>
+<ul>
+<li>TransportationGames is organized using the first three levels in <strong>Bloom’s Taxonomy</strong> to evaluate (M)LLMs. It includes 10 tasks based on diverse sub-domains in the transportation domain, employing multiple-choice, “True/False” judge, and text generation formats.</li>
+<li>The tasks are categorized into three skill levels: Transportation knowledge memorization, understanding, and applying, to offer a systematic outline of the skillset necessary for transportation-related tasks.</li>
+</ul>
+</section>
+<section id="experiments" class="level2">
+<h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
+<ul>
+<li>The evaluation results of LLMs on the text-only dataset of TransportationGames show varying performance across different models. Similarly, MLLMs exhibit differing performance on the multimodal dataset.</li>
+</ul>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<ul>
+<li>The study observes that the format error rate of some models is zero, indicating excellent instruction-following ability. There is still much <strong>room for improvement</strong> for some tasks, especially in multimodal scenarios.</li>
+<li>The choice of BaseModel significantly affects model performance, and scaling up the model size can improve performance with similar BaseModels.</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<ul>
+<li>The release of TransportationGames serves as a foundation for future research and hopes to accelerate the implementation and application of (M)LLMs in the field of transportation.</li>
+</ul>
+</section>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<ul>
+<li><strong>Data Leakage:</strong> The study mentions the potential issue of data leakage as the data is collected from the internet. This could impact the fairness of the evaluation.</li>
+<li><strong>Model and Task Selection:</strong> Due to time constraints, only a small portion of common models were tested. Additionally, the selection of evaluation tasks may not fully represent all aspects of the transportation domain.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04471v1">http://arxiv.org/abs/2401.04471v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04471v1">https://browse.arxiv.org/html/2401.04471v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>7381</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <category>production</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/TransportationGames_Benchmarking_Transportation_Knowledge_of_(Multimodal)_Large_Language_Models/2024-01-09-TransportationGames_Benchmarking_Transportation_Knowledge_of_(Multimodal)_Large_Language_Models.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04471v1/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>MERA: A Comprehensive LLM Evaluation in Russian</title>
+  <dc:creator>Alena Fenogenova, Artem Chervyakov, Nikita Martynov, Anastasia Kozlova, Maria Tikhonova, Albina Akhmetgareeva, Anton Emelyanov, Denis Shevelev, Pavel Lebedev, Leonid Sinev, Ulyana Isaeva, Katerina Kolomeytseva, Daniil Moskovskiy, Elizaveta Goncharova, Nikita Savushkin, Polina Mikhailova, Denis Dimitrov, Alexander Panchenko, Sergei Markov</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/MERA_A_Comprehensive_LLM_Evaluation_in_Russian/2024-01-09-MERA_A_Comprehensive_LLM_Evaluation_in_Russian.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/MERA_A_Comprehensive_LLM_Evaluation_in_Russian/None.png" class="img-fluid"></p>
+<section id="summary-of-mera-a-comprehensive-llm-evaluation-in-russian" class="level1">
+<h1>Summary of “MERA: A Comprehensive LLM Evaluation in Russian”</h1>
+<section id="major-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h2>
+<ol type="1">
+<li><strong>MERA</strong> is a widely used assessment tool for evaluating language proficiency in Russian as a foreign language.</li>
+<li>The evaluation encompasses four key language skills: <strong>listening, reading, writing, and speaking</strong>, providing a comprehensive analysis of a learner’s language abilities.</li>
+<li>The MERA evaluation aims to standardize the assessment process and provide reliable results for individuals and institutions seeking to gauge Russian language proficiency.</li>
+</ol>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<ul>
+<li>MERA is a widely recognized assessment tool used to evaluate proficiency in the Russian language.</li>
+<li>It offers a comprehensive evaluation of language skills, including listening, reading, writing, and speaking.</li>
+</ul>
+</section>
+<section id="key-features-of-mera" class="level2">
+<h2 class="anchored" data-anchor-id="key-features-of-mera">Key Features of MERA</h2>
+<ul>
+<li><strong>Comprehensive Evaluation</strong>: MERA assesses proficiency in all four language skills, providing a holistic view of an individual’s language abilities.</li>
+<li><strong>Standardization</strong>: The evaluation aims to standardize the assessment process, ensuring consistent and reliable results.</li>
+<li><strong>Different Levels</strong>: MERA offers evaluations at various levels, accommodating learners at different stages of language proficiency.</li>
+</ul>
+</section>
+<section id="components-of-the-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="components-of-the-evaluation">Components of the Evaluation</h2>
+<ul>
+<li><strong>Listening</strong>: This component assesses the ability to comprehend spoken Russian, including understanding conversations and speeches.</li>
+<li><strong>Reading</strong>: The reading component evaluates comprehension of written Russian texts, including articles and literary works.</li>
+<li><strong>Writing</strong>: MERA assesses writing skills, including grammar, vocabulary usage, and overall coherence in written expression.</li>
+<li><strong>Speaking</strong>: The speaking component evaluates oral proficiency, including pronunciation, fluency, and communication skills.</li>
+</ul>
+</section>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<p>The paper could benefit from providing more specific details about the development and validation of the MERA evaluation tool. Additionally, it would be helpful to include data on the reliability and validity of the assessment to support its widespread usage. There may also be a need for further research on the effectiveness of MERA in accurately gauging Russian language proficiency in diverse contexts and learner populations.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04531v1">http://arxiv.org/abs/2401.04531v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04531v1">https://browse.arxiv.org/html/2401.04531v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>19</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <category>production</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/MERA_A_Comprehensive_LLM_Evaluation_in_Russian/2024-01-09-MERA_A_Comprehensive_LLM_Evaluation_in_Russian.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>TechGPT-2.0: A large language model project to solve the task of knowledge graph construction</title>
+  <dc:creator>Jiaqi Wang, Yuying Chang, Zhong Li, Ning An, Qi Ma, Lei Hei, Haibo Luo, Yifei Lu, Feiliang Ren</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/TechGPT_2.0_A_large_language_model_project_to_solve_the_task_of_knowledge_graph_construction/2024-01-09-TechGPT_2.0_A_large_language_model_project_to_solve_the_task_of_knowledge_graph_construction.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/TechGPT_2.0_A_large_language_model_project_to_solve_the_task_of_knowledge_graph_construction/None.png" class="img-fluid"></p>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ul>
+<li>The <strong>abstract</strong> provides a general overview of the document, stating that it contains a template for PRIME AI Style without specific details.</li>
+<li>The document consists of various <strong>sections</strong> including “Introduction,” “Headings,” “Examples of citations, figures, tables, references,” and “Conclusion.” Each section contains specific subheadings.</li>
+<li>The <strong>examples of citations, figures, tables, references</strong> section includes details about citations, with references to specific sources, figures, and tables.</li>
+</ul>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<ul>
+<li>The introduction provides some general text, including comments on various topics, but lacks specific details about the content.</li>
+</ul>
+</section>
+<section id="headings-first-level" class="level3">
+<h3 class="anchored" data-anchor-id="headings-first-level">Headings: First Level</h3>
+<ul>
+<li>This section discusses <strong>Ullamcorper placerat ipsum</strong> and provides a brief overview of the content but lacks specific details.</li>
+</ul>
+</section>
+<section id="headings-second-level" class="level3">
+<h3 class="anchored" data-anchor-id="headings-second-level">Headings: Second Level</h3>
+<ul>
+<li>This section delves into <strong>Fusce mauris</strong> and discusses <strong>Sed bibendum</strong> and provides an overview but lacks specific details.</li>
+</ul>
+</section>
+<section id="headings-third-level" class="level3">
+<h3 class="anchored" data-anchor-id="headings-third-level">Headings: Third Level</h3>
+<ul>
+<li>This section discusses <strong>Suspendisse vel felis</strong> and provides an overview but lacks specific details.</li>
+</ul>
+</section>
+<section id="examples-of-citations-figures-tables-references" class="level3">
+<h3 class="anchored" data-anchor-id="examples-of-citations-figures-tables-references">Examples of Citations, Figures, Tables, References</h3>
+<ul>
+<li>The section details <strong>citations</strong>, reference <strong>documentation</strong>, and includes references to specific sources, <strong>figures</strong>, and <strong>tables</strong>.</li>
+</ul>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<ul>
+<li>The conclusion is placeholder text and lacks specific details.</li>
+</ul>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<p>The document lacks specific details and content, providing only general placeholders for various sections. It also lacks clarity in communicating the intended content, making it difficult for readers to understand the actual purpose or substance of the document. Additionally, there is inconsistency in formatting and a lack of detailed examples, making it challenging for readers to apply the provided template effectively. More specific and substantive content would greatly enhance the usefulness and clarity of this document.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04507v1">http://arxiv.org/abs/2401.04507v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04507v1">https://browse.arxiv.org/html/2401.04507v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>1974</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <category>robustness</category>
+  <category>production</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/TechGPT_2.0_A_large_language_model_project_to_solve_the_task_of_knowledge_graph_construction/2024-01-09-TechGPT_2.0_A_large_language_model_project_to_solve_the_task_of_knowledge_graph_construction.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Exploring Prompt-Based Methods for Zero-Shot Hypernym Prediction with Large Language Models</title>
+  <dc:creator>Mikhail Tikhomirov, Natalia Loukachevitch</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Exploring_Prompt_Based_Methods_for_Zero_Shot_Hypernym_Prediction_with_Large_Language_Models/2024-01-09-Exploring_Prompt_Based_Methods_for_Zero_Shot_Hypernym_Prediction_with_Large_Language_Models.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/Exploring_Prompt_Based_Methods_for_Zero_Shot_Hypernym_Prediction_with_Large_Language_Models/https:/browse.arxiv.org/html/2401.04515v1/extracted/5337813/scheme1.png" class="img-fluid"></p>
+<section id="main-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="main-takeaways">Main Takeaways</h3>
+<ol type="1">
+<li>The study explores a <strong>zero-shot approach to hypernymy prediction</strong> using large language models (LLMs), demonstrating a strong correlation between the effectiveness of language model prompts and classic patterns.</li>
+<li>The article investigates prompts for predicting <strong>co-hyponyms</strong> and improving hypernymy predictions by augmenting prompts with additional information through automatically identified co-hyponyms, leading to significant improvements in prediction quality.</li>
+<li>The research also develops an <strong>iterative approach for predicting higher-level concepts</strong>, further improving the quality of hypernym chain prediction on the BLESS dataset.</li>
+</ol>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<ul>
+<li>Taxonomies play a crucial role in knowledge organization, and extracting taxonomic relationships from text data has been a focus of extensive research.</li>
+<li><strong>Hypernym acquisition</strong> techniques include linear patterns, unsupervised and supervised vector-based techniques, and large language models based on neural transformer architectures, allowing for the study of novel methods for hypernym prediction.</li>
+<li>The article investigates the research questions related to the consistency of language models on a set of prompts, the benefits of co-hyponym prompts for hypernym prediction, and the possibility of improving hypernym chain prediction using prompts.</li>
+</ul>
+</section>
+<section id="related-works" class="level3">
+<h3 class="anchored" data-anchor-id="related-works">Related Works</h3>
+<section id="pattern-based-approaches" class="level4">
+<h4 class="anchored" data-anchor-id="pattern-based-approaches">Pattern-based approaches</h4>
+<ul>
+<li><strong>Pattern-based approach</strong> involves exploiting certain lexico-syntactic patterns to detect hypernym relations in text, with efforts to increase recall and precision of extracted relationships.</li>
+<li>Strategies to improve recall of patterns include using extended sets of patterns and applying Singular Value Decomposition to reduce the dimensionality of the matrix describing ppmi weights for words met in the patterns.</li>
+<li><strong>Co-hyponym patterns</strong> are also used as an additional source of information for hypernym detection.</li>
+</ul>
+</section>
+<section id="unsupervised-vector-based-approaches" class="level4">
+<h4 class="anchored" data-anchor-id="unsupervised-vector-based-approaches">Unsupervised vector-based approaches</h4>
+<ul>
+<li>This approach is based on the methods of distributional semantics and focuses on the distributional inclusion hypothesis, distributional exclusivity hypothesis, and distributional informativeness hypothesis.</li>
+</ul>
+</section>
+<section id="zero-shot-prompts-for-large-language-models" class="level4">
+<h4 class="anchored" data-anchor-id="zero-shot-prompts-for-large-language-models">Zero-shot prompts for large language models</h4>
+<ul>
+<li>Large language models like BERT and GPT are utilized for predicting hypernyms based on classical lexico-syntactic patterns, with studies highlighting the importance of unambiguous prompts encoding hypernymy and the competitive nature of the most frequent prompts in pretraining corpora.</li>
+</ul>
+</section>
+</section>
+<section id="approach" class="level3">
+<h3 class="anchored" data-anchor-id="approach">Approach</h3>
+<ul>
+<li>The study focuses on an approach to exploiting prompts and maps a pair of terms and a prompt type to a single sentence, estimating the probabilities of hypernyms using language models.</li>
+<li>The primary idea is to experiment with prompts combinations, including <strong>combinations of hypernym prompts, combinations of hypernym and co-hyponym prompts, and iterative application of hypernym prompts</strong>.</li>
+</ul>
+</section>
+<section id="datasets-and-models" class="level3">
+<h3 class="anchored" data-anchor-id="datasets-and-models">Datasets and Models</h3>
+<ul>
+<li>The study experiments with datasets from the hypernymysuite benchmark and evaluates prompts and models in two different task settings of hypernym prediction.</li>
+</ul>
+</section>
+<section id="single-prompts-experiments" class="level3">
+<h3 class="anchored" data-anchor-id="single-prompts-experiments">Single prompts experiments</h3>
+<section id="hypernym-prompts" class="level4">
+<h4 class="anchored" data-anchor-id="hypernym-prompts">Hypernym prompts</h4>
+<ul>
+<li>The investigation of 76 prompts for hypernymy prediction highlighted that the performance varies significantly across different prompts and large language models, with <strong>selective variant of the hypernym probability estimation being superior to the full variant</strong>.</li>
+</ul>
+</section>
+<section id="co-hyponym-prompts" class="level4">
+<h4 class="anchored" data-anchor-id="co-hyponym-prompts">Co-hyponym prompts</h4>
+<ul>
+<li>The study considered four types of co-hyponym prompts based on enumeration patterns, and the evaluation results on 11 prompts demonstrated that the prompt “such as hypo, cohypo, and others of the same type” showed the best quality for both the full and selective approaches.</li>
+</ul>
+</section>
+</section>
+<section id="combinations" class="level3">
+<h3 class="anchored" data-anchor-id="combinations">Combinations</h3>
+<section id="combinations-of-hypernyms-prompts" class="level4">
+<h4 class="anchored" data-anchor-id="combinations-of-hypernyms-prompts">Combinations of hypernyms prompts</h4>
+<ul>
+<li>The study investigated if combining different hypernym prompts could enhance hypernym prediction, but estaurs that this approach did not improve the ranking quality for most models.</li>
+</ul>
+</section>
+<section id="co-hyponym-augmented-prompts" class="level4">
+<h4 class="anchored" data-anchor-id="co-hyponym-augmented-prompts">Co-hyponym-augmented prompts</h4>
+<ul>
+<li>The concept of combining co-hyponyms with hypernyms prompts was analyzed, highlighting different variations with some significantly improving the quality of hypernymy predictions.</li>
+</ul>
+</section>
+<section id="iterative-approach-to-ranking-a-list-of-hypernyms" class="level4">
+<h4 class="anchored" data-anchor-id="iterative-approach-to-ranking-a-list-of-hypernyms">Iterative approach to ranking a list of hypernyms</h4>
+<ul>
+<li>An iterative approach was developed for hypernym predictions, demonstrating overall improvements in quality on the BLESS dataset.</li>
+</ul>
+</section>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<ul>
+<li>The study recommends using the probability estimate of the entire sequence and answers the three research questions posed.</li>
+<li>The best quality on the BLESS dataset (MAP 0.8 from 0.7 with straightforward approach) was achieved by using the full method, co-hyponym-augmented prompt “hypo, cohypo are an hyper that,” and the iterative approach.</li>
+</ul>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<p>The article provides comprehensive insights into the zero-shot hypernym prediction approach using large language models. However, the evaluation method for these datasets is noted to be not entirely correct, and there are recommendations to improve the evaluation process. Additionally, the study could benefit from further discussion on the potential limitations and challenges associated with the proposed methods.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04515v1">http://arxiv.org/abs/2401.04515v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04515v1">https://browse.arxiv.org/html/2401.04515v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>7734</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>prompt-engineering</category>
+  <category>production</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Exploring_Prompt_Based_Methods_for_Zero_Shot_Hypernym_Prediction_with_Large_Language_Models/2024-01-09-Exploring_Prompt_Based_Methods_for_Zero_Shot_Hypernym_Prediction_with_Large_Language_Models.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04515v1/extracted/5337813/scheme1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Fighting Fire with Fire: Adversarial Prompting to Generate a Misinformation Detection Dataset</title>
+  <dc:creator>Shrey Satapara, Parth Mehta, Debasis Ganguly, Sandip Modha</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Fighting_Fire_with_Fire_Adversarial_Prompting_to_Generate_a_Misinformation_Detection_Dataset/2024-01-09-Fighting_Fire_with_Fire_Adversarial_Prompting_to_Generate_a_Misinformation_Detection_Dataset.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/Fighting_Fire_with_Fire_Adversarial_Prompting_to_Generate_a_Misinformation_Detection_Dataset/https:/browse.arxiv.org/html/2401.04481v1/x1.png" class="img-fluid"></p>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
+<ol type="1">
+<li><p><strong>Language models</strong> such as GPT, Bard, and Llama have advanced capabilities to generate highly convincing yet potentially misleading content, leading to concerns about the spread of fake news and misinformation via social media.</p></li>
+<li><p>Traditional fact-checking mechanisms depend on validating content against reliable information from verified sources, which is a resource-intensive task, especially with the potential of large language models to generate misinformation at scale.</p></li>
+<li><p>The paper proposes an <strong>adversarial prompting approach</strong> to generate a dataset for identifying misinformation, leveraging large language models to create a robust fake news dataset that captures various misinformation patterns, including fabrication, misrepresentation, false attribution, and inaccurate quantities.</p></li>
+</ol>
+</section>
+<section id="dataset-construction" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-construction">Dataset Construction</h3>
+<ul>
+<li><p>The research leverages large language models to generate both factually correct and misleading summaries of news articles, with types of misinformation including <strong>fabrication</strong>, <strong>false attribution</strong>, <strong>inaccurate numerical quantities</strong>, and <strong>misrepresentation</strong>. This dataset aims to aid in training models for misinformation detection and fact verification.</p></li>
+<li><p>The dataset contains about 5000 correct and 1000 incorrect summaries across four categories and covers diverse topics such as sports, movies, technology, and political events.</p></li>
+</ul>
+</section>
+<section id="evaluation-of-misinformation-detection" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation-of-misinformation-detection">Evaluation of Misinformation Detection</h3>
+<ul>
+<li><p>The paper presents two experimental setups for evaluating misinformation detection on the dataset: one as a standalone fact-checking task, and the other as a traditional fact-checking setup where summaries are verified against existing articles or a knowledge base.</p></li>
+<li><p>Experimental results indicate that large language models perform significantly better than traditional machine learning models such as <strong>SVC</strong> or <strong>LSTMs</strong> in both setups. <strong>BERT</strong> and <strong>RoBERTa</strong> show the best performance, especially when provided with a reference article during training.</p></li>
+</ul>
+</section>
+<section id="future-work" class="level3">
+<h3 class="anchored" data-anchor-id="future-work">Future Work</h3>
+<ul>
+<li><p>The research highlights the importance of pinpointing specific types of incorrectness in misinformation, suggesting the need for more robust models to identify and combat misinformation effectively.</p></li>
+<li><p>Future work may involve extending the dataset to cover multiple languages and further improving the capability of machine learning models to detect and classify misinformation.</p></li>
+</ul>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<p>The paper provides valuable insights into the generation of a misinformation detection dataset using large language models but lacks in-depth discussion on the potential ethical implications of using adversarial prompting and distributing a dataset that includes misleading information. Additionally, transparency regarding the creation of misleading content and the potential impact on society is essential and should be addressed in future work.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04481v1">http://arxiv.org/abs/2401.04481v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04481v1">https://browse.arxiv.org/html/2401.04481v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>6577</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>production</category>
+  <category>robustness</category>
+  <category>prompt-engineering</category>
+  <category>hci</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Fighting_Fire_with_Fire_Adversarial_Prompting_to_Generate_a_Misinformation_Detection_Dataset/2024-01-09-Fighting_Fire_with_Fire_Adversarial_Prompting_to_Generate_a_Misinformation_Detection_Dataset.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04481v1/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Rewriting the Code: A Simple Method for Large Language Model Augmented Code Search</title>
+  <dc:creator>Haochen Li, Xin Zhou, Zhiqi Shen</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Rewriting_the_Code_A_Simple_Method_for_Large_Language_Model_Augmented_Code_Search/2024-01-09-Rewriting_the_Code_A_Simple_Method_for_Large_Language_Model_Augmented_Code_Search.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/Rewriting_the_Code_A_Simple_Method_for_Large_Language_Model_Augmented_Code_Search/https:/browse.arxiv.org/html/2401.04514v1/x1.png" class="img-fluid"></p>
+<section id="summary-of-rewriting-the-code-a-simple-method-for-large-language-model-augmented-code-search" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-rewriting-the-code-a-simple-method-for-large-language-model-augmented-code-search">Summary of “Rewriting the Code: A Simple Method for Large Language Model Augmented Code Search”</h2>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ol type="1">
+<li><strong>Code search</strong> is a common software development activity aimed at retrieving relevant code snippets from a codebase based on natural language queries. The discrepancy in grammatical rules between natural language and code constraints search retrieval performance.</li>
+<li>The Generation-Augmented Retrieval (GAR) framework showed limited improvement due to the significant stylistic difference between exemplar code and true code.</li>
+<li>The proposed <strong>Rewrites the Code (ReCo)</strong> method significantly improved retrieval accuracy for both sparse and dense retrieval systems across diverse search scenarios, demonstrating the effectiveness of style normalization in code search.</li>
+</ol>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<ul>
+<li>Traditional code search methods suffer from vocabulary mismatch problems due to the grammatical discrepancy between programming languages and natural languages. Dense retrieval systems offer potential semantic connections but struggle with rare terminological associations.</li>
+<li>The paper proposes the Generation-Augmented Retrieval (GAR) framework, where Large Language Models (LLMs) generate exemplar code snippets to augment natural language queries for code search. However, LLM-augmented GAR showed limited performance improvement due to stylistic deviations between generated and true code snippets.</li>
+</ul>
+</section>
+<section id="methodology" class="level3">
+<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
+<ul>
+<li><strong>ReCo:</strong> The paper introduces a method that not only generates exemplar codes based on the query but also rewrites the codes in the codebase. This process involves summarizing the code into a natural language description and then using this description to generate a rewritten code that aligns with the exemplar code’s style. Experimental results demonstrated significant retrieval accuracy improvements with ReCo across various search scenarios.</li>
+</ul>
+</section>
+<section id="code-style-similarity" class="level3">
+<h3 class="anchored" data-anchor-id="code-style-similarity">Code Style Similarity</h3>
+<ul>
+<li>The paper proposes a novel evaluation metric, <strong>Code Style Similarity (CSSim)</strong>, to quantify the disparity in code style. This metric evaluates style from three dimensions: variable naming, API invocation, and code structure, based on edit distance. Empirical findings revealed superior explanatory power of CSSim in measuring the style deviation of code compared to existing metrics.</li>
+</ul>
+</section>
+<section id="experimental-setups" class="level3">
+<h3 class="anchored" data-anchor-id="experimental-setups">Experimental Setups</h3>
+<ul>
+<li>The paper evaluated ReCo across various search scenarios and programming languages, demonstrating its effectiveness in boosting retrieval performance. Comparison among evaluation metrics, impact of LLMs, and the number of generated codes were investigated to validate the superiority of CSSim and the effectiveness of ReCo.</li>
+</ul>
+</section>
+<section id="discussion" class="level3">
+<h3 class="anchored" data-anchor-id="discussion">Discussion</h3>
+<ul>
+<li>The paper highlights the potential impact of ReCo on various code-related tasks and proposes future work to develop specific models for code style normalization. The authors intend to train models to improve the efficiency of ReCo in practical applications.</li>
+</ul>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<p>The paper’s approach in introducing ReCo and CSSim is innovative and addresses a significant limitation in code search with LLM-augmented methods. However, the experimental results are limited to simulated settings, and the real-world impact of ReCo in production systems needs to be further explored. Additionally, the paper could benefit from a deeper discussion on potential drawbacks or limitations of the ReCo method, as well as considerations for efficiency and scalability in real-time search systems.</p>
+</section>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04514v1">http://arxiv.org/abs/2401.04514v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04514v1">https://browse.arxiv.org/html/2401.04514v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>8696</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <category>programming</category>
+  <category>production</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Rewriting_the_Code_A_Simple_Method_for_Large_Language_Model_Augmented_Code_Search/2024-01-09-Rewriting_the_Code_A_Simple_Method_for_Large_Language_Model_Augmented_Code_Search.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04514v1/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Know Your Needs Better: Towards Structured Understanding of Marketer Demands with Analogical Reasoning Augmented LLMs</title>
+  <dc:creator>Junjie Wang, Dan Yang, Binbin Hu, Yue Shen, Ziqi Liu, Wen Zhang, Jinjie Gu, Zhiqiang Zhang</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Know_Your_Needs_Better_Towards_Structured_Understanding_of_Marketer_Demands_with_Analogical_Reasoning_Augmented_LLMs/2024-01-09-Know_Your_Needs_Better_Towards_Structured_Understanding_of_Marketer_Demands_with_Analogical_Reasoning_Augmented_LLMs.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/Know_Your_Needs_Better_Towards_Structured_Understanding_of_Marketer_Demands_with_Analogical_Reasoning_Augmented_LLMs/https:/browse.arxiv.org/html/2401.04319v1/x2.png" class="img-fluid"></p>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ol type="1">
+<li>The paper introduces a new approach for user targeting that leverages Large Language Models (LLMs) to gain a structured understanding of marketers’ demands.</li>
+<li>The proposed framework, ARALLM, consisting of Analogical Reasoning based Prompting and Reasoning-Augmented Multi-Task Model Distillation, shows superior performance in the NL2SELL task through extensive experiments on real-world datasets.</li>
+<li>The Analogical Reasoning based Prompting method significantly outperforms other prompting methods, especially in terms of structural accuracy, demonstrating the effectiveness of using analogical examples to provide a logical structure for reasoning.</li>
+</ol>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<ul>
+<li>User targeting has gained significant attention in real-world applications, and current approaches mainly fall into model-based and rule-based methods. However, the gap between marketers’ demands and the capabilities of current models remains a challenge.</li>
+</ul>
+</section>
+<section id="structured-understanding-of-marketer-demands" class="level3">
+<h3 class="anchored" data-anchor-id="structured-understanding-of-marketer-demands">Structured Understanding of Marketer Demands</h3>
+<ul>
+<li>The paper proposes a novel language, SELL, and aims to transform natural language demands into SELL to enhance current user targeting systems.</li>
+</ul>
+</section>
+<section id="methods" class="level3">
+<h3 class="anchored" data-anchor-id="methods">Methods</h3>
+<ul>
+<li>The Analogical Reasoning based Prompting method is introduced, leveraging a reasoning library to provide references for unknown demands through analogical reasoning.</li>
+<li>A framework called ARALLM, comprising Analogical Reasoning based Prompting and Reasoning-Augmented Multi-Task Model Distillation, is proposed to address the NL2SELL task.</li>
+</ul>
+</section>
+<section id="experiments" class="level3">
+<h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
+<ul>
+<li>Results demonstrate the superiority of the proposed ARALLM framework through extensive experiments on real-world datasets, showcasing better performance in the NL2SELL task compared to baseline methods.</li>
+</ul>
+</section>
+<section id="application" class="level3">
+<h3 class="anchored" data-anchor-id="application">Application</h3>
+<ul>
+<li>The ARALLM framework has been deployed online for user targeting, and the system’s operation time is significantly shorter with promising feedback from marketers.</li>
+</ul>
+</section>
+<section id="related-work" class="level3">
+<h3 class="anchored" data-anchor-id="related-work">Related Work</h3>
+<ul>
+<li>Previous studies on user targeting have mainly focused on intricate architectures, overlooking the natural and significant gap between marketers’ demands and the capabilities of current models.</li>
+</ul>
+</section>
+<section id="conclusion-and-future-work" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-and-future-work">Conclusion and Future Work</h3>
+<ul>
+<li>The paper presents a novel approach for user targeting and suggests future work on exploring more automated construction methods for reasoning libraries and SELL datasets.</li>
+</ul>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<ul>
+<li>While the paper provides a comprehensive approach to structured understanding of marketer demands, the complexity of the proposed Analogical Reasoning based Prompting method may limit its practical applicability in real-world industrial scenarios. Further, the heavy reliance on expert knowledge and manual calibration raises concerns about scalability and generalizability.</li>
+</ul>
+<p>Overall, the paper contributes to advancing the understanding of marketer demands using LLMs and analogical reasoning, but there are potential limitations in terms of practical implementation and scalability.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04319v1">http://arxiv.org/abs/2401.04319v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04319v1">https://browse.arxiv.org/html/2401.04319v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>9552</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>prompt-engineering</category>
+  <category>recommender</category>
+  <category>production</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Know_Your_Needs_Better_Towards_Structured_Understanding_of_Marketer_Demands_with_Analogical_Reasoning_Augmented_LLMs/2024-01-09-Know_Your_Needs_Better_Towards_Structured_Understanding_of_Marketer_Demands_with_Analogical_Reasoning_Augmented_LLMs.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04319v1/x2.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Improving the Robustness of Knowledge-Grounded Dialogue via Contrastive Learning</title>
+  <dc:creator>Jiaan Wang, Jianfeng Qu, Kexin Wang, Zhixu Li, Wen Hua, Ximing Li, An Liu</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Improving_the_Robustness_of_Knowledge_Grounded_Dialogue_via_Contrastive_Learning/2024-01-09-Improving_the_Robustness_of_Knowledge_Grounded_Dialogue_via_Contrastive_Learning.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/Improving_the_Robustness_of_Knowledge_Grounded_Dialogue_via_Contrastive_Learning/https:/browse.arxiv.org/html/2401.04361v1/x1.png" class="img-fluid"></p>
+<section id="main-findings" class="level3">
+<h3 class="anchored" data-anchor-id="main-findings">Main Findings</h3>
+<ol type="1">
+<li><strong>Robustness Challenges</strong>: The paper highlights the robustness challenges faced by knowledge-grounded dialogue (KGD) systems in real-world applications, such as misspellings, abbreviations, and incomplete/erroneous knowledge facts in knowledge graphs (KGs).</li>
+<li><strong>Contrastive Learning Framework</strong>: The authors propose an entity-based contrastive learning framework (EnCo) to improve the robustness of KGD models by creating positive and negative samples, which involve semantic-irrelevant and semantic-relevant perturbations, respectively.</li>
+<li><strong>Performance Results</strong>: Experimental results on three benchmark datasets demonstrate that the EnCo framework achieves new state-of-the-art performance in terms of automatic evaluation scores, and it outperforms comparison models in both noisy and few-shot settings.</li>
+</ol>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>The paper introduces the concept of knowledge-grounded dialogue (KGD) and the challenges it faces in real-world applications due to various noises in dialogue context and knowledge graphs. It also discusses the rapid development of large language models (LLMs) and the need to improve the robustness of KGD systems.</p>
+</section>
+<section id="methodology" class="level3">
+<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
+<ul>
+<li><strong>Positive Sample Construction</strong>: The paper describes the process of creating positive samples using paraphrasing and truncation from the vanilla samples, along with the entity-guided paraphrasing approach.</li>
+<li><strong>Negative Sample Construction</strong>: The authors detail the construction of negative samples involving semantic-relevant perturbations using entity information and the entity-guided negative augmentation strategy.</li>
+<li><strong>Contrastive Learning Framework</strong>: The proposed EnCo framework utilizes contrastive learning to train the KGD model to distinguish perturbations in positive and negative samples.</li>
+</ul>
+</section>
+<section id="experiments" class="level3">
+<h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
+<ul>
+<li><strong>Implementation Details</strong>: The authors provide implementation details, including the use of PyTorch, Huggingface Transformers library, and model training settings.</li>
+<li><strong>Experimental Setups</strong>: The experiments are conducted on three public KGD datasets, and the authors compare the performance of EnCo with multiple baselines.</li>
+<li><strong>Main Results</strong>: Tables are presented to show the results on the benchmark datasets, indicating the effectiveness of the EnCo framework.</li>
+<li><strong>Robustness Study</strong>: The paper includes a study on the model’s performance when faced with real-world noises, showing the robustness of the EnCo framework.</li>
+<li><strong>Ablation Results, Few-Shot Results, and Human Study</strong>: Various experiments and human studies are conducted to evaluate the effectiveness of the proposed method in different scenarios.</li>
+</ul>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>The paper concludes by summarizing the contributions and effectiveness of the EnCo framework in addressing robustness challenges in KGD models.</p>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<ul>
+<li>The paper lacks a detailed discussion on potential limitations or drawbacks of the proposed EnCo framework.</li>
+<li>The human study results, while supportive, could benefit from a larger and more diverse set of evaluators to ensure the reliability of the findings.</li>
+</ul>
+<p>Overall, the paper presents a comprehensive approach to improving the robustness of KGD models through contrastive learning and provides experimental evidence of its effectiveness. However, further exploration of potential limitations and broader validation of human study results could strengthen the paper’s findings.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04361v1">http://arxiv.org/abs/2401.04361v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04361v1">https://browse.arxiv.org/html/2401.04361v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>8188</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>production</category>
+  <category>hci</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Improving_the_Robustness_of_Knowledge_Grounded_Dialogue_via_Contrastive_Learning/2024-01-09-Improving_the_Robustness_of_Knowledge_Grounded_Dialogue_via_Contrastive_Learning.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04361v1/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>The Critique of Critique</title>
+  <dc:creator>Shichao Sun, Junlong Li, Weizhe Yuan, Ruifeng Yuan, Wenjie Li, Pengfei Liu</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/The_Critique_of_Critique/2024-01-09-The_Critique_of_Critique.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/The_Critique_of_Critique/https:/browse.arxiv.org/html/2401.04518v1/x1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p><strong>Major Findings</strong> - MetaCritique, a framework for evaluating critiques, is proposed in this paper. Two aspects, factuality and comprehensiveness, are evaluated using precision and recall scores. - The framework uses Atomic Information Units (AIUs) to evaluate critiques at a more fine-grained level and provides natural language rationale to support each judgment. - A meta-evaluation dataset covering four tasks (question answering, reasoning, entailment, and summarization) is created to demonstrate the feasibility and effectiveness of MetaCritique. The framework achieved near-human performance and identified high-quality critiques leading to improved results.</p>
+<p><strong>Key Concepts</strong> - <strong>MetaCritique</strong>: A framework for evaluating critiques from two aspects - factuality and comprehensiveness using precision and recall scores. - <strong>Atomic Information Units (AIUs)</strong>: Fundamental segments of informative critique used to evaluate critique at a fine-grained level. - <strong>Meta-evaluation dataset</strong>: Dataset covering four tasks used to demonstrate the feasibility and effectiveness of MetaCritique.</p>
+<p><strong>Feasibility and Effectiveness</strong> - GPT-4 is used to generate reference and extract AIUs, and it achieves remarkable performance, justifying its utilization for MetaCritique. - GPT-4 demonstrates high performance in executing AIU-level tasks, indicating its suitability for evaluating critiques via the MetaCritique framework. - MetaCritique achieves a better correlation with human judgments compared to other baselines, demonstrating its effectiveness in evaluating critiques. - MetaCritique identifies superior critiques leading to better refined outcomes, indicating its potential to enhance generative AI substantially.</p>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<ul>
+<li>The creative tasks are not suitable for the recall principle, especially when there are multiple high-quality answers, which poses a limitation to the framework.</li>
+<li>The availability of reference answers or critiques remains a challenge. While GPT-4 serves as a reference, it is important to acknowledge potential errors.</li>
+</ul>
+</section>
+<section id="limitations" class="level3">
+<h3 class="anchored" data-anchor-id="limitations">Limitations</h3>
+<ul>
+<li>The limitations of the framework in handling creative tasks and the availability of reference answers or critiques are identified as potential areas for improvement in future work.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04518v1">http://arxiv.org/abs/2401.04518v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04518v1">https://browse.arxiv.org/html/2401.04518v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>8182</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <category>social-sciences</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/The_Critique_of_Critique/2024-01-09-The_Critique_of_Critique.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04518v1/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>SonicVisionLM: Playing Sound with Vision Language Models</title>
+  <dc:creator>Zhifeng Xie, Shengye Yu, Mengtian Li, Qile He, Chaofeng Chen, Yu-Gang Jiang</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/SonicVisionLM_Playing_Sound_with_Vision_Language_Models/2024-01-09-SonicVisionLM_Playing_Sound_with_Vision_Language_Models.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/SonicVisionLM_Playing_Sound_with_Vision_Language_Models/https:/browse.arxiv.org/html/2401.04394v1/extracted/5335104/image/timestamps.png" class="img-fluid"></p>
+<section id="key-findings" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings">Key Findings</h3>
+<ol type="1">
+<li><p><strong>SonicVisionLM Framework</strong>: The paper proposes a novel framework, SonicVisionLM, which leverages vision language models to generate a wide range of sound effects for silent videos. This approach identifies events in the video using a vision language model to suggest sounds that match the content, transforming the task of aligning image and audio into more manageable sub-problems.</p></li>
+<li><p><strong>Components of SonicVisionLM</strong>: The framework consists of three key components - video-to-text, text-based interaction, and text-to-audio generation. The video-to-text component focuses on generating sound effects for on-screen events, the text-based interaction component allows users to make changes to the text and timestamps, and the text-to-audio generation component accepts text and timestamp conditions to generate diverse, time-synchronized, and controllable sounds.</p></li>
+<li><p><strong>Performance and Results</strong>: SonicVisionLM demonstrates state-of-the-art results in both conditional and unconditional video-sound generation tasks. It achieves enhanced synchronization with visuals, improved alignment between audio and video components, and surpasses existing methods in various metrics such as IoU, Onset Acc, and Time Acc.</p></li>
+</ol>
+</section>
+<section id="method-summary" class="level3">
+<h3 class="anchored" data-anchor-id="method-summary">Method Summary</h3>
+<ul>
+<li><p><strong>Preliminaries</strong>: The paper introduces the audio diffusion model, latent diffusion model (LDM), and the process of generating audio from text embeddings using the LDM and vocoder.</p></li>
+<li><p><strong>Visual-to-Audio Event Understanding Module</strong>: This module utilizes a vision language model to generate descriptions of sounds based on the visual content in videos.</p></li>
+<li><p><strong>Sound Event Timestamp Detection Module</strong>: Here, a sound event timestamp detection module is used to detect the timing of sound events in the video, and the process and network structure are detailed.</p></li>
+<li><p><strong>Time-controllable Latent Diffusion Model</strong>: This section describes the proposed time-controllable adapter and the process of incorporating time-controllable embeddings for guiding the generation of diverse sounds.</p></li>
+</ul>
+</section>
+<section id="evaluation-and-results" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation-and-results">Evaluation and Results</h3>
+<ul>
+<li><p><strong>Conditional and Unconditional Generation Task Results</strong>: SonicVisionLM demonstrates superior performance in both conditional and unconditional video-sound generation tasks compared to existing methods. The framework achieves higher accuracy, diversity, and synchronization in generating sounds for videos.</p></li>
+<li><p><strong>Ablation Study</strong>: The ablation study validates the effectiveness of the time-controllable adapter in enhancing sound quality, diversity, and synchronization.</p></li>
+<li><p><strong>Multi-soundtracks Generation</strong>: The paper includes an example demonstrating SonicVisionLM’s ability to generate multiple soundtracks for a video, including both on-screen and off-screen sounds.</p></li>
+</ul>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<ul>
+<li>The paper lacks a direct comparison with a broader range of existing methods, limiting the comprehensive assessment of SonicVisionLM’s performance against various approaches in the field.</li>
+<li>While the paper showcases promising results, it is essential to address potential limitations, such as the complexity of the visual understanding and timestamp detection parts, to provide a more balanced view of the framework’s capabilities.</li>
+</ul>
+<p>Overall, the paper provides valuable insights into the effective generation of sound for silent videos using vision language models, offering a comprehensive framework and showcasing significant advancements in video-sound generation tasks.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04394v1">http://arxiv.org/abs/2401.04394v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04394v1">https://browse.arxiv.org/html/2401.04394v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>7641</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <category>recommender</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/SonicVisionLM_Playing_Sound_with_Vision_Language_Models/2024-01-09-SonicVisionLM_Playing_Sound_with_Vision_Language_Models.html</guid>
+  <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04394v1/extracted/5335104/image/timestamps.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>RePLan: Robotic Replanning with Perception and Language Models</title>
+  <dc:creator>Marta Skreta, Zihan Zhou, Jia Lin Yuan, Kourosh Darvish, Alán Aspuru-Guzik, Animesh Garg</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/RePLan_Robotic_Replanning_with_Perception_and_Language_Models/2024-01-08-RePLan_Robotic_Replanning_with_Perception_and_Language_Models.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/RePLan_Robotic_Replanning_with_Perception_and_Language_Models/https:/browse.arxiv.org/html/2401.04157v1/x1.png" class="img-fluid"></p>
+<section id="summary-of-replan-robotic-replanning-with-perception-and-language-models" class="level3">
+<h3 class="anchored" data-anchor-id="summary-of-replan-robotic-replanning-with-perception-and-language-models">Summary of “RePLan: Robotic Replanning with Perception and Language Models”</h3>
+<section id="key-findings" class="level4">
+<h4 class="anchored" data-anchor-id="key-findings"><strong>Key Findings</strong></h4>
+<ol type="1">
+<li><strong>Advancements in large language models (LLMs) have enabled robots to successfully carry out open-ended tasks</strong>. The authors note that traditional methods rely on extensive domain knowledge and complex reward engineering, while Large Language Models (LLMs) show considerable promise in robot planning.</li>
+<li><strong>Vision Language Models (VLMs) prove to be crucial in interpreting the environment and facilitating ongoing task updates based on real-time observations</strong>. The integration of visual cues with linguistic context enables robots to better interpret their surrounding environment and adapt to unforeseen obstacles.</li>
+<li><strong>RePLan, a novel framework that utilizes LLMs and VLMs, has shown significant success in enabling robotic systems to autonomously adapt to unforeseen obstacles while accomplishing open-ended, long-horizon goals</strong>. The study conducted using RePLan across four environments containing seven long-horizon tasks demonstrated its effectiveness in successfully tackling multi-stage tasks, with a notable 4x improvement over the current leading method.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h3>
+<ul>
+<li>Designing embodied agents to execute multi-stage, long-horizon tasks is challenging, requiring manipulation skills, perceptive reasoning, and high-level planning with minimal human intervention.</li>
+</ul>
+</section>
+<section id="robot-control-with-physically-grounded-language-models" class="level3">
+<h3 class="anchored" data-anchor-id="robot-control-with-physically-grounded-language-models"><strong>Robot Control with Physically Grounded Language Models</strong></h3>
+<ul>
+<li>Language models have shown promise in robot planning. However, they lack physical grounding, while Vision Language Models (VLMs) combine visual and linguistic context to enable robots to interpret their surroundings accurately.</li>
+</ul>
+</section>
+<section id="long-horizon-robot-planning" class="level3">
+<h3 class="anchored" data-anchor-id="long-horizon-robot-planning"><strong>Long-horizon Robot Planning</strong></h3>
+<ul>
+<li>Traditional methods such as Task and Motion Planning (TAMP) and learning approaches like Hierarchical Reinforcement Learning (HRL) and Imitation Learning (IL) necessitate substantial domain expertise and large datasets for task learning. Large Language Models (LLMs) have potential in robot planning but face challenges in reasoning over extended periods without considering important details.</li>
+</ul>
+</section>
+<section id="language-to-reward-shaping" class="level3">
+<h3 class="anchored" data-anchor-id="language-to-reward-shaping"><strong>Language to Reward Shaping</strong></h3>
+<ul>
+<li>Directly inferring rewards from natural language inputs using language-driven reward-shaping approaches has shown utility in various domains, including negotiation and gaming, facilitating desired behavior learning through reinforcement learning.</li>
+</ul>
+</section>
+<section id="replan-model-structure-and-details" class="level3">
+<h3 class="anchored" data-anchor-id="replan-model-structure-and-details"><strong>RePLan: Model Structure and Details</strong></h3>
+<ul>
+<li>RePLan comprises five modules: a High-Level LLM Planner, a VLM Perceiver, a Low-Level LLM Planner, a Motion Controller, and an LLM Verifier. These modules collaborate to enable the robot to adapt and replan based on feedback from the environment.</li>
+<li>The High-Level Planner generates subtasks, the Perceiver provides physical grounding, the Low-Level Planner converts high-level tasks to low-level rewards, the Motion Controller instructs the robot, and the Verifier ensures the correctness of the plans.</li>
+</ul>
+</section>
+<section id="experiments" class="level3">
+<h3 class="anchored" data-anchor-id="experiments"><strong>Experiments</strong></h3>
+<ul>
+<li>The study included seven long-horizon tasks across four distinct environments, each testing the robot’s ability to adapt to unforeseen obstacles and accomplish open-ended goals.</li>
+<li>RePLan demonstrated a significant 4x improvement over the current leading method, achieving successful adaptation in almost 90% of the tested tasks.</li>
+</ul>
+</section>
+<section id="error-cases-and-additional-experiments" class="level3">
+<h3 class="anchored" data-anchor-id="error-cases-and-additional-experiments"><strong>Error Cases and Additional Experiments</strong></h3>
+<ul>
+<li>The study presented real-world scenarios, providing insights into error cases and additional experiments, such as VLM ablation and GPT-4V experiments, highlighting the method’s strengths and limitations.</li>
+</ul>
+<hr>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique"><strong>Critique</strong></h3>
+<p>The paper provides valuable insights into the utilization of language and vision models for robotic planning. However, it would benefit from a more detailed comparison with existing methods and a comprehensive discussion of the potential limitations and challenges associated with the proposed framework. Additionally, while the experiments are comprehensive, the real-world applicability of RePLan in varied environments and scenarios could be further explored.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04157v1">http://arxiv.org/abs/2401.04157v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04157v1">https://browse.arxiv.org/html/2401.04157v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>12338</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>prompt-engineering</category>
+  <category>robustness</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/RePLan_Robotic_Replanning_with_Perception_and_Language_Models/2024-01-08-RePLan_Robotic_Replanning_with_Perception_and_Language_Models.html</guid>
+  <pubDate>Mon, 08 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04157v1/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs</title>
+  <dc:creator>Shulin Zeng, Jun Liu, Guohao Dai, Xinhao Yang, Tianyu Fu, Hongyi Wang, Wenheng Ma, Hanbo Sun, Shiyao Li, Zixiao Huang, Yadong Dai, Jintao Li, Zehao Wang, Ruoyu Zhang, Kairui Wen, Xuefei Ning, Yu Wang</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/FlightLLM_Efficient_Large_Language_Model_Inference_with_a_Complete_Mapping_Flow_on_FPGAs/2024-01-08-FlightLLM_Efficient_Large_Language_Model_Inference_with_a_Complete_Mapping_Flow_on_FPGAs.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/FlightLLM_Efficient_Large_Language_Model_Inference_with_a_Complete_Mapping_Flow_on_FPGAs/https:/browse.arxiv.org/html/2401.03868v2/x1.png" class="img-fluid"></p>
+<section id="flightllm-efficient-large-language-model-inference-with-a-complete-mapping-flow-on-fpgas" class="level1">
+<h1>FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs</h1>
+<section id="major-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h2>
+<ol type="1">
+<li><strong>Efficiency Enhancement</strong>: FlightLLM addresses the efficiency limitations of Large Language Models (LLMs) by leveraging FPGA-specific resources to achieve higher energy and cost efficiency compared to commercial GPUs.</li>
+<li><strong>Complete Mapping Flow</strong>: The paper proposes a complete mapping flow for LLM inference on FPGAs, highlighting innovations in computation and memory overhead solutions.</li>
+<li><strong>Performance Comparison</strong>: FlightLLM outperforms SOTA accelerators, achieving better latency and throughput compared to GPUs and other FPGA-based accelerators.</li>
+</ol>
+</section>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>The paper introduces FlightLLM, a solution for efficient Large Language Model (LLM) inference on FPGAs. It addresses the challenges of heavy computation and memory overheads by leveraging FPGA-specific resources. FlightLLM achieves higher energy and cost efficiency compared to commercial GPUs and outperforms SOTA accelerators.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<ul>
+<li>Recent developments in Large Language Models (LLMs) have highlighted their significant impact across various domains.</li>
+<li>LLMs are widely used in latency-sensitive scenarios, necessitating efficient computation and memory management.</li>
+<li>Compression techniques such as sparsification and quantization are employed to mitigate computation and memory overheads, but current hardware platforms struggle to efficiently support these methods.</li>
+</ul>
+</section>
+<section id="background-and-related-work" class="level2">
+<h2 class="anchored" data-anchor-id="background-and-related-work">Background and Related Work</h2>
+<ul>
+<li>Transformer-based LLMs achieve state-of-the-art performance across Natural Language Processing (NLP) tasks. The transformer model architecture consists of cascaded transformer blocks with Multi-Head Attention (MHA) and Feed Forward Network (FFN) networks.</li>
+<li>Efficient transformer models leverage compression techniques such as sparsification and quantization to reduce computation and memory overheads. Previous works have focused on specialized architectures to accelerate sparse attention and optimize linear layers with mixed-precision quantization.</li>
+</ul>
+</section>
+<section id="computing-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="computing-architecture">Computing Architecture</h2>
+<ul>
+<li>FlightLLM’s overall architecture includes a task scheduler, memory controller, and multiple computing cores equipped with a unified Matrix Processing Engine (MPE), Memory Management Unit (MMU), Special Function Unit (SFU), and Instruction Scheduler.</li>
+<li>The configurable sparse DSP chain and always-on-chip decode scheme enhance computation efficiency and memory bandwidth, while supporting different sparsity patterns. FlightLLM also supports mixed-precision quantization and length adaptive compilation to reduce instruction storage overhead.</li>
+</ul>
+</section>
+<section id="always-on-chip-decode" class="level2">
+<h2 class="anchored" data-anchor-id="always-on-chip-decode">Always-on-chip Decode</h2>
+<ul>
+<li>The on-chip decode scheme in FlightLLM enables efficient memory bandwidth utilization by keeping activations in on-chip memory during the decode stage, reducing frequent access to off-chip memory.</li>
+<li>Mixed-precision support using a dedicated dequantization unit helps optimize compactly stored mixed-precision data and reduce memory access overhead.</li>
+</ul>
+</section>
+<section id="length-adaptive-compilation" class="level2">
+<h2 class="anchored" data-anchor-id="length-adaptive-compilation">Length Adaptive Compilation</h2>
+<ul>
+<li>FlightLLM proposes a length adaptive compilation approach to reduce the instruction storage overhead by allowing different lengths of prefill or decode to share the same instructions within threshold ranges, optimizing memory utilization.</li>
+</ul>
+</section>
+<section id="analytical-model-for-rtl-generation" class="level2">
+<h2 class="anchored" data-anchor-id="analytical-model-for-rtl-generation">Analytical Model for RTL Generation</h2>
+<ul>
+<li>FlightLLM uses an analytical model to optimize hardware resource utilization and dynamically adjust the computing parallelism and buffer size to generate corresponding RTL code for implementation on different FPGA platforms.</li>
+</ul>
+</section>
+<section id="evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
+<ul>
+<li>FlightLLM is evaluated on state-of-the-art LLMs such as OPT-6.7B and LLaMA2-7B, achieving better latency, throughput, energy efficiency, and cost efficiency compared to both commercial GPUs and SOTA accelerators.</li>
+<li>The latency breakdown analysis and multi-batch performance comparisons highlight FlightLLM’s efficient hardware performance.</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The paper introduces FlightLLM as a promising approach for efficient LLM inference on FPGAs, enabling higher energy and cost efficiency compared to commercial GPUs and SOTA accelerators. FlightLLM demonstrates optimizations in computation efficiency, memory bandwidth utilization, and latency reductions, making it a competitive solution for LLM inference.</p>
+</section>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<ul>
+<li>The paper does not provide a detailed discussion of potential limitations or trade-offs with FlightLLM’s approach, which could help provide a more comprehensive understanding of its applicability and potential constraints.</li>
+<li>While the evaluation results are promising, it would be useful to compare FlightLLM’s performance against a wider range of FPGA-based LLM accelerators to provide a more comprehensive picture of its comparative advantages.</li>
+</ul>
+<p>Overall, the paper effectively presents FlightLLM as a compelling solution for efficient LLM inference, highlighting innovations in FPGA-based acceleration and performance optimizations.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.03868v2">http://arxiv.org/abs/2401.03868v2</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.03868v2">https://browse.arxiv.org/html/2401.03868v2</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>12121</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/FlightLLM_Efficient_Large_Language_Model_Inference_with_a_Complete_Mapping_Flow_on_FPGAs/2024-01-08-FlightLLM_Efficient_Large_Language_Model_Inference_with_a_Complete_Mapping_Flow_on_FPGAs.html</guid>
+  <pubDate>Mon, 08 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.03868v2/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>MARG: Multi-Agent Review Generation for Scientific Papers</title>
+  <dc:creator>Mike D&#39;Arcy, Tom Hope, Larry Birnbaum, Doug Downey</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/MARG_Multi_Agent_Review_Generation_for_Scientific_Papers/2024-01-08-MARG_Multi_Agent_Review_Generation_for_Scientific_Papers.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/MARG_Multi_Agent_Review_Generation_for_Scientific_Papers/https:/browse.arxiv.org/html/2401.04259v1/x1.png" class="img-fluid"></p>
+<section id="major-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
+<ul>
+<li>The paper introduces MARG, a multi-agent approach for generating peer-review feedback for scientific papers.</li>
+<li>MARG uses multiple large language model (LLM) instances with specialized agents to enhance feedback quality and reduce token constraints.</li>
+<li>MARG substantially improves the ability of GPT-4, reducing the rate of generic comments and generating more helpful feedback.</li>
+</ul>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>The paper discusses the limitations of large language models (LLMs) in comprehending and producing long, highly technical scientific papers. It introduces the task of automatically generating actionable peer-review feedback for scientific papers, which comprises several reasoning challenges.</p>
+</section>
+<section id="multi-agent-review-generation" class="level3">
+<h3 class="anchored" data-anchor-id="multi-agent-review-generation">Multi-Agent Review Generation</h3>
+<ul>
+<li>MARG is proposed as a method using multiple instances of LLMs to generate actionable peer-review feedback.</li>
+<li>The specialized variant of MARG, MARG-S, involves using aspect-specific “expert” LLM agents to improve feedback on experiments, clarity, and impact.</li>
+<li>MARG-S substantially outperforms baseline methods in generating specific and helpful feedback, with an improvement of 2.2x in generating good comments per review.</li>
+</ul>
+</section>
+<section id="related-work" class="level3">
+<h3 class="anchored" data-anchor-id="related-work">Related Work</h3>
+<ul>
+<li>Prior work on automatic review generation primarily used smaller models or focused on template-filling instead of generating nuanced free-form comments.</li>
+<li>MARG-S is compared to a recent method proposed by Liang et al., which truncates long papers and struggles with input size limitations.</li>
+</ul>
+</section>
+<section id="automated-evaluation-and-baseline-methods" class="level3">
+<h3 class="anchored" data-anchor-id="automated-evaluation-and-baseline-methods">Automated Evaluation and Baseline Methods</h3>
+<ul>
+<li>MARG-S outperforms baseline methods in recall but generates more comments, leading to lower precision and Jaccard scores.</li>
+<li>LiZCa, a baseline method, shows high recall in the most lenient setting but rapidly drops for stricter settings.</li>
+<li>MARG-S exhibits high efficiency in recall improvement but takes significantly longer to generate reviews compared to other methods.</li>
+</ul>
+</section>
+<section id="user-study" class="level3">
+<h3 class="anchored" data-anchor-id="user-study">User Study</h3>
+<ul>
+<li>MARG-S generates more good comments, has the highest proportion of fully accurate comments, and is significantly more specific compared to other methods.</li>
+<li>Participants perceive MARG-S reviews as slightly longer than desired, but they find MARG-S comments to be highly specific, accurate, and helpful.</li>
+</ul>
+</section>
+<section id="relationships-between-factors" class="level3">
+<h3 class="anchored" data-anchor-id="relationships-between-factors">Relationships between Factors</h3>
+<ul>
+<li>High specificity of comments in MARG-S is not associated with extreme positive or negative user ratings, contradicting the expectation of pushing ratings to extremes.</li>
+<li>High specificity weakly corresponds to higher accuracy, and accuracy significantly predicts overall rating.</li>
+</ul>
+</section>
+<section id="critique" class="level3">
+<h3 class="anchored" data-anchor-id="critique">Critique</h3>
+<p>The user study was conducted with a small number of participants, and the findings may not be generalizable. Additionally, the paper could provide more discussion on the potential biases or limitations of the study.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-10</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04259v1">http://arxiv.org/abs/2401.04259v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04259v1">https://browse.arxiv.org/html/2401.04259v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>41968</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>prompt-engineering</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/MARG_Multi_Agent_Review_Generation_for_Scientific_Papers/2024-01-08-MARG_Multi_Agent_Review_Generation_for_Scientific_Papers.html</guid>
+  <pubDate>Mon, 08 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2401.04259v1/x1.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>The Butterfly Effect of Altering Prompts: How Small Changes and Jailbreaks Affect Large Language Model Performance</title>
   <dc:creator>Abel Salinas, Fred Morstatter</dc:creator>
@@ -75,7 +1659,7 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-09</td>
+<td>2024-01-10</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
@@ -199,7 +1783,7 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-09</td>
+<td>2024-01-10</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
@@ -320,7 +1904,7 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-09</td>
+<td>2024-01-10</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
@@ -388,7 +1972,7 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-09</td>
+<td>2024-01-10</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
@@ -505,7 +2089,7 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-09</td>
+<td>2024-01-10</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
@@ -536,1403 +2120,6 @@
   <category>social-sciences</category>
   <guid>https://bayesian-beagle.netlify.app/posts/An_Investigation_of_Large_Language_Models_for_Real_World_Hate_Speech_Detection/2024-01-07-An_Investigation_of_Large_Language_Models_for_Real_World_Hate_Speech_Detection.html</guid>
   <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>InFoBench: Evaluating Instruction Following Ability in Large Language Models</title>
-  <dc:creator>Yiwei Qin, Kaiqiang Song, Yebowen Hu, Wenlin Yao, Sangwoo Cho, Xiaoyang Wang, Xuansheng Wu, Fei Liu, Pengfei Liu, Dong Yu</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/InFoBench_Evaluating_Instruction_Following_Ability_in_Large_Language_Models/2024-01-07-InFoBench_Evaluating_Instruction_Following_Ability_in_Large_Language_Models.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/InFoBench_Evaluating_Instruction_Following_Ability_in_Large_Language_Models/https:/browse.arxiv.org/html/2401.03601v1/x1.png" class="img-fluid"></p>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<section id="findings" class="level3">
-<h3 class="anchored" data-anchor-id="findings">Findings</h3>
-<ol type="1">
-<li>The paper introduces a new metric, the <strong>Decomposed Requirements Following Ratio (DRFR)</strong>, for evaluating Large Language Models’ (LLMs) ability to follow instructions.</li>
-<li>The study compares DRFR with traditional scoring methods and explores annotation sources, finding DRFR to have higher reliability and GPT-4 to be a cost-effective annotator.</li>
-<li>The evaluation of several advanced LLMs using this framework reveals their strengths and areas needing improvement, particularly in complex instruction-following.</li>
-</ol>
-</section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The paper addresses the lack of evaluation methodologies dedicated to the crucial aspect of instruction-following in Large Language Models (LLMs) and aims to establish a reliable protocol and benchmark for appraising the instruction-following aptitude of LLMs.</p>
-</section>
-<section id="infobench" class="level3">
-<h3 class="anchored" data-anchor-id="infobench">InFoBench</h3>
-<ul>
-<li>Introduces <strong>DRFR</strong> and <strong>InFoBench</strong>, a benchmark dataset, for assessing LLMs’ proficiency in adhering to complex instructions in a detailed and structured manner.</li>
-<li>DRFR decomposes each instruction into distinct, simpler criteria, allowing a granular analysis of a model’s performance.</li>
-<li>InFoBench dataset presents diverse instructions and decomposed questions across different constraint categories.</li>
-</ul>
-</section>
-<section id="experiments" class="level3">
-<h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
-<ol type="1">
-<li>Compared DRFR with traditional Direct Scoring (DS), results showed higher annotator consensus with DRFR, indicating its enhanced reliability.</li>
-<li>Explored cost-efficient annotation sources, finding GPT-4 to be highly accurate, cost-effective, and time-efficient.</li>
-<li>Employed GPT-4 as an annotator and evaluated advanced LLMs, revealing the need for improvement in handling complex instructions.</li>
-</ol>
-</section>
-</section>
-<section id="critique" class="level2">
-<h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<p>The paper presents significant contributions to the evaluation of LLMs’ instruction-following abilities. However, it has limitations: 1. The reliance on human annotation for only a fraction of the instruction set limits the reliability of comparisons among different annotations. 2. The dataset size is limited, and the manual nature of instruction writing restricts scalability. 3. The evaluation primarily focuses on the explicit intentions contained within the provided instructions, neglecting crucial factors such as truthfulness and harmlessness.</p>
-<p>Overall, while the paper’s contributions pave the way for future research and development in LLM evaluation, the limitations in dataset size and human annotation demonstrate areas for potential improvement.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-09</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.03601v1">http://arxiv.org/abs/2401.03601v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.03601v1">https://browse.arxiv.org/html/2401.03601v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>13442</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>architectures</category>
-  <category>education</category>
-  <category>prompt-engineering</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/InFoBench_Evaluating_Instruction_Following_Ability_in_Large_Language_Models/2024-01-07-InFoBench_Evaluating_Instruction_Following_Ability_in_Large_Language_Models.html</guid>
-  <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.03601v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>ChatGPT for Conversational Recommendation: Refining Recommendations by Reprompting with Feedback</title>
-  <dc:creator>Kyle Dylan Spurlock, Cagla Acun, Esin Saka, Olfa Nasraoui</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/ChatGPT_for_Conversational_Recommendation_Refining_Recommendations_by_Reprompting_with_Feedback/2024-01-07-ChatGPT_for_Conversational_Recommendation_Refining_Recommendations_by_Reprompting_with_Feedback.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/ChatGPT_for_Conversational_Recommendation_Refining_Recommendations_by_Reprompting_with_Feedback/https:/browse.arxiv.org/html/2401.03605v1/extracted/5334641/figures/methodology.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary</h3>
-<p>In the paper “ChatGPT for Conversational Recommendation: Refining Recommendations by Reprompting with Feedback,” the authors investigate the effectiveness of <strong>ChatGPT</strong> as a conversational recommendation system. They develop a pipeline to rigorously evaluate ChatGPT’s recommendation ability using conversation and explore the impact of popularity bias in its recommendations.</p>
-<section id="major-takeaways" class="level4">
-<h4 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h4>
-<ol type="1">
-<li><p><strong>Conversation Improves Recommendation Relevancy:</strong> Reprompting ChatGPT with feedback is found to be an effective strategy to improve recommendation relevancy.</p></li>
-<li><p><strong>ChatGPT Outperforms Baseline Models:</strong> ChatGPT is significantly better than both a random and traditional recommender systems, showcasing its utility in zero-shot recommendation tasks.</p></li>
-<li><p><strong>Popularity Bias Mitigation:</strong> The study examines strategies to counteract popularity bias in ChatGPT’s recommendations, highlighting the potential for more novel recommendations.</p></li>
-</ol>
-</section>
-</section>
-<section id="methodology" class="level3">
-<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
-<ul>
-<li><p><strong>Prompt Engineering</strong>: The paper discusses the three predominant means of communication with LLMs through prompting: zero-shot, few-shot, and chain-of-thought prompting.</p></li>
-<li><p><strong>Language Models as Recommenders</strong>: The extensive domain knowledge encapsulated in Large Language Models (LLMs) has recently captured interest for their use in recommendation tasks.</p></li>
-<li><p><strong>Algorithmic Recourse</strong>: The paper draws parallels with the concept of algorithmic recourse and highlights the differences in the context of a recommendation system.</p></li>
-</ul>
-</section>
-<section id="experiments" class="level3">
-<h3 class="anchored" data-anchor-id="experiments">Experiments</h3>
-<ul>
-<li><p><strong>Effect of Embedding Content</strong>: The study validates the impact of embedding content on recommendation results and identifies content level 4 embeddings as the most suitable for experimentation.</p></li>
-<li><p><strong>Iterative Feedback Analysis</strong>: The authors explore the impact of reprompting with feedback during a conversation and highlight its significant impact on recommendation performance.</p></li>
-<li><p><strong>ChatGPT as a Top-n Recommender</strong>: The study compares ChatGPT with NMF as a baseline model and showcases ChatGPT’s significant improvement over a random baseline.</p></li>
-<li><p><strong>Popularity Bias Analysis</strong>: The authors explore strategies to counteract popularity bias in ChatGPT’s recommendations and highlight the trade-off between recommendation variety and performance.</p></li>
-</ul>
-</section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>The paper concludes that reprompting ChatGPT with feedback significantly improves recommendation performance. Additionally, ChatGPT outperforms baseline models and strategies to counteract popularity bias in recommendations are proposed. The authors highlight the limitations of the study and suggest future work in comparing ChatGPT’s performance against other recommendation algorithms.</p>
-</section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper provides valuable insights into the use of ChatGPT for conversational recommendation. However, the study’s limitations include dependency on a relatively large amount of text data and the use of an older movie dataset. Additionally, the study lacks comparable models to compare with ChatGPT in the pipeline, suggesting a need for further investigation.</p>
-<p>Overall, the study presents valuable findings but should address the limitations and potential biases in future research.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-09</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.03605v1">http://arxiv.org/abs/2401.03605v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.03605v1">https://browse.arxiv.org/html/2401.03605v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>10455</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>programming</category>
-  <category>hci</category>
-  <category>recommender</category>
-  <category>prompt-engineering</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/ChatGPT_for_Conversational_Recommendation_Refining_Recommendations_by_Reprompting_with_Feedback/2024-01-07-ChatGPT_for_Conversational_Recommendation_Refining_Recommendations_by_Reprompting_with_Feedback.html</guid>
-  <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.03605v1/extracted/5334641/figures/methodology.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Exploring Large Language Model based Intelligent Agents: Definitions, Methods, and Prospects</title>
-  <dc:creator>Yuheng Cheng, Ceyao Zhang, Zhengwen Zhang, Xiangrui Meng, Sirui Hong, Wenhao Li, Zihao Wang, Zekai Wang, Feng Yin, Junhua Zhao, Xiuqiang He</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Exploring_Large_Language_Model_based_Intelligent_Agents_Definitions_Methods_and_Prospects/2024-01-07-Exploring_Large_Language_Model_based_Intelligent_Agents_Definitions_Methods_and_Prospects.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Exploring_Large_Language_Model_based_Intelligent_Agents_Definitions_Methods_and_Prospects/https:/browse.arxiv.org/html/2401.03428v1/extracted/5333121/imgs/introduction.png" class="img-fluid"></p>
-<p>Key Findings:</p>
-<ul>
-<li>LLM-based agents present a promising solution to the limitations faced by Large Language Models (LLMs) in pragmatic applications, thanks to their potent natural language processing and comprehensive knowledge.</li>
-<li>The Rethinking capability of LLM-based agents involves evaluating prior decisions and subsequent environmental feedback, enabling introspection and improvement of agent performance.</li>
-<li>LLM-based agents can interact and learn from various environments, including computer, gaming, code, real-world, and simulation environments, providing robust solutions for different tasks.</li>
-</ul>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>Introduces the concept of intelligent agents and their autonomous capabilities in perceiving the environment and taking actions without external instructions.</p>
-</section>
-<section id="overview" class="level3">
-<h3 class="anchored" data-anchor-id="overview">Overview</h3>
-<ul>
-<li>Discusses single-agent and multi-agent systems, delving into their differences and application domains.</li>
-</ul>
-</section>
-<section id="llm-based-agent-system-framework" class="level3">
-<h3 class="anchored" data-anchor-id="llm-based-agent-system-framework">LLM-based Agent System Framework</h3>
-<ul>
-<li>Details the components of the LLM-based single agent system, including planning, memory, rethinking, environment, and action.</li>
-<li>Explores the mechanisms of deploying LLM-based agents in multi-agent systems, such as relationship of multi-agent systems, planning type, and methods of enhancing communication efficiency.</li>
-</ul>
-</section>
-<section id="performance-evaluation" class="level3">
-<h3 class="anchored" data-anchor-id="performance-evaluation">Performance Evaluation</h3>
-<ul>
-<li>Covers the prevalent datasets and evaluation methodologies for agents.</li>
-</ul>
-</section>
-<section id="prospect-applications" class="level3">
-<h3 class="anchored" data-anchor-id="prospect-applications">Prospect Applications</h3>
-<ul>
-<li>Examines the employment of LLM-based agents across diverse domains, encompassing natural sciences, social sciences, engineering systems, and general domains.</li>
-</ul>
-</section>
-<section id="discussion" class="level3">
-<h3 class="anchored" data-anchor-id="discussion">Discussion</h3>
-<ul>
-<li>Investigates the developmental trajectories of LLM-based agents, including augmenting adaptive capacity, incorporating multimodal models, and addressing challenges.</li>
-</ul>
-</section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>Concludes the paper by summarizing the contributions and envisioning prospects for LLM-based agents.</p>
-<p>Critique:</p>
-<ul>
-<li>The paper could benefit from more concrete examples of real-world applications and case studies involving LLM-based agents to illustrate their effectiveness.</li>
-<li>The range of datasets and evaluation methodologies for LLM-based agents could be further explored and compared to provide a comprehensive understanding of their performance.</li>
-<li>The discussion on challenges may benefit from a more detailed analysis of potential ethical and societal implications of LLM-based agents.</li>
-</ul>
-<p>Overall, the paper provides a comprehensive overview of LLM-based intelligent agents, highlighting their potential applications and capabilities. However, it could benefit from more practical examples and in-depth analysis of performance evaluation and challenges.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-09</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.03428v1">http://arxiv.org/abs/2401.03428v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.03428v1">https://browse.arxiv.org/html/2401.03428v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>38668</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>hci</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Exploring_Large_Language_Model_based_Intelligent_Agents_Definitions_Methods_and_Prospects/2024-01-07-Exploring_Large_Language_Model_based_Intelligent_Agents_Definitions_Methods_and_Prospects.html</guid>
-  <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.03428v1/extracted/5333121/imgs/introduction.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>LLM-Powered Code Vulnerability Repair with Reinforcement Learning and Semantic Reward</title>
-  <dc:creator>Nafis Tanveer Islam, Joseph Khoury, Andrew Seong, Gonzalo De La Torre Parra, Elias Bou-Harb, Peyman Najafirad</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/LLM_Powered_Code_Vulnerability_Repair_with_Reinforcement_Learning_and_Semantic_Reward/2024-01-07-LLM_Powered_Code_Vulnerability_Repair_with_Reinforcement_Learning_and_Semantic_Reward.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/LLM_Powered_Code_Vulnerability_Repair_with_Reinforcement_Learning_and_Semantic_Reward/https:/browse.arxiv.org/html/2401.03374v1/x1.png" class="img-fluid"></p>
-<section id="llm-powered-code-vulnerability-repair-with-reinforcement-learning-and-semantic-reward" class="level1">
-<h1>LLM-Powered Code Vulnerability Repair with Reinforcement Learning and Semantic Reward</h1>
-<section id="major-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h2>
-<ol type="1">
-<li><strong>Automation Tools and Security</strong>: This paper highlights the increasing trend of <strong>AI-driven automation tools</strong> like GitHub Copilot in software development, which aid developers in functional code development while also potentially causing security vulnerabilities due to pre-training on publicly available repositories.</li>
-<li><strong>SecRepair System</strong>: The paper introduces SecRepair, a <strong>multipurpose code vulnerability analysis system</strong> powered by a large language model, CodeGen2, and reinforced by semantic reward to identify and generate fixed code, provide vulnerability descriptions, and generate code comments.</li>
-<li><strong>Effectiveness of SecRepair</strong>: The study demonstrates the effectiveness of SecRepair in identifying, repairing, and describing code vulnerabilities with code comments, as well as the optimization of the program description through reinforcement learning and semantic reward.</li>
-</ol>
-</section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<ul>
-<li><strong>Cybersecurity Concerns</strong>: Cybersecurity and code vulnerabilities are critical concerns in today’s digital age, with vulnerabilities arising from technical glitches, human errors, open-source software reuse, and zero-day attacks.</li>
-<li><strong>Advancements in AI-driven Tools</strong>: Advancements in neural language modeling and AI-assisted automation tools like GitHub Copilot have improved software development but have also raised concerns about their training datasets, generated code outputs, and code security resilience.</li>
-</ul>
-</section>
-<section id="approach" class="level2">
-<h2 class="anchored" data-anchor-id="approach">Approach</h2>
-<ul>
-<li><strong>Code Vulnerability Repair and Description</strong>: The SecRepair system is designed to help developers generate fixed code while providing comprehensive descriptions of the vulnerability with a code comment. It leverages reinforcement learning with semantic reward to enhance its capabilities.</li>
-<li><strong>Instruction Dataset</strong>: The paper introduces InstructVul, an instruction-based dataset for vulnerability identification, repair, and description with code comment generation. The dataset comprises vulnerability identification, repair, description, and code comment generation tasks.</li>
-</ul>
-</section>
-<section id="experiments-and-discussions" class="level2">
-<h2 class="anchored" data-anchor-id="experiments-and-discussions">Experiments and Discussions</h2>
-<ul>
-<li><strong>Evaluation Metrics</strong>: The paper uses BLEU, Rouge-L, and human evaluation scores for generative models’ effectiveness and F1, Precision, Recall, and Accuracy for vulnerability identification tasks.</li>
-<li><strong>Results and Discussions</strong>: The study addresses three research questions (RQs) concerning the effectiveness and capabilities of the proposed system for vulnerability analysis, providing in-depth experimental results and discussions for each RQ.</li>
-</ul>
-</section>
-<section id="ablation-studies" class="level2">
-<h2 class="anchored" data-anchor-id="ablation-studies">Ablation Studies</h2>
-<ul>
-<li>The paper conducts ablation studies on the impact of temperature and beam size on generative models, highlighting the effect of these components on the performance of the model in code generation tasks.</li>
-</ul>
-</section>
-<section id="critique" class="level2">
-<h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<p>The paper demonstrates the development and effectiveness of the SecRepair system in addressing code vulnerabilities. However, it would benefit from providing more detailed real-world case studies and user feedback to further validate the practical usability and impact of the system. Additionally, addressing potential ethics and biases related to AI-generated code and its impact on security would enhance the paper’s scope and relevance.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-09</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.03374v1">http://arxiv.org/abs/2401.03374v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.03374v1">https://browse.arxiv.org/html/2401.03374v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>8165</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>robustness</category>
-  <category>architectures</category>
-  <category>security</category>
-  <category>prompt-engineering</category>
-  <category>programming</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/LLM_Powered_Code_Vulnerability_Repair_with_Reinforcement_Learning_and_Semantic_Reward/2024-01-07-LLM_Powered_Code_Vulnerability_Repair_with_Reinforcement_Learning_and_Semantic_Reward.html</guid>
-  <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.03374v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Overview of Dialogue Robot Competition 2023</title>
-  <dc:creator>Takashi Minato, Ryuichiro Higashinaka, Kurima Sakai, Tomo Funayama, Hiromitsu Nishizaki, Takayuki Naga</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Overview_of_Dialogue_Robot_Competition_2023/2024-01-07-Overview_of_Dialogue_Robot_Competition_2023.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Overview_of_Dialogue_Robot_Competition_2023/https:/browse.arxiv.org/html/2401.03547v1/x1.png" class="img-fluid"></p>
-<section id="major-takeaways" class="level3">
-<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
-<ol type="1">
-<li><strong>Dialogue Robot Competition 2023 (DRC2023)</strong> was designed to advance dialogue systems for interactive robots, pushing teams to effectively use real-time information and challenge the capabilities of large-scale language models (LLMs).</li>
-<li>The competition’s preliminary round was held at actual travel agency stores, catering to the practicality of evaluation and encouraging the use of advanced technologies in real-world settings.</li>
-<li>Teams were provided with android robots and access to middleware, face recognition, speech synthesis, dialogue corpora, and recognition systems to support the development of their dialogue systems.</li>
-</ol>
-</section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The paper introduces the significance of dialogue development for humanoid robots and the evolution of voice interactive devices, emphasizing the need to effectively use multimodal input/output information, especially real-time information. DRC2023 is highlighted as the first competition for dialogue performance of android robots, following previous competitions in travel agency dialogue tasks.</p>
-</section>
-<section id="task-settings" class="level3">
-<h3 class="anchored" data-anchor-id="task-settings">Task Settings</h3>
-<p>DRC2023’s task was to help customers plan visits to multiple sightseeing spots, requiring dialogue systems to listen to customer requests, propose feasible plans, and gather necessary information. The teams were provided with information about the sightseeing spots and allowed to use external resources. The dialogue was conducted in Japanese, and teams could use a monitor to display pictures of the sightseeing spots and maps.</p>
-</section>
-<section id="available-resources" class="level3">
-<h3 class="anchored" data-anchor-id="available-resources">Available Resources</h3>
-<p>Teams were provided with android robots, middleware, and several module softwares to support the development of their dialogue systems. Additionally, hardware specifications, evaluation from customer feedback, and the criteria for the preliminary round were detailed.</p>
-</section>
-<section id="preliminary-round" class="level3">
-<h3 class="anchored" data-anchor-id="preliminary-round">Preliminary Round</h3>
-<p>The preliminary round evaluation involved actual customers interacting with the dialogue systems at travel agency locations, considering impression evaluation and plan feasibility. Customer feedback was assessed based on informativeness, naturalness, satisfaction, and other criteria. The evaluation results and the selection of top teams were discussed, highlighting the use of a baseline system using GPT-4, a large-scale language model developed by OpenAI.</p>
-</section>
-<section id="overview-of-dialogue-systems-developed-by-participating-teams" class="level3">
-<h3 class="anchored" data-anchor-id="overview-of-dialogue-systems-developed-by-participating-teams">Overview of Dialogue Systems Developed by Participating Teams</h3>
-<p>A detailed overview of the dialogue systems developed by each participating team was provided, focusing on the use of LLMs, dialogue scenarios, customer relationship-building, and specific strategies employed by each team.</p>
-</section>
-<section id="final-round" class="level3">
-<h3 class="anchored" data-anchor-id="final-round">Final Round</h3>
-<p>The upcoming final round of the competition was briefly mentioned, wherein dialogue systems will be evaluated by designated dialogue researchers and tourism industry experts.</p>
-</section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>The paper concluded with a summary of the top teams’ performance in the preliminary round and the significance of the two evaluation factors in assessing overall system performance.</p>
-</section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper provides comprehensive information about the DRC2023 competition, but it primarily presents an overview of the competition and its preliminary round. A deeper analysis of the specific technical advancements and challenges faced by the participating teams would enhance the paper’s insights. Additionally, while the customer feedback evaluation process was detailed, further discussion on the technical evaluation by dialogue researchers and industry experts in the final round would provide a more balanced perspective on the dialogue systems’ performance.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-09</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.03547v1">http://arxiv.org/abs/2401.03547v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.03547v1">https://browse.arxiv.org/html/2401.03547v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>5677</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>architectures</category>
-  <category>hci</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Overview_of_Dialogue_Robot_Competition_2023/2024-01-07-Overview_of_Dialogue_Robot_Competition_2023.html</guid>
-  <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.03547v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Malla: Demystifying Real-world Large Language Model Integrated Malicious Services</title>
-  <dc:creator>Zilong Lin, Jian Cui, Xiaojing Liao, XiaoFeng Wang</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Malla_Demystifying_Real_world_Large_Language_Model_Integrated_Malicious_Services/2024-01-06-Malla_Demystifying_Real_world_Large_Language_Model_Integrated_Malicious_Services.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Malla_Demystifying_Real_world_Large_Language_Model_Integrated_Malicious_Services/https:/browse.arxiv.org/html/2401.03315v1/x1.png" class="img-fluid"></p>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
-<ol type="1">
-<li><p><strong>Increased Proliferation of Mallas</strong>: The study uncovers a significant growth in Mallas, with a rapid increase in listings and projects, reflecting the prevalence of malicious services in the underground marketplaces. This trend signifies an alarming escalation in the exploitation of LLMs for cybercriminal activities.</p></li>
-<li><p><strong>Economic Significance</strong>: The research reveals the substantial financial allure of Malla vendors, with a case study highlighting a single Malla service generating revenues exceeding $28,000 in just three months. This underscores the economic incentives driving the proliferation of malicious LLM-integrated applications.</p></li>
-<li><p><strong>Effectiveness and Exploitation Techniques</strong>: The effectiveness of Mallas in generating malicious content, including malware, phishing emails, and deceptive websites, is demonstrated. Additionally, the study demystifies the tactics employed by Mallas, including the abuse of uncensored LLMs and the exploitation of public LLM APIs through jailbreak prompts.</p></li>
-</ol>
-</section>
-<section id="malla-ecosystem-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="malla-ecosystem-analysis">Malla Ecosystem Analysis</h3>
-<ul>
-<li><strong>Scope and Magnitude</strong>
-<ul>
-<li>The study reveals the dominance of malware generation by Mallas, with a notable surge in Malla projects and an emphasis on the subscription-based pricing model.</li>
-</ul></li>
-<li><strong>Malla Ecosystem</strong>
-<ul>
-<li>The research presents insights into the characteristics of Malla providers, their activeness, and the hosting platforms utilized for Malla services. Prominently, the misuse of LLMA hosting platforms by Malla vendors is highlighted.</li>
-</ul></li>
-<li><strong>Malla Effectiveness</strong>
-<ul>
-<li>The effectiveness of Malla services and projects in generating malicious content is extensively analyzed, shedding light on the variability in performance across different Malla services and projects.</li>
-</ul></li>
-<li><strong>Price Strategy and Revenue</strong>
-<ul>
-<li>The pricing strategies and revenue generation of Malla services are explored, highlighting the competitive pricing and significant revenue potential of Mallas.</li>
-</ul></li>
-<li><strong>Reverse-engineering Malla</strong>
-<ul>
-<li>The study employs reverse-engineering techniques to uncover the backend LLMs and jailbreak prompts of Malla services and projects, revealing insights into the infrastructures commonly leveraged to construct Mallas.</li>
-</ul></li>
-</ul>
-</section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The study offers a comprehensive exploration of the real-world exploitation of LLMs by cybercriminals. However, it’s important to note potential ethical concerns surrounding the interaction and purchase of Malla services for research purposes. Additionally, the study’s focus on Mallas’ effectiveness and revenue generation may benefit from a deeper analysis of the broader implications and countermeasures to address the growing threat landscape posed by Mallas. Further research into the impact on cybersecurity ecosystems and potential regulatory and technological interventions could enhance the study’s contribution to combating cybercrime.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-09</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.03315v1">http://arxiv.org/abs/2401.03315v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.03315v1">https://browse.arxiv.org/html/2401.03315v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>17982</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>robustness</category>
-  <category>security</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Malla_Demystifying_Real_world_Large_Language_Model_Integrated_Malicious_Services/2024-01-06-Malla_Demystifying_Real_world_Large_Language_Model_Integrated_Malicious_Services.html</guid>
-  <pubDate>Sat, 06 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.03315v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>DIALIGHT: Lightweight Multilingual Development and Evaluation of Task-Oriented Dialogue Systems with Large Language Models</title>
-  <dc:creator>Songbo Hu, Xiaobin Wang, Zhangdie Yuan, Anna Korhonen, Ivan Vulić</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/DIALIGHT_Lightweight_Multilingual_Development_and_Evaluation_of_Task_Oriented_Dialogue_Systems_with_Large_Language_Models/2024-01-04-DIALIGHT_Lightweight_Multilingual_Development_and_Evaluation_of_Task_Oriented_Dialogue_Systems_with_Large_Language_Models.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/DIALIGHT_Lightweight_Multilingual_Development_and_Evaluation_of_Task_Oriented_Dialogue_Systems_with_Large_Language_Models/https:/browse.arxiv.org/html/2401.02208v1/x1.png" class="img-fluid"></p>
-<section id="summary-of-lightweight-multilingual-development-and-evaluation-of-task-oriented-dialogue-systems-with-large-language-models" class="level3">
-<h3 class="anchored" data-anchor-id="summary-of-lightweight-multilingual-development-and-evaluation-of-task-oriented-dialogue-systems-with-large-language-models">Summary of “: Lightweight Multilingual Development and Evaluation of Task-Oriented Dialogue Systems with Large Language Models”</h3>
-<section id="key-findings" class="level4">
-<h4 class="anchored" data-anchor-id="key-findings">Key Findings</h4>
-<ul>
-<li><strong>Task-Oriented Dialogue (ToD) systems</strong> facilitate interactions between human users and system agents, focusing on specific tasks such as booking hotels or providing domain-specific information.</li>
-<li>The prevailing approach for ToD system development has been fine-tuning <strong>Pretrained Language Models (PLMs)</strong>, but there’s a shift towards <strong>Large Language Models (LLMs)</strong> with in-context learning capabilities.</li>
-<li>While PLM fine-tuning leads to higher accuracy and coherence, LLM-based systems excel in producing diverse and likeable responses but face challenges in adherence to task-specific instructions and generating outputs in multiple languages.</li>
-</ul>
-</section>
-<section id="introduction" class="level4">
-<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
-<ul>
-<li>ToD systems serve as access points to cutting-edge AI applications and drivers of technological expansion.</li>
-<li>The shift in ToD system development from fine-tuning PLMs to relying on LLMs’ in-context learning and generalization capabilities is highlighted.</li>
-</ul>
-</section>
-<section id="related-work" class="level4">
-<h4 class="anchored" data-anchor-id="related-work">Related Work</h4>
-<ul>
-<li>*** is a novel addition to the landscape of ToD system toolkits, offering support for in-context learning (ICL) compared to existing frameworks.</li>
-<li>It aims to lower entry barriers and facilitate comprehensive comparative analyses between PLM fine-tuning and ICL-based systems.</li>
-</ul>
-</section>
-</section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<ul>
-<li>The paper acknowledges the limitations of the toolkit, such as focusing only on text input and its underperformance compared to more sophisticated systems. It also raises concerns about the dominance of English instructions biasing model outputs towards English, indicating potential biases in the toolkit’s approach.</li>
-<li>The superficial tone and stylized infoboxes find little impact in interpreting the utility or contribution of the product. This makes the paper overlook potential areas.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-06</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.02208v1">http://arxiv.org/abs/2401.02208v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.02208v1">https://browse.arxiv.org/html/2401.02208v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>9836</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>programming</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/DIALIGHT_Lightweight_Multilingual_Development_and_Evaluation_of_Task_Oriented_Dialogue_Systems_with_Large_Language_Models/2024-01-04-DIALIGHT_Lightweight_Multilingual_Development_and_Evaluation_of_Task_Oriented_Dialogue_Systems_with_Large_Language_Models.html</guid>
-  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.02208v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Self-Contrast: Better Reflection Through Inconsistent Solving Perspectives</title>
-  <dc:creator>Wenqi Zhang, Yongliang Shen, Linjuan Wu, Qiuying Peng, Jun Wang, Yueting Zhuang, Weiming Lu</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Self_Contrast_Better_Reflection_Through_Inconsistent_Solving_Perspectives/2024-01-04-Self_Contrast_Better_Reflection_Through_Inconsistent_Solving_Perspectives.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Self_Contrast_Better_Reflection_Through_Inconsistent_Solving_Perspectives/https:/browse.arxiv.org/html/2401.02009v1/x1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary</h3>
-<p><strong>Self-Contrast: Better Reflection Through Inconsistent Solving Perspectives</strong></p>
-<p><strong>1. Major Findings</strong> - <strong>Intrinsic Reflection Deficiencies</strong>: Large Language Models (LLMs) struggle with self-correction due to ineffective intrinsic reflection. - <strong>Overconfident and Inconsistent Feedback</strong>: LLMs often exhibit overconfidence (46.7%) or inconsistency (45.7%) when self-evaluating, hindering accurate self-reflection. - <strong>Self-Contrast Approach</strong>: The Self-Contrast method, which involves creating diverse solving perspectives and contrasting the differences, significantly improves LLMs’ reflection capabilities across reasoning and translation tasks.</p>
-<p><strong>2. Evaluation of Intrinsic Reflection</strong> - <strong>Limited Reflection Capability</strong>: LLMs show insignificant performance gains from reflection and struggle to correct incorrect initial responses. - <strong>Feedback Analysis</strong>: The self-evaluate process results in overconfident and inconsistent feedback, impeding effective reflection.</p>
-<p><strong>3. Self-Contrast</strong> - <strong>Create Diverse Perspectives</strong>: LLMs autonomously generate multiple prompts tailored to the user’s request, fostering diverse solving perspectives. - <strong>Contrast Inter-Perspective Discrepancies</strong>: LLM contrasts the differences between responses, identifying errors and providing re-examining instructions. - <strong>Eliminate Discrepancies</strong>: Discrepancies between perspectives guide LLMs to revise inconsistent responses for more accurate reflection.</p>
-</section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper presents a novel approach, but it may benefit from a discussion on potential limitations and challenges in implementing the Self-Contrast method. Additionally, further exploration of real-world application and scalability would enhance the paper’s practical significance. Moreover, a comparison with existing state-of-the-art reflection strategies could provide a better understanding of the method’s effectiveness.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-06</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.02009v1">http://arxiv.org/abs/2401.02009v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.02009v1">https://browse.arxiv.org/html/2401.02009v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>10949</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>robustness</category>
-  <category>prompt-engineering</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Self_Contrast_Better_Reflection_Through_Inconsistent_Solving_Perspectives/2024-01-04-Self_Contrast_Better_Reflection_Through_Inconsistent_Solving_Perspectives.html</guid>
-  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.02009v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>ICE-GRT: Instruction Context Enhancement by Generative Reinforcement based Transformers</title>
-  <dc:creator>Chen Zheng, Ke Sun, Da Tang, Yukun Ma, Yuyu Zhang, Chenguang Xi, Xun Zhou</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/ICE_GRT_Instruction_Context_Enhancement_by_Generative_Reinforcement_based_Transformers/2024-01-04-ICE_GRT_Instruction_Context_Enhancement_by_Generative_Reinforcement_based_Transformers.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/ICE_GRT_Instruction_Context_Enhancement_by_Generative_Reinforcement_based_Transformers/https:/browse.arxiv.org/html/2401.02072v1/extracted/5329451/images/model_architecture.png" class="img-fluid"></p>
-<section id="major-takeaways" class="level3">
-<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h3>
-<ul>
-<li>ICE-GRT, a Large Language Model (LLM), addresses limitations in domain-specific tasks by utilizing Reinforcement Learning from Human Feedback (RLHF) grounded in Proximal Policy Optimization (PPO).</li>
-<li>ICE-GRT demonstrates exceptional performance in both general and domain-specific tasks, showcasing improved ability for detailed analysis, particularly in scenarios where smaller-sized LLMs fall short.</li>
-<li>The success of ICE-GRT is dependent on crucial factors such as appropriate data, reward size scaling, KL-control, and advantage normalization.</li>
-</ul>
-</section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<ul>
-<li>Large Language Models like ChatGPT and LLaMA face limitations in domain-specific tasks, lacking depth and accuracy.</li>
-<li>ICE-GRT, leveraging RLHF based on PPO, excels in domain-specific scenarios without compromising general task performance.</li>
-<li>The model displays profound understanding and reasoning abilities, going beyond Supervised Fine-Tuning (SFT) models.</li>
-</ul>
-</section>
-<section id="related-works" class="level3">
-<h3 class="anchored" data-anchor-id="related-works">Related Works</h3>
-<ul>
-<li>Recent advancements in Large Language Models have focused on instruction-tuning and RLHF to improve LLMs’ capabilities in specialized tasks.</li>
-</ul>
-</section>
-<section id="model" class="level3">
-<h3 class="anchored" data-anchor-id="model">Model</h3>
-<ul>
-<li>ICE-GRT is built upon the ICE-Instruct model and utilizes RLHF for training the reward model and the entire ICE-GRT model.</li>
-<li>The model components include the Actor, Reference, Reward, and Critic models.</li>
-<li>Important training strategies such as data collection, reward size scaling, KL-control, and advantage normalization contribute to ICE-GRT’s effectiveness.</li>
-</ul>
-</section>
-<section id="experimental-details" class="level3">
-<h3 class="anchored" data-anchor-id="experimental-details">Experimental Details</h3>
-<ul>
-<li>ICE-GRT’s training process employs a multi-node, multi-GPU strategy and utilizes data collected from diverse sources, including in-domain data and public resources.</li>
-<li>Evaluations involve general task benchmarks and manual annotation-based assessments.</li>
-</ul>
-</section>
-<section id="results-and-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="results-and-analysis">Results and Analysis</h3>
-<ul>
-<li>ICE-GRT outperforms other models in general and in-domain tasks, demonstrating its superior performance and comprehension abilities.</li>
-<li>ICE-GRT’s training data significantly influences its performance, and strategies like advantage normalization contribute to its effectiveness.</li>
-<li>Case studies illustrate ICE-GRT’s comprehensive understanding and creative compliance in domain-specific tasks.</li>
-</ul>
-</section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<ul>
-<li>ICE-GRT represents a significant advancement in LLMs, especially in domain-specific performance, and offers insights into effective RLHF training methodologies.</li>
-</ul>
-</section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<ul>
-<li>The paper largely focuses on the capabilities of ICE-GRT without addressing potential limitations or challenges encountered during the development and implementation of the model.</li>
-<li>The paper could benefit from a more extensive evaluation and comparison with a wider range of existing models to provide a more comprehensive understanding of ICE-GRT’s positioning in the field.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-06</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.02072v1">http://arxiv.org/abs/2401.02072v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.02072v1">https://browse.arxiv.org/html/2401.02072v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>8390</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>hci</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/ICE_GRT_Instruction_Context_Enhancement_by_Generative_Reinforcement_based_Transformers/2024-01-04-ICE_GRT_Instruction_Context_Enhancement_by_Generative_Reinforcement_based_Transformers.html</guid>
-  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.02072v1/extracted/5329451/images/model_architecture.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>LLM Augmented LLMs: Expanding Capabilities through Composition</title>
-  <dc:creator>Rachit Bansal, Bidisha Samanta, Siddharth Dalmia, Nitish Gupta, Shikhar Vashishth, Sriram Ganapathy, Abhishek Bapna, Prateek Jain, Partha Talukdar</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/LLM_Augmented_LLMs_Expanding_Capabilities_through_Composition/2024-01-04-LLM_Augmented_LLMs_Expanding_Capabilities_through_Composition.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/LLM_Augmented_LLMs_Expanding_Capabilities_through_Composition/https:/browse.arxiv.org/html/2401.02412v1/x1.png" class="img-fluid"></p>
-<p><strong>Major Takeaways</strong> - The paper introduces the concept of Composition to Augment Language Models (CALM) which enables the composition of existing foundational language models with more specific models to enable newer capabilities. - The CALM framework introduces cross-attention between models to compose their representations and enable new capabilities, allowing for the reuse of existing models with established capabilities. - The paper demonstrates the practical applications of CALM in language inclusivity and code generation, showing significant improvements in translation, arithmetic reasoning, and code-related tasks.</p>
-<p><strong>Introduction</strong> - Large Language Models (LLMs) have foundational capabilities and have been fine-tuned for domain-specific capabilities, resulting in the development of several specialized large models with domain-specific capabilities. - The paper aims to enable the composition of an anchor model with a domain-specific augmenting model to enable new capabilities, such as composing an augmenting model’s code understanding capability with an anchor LLM’s language generation capability to enable code-to-text generation capability.</p>
-<p><strong>The CALM Framework</strong> - CALM aims to compose an anchor model and an augmenting model to enable new capabilities as a composition of capabilities of the two individual models. - It operates over a selected set of layers from the anchor and augmenting models and introduces a small number of trainable parameters over these layers. - The composition training data depicts a “combined skill” of the given models for the target composition domain and is used to learn the composition parameters.</p>
-<p><strong>Experiments</strong> - The paper demonstrates the effectiveness of CALM in three domains: key-value arithmetic, low-resource language inclusivity, and code completion and explanation tasks. - The experiments show the significant improvements achieved by composing an augmenting model with an anchor LLM, surpassing the individual models and versions that have been fine-tuned for the specific tasks.</p>
-<p><strong>Critique</strong> - The paper lacks a discussion on the potential limitations or challenges of the CALM framework, such as its scalability to larger models or its adaptability to diverse languages and domains. - The experimental results could benefit from a more extensive comparison with other relevant methods or frameworks to establish the unique advantages of CALM.</p>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-06</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.02412v1">http://arxiv.org/abs/2401.02412v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.02412v1">https://browse.arxiv.org/html/2401.02412v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>5397</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>programming</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/LLM_Augmented_LLMs_Expanding_Capabilities_through_Composition/2024-01-04-LLM_Augmented_LLMs_Expanding_Capabilities_through_Composition.html</guid>
-  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.02412v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Using LLM to select the right SQL Query from candidates</title>
-  <dc:creator>Zhenwen Li, Tao Xie</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Using_LLM_to_select_the_right_SQL_Query_from_candidates/2024-01-04-Using_LLM_to_select_the_right_SQL_Query_from_candidates.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Using_LLM_to_select_the_right_SQL_Query_from_candidates/https:/browse.arxiv.org/html/2401.02115v1/x1.png" class="img-fluid"></p>
-<section id="summary-of-using-llm-to-select-the-right-sql-query-from-candidates" class="level3">
-<h3 class="anchored" data-anchor-id="summary-of-using-llm-to-select-the-right-sql-query-from-candidates">Summary of “Using LLM to select the right SQL Query from candidates”</h3>
-<section id="major-findings" class="level4">
-<h4 class="anchored" data-anchor-id="major-findings">Major Findings</h4>
-<ol type="1">
-<li><strong>Automatic Test Case Generation</strong>: The paper proposes a method to automatically generate test cases for text-to-SQL, without ground truth SQL queries, and conducts experiments to explore how to generate easily predicted databases for large language models (LLMs) and design easy-to-understand prompts.</li>
-<li><strong>Re-rank Method</strong>: The paper introduces a re-rank method to select the right SQL query from a candidate list and demonstrates its effectiveness on the validation dataset of Spider, showing a 3.6% improvement in the performance of state-of-the-art text-to-SQL models.</li>
-<li><strong>Hyper-parameter Optimization</strong>: Through experiments, the study identifies optimal hyper-parameters for generating test cases, such as database size, naturalness of database contents, format of database contents, and number of examples. It also highlights the effectiveness of constraining the range of numbers in database columns participating in aggregation/sort operations.</li>
-</ol>
-</section>
-<section id="introduction" class="level4">
-<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
-<ul>
-<li>Text-to-SQL is the task of translating natural language into a SQL query, and the top-performing models often generate a list of candidate SQL queries, with the best query not always at the top of the list.</li>
-<li>Previous studies have focused on re-ranking the candidate SQL queries, but automatic test case generation for text-to-SQL is an understudied field.</li>
-</ul>
-</section>
-<section id="test-case-generation" class="level4">
-<h4 class="anchored" data-anchor-id="test-case-generation">Test Case Generation</h4>
-<ul>
-<li>The method consists of database generation and using LLMs to predict the expected execution results.</li>
-<li>Database generation involves fuzzing and random selection methods, exploring the impact of maximum table size and naturalness of database contents.</li>
-<li>LLMs are guided by prompts containing the NL question, database representation, and examples to predict expected execution results.</li>
-</ul>
-</section>
-<section id="candidate-selection" class="level4">
-<h4 class="anchored" data-anchor-id="candidate-selection">Candidate Selection</h4>
-<ul>
-<li>The paper proposes a three-step method to select the right SQL query, involving candidate list classification, test suite generation, and re-ranking based on pass numbers on test cases and their generation probabilities.</li>
-</ul>
-</section>
-<section id="experiment" class="level4">
-<h4 class="anchored" data-anchor-id="experiment">Experiment</h4>
-<ul>
-<li>The study conducts experiments on the Spider dataset, using GPT-4-turbo and GPT-4 to generate test cases and state-of-the-art models like DAIL-SQL and RESDSQL to generate candidate lists.</li>
-<li>Results indicate a 3.6% improvement for DAIL-SQL and a 2% improvement for RESDSQL after applying the proposed re-rank methods.</li>
-</ul>
-</section>
-<section id="hyper-parameter-optimization" class="level4">
-<h4 class="anchored" data-anchor-id="hyper-parameter-optimization">Hyper-parameter Optimization</h4>
-<ul>
-<li>The study explores hyper-parameters related to database generation and prompt design, identifying optimal values and showing the effectiveness of constraining number ranges in certain columns.</li>
-</ul>
-</section>
-<section id="related-work" class="level4">
-<h4 class="anchored" data-anchor-id="related-work">Related Work</h4>
-<ul>
-<li>The paper discusses the use of LLMs in text-to-SQL, the relationship to previous re-ranking studies, and the advantages of its database generation algorithm compared to previous work.</li>
-</ul>
-</section>
-<section id="conclusion" class="level4">
-<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
-<ul>
-<li>The study emphasizes the efficacy of using test cases to re-rank candidate lists for text-to-SQL, calling for further exploration in this research direction.</li>
-</ul>
-</section>
-</section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The paper presents an innovative approach to test case generation and re-ranking of candidate SQL queries, demonstrating notable improvements in model performance. However, there are some potential limitations: 1. <strong>Prediction Accuracy of LLMs</strong>: The study acknowledges that only about 60% of the test cases generated are correct, raising questions about the overall reliability of using LLMs to predict expected execution results. 2. <strong>Complexity and Token Consumption</strong>: The re-rank method’s reliance on OpenAI’s API for generating test cases multiple times highlights potential challenges in scalability and token consumption for large-scale applications. 3. <strong>Database Generation Limitations</strong>: The limitations of the proposed database generation method, including its inability to distinguish some SQL queries, could impact the overall effectiveness of the test case generation process.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-06</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.02115v1">http://arxiv.org/abs/2401.02115v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.02115v1">https://browse.arxiv.org/html/2401.02115v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>7353</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>prompt-engineering</category>
-  <category>programming</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Using_LLM_to_select_the_right_SQL_Query_from_candidates/2024-01-04-Using_LLM_to_select_the_right_SQL_Query_from_candidates.html</guid>
-  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.02115v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Understanding LLMs: A Comprehensive Overview from Training to Inference</title>
-  <dc:creator>Yiheng Liu, Hao He, Tianle Han, Xu Zhang, Mengyuan Liu, Jiaming Tian, Yutong Zhang, Jiaqi Wang, Xiaohui Gao, Tianyang Zhong, Yi Pan, Shaochen Xu, Zihao Wu, Zhengliang Liu, Xin Zhang, Shu Zhang, Xintao Hu, Tuo Zhang, Ning Qiang, Tianming Liu, Bao Ge</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Understanding_LLMs_A_Comprehensive_Overview_from_Training_to_Inference/2024-01-04-Understanding_LLMs_A_Comprehensive_Overview_from_Training_to_Inference.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Understanding_LLMs_A_Comprehensive_Overview_from_Training_to_Inference/https:/browse.arxiv.org/html/2401.02038v1/x1.png" class="img-fluid"></p>
-<section id="major-takeaways" class="level3">
-<h3 class="anchored" data-anchor-id="major-takeaways">Major Takeaways:</h3>
-<ol type="1">
-<li><p><strong>Evolution of Large Language Models (LLMs)</strong>: The introduction of ChatGPT has led to the popular use of LLMs for addressing downstream tasks. The focus is now on cost-efficient training and deployment of LLMs, representing the future development trend.</p></li>
-<li><p><strong>Training Techniques</strong>: LLMs training includes aspects such as data preprocessing, training architecture, pre-training tasks, parallel training, and model fine-tuning. On the inference side, the paper covers topics such as model compression, parallel computation, memory scheduling, and structural optimization.</p></li>
-<li><p><strong>Fine-Tuning</strong>: The paper categorizes fine-tuning techniques into supervised fine-tuning, alignment tuning, and parameter-efficient tuning. The supervision of fine-tuning involves adjusting the model based on large-scale pre-training.</p></li>
-</ol>
-</section>
-<section id="background-knowledge" class="level3">
-<h3 class="anchored" data-anchor-id="background-knowledge">Background Knowledge</h3>
-<p>The section provides an overview of language modeling in the context of natural language processing (NLP) and the evolution of language models from statistical language models (SLM) to neural language models (NLM) and pre-trained language models (PLM). It also details the Transformer architecture, self-attention, encoder-decoder architecture, positional embedding, and prompt learning as widely adopted machine learning approach.</p>
-</section>
-<section id="training-of-large-language-models" class="level3">
-<h3 class="anchored" data-anchor-id="training-of-large-language-models">Training of Large Language Models</h3>
-<ul>
-<li><strong>Data Preparation and Preprocessing</strong>: Discusses data pre-training tasks such as language modeling, and model pre-training tasks, including data parallel, model parallel, mixed precision training, offloading, overlapping, and checkpoint mechanisms.</li>
-<li><strong>Supervised Fine-Tuning</strong>: The paper categorizes fine-tuning techniques into supervised fine-tuning, alignment tuning, and parameter-efficient tuning. The supervision of fine-tuning involves adjusting the model based on large-scale pre-training.</li>
-</ul>
-</section>
-<section id="model-training" class="level3">
-<h3 class="anchored" data-anchor-id="model-training">Model Training</h3>
-<ul>
-<li><strong>Parallel Training</strong>: Discusses data parallel, distributed data parallel, model parallel and ZeRO framework.</li>
-<li><strong>Mixed Precision Training</strong>: Details the use of 16-bit floating-point numbers to reduce memory usage and communication overhead.</li>
-<li><strong>Offloading</strong>: Discusses the idea of moving the optimizer’s parameters from the GPU to the CPU.</li>
-<li><strong>Overlapping</strong>: Describes asynchronous memory operations to optimize the training process.</li>
-<li><strong>Checkpoint</strong>: Details the use of a checkpoint mechanism to optimize the backward propagation process.</li>
-</ul>
-</section>
-<section id="fine-tuning" class="level3">
-<h3 class="anchored" data-anchor-id="fine-tuning">Fine-Tuning</h3>
-<ul>
-<li><strong>Supervised Fine-Tuning</strong>: The core concept involves adjusting the model in a supervised manner on the basis of large-scale pre-training.</li>
-<li><strong>Alignment Tuning</strong>: Aligns the model with specific task requirements, task prompt, or examples.</li>
-<li><strong>Parameter-Efficient Tuning</strong>: Designed to fine-tune the model with minimal additional parameters.</li>
-</ul>
-</section>
-<section id="critique" class="level3">
-<h3 class="anchored" data-anchor-id="critique">Critique</h3>
-<p>The article lacks a clear distinction between the literature review and original contributions, making it challenging to identify the author’s unique position or perspective on the subject matter. Additionally, some sections provide detailed technical descriptions that may be overwhelming for readers without a strong background in NLP and machine learning. Finally, the absence of empirical evidence or case studies limits the practical applicability of the paper’s findings.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-06</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.02038v1">http://arxiv.org/abs/2401.02038v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.02038v1">https://browse.arxiv.org/html/2401.02038v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>21883</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>hci</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Understanding_LLMs_A_Comprehensive_Overview_from_Training_to_Inference/2024-01-04-Understanding_LLMs_A_Comprehensive_Overview_from_Training_to_Inference.html</guid>
-  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.02038v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Text2MDT: Extracting Medical Decision Trees from Medical Texts</title>
-  <dc:creator>Wei Zhu, Wenfeng Li, Xing Tian, Pengfei Wang, Xiaoling Wang, Jin Chen, Yuanbin Wu, Yuan Ni, Guotong Xie</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Text2MDT_Extracting_Medical_Decision_Trees_from_Medical_Texts/2024-01-04-Text2MDT_Extracting_Medical_Decision_Trees_from_Medical_Texts.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Text2MDT_Extracting_Medical_Decision_Trees_from_Medical_Texts/https:/browse.arxiv.org/html/2401.02034v1/x1.png" class="img-fluid"></p>
-<section id="summary-of-text2mdt-extracting-medical-decision-trees-from-medical-texts" class="level1">
-<h1>Summary of “Text2MDT: Extracting Medical Decision Trees from Medical Texts”</h1>
-<section id="major-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h2>
-<ol type="1">
-<li><strong>Text2MDT</strong>: The paper proposes a novel task, <strong>Text2MDT</strong>, which aims to automatically extract <strong>medical decision trees (MDTs)</strong> from medical texts such as medical guidelines and textbooks. This is significant for the development of clinical decision support systems.</li>
-<li><strong>End-to-end vs.&nbsp;Pipeline Framework</strong>: The paper investigates both an end-to-end framework and a pipeline framework for the Text2MDT task and demonstrates that large language models (LLMs) show promising results in automated MDT extraction.</li>
-<li><strong>Open-Sourced Dataset and Source Code</strong>: The study contributes to the field by constructing the first Text2MDT benchmark dataset and making it openly available to facilitate further research.</li>
-</ol>
-</section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<ul>
-<li>The development of clinical decision support systems, which rely on medical decision processes modeled as MDTs, has drawn significant attention in the medical field.</li>
-<li>Current methods for constructing MDTs rely on manual tree construction, which is time-consuming and laborious, leading to a need for automated pipelines for precise MDT extraction. This motivates the proposal of the Text2MDT task.</li>
-</ul>
-</section>
-<section id="text2mdt-task" class="level2">
-<h2 class="anchored" data-anchor-id="text2mdt-task">Text2MDT Task</h2>
-<ul>
-<li><strong>Structure</strong>: The knowledge of a medical decision process embedded in the medical text is modeled as a binary decision tree consisting of condition nodes and decision nodes, linked by the logical relationships</li>
-</ul>
-</section>
-<section id="data-collection-and-evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="data-collection-and-evaluation">Data Collection and Evaluation</h2>
-<ul>
-<li><strong>Data Collection</strong>: A Text2MDT dataset was constructed using clinical practice guidelines and clinical medicine textbooks, and medical practitioners evaluated the ability of medical texts and decision trees to represent the medical decision process.</li>
-<li><strong>Manual Evaluation</strong>: The quality of the annotated MDTs was evaluated by medical practitioners and individuals without a medical background.</li>
-</ul>
-</section>
-<section id="methods-of-modeling-text2mdt" class="level2">
-<h2 class="anchored" data-anchor-id="methods-of-modeling-text2mdt">Methods of modeling Text2MDT</h2>
-<ul>
-<li><strong>Pipelined Framework</strong>: The study investigates triplet extraction, node grouping, and tree assembling as subtasks for the pipeline framework. Both encoder-based and LLM-based methods are explored.</li>
-<li><strong>End-to-end Framework</strong>: The paper proposes various COT-style generation methods for the end-to-end framework, considering the complexity of the Text2MDT task and the potential benefit of COT reasoning.</li>
-</ul>
-</section>
-<section id="experiments-and-results" class="level2">
-<h2 class="anchored" data-anchor-id="experiments-and-results">Experiments and Results</h2>
-<ul>
-<li><strong>Evaluation Metrics</strong>: The study uses metrics such as triplet precision, recall, and F1 scores for triplet extraction, edit distance-based metrics for node grouping, and additional metrics for tree assembling.</li>
-<li><strong>Performance Findings</strong>: The study shows competitive results for MedBERT-based methods and demonstrates the potential of COT-style reasoning in improving the performance of generative LMs on the Text2MDT task.</li>
-</ul>
-</section>
-<section id="limitations-and-critique" class="level2">
-<h2 class="anchored" data-anchor-id="limitations-and-critique">Limitations and Critique</h2>
-<ul>
-<li>The study acknowledges limitations related to the expressiveness of the tree, limited logic expression of nodes, and text length constraints. Further improvements are identified as future work.</li>
-</ul>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<ul>
-<li>The paper concludes with the significance of the proposed Text2MDT task for automated extraction of MDTs and highlights the contributions of the study, including the construction of the Text2MDT dataset and the exploration of novel method frameworks.</li>
-<li>Additionally, the study identifies potential future work to address the limitations and challenges encountered in the investigation.</li>
-</ul>
-</section>
-<section id="critique" class="level2">
-<h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<p>The paper provides a comprehensive overview of the Text2MDT task and presents valuable contributions to the field of automated MDT extraction. However, a more detailed discussion of potential challenges and future directions for improving the proposed methods would enhance the paper’s completeness. Additionally, addressing the limitations of the proposed framework and its applicability in real-world clinical settings would provide a more comprehensive evaluation of the study’s contributions.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-06</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.02034v1">http://arxiv.org/abs/2401.02034v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.02034v1">https://browse.arxiv.org/html/2401.02034v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>13994</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>programming</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Text2MDT_Extracting_Medical_Decision_Trees_from_Medical_Texts/2024-01-04-Text2MDT_Extracting_Medical_Decision_Trees_from_Medical_Texts.html</guid>
-  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.02034v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>DCR-Consistency: Divide-Conquer-Reasoning for Consistency Evaluation and Improvement of Large Language Models</title>
-  <dc:creator>Wendi Cui, Jiaxin Zhang, Zhuohang Li, Lopez Damien, Kamalika Das, Bradley Malin, Sricharan Kumar</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/DCR_Consistency_Divide_Conquer_Reasoning_for_Consistency_Evaluation_and_Improvement_of_Large_Language_Models/2024-01-04-DCR_Consistency_Divide_Conquer_Reasoning_for_Consistency_Evaluation_and_Improvement_of_Large_Language_Models.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/DCR_Consistency_Divide_Conquer_Reasoning_for_Consistency_Evaluation_and_Improvement_of_Large_Language_Models/https:/browse.arxiv.org/html/2401.02132v1/x1.png" class="img-fluid"></p>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p><strong>DCR-Consistency: Divide-Conquer-Reasoning for Consistency Evaluation and Improvement of Large Language Models</strong></p>
-<ul>
-<li><strong>Findings</strong>
-<ul>
-<li>The paper proposes a new framework, DCR, for evaluating and improving the consistency of Large Language Model (LLM)-generated texts which outperforms state-of-the-art methods by a large margin in semantic, factual, and summarization consistency tasks.</li>
-<li>The framework employs three components: Divide-Conquer Evaluator (DCE), Auto-Metric Converter (AMC), and Reason-Assisted Improver (RAI) to evaluate and improve the consistency of generated responses.</li>
-<li>The DCR framework demonstrates high correlations with human judgments, reduces output inconsistencies, and shows promise for effective hallucination mitigation.</li>
-</ul></li>
-<li><strong>Preliminaries</strong>
-<ul>
-<li>Conventional evaluation methods relying on token-level comparison fail to capture overall semantic meaning, leading to low correlation with human judgments.</li>
-<li>The consistency of LLMs is essential for AI safety and reliability, but current methods often overlook self-consistency failures.</li>
-</ul></li>
-<li><strong>Divide-Conquer-Reasoning</strong>
-<ul>
-<li>DCE evaluates semantic consistency between reference and candidate paragraphs at a sentence level using a divide-and-conquer strategy.</li>
-<li>AMC converts the evaluation reasons into a numeric score for quantitative interpretation.</li>
-<li>RAI utilizes the outputs of DCE to generate new responses to mitigate inconsistencies.</li>
-</ul></li>
-<li><strong>Experiments</strong>
-<ul>
-<li>The DCR framework outperforms baseline methods in semantic, factual, and summarization consistency evaluations, showing high correlations with human judgment.</li>
-<li>RAI significantly improves consistency, reducing nearly 90% of output inconsistencies.</li>
-</ul></li>
-</ul>
-</section>
-<section id="critique" class="level2">
-<h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<p>While the DCR framework shows promise in evaluating and improving LLM-generated texts’ consistency, several limitations should be considered.</p>
-<ul>
-<li><strong>Not Comprehensive</strong>: The approach may not universally address all dimensions of text evaluation, such as coherence and relevance.</li>
-<li><strong>Input Dependence</strong>: The accuracy of the framework is inherently limited by the correctness of the input paragraphs, potentially affecting the detection of non-factual statements.</li>
-<li><strong>Manual Prompting</strong>: The requirement for hand-crafted prompts for specific tasks may limit the scalability and automation of the framework.</li>
-</ul>
-<p>Overall, the paper provides valuable insights into consistency evaluation and improvement for LLM-generated texts, but further research is needed to address the identified limitations.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-06</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.02132v1">http://arxiv.org/abs/2401.02132v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.02132v1">https://browse.arxiv.org/html/2401.02132v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>9608</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>robustness</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/DCR_Consistency_Divide_Conquer_Reasoning_for_Consistency_Evaluation_and_Improvement_of_Large_Language_Models/2024-01-04-DCR_Consistency_Divide_Conquer_Reasoning_for_Consistency_Evaluation_and_Improvement_of_Large_Language_Models.html</guid>
-  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2401.02132v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Exploring Boundary of GPT-4V on Marine Analysis: A Preliminary Case Study</title>
-  <dc:creator>Ziqiang Zheng, Yiwei Chen, Jipeng Zhang, Tuan-Anh Vu, Huimin Zeng, Yue Him Wong Tim, Sai-Kit Yeung</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Exploring_Boundary_of_GPT_4V_on_Marine_Analysis_A_Preliminary_Case_Study/2024-01-04-Exploring_Boundary_of_GPT_4V_on_Marine_Analysis_A_Preliminary_Case_Study.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Exploring_Boundary_of_GPT_4V_on_Marine_Analysis_A_Preliminary_Case_Study/None.png" class="img-fluid"></p>
-<section id="exploring-boundary-of-gpt-4v-on-marine-analysis-a-preliminary-case-study" class="level1">
-<h1>Exploring Boundary of GPT-4V on Marine Analysis: A Preliminary Case Study</h1>
-<section id="major-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="major-takeaways">Major Takeaways</h2>
-<ul>
-<li>The study explores the preliminary case study of utilizing <strong>GPT-4V</strong> for marine analysis, assessing the feasibility of <strong>MLLMs</strong> in domain-specific analysis.</li>
-<li>The experimental results demonstrate that while <strong>GPT-4V</strong> showcases impressive general-purpose visual understanding, it has limitations in fine-grained marine object recognition and advanced marine analysis.</li>
-<li>The paper highlights the potential shortcomings of <strong>GPT-4V</strong> and emphasizes the need for further research and inclusion of more domain-specific training data to improve its performance.</li>
-</ul>
-</section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<ul>
-<li>Large language models (LLMs) like <strong>GPT-4V</strong> have demonstrated powerful abilities in various tasks, but their performance in domain-specific analysis like marine analysis has gained less attention.</li>
-<li>The study investigates whether <strong>GPT-4V</strong> can serve as an effective visual perception system and professional expert for marine analysis, evaluating its performance from different aspects.</li>
-</ul>
-</section>
-<section id="experiments" class="level2">
-<h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
-<section id="approach" class="level3">
-<h3 class="anchored" data-anchor-id="approach">Approach</h3>
-<ul>
-<li>The data construction involves samples from private data, internet images, and public datasets to ensure consistency and reliability.</li>
-<li><strong>GPT-4V’s</strong> diverse prompt designs aim to generate comprehensive and descriptive responses aligned with user intents.</li>
-</ul>
-</section>
-<section id="perception" class="level3">
-<h3 class="anchored" data-anchor-id="perception">Perception</h3>
-<ul>
-<li>The study explores <strong>GPT-4V’s</strong> performance in marine object recognition, fine-grained marine object recognition, robustness analysis, and physical world knowledge understanding.</li>
-<li>Results show limitations in fine-grained object recognition and robustness with different image formats.</li>
-</ul>
-</section>
-<section id="statistics" class="level3">
-<h3 class="anchored" data-anchor-id="statistics">Statistics</h3>
-<ul>
-<li>Object counting experiments reveal <strong>GPT-4V’s</strong> limited ability, especially in crowded or occluded settings.</li>
-<li>The study also assesses <strong>GPT-4V’s</strong> capability to recognize all existing objects within visual images, demonstrating more limitations in recognizing all objects.</li>
-</ul>
-</section>
-<section id="domain-specific-question-answering" class="level3">
-<h3 class="anchored" data-anchor-id="domain-specific-question-answering">Domain-specific Question-Answering</h3>
-<ul>
-<li>Evaluation on marine multiple choice questions and domain-specific visual question-answering shows <strong>GPT-4V’s</strong> strong optical character recognition but also limitations in handling more advanced marine analysis requirements.</li>
-<li>The study also evaluates <strong>GPT-4V’s</strong> support for multi-round conversations and its struggle with marine object recognition.</li>
-</ul>
-</section>
-<section id="marine-cultural-understanding" class="level3">
-<h3 class="anchored" data-anchor-id="marine-cultural-understanding">Marine Cultural Understanding</h3>
-<ul>
-<li><strong>GPT-4V’s</strong> performance in marine logo understanding, artist image understanding, and landmark recognition displays mixed results, highlighting its capability in recognizing certain visual elements but also its limitations.</li>
-</ul>
-</section>
-<section id="advanced-functions" class="level3">
-<h3 class="anchored" data-anchor-id="advanced-functions">Advanced Functions</h3>
-<ul>
-<li>The study tests <strong>GPT-4V’s</strong> abilities in coral coverage estimation, benthic composition, relationship summarization, event detection, framework understanding, aesthetic evaluation, and temporal sequence understanding.</li>
-<li><strong>GPT-4V</strong> demonstrated limitations in providing accurate analysis and understanding specific details in these advanced functions.</li>
-</ul>
-</section>
-<section id="prompt-engineering" class="level3">
-<h3 class="anchored" data-anchor-id="prompt-engineering">Prompt Engineering</h3>
-<ul>
-<li>Evaluation of prompt engineering techniques shows limited effectiveness in promoting GPT-4V’s visual recognition ability for marine images.</li>
-</ul>
-</section>
-</section>
-<section id="discussions-and-future-directions" class="level2">
-<h2 class="anchored" data-anchor-id="discussions-and-future-directions">Discussions and Future Directions</h2>
-<section id="discussions" class="level3">
-<h3 class="anchored" data-anchor-id="discussions">Discussions</h3>
-<ul>
-<li>The study questions the potential roles of <strong>GPT-4V</strong> as an educational or labeling tool and highlights the challenges and potential sample biases in the constructed testing samples.</li>
-</ul>
-</section>
-<section id="future-works" class="level3">
-<h3 class="anchored" data-anchor-id="future-works">Future Works</h3>
-<ul>
-<li>The paper emphasizes the need for continued research to enhance the accuracy and expertise of responses generated by <strong>GPT-4V</strong>, emphasizing the inclusion of more domain-specific training data and feedback-driven model improvements.</li>
-</ul>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<ul>
-<li>The study concludes that while <strong>GPT-4V</strong> demonstrates valuable findings in visual understanding and reasoning, it falls short of being a strong artificial intelligence domain expert, indicating more research is needed in leveraging multimodal systems for domain-specific analysis.</li>
-</ul>
-</section>
-<section id="critique" class="level2">
-<h2 class="anchored" data-anchor-id="critique">Critique</h2>
-<ul>
-<li>The study provides comprehensive insights into the performance of <strong>GPT-4V</strong> in marine analysis but may benefit from a more extensive comparison with other MLLMs for a more holistic view of the capabilities in domain-specific analysis.</li>
-<li>The paper could also benefit from addressing potential biases in the evaluation dataset and providing clearer recommendations for future research directions.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-01-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.02147v1">http://arxiv.org/abs/2401.02147v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.02147v1">https://browse.arxiv.org/html/2401.02147v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>11778</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>hci</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Exploring_Boundary_of_GPT_4V_on_Marine_Analysis_A_Preliminary_Case_Study/2024-01-04-Exploring_Boundary_of_GPT_4V_on_Marine_Analysis_A_Preliminary_Case_Study.html</guid>
-  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
   <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>

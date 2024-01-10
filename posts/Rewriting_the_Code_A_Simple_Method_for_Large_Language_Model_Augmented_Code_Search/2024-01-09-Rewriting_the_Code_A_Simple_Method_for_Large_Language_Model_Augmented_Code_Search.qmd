@@ -1,0 +1,52 @@
+
+---
+title: "Rewriting the Code: A Simple Method for Large Language Model Augmented Code Search"
+id: "2401.04514v1"
+description: "Code search improved by ReCo for style normalization, boosting retrieval accuracy with new metric."
+author: Haochen Li, Xin Zhou, Zhiqi Shen
+date: "2024-01-09"
+image: "https://browse.arxiv.org/html/2401.04514v1/x1.png"
+categories: ['architectures', 'programming', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.04514v1/x1.png)
+
+## Summary of "Rewriting the Code: A Simple Method for Large Language Model Augmented Code Search"
+
+### Major Takeaways
+1. **Code search** is a common software development activity aimed at retrieving relevant code snippets from a codebase based on natural language queries. The discrepancy in grammatical rules between natural language and code constraints search retrieval performance.
+2. The Generation-Augmented Retrieval (GAR) framework showed limited improvement due to the significant stylistic difference between exemplar code and true code. 
+3. The proposed **Rewrites the Code (ReCo)** method significantly improved retrieval accuracy for both sparse and dense retrieval systems across diverse search scenarios, demonstrating the effectiveness of style normalization in code search.
+
+### Introduction
+- Traditional code search methods suffer from vocabulary mismatch problems due to the grammatical discrepancy between programming languages and natural languages. Dense retrieval systems offer potential semantic connections but struggle with rare terminological associations.
+- The paper proposes the Generation-Augmented Retrieval (GAR) framework, where Large Language Models (LLMs) generate exemplar code snippets to augment natural language queries for code search. However, LLM-augmented GAR showed limited performance improvement due to stylistic deviations between generated and true code snippets.
+
+### Methodology
+- **ReCo:** The paper introduces a method that not only generates exemplar codes based on the query but also rewrites the codes in the codebase. This process involves summarizing the code into a natural language description and then using this description to generate a rewritten code that aligns with the exemplar code's style. Experimental results demonstrated significant retrieval accuracy improvements with ReCo across various search scenarios.
+
+### Code Style Similarity
+- The paper proposes a novel evaluation metric, **Code Style Similarity (CSSim)**, to quantify the disparity in code style. This metric evaluates style from three dimensions: variable naming, API invocation, and code structure, based on edit distance. Empirical findings revealed superior explanatory power of CSSim in measuring the style deviation of code compared to existing metrics.
+
+### Experimental Setups
+- The paper evaluated ReCo across various search scenarios and programming languages, demonstrating its effectiveness in boosting retrieval performance. Comparison among evaluation metrics, impact of LLMs, and the number of generated codes were investigated to validate the superiority of CSSim and the effectiveness of ReCo.
+
+### Discussion
+- The paper highlights the potential impact of ReCo on various code-related tasks and proposes future work to develop specific models for code style normalization. The authors intend to train models to improve the efficiency of ReCo in practical applications.
+
+### Critique
+The paper's approach in introducing ReCo and CSSim is innovative and addresses a significant limitation in code search with LLM-augmented methods. However, the experimental results are limited to simulated settings, and the real-world impact of ReCo in production systems needs to be further explored. Additionally, the paper could benefit from a deeper discussion on potential drawbacks or limitations of the ReCo method, as well as considerations for efficiency and scalability in real-time search systems.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-10       |
+| Abstract | [http://arxiv.org/abs/2401.04514v1](http://arxiv.org/abs/2401.04514v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.04514v1](https://browse.arxiv.org/html/2401.04514v1)       |
+| Truncated       | False       |
+| Word Count       | 8696       |

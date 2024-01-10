@@ -1,0 +1,67 @@
+
+---
+title: "MARG: Multi-Agent Review Generation for Scientific Papers"
+id: "2401.04259v1"
+description: "MARG improves AI feedback quality for scientific papers, generating specific and helpful comments using multiple LLM instances."
+author: Mike D'Arcy, Tom Hope, Larry Birnbaum, Doug Downey
+date: "2024-01-08"
+image: "https://browse.arxiv.org/html/2401.04259v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.04259v1/x1.png)
+
+### Major Takeaways
+
+- The paper introduces MARG, a multi-agent approach for generating peer-review feedback for scientific papers.
+- MARG uses multiple large language model (LLM) instances with specialized agents to enhance feedback quality and reduce token constraints.
+- MARG substantially improves the ability of GPT-4, reducing the rate of generic comments and generating more helpful feedback.
+
+### Introduction
+
+The paper discusses the limitations of large language models (LLMs) in comprehending and producing long, highly technical scientific papers. It introduces the task of automatically generating actionable peer-review feedback for scientific papers, which comprises several reasoning challenges.
+
+### Multi-Agent Review Generation
+
+- MARG is proposed as a method using multiple instances of LLMs to generate actionable peer-review feedback.
+- The specialized variant of MARG, MARG-S, involves using aspect-specific "expert" LLM agents to improve feedback on experiments, clarity, and impact.
+- MARG-S substantially outperforms baseline methods in generating specific and helpful feedback, with an improvement of 2.2x in generating good comments per review.
+
+### Related Work
+
+- Prior work on automatic review generation primarily used smaller models or focused on template-filling instead of generating nuanced free-form comments.
+- MARG-S is compared to a recent method proposed by Liang et al., which truncates long papers and struggles with input size limitations.
+
+### Automated Evaluation and Baseline Methods
+
+- MARG-S outperforms baseline methods in recall but generates more comments, leading to lower precision and Jaccard scores.
+- LiZCa, a baseline method, shows high recall in the most lenient setting but rapidly drops for stricter settings.
+- MARG-S exhibits high efficiency in recall improvement but takes significantly longer to generate reviews compared to other methods.
+
+### User Study
+
+- MARG-S generates more good comments, has the highest proportion of fully accurate comments, and is significantly more specific compared to other methods.
+- Participants perceive MARG-S reviews as slightly longer than desired, but they find MARG-S comments to be highly specific, accurate, and helpful.
+
+### Relationships between Factors
+
+- High specificity of comments in MARG-S is not associated with extreme positive or negative user ratings, contradicting the expectation of pushing ratings to extremes.
+- High specificity weakly corresponds to higher accuracy, and accuracy significantly predicts overall rating.
+
+### Critique
+
+The user study was conducted with a small number of participants, and the findings may not be generalizable. Additionally, the paper could provide more discussion on the potential biases or limitations of the study.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-10       |
+| Abstract | [http://arxiv.org/abs/2401.04259v1](http://arxiv.org/abs/2401.04259v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.04259v1](https://browse.arxiv.org/html/2401.04259v1)       |
+| Truncated       | True       |
+| Word Count       | 41968       |

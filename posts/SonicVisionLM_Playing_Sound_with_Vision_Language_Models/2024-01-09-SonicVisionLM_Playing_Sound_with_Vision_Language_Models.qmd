@@ -1,0 +1,59 @@
+
+---
+title: "SonicVisionLM: Playing Sound with Vision Language Models"
+id: "2401.04394v1"
+description: "SonicVisionLM generates sound effects for silent videos using vision language models, improving audio-visual alignment."
+author: Zhifeng Xie, Shengye Yu, Mengtian Li, Qile He, Chaofeng Chen, Yu-Gang Jiang
+date: "2024-01-09"
+image: "https://browse.arxiv.org/html/2401.04394v1/extracted/5335104/image/timestamps.png"
+categories: ['architectures', 'recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.04394v1/extracted/5335104/image/timestamps.png)
+
+### Key Findings
+
+1. **SonicVisionLM Framework**: The paper proposes a novel framework, SonicVisionLM, which leverages vision language models to generate a wide range of sound effects for silent videos. This approach identifies events in the video using a vision language model to suggest sounds that match the content, transforming the task of aligning image and audio into more manageable sub-problems.
+
+2. **Components of SonicVisionLM**: The framework consists of three key components - video-to-text, text-based interaction, and text-to-audio generation. The video-to-text component focuses on generating sound effects for on-screen events, the text-based interaction component allows users to make changes to the text and timestamps, and the text-to-audio generation component accepts text and timestamp conditions to generate diverse, time-synchronized, and controllable sounds.
+
+3. **Performance and Results**: SonicVisionLM demonstrates state-of-the-art results in both conditional and unconditional video-sound generation tasks. It achieves enhanced synchronization with visuals, improved alignment between audio and video components, and surpasses existing methods in various metrics such as IoU, Onset Acc, and Time Acc.
+
+### Method Summary
+
+- **Preliminaries**: The paper introduces the audio diffusion model, latent diffusion model (LDM), and the process of generating audio from text embeddings using the LDM and vocoder.
+
+- **Visual-to-Audio Event Understanding Module**: This module utilizes a vision language model to generate descriptions of sounds based on the visual content in videos.
+
+- **Sound Event Timestamp Detection Module**: Here, a sound event timestamp detection module is used to detect the timing of sound events in the video, and the process and network structure are detailed.
+
+- **Time-controllable Latent Diffusion Model**: This section describes the proposed time-controllable adapter and the process of incorporating time-controllable embeddings for guiding the generation of diverse sounds.
+
+### Evaluation and Results
+
+- **Conditional and Unconditional Generation Task Results**: SonicVisionLM demonstrates superior performance in both conditional and unconditional video-sound generation tasks compared to existing methods. The framework achieves higher accuracy, diversity, and synchronization in generating sounds for videos.
+
+- **Ablation Study**: The ablation study validates the effectiveness of the time-controllable adapter in enhancing sound quality, diversity, and synchronization.
+
+- **Multi-soundtracks Generation**: The paper includes an example demonstrating SonicVisionLM's ability to generate multiple soundtracks for a video, including both on-screen and off-screen sounds.
+
+### Critique
+
+- The paper lacks a direct comparison with a broader range of existing methods, limiting the comprehensive assessment of SonicVisionLM's performance against various approaches in the field.
+- While the paper showcases promising results, it is essential to address potential limitations, such as the complexity of the visual understanding and timestamp detection parts, to provide a more balanced view of the framework's capabilities.
+
+Overall, the paper provides valuable insights into the effective generation of sound for silent videos using vision language models, offering a comprehensive framework and showcasing significant advancements in video-sound generation tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-10       |
+| Abstract | [http://arxiv.org/abs/2401.04394v1](http://arxiv.org/abs/2401.04394v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.04394v1](https://browse.arxiv.org/html/2401.04394v1)       |
+| Truncated       | False       |
+| Word Count       | 7641       |

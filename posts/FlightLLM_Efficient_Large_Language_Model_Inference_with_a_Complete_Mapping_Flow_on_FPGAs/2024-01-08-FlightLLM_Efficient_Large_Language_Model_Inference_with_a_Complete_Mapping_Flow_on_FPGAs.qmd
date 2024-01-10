@@ -1,0 +1,72 @@
+
+---
+title: "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs"
+id: "2401.03868v2"
+description: "FlightLLM enables efficient LLM inference on FPGAs, overcoming challenges with sparse DSP chain, memory bandwidth, and compilation overhead."
+author: Shulin Zeng, Jun Liu, Guohao Dai, Xinhao Yang, Tianyu Fu, Hongyi Wang, Wenheng Ma, Hanbo Sun, Shiyao Li, Zixiao Huang, Yadong Dai, Jintao Li, Zehao Wang, Ruoyu Zhang, Kairui Wen, Xuefei Ning, Yu Wang
+date: "2024-01-08"
+image: "https://browse.arxiv.org/html/2401.03868v2/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.03868v2/x1.png)
+
+# FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs
+
+## Major Takeaways
+1. **Efficiency Enhancement**: FlightLLM addresses the efficiency limitations of Large Language Models (LLMs) by leveraging FPGA-specific resources to achieve higher energy and cost efficiency compared to commercial GPUs.
+2. **Complete Mapping Flow**: The paper proposes a complete mapping flow for LLM inference on FPGAs, highlighting innovations in computation and memory overhead solutions.
+3. **Performance Comparison**: FlightLLM outperforms SOTA accelerators, achieving better latency and throughput compared to GPUs and other FPGA-based accelerators.
+
+## Abstract
+The paper introduces FlightLLM, a solution for efficient Large Language Model (LLM) inference on FPGAs. It addresses the challenges of heavy computation and memory overheads by leveraging FPGA-specific resources. FlightLLM achieves higher energy and cost efficiency compared to commercial GPUs and outperforms SOTA accelerators.
+
+## Introduction
+- Recent developments in Large Language Models (LLMs) have highlighted their significant impact across various domains.
+- LLMs are widely used in latency-sensitive scenarios, necessitating efficient computation and memory management.
+- Compression techniques such as sparsification and quantization are employed to mitigate computation and memory overheads, but current hardware platforms struggle to efficiently support these methods.
+
+## Background and Related Work
+- Transformer-based LLMs achieve state-of-the-art performance across Natural Language Processing (NLP) tasks. The transformer model architecture consists of cascaded transformer blocks with Multi-Head Attention (MHA) and Feed Forward Network (FFN) networks.
+- Efficient transformer models leverage compression techniques such as sparsification and quantization to reduce computation and memory overheads. Previous works have focused on specialized architectures to accelerate sparse attention and optimize linear layers with mixed-precision quantization.
+
+## Computing Architecture
+- FlightLLM's overall architecture includes a task scheduler, memory controller, and multiple computing cores equipped with a unified Matrix Processing Engine (MPE), Memory Management Unit (MMU), Special Function Unit (SFU), and Instruction Scheduler.
+- The configurable sparse DSP chain and always-on-chip decode scheme enhance computation efficiency and memory bandwidth, while supporting different sparsity patterns. FlightLLM also supports mixed-precision quantization and length adaptive compilation to reduce instruction storage overhead.
+
+## Always-on-chip Decode
+- The on-chip decode scheme in FlightLLM enables efficient memory bandwidth utilization by keeping activations in on-chip memory during the decode stage, reducing frequent access to off-chip memory.
+- Mixed-precision support using a dedicated dequantization unit helps optimize compactly stored mixed-precision data and reduce memory access overhead.
+
+## Length Adaptive Compilation
+- FlightLLM proposes a length adaptive compilation approach to reduce the instruction storage overhead by allowing different lengths of prefill or decode to share the same instructions within threshold ranges, optimizing memory utilization.
+
+## Analytical Model for RTL Generation
+- FlightLLM uses an analytical model to optimize hardware resource utilization and dynamically adjust the computing parallelism and buffer size to generate corresponding RTL code for implementation on different FPGA platforms.
+
+## Evaluation
+- FlightLLM is evaluated on state-of-the-art LLMs such as OPT-6.7B and LLaMA2-7B, achieving better latency, throughput, energy efficiency, and cost efficiency compared to both commercial GPUs and SOTA accelerators.
+- The latency breakdown analysis and multi-batch performance comparisons highlight FlightLLM's efficient hardware performance.
+
+## Conclusion
+The paper introduces FlightLLM as a promising approach for efficient LLM inference on FPGAs, enabling higher energy and cost efficiency compared to commercial GPUs and SOTA accelerators. FlightLLM demonstrates optimizations in computation efficiency, memory bandwidth utilization, and latency reductions, making it a competitive solution for LLM inference.
+
+## Critique
+- The paper does not provide a detailed discussion of potential limitations or trade-offs with FlightLLM's approach, which could help provide a more comprehensive understanding of its applicability and potential constraints.
+- While the evaluation results are promising, it would be useful to compare FlightLLM's performance against a wider range of FPGA-based LLM accelerators to provide a more comprehensive picture of its comparative advantages.
+
+Overall, the paper effectively presents FlightLLM as a compelling solution for efficient LLM inference, highlighting innovations in FPGA-based acceleration and performance optimizations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-10       |
+| Abstract | [http://arxiv.org/abs/2401.03868v2](http://arxiv.org/abs/2401.03868v2)        |
+| HTML     | [https://browse.arxiv.org/html/2401.03868v2](https://browse.arxiv.org/html/2401.03868v2)       |
+| Truncated       | False       |
+| Word Count       | 12121       |

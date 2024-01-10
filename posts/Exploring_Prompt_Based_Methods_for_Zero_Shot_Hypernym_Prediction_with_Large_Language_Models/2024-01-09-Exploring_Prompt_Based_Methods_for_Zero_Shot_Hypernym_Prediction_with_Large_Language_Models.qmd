@@ -1,0 +1,79 @@
+
+---
+title: "Exploring Prompt-Based Methods for Zero-Shot Hypernym Prediction with Large Language Models"
+id: "2401.04515v1"
+description: "Zero-shot hypernymy prediction using large language models through prompt selection, additional information, and iterative approach."
+author: Mikhail Tikhomirov, Natalia Loukachevitch
+date: "2024-01-09"
+image: "https://browse.arxiv.org/html/2401.04515v1/extracted/5337813/scheme1.png"
+categories: ['prompt-engineering', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.04515v1/extracted/5337813/scheme1.png)
+
+### Main Takeaways
+1. The study explores a **zero-shot approach to hypernymy prediction** using large language models (LLMs), demonstrating a strong correlation between the effectiveness of language model prompts and classic patterns.
+2. The article investigates prompts for predicting **co-hyponyms** and improving hypernymy predictions by augmenting prompts with additional information through automatically identified co-hyponyms, leading to significant improvements in prediction quality.
+3. The research also develops an **iterative approach for predicting higher-level concepts**, further improving the quality of hypernym chain prediction on the BLESS dataset.
+
+### Introduction
+- Taxonomies play a crucial role in knowledge organization, and extracting taxonomic relationships from text data has been a focus of extensive research.
+- **Hypernym acquisition** techniques include linear patterns, unsupervised and supervised vector-based techniques, and large language models based on neural transformer architectures, allowing for the study of novel methods for hypernym prediction.
+- The article investigates the research questions related to the consistency of language models on a set of prompts, the benefits of co-hyponym prompts for hypernym prediction, and the possibility of improving hypernym chain prediction using prompts.
+
+### Related Works
+#### Pattern-based approaches
+- **Pattern-based approach** involves exploiting certain lexico-syntactic patterns to detect hypernym relations in text, with efforts to increase recall and precision of extracted relationships.
+- Strategies to improve recall of patterns include using extended sets of patterns and applying Singular Value Decomposition to reduce the dimensionality of the matrix describing ppmi weights for words met in the patterns.
+- **Co-hyponym patterns** are also used as an additional source of information for hypernym detection.
+
+#### Unsupervised vector-based approaches
+- This approach is based on the methods of distributional semantics and focuses on the distributional inclusion hypothesis, distributional exclusivity hypothesis, and distributional informativeness hypothesis.
+
+#### Zero-shot prompts for large language models
+- Large language models like BERT and GPT are utilized for predicting hypernyms based on classical lexico-syntactic patterns, with studies highlighting the importance of unambiguous prompts encoding hypernymy and the competitive nature of the most frequent prompts in pretraining corpora.
+
+### Approach
+- The study focuses on an approach to exploiting prompts and maps a pair of terms and a prompt type to a single sentence, estimating the probabilities of hypernyms using language models.
+- The primary idea is to experiment with prompts combinations, including **combinations of hypernym prompts, combinations of hypernym and co-hyponym prompts, and iterative application of hypernym prompts**.
+
+### Datasets and Models
+- The study experiments with datasets from the hypernymysuite benchmark and evaluates prompts and models in two different task settings of hypernym prediction.
+
+### Single prompts experiments
+#### Hypernym prompts
+- The investigation of 76 prompts for hypernymy prediction highlighted that the performance varies significantly across different prompts and large language models, with **selective variant of the hypernym probability estimation being superior to the full variant**.
+
+#### Co-hyponym prompts
+- The study considered four types of co-hyponym prompts based on enumeration patterns, and the evaluation results on 11 prompts demonstrated that the prompt "such as hypo, cohypo, and others of the same type" showed the best quality for both the full and selective approaches.
+
+### Combinations
+#### Combinations of hypernyms prompts
+- The study investigated if combining different hypernym prompts could enhance hypernym prediction, but estaurs that this approach did not improve the ranking quality for most models.
+
+#### Co-hyponym-augmented prompts
+- The concept of combining co-hyponyms with hypernyms prompts was analyzed, highlighting different variations with some significantly improving the quality of hypernymy predictions.
+
+#### Iterative approach to ranking a list of hypernyms
+- An iterative approach was developed for hypernym predictions, demonstrating overall improvements in quality on the BLESS dataset.
+
+### Conclusion
+- The study recommends using the probability estimate of the entire sequence and answers the three research questions posed.
+- The best quality on the BLESS dataset (MAP 0.8 from 0.7 with straightforward approach) was achieved by using the full method, co-hyponym-augmented prompt "hypo, cohypo are an hyper that," and the iterative approach.
+
+### Critique
+The article provides comprehensive insights into the zero-shot hypernym prediction approach using large language models. However, the evaluation method for these datasets is noted to be not entirely correct, and there are recommendations to improve the evaluation process. Additionally, the study could benefit from further discussion on the potential limitations and challenges associated with the proposed methods.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-10       |
+| Abstract | [http://arxiv.org/abs/2401.04515v1](http://arxiv.org/abs/2401.04515v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.04515v1](https://browse.arxiv.org/html/2401.04515v1)       |
+| Truncated       | False       |
+| Word Count       | 7734       |

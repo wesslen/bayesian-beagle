@@ -97,7 +97,7 @@ def get_url_content(url: str):
             return response.content.decode("utf-8")
         else:
             logger.error(
-                f"Bad response from {url}, status code: {response.status_code}"
+                f"Bad response from {url} status code: {response.status_code}"
             )
             return None
     except requests.RequestException as e:

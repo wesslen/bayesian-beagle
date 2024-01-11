@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Shimin Li, Tianxiang Sun, Xipeng Qiu">
+<meta name="dcterms.date" content="2024-01-09">
+<meta name="description" content="EvolutionaryAgent aligns language model agents with evolving social norms through an evolutionary framework, demonstrating progressive improvement.">
+
+<title>Bayesian beagle - Agent Alignment in Evolving Social Norms</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bayesian beagle - Agent Alignment in Evolving Social Norms">
+<meta property="og:description" content="EvolutionaryAgent aligns language model agents with evolving social norms through an evolutionary framework, demonstrating progressive improvement.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2401.04620v2/x1.png">
+<meta property="og:site-name" content="Bayesian beagle">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../icon.jpg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bayesian beagle</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">Bayesian beagle</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/wesslen/bayesian-beagle" rel="" target=""><i class="bi bi-github" role="img" aria-label="github">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Agent Alignment in Evolving Social Norms</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">social-sciences</div>
+    <div class="quarto-category">hci</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    EvolutionaryAgent aligns language model agents with evolving social norms through an evolutionary framework, demonstrating progressive improvement.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Shimin Li, Tianxiang Sun, Xipeng Qiu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 9, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="https://browse.arxiv.org/html/2401.04620v2/x1.png" class="img-fluid"></p>
+<section id="agent-alignment-in-evolving-social-norms" class="level1">
+<h1>Agent Alignment in Evolving Social Norms</h1>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li><strong>EvolutionaryAgent</strong>: Proposes a framework for agent evolution and alignment, emphasizing aligning AI systems with <strong>evolving social norms</strong> through the principle of <strong>survival of the fittest</strong>. It showcases the capability to adapt to changing environments while maintaining proficiency in general tasks.</li>
+<li><strong>Agent Alignment</strong>: Contrasts the prevalent focus on aligning language models (LLMs) with static human values and instead suggests a method for continuous <strong>alignment with dynamic societal values</strong> for AI agents.</li>
+<li><strong>Experimental Results</strong>: Demonstrates the effectiveness of EvolutionaryAgent across various dimensions, including <strong>adherence to social norms</strong>, <strong>performance on downstream tasks</strong>, and adaptation to <strong>different LLMs</strong> as foundational models.</li>
+</ul>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<ul>
+<li>Large language models (LLMs) have transformed artificial intelligence, and the emergence of AI agents underscores the need for effective <strong>agent alignment methods</strong>.</li>
+<li>Current alignment methods primarily focus on aligning LLMs with predefined, static human values, but the dynamic nature of social norms requires a more adaptive approach for agents.</li>
+</ul>
+</section>
+<section id="related-work" class="level2">
+<h2 class="anchored" data-anchor-id="related-work">Related Work</h2>
+<section id="llm-alignment" class="level3">
+<h3 class="anchored" data-anchor-id="llm-alignment">LLM Alignment</h3>
+<ul>
+<li>LLM alignment involves bridging the gap between next-word prediction tasks and human-defined values, with different levels of alignment goals such as instruction alignment, human preference alignment, and value alignment.</li>
+<li>The self-evolution of the AI system through continuous interactions with the environment can challenge the alignment of foundational LLMs.</li>
+</ul>
+</section>
+<section id="self-evolution-of-ai-system" class="level3">
+<h3 class="anchored" data-anchor-id="self-evolution-of-ai-system">Self-Evolution of AI System</h3>
+<ul>
+<li>Empowering AI systems for ongoing evolution involves iterative improvement based on external feedback, either through self-feedback or external feedback.</li>
+</ul>
+</section>
+</section>
+<section id="agent-alignment" class="level2">
+<h2 class="anchored" data-anchor-id="agent-alignment">Agent Alignment</h2>
+<ul>
+<li>Unlike LLM alignment, agent alignment requires a greater consideration of environmental factors due to the capability of agents to interact with the environment and modify behavior based on feedback.</li>
+<li>The dynamic nature of social norms calls for new approaches to agent alignment that evolve along with societal values.</li>
+</ul>
+</section>
+<section id="evolutionary-agent-in-evolving-world" class="level2">
+<h2 class="anchored" data-anchor-id="evolutionary-agent-in-evolving-world">Evolutionary Agent in Evolving World</h2>
+<section id="initialization-of-agent-and-evolving-society" class="level3">
+<h3 class="anchored" data-anchor-id="initialization-of-agent-and-evolving-society">Initialization of Agent and Evolving Society</h3>
+<ul>
+<li>Simulates agents’ characteristics and behavioral patterns in a virtual society termed <strong>EvolvingSociety</strong>, where societal norms evolve over time.</li>
+<li>Agents are evaluated based on their behavioral trajectories and adherence to social norms, with fitness values influencing their survival and reproduction.</li>
+</ul>
+</section>
+<section id="environmental-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="environmental-interaction">Environmental Interaction</h3>
+<ul>
+<li>Agents interact with the environment, incorporating feedback into their short-term and long-term memory, which influences their future actions.</li>
+</ul>
+</section>
+<section id="fitness-evaluation-with-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="fitness-evaluation-with-feedback">Fitness Evaluation with Feedback</h3>
+<ul>
+<li>A highly abstract social evaluator assesses each agent’s adaptability to societal norms based on their behavioral trajectories and statements, providing feedback for alignment.</li>
+</ul>
+</section>
+<section id="evolution-of-agent" class="level3">
+<h3 class="anchored" data-anchor-id="evolution-of-agent">Evolution of Agent</h3>
+<ul>
+<li>Agents with higher fitness values are more likely to survive and reproduce, contributing to the evolution of societal norms through their strategies.</li>
+</ul>
+</section>
+<section id="evolving-social-norms" class="level3">
+<h3 class="anchored" data-anchor-id="evolving-social-norms">Evolving Social Norms</h3>
+<ul>
+<li>Social norms are formed and evolve based on agents’ strategies and the desired direction of evolution.</li>
+</ul>
+</section>
+</section>
+<section id="experiments" class="level2">
+<h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
+<ul>
+<li>The EvolutionaryAgent’s performance in aligning with social norms while maintaining its capability in completing downstream tasks is evaluated, demonstrating its adaptive capability.</li>
+<li>Quality of diverse observer LLMs and scaling effects on the EvolutionaryAgent are explored through experiments.</li>
+</ul>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<section id="alignment-without-compromising-capability" class="level3">
+<h3 class="anchored" data-anchor-id="alignment-without-compromising-capability">Alignment without Compromising Capability</h3>
+<ul>
+<li>The EvolutionaryAgent showcases the ability to adapt to social norms while maintaining proficiency in completing specific tasks.</li>
+</ul>
+</section>
+<section id="quality-of-diverse-observer" class="level3">
+<h3 class="anchored" data-anchor-id="quality-of-diverse-observer">Quality of Diverse Observer</h3>
+<ul>
+<li>The choice of observer LLM significantly impacts the fitness scores generated by the EvolutionaryAgent, with variations in evaluation scores.</li>
+</ul>
+</section>
+<section id="scaling-effect" class="level3">
+<h3 class="anchored" data-anchor-id="scaling-effect">Scaling Effect</h3>
+<ul>
+<li>Higher-performing baseline models and larger population sizes positively impact the fitness and adaptability of the EvolutionaryAgent in changing environments.</li>
+</ul>
+</section>
+</section>
+<section id="conclusion-and-future-work" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-and-future-work">Conclusion and Future Work</h2>
+<ul>
+<li>The proposed framework provides a novel approach to constructing socially beneficial AI systems that align with evolving social norms.</li>
+<li>Future work could explore the simulation of more anthropomorphic agents, efficient self-evolution algorithms, and higher-quality feedback signals.</li>
+</ul>
+</section>
+<section id="critique" class="level2">
+<h2 class="anchored" data-anchor-id="critique">Critique</h2>
+<p>The paper successfully introduces a novel framework for agent alignment in evolving social norms, but certain assumptions and considerations, such as the definition of social norms and the simulation of a complete virtual society, could pose challenges. Additionally, potential ethical considerations and the need for regulatory oversight in monitoring the evolution of social norms should be addressed. Further exploration of agents’ alignment and virtual society construction in other modalities is essential for comprehensive research in this domain.</p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-01-11</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="http://arxiv.org/abs/2401.04620v2">http://arxiv.org/abs/2401.04620v2</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2401.04620v2">https://browse.arxiv.org/html/2401.04620v2</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>8989</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wesslen/bayesian-beagle/edit/main/posts/Agent_Alignment_in_Evolving_Social_Norms/2024-01-09-Agent_Alignment_in_Evolving_Social_Norms.qmd" class="toc-action">Edit this page</a></p></div></div></div></div></footer></body></html>

@@ -1,0 +1,64 @@
+
+---
+title: "Attendre: Wait To Attend By Retrieval With Evicted Queries in Memory-Based Transformers for Long Context Processing"
+id: "2401.04881v1"
+description: "Efficiently process long sequence input using FIFO memory, eviction policies, and Attendre layer for LLMs. Tested on TriviaQA task."
+author: Zi Yang, Nan Hua
+date: "2024-01-10"
+image: "https://browse.arxiv.org/html/2401.04881v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.04881v1/x1.png)
+
+## Major Takeaways
+
+- The paper introduces the Attendre layer, a wait-to-attend mechanism by retrieving the key-value memory with evicted queries in the query memory to support bidirectional attention in memory-based transformers for long context processing.
+- The proposed method using eviction policies, such as LRA and LFA, significantly reduces memory size and adapts to various architectures while also supporting bidirectional attention.
+- The experiments show that the proposed method outperforms baseline methods in the context length extension setup using the TriviaQA reading comprehension task.
+
+## Introduction
+
+The paper discusses the limitations faced by transformer-based language models (LLMs) when processing arbitrary long input sequences and introduces the Attendre layer to address these issues. It also mentions previous approaches, such as using recurrent states or continuous memory, but highlights the need for more efficient and adaptable methods for long context processing.
+
+## Memory & Eviction Policies
+
+- The paper introduces two common use cases for memory modules: memorizing a single or group of data and providing searchable keys to accompany values at insertion time for retrieval at a future step.
+- It discusses different eviction policies, such as FIFO, LRU, and LFU, to manage the memory at insertion time, and proposes the use of LRA and LFA policies to reduce memory size.
+- The complexities of different memory modules and eviction policies are analyzed, with a focus on minimizing memory size.
+
+## Attendre Layer
+
+- The Attendre layer is introduced, comprising two memory modules: a data-only Q memory to delay queries and a key-value memory for K/Vs.
+- The process of inserting, evicting, and retrieving K/Vs and queries in the Attendre layer is explained, highlighting how it enables bidirectional attention over "future" K/Vs from the query's perspective.
+
+## Related Work
+
+- The paper provides a comprehensive review of related work in long context modeling, memory entry types, memory update methods, and other uses of memory in language models.
+- Various methods and techniques used in memory-based transformers for long context processing are compared and contrasted to highlight their strengths and limitations.
+
+## Experiment: Context Length Extension on TriviaQA
+
+- The paper presents experimental results on the TriviaQA reading comprehension task using two pretrained language models and demonstrates the effectiveness of the proposed memory-based transformers with eviction policies and the Attendre layer in improving performance.
+
+## Conclusion
+
+- The paper concludes with a summary of the proposed methods and their performance, highlighting the potential for further research and improvements in the area of long context processing with memory-based transformers.
+
+## Critique
+
+- The paper provides a comprehensive overview of the proposed methods and their experimental validation. However, it could benefit from a more detailed analysis of potential limitations or drawbacks of the proposed approach, as well as a discussion of future research directions and potential challenges in real-world applications. Additionally, the technical complexity of the paper may pose a barrier to understanding for readers with limited background in transformer-based language models and memory-based architectures.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-11       |
+| Abstract | [http://arxiv.org/abs/2401.04881v1](http://arxiv.org/abs/2401.04881v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.04881v1](https://browse.arxiv.org/html/2401.04881v1)       |
+| Truncated       | False       |
+| Word Count       | 10868       |

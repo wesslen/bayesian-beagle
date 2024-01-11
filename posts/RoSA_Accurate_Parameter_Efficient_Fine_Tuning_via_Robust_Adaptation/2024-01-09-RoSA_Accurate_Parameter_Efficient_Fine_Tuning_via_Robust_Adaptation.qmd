@@ -1,0 +1,44 @@
+
+---
+title: "RoSA: Accurate Parameter-Efficient Fine-Tuning via Robust Adaptation"
+id: "2401.04679v2"
+description: "New Robust Adaptation (RoSA) method efficiently fine-tunes large language models, outperforming existing methods at same parameter budget."
+author: Mahdi Nikdan, Soroush Tabesh, Dan Alistarh
+date: "2024-01-09"
+image: "https://browse.arxiv.org/html/2401.04679v2/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.04679v2/x1.png)
+
+# RoSA: Accurate Parameter-Efficient Fine-Tuning via Robust Adaptation
+
+## Summary:
+RoSA introduces a new method called Robust Adaptation for parameter-efficient fine-tuning (PEFT) in large language models (LLMs). The method jointly trains low-rank and sparse adapters alongside a set of fixed pretrained weights to efficiently approximate the performance of full-fine-tuning (FFT) solutions. Robust Adaptation outperforms both Low-Rank Adaptation (LoRA) and pure sparse fine-tuning in challenging generative tasks while offering system support for efficient training. The paper provides an in-depth analysis, related work, and experimental results demonstrating the efficiency and effectiveness of the RoSA method.
+
+## Key Findings:
+1. RoSA outperforms both LoRA and pure sparse fine-tuning at similar parameter budgets across challenging tasks, including grade-school math and SQL query generation.
+2. The method offers stable convergence and relatively simple hyper-parameter tuning while matching the accuracy of FFT in practical experiments.
+3. The paper presents evidence that the accuracy gap between adaptation methods and full fine-tuning of LLMs can be significantly reduced or even eliminated without sacrificing practical accessibility.
+
+## Related Work:
+- The paper discusses recent approaches to parameter-efficient fine-tuning (PEFT) methods and their application in large language models (LLMs).
+- It highlights the challenges posed by the computational and memory costs of training LLMs and the emergence of methods like LoRA and pure sparse fine-tuning to address these challenges.
+- The authors also delve into the principles of Robust Principal Component Analysis (RPCA) and the need for improved system support for sparsity in training algorithms.
+
+## Critique:
+The paper provides valuable insights into the development of RoSA and its promising performance in PEFT for LLMs. However, it would benefit from a more detailed comparison with existing state-of-the-art methods in PEFT and a deeper exploration of the limitations and potential failure cases of the RoSA method. Additionally, the paper could discuss the generalizability of the proposed approach across different types of LLMs and tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-11       |
+| Abstract | [http://arxiv.org/abs/2401.04679v2](http://arxiv.org/abs/2401.04679v2)        |
+| HTML     | [https://browse.arxiv.org/html/2401.04679v2](https://browse.arxiv.org/html/2401.04679v2)       |
+| Truncated       | False       |
+| Word Count       | 9106       |

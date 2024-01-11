@@ -1,0 +1,49 @@
+
+---
+title: "MISS: A Generative Pretraining and Finetuning Approach for Med-VQA"
+id: "2401.05163v1"
+description: "Medical VQA is complex, lacking data. Proposal for MISS for generative VQA, using Transfer-and-Caption method, shows promising results."
+author: Jiawei Chen, Dingkang Yang, Yue Jiang, Yuxuan Lei, Lihua Zhang
+date: "2024-01-10"
+image: "https://browse.arxiv.org/html/2401.05163v1/extracted/5339622/image/model_arc_5.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.05163v1/extracted/5339622/image/model_arc_5.png)
+
+### Major Takeaways
+
+1. **MISS** is proposed as a pretraining and finetuning framework for medical Visual Question Answering (Med-VQA). It treats Med-VQA as a generative task, unlike previous methods that treat it as an answer classification task, leading to improved performance in practical application scenarios.
+
+2. The framework includes a **Joint Text-Multimodal encoder** and a method called **Transfer and Caption (TransCap)** that extends the feature space of single-modal image datasets using large language models (LLMs).
+
+3. Experiments show that the method achieves excellent results with fewer multimodal datasets, indicating the advantages of generative VQA models.
+
+### Introduction
+Medical Visual Question Answering (Med-VQA) is a challenging task that requires deeper and more accurate understanding of medical images compared to VQA of natural images. Due to privacy concerns and expensive annotation processes, large-scale datasets for training are scarce, making Med-VQA a highly challenging task.
+
+### Related Work
+Early works used RNNs and CNNs to extract textual and visual features for Med-VQA tasks. The emergence of transformers has enabled the migration of large-scale pretraining from the textual domain to the multimodal domain. Previous works have treated VQA as a classification or rank task, limiting their effectiveness in practical application scenarios. The paper proposes a new pretraining and fine-tuning paradigm, treating VQA as a generative task.
+
+### Method
+The proposed framework includes a Joint Text-Multimodal encoder and a method called Transfer and Caption (TransCap) for constructing multimodal medical data based on unimodal image datasets. The framework adopts the pretraining and finetuning paradigm, utilizing tasks like Image-Text Contrastive Learning (ITC), Image-Text Matching (ITM), and Mask Language Modeling (MLM) for multi-modal pretraining. The paper details the model architecture, pretraining process, TransCap method, and VQA finetuning.
+
+### Experiment
+The paper compares the proposed framework with existing approaches on VQA-RAD and Slake datasets, demonstrating improved performance in both open-ended and closed-ended questions. Ablation studies show the impact of different components of the framework, indicating the effectiveness of the Joint Text-Multimodal encoder and the positive effect of TransCap on VQA performance.
+
+### Critique
+The proposed framework demonstrates promising results, especially in terms of treating Med-VQA as a generative task and the novel TransCap method for constructing multimodal medical data. However, the paper lacks a discussion on potential limitations or challenges in implementing the proposed framework in real-world scenarios. The generalization of the framework to diverse medical imaging modalities or its scalability with larger datasets could also be areas for further exploration.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-11       |
+| Abstract | [http://arxiv.org/abs/2401.05163v1](http://arxiv.org/abs/2401.05163v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.05163v1](https://browse.arxiv.org/html/2401.05163v1)       |
+| Truncated       | False       |
+| Word Count       | 7911       |

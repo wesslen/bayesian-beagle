@@ -1,0 +1,53 @@
+
+---
+title: "CASA: Causality-driven Argument Sufficiency Assessment"
+id: "2401.05249v1"
+description: "Existing methods for argument sufficiency assessment rely on human-annotated data, but CASA proposes a causality-driven framework using large language models to identify insufficient arguments."
+author: Xiao Liu, Yansong Feng, Kai-Wei Chang
+date: "2024-01-10"
+image: "https://browse.arxiv.org/html/2401.05249v1/x3.png"
+categories: ['social-sciences', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.05249v1/x3.png)
+
+## Summary of "Casa: Causality-driven Argument Sufficiency Assessment"
+
+### Major Findings
+1. **Argument Sufficiency Assessment Challenge**: The paper addresses the challenge of determining whether the premises of a given argument adequately support its conclusion. Existing works relying on human annotations for training classifiers face inconsistencies due to vague and subjective criteria among annotators. This inconsistency poses a challenge in learning accurate models.
+  
+2. **Casa Framework**: The authors propose Casa, a zero-shot Causality-driven Argument Sufficiency Assessment framework, leveraging the probability of sufficiency (PS) from the causal literature. The framework utilizes large language models (LLMs) to sample contexts inconsistent with the premises and conclusion and revises them by injecting the premise event, estimating the probability of the conclusion.
+
+3. **Experimental Results**: Casa accurately identifies insufficient arguments in logical fallacy detection datasets, exhibiting an average of 10% improvement over baseline methods. Furthermore, the framework demonstrates practical application in writing assistance, enhancing the sufficiency of student-written arguments.
+
+### Framework Details
+- **Introduction**: Argumentation and the importance of assessing argument sufficiency.
+- **Casa Framework**: Explanation of the Casa framework, including notations, assumptions, and the overall architecture.
+- **Claim Extraction**: The process of segmenting an argument into multiple premises and one conclusion.
+- **Context Sampling**: How large language models generate contexts consistent with the premises and conclusion.
+- **Revision under Intervention**: Process for revising contexts to include the premise event.
+- **Probability Estimation**: Transforming probability estimation into a natural language inference (NLI) form.
+- **Experiments**: Evaluation on logical fallacy detection datasets, including details on experimental setup and results.
+- **Analysis**: Ablation study, hyperparameter study, and case studies demonstrating the reasoning process of Casa.
+- **Application: Writing Assistance**: Application of Casa in providing writing suggestions for essays, including annotation templates and the results of a human evaluation.
+
+### Critique
+The framework proposed in this paper shows promise in addressing the challenge of argument sufficiency assessment. However, there are some potential limitations and challenges that should be considered:
+- **Model Design Choices**: The authors highlight some challenges and choices made in the design of their model, suggesting a need for more powerful diverse decoding and counterfactual reasoning methods to improve the framework.
+- **Data Scope**: The evaluation of model performances on argument sufficiency assessment is limited by the subjective annotation criteria, emphasizing the need for more diverse and objective datasets.
+
+Overall, while Casa demonstrates promising results, the authors acknowledge the need for improved model design and more comprehensive evaluation datasets to further validate its effectiveness.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-11       |
+| Abstract | [http://arxiv.org/abs/2401.05249v1](http://arxiv.org/abs/2401.05249v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.05249v1](https://browse.arxiv.org/html/2401.05249v1)       |
+| Truncated       | False       |
+| Word Count       | 8565       |

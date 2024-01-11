@@ -1,0 +1,58 @@
+
+---
+title: "The Impact of Reasoning Step Length on Large Language Models"
+id: "2401.04925v1"
+description: "Expanding reasoning steps in prompts improves large language models' abilities, especially for complex tasks. Shortening steps diminishes performance."
+author: Mingyu Jin, Qinkai Yu, Dong shu, Haiyan Zhao, Wenyue Hua, Yanda Meng, Yongfeng Zhang, Mengnan Du
+date: "2024-01-10"
+image: "https://browse.arxiv.org/html/2401.04925v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.04925v1/x1.png)
+
+### Major Findings
+
+1. **Lengthening reasoning steps enhances LLMs' abilities**: Increasing the length of reasoning steps in prompts significantly enhances LLMs' reasoning abilities across multiple datasets, even without adding new information into the prompt.
+   
+2. **Incorrect rationales can yield favorable outcomes**: Surprisingly, incorrect rationales can yield favorable outcomes if they maintain the requisite length of inference, especially in tasks such as mathematical problems.
+
+3. **Task-dependent advantages of reasoning steps**: The advantages of increasing reasoning steps are task-dependent: simpler tasks require fewer steps, whereas complex tasks gain significantly from longer inference sequences.
+
+### Analyzing Methods
+
+- **Preliminary**: Zero-Shot-CoT and Few-Shot-CoT are explored, with experiments on expanding and compressing rationale reasoning steps within CoT demonstrations.
+
+- **Analyzing Zero-shot CoT**: Modifying the initial prompt to guide LLMs to engage in more extensive thinking significantly enhances performance in zero-shot settings.
+
+- **Analyzing Few-shot CoT**: Strategies for expanding reasoning steps, such as interpreting the word, reading the question again, repeating state, self-verification, and making equation, all showed corresponding patterns in the model's responses.
+
+### Experimental Results
+
+- **Relationship Between Steps and Accuracy**: A linear relationship between reasoning step quantity and accuracy was observed, indicating the direct correlation between step count and accuracy.
+
+- **Effect of Prompt with Wrong Answer**: Changing a step in the prompt to an incorrect answer minimally affected the chain of thought in reasoning processes, indicating that the large language model learns more about the chain of thought patterns in the prompt.
+
+- **Compressing Reasoning Steps**: Compressing reasoning steps in few-shot demonstrations led to a notable decline in LLM performance, highlighting the importance of increasing reasoning steps for CoT performance.
+
+- **Performance on Different Size Models**: The model with the best initial performance exhibited the highest tolerance to strategy, while the worst-performing model showed the highest boosting effect.
+
+- **Influence of Questions in CoT Examples**: Deliberate alterations to sample questions minimally impacted performance, suggesting that the length of the reasoning steps predominantly influences the reasoning capabilities of large-scale models.
+
+### Critique and Future Work
+
+The paper effectively demonstrates the impact of reasoning step length on large language models. However, the experiments are primarily limited to a specific set of models and datasets, and the generalizability of the findings to other models and tasks remains unclear. Additionally, the paper lacks a detailed discussion of potential biases and limitations in the experimental design, which could impact the robustness of the conclusions. Future work should focus on generalizing the findings to a broader set of models and tasks and addressing potential biases in the experimental design.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-11       |
+| Abstract | [http://arxiv.org/abs/2401.04925v1](http://arxiv.org/abs/2401.04925v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.04925v1](https://browse.arxiv.org/html/2401.04925v1)       |
+| Truncated       | False       |
+| Word Count       | 6456       |

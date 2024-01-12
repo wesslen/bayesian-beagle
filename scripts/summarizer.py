@@ -37,7 +37,18 @@ class OpenAIAssistant:
                               summary by using appropriate headings to distinguish between sections. \
                               \n\nFinally, conclude the summary with a critical analysis of the article, \
                               raising any potential problems or shortcomings that you identified while \
-                              reading the text."
+                              reading the text.\n\nExample:\n###\n**Summary of the Article:**\n[Insert \
+                              concise summary of the text in 300 words or fewer here.]\n\n### Major \
+                              Findings:\n1. [Highlight the first major finding of the article in a \
+                              bullet point form.]\n2. [Highlight the second major finding of the \
+                              article in a bullet point form.]\n3. [Highlight the third major finding \
+                              of the article in a bullet point form.]\n\n### Analysis and Critique:\n \
+                              In this section, critically evaluate the article, pointing out any \
+                              limitations, unanswered questions, or potential biases that were apparent \
+                              while reviewing the text. Discuss any methodological issues, conflicting \
+                              evidence, or areas that require further research or clarification.\n\n \
+                              Please ensure that the markdown summary is well-structured, coherent, and \
+                              effectively communicates the essential information from the academic article."
             # user_message = f"Summarize the following text:\n\n{text}"
 
 Example:

@@ -1,0 +1,56 @@
+
+---
+title: "Integrating Physician Diagnostic Logic into Large Language Models: Preference Learning from Process Feedback"
+id: "2401.05695v1"
+description: "Use of PLPF enhances LLMs in medical dialogue by 17.6%, improving accuracy in multi-round and single-round tasks."
+author: Chengfeng Dou, Zhi Jin, Wenpin Jiao, Haiyan Zhao, Yongqiang Zhao, Zhenwei Tao
+date: "2024-01-11"
+image: "https://browse.arxiv.org/html/2401.05695v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.05695v1/x1.png)
+
+### Major Findings
+
+1. **Preference Learning from Process Feedback (PLPF)** improves the diagnostic accuracy of medical conversation models by 17.6%, surpassing traditional reinforcement learning from human feedback.
+2. PLPF demonstrates effectiveness in both multi-round and single-round dialogue tasks, showcasing its potential for improving medical dialogue generation.
+3. PLPF represents a novel approach for optimizing large language models in medical dialogue generation by integrating the doctor's diagnostic logic into the models.
+
+### Introduction
+- Large language models (LLMs) in the domain of medical dialogue generation have garnered significant attention.
+- Constructing high-quality training data is pivotal for effectively training robust medical dialogue models.
+- Previous work has focused on optimizing model performance for single-round medical Q&A tasks, neglecting multi-round conversations and leading to logical inconsistencies within the model.
+
+### Method
+- **Rules Modeling**: Established specific assessment rules for goal-oriented and constraint-oriented rules based on their different functions.
+- **Preference Data Construction**: Utilized ChatGPT and REM to generate candidate replies for conversation history and utilized REM to rank the responses and generate preference data.
+- **Human Preference Alignment**: Fine-tuned the base model with instruction data before employing the Direct Preference Optimization (DPO) algorithm for training the model using the preference data.
+
+### Experiments
+- Utilized Standardized Patient Testing (SP Testing) and demonstrated that PLPF enhances the diagnostic accuracy of the baseline model in medical conversations by 17.6%.
+- Additionally, PLPF showed efficacy in both multi-round and single-round dialogue tasks, improving the model's coverage of physician expression.
+- Compared the performance of PLPF with other baseline models, showcasing its superiority in enhancing patient diagnostic accuracy through standardized patient testing.
+
+### Related Works
+- Previous research has mainly focused on constructing large, high-quality instruction fine-tuning datasets for LLMs, with little emphasis on preference learning stages.
+- Preference alignment is a prominent area in large model training research, with various methods proposed to enhance learning stability and reduce annotation costs.
+
+### Critique
+- The paper does not thoroughly discuss potential limitations or drawbacks of the PLPF approach, nor does it address possible ethical considerations when integrating the doctor's diagnostic logic into the LLMs. 
+
+Overall, the paper introduces a novel approach, PLPF, for optimizing LLMs in medical dialogue generation and presents significant improvements in diagnostic accuracy. However, a deeper exploration of potential limitations and ethical considerations would enhance the comprehensiveness of the paper.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-12       |
+| Abstract | [http://arxiv.org/abs/2401.05695v1](http://arxiv.org/abs/2401.05695v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.05695v1](https://browse.arxiv.org/html/2401.05695v1)       |
+| Truncated       | False       |
+| Word Count       | 11139       |

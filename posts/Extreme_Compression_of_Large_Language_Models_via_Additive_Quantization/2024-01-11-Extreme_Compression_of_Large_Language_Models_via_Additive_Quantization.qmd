@@ -1,0 +1,61 @@
+
+---
+title: "Extreme Compression of Large Language Models via Additive Quantization"
+id: "2401.06118v1"
+description: "New algorithm improves large language model compression, achieving better accuracy at low bit counts."
+author: Vage Egiazarian, Andrei Panferov, Denis Kuznedelev, Elias Frantar, Artem Babenko, Dan Alistarh
+date: "2024-01-11"
+image: "https://browse.arxiv.org/html/2401.06118v1/x1.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.06118v1/x1.png)
+
+### Major Takeaways
+
+1. **High-Compression Achieved**: The paper introduces the AQLM algorithm, which adapts the Additive Quantization (AQ) technique to achieve "extreme" compression of large language models (LLMs), outperforming all recently-proposed techniques in terms of accuracy at a given compression budget.
+
+2. **Superior Performance**: AQLM outperforms previous state-of-the-art algorithms across the 2-4 bit compression range, with most significant improvements observed for extreme 2-bit quantization.
+
+3. **Empirical Evaluation**: The paper provides a comprehensive empirical evaluation of the AQLM algorithm on the Llama 2 model family, showcasing superior results in terms of perplexity and zero-shot accuracy compared to other state-of-the-art post-training quantization (PTQ) algorithms.
+
+### Abstract
+
+The paper introduces the AQLM algorithm, which adapts the Additive Quantization (AQ) technique to achieve "extreme" compression of large language models (LLMs), outperforming all recently-proposed techniques in terms of accuracy at a given compression budget. The study evaluates AQLM on the Llama 2 model family and demonstrates superior results in terms of perplexity and zero-shot accuracy compared to other state-of-the-art post-training quantization (PTQ) algorithms.
+
+### Introduction
+
+- The rapid advancement of **generative large language models** (LLMs) has led to massive industrial and popular interest.
+- There is a strong interest in achieving methods for **inference and fine-tuning on compressed LLMs** that has led to the development of quantization techniques.
+- The **general approach to LLM weight compression** is described as "direct" quantization, which induces a compression-vs-accuracy trade-off.
+- The paper aims to improve the state-of-the-art in the high-compression range by extending **Multi-Codebook Quantization (MCQ)** to LLMs.
+
+### AQLM: Additive Quantization for LLMs
+
+- The paper introduces the AQLM algorithm, which adapts the **Additive Quantization (AQ)** technique to achieve "extreme" compression of large language models (LLMs).
+- AQLM is adapted to the layer-wise quantization problem by making it instance-aware, taking the layer input distributions into account into the codebook optimization.
+- The algorithm combines this approach with a block fine-tuning approach, allowing further reduction of quantization error across layers.
+
+### Experiments
+
+- The study evaluates the AQLM algorithm in typical scenarios for post-training quantization of modern LLMs, focusing on the Llama 2 model family.
+- A comprehensive empirical evaluation showcases superior results in terms of perplexity and zero-shot accuracy compared to other state-of-the-art post-training quantization (PTQ) algorithms.
+- Ablation analysis validates various components of the AQLM algorithm, emphasizing the impact of initialization, fine-tuning, and the number of calibration samples on overall performance.
+
+### Critique
+
+The paper showcases a significant contribution by introducing the AQLM algorithm and providing a comprehensive evaluation of its performance. However, the computational complexity and sensitivity to parameters may be potential limitations that require further analysis in future work. Additionally, highlighting practical use cases or real-world applications of AQLM would enhance the impact of the research.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-12       |
+| Abstract | [http://arxiv.org/abs/2401.06118v1](http://arxiv.org/abs/2401.06118v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.06118v1](https://browse.arxiv.org/html/2401.06118v1)       |
+| Truncated       | False       |
+| Word Count       | 8909       |

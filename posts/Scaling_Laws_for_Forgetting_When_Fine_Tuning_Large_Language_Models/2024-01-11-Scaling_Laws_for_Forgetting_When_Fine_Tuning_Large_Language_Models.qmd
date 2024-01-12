@@ -1,0 +1,65 @@
+
+---
+title: "Scaling Laws for Forgetting When Fine-Tuning Large Language Models"
+id: "2401.05605v1"
+description: "Fine-tuning large language models suffers from catastrophic forgetting, even with parameter-efficient strategies like LoRA. Forgetting cannot be avoided easily."
+author: Damjan Kalajdzievski
+date: "2024-01-11"
+image: "https://browse.arxiv.org/html/2401.05605v1/x1.png"
+categories: ['robustness', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.05605v1/x1.png)
+
+# Summary
+
+## Major Takeaways
+- The study quantifies the problem of forgetting when fine-tuning pre-trained large language models (LLMs) on a downstream task.
+- Parameter-efficient fine-tuning (PEFT) strategies, such as Low-Rank Adapters (LoRA), still suffer from catastrophic forgetting, with a strong inverse linear relationship between fine-tuning performance and the amount of forgetting.
+- Forgetting increases as a shifted power law in the number of parameters fine-tuned and the number of update steps.
+
+## Introduction to Language Models and Fine-Tuning
+- Large language models (LLMs) are trained on a large volume of language data and are fine-tuned on a specific task using a smaller dataset.
+- Pre-training larger LLMs on more data consistently leads to better performance, following a scaling law.
+- Parameter-efficient fine-tuning (PEFT) strategies like LoRA aim to fine-tune only a subset of parameters.
+
+## Catastrophic Forgetting
+- Catastrophic forgetting is a key challenge in deep learning, where a neural network forgets a previously learned task when trained on a new one.
+- Approaches to mitigate forgetting include regularization, ensembling, parameter isolation, and experience replay.
+
+## Scaling Laws for Training LLMs
+- Previous works have shown scaling laws for pre-training performance of LLMs, with the pre-training test loss following a power law in the number of non-embedding parameters and the number of tokens seen in training.
+- Scaling laws for fine-tuning would require additional consideration compared to full training on a fixed dataset.
+
+## LoRA Method
+- The LoRA fine-tuning technique fixes all existing pre-trained model weights while adding a tune-able “adapter” module to any subset of these weights.
+
+## Metric for Forgetting
+- The study introduces a metric for precisely quantifying forgetting by using the cross-entropy loss between the fine-tuned model and the base model’s predictions.
+
+## Laws for Forgetting
+- Forgetting is strongly predicted by an inverse linear relationship with fine-tuning loss, a power law relationship with the number of parameters fine-tuned and update steps.
+
+## Observation of Forgetting Effects in Generation
+- Model generations during fine-tuning reveal substantial forgetting, especially with reasoning and safety guardrail behaviors, highlighting concrete pitfalls of forgetting with standard fine-tuning.
+
+## Conclusion
+- The study highlights the need for techniques to mitigate forgetting in LLMs during fine-tuning and suggests an avenue for future research.
+
+# Critique
+- The paper's use of toxic model-generated text presents ethical concerns.
+- The study provides valuable insights into the challenges of fine-tuning large language models, but the generalization of results to different datasets and models should be further explored for a more comprehensive understanding of the forgetting phenomenon.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-12       |
+| Abstract | [http://arxiv.org/abs/2401.05605v1](http://arxiv.org/abs/2401.05605v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.05605v1](https://browse.arxiv.org/html/2401.05605v1)       |
+| Truncated       | False       |
+| Word Count       | 8502       |

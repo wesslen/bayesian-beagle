@@ -1,0 +1,49 @@
+
+---
+title: "Autocompletion of Chief Complaints in the Electronic Health Records using Large Language Models"
+id: "2401.06088v1"
+description: "Developed autocompletion tool using machine learning models to improve documenting Chief Complaints, BioGPT-Large showed superior performance."
+author: K M Sajjadul Islam, Ayesha Siddika Nipu, Praveen Madiraju, Priya Deshpande
+date: "2024-01-11"
+image: "https://browse.arxiv.org/html/2401.06088v1/extracted/5342703/Auto_Completion_CC.png"
+categories: ['production', 'architectures', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.06088v1/extracted/5342703/Auto_Completion_CC.png)
+
+### Major Takeaways
+
+1. **Chief Complaints** are crucial in medical records and can be time-consuming to document, especially in busy emergency departments. Autocompletion tools using NLP techniques, specifically large language models (LLMs), improve efficiency and accuracy in generating Chief Complaints, which can aid in triage healthcare.
+
+2. The study presents the utilization of various LLMs such as Long Short-Term Memory (LSTM) and Biomedical Generative Pretrained Transformers (BioGPT) to develop autocompletion tools for Chief Complaint documentation in healthcare settings.
+
+3. Results show that **BioGPT-Large** exhibits superior performance compared to other models, achieving a remarkably low perplexity score of 1.65 when generating Chief Complaints, highlighting the effectiveness of utilizing LLMs for autocompletion in healthcare settings.
+
+### Methodology
+- **Dataset Description**: Utilized a de-identified clinical corpus for predicting gout flares in emergency department patients using triage nurse Chief Complaint notes.
+- **Data Preprocessing**: Split Chief Complaints into parts, filter out small sentences, and divide the dataset into training, validation, and test sets.
+- **A Neural Network Approach**: Employed LSTM as a baseline model and fine-tuned BioGPT models, followed by prompt tuning using OpenAI API.
+- **Prompt Tuning**: Incorporated the Few-Shot (FS) technique to create a prompt using the GPT-4.0 model for generating Chief Complaints.
+- **Results**: Evaluated performance using perplexity measure, BERTScore, cosine similarity, and execution time. Large BioGPT models outperformed LSTM and other models, achieving higher scores on various evaluation metrics.
+
+### Critique
+The article provides a comprehensive overview of autocompleting Chief Complaints in Electronic Health Records using large language models. However, there are some potential limitations and areas for improvement in the study:
+- The study acknowledges the need for a Human-Centric evaluation, and it would be beneficial to include insights from domain experts to assess the clinical accuracy and relevance of the autocompleted Chief Complaints.
+- The discussion and future work section mention refining date-time representation and using a medical corpus for accuracy, but it would be helpful to explore potential ethical considerations, patient privacy concerns, and biases introduced by the language models.
+
+### Conclusion
+The study demonstrates the effectiveness of utilizing LLMs, particularly **BioGPT-Large**, for autocompletion of Chief Complaint documentation in healthcare settings. The findings support the potential of NLP techniques to improve efficiency and accuracy in generating Chief Complaints, with implications for enhancing patient care in emergency departments.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-12       |
+| Abstract | [http://arxiv.org/abs/2401.06088v1](http://arxiv.org/abs/2401.06088v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.06088v1](https://browse.arxiv.org/html/2401.06088v1)       |
+| Truncated       | False       |
+| Word Count       | 9543       |

@@ -1,0 +1,64 @@
+
+---
+title: "InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks"
+id: "2401.05507v1"
+description: "InfiAgent-DABench is a benchmark to evaluate LLM-based agents in data analysis. It includes DAEval dataset, agent framework, and toolkits."
+author: Xueyu Hu, Ziyu Zhao, Shuang Wei, Ziwei Chai, Guoyin Wang, Xuwu Wang, Jing Su, Jingjing Xu, Ming Zhu, Yao Cheng, Jianbo Yuan, Kun Kuang, Yang Yang, Hongxia Yang, Fei Wu
+date: "2024-01-10"
+image: "https://browse.arxiv.org/html/2401.05507v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.05507v1/x1.png)
+
+# InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks
+
+## Key Findings
+1. **InfiAgent-DABench**: a novel benchmark containing DAEval dataset and an agent framework for evaluating agents in data analysis tasks.
+2. Benchmarking of 23 state-of-the-art LLMs reveals **current challenges** in data analysis tasks.
+3. Introduction of **DAInstruct** for training specialized open-source data analysis agents.
+
+## Abstract
+InfiAgent-DABench introduces a benchmark specifically designed to evaluate LLM-based agents in data analysis tasks. It includes DAEval, a dataset of 311 data analysis questions derived from 55 CSV files, and an agent framework to evaluate LLMs as data analysis agents. The benchmarking of 23 state-of-the-art LLMs uncovers the current challenges encountered in data analysis tasks, and DAInstruct is developed to train open-source LLMs for data analysis.
+
+## Introduction
+LLM-based agents have garnered significant attention in the field of AI, with applications for reasoning, planning, and tool utilization. Data analysis tasks are particularly challenging yet practical problems for LLM-based agents, with applications across various domains. While numerous LLM-based agents have been developed, a comprehensive benchmark for evaluating agents for data analysis is lacking.
+
+## InfiAgent-DABench Benchmark
+- **Dataset Construction**: DAEval is composed of realistic CSV files and corresponding closed-form questions generated from key concepts in data analysis.
+- **Agent Framework**: The framework allows LLMs to solve data analysis problems, interact with files, and invoke tools such as a Python code sandbox.
+- **Human Assessment**: Experts conducted an in-depth evaluation of DAEval to ensure high dataset quality.
+
+## Benchmark Statistics
+- The dataset covers a wide range of domains including finance, demographics, and energy monitoring, with a balanced distribution of different data analysis concepts.
+- The classification of questions into easy, medium, and hard levels demonstrates the complexity and variety within the dataset.
+
+## Instruction-tuning Dataset
+DAInstruct is introduced as an instruction-tuning dataset with 5131 data samples for data analysis, on which DAAgent, a specialized agent for data analysis, is trained.
+
+## Experiments
+- **Models**: Benchmarking included proprietary models, open-source general LLMs, and open-source code LLMs.
+- **Results**: The accuracy of different models in DAEval ranged from 46.90% to 74.60%, highlighting the current challenges faced by LLMs in data analysis tasks.
+
+## Related work
+The paper discusses previous benchmarks for code and LLM-based agents, emphasizing the unique contribution of InfiAgent-DABench in evaluating LLM-based agents in data analysis tasks.
+
+## Limitations and Future work
+The exclusion of questions related to visualization in the benchmark is noted as a significant limitation. Future work is suggested to address this limitation and achieve a more comprehensive evaluation of data analysis tasks.
+
+## Conclusion
+InfiAgent-DABench introduces a valuable benchmark for evaluating LLM-based agents in data analysis tasks. The findings reveal the current capabilities and limitations of LLMs in this domain, while also introducing a specialized agent for data analysis, emphasizing the need for improvements in open-source LLMs for data analysis tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-12       |
+| Abstract | [http://arxiv.org/abs/2401.05507v1](http://arxiv.org/abs/2401.05507v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.05507v1](https://browse.arxiv.org/html/2401.05507v1)       |
+| Truncated       | False       |
+| Word Count       | 9447       |

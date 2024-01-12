@@ -1,0 +1,44 @@
+
+---
+title: "Improving Large Language Models via Fine-grained Reinforcement Learning with Minimum Editing Constraint"
+id: "2401.06081v1"
+description: "RLMEC is a new reinforcement learning method for language models, using generative rewards to focus on key tokens."
+author: Zhipeng Chen, Kun Zhou, Wayne Xin Zhao, Junchen Wan, Fuzheng Zhang, Di Zhang, Ji-Rong Wen
+date: "2024-01-11"
+image: "https://browse.arxiv.org/html/2401.06081v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.06081v1/x1.png)
+
+# Summary of "Improving Large Language Models via Fine-grained Reinforcement Learning with Minimum Editing Constraint"
+
+## Main Findings
+1. The paper proposes a novel reinforcement learning method, RLMEC, which utilizes a generative reward model to provide **token-level rewards** for training large language models (LLMs), resulting in improved performance on complex mathematical and question-answering tasks.
+2. RLMEC addresses the limitations of existing RL methods by providing fine-grained supervision signals for all output tokens, focusing on the learning of key error-causing tokens, and reducing the effect of unimportant tokens.
+3. Experimental results demonstrate the effectiveness of RLMEC in stabilizing the RL training process and reducing erroneous steps in sampled LLM outputs, outperforming other competitive supervised fine-tuning and RL methods.
+
+## Approach
+- **Generative Reward Model Training**: The method involves training a generative model as the reward model using an erroneous solution rewriting task under the minimum editing constraint, effectively focusing on key error tokens.
+- **RL with Fine-grained Supervision**: RL is performed using token-level rewards and an imitation-based regularization to stabilize the training process and guide LLMs to focus on key tokens.
+
+## Related Work
+- The paper contrasts RLMEC with existing methods such as supervised fine-tuning, alignment without reinforcement learning, and traditional reinforcement learning, highlighting the advantages of RLMEC in providing fine-grained supervision signals and stabilizing the training process.
+
+## Critique
+- The paper could benefit from more detailed comparisons with a wider range of existing methods to further emphasize the advantages of RLMEC over other approaches.
+- The potential computational and resource requirements for implementing RLMEC, especially in real-world applications, need to be addressed and potentially reduced through simplification strategies.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-12       |
+| Abstract | [http://arxiv.org/abs/2401.06081v1](http://arxiv.org/abs/2401.06081v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.06081v1](https://browse.arxiv.org/html/2401.06081v1)       |
+| Truncated       | False       |
+| Word Count       | 9866       |

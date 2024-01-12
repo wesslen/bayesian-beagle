@@ -1,0 +1,64 @@
+
+---
+title: "Chain of History: Learning and Forecasting with LLMs for Temporal Knowledge Graph Completion"
+id: "2401.06072v1"
+description: "Paper proposes using LLMs for Temporal Knowledge Graph Completion, outperforming existing models in experiments."
+author: Ruilin Luo, Tianle Gu, Haoling Li, Junzhe Li, Zicheng Lin, Jiayi Li, Yujiu Yang
+date: "2024-01-11"
+image: "https://browse.arxiv.org/html/2401.06072v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.06072v1/x1.png)
+
+### Major Takeaways
+
+1. **Temporal Knowledge Graph Completion (TKGC)** involves predicting missing event links at future timestamps by leveraging established temporal structural knowledge. The paper proposes a novel approach to conceptualize TKGC as an event generation task within the context of a historical event chain.
+2. The study demonstrates that the fine-tuned model based on *Language Model-Model(LMM)* outperforms existing embedding-based models on multiple metrics, achieving State-of-the-Art(SOTA) results, especially on the ICEWS14 and ICEWS18 datasets.
+3. The paper offers insights into the impact of factors such as historical chain length, model size, and the performance of LLMs like GPT-4, aiming to uncover key factors influencing temporal structural information reasoning using LLMs.
+
+### Introduction
+
+The introduction describes the significance of Knowledge Graphs (KGs) and the challenges posed by *Temporal Knowledge Graphs*(TKGs). The usage of *Language Model-Model (LLMs)* for generative capabilities in the task of *Temporal Knowledge Graph Completion (TKGC)* is introduced.
+
+### Related Work
+
+This section summarizes the existing methods for Temporal Knowledge Graph Completion, including interpolation and extrapolation-based reasoning. It also discusses the application of LLMs in the context of graph machine learning.
+
+### Preliminary
+
+The section provides definitions for TKGC and Fine-tuning. It presents the background required for understanding the proposed methodology.
+
+### Methodology
+
+The methodology section details the proposed approach of structure-augmented history modeling, introduction of reverse logic, instruction-tuning in TKGC, and predicting with LLMs. It explains various strategies employed for incorporating historical information and outlines the fine-tuning techniques for LLMs in the context of TKGC.
+
+### Experiments
+
+This section covers the datasets used, baseline models, evaluation protocol, and the main results obtained. It discusses the comparative analysis between the proposed model and existing methods, showcasing the performance improvements.
+
+### Analysis
+
+The analysis section delves into the effectiveness of structure-augmented history modeling, the impact of introducing reverse logic, exploration on history length, the effect of model size on results, and the performance of commercial LLMs.
+
+### Conclusion
+
+The conclusion summarizes the findings of the paper, highlighting the major contributions and insights provided by the study.
+
+### Critique
+
+The paper provides a comprehensive approach to Temporal Knowledge Graph Completion using LLMs, but it could benefit from a more detailed comparison with a wider range of existing models. Additionally, the experiments could be further validated through a more extensive range of datasets to ensure the generalizability of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-12       |
+| Abstract | [http://arxiv.org/abs/2401.06072v1](http://arxiv.org/abs/2401.06072v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.06072v1](https://browse.arxiv.org/html/2401.06072v1)       |
+| Truncated       | False       |
+| Word Count       | 7008       |

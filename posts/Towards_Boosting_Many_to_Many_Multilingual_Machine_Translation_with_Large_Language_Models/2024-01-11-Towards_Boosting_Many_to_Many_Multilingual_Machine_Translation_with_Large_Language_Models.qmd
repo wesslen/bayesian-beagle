@@ -1,0 +1,86 @@
+
+---
+title: "Towards Boosting Many-to-Many Multilingual Machine Translation with Large Language Models"
+id: "2401.05861v1"
+description: "Training for machine translation has shifted to finetuning pre-trained language models, enhancing multilingual translation. The approach consistently improves performance."
+author: Pengzhi Gao, Zhongjun He, Hua Wu, Haifeng Wang
+date: "2024-01-11"
+image: "https://browse.arxiv.org/html/2401.05861v1/extracted/5342018/figs/kde_vanilla.png"
+categories: ['production', 'architectures', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.05861v1/extracted/5342018/figs/kde_vanilla.png)
+
+### Main Findings
+
+- The paper focuses on **boosting the many-to-many multilingual translation performance** of Large Language Models (LLMs) with an emphasis on zero-shot translation directions.
+- It demonstrates the crucial impact of **prompt strategies** during instruction finetuning and introduces a **cross-lingual consistency regularization** method, XConST, to bridge the representation gap among different languages and improve zero-shot translation performance.
+- Experimental results on ALMA and LLaMA-2 show that the approach consistently improves **translation performance**.
+
+### Abstract
+
+The paper discusses the paradigm shift in machine translation training from neural machine translation (NMT) models to finetuning pretrained LLMs with high-quality translation pairs. It focuses on zero-shot translation directions and introduces a cross-lingual consistency regularization, XConST, to improve translation performance.
+
+### Introduction
+
+- Large language models (LLMs) have shown remarkable capabilities in multilingual machine translation.
+- Various techniques, including in-context learning, continual pretraining, and translation instruction finetuning, have been explored to enhance LLMs’ translation capability.
+
+### Background
+
+#### Language Tag Strategy for Multilingual NMT
+
+- Language tag strategies, such as T-ENC and T-DEC, are crucial for **zero-shot translation performance** in multilingual NMT models.
+
+#### Cross-lingual Consistency Regularization for Multilingual NMT
+
+- CrossConST is introduced to bridge the representation gap among different languages and improve zero-shot translation in multilingual NMT.
+
+### Datasets and Baseline Settings
+
+- Experiments conducted using test and dev data from WMT and FLORES-200 benchmarks, along with model configurations utilizing ALMA-7B-Pretrain and 13B.
+
+### Methodology
+
+#### Multilingual Finetuning with Translation Instructions
+
+- Prompt strategies are found to be crucial for zero-shot translation performance, 
+- **Visualization analysis** is conducted to understand model learning of various prompt strategies.
+- Strategies to mitigate the off-target issue and improve instruction-following capability are investigated.
+
+#### Cross-lingual Consistency Regularization for Translation Instruction Finetuning
+
+- XConST regularization is proposed to improve zero-shot translation performance.
+- Experimental results show the consistent improvement of translation performance using XConST across different prompt strategies.
+
+### Experiments on More Languages
+
+- The performance of many-to-many machine translation with LLaMA-2 models across more than 30 languages.
+- The cross-lingual consistency regularization is found to boost zero-shot translation performance.
+
+### Related Work
+
+- Recent works on LLMs in multilingual machine translation and various training strategies to improve translation performance are discussed.
+
+### Conclusion
+
+The paper concludes by summarizing the findings and suggesting future work involving the effectiveness of the cross-lingual consistency regularization approach on cross-lingual generalization of LLMs across a wide range of tasks and languages.
+
+### Critique
+
+- The paper provides valuable insights into improving zero-shot translation performance, but the effectiveness of the proposed XConST method needs to be compared with other existing methods.
+- The impact and generalization of the approach beyond the English-centric scenario need further exploration.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-12       |
+| Abstract | [http://arxiv.org/abs/2401.05861v1](http://arxiv.org/abs/2401.05861v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.05861v1](https://browse.arxiv.org/html/2401.05861v1)       |
+| Truncated       | False       |
+| Word Count       | 6539       |

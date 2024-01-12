@@ -1,0 +1,75 @@
+
+---
+title: "Transformers are Multi-State RNNs"
+id: "2401.06104v1"
+description: "TL;DR: Transformers can be conceptualized as infinite multi-state RNNs, and a new conversion policy, TOVA, significantly outperforms existing techniques."
+author: Matanel Oren, Michael Hassid, Yossi Adi, Roy Schwartz
+date: "2024-01-11"
+image: "https://browse.arxiv.org/html/2401.06104v1/x1.png"
+categories: ['production', 'architectures', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.06104v1/x1.png)
+
+## Summary of "Transformers are Multi-State RNNs"
+
+### Main Findings
+1. **Decoder-only transformers** can be viewed as **infinite multi-state RNNs (MSRNNs)**, where the key and value vectors correspond to a multi-state that dynamically grows infinitely.
+2. A **novel policy, TOVA** (Token Omission Via Attention), is introduced, which outperforms other baseline policies and can drastically reduce the memory consumption during inference.
+3. Pretrained **transformer decoder LLMs** often behave in practice as **finite MSRNNs** and substantialy reduce the cache size with negligible performance degradation. 
+
+### Introduction
+- Transformers have replaced RNNs for NLP due to their direct access to each token in a sequence.
+
+### Background
+#### RNNs
+- RNNs process sequential data in a recurrent manner with a function that receives token representation and the hidden state from the previous time step.
+
+#### Transformers
+- Process sequential data non-recurrently and consist of self-attention and feed-forward mechanisms.
+
+### Transformers as Multi-State RNNs
+#### Multi-State RNNs
+- Defined as an RNN with a state matrix instead of a vector, parameterized by a function.
+#### Transformers are Infinite MSRNNs
+- Transformers can be viewed as an MSRNN, where the number of single-states equals the number of input tokens.
+
+#### Converting Pretrained Transformers into Finite MSRNNs
+- Finite MSRNNs can be achieved by limiting the number of tokens processed at each step and using various compression policies.
+
+#### Our Proposed Policy: TOVA
+- TOVA is a simpler, more powerful MSRNN compression policy that retains the top states based on the attention weights of the last token only.
+
+### Experimental Setup
+- Long-range tasks including language modeling, long-range understanding, and text generation were used for evaluation.
+
+### Pretrained Transformers Act as Finite MSRNNs
+- TOVA outperforms other policies in language modeling, long-range summarization, and performs well in text generation tasks.
+
+### Analysis
+- **TOVA** preserves recent tokens and some older tokens, shows a clear preference for the very first token, and highlights the importance of tokens such as punctuation and proper nouns.
+- Using TOVA enables a dramatic increase in the inference batch size.
+
+### Related Work
+- Several works have bridged the gap between RNNs and transformers, introduced new RNN variants, and simplified transformers. 
+
+### Conclusion
+- The paper concludes that transformer decoder LLMs often behave as finite MSRNNs and introduces TOVA as a simple compression policy that performs well with minimal memory consumption.
+
+### Critique
+- The paper's evaluation framework focuses mainly on the English language, which may not generalize to languages with different characteristics.
+- The evaluation of long-text generation is acknowledged as being complex and was evaluated indirectly using GPT-4, which may not fully capture the entire text's quality.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-12       |
+| Abstract | [http://arxiv.org/abs/2401.06104v1](http://arxiv.org/abs/2401.06104v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.06104v1](https://browse.arxiv.org/html/2401.06104v1)       |
+| Truncated       | False       |
+| Word Count       | 8490       |

@@ -22,13 +22,38 @@ class OpenAIAssistant:
             return self.cache[(text, task)]
 
         if task == "summarize":
-            system_message = "You are a helpful assistant to summarize academic articles \
-                              Output the summary as markdown with headings for different \
-                              sections. Add in bolding for key terminology. Add in bullets \
-                              to summarize sections. Start with three major takeways on the \
-                              most important findings of the paper. End with a section critiquing \
-                              the paper and raising any potential problems with the paper."
-            user_message = f"Summarize the following text in 300 or fewer words:\n\n{text}"
+            # system_message = "You are a helpful assistant to summarize academic articles \
+            #                   Output the summary as markdown with headings for different \
+            #                   sections. Add in bolding for key terminology. Add in bullets \
+            #                   to summarize sections. Start with three major takeways on the \
+            #                   most important findings of the paper. End with a section critiquing \
+            #                   the paper and raising any potential problems with the paper."
+            system_message = "As an expert in summarizing academic articles, your task is to generate \
+                              a markdown summary with organized headings and formatting. The output \
+                              should include three major takeaways highlighting the most important \
+                              findings, utilizing bolding for key terminology, and bullet points to \
+                              summarize different sections.\n\nBegin by providing a concise summary \
+                              of the text in 300 words or fewer.\n\nRemember to structure the markdown \
+                              summary by using appropriate headings to distinguish between sections. \
+                              \n\nFinally, conclude the summary with a critical analysis of the article, \
+                              raising any potential problems or shortcomings that you identified while \
+                              reading the text."
+            # user_message = f"Summarize the following text:\n\n{text}"
+
+Example:
+###
+**Summary of the Article:**
+[Insert concise summary of the text in 300 words or fewer here.]
+
+### Major Findings:
+1. [Highlight the first major finding of the article in a bullet point form.]
+2. [Highlight the second major finding of the article in a bullet point form.]
+3. [Highlight the third major finding of the article in a bullet point form.]
+
+### Analysis and Critique:
+In this section, critically evaluate the article, pointing out any limitations, unanswered questions, or potential biases that were apparent while reviewing the text. Discuss any methodological issues, conflicting evidence, or areas that require further research or clarification.
+
+Please ensure that the markdown summary is well-structured, coherent, and effectively communicates the essential information from the academic article.
 
         elif task == "tldr":
             system_message = "You are a helpful assistant to summarize academic \

@@ -49,23 +49,8 @@ class OpenAIAssistant:
                               evidence, or areas that require further research or clarification.\n\n \
                               Please ensure that the markdown summary is well-structured, coherent, and \
                               effectively communicates the essential information from the academic article."
-            # user_message = f"Summarize the following text:\n\n{text}"
-
-Example:
-###
-**Summary of the Article:**
-[Insert concise summary of the text in 300 words or fewer here.]
-
-### Major Findings:
-1. [Highlight the first major finding of the article in a bullet point form.]
-2. [Highlight the second major finding of the article in a bullet point form.]
-3. [Highlight the third major finding of the article in a bullet point form.]
-
-### Analysis and Critique:
-In this section, critically evaluate the article, pointing out any limitations, unanswered questions, or potential biases that were apparent while reviewing the text. Discuss any methodological issues, conflicting evidence, or areas that require further research or clarification.
-
-Please ensure that the markdown summary is well-structured, coherent, and effectively communicates the essential information from the academic article.
-
+            user_message = f"Summarize the following text:\n\n{text}"
+        
         elif task == "tldr":
             system_message = "You are a helpful assistant to summarize academic \
                               article abstracts."

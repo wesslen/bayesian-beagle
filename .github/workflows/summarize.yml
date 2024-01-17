@@ -37,6 +37,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -r requirements-build.txt
         python -m pip install -r requirements-summarizer.txt
+        python -m pip install -r requirements-langchain.txt
     - name: Fetch File from Repo #2
       run: |
         curl -O "https://raw.githubusercontent.com/wesslen/arxiv-frontpage/main/data/input.jsonl"

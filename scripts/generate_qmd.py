@@ -108,7 +108,7 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
     file_name = f"{current_date}-{folder_name}.qmd"
     folder_path = Path(output_folder) / folder_name
     file_path = folder_path / file_name
-    authors = ", ".join(example["meta"]["authors"])
+    authors = example["meta"]["authors"]
 
     # Check if the file already exists
     if not force_generate_all and file_path.is_file():

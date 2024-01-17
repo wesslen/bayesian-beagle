@@ -1,8 +1,9 @@
 import json
-import typer
-from jinja2 import Environment, BaseLoader
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
+
+import typer
+from jinja2 import BaseLoader, Environment
 
 app = typer.Typer()
 
@@ -96,9 +97,7 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
     """
     title = remove_unicode_accents(example["meta"]["title"])
     folder_name = convert_to_folder_name(title)
-    example["meta"]["subtitle"] = remove_unicode_accents(
-        example["meta"]["subtitle"]
-    )
+    example["meta"]["subtitle"] = remove_unicode_accents(example["meta"]["subtitle"])
     current_date = example["meta"]["publish_date"]
     image = (
         "../../../bayesian-beagle.png"
@@ -141,9 +140,7 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
 def generate_qmd(
     input_jsonl: str,
     output_folder: str,
-    force_generate_all: bool = typer.Option(
-        False, "-f", "--force-generate-all"
-    ),
+    force_generate_all: bool = typer.Option(False, "-f", "--force-generate-all"),
 ):
     """
     Generate QMD files from a JSONL file

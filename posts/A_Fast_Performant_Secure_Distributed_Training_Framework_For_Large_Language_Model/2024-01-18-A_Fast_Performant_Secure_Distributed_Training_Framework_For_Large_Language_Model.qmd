@@ -1,0 +1,43 @@
+
+---
+title: "A Fast, Performant, Secure Distributed Training Framework For Large Language Model"
+id: "2401.09796v1"
+description: "TL;DR: Proposed secure distributed model slicing method using TEE to prevent data theft and enhance model performance."
+author: Wei Huang, Yinggui Wang, Anda Cheng, Aihui Zhou, Chaofan Yu, Lei Wang
+date: "2024-01-18"
+image: "https://browse.arxiv.org/html/2401.09796v1/extracted/5354499/feature2.png"
+categories: ['production', 'robustness', 'security', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.09796v1/extracted/5354499/feature2.png)
+
+**Summary of the Article:**
+The article introduces a secure distributed framework for training Large Language Models (LLMs) to address the problem of maliciously stealing model parameters and data during the distributed training process. The framework is based on model slicing and employs Trusted Execution Environments (TEE) and lightweight encryption to ensure security. The proposed method involves deploying TEE on both the client and server sides, splitting the LLM by layers, and combining Sparsification Parameter Fine-tuning (SPF) with certain model components to improve accuracy while maintaining security.
+
+### Major Findings:
+1. **Security Challenges in Distributed Learning**:
+    - The article addresses the security challenges in distributed LLM training, including the risk of malicious servers stealing model parameters and data and the potential for clients to infer data from other clients via model parameters and intermediate embedding. 
+    - Previous work focused on server-side threats but did not adequately consider the leakage of parameters and data on the client side.
+
+2. **Proposed Secure Distributed Training Framework**:
+    - The proposed framework involves model slicing, TEE deployment, and lightweight encryption to prevent data and parameter leakage. It includes an approach for split fine-tuning, where the LLM is divided by layers, and certain components are placed in the server-side TEE, with the client not requiring a TEE.
+
+3. **Experimental Evaluation**:
+    - The experimental results demonstrate that the proposed method ensures security while maintaining high efficiency and accuracy, even with security measures in place. Method1 and Method2 are compared, with Method2 showing significantly higher accuracy, albeit with a larger number of fine-tuned parameters.
+
+### Analysis and Critique:
+The article presents an innovative approach to addressing security concerns in distributed LLM training by leveraging TEE and lightweight encryption. However, the use of TEE and encryption introduces overhead, impacting the training time, particularly in Method1. Additionally, the article lacks a detailed discussion on potential limitations or challenges associated with TEE deployment, such as overhead and resource constraints. Furthermore, the article could benefit from providing a more comprehensive comparison with existing security measures in federated learning to highlight the novelty and effectiveness of the proposed framework. Additional research could focus on further optimizing the proposed methods to minimize overhead and resource requirements associated with TEE deployment in distributed LLM training.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-19       |
+| Abstract | [http://arxiv.org/abs/2401.09796v1](http://arxiv.org/abs/2401.09796v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.09796v1](https://browse.arxiv.org/html/2401.09796v1)       |
+| Truncated       | False       |
+| Word Count       | 3880       |

@@ -4,6 +4,15 @@ Welcome to the Bayesian beagle blog! This project is a unique intersection of ma
 
 Our blog is built using [Quarto](https://quarto.org/), an open-source scientific and technical publishing system designed for creating beautiful, data-driven content. It is then published with [Netlify](https://app.netlify.com/).
 
+```mermaid
+graph LR
+    A["Download daily Arxiv articles"] --> B["Predict LLM topic"]
+    B --> C["Summarize short docs"]
+    B --> D["Summarize by Map-Reduce long docs"]
+    C --> E["Update website with articles"]
+    D --> E
+```
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7b28658b-5d30-42ac-a70e-a0a0deedf114/deploy-status)](https://app.netlify.com/sites/bayesian-beagle/deploys)
 
 ## Features

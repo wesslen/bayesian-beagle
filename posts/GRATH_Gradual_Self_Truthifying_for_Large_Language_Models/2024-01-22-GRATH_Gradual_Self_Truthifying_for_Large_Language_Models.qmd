@@ -1,0 +1,39 @@
+
+---
+title: "GRATH: Gradual Self-Truthifying for Large Language Models"
+id: "2401.12292v1"
+description: "GRATH improves large language models' truthfulness without compromising other capabilities, achieving state-of-the-art performance on TruthfulQA."
+author: Weixin Chen, Bo Li
+date: "2024-01-22"
+image: "https://browse.arxiv.org/html/2401.12292v1/extracted/5361880/figures/figure1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.12292v1/extracted/5361880/figures/figure1.png)
+
+### Summary of the Article:
+The article introduces a post-processing method, GRATH, to improve the truthfulness of large language models (LLMs) without relying on annotated answers. GRATH utilizes out-of-domain question prompts to generate corresponding answers and adapts the model via direct preference optimization (DPO) to enhance truthfulness in a self-supervised manner. The empirical results demonstrate that GRATH significantly enhances the truthfulness of LLMs, achieving state-of-the-art performance on TruthfulQA's MC1 and MC2 tasks.
+
+### Major Findings:
+1. GRATH effectively improves LLMs’ truthfulness without compromising other core capabilities.
+2. GRATH achieves state-of-the-art performance on TruthfulQA, surpassing larger-scale models by substantial margins.
+3. The model learned via DPO would be more truthful in the testing domain if the domain gap between the pairwise truthfulness training data and the testing data is smaller.
+
+### Analysis and Critique:
+The article provides a thorough exploration of a novel post-processing method to enhance the truthfulness of large language models. However, potential limitations include the risk of overfitting associated with DPO and the need for further research on the simultaneous enhancement of multiple model capabilities. Additionally, the impact of the number of iterations on model truthfulness and performances across various benchmark tasks should be rigorously studied to avoid overfitting and performance degradation.
+
+Overall, the article presents a valuable contribution to the field of language models and provides insights into improving their truthfulness. Further research should focus on addressing the identified limitations and exploring the simultaneous enhancement of multiple model capabilities.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-24       |
+| Abstract | [http://arxiv.org/abs/2401.12292v1](http://arxiv.org/abs/2401.12292v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.12292v1](https://browse.arxiv.org/html/2401.12292v1)       |
+| Truncated       | False       |
+| Word Count       | 11910       |

@@ -1,0 +1,37 @@
+
+---
+title: "Chatterbox: Robust Transport for LLM Token Streaming under Unstable Network"
+id: "2401.12961v1"
+description: "LLM Chatbots face token streaming stalls due to network instability. The Chatterbox transport scheme reduces stalls by 71%."
+author: Hanchen Li, Yuhan Liu, Yihua Cheng, Siddhant Ray, Kuntai Du, Junchen Jiang
+date: "2024-01-23"
+image: "https://browse.arxiv.org/html/2401.12961v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.12961v1/x1.png)
+
+**Summary of the Article:**
+The article discusses the challenges of LLM token streaming under unstable network conditions, where the rendering of tokens can be significantly delayed due to packet loss. The study highlights the increased stall ratios in current applications, including ChatGPT, Claude, and Bard, under unstable network conditions. To address this issue, the article proposes a novel transport layer scheme, named \name, which involves adding newly generated tokens and unacknowledged tokens into outgoing packets. Through simulations under various network conditions, the proposed scheme reduces the stall ratio by 71.0% compared to the TCP method commonly used by ChatGPT Streaming API. It also outperforms a custom packet duplication scheme by 31.6%. The study concludes that \name enables LLM Chatbots to respond more effectively under unstable network conditions.
+
+### Major Findings:
+1. LLM token streaming experiences increased stall ratios in real-world applications, such as ChatGPT, Claude, and Bard, under unstable network conditions.
+2. The proposed \name transport layer scheme reduces the stall ratio by 71.0% compared to the TCP method used by ChatGPT Streaming API and by 31.6% compared to a custom packet duplication scheme.
+3. The novel transport scheme, \name, ensures that each packet contains sufficient information for rendering new tokens independently, thus avoiding stalls caused by missing packets.
+
+### Analysis and Critique:
+The article effectively addresses the challenges of LLM token streaming under unstable network conditions and proposes a novel \name transport scheme to mitigate stall ratios. However, the study lacks an in-depth exploration of the trade-offs involved in the proposed scheme. While \name significantly reduces stall ratios, it is essential to evaluate the potential increase in redundancy and transmission overhead associated with including unacknowledged tokens in outgoing packets. Additionally, the article acknowledges limitations in cases where not all unacked tokens can fit into one packet; however, it does not provide a comprehensive discussion of potential alternative solutions or further strategies to address this issue. Moreover, the study primarily focuses on the transmission aspect of token streaming, and further research could explore the integration of the proposed scheme with scheduling algorithms and quality of experience (QoE) models to enhance the overall LLM Chatbot performance under limited resources. Overall, while the proposed \name scheme shows promising results in reducing stall ratios, further investigations are necessary to address its limitations and explore potential synergies with other system optimizations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-24       |
+| Abstract | [http://arxiv.org/abs/2401.12961v1](http://arxiv.org/abs/2401.12961v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.12961v1](https://browse.arxiv.org/html/2401.12961v1)       |
+| Truncated       | False       |
+| Word Count       | 6833       |

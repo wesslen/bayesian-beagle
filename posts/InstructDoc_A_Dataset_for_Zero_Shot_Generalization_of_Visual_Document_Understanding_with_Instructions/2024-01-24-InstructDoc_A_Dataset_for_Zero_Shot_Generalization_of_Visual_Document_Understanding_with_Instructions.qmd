@@ -1,0 +1,50 @@
+
+---
+title: "InstructDoc: A Dataset for Zero-Shot Generalization of Visual Document Understanding with Instructions"
+id: "2401.13313v1"
+description: "Introducing InstructDoc - a collection of VDU datasets and InstructDr model for flexible, high-performance document understanding."
+author: Ryota Tanaka, Taichi Iki, Kyosuke Nishida, Kuniko Saito, Jun Suzuki
+date: "2024-01-24"
+image: "https://browse.arxiv.org/html/2401.13313v1/x1.png"
+categories: ['education', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.13313v1/x1.png)
+
+### **Summary of the Article:**
+The article presents InstructDoc, a large-scale dataset for zero-shot generalization of visual document understanding (VDU) tasks with human-written instructions. The dataset covers a wide range of VDU tasks and comprises 30 publicly available VDU datasets, each with diverse instructions in a unified format. Additionally, the article introduces InstructDr, a new instruction-based document reading and understanding model that demonstrates effective adaptation to new VDU datasets, tasks, and domains via given instructions, outperforming existing multimodal large language models (LLMs) and ChatGPT without specific training.
+  
+### **Major Findings:**
+1. InstructDoc: 
+   - A large-scale dataset covering various VDU tasks with diverse instructions.
+   - A unified format for instructions across 30 publicly available VDU datasets.
+
+2. InstructDr Model:
+   - Connects document images, image encoders, and large language models through a trainable bridging module.
+   - Achieves effective adaptation to new VDU datasets, tasks, and domains via given instructions.
+
+3. Model Performance:
+   - Outperforms existing multimodal LLMs and ChatGPT without specific training on a wide range of VDU datasets with instructions.
+
+### **Analysis and Critique:**
+The article's approach showcases significant progress in zero-shot generalization for VDU tasks, demonstrating the effectiveness of the InstructDoc dataset and the InstructDr model. However, there are some limitations and areas for improvement in the article:
+   
+- **OCR Quality**: The article notes that InstructDr suffers from noisy OCR predictions, which can affect the model's performance.
+- **Limited Correlation among Multiple Document-Text Pairs**: The article acknowledges that the dataset only contains a single document-text pair per instance, limiting the model's ability to learn the correlation among multiple document-text pairs and in-context learning.
+- **Limited Tasks and Instructions**: While the dataset covers diverse VDU tasks, the number of tasks and corresponding instructions is still limited, prompting the need for automatic generation and augmentation techniques to increase the variety of instructions available.
+
+Overall, while the article presents a robust approach to zero-shot generalization of VDU tasks, the identified limitations should be addressed to further strengthen the model's performance and generalizability. Additionally, further research is recommended to enhance the dataset's quality and support in-context learning capabilities.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-25       |
+| Abstract | [http://arxiv.org/abs/2401.13313v1](http://arxiv.org/abs/2401.13313v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.13313v1](https://browse.arxiv.org/html/2401.13313v1)       |
+| Truncated       | False       |
+| Word Count       | 7480       |

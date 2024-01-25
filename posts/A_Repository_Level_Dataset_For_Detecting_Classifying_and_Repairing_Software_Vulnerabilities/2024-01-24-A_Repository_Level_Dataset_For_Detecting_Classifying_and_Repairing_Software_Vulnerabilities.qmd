@@ -1,0 +1,46 @@
+
+---
+title: "A Repository-Level Dataset For Detecting, Classifying and Repairing Software Vulnerabilities"
+id: "2401.13169v1"
+description: "TL;DR: Open-source software vulnerabilities pose risks, and a new framework, ReposVul, addresses data limitations for vulnerability detection."
+author: Xinchen Wang, Ruida Hu, Cuiyun Gao, Xin-Cheng Wen, Yujia Chen, Qing Liao
+date: "2024-01-24"
+image: "https://browse.arxiv.org/html/2401.13169v1/x1.png"
+categories: ['architectures', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.13169v1/x1.png)
+
+**Summary of the Article:**
+The article outlines the importance of addressing Open-Source Software (OSS) vulnerabilities and the challenges associated with automated vulnerability detection. It emphasizes the limitations of current labeled data, including tangled patches, lacking inter-procedural vulnerabilities, and outdated patches. To address these limitations, the article presents an automated data collection framework and constructs the first repository-level high-quality vulnerability dataset named ReposVul.
+
+### Major Findings:
+1. **Automated Data Collection Framework:**
+    - The proposed framework addresses the limitations of existing vulnerability datasets by employing a vulnerability untangling module, a multi-granularity dependency extraction module, and a trace-based filtering module.
+  
+2. **Repository-Level High-Quality Vulnerability Dataset (ReposVul):**
+    - ReposVul encompasses 6,134 CVE entries across 1,491 projects and four programming languages.
+    - The dataset includes essential granularities such as repository-level, file-level, function-level, and line-level information. It covers 236 CWE types and exhibits high quality, alleviating the problems of tangled and outdated patches in previous vulnerability datasets.
+
+3. **Label Quality and Filtering Outdated Patches:**
+    - The article highlights the effectiveness of the vulnerability untangling module, achieving high accuracy in identifying vulnerability-fixing related code changes.
+    - The trace-based filtering module successfully recognizes outdated patches, providing crucial information about the distribution of outdated patches across different aspects such as CWEs, time, projects, and programming languages.
+
+### Analysis and Critique:
+The article addresses the critical issue of OSS vulnerabilities and presents a substantial contribution in the form of constructing the ReposVul dataset to mitigate the limitations of existing vulnerability datasets. The automated data collection framework and the multi-granularity information provided by ReposVul offer significant advancements in vulnerability detection. However, there are potential limitations in the collection sources and languages covered, which may affect the comprehensiveness of the dataset. Moreover, the article acknowledges the threats and limitations related to the timeframe of data collection and alternative platforms. Despite these concerns, the article provides valuable insights into the construction of a high-quality vulnerability dataset, but further research may be required to address the identified limitations.
+
+Overall, the article significantly advances the field of vulnerability detection by introducing an innovative dataset and an automated framework, but it also lays out the need for continued research to overcome the outlined shortcomings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-25       |
+| Abstract | [http://arxiv.org/abs/2401.13169v1](http://arxiv.org/abs/2401.13169v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.13169v1](https://browse.arxiv.org/html/2401.13169v1)       |
+| Truncated       | False       |
+| Word Count       | 10623       |

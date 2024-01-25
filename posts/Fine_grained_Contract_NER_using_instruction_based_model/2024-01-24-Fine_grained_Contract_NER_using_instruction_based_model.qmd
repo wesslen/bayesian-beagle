@@ -1,0 +1,45 @@
+
+---
+title: "Fine-grained Contract NER using instruction based model"
+id: "2401.13545v1"
+description: "Instruction-based techniques improve few-shot learning, but LLMs struggle with NER. Paper proposes a task transformation for LLM adaptation."
+author: Hiranmai Sri Adibhatla, Pavan Baswani, Manish Shrivastava
+date: "2024-01-24"
+image: "../../../bayesian-beagle.png"
+categories: ['architectures', 'education', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+**Summary of the Article:**
+The paper discusses the submission made by LTRC_IIITH's team for the FinCausal-2023 shared task, focusing on cause and effect extraction from financial documents in English. Their approach involves transforming the causality extraction task into a text-generation task to optimize performance while addressing the issue of hallucinations in Large Language Models (LLMs). The team utilized different models and prompts to improve LLMs' performance, obtaining an F1 score of 0.54 and an exact match score of 0.08 in the shared task.
+
+### Major Findings:
+1. **Causality Extraction Approach:**
+    - The team transformed the causality extraction task into a text-generation task, aiming to address the limitations of LLMs while extracting cause-and-effect relationships from financial documents.
+    - By experimenting with different models and prompts, they identified the most suitable prompt for the task, effectively improving the performance of LLMs.
+
+2. **Data and Model Exploration:**
+    - The dataset used for the task was compiled from financial news articles provided by Qwam and SEC data from the Edgar Database, supplemented by additional segments from FinCausal 2022.
+    - The team explored various sequence labeling models for span-based classification and generation, and also harnessed the power of advanced language models for zero-shot predictions.
+
+3. **Effectiveness of Prompts:**
+    - The ChatGPT model paired with the CoTPrompt outperformed other models, achieving an exact match score of 0.75 in identifying causal relationships within financial documents.
+    - The comprehensive instructions within the prompts significantly enhanced the response generation, highlighting the importance of prompt engineering for LLMs.
+
+### Analysis and Critique:
+The article provides valuable insights into leveraging Large Language Models for financial document causality detection, offering innovative strategies for prompt-based models. However, it is important to note that the exact match score of 0.08 and the inconsistent performance of models raise questions about the robustness of LLMs in this context. The prevalence of "text overflow" and the swapping of cause and effect indicate potential limitations in the current approach. Additionally, the article's future work section suggests further exploration into few-shot learning and prompt tuning to address these challenges, emphasizing the need for more robust and reliable models in financial document causality detection. Overall, while the article presents promising findings, there is a need for more comprehensive solutions to ensure the accuracy and reliability of causality extraction from financial documents.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-25       |
+| Abstract | [http://arxiv.org/abs/2401.13545v1](http://arxiv.org/abs/2401.13545v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.13545v1](https://browse.arxiv.org/html/2401.13545v1)       |
+| Truncated       | False       |
+| Word Count       | 3599       |

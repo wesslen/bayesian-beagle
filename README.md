@@ -81,6 +81,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Acknowledgments
 
 - ArXiv for making scientific articles openly accessible to all.
-- [Vincent Warmerdam](https://koaning.io/) for his [Arxiv-Frontpage project](https://github.com/koaning/arxiv-frontpage), which I extended [github](https://github.com/wesslen/arxiv-frontpage) for custom LLM labels and models
+- [Vincent Warmerdam](https://koaning.io/) for his [Arxiv-Frontpage project](https://github.com/koaning/arxiv-frontpage), which I [extended](https://github.com/wesslen/arxiv-frontpage) for custom LLM labels and models
 - [Posit](https://posit.co/) for their outstanding publishing tool, Quarto.
 - [Simon Willison](https://github.com/simonw)'s helpful [`strip-tags`](https://github.com/simonw/strip-tags) library

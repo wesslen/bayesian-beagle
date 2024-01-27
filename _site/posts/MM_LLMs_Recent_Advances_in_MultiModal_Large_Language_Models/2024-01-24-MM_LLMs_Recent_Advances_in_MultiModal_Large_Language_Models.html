@@ -8,7 +8,7 @@
 
 <meta name="author" content="Duzhen Zhang, Yahan Yu, Chenxing Li, Jiahua Dong, Dan Su, Chenhui Chu, Dong Yu">
 <meta name="dcterms.date" content="2024-01-24">
-<meta name="description" content="Advancements in MultiModal Large Language Models (MM-LLMs) enable diverse tasks and require cost-effective training. This survey outlines design, existing models, performance, and future directions.">
+<meta name="description" content="MM-LLMs have evolved and can support MM inputs and outputs. This survey provides design, models, performance, and future directions.">
 
 <title>Bayesian beagle - MM-LLMs: Recent Advances in MultiModal Large Language Models</title>
 <style>
@@ -66,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - MM-LLMs: Recent Advances in MultiModal Large Language Models">
-<meta property="og:description" content="Advancements in MultiModal Large Language Models (MM-LLMs) enable diverse tasks and require cost-effective training. This survey outlines design, existing models, performance, and future directions.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2401.13601v1/x1.png">
+<meta property="og:description" content="MM-LLMs have evolved and can support MM inputs and outputs. This survey provides design, models, performance, and future directions.">
+<meta property="og:image" content="https://browse.arxiv.org/html/2401.13601v2/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
 
@@ -119,15 +119,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">MM-LLMs: Recent Advances in MultiModal Large Language Models</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">architectures</div>
     <div class="quarto-category">education</div>
-    <div class="quarto-category">production</div>
+    <div class="quarto-category">architectures</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Advancements in MultiModal Large Language Models (MM-LLMs) enable diverse tasks and require cost-effective training. This survey outlines design, existing models, performance, and future directions.
+    MM-LLMs have evolved and can support MM inputs and outputs. This survey provides design, models, performance, and future directions.
   </div>
 </div>
 
@@ -154,30 +153,19 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><img src="https://browse.arxiv.org/html/2401.13601v1/x1.png" class="img-fluid"></p>
-<p><strong>Summary of the Article:</strong> The article discusses the recent developments in MultiModal Large Language Models (MM-LLMs) and provides a comprehensive survey to facilitate further research. MM-LLMs utilize Large Language Models (LLMs) to support MultiModal (MM) inputs or outputs and have shown substantial advancements in various downstream tasks. The paper outlines the model architecture, training pipeline, reviews the performance of existing MM-LLMs, and proposes promising future directions in the domain. It also introduces a dedicated website to track the latest progress and facilitate collaboration in the MM-LLMs field.</p>
+<p><img src="https://browse.arxiv.org/html/2401.13601v2/x1.png" class="img-fluid"></p>
+<p><strong>Summary of the Article:</strong> The article provides a comprehensive survey of MultiModal Large Language Models (MM-LLMs), focusing on recent advancements in this field, highlighting the model architecture, training pipeline, state-of-the-art (SOTA) models, benchmarks and performance, training recipes, future directions, and related surveys. It outlines the progression of MM-LLMs from MM understanding to generation, introduces several impactful MM-LLMs, and emphasizes the need for more challenging benchmarks and continual improvement in areas such as mobile deployment and embodied intelligence. The article also contributes by establishing a real-time tracking website for ongoing MM-LLMs developments and envisions avenues for future MM-LLMs research.</p>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li><strong>Model Architecture and Training Pipeline:</strong>
-<ul>
-<li>MM-LLMs leverage LLMs as the cognitive powerhouse and use modality encoders, input projectors, LLM backbones, output projectors, and modality generators to effectively connect models in different modalities and support collaborative inference.</li>
-<li>The training pipeline consists of two stages: MM Pre-Training (PT) and MM Instruction-Tuning (IT), focusing on enhancing pre-trained text-only LLMs to support MM input or output.</li>
-</ul></li>
-<li><strong>State-of-the-Art MM-LLMs:</strong>
-<ul>
-<li>The article highlights several state-of-the-art MM-LLMs such as Flamingo, BLIP-2, LLaVA, MiniGPT-4, and others, outlining their core contributions and developmental trends.</li>
-</ul></li>
-<li><strong>Training Recipes and Future Directions:</strong>
-<ul>
-<li>The article provides insights into training recipes that boost the effectiveness of MM-LLMs, such as incorporating high-resolution images and high-quality fine-tuning datasets.</li>
-<li>It proposes promising future directions for MM-LLMs, including more powerful models, challenging benchmarks, mobile/lightweight deployment, embodied intelligence, and continual instruction-tuning.</li>
-</ul></li>
+<li>MM-LLMs leverage Large Language Models (LLMs) to handle MultiModal (MM) inputs, showcasing impressive capabilities in MM content comprehension and generation.</li>
+<li>The article introduces several SOTA MM-LLMs, each distinguished by specific formulations and developmental trends, emphasizing continual refinement of the training pipeline through Supervised Fine-Tuning and Reinforcement Learning from Human Feedback.</li>
+<li>Training recipes for MM-LLMs suggest the incorporation of higher image resolution, high-quality Supervised Fine-Tuning data, and re-blending of text-only instruction data during fine-tuning.</li>
 </ol>
 </section>
 <section id="analysis-and-critique" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<p>The comprehensive survey and detailed overview of MM-LLMs provide valuable insights for researchers and practitioners in the field. However, the article could benefit from elaborating on the limitations and challenges associated with MM-LLMs, such as computational costs, model biases, and potential ethical considerations. Additionally, while it outlines future directions, it would be beneficial to address potential roadblocks and limitations in achieving these advancements. Overall, the article offers a thorough review of MM-LLMs but could enhance the analysis by delving further into challenges and potential biases in the development and deployment of these models.</p>
+<p>The article provides a comprehensive overview of MM-LLMs, addressing various aspects from model architecture to future directions. However, it lacks a critical analysis of potential limitations, biases, or conflicting evidence in the field. It would have been beneficial to include a discussion of potential challenges or areas requiring further research, especially in continually fine-tuning MM-LLMs, establishing more challenging benchmarks, and addressing the limitations of the surveyed MM-LLMs. Additionally, the article would benefit from clearer organization and section headings to aid in navigating the extensive content.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -189,15 +177,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-25</td>
+<td>2024-01-27</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.13601v1">http://arxiv.org/abs/2401.13601v1</a></td>
+<td><a href="http://arxiv.org/abs/2401.13601v2">http://arxiv.org/abs/2401.13601v2</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.13601v1">https://browse.arxiv.org/html/2401.13601v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2401.13601v2">https://browse.arxiv.org/html/2401.13601v2</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
@@ -205,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>10353</td>
+<td>10356</td>
 </tr>
 </tbody>
 </table>

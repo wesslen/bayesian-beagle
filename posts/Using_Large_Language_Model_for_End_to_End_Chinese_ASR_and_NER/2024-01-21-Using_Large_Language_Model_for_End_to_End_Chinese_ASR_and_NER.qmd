@@ -1,0 +1,39 @@
+
+---
+title: "Using Large Language Model for End-to-End Chinese ASR and NER"
+id: "2401.11382v1"
+description: "New speech integration approach with Whisper encoder outperforms traditional LLM in ASR tasks and achieves SOTA F1 score."
+author: ['Yuang Li', 'Jiawei Yu', 'Yanqing Zhao', 'Min Zhang', 'Mengxin Ren', 'Xiaofeng Zhao', 'Xiaosong Qiao', 'Chang Su', 'Miaomiao Ma', 'Hao Yang']
+date: "2024-01-21"
+image: "../../../bayesian-beagle.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+**Summary of the Article:**
+This research compares two approaches, the decoder-only architecture and the encoder-decoder architecture, for using large language models (LLMs) in Chinese automatic speech recognition (ASR) and name entity recognition (NER) tasks. The study found that the encoder-decoder architecture outperforms the decoder-only architecture with short context, while the decoder-only architecture benefits from a long context as it fully exploits all layers of the LLM. The experiments showed that using LLM significantly reduced entity omission errors and improved entity ASR accuracy compared to the Conformer baseline, achieving a state-of-the-art F1 score on the AISHELL-NER test set with CoT NER which first infers long-form ASR transcriptions and then predicts NER labels.
+
+### Major Findings:
+1. The encoder-decoder architecture outperforms the decoder-only architecture with short context, while the decoder-only architecture benefits from a long context as it fully exploits all layers of the LLM.
+2. Using LLM significantly reduced entity omission errors and improved entity ASR accuracy compared to the Conformer baseline.
+3. CoT NER achieved a state-of-the-art F1 score and reduced omission errors by 7% compared to the Conformer model.
+
+### Analysis and Critique:
+The article effectively compares two different architectures for integrating speech encoders with large language models (LLMs) and provides valuable insights into their performance on Chinese automatic speech recognition (ASR) and name entity recognition (NER) tasks. The study's innovative approach of comparing the two architectures and evaluating their performance using a comprehensive set of experiments adds significant value to the field of speech recognition and natural language processing.
+
+However, the article could benefit from further discussion on the limitations and potential biases of the study. Additionally, the results are based on experiments with the Chinese language, and the generalizability of the findings to other languages or speech recognition systems could be further explored. Furthermore, while the analysis of the architectures and their performance is thorough, the article does not discuss the potential implications of these findings for real-world applications or future research directions in the field. Overall, the article provides valuable insights into the integration of speech encoders with LLMs, but additional considerations and discussions could enhance the depth and applicability of the study's findings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-29       |
+| Abstract | [http://arxiv.org/abs/2401.11382v1](http://arxiv.org/abs/2401.11382v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.11382v1](https://browse.arxiv.org/html/2401.11382v1)       |
+| Truncated       | False       |
+| Word Count       | 5243       |

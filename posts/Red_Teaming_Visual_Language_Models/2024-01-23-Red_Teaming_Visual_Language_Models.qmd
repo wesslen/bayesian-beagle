@@ -1,0 +1,40 @@
+
+---
+title: "Red Teaming Visual Language Models"
+id: "2401.12915v1"
+description: "VLMs tested with red teaming dataset RTVLM. VLMs struggle with up to 31% performance gap, while LLaVA-v1.5 boosted with red teaming alignment."
+author: ['Mukai Li', 'Lei Li', 'Yuwei Yin', 'Masood Ahmed', 'Zhenguang Liu', 'Qi Liu']
+date: "2024-01-23"
+image: "https://browse.arxiv.org/html/2401.12915v1/x2.png"
+categories: ['production', 'robustness', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.12915v1/x2.png)
+
+**Summary of the Article:**
+
+The article delves into the exploration of Vision-Language Models (VLMs) and their susceptibility to generating harmful or inaccurate content under specific scenarios, known as Red Teaming. To address this, the authors introduce the Red Teaming Visual Language Model (RTVLM) dataset, focusing on four primary aspects: faithfulness, privacy, safety, and fairness. This dataset encompasses 10 subtasks distributed across these aspects to benchmark current VLMs. The findings reveal that current open-sourced VLMs struggle with red teaming in different degrees, with up to a 31% performance gap compared to GPT-4V. Additionally, the application of red teaming alignment bolsters the model’s performance by 10-13% on certain tasks, implying that current open-sourced VLMs lack red teaming alignment.
+
+### Major Findings:
+1. Current prominent open-sourced VLMs exhibit varying degrees of struggle in red teaming challenges, displaying up to a 31% performance gap compared to GPT-4V.
+2. The current VLMs lack red teaming alignment. Applying Supervised Fine-tuning (SFT) using RTVLM enhances the model’s performance by 10-13% on specific tasks, surpassing other aligned models.
+
+### Analysis and Critique:
+
+The article makes significant contributions by introducing the RTVLM dataset and shedding light on the vulnerabilities of VLMs, especially in the context of red teaming. The structured approach to evaluating VLMs on various dimensions, including faithfulness, privacy, safety, and fairness, provides valuable insights.
+
+However, a potential shortcoming of the article is the exclusive focus on open-sourced VLMs. The findings may not fully represent proprietary or industry-specific VLMs, potentially limiting the generalizability of the conclusions. Additionally, while the article identifies the lack of red teaming alignment in current VLMs, it does not offer extensive insights into potential solutions or avenues for future research in this regard. Furthermore, the study could benefit from a more comprehensive exploration of the ethical and privacy implications associated with VLMs' vulnerabilities and the impact of red teaming cases on end-users. Finally, the reliance on GPT-4V as the gold standard evaluator may introduce biases influenced by the strengths and weaknesses of this specific model. Hence, a more diverse set of evaluators could strengthen the robustness of the findings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-29       |
+| Abstract | [http://arxiv.org/abs/2401.12915v1](http://arxiv.org/abs/2401.12915v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.12915v1](https://browse.arxiv.org/html/2401.12915v1)       |
+| Truncated       | False       |
+| Word Count       | 6809       |

@@ -1,0 +1,45 @@
+
+---
+title: "Generating Unsupervised Abstractive Explanations for Rumour Verification"
+id: "2401.12713v1"
+description: "TL;DR: This study rethinks rumor verification by using explanatory summaries from social media conversations, with results matching human evaluation."
+author: ['Iman Munire Bilal', 'Preslav Nakov', 'Rob Procter', 'Maria Liakata']
+date: "2024-01-23"
+image: "https://browse.arxiv.org/html/2401.12713v1/extracted/5363941/detailed_overview.png"
+categories: ['hci', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.12713v1/extracted/5363941/detailed_overview.png)
+
+### **Summary of the Article:**
+The article discusses the task of rumour verification in social media, emphasizing the importance of generating explanations for automated veracity decisions. The authors introduce an unsupervised approach to produce model-centric abstractive explanations by leveraging post-hoc explainability methods and template-guided summarization. Their experiments demonstrate that the generated explanations are more informative and align closely with the predicted rumour veracity compared to using only the highest ranking posts in the thread.
+
+### **Major Findings:**
+1. The shift from black-box classifiers to generating explanations improves the interpretability of rumour verification models, especially in rapidly evolving situations such as natural disasters or terror attacks.
+2. The unsupervised framework for generating abstractive explanations using template-guided summarization is a novel approach for the task of rumour verification.
+3. Large Language Models (LLMs) can effectively evaluate the generated explanatory summaries, achieving sufficient agreement with humans and allowing for scalable evaluation of the explanations.
+
+### **Analysis and Critique:**
+The article presents a comprehensive and innovative approach to the generation of abstractive explanations for rumour verification, addressing the critical need for interpretability in automated veracity decisions. However, it is essential to consider several limitations and potential areas for further research:
+
+- **Summarization of Threads:** The method used to summarize conversation trees by concatenating individual posts might lead to a loss of context and information present in nested replies, potentially impacting the fidelity of the generated summaries.
+
+- **Human Evaluation:** While the article demonstrates good agreement between Large Language Models (LLMs) and human annotators, the reliability and stability of using LLMs as evaluators for explanation summaries are in the early stages. It is important to investigate the impact of prompt design and model stability over time.
+
+- **Task Limitation:** Currently, the explanations are solely constructed from information present in the thread, and it might be beneficial to explore incorporating external sources for richer explanations, enhancing the explanatory quality.
+
+The article makes a significant contribution to the field of rumour verification and interpretability of automated veracity decisions, but further research addressing the outlined limitations could enhance the robustness and applicability of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-29       |
+| Abstract | [http://arxiv.org/abs/2401.12713v1](http://arxiv.org/abs/2401.12713v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.12713v1](https://browse.arxiv.org/html/2401.12713v1)       |
+| Truncated       | False       |
+| Word Count       | 8243       |

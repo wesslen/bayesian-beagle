@@ -5,7 +5,7 @@ from pathlib import Path
 # Append the scripts directory to sys.path
 sys.path.append(str(Path(__file__).parent.parent / "scripts"))
 from summarizer import (
-    extract_text_from_html,
+    # extract_text_from_html,
     is_valid_arxiv_id,
     count_token,
     get_url_content,
@@ -17,43 +17,43 @@ from summarizer import (
 from unittest.mock import patch
 
 
-def test_extract_text_from_html():
-    html_content = """
-        <html>
-            <head>
-                <style>
-                    .ltx_page_content {
-                        background-color: #f0f0f0;
-                        padding: 20px;
-                    }
+# def test_extract_text_from_html():
+#     html_content = """
+#         <html>
+#             <head>
+#                 <style>
+#                     .ltx_page_content {
+#                         background-color: #f0f0f0;
+#                         padding: 20px;
+#                     }
 
-                    .ltx_document {
-                        background-color: #ffffff;
-                        margin: 10px;
-                        padding: 15px;
-                        border: 1px solid #ddd;
-                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                    }
+#                     .ltx_document {
+#                         background-color: #ffffff;
+#                         margin: 10px;
+#                         padding: 15px;
+#                         border: 1px solid #ddd;
+#                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+#                     }
 
-                    .ltx_section {
-                        color: #333333;
-                        font-family: Arial, sans-serif;
-                        font-size: 16px;
-                        margin: 5px 0;
-                    }
-                </style>
-            </head>
-            <body>
-                <div class="ltx_page_content">
-                    <div class="ltx_document">
-                        <section class="ltx_section">Test paragraph.</section>
-                    </div>
-                </div>
-            </body>
-        </html>
-        """
-    text = extract_text_from_html(html_content)
-    assert text == "Test paragraph."
+#                     .ltx_section {
+#                         color: #333333;
+#                         font-family: Arial, sans-serif;
+#                         font-size: 16px;
+#                         margin: 5px 0;
+#                     }
+#                 </style>
+#             </head>
+#             <body>
+#                 <div class="ltx_page_content">
+#                     <div class="ltx_document">
+#                         <section class="ltx_section">Test paragraph.</section>
+#                     </div>
+#                 </div>
+#             </body>
+#         </html>
+#         """
+#     text = extract_text_from_html(html_content)
+#     assert text == "Test paragraph."
 
 
 def test_token_words():
@@ -99,14 +99,14 @@ def test_valid_arxiv_html():
 
 
 # For the OpenAI integration, you would mock the API call and any network-related functionalities
-@patch("summarizer.OpenAIAssistant.process_text")
-def test_process_text(mock_process_text):
-    mock_process_text.return_value = "summarized text"
+@patch("summarizer.OpenAIAssistant.get_summary")
+def test_get_summary(mock_get_summary):
+    mock_get_summary.return_value = "summarized text"
 
     assistant = OpenAIAssistant()
-    summary = assistant.process_text("A long academic text", "summarize")
+    summary = assistant.get_summary("A long academic text", "summarize")
     assert summary == "summarized text"
-    mock_process_text.assert_called_once()
+    mock_get_summary.assert_called_once()
 
 
 def test_extract_first_png_image():

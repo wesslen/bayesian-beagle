@@ -121,7 +121,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
   </div>
 </header><main class="content" id="quarto-document-content">
-<p>I’m a Bayesian beagle who has curated LLM-summarized articles on LLMs.</p>
+<p>Welcome to the Bayesian beagle blog! This project is a unique intersection of machine learning and scientific communication, providing a platform where readers can quickly get insights from the latest research papers hosted on <a href="https://arxiv.org/">ArXiv</a>. Utilizing state-of-the-art Large Language Models (LLMs), our system generates concise, comprehensible summaries of complex research articles, covering a wide array of disciplines.</p>
+<p>Our blog is built using <a href="https://quarto.org/">Quarto</a>, an open-source scientific and technical publishing system designed for creating beautiful, data-driven content. It is then published with <a href="https://app.netlify.com/">Netlify</a>.</p>
+<pre class="mermaid"><code>graph LR
+    A["Download daily Arxiv articles"] --&gt; B["Predict and Filter LLM topic"]
+    B --&gt; C["Summarize short docs"]
+    B --&gt; D["Summarize by Map-Reduce long docs"]
+    C --&gt; E["Update website with summaries daily"]
+    D --&gt; E</code></pre>
 
 
 </main>  
@@ -352,8 +359,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://utteranc.es/client.js" repo="wesslen/bayesian-beagle" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 

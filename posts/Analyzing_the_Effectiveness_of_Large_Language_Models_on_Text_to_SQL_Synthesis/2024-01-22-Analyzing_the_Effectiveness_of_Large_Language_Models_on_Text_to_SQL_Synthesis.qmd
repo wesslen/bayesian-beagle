@@ -1,0 +1,41 @@
+
+---
+title: "Analyzing the Effectiveness of Large Language Models on Text-to-SQL Synthesis"
+id: "2401.12379v1"
+description: "Study compares LLM approaches for Text-to-SQL synthesis using spider dataset, achieving high accuracy and identifying common query errors."
+author: Richard Roberson, Gowtham Kaki, Ashutosh Trivedi
+date: "2024-01-22"
+image: "https://browse.arxiv.org/html/2401.12379v1/extracted/5362694/data_format.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.12379v1/extracted/5362694/data_format.png)
+
+**Summary of the Article:**
+This study focuses on analyzing the effectiveness of Large Language Models (LLMs) for Text-to-SQL program synthesis, particularly in generating SQL SELECT queries from natural language questions and database schemas. Two main approaches were explored, initially fine-tuning an open-source model resulting in a 61% execution accuracy, and then using the gpt-3.5-turbo-16k (Few-shot) model coupled with gpt-4-turbo (Zero-shot error correction) for an 82.1% execution accuracy. The study reveals insights into the challenges and improvements in LLM program synthesis and identifies seven categories of errors in the generated queries.
+
+### Major Findings:
+1. Large Language Model Performance:
+    - Fine-tuning an open-source WizardCoder-15B model achieved a 61% execution accuracy.
+    - Using the gpt-3.5-turbo-16k (Few-shot) model with gpt-4-turbo (Zero-shot error correction) resulted in an 82.1% execution accuracy.
+2. Categories of Query Errors:
+    - Queries fell into seven different categories of errors, including selecting wrong columns, predicting values inaccurately, and utilizing inappropriate JOIN clauses.
+3. Challenges with Spider Dataset:
+    - Inconsistencies within the spider dataset were identified, leading to evaluations of LLM-generated SQL queries being marked as incorrect despite being semantically correct.
+
+### Analysis and Critique:
+The study provides valuable insights into the performance and challenges of LLMs in Text-to-SQL program synthesis. However, the evaluation relies heavily on the spider dataset, which presents inconsistencies and inaccuracies, potentially affecting the assessment of LLM-generated SQL queries. Furthermore, the categorization of errors highlights the limitations of LLMs in understanding semantic nuances and contextual information, indicating the need for more sophisticated evaluation methods that go beyond superficial features to consider the semantics of the generated queries. This study emphasizes the continued dominance of closed-source models in high-performing LLMs, despite the potential for improvement in open-source models. Further research should focus on addressing dataset inconsistencies and developing methods for accurate evaluation and correction of LLM-generated SQL queries.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-27       |
+| Abstract | [http://arxiv.org/abs/2401.12379v1](http://arxiv.org/abs/2401.12379v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.12379v1](https://browse.arxiv.org/html/2401.12379v1)       |
+| Truncated       | False       |
+| Word Count       | 4669       |

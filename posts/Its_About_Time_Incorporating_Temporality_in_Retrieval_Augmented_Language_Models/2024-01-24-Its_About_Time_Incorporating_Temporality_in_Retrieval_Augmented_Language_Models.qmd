@@ -1,0 +1,42 @@
+
+---
+title: "It's About Time: Incorporating Temporality in Retrieval Augmented Language Models"
+id: "2401.13222v1"
+description: "Global web search needs accurate and up-to-date info. TempRALM improves retrieval over RALM by considering temporal relevance."
+author: Anoushka Gade, Jorjeta Jetcheva
+date: "2024-01-24"
+image: "https://browse.arxiv.org/html/2401.13222v1/extracted/5365536/images/Temp-RALM-FINAL.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.13222v1/extracted/5365536/images/Temp-RALM-FINAL.png)
+
+**Summary of the Article:**
+The article discusses the challenge of providing up-to-date and relevant information from the web, especially in the context of question-answering tools powered by large language models. It explores the limitations of current Retriever Augmented Language Models (RALMs) in handling temporal queries and proposes a novel, temporally-aware RALM, TempRALM, which demonstrates up to 74% improvement over the baseline RALM model without requiring extensive computational resources.
+
+### Major Findings:
+1. Existing RALMs Struggle with Temporal Queries
+   - RALMs, designed to reduce the tendency of large language models (LLMs) to generate inaccurate information, face challenges in differentiating between multiple versions of documents based on how recent they are, leading to limitations in answering time-sensitive queries.
+
+2. Introduction of Temporally-aware RALM (TempRALM)
+   - TempRALM is introduced as a solution to address the temporal limitations of RALMs, incorporating a temporal retrieval method to consider both semantic and temporal relevance in selecting documents for the language model's response. The approach significantly improves performance without extensive model pre-training or replacements.
+
+3. TempRALM Outperforms Atlas
+   - In test scenarios with varying few-shot training sets, TempRALM demonstrates superior performance compared to the Atlas-large model, especially in instances where the timestamp of the query does not match the text passage, showcasing the effectiveness of the temporal augmentation.
+
+### Analysis and Critique:
+The article effectively addresses the challenge of handling temporal queries in information retrieval models and proposes an innovative solution with significant performance improvements. However, the experiment's focus solely on the domain of tennis tournament data raises questions about the generalizability of the findings across diverse domains. Furthermore, the assessment of model performance and comparison mainly relies on exact-match metrics, potentially overlooking the model's ability to provide relevant information even if the exact answer is not produced. Additionally, the article mentions the possibility of future exploration into the interplay between the retriever and LLM, but it would benefit from further discussion on potential limitations or ethical considerations associated with the proposed approach. Overall, the article presents an insightful approach to incorporating temporality in retrieval augmented language models while warranting additional research for broader applicability and nuanced performance evaluation metrics.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-27       |
+| Abstract | [http://arxiv.org/abs/2401.13222v1](http://arxiv.org/abs/2401.13222v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.13222v1](https://browse.arxiv.org/html/2401.13222v1)       |
+| Truncated       | False       |
+| Word Count       | 7545       |

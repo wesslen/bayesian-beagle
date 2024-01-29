@@ -1,0 +1,39 @@
+
+---
+title: "Can AI Assistants Know What They Don't Know?"
+id: "2401.13275v1"
+description: "AI assistants based on large language models can perform tasks well, but still make errors. A new method helps reduce mistakes."
+author: Qinyuan Cheng, Tianxiang Sun, Xiangyang Liu, Wenwei Zhang, Zhangyue Yin, Shimin Li, Linyang Li, Kai Chen, Xipeng Qiu
+date: "2024-01-24"
+image: "https://browse.arxiv.org/html/2401.13275v1/x1.png"
+categories: ['production', 'education', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.13275v1/x1.png)
+
+### Summary of the Article:
+
+In this article, the authors investigated whether AI assistants based on large language models (LLMs) can be aware of and express what they do not know through natural language. They proposed a method to align AI assistants with model-specific "I don't know" (Idk) datasets containing known and unknown questions, aiming to teach the assistants to refuse to answer questions they do not know. The study conducted experiments using various alignment methods, including Idk-Prompting, Idk Supervised Fine-tuning, and Preference-aware Optimization, to explore their effectiveness in teaching AI assistants to acknowledge their unknowns. The investigation utilized the TriviaQA dataset for constructing the Idk dataset and conducting evaluations. The findings indicated that after aligning with Idk datasets, AI assistants could largely know what they know and refuse to answer their unknown questions. Additionally, the experiments showed that preference-aware optimization methods mitigated the problem of incorrectly rejecting known questions caused by supervised fine-tuning.
+
+### Major Findings:
+1. After aligning using Idk datasets, AI assistants are capable of largely knowing what they know and what they do not know and refusing their unknown questions. Llama-2-7b-chat can definitively determine whether it knows the answer to up to 78.96% of the questions in the test set and exhibits good performance on out-of-distribution test sets.
+2. Supervised fine-tuning caused the model to become overly conservative, incorrectly rejecting known questions. Preference-aware optimization can mitigate this problem, promoting the overall proportion of Ik-Ik and Ik-Idk questions.
+3. The Ik threshold used to define known and unknowns questions influences the behavior of the assistant. The higher the Ik threshold, the greater the total number of Ik-Ik and Ik-Idk questions, resulting in a more truthful assistant.
+4. Larger models are more adept at distinguishing which questions they know and which they don’t know. The use of Idk-SFT on Llama-2-70b-chat, as compared to Llama-2-7b-chat, results in a 5.8% improvement in the total number of Ik-Ik and Ik-Idk questions.
+
+### Analysis and Critique:
+The article provides valuable insights into the question of whether AI assistants can be aware of their own limitations and refuse to answer questions they do not know. The authors carefully designed experiments and proposed alignment methods that demonstrated the potential for AI assistants to acknowledge and express unknowns. However, the study focused mainly on alignment methods and their impact, overlooking potential biases in the experimental setup or discrepancies in the TriviaQA dataset utilized for constructing Idk datasets. Additionally, while the findings are promising, the article lacks a broader discussion of the ethical and practical implications of AI assistants refusing to answer questions. This critical analysis highlights the need to consider the broader context and application of the findings in real-world scenarios. Furthermore, exploring the impact of human-AI interaction and potential user perceptions when AI assistants refuse to provide answers could further enhance the article's relevance and significance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-27       |
+| Abstract | [http://arxiv.org/abs/2401.13275v1](http://arxiv.org/abs/2401.13275v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.13275v1](https://browse.arxiv.org/html/2401.13275v1)       |
+| Truncated       | False       |
+| Word Count       | 11051       |

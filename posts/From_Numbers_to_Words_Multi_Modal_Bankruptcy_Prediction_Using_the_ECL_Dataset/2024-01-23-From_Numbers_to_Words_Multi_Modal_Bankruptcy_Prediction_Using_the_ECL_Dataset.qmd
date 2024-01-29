@@ -1,0 +1,46 @@
+
+---
+title: "From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset"
+id: "2401.12652v1"
+description: "ECL dataset includes textual, numerical data from corporate filings. Various bankruptcy prediction models evaluated. Complementary modalities, limitations, GPT-based text summarization explored."
+author: Henri Arno, Klaas Mulier, Joke Baeck, Thomas Demeester
+date: "2024-01-23"
+image: "https://browse.arxiv.org/html/2401.12652v1/x1.png"
+categories: ['production', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.12652v1/x1.png)
+
+**Summary of the Article:**
+The academic article introduces the ECL dataset, which combines textual and numerical data from corporate 10K filings with associated binary bankruptcy labels. The paper presents classical and neural bankruptcy prediction models developed using this dataset. It delves into the role of bankruptcy prediction models, the development of the ECL dataset, the experimental setup, bankruptcy prediction results, and the potential of large language models (LLMs) in bankruptcy prediction.
+
+### Major Findings:
+1. **Complementary Information in Textual and Numerical Data:**
+    - The dataset demonstrates that the information from both textual and numerical data modalities is complementary for bankruptcy prediction.
+    - The textual data, extracted from the management discussion and analysis (MD&A), provides clear indications of bankruptcy consideration by companies. When explicit mentions of bankruptcy are absent, the numerical financial features become more informative for prediction.
+    - Results show that models trained solely on binary labels cannot distinguish 10K records filed in the year preceding bankruptcy from records filed by financially unhealthy companies close to bankruptcy but not within one year.
+
+2. **Qualitative Analysis of Results:**
+    - Models trained on the combined predictions of textual and numerical data in an ensemble perform best overall.
+    - The performance of models is evaluated based on various metrics, including the area under the receiver operating curve (ROC-AUC), average precision (AP), cumulative accuracy profile ratio (CAP ratio), and recall@100 for each classifier. The class imbalance in the dataset influences the high values on ROC-AUC and CAP ratio.
+
+3. **The Potential of LLMs for Text-Based Bankruptcy Prediction:**
+    - The study explores the use of large language models (LLMs), specifically GPT-3.5, for text-based bankruptcy prediction.
+    - The results show that the GPT-3.5 model's zero-shot bankruptcy prediction results are poor. However, it demonstrates value by providing meaningful summaries of the text in the 10K filings for the bankruptcy prediction task.
+
+### Analysis and Critique:
+The article provides valuable insights into the complementary nature of textual and numerical data for bankruptcy prediction, shedding light on the limitations of binary label-based models. However, the study does not adequately address the issue of small sample size for positive bankruptcy cases, potentially affecting the generalizability of the results. Additionally, the discussion regarding the potential of LLMs seems limited, with a need for further exploration of their capabilities and limitations. Furthermore, the article focuses on the technical aspects of the models without delving into the broader impact of the findings on bankruptcy prediction and financial decision-making. Overall, the study opens up avenues for future research but could benefit from addressing these limitations for a more comprehensive analysis.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-27       |
+| Abstract | [http://arxiv.org/abs/2401.12652v1](http://arxiv.org/abs/2401.12652v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.12652v1](https://browse.arxiv.org/html/2401.12652v1)       |
+| Truncated       | False       |
+| Word Count       | 8352       |

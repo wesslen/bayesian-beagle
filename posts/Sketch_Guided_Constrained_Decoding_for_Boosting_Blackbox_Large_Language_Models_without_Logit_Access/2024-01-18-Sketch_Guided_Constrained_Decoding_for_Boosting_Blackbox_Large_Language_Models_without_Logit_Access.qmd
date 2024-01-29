@@ -1,0 +1,38 @@
+
+---
+title: "Sketch-Guided Constrained Decoding for Boosting Blackbox Large Language Models without Logit Access"
+id: "2401.09967v1"
+description: "New approach, sketch-guided constrained decoding (SGCD), allows controlling blackbox language models without accessing their logits."
+author: Saibo Geng, Berkay Döner, Chris Wendler, Martin Josifoski, Robert West
+date: "2024-01-18"
+image: "https://browse.arxiv.org/html/2401.09967v1/extracted/5355273/figures/overview.png"
+categories: ['production', 'robustness', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.09967v1/extracted/5355273/figures/overview.png)
+
+**Summary of the Article:**
+
+The article introduces "Sketch-Guided Constrained Decoding" (SGCD) as a new approach to constrained decoding for blackbox Large Language Models (LLMs), which does not rely on direct logit access. The SGCD method utilizes a locally hosted auxiliary model to refine the outputs of a blackbox LLM while respecting specified constraints. The article demonstrates the efficacy of SGCD through experiments in closed information extraction and constituency parsing, highlighting its ability to enhance the utility and flexibility of blackbox LLMs for complex Natural Language Processing (NLP) tasks.
+
+### Major Findings:
+1. Constrained decoding offers a solution to restrict model outputs without necessitating model retraining or architectural modifications, but existing methods require access to the model’s logits during inference, posing limitations with blackbox LLMs.
+2. SGCD splits the constrained decoding task into two phases: sketching and constrained generation. It employs a sketcher, typically a powerful blackbox LLM, for the sketching phase and a constrained generator, a smaller-scale locally hosted LLM, for the constrained generation phase.
+3. The experimental evaluation of SGCD in closed information extraction and constituency parsing tasks demonstrates its ability to significantly enhance the performance of blackbox LLMs, particularly in terms of precision, recall, and F1-score.
+
+### Analysis and Critique:
+The article presents a novel method, SGCD, addressing the limitations of constrained decoding with blackbox LLMs, showcasing its effectiveness through experimental comparisons. However, the study acknowledges the "degeneration" issue where the constrained generator may produce outputs of inferior quality, and highlights potential data contamination risks in evaluating LLMs on downstream tasks. Further research is recommended to address the degeneration problem and to assess the impact of data contamination on the validity of conclusions drawn from LLM evaluations. Additionally, the article acknowledges that as LLMs continue to improve, the benefits of SGCD might diminish on some tasks, emphasizing the need for ongoing assessment and adaptation of methods in response to advancements in LLM technology.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-27       |
+| Abstract | [http://arxiv.org/abs/2401.09967v1](http://arxiv.org/abs/2401.09967v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.09967v1](https://browse.arxiv.org/html/2401.09967v1)       |
+| Truncated       | False       |
+| Word Count       | 6507       |

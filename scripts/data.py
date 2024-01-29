@@ -11,6 +11,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 app = typer.Typer()
 
+
 def remove_records_from_file(file_path, arxiv_ids):
     updated_records = []
     ids_found = set()
@@ -29,9 +30,10 @@ def remove_records_from_file(file_path, arxiv_ids):
     srsly.write_jsonl(file_path, updated_records)
     return ids_found
 
+
 @app.command()
 def remove_data(arxiv_ids: str, option: str):
-    arxiv_id_list = arxiv_ids.split(',')
+    arxiv_id_list = arxiv_ids.split(",")
     input_path = Path("data/input.jsonl")
     output_path = Path("data/output.jsonl")
 
@@ -55,6 +57,7 @@ def remove_data(arxiv_ids: str, option: str):
         print(f"Removed records with IDs: {removed_ids}")
     else:
         print(f"No records found for the given IDs")
+
 
 if __name__ == "__main__":
     app()

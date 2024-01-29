@@ -12,7 +12,11 @@ from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from langchain.chains.llm import LLMChain
 from langchain.chains import MapReduceDocumentsChain, ReduceDocumentsChain
 from langchain.docstore.document import Document
-from langchain_community.document_loaders import ArxivLoader, TextLoader, PDFMinerPDFasHTMLLoader
+from langchain_community.document_loaders import (
+    ArxivLoader,
+    TextLoader,
+    PDFMinerPDFasHTMLLoader,
+)
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain.text_splitter import TokenTextSplitter
@@ -27,15 +31,16 @@ app = typer.Typer()
 
 
 def get_url(arxiv_id: str, type: str):
-    if type=="html":
+    if type == "html":
         return f"https://browse.arxiv.org/html/{arxiv_id}"
-    elif type=="pdf":
+    elif type == "pdf":
         return f"https://arxiv.org/pdf/{arxiv_id}"
 
 
 def count_token(text: str) -> int:
     token_count = len(text) // 4  # Rough estimate of token count
     return token_count
+
 
 # def preprocess_long(arxiv, html_content, threshold):
 #     word_count = count_token(html_content)
@@ -49,13 +54,14 @@ def count_token(text: str) -> int:
 # #         docs[0].page_content = text
 #         logging.info(f"Truncated: {THRESHOLD} word counts")
 
-    # # Check if the request is already in the cache
-    # if (docs[0].metadata["Title"], prompt_name) in self.cache:
-    #     return self.cache[(docs[0].metadata["Title"], prompt_name)]
+# # Check if the request is already in the cache
+# if (docs[0].metadata["Title"], prompt_name) in self.cache:
+#     return self.cache[(docs[0].metadata["Title"], prompt_name)]
 
-    # Set metadata
-    # docs[0].metadata["word_count"] = word_count
-    # docs[0].metadata["is_truncated"] = True if word_count > THRESHOLD else False
+# Set metadata
+# docs[0].metadata["word_count"] = word_count
+# docs[0].metadata["is_truncated"] = True if word_count > THRESHOLD else False
+
 
 def extract_png_image(html_content: str, base_url: str) -> str:
     """Extracts the first PNG image URL from HTML content."""
@@ -66,9 +72,10 @@ def extract_png_image(html_content: str, base_url: str) -> str:
             return None
         else:
             return f"{base_url}/{png_url}"
-    except Exception as e: 
+    except Exception as e:
         logger.error(f"Failed to extract .png image: {e}")
         return None
+
 
 def preprocess_arxiv(arxiv_id: str) -> List[Document]:
     """Preprocesses the Arxiv document identified by the arxiv_id."""
@@ -89,20 +96,19 @@ def preprocess_arxiv(arxiv_id: str) -> List[Document]:
             "Summary": abstract,
             "png_url": png_url,
             "extraction": "HTML",
-            "word_counts": count_token(cleaned_html)
+            "word_counts": count_token(cleaned_html),
         }
 
         documents[0].metadata.update(metadata)
         return documents
 
     else:
-        logger.info(f"HTML output not available for {arxiv_id}. Using PDF and ArxivLoader instead.")
+        logger.info(
+            f"HTML output not available for {arxiv_id}. Using PDF and ArxivLoader instead."
+        )
         pdf_url = get_url(arxiv_id, "pdf")
         PDFMinerPDFasHTMLLoader(pdf_url)
-        arxiv_documents[0].metadata.update({
-            "png_url": None,
-            "extraction": "PDF"
-        })
+        arxiv_documents[0].metadata.update({"png_url": None, "extraction": "PDF"})
         return arxiv_documents
 
 
@@ -125,7 +131,7 @@ def preprocess_arxiv(arxiv_id: str) -> List[Document]:
 #                 print(f"Found .png image URL: {png_url}")
 #         except Exception as e:
 #             logger.error(f"Failed to extract .png image: {e}")
-        
+
 #         # assign metadata
 #         docs[0].metadata["Title"] = arxiv_docs[0].metadata["Title"]
 #         docs[0].metadata["Authors"] = arxiv_docs[0].metadata["Authors"]
@@ -315,7 +321,7 @@ class OpenAIAssistant:
         else:
             # If the text is within the limit, return it as is
             return text
-        
+
     def get_map_reduce(self, split_docs):
         llm = ChatOpenAI(temperature=self.temperature, model_name=self.model)
 
@@ -355,7 +361,7 @@ class OpenAIAssistant:
                 "Authors": "Authors",
                 "Published": "YYYY-MM-DD",
                 "word_count": 99999,
-                "png_url": None
+                "png_url": None,
             },
             # Reduce chain
             reduce_documents_chain=reduce_documents_chain,
@@ -404,8 +410,10 @@ class OpenAIAssistant:
 
                 results = self.get_map_reduce(split_docs)
 
-                results['input_documents'][0].metadata["word_count"] = word_count
-                results['input_documents'][0].metadata["is_truncated"] = True if word_count > THRESHOLD else False
+                results["input_documents"][0].metadata["word_count"] = word_count
+                results["input_documents"][0].metadata["is_truncated"] = (
+                    True if word_count > THRESHOLD else False
+                )
 
                 return results
 
@@ -517,7 +525,7 @@ def summarize(
                         "html": f"https://browse.arxiv.org/html/{arxiv_id}",
                         "abs": f"https://arxiv.org/abs/{arxiv_id}",
                     },
-                  "authors": summary["input_documents"][0].metadata["Authors"],
+                    "authors": summary["input_documents"][0].metadata["Authors"],
                     "title": remove_double_quotes(
                         summary["input_documents"][0].metadata["Title"]
                     ),

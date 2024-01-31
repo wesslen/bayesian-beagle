@@ -1,0 +1,37 @@
+
+---
+title: "ReGAL: Refactoring Programs to Discover Generalizable Abstractions"
+id: "2401.16467v1"
+description: "ReGAL improves large language models by learning reusable functions through code refactorization."
+author: Elias Stengel-Eskin, Archiki Prasad, Mohit Bansal
+date: "2024-01-29"
+image: "https://browse.arxiv.org/html/2401.16467v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.16467v1/x1.png)
+
+### Summary:
+ReGAL is a method for learning reusable functions via code refactorization to improve program synthesis using large language models (LLMs). The method is designed to address the limitations of LLMs, which often predict programs one at a time, leading to inefficiency and redundancy. ReGAL learns from a small set of existing programs, iteratively verifying and refining its abstractions via execution. The shared function libraries discovered by ReGAL make programs easier to predict across diverse domains. The method is tested on three datasets, including LOGO graphics generation, Date reasoning, and TextCraft, and shows significant improvements in accuracy when predicting programs with ReGAL functions.
+
+### Major Findings:
+1. ReGAL improves the accuracy of predicted programs across diverse domains, outperforming baseline agents that lack abstractions.
+2. The shared function libraries discovered by ReGAL are reusable and encapsulate frequently-used subroutines as well as environment dynamics.
+3. ReGAL's abstractions significantly improve the accuracy of predicted programs, especially for open-source LLMs, surpassing larger models like GPT-3.5 in some cases.
+
+### Analysis and Critique:
+The article presents a novel approach, ReGAL, for learning reusable functions to improve program synthesis using LLMs. The method shows promising results in improving the accuracy of predicted programs across diverse domains. However, the study has limitations, such as the potential risk of over-fitting and the need for further research to address the challenges of predicting primitive operations. Additionally, the method's reliance on code-based functions may limit its flexibility in dynamic environments. Further investigation and refinement of the approach are necessary to address these limitations and ensure its applicability in real-world scenarios.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-31       |
+| Abstract | [https://arxiv.org/abs/2401.16467v1](https://arxiv.org/abs/2401.16467v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.16467v1](https://browse.arxiv.org/html/2401.16467v1)       |
+| Truncated       | False       |
+| Word Count       | 10222       |

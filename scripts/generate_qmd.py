@@ -1,4 +1,5 @@
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 
@@ -41,6 +42,14 @@ format:
 
 def remove_unicode_accents(input_str):
     return input_str.replace("\\'", "")
+
+
+def remove_patterns(text):
+    # Regex pattern: \ followed by any characters except \ or { or }, followed by {}
+    pattern = r'\\[^\\{}]*\{.*?\}'
+    # Replace found patterns with an empty string
+    cleaned_text = re.sub(pattern, '', text)
+    return cleaned_text
 
 
 def remove_accents(input_str):
@@ -98,6 +107,7 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
     title = remove_unicode_accents(example["meta"]["title"])
     folder_name = convert_to_folder_name(title)
     example["meta"]["subtitle"] = remove_unicode_accents(example["meta"]["subtitle"])
+    example['meta']['subtitle'] = remove_patterns(example['meta']['subtitle'])
     current_date = example["meta"]["publish_date"]
     image = (
         "../../../bayesian-beagle.png"

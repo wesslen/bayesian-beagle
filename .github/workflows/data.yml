@@ -33,7 +33,7 @@ jobs:
         python -m pip install -r requirements-summarizer.txt
     - name: Remove files
       run: |
-        python scripts/data ${{ github.event.inputs.arxiv_ids }} ${{ github.event.inputs.option }}
+        python scripts/data.py ${{ github.event.inputs.arxiv_ids }} ${{ github.event.inputs.option }}
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"

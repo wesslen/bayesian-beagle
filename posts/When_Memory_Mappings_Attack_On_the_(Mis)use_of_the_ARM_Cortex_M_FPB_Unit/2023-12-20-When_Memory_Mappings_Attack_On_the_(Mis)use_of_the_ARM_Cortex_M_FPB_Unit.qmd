@@ -1,0 +1,37 @@
+
+---
+title: "When Memory Mappings Attack: On the (Mis)use of the ARM Cortex-M FPB Unit"
+id: "2312.13189v1"
+description: "Low-cost microcontrollers in IoT devices are vulnerable to security attacks, despite protection mechanisms."
+author: Haoqi Shan, Dean Sullivan, Orlando Arias
+date: "2023-12-20"
+image: "../../../bayesian-beagle.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+### **Summary:**
+The article discusses the exploitation of the Flash Patch and Breakpoint (FPB) unit in ARM Cortex-M microcontrollers to bypass common defenses for embedded devices. The authors demonstrate how benign memory mapped design-for-debug (DfD) structures can be leveraged to build new attack primitives, allowing for arbitrary control of bare-metal devices and data leakage. The paper highlights the detrimental impact of low-cost, low-power microcontrollers on security in embedded systems and emphasizes the need to balance security and debug structures in modern microcontrollers.
+
+### Major Findings:
+1. The authors demonstrate that defenses for embedded devices fall short when leveraging benign memory mapped design-for-debug (DfD) structures added by MCU vendors.
+2. The Flash Patch and Breakpoint (FPB) unit present in the ARM Cortex-M family can be used to build new attack primitives, bypassing common defenses for embedded devices.
+3. The paper provides a warning and a call to action in balancing security and debug structures in modern microcontrollers.
+
+### Analysis and Critique:
+The article provides valuable insights into the vulnerabilities of embedded systems and the potential for exploitation using the FPB unit in ARM Cortex-M microcontrollers. However, the paper lacks a comprehensive evaluation of potential solutions or countermeasures to mitigate the identified vulnerabilities. Additionally, the focus on specific vulnerabilities and attacks may limit the generalizability of the findings to a broader context. Further research is needed to explore the implications of these findings for the broader field of embedded systems security and to develop effective countermeasures to address the identified vulnerabilities.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-31       |
+| Abstract | [https://arxiv.org/abs/2312.13189v1](https://arxiv.org/abs/2312.13189v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.13189v1](https://browse.arxiv.org/html/2312.13189v1)       |
+| Truncated       | False       |
+| Word Count       | 8644       |

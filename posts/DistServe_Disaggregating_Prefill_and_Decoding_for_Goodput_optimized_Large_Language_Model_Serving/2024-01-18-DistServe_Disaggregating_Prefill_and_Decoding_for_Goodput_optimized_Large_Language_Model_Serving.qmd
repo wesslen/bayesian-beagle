@@ -14,7 +14,7 @@ format:
 
 ![](https://browse.arxiv.org/html/2401.09670v1/x1.png)
 
-### Summary of the Article:
+### Summary:
 
 The article presents DistServe, an approach that aims to improve the performance of large language models (LLMs) serving by disaggregating the prefill and decoding computation. Existing LLM serving systems batch the computation of prefill and decoding across all users and requests, leading to strong prefill-decoding interferences and coupling of resource allocation and parallelism plans for both phases. DistServe assigns prefill and decoding computation to different GPUs, eliminating interferences, and co-optimizes the resource allocation and parallelism strategy tailored for each phase. The approach significantly improves LLM serving performance in terms of the maximum request rate that can be served within both time to first token (TTFT) and time per output token (TPOT) constraints on each GPU.
 
@@ -33,7 +33,7 @@ However, the article lacks a detailed analysis of potential drawbacks or limitat
 |          |          |
 |----------|----------|
 | Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-01-29       |
+| Date Generated     | 2024-01-31       |
 | Abstract | [http://arxiv.org/abs/2401.09670v1](http://arxiv.org/abs/2401.09670v1)        |
 | HTML     | [https://browse.arxiv.org/html/2401.09670v1](https://browse.arxiv.org/html/2401.09670v1)       |
 | Truncated       | True       |

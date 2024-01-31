@@ -6,11 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mahdi Nikdan">
-<meta name="author" content="Soroush Tabesh">
-<meta name="author" content="Dan Alistarh">
+<meta name="author" content="Mahdi Nikdan, Soroush Tabesh, Dan Alistarh">
 <meta name="dcterms.date" content="2024-01-09">
-<meta name="description" content="New Robust Adaptation (RoSA) method efficiently fine-tunes large language models, outperforming existing methods at same parameter budget.">
+<meta name="description" content="PEFT method RoSA improves LLM performance with limited resources. Sparse GPU kernels support. Code available.">
 
 <title>Bayesian beagle - RoSA: Accurate Parameter-Efficient Fine-Tuning via Robust Adaptation</title>
 <style>
@@ -68,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - RoSA: Accurate Parameter-Efficient Fine-Tuning via Robust Adaptation">
-<meta property="og:description" content="New Robust Adaptation (RoSA) method efficiently fine-tunes large language models, outperforming existing methods at same parameter budget.">
-<meta property="og:image" content="https://browse.arxiv.org/html/2401.04679v2/x1.png">
+<meta property="og:description" content="PEFT method RoSA improves LLM performance with limited resources. Sparse GPU kernels support. Code available.">
+<meta property="og:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
 
@@ -122,12 +120,13 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">RoSA: Accurate Parameter-Efficient Fine-Tuning via Robust Adaptation</h1>
   <div class="quarto-categories">
     <div class="quarto-category">architectures</div>
+    <div class="quarto-category">production</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    New Robust Adaptation (RoSA) method efficiently fine-tunes large language models, outperforming existing methods at same parameter budget.
+    PEFT method RoSA improves LLM performance with limited resources. Sparse GPU kernels support. Code available.
   </div>
 </div>
 
@@ -135,11 +134,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Mahdi Nikdan </p>
-             <p>Soroush Tabesh </p>
-             <p>Dan Alistarh </p>
+             <p>Mahdi Nikdan, Soroush Tabesh, Dan Alistarh </p>
           </div>
   </div>
     
@@ -156,32 +153,22 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><img src="https://browse.arxiv.org/html/2401.04679v2/x1.png" class="img-fluid"></p>
-<section id="rosa-accurate-parameter-efficient-fine-tuning-via-robust-adaptation" class="level1">
-<h1>RoSA: Accurate Parameter-Efficient Fine-Tuning via Robust Adaptation</h1>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary:</h2>
-<p>RoSA introduces a new method called Robust Adaptation for parameter-efficient fine-tuning (PEFT) in large language models (LLMs). The method jointly trains low-rank and sparse adapters alongside a set of fixed pretrained weights to efficiently approximate the performance of full-fine-tuning (FFT) solutions. Robust Adaptation outperforms both Low-Rank Adaptation (LoRA) and pure sparse fine-tuning in challenging generative tasks while offering system support for efficient training. The paper provides an in-depth analysis, related work, and experimental results demonstrating the efficiency and effectiveness of the RoSA method.</p>
+<p><img src="None.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<p>The article discusses the adaptation of large language models (LLMs) through parameter-efficient fine-tuning (PEFT) methods, focusing on the Low-Rank Adaptation (LoRA) and Sparse Adaptation (SpA) methods. It introduces the Robust Adaptation (RoSA) method as an improvement over LoRA and SpA, highlighting the challenges of efficient sparsity masks and the limitations of the FISH Mask method. The article also presents the process of mask generation for RoSA and its implementation, demonstrating its superior accuracy compared to LoRA and SpA. The results of RoSA for the GSM8k dataset are discussed, emphasizing the importance of accurate mask generation. Additionally, the singular value analysis on full fine-tuning of the LLaMA2-7B model provides insights into the nature of updates made during fine-tuning.</p>
 </section>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings:</h2>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li>RoSA outperforms both LoRA and pure sparse fine-tuning at similar parameter budgets across challenging tasks, including grade-school math and SQL query generation.</li>
-<li>The method offers stable convergence and relatively simple hyper-parameter tuning while matching the accuracy of FFT in practical experiments.</li>
-<li>The paper presents evidence that the accuracy gap between adaptation methods and full fine-tuning of LLMs can be significantly reduced or even eliminated without sacrificing practical accessibility.</li>
+<li>The RoSA method outperforms LoRA and SpA in terms of accuracy across different datasets and parameter budgets.</li>
+<li>Accurate mask generation is crucial for the effectiveness of RoSA, with potential implications for fine-tuning LLMs.</li>
+<li>The singular value analysis reveals a low-rank structure in the updates made during full fine-tuning, but with non-zero small singular values indicating a more complex underlying structure.</li>
 </ol>
 </section>
-<section id="related-work" class="level2">
-<h2 class="anchored" data-anchor-id="related-work">Related Work:</h2>
-<ul>
-<li>The paper discusses recent approaches to parameter-efficient fine-tuning (PEFT) methods and their application in large language models (LLMs).</li>
-<li>It highlights the challenges posed by the computational and memory costs of training LLMs and the emergence of methods like LoRA and pure sparse fine-tuning to address these challenges.</li>
-<li>The authors also delve into the principles of Robust Principal Component Analysis (RPCA) and the need for improved system support for sparsity in training algorithms.</li>
-</ul>
-</section>
-<section id="critique" class="level2">
-<h2 class="anchored" data-anchor-id="critique">Critique:</h2>
-<p>The paper provides valuable insights into the development of RoSA and its promising performance in PEFT for LLMs. However, it would benefit from a more detailed comparison with existing state-of-the-art methods in PEFT and a deeper exploration of the limitations and potential failure cases of the RoSA method. Additionally, the paper could discuss the generalizability of the proposed approach across different types of LLMs and tasks.</p>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<p>The article provides a comprehensive overview of the PEFT methods and their application in fine-tuning LLMs, highlighting the challenges and limitations associated with efficient sparsity masks. The results of the experiments demonstrate the effectiveness of RoSA and the impact of different mask generation methods on training accuracy. However, the article could benefit from further discussion on potential biases in the experimental design and the generalizability of the findings to other LLMs. Additionally, future research could explore alternative methods for accurate mask generation and the implications of the singular value analysis for optimizing the fine-tuning process.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -193,29 +180,28 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-01-29</td>
+<td>2024-01-31</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="http://arxiv.org/abs/2401.04679v2">http://arxiv.org/abs/2401.04679v2</a></td>
+<td><a href="https://arxiv.org/abs/2401.04679v1">https://arxiv.org/abs/2401.04679v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2401.04679v2">https://browse.arxiv.org/html/2401.04679v2</a></td>
+<td><a href="https://browse.arxiv.org/html/2401.04679v1">https://browse.arxiv.org/html/2401.04679v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
-<td>False</td>
+<td>True</td>
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>9106</td>
+<td>16291</td>
 </tr>
 </tbody>
 </table>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

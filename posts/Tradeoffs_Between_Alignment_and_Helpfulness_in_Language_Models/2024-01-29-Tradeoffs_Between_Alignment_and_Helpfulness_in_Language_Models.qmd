@@ -1,0 +1,37 @@
+
+---
+title: "Tradeoffs Between Alignment and Helpfulness in Language Models"
+id: "2401.16332v1"
+description: "Representation engineering improves alignment but decreases model helpfulness, with a quadratic tradeoff."
+author: Yotam Wolf, Noam Wies, Dorin Shteyman, Binyamin Rothberg, Yoav Levine, Amnon Shashua
+date: "2024-01-29"
+image: "https://browse.arxiv.org/html/2401.16332v1/x1.png"
+categories: ['security', 'architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2401.16332v1/x1.png)
+
+### Summary:
+The article discusses the tradeoffs between alignment and helpfulness in language models (LLMs). It explores representation engineering as a method to alter the behavior of LLMs post-training, showing that it can improve alignment but reduce the helpfulness of the model. The authors propose a theoretical framework that provides bounds for these two quantities and demonstrate their relevance empirically. The findings suggest that while the helpfulness generally decreases, it does so quadratically with the norm of the representation engineering vector, while the alignment increases linearly with it, indicating a regime in which it is efficient to use representation engineering.
+
+### Major Findings:
+1. Representation engineering yields gains in alignment-oriented tasks such as resistance to adversarial attacks and reduction of social biases but causes a decrease in the ability of the model to perform basic tasks.
+2. The helpfulness of the model decreases quadratically with the representation engineering vector norm, while the alignment increases linearly with it, indicating a tradeoff between alignment and helpfulness.
+3. The linear increase in alignment and parabolic decrease in helpfulness suggest a regime where representation engineering is more effective.
+
+### Analysis and Critique:
+The article provides valuable insights into the tradeoffs between alignment and helpfulness in LLMs. However, it is important to note that the linear and quadratic relationships between alignment and helpfulness may not hold universally across all LLMs and tasks. Additionally, the study's focus on representation engineering as a method for alignment may overlook other potential approaches or combinations of methods that could achieve better tradeoffs. Further research is needed to validate the findings across different LLM architectures and datasets. Additionally, the article's theoretical framework and empirical evidence provide a strong foundation for future studies in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-31       |
+| Abstract | [https://arxiv.org/abs/2401.16332v1](https://arxiv.org/abs/2401.16332v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.16332v1](https://browse.arxiv.org/html/2401.16332v1)       |
+| Truncated       | False       |
+| Word Count       | 8041       |

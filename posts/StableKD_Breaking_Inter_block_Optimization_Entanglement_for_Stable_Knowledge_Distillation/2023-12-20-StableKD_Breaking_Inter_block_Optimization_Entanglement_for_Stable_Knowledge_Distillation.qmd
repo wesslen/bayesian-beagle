@@ -1,0 +1,37 @@
+
+---
+title: "StableKD: Breaking Inter-block Optimization Entanglement for Stable Knowledge Distillation"
+id: "2312.13223v1"
+description: "KD struggles with accuracy and slow distillation. StableKD breaks IBOE, boosts accuracy, and speeds convergence."
+author: Shiu-hong Kao, Jierun Chen, S. H. Gary Chan
+date: "2023-12-20"
+image: "../../../bayesian-beagle.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+### **Summary:**
+The article introduces StableKD, a novel knowledge distillation framework that addresses the issue of inter-block optimization entanglement (IBOE) in existing knowledge distillation approaches. StableKD decomposes a pair of teacher and student networks into several blocks for separate distillation and then progressively merges them back, evolving towards end-to-end distillation. Extensive experiments on CIFAR100, Imagewoof, and ImageNet datasets with various teacher-student pairs demonstrate that StableKD significantly boosts model accuracy, speeds up convergence, and outperforms other knowledge distillation approaches with only 40% of the training data.
+
+### Major Findings:
+1. **Inter-block Optimization Entanglement (IBOE):** The article identifies IBOE as a phenomenon that makes conventional end-to-end knowledge distillation approaches unstable with noisy gradients.
+2. **StableKD Framework:** StableKD distinguishes itself through two operations: Decomposition and Recomposition, which enable independent and stable training of student blocks and progressive merging towards end-to-end distillation.
+3. **Experimental Results:** Extensive experiments on CIFAR100, Imagewoof, and ImageNet datasets demonstrate that StableKD significantly boosts model accuracy, speeds up convergence, and outperforms other knowledge distillation approaches with only 40% of the training data.
+
+### Analysis and Critique:
+The article provides a comprehensive and well-structured overview of the StableKD framework and its experimental validation. However, it would be beneficial to include a more detailed discussion of the potential limitations and challenges of implementing StableKD in real-world scenarios. Additionally, further research could explore the applicability of StableKD to non-sequential neural networks and address the computational complexity of the framework. Overall, the article presents a promising approach to knowledge distillation with significant potential for practical deployment.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-31       |
+| Abstract | [https://arxiv.org/abs/2312.13223v1](https://arxiv.org/abs/2312.13223v1)        |
+| HTML     | [https://browse.arxiv.org/html/2312.13223v1](https://browse.arxiv.org/html/2312.13223v1)       |
+| Truncated       | False       |
+| Word Count       | 11605       |

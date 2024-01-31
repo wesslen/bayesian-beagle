@@ -1,0 +1,37 @@
+
+---
+title: "Large Language Models aren't all that you need"
+id: "2401.00698v1"
+description: "Comparison of traditional and Large Language Model for Multilingual Named Entity Recognition, with novel techniques."
+author: Kiran Voderhobli Holla, Chaithanya Kumar, Aryan Singh
+date: "2024-01-01"
+image: "../../../bayesian-beagle.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+### **Summary:**
+This paper discusses the architecture and systems developed to address the SemEval 2023 Task 2: MultiCoNER II (Multilingual Complex Named Entity Recognition). The authors evaluate two approaches: a traditional Conditional Random Fields model and a Large Language Model (LLM) fine-tuned with a customized head. They introduce novel ideas such as decaying auxiliary loss, triplet token blending, and task-optimal heads. The authors also experiment with multiple LLMs, including GPT-3, and various hyperparameter settings to achieve a final model with high f1 scores.
+
+### **Major Findings:**
+1. The authors demonstrate that while pre-trained LLMs significantly improve scores compared to traditional models, additional feature, loss, and model engineering techniques can further enhance the performance.
+2. The best-performing model achieves micro & macro f1 scores of 0.85/0.84 on the dev set and 0.67/0.61 on the test data, placing it in the top 20 of the competition's CONLL 2023 leaderboard.
+3. Leveraging LLMs, coupled with feature engineering techniques, results in excellent performance for fine-grained NER even in low-context settings without the need for external contexts.
+
+### **Analysis and Critique:**
+The paper provides valuable insights into the effectiveness of Large Language Models (LLMs) for Named Entity Recognition (NER) tasks. However, it is important to note that the authors acknowledge the potential for further improvements, such as adding context to boost scores and training with external data to create an ensemble of models. Additionally, the authors highlight the limitations of LLMs, such as the need for feature, model, and loss engineering to achieve optimal performance. The study also emphasizes the importance of domain knowledge in improving NER scores, as demonstrated by the addition of an auxiliary task of Coarse-Grained tag identification. Overall, the paper provides a comprehensive analysis of the strengths and limitations of LLMs for NER tasks, paving the way for future research in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-01-31       |
+| Abstract | [https://arxiv.org/abs/2401.00698v1](https://arxiv.org/abs/2401.00698v1)        |
+| HTML     | [https://browse.arxiv.org/html/2401.00698v1](https://browse.arxiv.org/html/2401.00698v1)       |
+| Truncated       | False       |
+| Word Count       | 6035       |

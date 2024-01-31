@@ -40,16 +40,23 @@ To clone and run this project locally, you'll need [Git](https://git-scm.com/dow
 
 ```bash
 # Clone this repository
-git clone https://github.com/wesslen/quarto-blog.git
+git clone https://github.com/wesslen/bayesian-beagle.git
 
 # Go into the repository
-cd quarto-blog
+cd bayesian-beagle
+
+# Create venv
+python3.9 -m venv venv
+source venv/bin/activate
 
 # Install dependencies for summary
 pip install -r requirements-summarizer.txt
 
 # Install dependencies for build
 pip install -r requirements-build.txt
+
+# Install dependencies for langchain
+pip install -r requirements-langchain.txt
 
 # Curate arxiv ids in data/input.jsonl, ensure they have HTML renderings
 

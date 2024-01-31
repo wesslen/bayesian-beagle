@@ -7,6 +7,7 @@ from typing import List, Optional
 import arxiv
 import requests
 import typer
+import tiktoken
 from bs4 import BeautifulSoup
 from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from langchain.chains.llm import LLMChain
@@ -110,44 +111,6 @@ def preprocess_arxiv(arxiv_id: str) -> List[Document]:
         PDFMinerPDFasHTMLLoader(pdf_url)
         arxiv_documents[0].metadata.update({"png_url": None, "extraction": "PDF"})
         return arxiv_documents
-
-
-# def preprocess_arxiv(arxiv_id: str) -> List[Document]:
-#     url = get_url(arxiv_id)
-#     html_content = get_url_content(url)
-#     arxiv_docs = ArxivLoader(query=arxiv_id, load_max_docs=1).load()
-#     if html_content:
-#         abstract = get_abstract_section(html_content)
-#         cleaned_html = clean_html_section(html_content)
-#         docs = html_to_docs(cleaned_html)
-
-#         # get first image
-#         try:
-#             png_url = extract_first_png_image(html_content)
-#             if png_url is None:
-#                 logger.warning("No .png image found in the HTML content.")
-#             else:
-#                 png_url = f"{url}/{png_url}"
-#                 print(f"Found .png image URL: {png_url}")
-#         except Exception as e:
-#             logger.error(f"Failed to extract .png image: {e}")
-
-#         # assign metadata
-#         docs[0].metadata["Title"] = arxiv_docs[0].metadata["Title"]
-#         docs[0].metadata["Authors"] = arxiv_docs[0].metadata["Authors"]
-#         docs[0].metadata["Published"] = arxiv_docs[0].metadata["Published"]
-#         docs[0].metadata["Summary"] = abstract
-#         docs[0].metadata["png_url"] = png_url
-#         docs[0].metadata["extraction"] = "HTML"
-#         docs[0].metadata["word_counts"] = count_token(cleaned_html)
-
-#         return docs
-#     elif html_content is None:
-#         logging.info(f"HTML output not available for {arxiv_id}")
-#         logger.info(f"Using PDF and ArxivLoader instead for {arxiv_id}")
-#         arxiv_docs[0].metadata["png_url"] = None
-#         arxiv_docs[0].metadata["extraction"] = "PDF"
-#         return arxiv_docs
 
 
 def get_url_content(url: str) -> Optional[str]:
@@ -295,6 +258,11 @@ def extract_first_png_image(html_content):
         raise
 
 
+def get_tiktoken_count(text, encoding):
+    token_integers = encoding.encode(text)
+    return len(token_integers)
+
+
 class OpenAIAssistant:
     def __init__(self, model="gpt-3.5-turbo-1106", temperature=0.3):
         self.model = model
@@ -385,23 +353,13 @@ class OpenAIAssistant:
             # Load the template based on prompt_name
             system_message = read_prompt_as_string(f"templates/{prompt_name}.txt")
             # count words, if longer than 15,000 then truncate
-            word_count = count_token(docs[0].page_content)
+            word_count = get_tiktoken_count(docs[0].page_content, encoding)
             logging.info(f"Raw {word_count} word counts")
-            THRESHOLD = 13500
+            THRESHOLD = 15000
             if word_count > THRESHOLD:
                 logging.info(
                     f"Warning: HTML content for {arxiv_id} exceeds {THRESHOLD} tokens. Running Map-Reduce summarization."
                 )
-                # sections = get_sections(docs[0].page_content)
-
-                # text_splitter = RecursiveCharacterTextSplitter(
-                #     separators=["\n\n\n\n\n", "\n\n\n\n", "\n\n\n", "\n\n"],
-                #     chunk_size=1000,
-                #     chunk_overlap=200,
-                #     length_function=len,
-                #     add_start_index=True,
-                #     is_separator_regex=False,
-                # )
 
                 text_splitter = TokenTextSplitter(chunk_size=5000, chunk_overlap=100)
 
@@ -457,7 +415,7 @@ class OpenAIAssistant:
 MODEL = "gpt-3.5-turbo-1106"
 TEMPERATURE = 0.1
 assistant = OpenAIAssistant(model=MODEL, temperature=TEMPERATURE)
-
+encoding = tiktoken.get_encoding("cl100k_base")
 
 @app.command()
 def summarize(
@@ -508,6 +466,9 @@ def summarize(
                     f"Skipping record {arxiv_id} due to an error in text summarization."
                 )
                 continue  # Skip current record
+
+            # if summary["output_text"][0:9] == "I'm sorry":
+            #     continue # skip if 
 
             # # run tldr
             tldr_response = assistant.get_summary(arxiv_id, "tldr")

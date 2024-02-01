@@ -1,11 +1,15 @@
 import json
+import fitz  # PyMuPDF
+import io
 import logging
 import os
 from pathlib import Path
+from PIL import Image
 from typing import List, Optional
 
 import arxiv
 import requests
+import tempfile
 import typer
 import tiktoken
 from bs4 import BeautifulSoup
@@ -43,27 +47,6 @@ def count_token(text: str) -> int:
     return token_count
 
 
-# def preprocess_long(arxiv, html_content, threshold):
-#     word_count = count_token(html_content)
-#     logging.info(f"Raw {word_count} word counts")
-#     THRESHOLD = 13500
-#     if word_count > THRESHOLD:
-#         logging.info(
-#             f"Warning: HTML content for {arxiv_id} exceeds {THRESHOLD} tokens. Truncating."
-#         )
-#         sections = break_up_html(html_content)
-# #         docs[0].page_content = text
-#         logging.info(f"Truncated: {THRESHOLD} word counts")
-
-# # Check if the request is already in the cache
-# if (docs[0].metadata["Title"], prompt_name) in self.cache:
-#     return self.cache[(docs[0].metadata["Title"], prompt_name)]
-
-# Set metadata
-# docs[0].metadata["word_count"] = word_count
-# docs[0].metadata["is_truncated"] = True if word_count > THRESHOLD else False
-
-
 def extract_png_image(html_content: str, base_url: str) -> str:
     """Extracts the first PNG image URL from HTML content."""
     try:
@@ -77,6 +60,59 @@ def extract_png_image(html_content: str, base_url: str) -> str:
         logger.error(f"Failed to extract .png image: {e}")
         return None
 
+
+def extract_first_image_from_arxiv_paper(id, output_dir="img", output_format="png", min_width=100, min_height=100) -> str:
+    # Construct the URL for the Arxiv PDF
+    pdf_url = f"https://arxiv.org/pdf/{id}.pdf"
+
+    # Create the output directory (including subdirectory for the Arxiv ID) if it does not exist
+    output_path = os.path.join(output_dir, id)
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+
+    # Download the PDF
+    response = requests.get(pdf_url)
+    if response.status_code != 200:
+        logger.info("Failed to download the PDF to get the image")
+        return None
+
+    # Save the PDF to a temporary file
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_pdf:
+        temp_pdf.write(response.content)
+        temp_pdf_path = temp_pdf.name
+
+    # Open the PDF with fitz
+    pdf_file = fitz.open(temp_pdf_path)
+
+    # Process the PDF
+    for page_index in range(len(pdf_file)):
+        page = pdf_file[page_index]
+        image_list = page.get_images(full=True)
+
+        if image_list:
+            print(f"[+] Found a total of {len(image_list)} images in page {page_index}")
+            img = image_list[0]
+            xref = img[0]
+            base_image = pdf_file.extract_image(xref)
+            image_bytes = base_image["image"]
+
+            image = Image.open(io.BytesIO(image_bytes))
+
+            if image.width >= min_width and image.height >= min_height:
+                image_index = 1
+                image_path = os.path.join(output_path, f"image_{image_index}.{output_format}")
+                image.save(open(image_path, "wb"), format=output_format.upper())
+                pdf_file.close()
+                os.remove(temp_pdf_path)  # Delete the temporary PDF file
+                return image_path
+            else:
+                logger.info(f"[-] Skipping image on page {page_index} due to its small size.")
+        else:
+            logger.info(f"[!] No images found on page {page_index}")
+
+    pdf_file.close()
+    os.remove(temp_pdf_path)  # Delete the temporary PDF file
+    return None
 
 def preprocess_arxiv(arxiv_id: str) -> List[Document]:
     """Preprocesses the Arxiv document identified by the arxiv_id."""
@@ -109,7 +145,10 @@ def preprocess_arxiv(arxiv_id: str) -> List[Document]:
         )
         pdf_url = get_url(arxiv_id, "pdf")
         PDFMinerPDFasHTMLLoader(pdf_url)
-        arxiv_documents[0].metadata.update({"png_url": None, "extraction": "PDF"})
+        arxiv_documents[0].metadata.update({
+                "png_url": extract_first_image_from_arxiv_paper(arxiv_id), 
+                "extraction": "PDF"
+            })
         return arxiv_documents
 
 

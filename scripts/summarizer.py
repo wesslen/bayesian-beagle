@@ -303,9 +303,10 @@ def get_tiktoken_count(text, encoding):
 
 
 class OpenAIAssistant:
-    def __init__(self, model="gpt-3.5-turbo-1106", temperature=0.3):
+    def __init__(self, model="gpt-3.5-turbo-1106", temperature=0.3, threshold=16000):
         self.model = model
         self.temperature = temperature
+        self.threshold = threshold
         self.cache = {}  # Initialize cache
 
     def truncate_string(self, text, token_threshold):
@@ -394,8 +395,7 @@ class OpenAIAssistant:
             # count words, if longer than 15,000 then truncate
             word_count = get_tiktoken_count(docs[0].page_content, encoding)
             logging.info(f"Raw {word_count} word counts")
-            THRESHOLD = 15000
-            if word_count > THRESHOLD:
+            if word_count > self.threshold:
                 logging.info(
                     f"Warning: HTML content for {arxiv_id} exceeds {THRESHOLD} tokens. Running Map-Reduce summarization."
                 )
@@ -453,7 +453,8 @@ class OpenAIAssistant:
 
 MODEL = "gpt-3.5-turbo-1106"
 TEMPERATURE = 0.1
-assistant = OpenAIAssistant(model=MODEL, temperature=TEMPERATURE)
+THRESHOLD = 16000
+assistant = OpenAIAssistant(model=MODEL, temperature=TEMPERATURE, threshold=THRESHOLD)
 encoding = tiktoken.get_encoding("cl100k_base")
 
 @app.command()

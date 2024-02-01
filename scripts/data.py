@@ -1,8 +1,9 @@
-from pathlib import Path
 import json
 import logging
-import typer
+from pathlib import Path
+
 import srsly
+import typer
 
 # Initialize logging
 logging.basicConfig(
@@ -38,7 +39,7 @@ def remove_data(arxiv_ids: str, option: str):
     output_path = Path("data/output.jsonl")
 
     if option not in ["both", "input", "output"]:
-        print("Invalid option. Please choose 'both', 'input', or 'output'.")
+        logging.info("Invalid option. Please choose 'both', 'input', or 'output'.")
         return
 
     ids_found_in_input = set()
@@ -54,9 +55,9 @@ def remove_data(arxiv_ids: str, option: str):
     removed_ids = ", ".join(all_ids_found)
 
     if all_ids_found:
-        print(f"Removed records with IDs: {removed_ids}")
+        logging.info(f"Removed records with IDs: {removed_ids}")
     else:
-        print(f"No records found for the given IDs")
+        logging.info("No records found for the given IDs")
 
 
 if __name__ == "__main__":

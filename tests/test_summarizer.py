@@ -4,18 +4,11 @@ from pathlib import Path
 
 # Append the scripts directory to sys.path
 sys.path.append(str(Path(__file__).parent.parent / "scripts"))
-from summarizer import (
-    # extract_text_from_html,
-    is_valid_arxiv_id,
-    count_token,
-    get_url_content,
-    OpenAIAssistant,
-    remove_double_quotes,
-    extract_first_png_image,
-)
-
 from unittest.mock import patch
 
+from summarizer import (OpenAIAssistant,  # extract_text_from_html,
+                        count_token, extract_first_png_image, get_url_content,
+                        is_valid_arxiv_id, remove_double_quotes)
 
 # def test_extract_text_from_html():
 #     html_content = """

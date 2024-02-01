@@ -1,30 +1,28 @@
-import json
-import fitz  # PyMuPDF
 import io
+import json
 import logging
 import os
+import tempfile
 from pathlib import Path
-from PIL import Image
 from typing import List, Optional
 
 import arxiv
+import fitz  # PyMuPDF
 import requests
-import tempfile
-import typer
 import tiktoken
+import typer
 from bs4 import BeautifulSoup
+from langchain.chains import MapReduceDocumentsChain, ReduceDocumentsChain
 from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from langchain.chains.llm import LLMChain
-from langchain.chains import MapReduceDocumentsChain, ReduceDocumentsChain
 from langchain.docstore.document import Document
-from langchain_community.document_loaders import (
-    ArxivLoader,
-    TextLoader,
-    PDFMinerPDFasHTMLLoader,
-)
+from langchain.text_splitter import TokenTextSplitter
+from langchain_community.document_loaders import (ArxivLoader,
+                                                  PDFMinerPDFasHTMLLoader,
+                                                  TextLoader)
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
-from langchain.text_splitter import TokenTextSplitter
+from PIL import Image
 from strip_tags import strip_tags
 
 # Initialize logging
@@ -61,7 +59,9 @@ def extract_png_image(html_content: str, base_url: str) -> str:
         return None
 
 
-def extract_first_image_from_arxiv_paper(id, output_dir="img", output_format="png", min_width=100, min_height=100) -> str:
+def extract_first_image_from_arxiv_paper(
+    id, output_dir="img", output_format="png", min_width=100, min_height=100
+) -> str:
     # Construct the URL for the Arxiv PDF
     pdf_url = f"https://arxiv.org/pdf/{id}.pdf"
 
@@ -100,19 +100,24 @@ def extract_first_image_from_arxiv_paper(id, output_dir="img", output_format="pn
 
             if image.width >= min_width and image.height >= min_height:
                 image_index = 1
-                image_path = os.path.join(output_path, f"image_{image_index}.{output_format}")
+                image_path = os.path.join(
+                    output_path, f"image_{image_index}.{output_format}"
+                )
                 image.save(open(image_path, "wb"), format=output_format.upper())
                 pdf_file.close()
                 os.remove(temp_pdf_path)  # Delete the temporary PDF file
                 return image_path
             else:
-                logger.info(f"[-] Skipping image on page {page_index} due to its small size.")
+                logger.info(
+                    f"[-] Skipping image on page {page_index} due to its small size."
+                )
         else:
             logger.info(f"[!] No images found on page {page_index}")
 
     pdf_file.close()
     os.remove(temp_pdf_path)  # Delete the temporary PDF file
     return None
+
 
 def preprocess_arxiv(arxiv_id: str) -> List[Document]:
     """Preprocesses the Arxiv document identified by the arxiv_id."""
@@ -145,10 +150,12 @@ def preprocess_arxiv(arxiv_id: str) -> List[Document]:
         )
         pdf_url = get_url(arxiv_id, "pdf")
         PDFMinerPDFasHTMLLoader(pdf_url)
-        arxiv_documents[0].metadata.update({
-                "png_url": extract_first_image_from_arxiv_paper(arxiv_id), 
-                "extraction": "PDF"
-            })
+        arxiv_documents[0].metadata.update(
+            {
+                "png_url": extract_first_image_from_arxiv_paper(arxiv_id),
+                "extraction": "PDF",
+            }
+        )
         return arxiv_documents
 
 
@@ -457,6 +464,7 @@ THRESHOLD = 16000
 assistant = OpenAIAssistant(model=MODEL, temperature=TEMPERATURE, threshold=THRESHOLD)
 encoding = tiktoken.get_encoding("cl100k_base")
 
+
 @app.command()
 def summarize(
     input_jsonl: str,
@@ -508,7 +516,7 @@ def summarize(
                 continue  # Skip current record
 
             # if summary["output_text"][0:9] == "I'm sorry":
-            #     continue # skip if 
+            #     continue # skip if
 
             # # run tldr
             tldr_response = assistant.get_summary(arxiv_id, "tldr")

@@ -1,0 +1,42 @@
+
+---
+title: "ChIRAAG: ChatGPT Informed Rapid and Automated Assertion Generation"
+id: "2402.00093v1"
+description: "TL;DR: LLM-based pipeline generates SVA from natural language, with 43% error rate. Iterative prompting improves accuracy."
+author: Bhabesh Mali, Karthik Maddala, Sweeya Reddy, Vatsal Gupta, Chandan Karfa, Ramesh Karri
+date: "2024-01-31"
+image: "https://browse.arxiv.org/html/2402.00093v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.00093v1/x1.png)
+
+### **Summary:**
+- The article discusses the use of Large Language Models (LLMs) to automatically generate assertions in English Language, Linear Temporal Logic, and System Verilog Assertion (SVA) from natural language specifications.
+- The authors developed a custom LLM-based on OpenAI GPT4 and tested the LLM-generated assertions using testbenches to verify their correctness.
+- The results show that LLMs can streamline the assertion generation workflow, reshaping verification workflows.
+
+### **Major Findings:**
+1. LLMs can generate assertions in English Language, Linear Temporal Logic, and System Verilog Assertion (SVA) from natural language specifications.
+2. Only 43% of LLM-generated raw assertions had errors, including syntax and logical errors.
+3. By iteratively prompting the LLMs using carefully crafted prompts derived from test case failures, the pipeline could generate correct SVAs after a maximum of nine iterations of prompting.
+
+### **Analysis and Critique:**
+- LLMs have the potential to streamline the assertion generation process, but they are not flawless and require manual checks to ensure correctness and consistency of the properties.
+- The study focused on correct and consistent assertions from English language specifications, but further research is needed to assess the completeness of assertions with respect to the specification.
+- LLMs can identify syntax, semantic, and inconsistency failures, and can also recognize missing or overlooked signals and include them in the generated assertions later on during the prompting process.
+- The use of LLMs in assertion generation shows promise to revolutionize verification workflows, but potential limitations and areas for improvement should be further explored.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-02       |
+| Abstract | [https://arxiv.org/abs/2402.00093v1](https://arxiv.org/abs/2402.00093v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.00093v1](https://browse.arxiv.org/html/2402.00093v1)       |
+| Truncated       | False       |
+| Word Count       | 3925       |

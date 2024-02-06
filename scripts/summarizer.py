@@ -103,7 +103,7 @@ def extract_first_image_from_arxiv_paper(
                 image_path = os.path.join(
                     output_path, f"image_{image_index}.{output_format}"
                 )
-                image.save(open(image_path, "wb"), format=output_format.upper())
+                image.save(image_path, format=output_format.upper())
                 pdf_file.close()
                 os.remove(temp_pdf_path)  # Delete the temporary PDF file
                 return image_path

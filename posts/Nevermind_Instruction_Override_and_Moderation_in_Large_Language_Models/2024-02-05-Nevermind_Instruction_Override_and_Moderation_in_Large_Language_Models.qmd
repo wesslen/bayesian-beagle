@@ -1,0 +1,43 @@
+
+---
+title: "Nevermind: Instruction Override and Moderation in Large Language Models"
+id: "2402.03303v1"
+description: "LLMs perform best in following instructions, but larger models can be too obedient."
+author: Edward Kim
+date: "2024-02-05"
+image: "img/2402.03303v1/image_1.png"
+categories: ['production', 'architectures', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](img/2402.03303v1/image_1.png)
+
+### **Summary:**
+- Investigates and benchmarks Large Language Models (LLMs) on the task of explicit instruction following in conflicting situations, e.g. overrides.
+- Larger models perform the best in following instructions that override internal and contextual instructions, and are obedient, even to a fault.
+- Maintaining instruction following capabilities when scaling to longer contexts via rope scaling requires a significant buffer from the edge of the perplexity cliff.
+
+### Major Findings:
+1. Larger models perform the best in following instructions that override internal and contextual instructions, and are obedient, even to a fault.
+2. When scaling to longer contexts via rope scaling, a significant buffer needs to be maintained from the edge of the perplexity cliff in order to maintain instruction following capabilities.
+3. Improving instruction following is fundamentally at odds with the ability of a language model to follow given safety filters or guidelines.
+
+### Analysis and Critique:
+- Larger models exhibit superior capability in navigating instructions that require overriding both internal knowledge and contextual cues, demonstrating a high degree of obedience.
+- The introduction of rope scaling to extend context handling introduces the necessity of a carefully managed buffer to avoid the perplexity cliff, ensuring the models maintain their ability to follow instructions effectively.
+- However, there is a fundamental tension between enhancing a model’s ability to override instructions and maintaining adherence to safety protocols and guidelines.
+- Over-alignment of the models destroys model weights and reduces their general capabilities; thus, an alternative framework has been developed and demonstrated that has parallels to neuro-inspired cognitive control.
+- The research suggests that a path to developing safe and trustworthy AI may lie in mechanisms external to the LLMs themselves, akin to the introduction of a pre-frontal cortex that understands what rules and behaviors are acceptable in various situations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-06       |
+| Abstract | [https://arxiv.org/abs/2402.03303v1](https://arxiv.org/abs/2402.03303v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.03303v1](https://browse.arxiv.org/html/2402.03303v1)       |
+| Truncated       | False       |
+| Word Count       | 9483       |

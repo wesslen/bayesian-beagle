@@ -1,0 +1,41 @@
+
+---
+title: "GLaPE: Gold Label-agnostic Prompt Evaluation and Optimization for Large Language Model"
+id: "2402.02408v1"
+description: "LLMs' task performance relies on prompt design, GLaPE proposes label-agnostic prompt evaluation."
+author: Xuanchang Zhang, Zhuosheng Zhang, Hai Zhao
+date: "2024-02-04"
+image: "../../../bayesian-beagle.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](None)
+
+### **Summary:**
+- Large language models (LLMs) are sensitive to prompt design, which affects their task performance.
+- Existing prompt optimization methods heavily rely on manually annotated gold labels, hindering widespread implementation and generality.
+- To address this limitation, the authors propose a gold label-agnostic prompt evaluation (GLaPE) method that eliminates the reliance on gold labels.
+
+### Major Findings:
+1. GLaPE utilizes self-consistency as the initial evaluation score and refines the scores of prompts producing identical answers to be mutually consistent.
+2. Experimental results show that GLaPE provides reliable evaluations uniform with accuracy, even in the absence of gold labels.
+3. GLaPE-based prompt optimization yields effective prompts comparable to accuracy-based ones on six popular reasoning tasks.
+
+### Analysis and Critique:
+- The GLaPE method demonstrates a strong correlation with accuracy, making it a robust metric for prompt evaluation and optimization.
+- However, the method faces limitations in accurately assessing prompts for complex questions, particularly those that surpass the intrinsic capabilities of LLMs.
+- Future research could explore innovative approaches to aggregate assessments on individual questions and augment the granularity of prompt evaluations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-06       |
+| Abstract | [https://arxiv.org/abs/2402.02408v1](https://arxiv.org/abs/2402.02408v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.02408v1](https://browse.arxiv.org/html/2402.02408v1)       |
+| Truncated       | False       |
+| Word Count       | 9827       |

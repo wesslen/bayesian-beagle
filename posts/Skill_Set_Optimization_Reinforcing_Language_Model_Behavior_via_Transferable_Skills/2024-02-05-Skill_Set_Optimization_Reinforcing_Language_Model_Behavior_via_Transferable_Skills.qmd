@@ -1,0 +1,42 @@
+
+---
+title: "Skill Set Optimization: Reinforcing Language Model Behavior via Transferable Skills"
+id: "2402.03244v1"
+description: "Proposing Skill Set Optimization (SSO) to improve LLM actor performance in interactive environments."
+author: Kolby Nottingham, Bodhisattwa Prasad Majumder, Bhavana Dalvi Mishra, Sameer Singh, Peter Clark, Roy Fox
+date: "2024-02-05"
+image: "img/2402.03244v1/image_1.png"
+categories: ['prompt-engineering', 'production', 'hci', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](img/2402.03244v1/image_1.png)
+
+### **Summary:**
+- Large language models (LLMs) have been used for sequential decision making in interactive environments, but leveraging environment reward signals for continual LLM actor improvement is challenging.
+- Skill Set Optimization (SSO) is proposed for improving LLM actor performance through constructing and refining sets of transferable skills. SSO constructs skills by extracting common subtrajectories with high rewards and generating subgoals and instructions to represent each skill. These skills are provided to the LLM actor in-context to reinforce behaviors with high rewards. Then, SSO further refines the skill set by pruning skills that do not continue to result in high rewards.
+- SSO outperforms baselines by 40% in a custom NetHack task and outperforms the previous state-of-the-art in ScienceWorld by 35%.
+
+### Major Findings:
+1. Large Language Model (LLM) actors have been deployed in interactive domains such as robotics, games, and programming. However, finetuning an LLM actor directly using a traditional RL policy gradient is impractical with contemporary LLMs and impossible with black-box closed-source LLMs. Instead, a new paradigm of in-context policy improvement is explored.
+2. In natural language processing (NLP) tasks, in-context learning improves task performance by editing LLM inputs with instructions, task examples, or auxiliary tasks. However, naively applying these techniques to interactive domains generalizes poorly between tasks and does not scale well. Interactive domains require sequential decision making with long trajectories of actions and complex credit assignment.
+3. Skill Set Optimization (SSO) is proposed for automatically constructing skills for in-context policy improvement, where a skill is a list of instructions for reaching a subgoal. SSO takes inspiration from both in-context learning and policy optimization to optimize a set of skills for in-context policy improvement.
+
+### Analysis and Critique:
+- The proposed Skill Set Optimization (SSO) method demonstrates significant improvements in LLM actor performance, outperforming baselines in both custom NetHack and ScienceWorld tasks.
+- The SSO method effectively constructs and refines transferable skills, providing a promising approach for continual learning and policy improvement in interactive environments.
+- However, the limitations of SSO include the reliance on similarity-based extraction for skill construction, which may be less effective in environments with distracting state information or low-level actions. Additionally, the method does not include a mechanism for leveraging negative environment feedback outside skill set refinement.
+- Overall, the SSO method represents a significant advancement in the field of in-context policy optimization for LLM actors, but further research is needed to address its limitations and enhance its effectiveness.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-06       |
+| Abstract | [https://arxiv.org/abs/2402.03244v1](https://arxiv.org/abs/2402.03244v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.03244v1](https://browse.arxiv.org/html/2402.03244v1)       |
+| Truncated       | False       |
+| Word Count       | 14254       |

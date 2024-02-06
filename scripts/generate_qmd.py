@@ -74,6 +74,18 @@ def remove_accents(input_str):
     return "".join(accents_mapping.get(char, char) for char in input_str)
 
 
+def get_image_path(example):
+    image_path = example.get("meta", {}).get("image", None)
+    
+    if image_path is None:
+        image = "../../../bayesian-beagle.png"
+    elif "img/" in image_path:
+        image = f"../../{image_path}"
+    else:
+        image = image_path
+    
+    return image
+
 def convert_to_folder_name(title):
     """
     Convert a given string to a folder name format by replacing spaces, slashes,
@@ -109,11 +121,7 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
     example["meta"]["subtitle"] = remove_unicode_accents(example["meta"]["subtitle"])
     example["meta"]["subtitle"] = remove_patterns(example["meta"]["subtitle"])
     current_date = example["meta"]["publish_date"]
-    image = (
-        "../../../bayesian-beagle.png"
-        if example["meta"]["image"] is None
-        else example["meta"]["image"]
-    )
+    example["meta"]["image"] = get_image_path(example)
     file_name = f"{current_date}-{folder_name}.qmd"
     folder_path = Path(output_folder) / folder_name
     file_path = folder_path / file_name
@@ -132,7 +140,7 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
         example=example,
         current_date=current_date,
         timestamp=datetime.now(),
-        image=image,
+        image=example["meta"]["image"],
         authors=authors,
     )
 

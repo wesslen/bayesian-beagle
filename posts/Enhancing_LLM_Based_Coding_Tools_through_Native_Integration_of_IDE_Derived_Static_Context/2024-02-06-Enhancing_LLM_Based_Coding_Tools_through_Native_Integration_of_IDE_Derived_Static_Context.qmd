@@ -1,0 +1,42 @@
+
+---
+title: "Enhancing LLM-Based Coding Tools through Native Integration of IDE-Derived Static Context"
+id: "2402.03630v1"
+description: "LLMs struggle with repository-level code completion, but IDECoder leverages IDEs for improvement."
+author: Yichen Li, Yun Peng, Yintong Huo, Michael R. Lyu
+date: "2024-02-06"
+image: "https://browse.arxiv.org/html/2402.03630v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.03630v1/x1.png)
+
+### **Summary:**
+- Large Language Models (LLMs) have been successful in code completion for single source files but struggle with repository-level code completion for large software projects.
+- IDECoder is proposed as a framework to leverage Integrated Development Environments (IDEs) to enhance LLMs for repository-level code completion.
+- IDECoder integrates static contexts and diagnosis results from IDEs to improve the capabilities of LLMs for code completion.
+
+### **Major Findings:**
+1. Code LLMs are effective for in-file code completion but struggle with cross-file information for repo-level code completion.
+2. IDECoder leverages IDEs to provide cross-file context information and diagnosis results to enhance LLMs for repo-level code completion.
+3. Preliminary experiments show that IDECoder outperforms baseline methods in code completion tasks, demonstrating its effectiveness.
+
+### **Analysis and Critique:**
+- Challenges in identifying cross-file contexts include maintaining accuracy and ensuring relevance, which current methods struggle to address.
+- Fusion of cross-file contexts is challenging due to the limited context length of LLMs and the need to prioritize different elements in the contexts.
+- IDECoder's integration of static information and diagnosis results from IDEs shows promise, but the closed-source nature of the Pylance plugin limits its full potential.
+- Future plans to develop a more mature version of IDECoder and extend it to support a broader range of code-related tasks are promising, but the need for customizable native coding tools from IDE vendors is essential for its success.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-07       |
+| Abstract | [https://arxiv.org/abs/2402.03630v1](https://arxiv.org/abs/2402.03630v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.03630v1](https://browse.arxiv.org/html/2402.03630v1)       |
+| Truncated       | False       |
+| Word Count       | 4302       |

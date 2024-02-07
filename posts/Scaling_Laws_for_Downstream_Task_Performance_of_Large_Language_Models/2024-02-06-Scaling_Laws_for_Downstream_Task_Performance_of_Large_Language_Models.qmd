@@ -1,0 +1,51 @@
+
+---
+title: "Scaling Laws for Downstream Task Performance of Large Language Models"
+id: "2402.04177v1"
+description: "Scaling laws in transfer learning for language models impact downstream performance in machine translation."
+author: Berivan Isik, Natalia Ponomareva, Hussein Hazimeh, Dimitris Paparas, Sergei Vassilvitskii, Sanmi Koyejo
+date: "2024-02-06"
+image: "../../img/2402.04177v1/image_1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.04177v1/image_1.png)
+
+B.3
+Comparison of T5-3B and T5-770M
+In Figures 7 and 8, we compare the scaling behavior of T5-3B and T5-770M models for the en-de and en-fr
+translation tasks. We observe that the scaling laws for both models are consistent with each other, showing
+similar trends in the scaling behavior for both the BLEU score and the downstream cross-entropy loss. This
+suggests that the scaling laws are robust and consistent across different model sizes.
+Figure 7: Comparison of scaling behavior for T5-3B and T5-770M models for the en-de translation task.
+(top) BLEU score vs pretraining dataset size: f(Dp) = (log(A · Dα
+p))β. (bottom) Cross-entropy (CE)
+validation loss vs pretraining dataset size: L(Dp) = E +
+A
+Dα
+p .
+Figure 8: Comparison of scaling behavior for T5-3B and T5-770M models for the en-fr translation task.
+(top) BLEU score vs pretraining dataset size: f(Dp) = (log(A · Dα
+p))β. (bottom) Cross-entropy (CE)
+validation loss vs pretraining dataset size: L(Dp) = E +
+A
+Dα
+p .
+Overall, the comparison of the scaling behavior between T5-3B and T5-770M models shows that the scaling
+laws are consistent and provide similar insights into the relationship between pretraining dataset size and
+downstream task performance for both models. This consistency across different model sizes adds credibility
+to the findings and insights derived from the scaling laws.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-07       |
+| Abstract | [https://arxiv.org/abs/2402.04177v1](https://arxiv.org/abs/2402.04177v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.04177v1](https://browse.arxiv.org/html/2402.04177v1)       |
+| Truncated       | False       |
+| Word Count       | 15391       |

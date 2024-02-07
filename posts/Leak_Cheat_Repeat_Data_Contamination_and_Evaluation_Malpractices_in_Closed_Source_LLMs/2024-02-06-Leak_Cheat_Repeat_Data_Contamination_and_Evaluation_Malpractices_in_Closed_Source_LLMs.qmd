@@ -1,0 +1,47 @@
+
+---
+title: "Leak, Cheat, Repeat: Data Contamination and Evaluation Malpractices in Closed-Source LLMs"
+id: "2402.03927v1"
+description: "NLP research focuses on LLMs, but data contamination and evaluation issues are concerning."
+author: Simone Balloccu, Patrícia Schmidtová, Mateusz Lango, Ondřej Dušek
+date: "2024-02-06"
+image: "../../img/2402.03927v1/image_1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.03927v1/image_1.png)
+
+### Summary:
+- The article discusses data contamination and evaluation malpractices in the context of Large Language Models (LLMs), focusing on OpenAI's GPT-3.5 and GPT-4. It provides a systematic analysis of 255 papers evaluating these models, revealing data leakage and evaluation malpractices. The authors propose suggested practices for the evaluation of closed-source LLMs.
+
+- The majority of papers that leaked data were published before the official release of the ChatGPT API. The web interface access decreased after March 2023, but some work continued to use it until September 2023. The leaked data after the API release suggests that some researchers are unaware of OpenAI's data policy or do not consider it a problem. The severity of data leaks was quantified, with over 4.7M samples leaked from 263 unique datasets. Most samples came from whole datasets, followed by test and development sets, and training sets. The leaked data included examples' labels, which is considered the worst case of data leaking. The evaluation of ChatGPT's performance was often unfair, with comparisons to open models missing or unequal comparisons. The evaluation reproducibility and fairness were also analyzed.
+
+- The section covers various aspects of ChatGPT, such as its multilingual learning capabilities, performance evaluation on benchmark datasets, meta-analysis after 2.5 months, information extraction capabilities, and its potential in reviving anime characters in reality. Additionally, the section discusses the use of ChatGPT as a database interface, its promise in detecting and discriminating hateful, offensive, and toxic comments on social media, and its grounding via dynamic knowledge adapting over heterogeneous sources. Furthermore, the section delves into guiding large language models via directional stimulus prompting, holistic evaluation of language models, and few-shot text classification for finance. The section also explores ChatGPT's capabilities in zero-shot text-to-SQL, modeling ambiguity, and evaluating large language models on graphs. Additionally, it covers the evaluation of logical reasoning ability, code generation, vulnerability description mappings, and NLG evaluation using GPT-4. Lastly, the section discusses the future of large language models and their potential in generative pre-training.
+
+- The utility of ChatGPT throughout the entire clinical workflow is explored in this academic paper. The authors investigate the potential of large language models, such as ChatGPT, for various applications in the clinical domain. They analyze the performance of ChatGPT in tasks such as summarization, question answering, knowledge retrieval, and more.
+
+- This section provides additional details on the evaluation reproducibility and fairness of the work reviewed. Concrete numbers for the assessment of reproducibility and evaluation practices are presented in Tables 2 and 3. Additionally, Tables 4, 5, and 6 show the datasets that have been leaked to ChatGPT, categorized according to the task and the level of leakage.
+
+### Major Findings:
+1. Data leakage and evaluation malpractices are prevalent in the evaluation of Large Language Models, particularly with respect to OpenAI's GPT-3.5 and GPT-4.
+2. ChatGPT demonstrates diverse capabilities, including multilingual learning, information extraction, and addressing real-world issues such as detecting hateful and offensive comments on social media.
+3. ChatGPT shows potential for various applications in the clinical domain, including summarization, question answering, and knowledge retrieval.
+
+### Analysis and Critique:
+- The findings highlight the need for improved evaluation practices and transparency in the use of large language models, particularly in addressing data leakage and ensuring fairness and reproducibility.
+- The diverse capabilities of ChatGPT underscore its potential impact on real-world applications, but further empirical studies and comprehensive evaluations are necessary to understand its effectiveness and limitations in different domains.
+- The detailed statistics and information provided in the section on evaluation reproducibility and fairness offer transparency and insight into the validity and trustworthiness of the evaluated models and their outputs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-07       |
+| Abstract | [https://arxiv.org/abs/2402.03927v1](https://arxiv.org/abs/2402.03927v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.03927v1](https://browse.arxiv.org/html/2402.03927v1)       |
+| Truncated       | True       |
+| Word Count       | 31020       |

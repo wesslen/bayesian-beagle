@@ -1,0 +1,42 @@
+
+---
+title: "Understanding the Effect of Noise in LLM Training Data with Algorithmic Chains of Thought"
+id: "2402.04004v1"
+description: "LLMs trained on large text datasets are impacted differently by static and dynamic noise."
+author: Alex Havrilla, Maia Iyer
+date: "2024-02-06"
+image: "../../img/2402.04004v1/image_1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.04004v1/image_1.png)
+
+### Summary:
+In this article, the authors investigate the impact of noise in algorithmic chains of thought (CoT) on the training of large language models (LLMs). They study the effects of static and dynamic noise on the performance of LLMs during both pretraining and fine-tuning. The study focuses on algorithmically solvable tasks such as arithmetic operations and median finding. The results show that fine-tuned models are robust to high levels of static noise but struggle with lower levels of dynamic noise. Additionally, few-shot prompted models appear more sensitive to even static noise.
+
+### Major Findings:
+1. The study reveals that fine-tuned models are extremely robust to high levels of static noise but struggle significantly more with lower levels of dynamic noise.
+2. Few-shot prompted models appear more sensitive to even static noise.
+3. The study also demonstrates the sample efficiency of CoT training, requiring only a single epoch of training and a small number of samples to generalize.
+
+### Analysis and Critique:
+- The study provides valuable insights into the robustness of LLMs to noise in algorithmic CoT training data.
+- The findings have implications for the design of CoT, suggesting that well-designed algorithmic CoT can improve the performance and generalization of LLMs.
+- The study, however, does not address the impact of scale on the robustness of LLMs to noise, which could be a potential area for future research.
+- The article provides a comprehensive analysis of the impact of noise on LLM training, highlighting the importance of noise filtering best practices.
+
+Overall, the article provides valuable insights into the impact of noise in LLM training data and its implications for the design of algorithmic CoT. However, further research is needed to explore the impact of scale on the robustness of LLMs to noise.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-07       |
+| Abstract | [https://arxiv.org/abs/2402.04004v1](https://arxiv.org/abs/2402.04004v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.04004v1](https://browse.arxiv.org/html/2402.04004v1)       |
+| Truncated       | False       |
+| Word Count       | 14729       |

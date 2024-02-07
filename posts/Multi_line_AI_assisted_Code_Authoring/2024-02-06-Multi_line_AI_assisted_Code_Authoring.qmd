@@ -1,0 +1,47 @@
+
+---
+title: "Multi-line AI-assisted Code Authoring"
+id: "2402.04141v1"
+description: "CodeCompose evolved to provide multi-line suggestions, overcoming challenges and improving usability for developers."
+author: Omer Dunay, Daniel Cheng, Adam Tait, Parth Thakkar, Peter C Rigby, Andy Chiu, Imad Ahmad, Arun Ganesan, Chandra Maddila, Vijayaraghavan Murali, Ali Tayyebi, Nachiappan Nagappan
+date: "2024-02-06"
+image: "../../img/2402.04141v1/image_1.png"
+categories: ['architectures', 'production', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.04141v1/image_1.png)
+
+### **Summary:**
+CodeCompose is an AI-assisted code authoring tool that provides inline suggestions to developers at Meta. In this paper, the authors present the challenges and solutions in scaling the product from single-line to multi-line suggestions. They discuss the "jarring" effect of multi-line suggestions, the latency in generating them, and the impact on user experience.
+
+### Major Findings:
+1. **Jarring Effect of Multi-line Suggestions:**
+   - Multi-line suggestions can disrupt the user's existing code, causing a "jarring" effect and increased cognitive load.
+   - The authors developed a scope-based algorithm to trigger multi-line suggestions only when the cursor is at the end of the current scope, reducing the disruption.
+
+2. **Latency Reduction for Multi-line Suggestions:**
+   - Multi-line suggestions take longer to generate, leading to decreased display rate and user satisfaction.
+   - The authors implemented various optimizations to reduce latency, including Flash Attention, CUDA graphs, and streaming with early cancellation.
+
+3. **Effectiveness of Multi-line Suggestions:**
+   - Despite the longer generation time, multi-line suggestions accounted for 42% of total characters accepted by users, demonstrating their impact.
+   - User feedback indicated a noticeable improvement in the coding experience with multi-line suggestions.
+
+### Analysis and Critique:
+- The authors effectively addressed the challenges of scaling CodeCompose to support multi-line suggestions, providing innovative solutions to reduce latency and improve user experience.
+- However, the study's generalizability may be limited to large-scale industrial environments like Meta, and the impact of multi-line suggestions on different types of codebases and programming languages remains to be explored.
+- The user feedback and opt-out rate data provide valuable insights into the adoption and favorability of multi-line suggestions, but further research is needed to understand the long-term impact on developer productivity and code quality.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-07       |
+| Abstract | [https://arxiv.org/abs/2402.04141v1](https://arxiv.org/abs/2402.04141v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.04141v1](https://browse.arxiv.org/html/2402.04141v1)       |
+| Truncated       | False       |
+| Word Count       | 12672       |

@@ -1,0 +1,41 @@
+
+---
+title: "L4Q: Parameter Efficient Quantization-Aware Training on Large Language Models via LoRA-wise LSQ"
+id: "2402.04902v1"
+description: "PTQ and QAT reduce costs for Large Language Models. L4Q improves generality and accuracy."
+author: Hyesung Jeon, Yulhwa Kim, Jae-joon Kim
+date: "2024-02-07"
+image: "../../img/2402.04902v1/image_1.png"
+categories: ['production', 'education', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.04902v1/image_1.png)
+
+### Summary:
+The article proposes a new algorithm, L4Q, for parameter-efficient quantization-aware training of large language models (LLMs). L4Q leverages LoRA-wise learned quantization step size for LLMs, aiming to enhance generality and achieve linearly quantized weights with superior accuracy. The experiments conducted on the LLaMA and LLaMA2 model families using an instructional dataset showcase L4Q’s capabilities in language comprehension and few-shot in-context learning, achieving sub-4-bit precision while maintaining comparable training times to applying PEFT on a quantized model.
+
+### Major Findings:
+1. L4Q leverages LoRA-wise learned quantization step size for LLMs to enhance generality and achieve linearly quantized weights with superior accuracy.
+2. The simultaneous quantization-and-fine-tuning process of L4Q is applicable to high-precision models, yielding sub-4-bit precision while maintaining comparable training times to applying PEFT on a quantized model.
+3. L4Q demonstrates enhanced performance within a limited number of training steps, showcasing its capabilities in language comprehension and few-shot in-context learning.
+
+### Analysis and Critique:
+- L4Q reduces memory and computational costs associated with Large Language Models (LLMs) through its parameter-efficient quantization-aware training.
+- The proposed algorithm shows promising results in language comprehension and few-shot in-context learning, achieving sub-4-bit precision while maintaining comparable training times to applying PEFT on a quantized model.
+- The article provides a comprehensive analysis of the proposed algorithm and its potential implications for the field of machine learning and natural language processing.
+
+Overall, the article presents a novel approach to parameter-efficient quantization-aware training for large language models, with promising results in terms of memory and computational efficiency. However, further research and validation are necessary to fully assess the algorithm's effectiveness and potential limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-08       |
+| Abstract | [https://arxiv.org/abs/2402.04902v1](https://arxiv.org/abs/2402.04902v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.04902v1](https://browse.arxiv.org/html/2402.04902v1)       |
+| Truncated       | False       |
+| Word Count       | 13625       |

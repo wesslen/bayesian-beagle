@@ -1,0 +1,42 @@
+
+---
+title: "InfLLM: Unveiling the Intrinsic Capacity of LLMs for Understanding Extremely Long Sequences with Training-Free Memory"
+id: "2402.04617v1"
+description: "LLMs struggle with long sequences, InfLLM adds memory units for better processing."
+author: Chaojun Xiao, Pengle Zhang, Xu Han, Guangxuan Xiao, Yankai Lin, Zhengyan Zhang, Zhiyuan Liu, Song Han, Maosong Sun
+date: "2024-02-07"
+image: "../../img/2402.04617v1/image_1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.04617v1/image_1.png)
+
+### **Summary:**
+- Large language models (LLMs) have limitations in processing extremely long sequences due to out-of-domain and distraction issues.
+- Existing approaches like sliding attention windows and discarding distant tokens fail to capture long-distance dependencies within sequences.
+- This paper introduces a training-free memory-based method, InfLLM, to efficiently process long sequences while maintaining the ability to capture long-distance dependencies.
+
+### Major Findings:
+1. **Intrinsic Capacity of LLMs**: InfLLM stores distant contexts into additional memory units and employs an efficient mechanism to lookup token-relevant units for attention computation.
+2. **Efficient Processing of Long Sequences**: InfLLM enables LLMs pre-trained on short sequences to achieve superior performance than competitive baselines continually training these LLMs on long sequences.
+3. **Effectiveness on Extremely Long Sequences**: InfLLM can effectively capture long-distance dependencies even when the sequence length is scaled to 1,024K.
+
+### Analysis and Critique:
+- InfLLM effectively addresses the limitations of existing LLMs in processing extremely long sequences.
+- The method is training-free and demonstrates superior performance compared to models with continual training on long sequences.
+- The study provides valuable insights into the potential of LLMs to process long sequences efficiently and effectively capture long-distance dependencies.
+- Further research is needed to explore efficient training of the context memory module and to combine key-value cache compression methods with InfLLM to reduce computational and memory costs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-08       |
+| Abstract | [https://arxiv.org/abs/2402.04617v1](https://arxiv.org/abs/2402.04617v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.04617v1](https://browse.arxiv.org/html/2402.04617v1)       |
+| Truncated       | False       |
+| Word Count       | 15603       |

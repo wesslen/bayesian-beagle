@@ -1,0 +1,41 @@
+
+---
+title: "Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding"
+id: "2402.05109v1"
+description: "Hydra heads improve speculative decoding speed by 1.31x and 2.71x."
+author: Zachary Ankner, Rishab Parthasarathy, Aniruddha Nrusimha, Christopher Rinard, Jonathan Ragan-Kelley, William Brandon
+date: "2024-02-07"
+image: "../../../bayesian-beagle.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### **Summary:**
+- The article proposes Hydra heads as a sequentially dependent alternative to standard draft heads for speculative decoding.
+- Hydra heads significantly improve speculation accuracy and decoding throughput compared to Medusa decoding with standard draft heads.
+- The authors explore the design space of Hydra heads, including training objectives and architectures, and propose a recipe called Hydra++ that further improves decoding throughput.
+
+### Major Findings:
+1. Hydra heads are a sequentially dependent, drop-in replacement for standard draft heads that significantly improves speculation accuracy and decoding throughput.
+2. Training Hydra heads with a teacher loss and using the PrefixMLP head architecture further improves decoding throughput.
+3. The Hydra++ recipe, which combines the best training objectives and architectures, achieves the highest decoding throughput compared to Medusa and autoregressive decoding.
+
+### Analysis and Critique:
+- The article provides a comprehensive exploration of the design space for improving speculative decoding with Hydra heads.
+- The findings demonstrate the effectiveness of sequentially dependent draft heads and the potential for further improvements with the Hydra++ recipe.
+- The article does not address potential limitations or biases in the proposed methods, and it would be beneficial to consider these aspects in future research.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-08       |
+| Abstract | [https://arxiv.org/abs/2402.05109v1](https://arxiv.org/abs/2402.05109v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.05109v1](https://browse.arxiv.org/html/2402.05109v1)       |
+| Truncated       | False       |
+| Word Count       | 11348       |

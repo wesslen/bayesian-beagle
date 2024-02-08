@@ -1,0 +1,41 @@
+
+---
+title: "Reconfidencing LLMs from the Grouping Loss Perspective"
+id: "2402.04957v1"
+description: "Large language models like ChatGPT and LLaMA are overconfident and generate inaccurate answers. New evaluation dataset and reconfidencing proposed."
+author: Lihu Chen, Alexandre Perez-Lebel, Fabian M. Suchanek, Gaël Varoquaux
+date: "2024-02-07"
+image: "../../img/2402.04957v1/image_1.png"
+categories: ['architectures', 'production', 'social-sciences', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.04957v1/image_1.png)
+
+### Summary:
+- Large Language Models (LLMs) such as ChatGPT and LLaMA are susceptible to generating hallucinated answers in a confident tone.
+- Recent findings show that controlling uncertainty must go beyond calibration, as predicted scores may deviate significantly from the actual posterior probabilities due to the impact of grouping loss.
+- A new evaluation dataset derived from a knowledge base was constructed to assess confidence scores given to answers of Mistral and LLaMA. Experiments show that they tend to be overconfident, especially on some answers more than others, depending on the nationality of the person in the query.
+
+### Major Findings:
+1. LLMs, including Mistral and LLaMA, tend to be overconfident, especially on some answers more than others, depending on the nationality of the person in the query.
+2. Recent findings show that controlling uncertainty must go beyond calibration, as predicted scores may deviate significantly from the actual posterior probabilities due to the impact of grouping loss.
+3. A new evaluation dataset derived from a knowledge base was constructed to assess confidence scores given to answers of Mistral and LLaMA. Experiments show that they tend to be overconfident.
+
+### Analysis and Critique:
+- The article provides valuable insights into the limitations of LLMs, particularly in terms of overconfidence and the impact of grouping loss on confidence scores.
+- The proposed reconfidencing method offers a promising solution to mitigate the overconfidence and grouping loss in LLMs, leading to improved calibration performance.
+- However, the study could benefit from further exploration of the potential biases and limitations of the reconfidencing method, as well as its generalizability to other LLMs and datasets. Additionally, the article could provide more detailed discussions on the practical implications and applications of the proposed reconfidencing method.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-08       |
+| Abstract | [https://arxiv.org/abs/2402.04957v1](https://arxiv.org/abs/2402.04957v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.04957v1](https://browse.arxiv.org/html/2402.04957v1)       |
+| Truncated       | False       |
+| Word Count       | 14256       |

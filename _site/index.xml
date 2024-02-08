@@ -10,11 +10,11 @@
 <atom:link href="https://bayesian-beagle.netlify.app/index.xml" rel="self" type="application/rss+xml"/>
 <description>Quarto blog of LLM-generated summaries of Arxiv preprints</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Tue, 06 Feb 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 07 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>ReLU\(^2\) Wins: Discovering Efficient Activation Functions for Sparse LLMs</title>
-  <dc:creator>Zhengyan Zhang, Yixin Song, Guanghui Yu, Xu Han, Yankai Lin, Chaojun Xiao, Chenyang Song, Zhiyuan Liu, Zeyu Mi, Maosong Sun</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/ReLU$^2$_Wins_Discovering_Efficient_Activation_Functions_for_Sparse_LLMs/2024-02-06-ReLU$^2$_Wins_Discovering_Efficient_Activation_Functions_for_Sparse_LLMs.html</link>
+  <title>Detecting Generated Native Ads in Conversational Search</title>
+  <dc:creator>Sebastian Schmidt, Ines Zelch, Janek Bevendorff, Benno Stein, Matthias Hagen, Martin Potthast</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Detecting_Generated_Native_Ads_in_Conversational_Search/2024-02-07-Detecting_Generated_Native_Ads_in_Conversational_Search.html</link>
   <description><![CDATA[ 
 
 
@@ -23,26 +23,26 @@
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary">Summary:</h3>
 <ul>
-<li>The article discusses the use of sparse computation for Large Language Models (LLMs) in low-resource scenarios, proposing a systematic framework to examine the sparsity of LLMs and comparing the performance of different activation functions.</li>
-<li>It presents findings from experiments analyzing the impact of different activation functions on LLMs, highlighting ReLU2 as the most efficient activation function for sparse LLMs.</li>
-<li>The section also discusses the computational relationships between tokens and neurons in LLMs, identifying ReLU2 as the most efficient activation function for reducing computational cost and I/O overhead significantly.</li>
-<li>Additionally, the article provides detailed information about the experimental setup and training process of the 1.3B model, including the architecture, pre-training data, and training hyperparameters, as well as the threshold-finding method used in the experiments.</li>
+<li>Conversational search engines use large language models (LLMs) to generate answers to queries.</li>
+<li>This paper investigates whether LLMs can be used to block generated native ads.</li>
+<li>The study compiles a large dataset of ad-prone queries and generated answers with automatically integrated ads to experiment with fine-tuned sentence transformers and state-of-the-art LLMs on the task of recognizing the ads.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li>ReLU2 is identified as the most efficient activation function for sparse LLMs, offering substantial reductions in computational cost and I/O overhead.</li>
-<li>The performance of LLMs is not sensitive to tail truncation when the sparsity ratio is smaller than 0.7, but drops significantly when the sparsity ratio is larger than 0.7.</li>
-<li>ReGLU-based LLaMA models achieve comparable performance with the original LLaMA-27B models under certain sizes, but there is a performance gap under larger sizes, potentially due to insufficient pre-training data.</li>
+<li>Conversational search engines use LLMs to generate answers to queries.</li>
+<li>LLMs can be used to block generated native ads.</li>
+<li>The study compiles a large dataset of ad-prone queries and generated answers with automatically integrated ads to experiment with fine-tuned sentence transformers and state-of-the-art LLMs on the task of recognizing the ads.</li>
 </ol>
 </section>
 <section id="analysis-and-critique" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
 <ul>
-<li>The article provides valuable insights into optimizing LLMs and can guide future research in developing more efficient language models.</li>
-<li>The findings suggest that the ReGLU-based LLaMA models may require additional pre-training data to achieve optimal performance, highlighting a potential area for further research.</li>
-<li>The threshold-finding method and the concept of hot-activated neurons are crucial for understanding the efficiency of activation functions in sparse LLMs, providing avenues for further exploration and research.</li>
+<li>The study demonstrates that sentence transformers can be trained to identify generated native ads with high recall and precision scores.</li>
+<li>LLMs struggle with the task of recognizing ads, indicating potential limitations in their effectiveness.</li>
+<li>The study highlights that organic responses from search engines already contain advertising language, which may affect the precision of ad-blocking systems.</li>
+<li>The findings suggest the feasibility of generative native ads as well as the potential to defend against them on the client side.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -55,23 +55,23 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-02-07</td>
+<td>2024-02-08</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03804v1">https://arxiv.org/abs/2402.03804v1</a></td>
+<td><a href="https://arxiv.org/abs/2402.04889v1">https://arxiv.org/abs/2402.04889v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03804v1">https://browse.arxiv.org/html/2402.03804v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2402.04889v1">https://browse.arxiv.org/html/2402.04889v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
-<td>True</td>
+<td>False</td>
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>27556</td>
+<td>6787</td>
 </tr>
 </tbody>
 </table>
@@ -80,50 +80,46 @@
 </section>
 
  ]]></description>
+  <category>production</category>
+  <category>security</category>
+  <category>robustness</category>
   <category>architectures</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/ReLU$^2$_Wins_Discovering_Efficient_Activation_Functions_for_Sparse_LLMs/2024-02-06-ReLU$^2$_Wins_Discovering_Efficient_Activation_Functions_for_Sparse_LLMs.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
+  <guid>https://bayesian-beagle.netlify.app/posts/Detecting_Generated_Native_Ads_in_Conversational_Search/2024-02-07-Detecting_Generated_Native_Ads_in_Conversational_Search.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
   <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>Multi-line AI-assisted Code Authoring</title>
-  <dc:creator>Omer Dunay, Daniel Cheng, Adam Tait, Parth Thakkar, Peter C Rigby, Andy Chiu, Imad Ahmad, Arun Ganesan, Chandra Maddila, Vijayaraghavan Murali, Ali Tayyebi, Nachiappan Nagappan</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Multi_line_AI_assisted_Code_Authoring/2024-02-06-Multi_line_AI_assisted_Code_Authoring.html</link>
+  <title>You Can REST Now: Automated Specification Inference and Black-Box Testing of RESTful APIs with Large Language Models</title>
+  <dc:creator>Alix Decrop, Gilles Perrouin, Mike Papadakis, Xavier Devroey, Pierre-Yves Schobbens</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/You_Can_REST_Now_Automated_Specification_Inference_and_Black_Box_Testing_of_RESTful_APIs_with_Large_Language_Models/2024-02-07-You_Can_REST_Now_Automated_Specification_Inference_and_Black_Box_Testing_of_RESTful_APIs_with_Large_Language_Models.html</link>
   <description><![CDATA[ 
 
 
 
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.04141v1/image_1.png" class="img-fluid"></p>
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.05102v1/image_1.png" class="img-fluid"></p>
 <section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
-<p>CodeCompose is an AI-assisted code authoring tool that provides inline suggestions to developers at Meta. In this paper, the authors present the challenges and solutions in scaling the product from single-line to multi-line suggestions. They discuss the “jarring” effect of multi-line suggestions, the latency in generating them, and the impact on user experience.</p>
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<ul>
+<li>RESTSpecIT is an automated approach that uses Large Language Models (LLMs) to infer OpenAPI specifications and test RESTful APIs in a black-box and specification-less environment.</li>
+<li>The approach requires minimal user input and generates and mutates HTTP requests without prior knowledge of the API.</li>
+<li>RESTSpecIT is capable of inferring specifications with 85.05% of GET routes and 81.05% of query parameters found on average, discovering undocumented and valid routes and parameters, and uncovering server errors in RESTful APIs.</li>
+</ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li><strong>Jarring Effect of Multi-line Suggestions:</strong>
-<ul>
-<li>Multi-line suggestions can disrupt the user’s existing code, causing a “jarring” effect and increased cognitive load.</li>
-<li>The authors developed a scope-based algorithm to trigger multi-line suggestions only when the cursor is at the end of the current scope, reducing the disruption.</li>
-</ul></li>
-<li><strong>Latency Reduction for Multi-line Suggestions:</strong>
-<ul>
-<li>Multi-line suggestions take longer to generate, leading to decreased display rate and user satisfaction.</li>
-<li>The authors implemented various optimizations to reduce latency, including Flash Attention, CUDA graphs, and streaming with early cancellation.</li>
-</ul></li>
-<li><strong>Effectiveness of Multi-line Suggestions:</strong>
-<ul>
-<li>Despite the longer generation time, multi-line suggestions accounted for 42% of total characters accepted by users, demonstrating their impact.</li>
-<li>User feedback indicated a noticeable improvement in the coding experience with multi-line suggestions.</li>
-</ul></li>
+<li>RESTSpecIT can infer specifications with high accuracy, discovering undocumented and valid routes and parameters in RESTful APIs.</li>
+<li>The tool is efficient in terms of time, cost, and request metrics, making it relatively inexpensive and effective for testing RESTful APIs.</li>
+<li>RESTSpecIT is capable of uncovering server errors in APIs and generating valid OpenAPI specifications.</li>
 </ol>
 </section>
 <section id="analysis-and-critique" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
 <ul>
-<li>The authors effectively addressed the challenges of scaling CodeCompose to support multi-line suggestions, providing innovative solutions to reduce latency and improve user experience.</li>
-<li>However, the study’s generalizability may be limited to large-scale industrial environments like Meta, and the impact of multi-line suggestions on different types of codebases and programming languages remains to be explored.</li>
-<li>The user feedback and opt-out rate data provide valuable insights into the adoption and favorability of multi-line suggestions, but further research is needed to understand the long-term impact on developer productivity and code quality.</li>
+<li>The approach addresses the challenges of manual documentation and testing of RESTful APIs, providing a more efficient and effective solution.</li>
+<li>RESTSpecIT demonstrates the effectiveness of uncovering undocumented data and testing APIs, offering a cost-effective and efficient way to test API behaviors.</li>
+<li>The identified areas for future work highlight the potential for further enhancing the tool’s capabilities and expanding its applicability to different domains.</li>
+<li>The list of references provides a valuable resource for readers interested in delving deeper into the specific areas covered in the paper.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -136,15 +132,156 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-02-07</td>
+<td>2024-02-08</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.04141v1">https://arxiv.org/abs/2402.04141v1</a></td>
+<td><a href="https://arxiv.org/abs/2402.05102v1">https://arxiv.org/abs/2402.05102v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.04141v1">https://browse.arxiv.org/html/2402.04141v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2402.05102v1">https://browse.arxiv.org/html/2402.05102v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>18820</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>production</category>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/You_Can_REST_Now_Automated_Specification_Inference_and_Black_Box_Testing_of_RESTful_APIs_with_Large_Language_Models/2024-02-07-You_Can_REST_Now_Automated_Specification_Inference_and_Black_Box_Testing_of_RESTful_APIs_with_Large_Language_Models.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.05102v1/image_1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>A Hypothesis-Driven Framework for the Analysis of Self-Rationalising Models</title>
+  <dc:creator>Marc Braun, Jenny Kunz</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/A_Hypothesis_Driven_Framework_for_the_Analysis_of_Self_Rationalising_Models/2024-02-07-A_Hypothesis_Driven_Framework_for_the_Analysis_of_Self_Rationalising_Models.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/../bayesian-beagle.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<ul>
+<li>The academic article introduces a hypothesis-driven statistical framework to explore the patterns behind the explanations generated by large language models (LLMs). It uses a Bayesian network to implement a hypothesis about how a task is solved and compares the explanations to LLM-generated free-text explanations. The section also discusses the process of generating Natural Language Explanations (NLEs) using a Surrogate Surrogate Model (SSM) and compares it to the outputs of GPT-3.5. The study also addresses the human evaluation, reproducibility, and ethics statement of the research.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>The hypothesis-driven statistical framework provides a structured approach to analyze and compare LLM-generated explanations.</li>
+<li>The Surrogate Surrogate Model (SSM) does not exhibit strong similarity to GPT-3.5, indicating the need for further research and improvements in the surrogate models.</li>
+<li>The study highlights the importance of transparency and accountability in the usage of language models, emphasizing ethical considerations and the need for reproducible research.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The article presents a novel approach to understanding the decision-making process of LLMs and highlights the need for further research to improve the approximation of LLM decisions.</li>
+<li>The limitations of the study, such as dataset biases and language adaptability, are discussed, pointing to potential areas for future work.</li>
+<li>The section on human evaluation, reproducibility, and ethics statement emphasizes the methodological and ethical implications of the study’s approach and its broader impact on the field of language model research.</li>
+<li>The methodology for generating samples from the distribution of Z|x(i), y(i), θ(t) and the process of updating the parameter estimate θ in the M-step sets the foundation for subsequent discussions on the statistical surrogate model (SSM) and its output examples.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04787v1">https://arxiv.org/abs/2402.04787v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04787v1">https://browse.arxiv.org/html/2402.04787v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>16020</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/A_Hypothesis_Driven_Framework_for_the_Analysis_of_Self_Rationalising_Models/2024-02-07-A_Hypothesis_Driven_Framework_for_the_Analysis_of_Self_Rationalising_Models.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Direct Language Model Alignment from Online AI Feedback</title>
+  <dc:creator>Shangmin Guo, Biao Zhang, Tianlin Liu, Tianqi Liu, Misha Khalman, Felipe Llinares, Alexandre Rame, Thomas Mesnard, Yao Zhao, Bilal Piot, Johan Ferret, Mathieu Blondel</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Direct_Language_Model_Alignment_from_Online_AI_Feedback/2024-02-07-Direct_Language_Model_Alignment_from_Online_AI_Feedback.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/Direct_Language_Model_Alignment_from_Online_AI_Feedback/https:/browse.arxiv.org/html/2402.04792v1/x1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<p>Direct Language Model Alignment from Online AI Feedback is a study that introduces a method called Online AI Feedback (OAIF) to improve Direct Alignment from Preferences (DAP) methods. The study compares OAIF with offline DAP and Reinforcement Learning from Human Feedback (RLHF) methods and demonstrates its effectiveness through human and AI evaluation. The study also explores the controllability of the LLM annotator and the impact of the size of the LLM annotator on performance.</p>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>OAIF outperforms both offline DAP and RLHF methods in several tasks, as demonstrated through human evaluation.</li>
+<li>The feedback leveraged in OAIF is easily controllable, as shown by injecting specific instructions into the prompts to control response length.</li>
+<li>The size of the LLM annotator has a significant impact on the performance of OAIF, with larger annotators leading to better performance.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The study provides a comprehensive comparison of OAIF with existing methods, demonstrating its effectiveness. However, the limitations of the study include the lack of evaluation on out-of-distribution prompts and the need for further investigation into the impact of scaling up the aligned models.</li>
+<li>The method proposed in the study offers a promising solution for aligning LLMs with human values, with potential applications in scalable alignment strategies. However, the study should be considered within the larger context of responsible and safe AI, as it relies on AI feedback.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04792v1">https://arxiv.org/abs/2402.04792v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04792v1">https://browse.arxiv.org/html/2402.04792v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
@@ -152,7 +289,228 @@
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>12672</td>
+<td>10398</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Direct_Language_Model_Alignment_from_Online_AI_Feedback/2024-02-07-Direct_Language_Model_Alignment_from_Online_AI_Feedback.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2402.04792v1/x1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>De-amplifying Bias from Differential Privacy in Language Model Fine-tuning</title>
+  <dc:creator>Sanjari Srivastava, Piotr Mardziel, Zhikhun Zhang, Archana Ahlawat, Anupam Datta, John C Mitchell</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/De_amplifying_Bias_from_Differential_Privacy_in_Language_Model_Fine_tuning/2024-02-07-De_amplifying_Bias_from_Differential_Privacy_in_Language_Model_Fine_tuning.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/posts/De_amplifying_Bias_from_Differential_Privacy_in_Language_Model_Fine_tuning/https:/browse.arxiv.org/html/2402.04489v1/extracted/5394328/images/bias_increase_dark.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<ul>
+<li>Fairness and privacy are important values in machine learning (ML) models.</li>
+<li>Differential privacy (DP) amplifies gender, racial, and religious bias when fine-tuning large language models (LLMs).</li>
+<li>Counterfactual Data Augmentation (CDA) mitigates bias amplification by DP.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>DP amplifies bias in language models, particularly for gender, race, and religion.</li>
+<li>Disparity in convergence of gradients across sub-groups causes the amplification of bias by DP.</li>
+<li>CDA effectively reduces the adverse impact of DP training on bias.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The study is limited to specific bias metrics and model settings, potentially overlooking other forms of bias.</li>
+<li>The study does not explore the interaction between DP and bias in larger LLMs.</li>
+<li>The study acknowledges limitations in applying CDA in cases where social group signifiers and biases are not clearly expressed in individual words or phrases.</li>
+<li>The study provides valuable insights into the impact of DP on fairness and bias in generative models, but further research is needed to address the limitations and extend the findings to larger and open models.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04489v1">https://arxiv.org/abs/2402.04489v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04489v1">https://browse.arxiv.org/html/2402.04489v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>10056</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>social-sciences</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/De_amplifying_Bias_from_Differential_Privacy_in_Language_Model_Fine_tuning/2024-02-07-De_amplifying_Bias_from_Differential_Privacy_in_Language_Model_Fine_tuning.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2402.04489v1/extracted/5394328/images/bias_increase_dark.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding</title>
+  <dc:creator>Zachary Ankner, Rishab Parthasarathy, Aniruddha Nrusimha, Christopher Rinard, Jonathan Ragan-Kelley, William Brandon</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Hydra_Sequentially_Dependent_Draft_Heads_for_Medusa_Decoding/2024-02-07-Hydra_Sequentially_Dependent_Draft_Heads_for_Medusa_Decoding.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/../bayesian-beagle.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
+<ul>
+<li>The article proposes Hydra heads as a sequentially dependent alternative to standard draft heads for speculative decoding.</li>
+<li>Hydra heads significantly improve speculation accuracy and decoding throughput compared to Medusa decoding with standard draft heads.</li>
+<li>The authors explore the design space of Hydra heads, including training objectives and architectures, and propose a recipe called Hydra++ that further improves decoding throughput.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>Hydra heads are a sequentially dependent, drop-in replacement for standard draft heads that significantly improves speculation accuracy and decoding throughput.</li>
+<li>Training Hydra heads with a teacher loss and using the PrefixMLP head architecture further improves decoding throughput.</li>
+<li>The Hydra++ recipe, which combines the best training objectives and architectures, achieves the highest decoding throughput compared to Medusa and autoregressive decoding.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The article provides a comprehensive exploration of the design space for improving speculative decoding with Hydra heads.</li>
+<li>The findings demonstrate the effectiveness of sequentially dependent draft heads and the potential for further improvements with the Hydra++ recipe.</li>
+<li>The article does not address potential limitations or biases in the proposed methods, and it would be beneficial to consider these aspects in future research.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.05109v1">https://arxiv.org/abs/2402.05109v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.05109v1">https://browse.arxiv.org/html/2402.05109v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>11348</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>production</category>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Hydra_Sequentially_Dependent_Draft_Heads_for_Medusa_Decoding/2024-02-07-Hydra_Sequentially_Dependent_Draft_Heads_for_Medusa_Decoding.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Reconfidencing LLMs from the Grouping Loss Perspective</title>
+  <dc:creator>Lihu Chen, Alexandre Perez-Lebel, Fabian M. Suchanek, Gaël Varoquaux</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Reconfidencing_LLMs_from_the_Grouping_Loss_Perspective/2024-02-07-Reconfidencing_LLMs_from_the_Grouping_Loss_Perspective.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04957v1/image_1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<ul>
+<li>Large Language Models (LLMs) such as ChatGPT and LLaMA are susceptible to generating hallucinated answers in a confident tone.</li>
+<li>Recent findings show that controlling uncertainty must go beyond calibration, as predicted scores may deviate significantly from the actual posterior probabilities due to the impact of grouping loss.</li>
+<li>A new evaluation dataset derived from a knowledge base was constructed to assess confidence scores given to answers of Mistral and LLaMA. Experiments show that they tend to be overconfident, especially on some answers more than others, depending on the nationality of the person in the query.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>LLMs, including Mistral and LLaMA, tend to be overconfident, especially on some answers more than others, depending on the nationality of the person in the query.</li>
+<li>Recent findings show that controlling uncertainty must go beyond calibration, as predicted scores may deviate significantly from the actual posterior probabilities due to the impact of grouping loss.</li>
+<li>A new evaluation dataset derived from a knowledge base was constructed to assess confidence scores given to answers of Mistral and LLaMA. Experiments show that they tend to be overconfident.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The article provides valuable insights into the limitations of LLMs, particularly in terms of overconfidence and the impact of grouping loss on confidence scores.</li>
+<li>The proposed reconfidencing method offers a promising solution to mitigate the overconfidence and grouping loss in LLMs, leading to improved calibration performance.</li>
+<li>However, the study could benefit from further exploration of the potential biases and limitations of the reconfidencing method, as well as its generalizability to other LLMs and datasets. Additionally, the article could provide more detailed discussions on the practical implications and applications of the proposed reconfidencing method.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04957v1">https://arxiv.org/abs/2402.04957v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04957v1">https://browse.arxiv.org/html/2402.04957v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>14256</td>
 </tr>
 </tbody>
 </table>
@@ -163,44 +521,43 @@
  ]]></description>
   <category>architectures</category>
   <category>production</category>
-  <category>programming</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Multi_line_AI_assisted_Code_Authoring/2024-02-06-Multi_line_AI_assisted_Code_Authoring.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04141v1/image_1.png" medium="image" type="image/png"/>
+  <category>social-sciences</category>
+  <category>robustness</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Reconfidencing_LLMs_from_the_Grouping_Loss_Perspective/2024-02-07-Reconfidencing_LLMs_from_the_Grouping_Loss_Perspective.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04957v1/image_1.png" medium="image" type="image/png"/>
 </item>
 <item>
-  <title>RevOrder: A Novel Method for Enhanced Arithmetic in Language Models</title>
-  <dc:creator>Si Shen, Peijun Shen, Danhao Zhu</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/RevOrder_A_Novel_Method_for_Enhanced_Arithmetic_in_Language_Models/2024-02-06-RevOrder_A_Novel_Method_for_Enhanced_Arithmetic_in_Language_Models.html</link>
+  <title>Pedagogical Alignment of Large Language Models</title>
+  <dc:creator>Shashank Sonkar, Kangqi Ni, Sapana Chaudhary, Richard G. Baraniuk</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Pedagogical_Alignment_of_Large_Language_Models/2024-02-07-Pedagogical_Alignment_of_Large_Language_Models.html</link>
   <description><![CDATA[ 
 
 
 
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.03822v1/image_1.png" class="img-fluid"></p>
+<p><img src="https://bayesian-beagle.netlify.app/posts/Pedagogical_Alignment_of_Large_Language_Models/https:/browse.arxiv.org/html/2402.05000v1/extracted/5396060/figures/images/class_image.png" class="img-fluid"></p>
 <section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
 <ul>
-<li>The paper introduces RevOrder, a novel technique aimed at improving arithmetic operations in large language models (LLMs) by reversing the output digits in addition, subtraction, and n-digit by 1-digit (nD by 1D) multiplication tasks.</li>
-<li>RevOrder significantly reduces the Count of Sequential Intermediate Digits (CSID) to O(1), a new metric introduced to assess equation complexity.</li>
-<li>Through comprehensive testing, RevOrder achieves perfect accuracy in basic arithmetic operations and substantially boosts LLM performance in division tasks, particularly with large numbers where traditional models struggle.</li>
+<li>The paper introduces the concept of pedagogically aligned Large Language Models (LLMs) that function as scaffolding tools to guide students through complex problems and provide constructive feedback.</li>
+<li>The study reinterprets the narrative by viewing the task through the lens of alignment and demonstrates how reinforcement learning through human feedback (RLHF) methods emerge as a superior alternative for aligning LLM behavior.</li>
+<li>The authors propose a novel approach for constructing a reward dataset specifically designed for the pedagogical alignment of LLMs and apply three state-of-the-art RLHF algorithms, finding that they outperform supervised finetuning (SFT).</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<h3 class="anchored" data-anchor-id="major-findings"><strong>Major Findings:</strong></h3>
 <ol type="1">
-<li>RevOrder significantly reduces the Count of Sequential Intermediate Digits (CSID) to O(1), improving arithmetic operations in large language models (LLMs).</li>
-<li>RevOrder achieves perfect accuracy in basic arithmetic operations and substantially boosts LLM performance in division tasks, particularly with large numbers where traditional models struggle.</li>
-<li>Implementation of RevOrder is cost-effective for both training and inference phases.</li>
+<li>The pedagogically aligned LLMs function as scaffolding tools, breaking complex problems into manageable subproblems and guiding students towards the final answer through constructive feedback and hints.</li>
+<li>RLHF methods emerge as a superior alternative for aligning LLM behavior compared to the supervised finetuning approach.</li>
+<li>The study demonstrates the effectiveness of reinforcement learning-based alignment algorithms on state-of-the-art LLMs, outperforming the SFT approach significantly.</li>
 </ol>
 </section>
 <section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<h3 class="anchored" data-anchor-id="analysis-and-critique"><strong>Analysis and Critique:</strong></h3>
 <ul>
-<li>The paper presents a novel and effective technique, RevOrder, for enhancing arithmetic operations in large language models.</li>
-<li>The method significantly reduces the complexity of arithmetic equations and improves the accuracy of LLMs in performing arithmetic tasks.</li>
-<li>The study provides comprehensive testing and demonstrates the cost-effectiveness of implementing RevOrder for both training and inference phases.</li>
-<li>The potential shortcomings of RevOrder may include challenges in maintaining accuracy in large-digit division tasks and the need for further research to address these limitations.</li>
-<li>The paper highlights the importance of integrating RevOrder into LLMs’ pretraining to enhance arithmetic capabilities more fundamentally than fine-tuning.</li>
+<li>The paper provides a comprehensive overview of dataset construction, experimental design, and the subsequent findings derived from the application of state-of-the-art RLHF algorithms to train pedagogically-aligned LLMs.</li>
+<li>The study demonstrates the efficacy of pedagogical alignment on state-of-the-art models and highlights the potential of online feedback for enhancing the performance of pedagogically-aligned LLMs.</li>
+<li>The authors acknowledge the need for further exploration and refinement of reinforcement learning methods for aligning LLMs with educational needs, indicating potential areas for future research in this domain.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -213,15 +570,15 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-02-07</td>
+<td>2024-02-08</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03822v1">https://arxiv.org/abs/2402.03822v1</a></td>
+<td><a href="https://arxiv.org/abs/2402.05000v1">https://arxiv.org/abs/2402.05000v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03822v1">https://browse.arxiv.org/html/2402.03822v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2402.05000v1">https://browse.arxiv.org/html/2402.05000v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
@@ -229,7 +586,7 @@
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>10704</td>
+<td>5466</td>
 </tr>
 </tbody>
 </table>
@@ -238,191 +595,48 @@
 </section>
 
  ]]></description>
-  <category>architectures</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/RevOrder_A_Novel_Method_for_Enhanced_Arithmetic_in_Language_Models/2024-02-06-RevOrder_A_Novel_Method_for_Enhanced_Arithmetic_in_Language_Models.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.03822v1/image_1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Empowering Language Models with Active Inquiry for Deeper Understanding</title>
-  <dc:creator>Jing-Cheng Pang, Heng-Bo Fan, Pengyuan Wang, Jia-Hao Xiao, Nan Tang, Si-Hang Yang, Chengxing Jia, Sheng-Jun Huang, Yang Yu</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Empowering_Language_Models_with_Active_Inquiry_for_Deeper_Understanding/2024-02-06-Empowering_Language_Models_with_Active_Inquiry_for_Deeper_Understanding.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.03719v1/image_1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
-<p>The academic article introduces LaMAI, a method designed to improve Large Language Models’ (LLMs) understanding of user queries by actively inquiring the user for clarification. LaMAI leverages active learning techniques to select and formulate the most informative questions, fostering a dynamic bidirectional dialogue. The method aims to narrow the contextual gap and refine the output of LLMs, aligning it more closely with user expectations. The article also presents the experimental setting for the study, including the datasets used, baseline methods compared, and the evaluation metrics employed. Additionally, it discusses the usage of datasets in experiments and the implementation of active learning in LaMAI, highlighting the challenges and potential enhancements for active learning techniques and presenting a practical algorithm for LaMAI. Furthermore, the article provides information about the hyper-parameters used in the experiments, examples of datasets used, and additional experiment results, including full results on QMSum, an ablation study on active inquiry threshold, performance on user queries with less context, and more algorithm running examples.</p>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
-<ol type="1">
-<li>LaMAI effectively improves the comprehension ability of language models regarding user queries.</li>
-<li>The active inquiry strategy significantly improves performance, especially in situations with less context.</li>
-<li>LaMAI’s practical algorithm streamlines the iterative interaction process, making it more user-friendly while still eliciting the necessary clarifications.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<ul>
-<li>The article effectively presents LaMAI as a novel approach to enhancing LLMs’ understanding of user queries, addressing the challenges of ambiguous user queries through active learning and uncertainty estimation.</li>
-<li>The experimental setting provides a comprehensive foundation for the study, allowing for the comparison of LaMAI with baseline methods across various datasets, enhancing the credibility and relevance of the study’s findings.</li>
-<li>The content in the section about the implementation of active learning in LaMAI is significant as it provides insights into the challenges and potential improvements for active learning techniques and the practical implementation of LaMAI.</li>
-<li>The section providing information about the experimental setup, datasets, and results of the study is crucial for understanding the methodology and outcomes of the study, making it a crucial part of the academic paper.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03719v1">https://arxiv.org/abs/2402.03719v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03719v1">https://browse.arxiv.org/html/2402.03719v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>18153</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>hci</category>
-  <category>architectures</category>
   <category>prompt-engineering</category>
-  <category>education</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Empowering_Language_Models_with_Active_Inquiry_for_Deeper_Understanding/2024-02-06-Empowering_Language_Models_with_Active_Inquiry_for_Deeper_Understanding.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.03719v1/image_1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Learning to Generate Explainable Stock Predictions using Self-Reflective Large Language Models</title>
-  <dc:creator>Kelvin J. L. Koa, Yunshan Ma, Ritchie Ng, Tat-Seng Chua</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Learning_to_Generate_Explainable_Stock_Predictions_using_Self_Reflective_Large_Language_Models/2024-02-06-Learning_to_Generate_Explainable_Stock_Predictions_using_Self_Reflective_Large_Language_Models.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Learning_to_Generate_Explainable_Stock_Predictions_using_Self_Reflective_Large_Language_Models/https:/browse.arxiv.org/html/2402.03659v1/x1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
-<ul>
-<li>The article proposes the Summarize-Explain-Predict (SEP) framework to teach Large Language Models (LLMs) to generate explainable stock predictions in a fully autonomous manner. The framework utilizes a verbal self-reflective agent and Proximal Policy Optimization (PPO) to fine-tune the LLM.</li>
-<li>The article demonstrates that the SEP framework outperforms traditional deep-learning and LLM methods in prediction accuracy and explanation quality for stock classification tasks.</li>
-<li>The SEP framework is also validated for portfolio construction tasks, showing its effectiveness in generating explainable weights for a stock portfolio.</li>
-</ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
-<ol type="1">
-<li>The SEP framework outperforms traditional deep-learning and LLM methods in prediction accuracy and explanation quality for stock classification tasks.</li>
-<li>The Summarize module reduces noise and length of input texts, leading to better results. The Explain module generates more decisive and correct annotated samples through self-reflection. The Predict module, particularly the PPO reinforcement learning, significantly improves the model’s performance.</li>
-<li>The SEP framework is effective in generating explainable weights for a stock portfolio, outperforming other methods in most portfolio metrics.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<ul>
-<li>The article effectively demonstrates the effectiveness of the SEP framework in improving the accuracy and quality of stock predictions, as well as its generalizability to portfolio construction tasks.</li>
-<li>The framework’s ability to generate explainable predictions and portfolio weights showcases its potential for practical applications in stock market analysis.</li>
-<li>The article does not address potential ethical implications of using LLMs for stock prediction, such as the risk of manipulation, misinformation, and prediction bias. It would be beneficial to include a more comprehensive discussion of these ethical considerations and potential mitigation strategies.</li>
-<li>The article could benefit from a more detailed discussion of the limitations and challenges of the SEP framework, as well as potential future research directions to address these limitations.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03659v1">https://arxiv.org/abs/2402.03659v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03659v1">https://browse.arxiv.org/html/2402.03659v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>11286</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
   <category>social-sciences</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Learning_to_Generate_Explainable_Stock_Predictions_using_Self_Reflective_Large_Language_Models/2024-02-06-Learning_to_Generate_Explainable_Stock_Predictions_using_Self_Reflective_Large_Language_Models.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2402.03659v1/x1.png" medium="image" type="image/png"/>
+  <category>architectures</category>
+  <category>production</category>
+  <category>education</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Pedagogical_Alignment_of_Large_Language_Models/2024-02-07-Pedagogical_Alignment_of_Large_Language_Models.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://browse.arxiv.org/html/2402.05000v1/extracted/5396060/figures/images/class_image.png" medium="image" type="image/png"/>
 </item>
 <item>
-  <title>In-context learning agents are asymmetric belief updaters</title>
-  <dc:creator>Johannes A. Schubert, Akshay K. Jagadish, Marcel Binz, Eric Schulz</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/In_context_learning_agents_are_asymmetric_belief_updaters/2024-02-06-In_context_learning_agents_are_asymmetric_belief_updaters.html</link>
+  <title>InfLLM: Unveiling the Intrinsic Capacity of LLMs for Understanding Extremely Long Sequences with Training-Free Memory</title>
+  <dc:creator>Chaojun Xiao, Pengle Zhang, Xu Han, Guangxuan Xiao, Yankai Lin, Zhengyan Zhang, Zhiyuan Liu, Song Han, Maosong Sun</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/InfLLM_Unveiling_the_Intrinsic_Capacity_of_LLMs_for_Understanding_Extremely_Long_Sequences_with_Training_Free_Memory/2024-02-07-InfLLM_Unveiling_the_Intrinsic_Capacity_of_LLMs_for_Understanding_Extremely_Long_Sequences_with_Training_Free_Memory.html</link>
   <description><![CDATA[ 
 
 
 
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.03969v1/image_1.png" class="img-fluid"></p>
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04617v1/image_1.png" class="img-fluid"></p>
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
 <ul>
-<li>The study investigates the in-context learning dynamics of large language models (LLMs) using three instrumental learning tasks adapted from cognitive psychology.</li>
-<li>LLMs update their beliefs in an asymmetric manner and learn more from better-than-expected outcomes than from worse-than-expected ones.</li>
-<li>The effect reverses when learning about counterfactual feedback and disappears when no agency is implied.</li>
+<li>Large language models (LLMs) have limitations in processing extremely long sequences due to out-of-domain and distraction issues.</li>
+<li>Existing approaches like sliding attention windows and discarding distant tokens fail to capture long-distance dependencies within sequences.</li>
+<li>This paper introduces a training-free memory-based method, InfLLM, to efficiently process long sequences while maintaining the ability to capture long-distance dependencies.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li>LLMs exhibit an optimism bias, learning more from positive than from negative prediction errors.</li>
-<li>The bias reverses when learning about the value of the unchosen option, and disappears when no agency is implied.</li>
-<li>Idealized in-context learning agents trained specifically to solve 2AFC tasks using meta-reinforcement learning show similar patterns.</li>
+<li><strong>Intrinsic Capacity of LLMs</strong>: InfLLM stores distant contexts into additional memory units and employs an efficient mechanism to lookup token-relevant units for attention computation.</li>
+<li><strong>Efficient Processing of Long Sequences</strong>: InfLLM enables LLMs pre-trained on short sequences to achieve superior performance than competitive baselines continually training these LLMs on long sequences.</li>
+<li><strong>Effectiveness on Extremely Long Sequences</strong>: InfLLM can effectively capture long-distance dependencies even when the sequence length is scaled to 1,024K.</li>
 </ol>
 </section>
 <section id="analysis-and-critique" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
 <ul>
-<li>The study provides valuable insights into the in-context learning dynamics of LLMs and idealized agents.</li>
-<li>The findings have implications for understanding how learning occurs in both natural and artificial agents.</li>
-<li>The study’s methodological approach of fitting simpler computational models to the behavior of LLMs provides a tool for explainable machine learning.</li>
+<li>InfLLM effectively addresses the limitations of existing LLMs in processing extremely long sequences.</li>
+<li>The method is training-free and demonstrates superior performance compared to models with continual training on long sequences.</li>
+<li>The study provides valuable insights into the potential of LLMs to process long sequences efficiently and effectively capture long-distance dependencies.</li>
+<li>Further research is needed to explore efficient training of the context memory module and to combine key-value cache compression methods with InfLLM to reduce computational and memory costs.</li>
 </ul>
-<p>Overall, the study contributes to our understanding of in-context learning and its implications for real-world applications. However, the study’s external validity and causal links between observed patterns and behavior need further investigation.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -434,15 +648,15 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-02-07</td>
+<td>2024-02-08</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03969v1">https://arxiv.org/abs/2402.03969v1</a></td>
+<td><a href="https://arxiv.org/abs/2402.04617v1">https://arxiv.org/abs/2402.04617v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03969v1">https://browse.arxiv.org/html/2402.03969v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2402.04617v1">https://browse.arxiv.org/html/2402.04617v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
@@ -450,7 +664,7 @@
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>15607</td>
+<td>15603</td>
 </tr>
 </tbody>
 </table>
@@ -460,45 +674,45 @@
 
  ]]></description>
   <category>architectures</category>
-  <category>production</category>
-  <category>social-sciences</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/In_context_learning_agents_are_asymmetric_belief_updaters/2024-02-06-In_context_learning_agents_are_asymmetric_belief_updaters.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.03969v1/image_1.png" medium="image" type="image/png"/>
+  <guid>https://bayesian-beagle.netlify.app/posts/InfLLM_Unveiling_the_Intrinsic_Capacity_of_LLMs_for_Understanding_Extremely_Long_Sequences_with_Training_Free_Memory/2024-02-07-InfLLM_Unveiling_the_Intrinsic_Capacity_of_LLMs_for_Understanding_Extremely_Long_Sequences_with_Training_Free_Memory.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04617v1/image_1.png" medium="image" type="image/png"/>
 </item>
 <item>
-  <title>The Instinctive Bias: Spurious Images lead to Hallucination in MLLMs</title>
-  <dc:creator>Tianyang Han, Qing Lian, Rui Pan, Renjie Pi, Jipeng Zhang, Shizhe Diao, Yong Lin, Tong Zhang</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/The_Instinctive_Bias_Spurious_Images_lead_to_Hallucination_in_MLLMs/2024-02-06-The_Instinctive_Bias_Spurious_Images_lead_to_Hallucination_in_MLLMs.html</link>
+  <title>MEMORYLLM: Towards Self-Updatable Large Language Models</title>
+  <dc:creator>Yu Wang, Xiusi Chen, Jingbo Shang, Julian McAuley</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/MEMORYLLM_Towards_Self_Updatable_Large_Language_Models/2024-02-07-MEMORYLLM_Towards_Self_Updatable_Large_Language_Models.html</link>
   <description><![CDATA[ 
 
 
 
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.03757v1/image_1.png" class="img-fluid"></p>
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04624v1/image_1.png" class="img-fluid"></p>
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary">Summary:</h3>
-<ul>
-<li>The article discusses the challenges faced by multi-modal large language models (MLLMs) when presented with certain image and text inputs, leading to hallucination.</li>
-<li>The authors propose a benchmark called CorrelationQA to quantify the hallucination level given spurious images and conduct a thorough analysis on 9 mainstream MLLMs.</li>
-<li>The impact of different image formats on the instinctive bias of MLLMs is discussed, along with examples of question-answer (QA) pairs generated using GPT-4.</li>
-<li>Tables showing the accuracy of different MLLMs on CorrelationQA under twelve categories when applied to spurious images are presented.</li>
-</ul>
+<p>The article introduces MEMORYLLM, a large language model with a self-updatable memory pool. The model is designed to effectively integrate new knowledge and retain previously learned information. The authors demonstrate the model’s performance in model editing benchmarks, long-context evaluation, and knowledge retention experiments.</p>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li>Multi-modal large language models (MLLMs) universally suffer from an instinctive bias when presented with misleading images.</li>
-<li>Image formats, particularly typography, significantly influence the instinctive bias of MLLMs, affecting their accuracy and susceptibility to spurious information.</li>
-<li>GPT-4 demonstrates the ability to generate accurate and diverse responses based on complex prompts, with varying accuracy rates for different categories.</li>
+<li><strong>Integration of New Knowledge:</strong>
+<ul>
+<li>MEMORYLLM outperforms existing methods in model editing benchmarks and QA tasks, showcasing substantial improvements over other models.</li>
+</ul></li>
+<li><strong>Knowledge Retention Ability:</strong>
+<ul>
+<li>The model exhibits a strong ability to retain knowledge, as evidenced by its performance in long-context benchmarks and knowledge retention experiments.</li>
+</ul></li>
+<li><strong>Robustness:</strong>
+<ul>
+<li>MEMORYLLM maintains operational integrity even after nearly a million memory updates, demonstrating its robustness and functionality.</li>
+</ul></li>
 </ol>
 </section>
 <section id="analysis-and-critique" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
 <ul>
-<li>The proposed benchmark and evaluation results contribute to the ongoing efforts to improve the performance and reliability of MLLMs in multi-modal tasks.</li>
-<li>The findings have implications for refining training strategies and improving the modality alignment of MLLMs to mitigate instinctive bias and enhance their performance in real-world scenarios.</li>
-<li>The accuracy results of different MLLMs on spurious images highlight the impact of spurious information on the performance of these models, emphasizing the need for accurate and reliable QA generation.</li>
-<li>The section provides important insights into the performance of MLLMs on CorrelationQA under different conditions, highlighting the impact of spurious images and typography on accuracy, crucial for understanding the robustness and limitations of these models in real-world applications.</li>
+<li>The article provides a comprehensive overview of MEMORYLLM and its capabilities in integrating new knowledge and retaining information. The model’s performance in various benchmarks and experiments demonstrates its effectiveness and versatility.</li>
+<li>However, the article lacks a detailed discussion of potential limitations or challenges associated with the implementation of MEMORYLLM. Further research is needed to address any methodological issues or potential biases that may arise in practical applications of the model. Additionally, the article could benefit from a more in-depth analysis of the theoretical underpinnings of the model’s memory retention mechanism.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -511,23 +725,23 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-02-07</td>
+<td>2024-02-08</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03757v1">https://arxiv.org/abs/2402.03757v1</a></td>
+<td><a href="https://arxiv.org/abs/2402.04624v1">https://arxiv.org/abs/2402.04624v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03757v1">https://browse.arxiv.org/html/2402.03757v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2402.04624v1">https://browse.arxiv.org/html/2402.04624v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
-<td>True</td>
+<td>False</td>
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>16105</td>
+<td>13780</td>
 </tr>
 </tbody>
 </table>
@@ -537,41 +751,38 @@
 
  ]]></description>
   <category>robustness</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/The_Instinctive_Bias_Spurious_Images_lead_to_Hallucination_in_MLLMs/2024-02-06-The_Instinctive_Bias_Spurious_Images_lead_to_Hallucination_in_MLLMs.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.03757v1/image_1.png" medium="image" type="image/png"/>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/MEMORYLLM_Towards_Self_Updatable_Large_Language_Models/2024-02-07-MEMORYLLM_Towards_Self_Updatable_Large_Language_Models.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04624v1/image_1.png" medium="image" type="image/png"/>
 </item>
 <item>
-  <title>Minds versus Machines: Rethinking Entailment Verification with Language Models</title>
-  <dc:creator>Soumya Sanyal, Tianyi Xiao, Jiacheng Liu, Wenya Wang, Xiang Ren</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Minds_versus_Machines_Rethinking_Entailment_Verification_with_Language_Models/2024-02-06-Minds_versus_Machines_Rethinking_Entailment_Verification_with_Language_Models.html</link>
+  <title>Long Is More for Alignment: A Simple but Tough-to-Beat Baseline for Instruction Fine-Tuning</title>
+  <dc:creator>Hao Zhao, Maksym Andriushchenko, Francesco Croce, Nicolas Flammarion</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Long_Is_More_for_Alignment_A_Simple_but_Tough_to_Beat_Baseline_for_Instruction_Fine_Tuning/2024-02-07-Long_Is_More_for_Alignment_A_Simple_but_Tough_to_Beat_Baseline_for_Instruction_Fine_Tuning.html</link>
   <description><![CDATA[ 
 
 
 
-<p><img src="https://bayesian-beagle.netlify.app/../bayesian-beagle.png" class="img-fluid"></p>
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04833v1/image_1.png" class="img-fluid"></p>
 <section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
 <ul>
-<li>The paper evaluates the inference judgments of humans and Large Language Models (LLMs) across various reasoning categories, including natural language inference (NLI), contextual question-answering (QA), and rationales.</li>
-<li>LLMs outperform humans in multi-hop reasoning across long contexts, while humans excel in tasks requiring simple deductive reasoning.</li>
-<li>The paper introduces a fine-tuned Flan-T5 model that outperforms GPT-3.5 and rivals with GPT-4, offering a robust open-source solution for entailment verification.</li>
+<li>The article explores the importance of instruction fine-tuning (IFT) for large language models (LLMs) and the effectiveness of using long instructions as a baseline for IFT. It compares the performance of different methods for selecting high-quality examples for IFT and demonstrates that selecting the 1,000 longest instructions from standard datasets consistently outperforms more sophisticated methods. The article also discusses the role of response length in instruction-following tasks using LLMs and evaluates the performance of the Llama-2-7B model fine-tuned on the Alpaca-1k-longest dataset. Additionally, it provides details about the IFT datasets used in the experiments and presents preference evaluations and comparisons of various LLM fine-tuning methods on different datasets. The article also includes examples of responses to specific prompts and discusses the potential consequences of humanity never discovering electricity.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings"><strong>Major Findings:</strong></h3>
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li>LLMs are superior in multi-hop reasoning across extended contexts, while humans excel in tasks necessitating simple deductive reasoning.</li>
-<li>General instruction-finetuned models are better than task-finetuned models trained on a specific dataset category.</li>
-<li>Fine-tuned models outperform GPT-3.5 and perform comparably to GPT-4 on the benchmark, providing a strong open-sourced model for entailment verification.</li>
+<li>Selecting the 1,000 longest instructions from standard datasets consistently outperforms more sophisticated methods for IFT.</li>
+<li>Longer and more detailed instructions positively influence the performance of LLMs on quantitative tasks.</li>
+<li>Fine-tuning on datasets with longer responses consistently leads to higher preferences on average than existing methods.</li>
 </ol>
 </section>
 <section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique"><strong>Analysis and Critique:</strong></h3>
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
 <ul>
-<li>The paper provides valuable insights into the differences in inference capabilities between humans and LLMs, but it does not address the potential limitations of using LLMs for entailment verification in real-world applications.</li>
-<li>The study focuses on the performance of LLMs and humans in specific reasoning categories, but it does not thoroughly discuss the broader implications of these findings for natural language understanding and AI applications.</li>
-<li>The paper lacks a comprehensive discussion of the ethical and societal implications of using LLMs for entailment verification, which is essential for understanding the broader impact of this research.</li>
+<li>The findings suggest that selecting long instructions as a baseline for IFT can lead to improved performance of fine-tuned LLMs, challenging the current understanding of high-quality IFT datasets and their impact on fine-tuned model performance in standard NLP benchmarks. However, the article could benefit from further exploration of the potential biases and limitations in the experimental methodology. Additionally, the qualitative analysis of responses to specific prompts provides valuable insights into the quality of responses generated by LLMs fine-tuned on different datasets. However, further research is needed to fully understand the implications of these findings for instruction-following performance and factuality in LLMs.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -584,23 +795,98 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-02-07</td>
+<td>2024-02-08</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03686v1">https://arxiv.org/abs/2402.03686v1</a></td>
+<td><a href="https://arxiv.org/abs/2402.04833v1">https://arxiv.org/abs/2402.04833v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03686v1">https://browse.arxiv.org/html/2402.03686v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2402.04833v1">https://browse.arxiv.org/html/2402.04833v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
-<td>False</td>
+<td>True</td>
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>12397</td>
+<td>29117</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Long_Is_More_for_Alignment_A_Simple_but_Tough_to_Beat_Baseline_for_Instruction_Fine_Tuning/2024-02-07-Long_Is_More_for_Alignment_A_Simple_but_Tough_to_Beat_Baseline_for_Instruction_Fine_Tuning.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04833v1/image_1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Can Large Language Model Agents Simulate Human Trust Behaviors?</title>
+  <dc:creator>Chengxing Xie, Canyu Chen, Feiran Jia, Ziyu Ye, Kai Shu, Adel Bibi, Ziniu Hu, Philip Torr, Bernard Ghanem, Guohao Li</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Can_Large_Language_Model_Agents_Simulate_Human_Trust_Behaviors/2024-02-07-Can_Large_Language_Model_Agents_Simulate_Human_Trust_Behaviors.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04559v1/image_1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<ul>
+<li>The paper investigates whether Large Language Model (LLM) agents can simulate human trust behaviors, focusing on Trust Games and Belief-Desire-Intention (BDI) modeling.</li>
+<li>LLM agents generally exhibit trust behaviors and have high behavioral alignment with humans regarding trust behaviors.</li>
+<li>The study explores biases in agent trust and differences in trust towards agents and humans, with implications for human simulation, LLM agent cooperation, and human-agent collaboration.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>LLM agents exhibit high behavioral alignment with humans in trust behaviors.</li>
+<li>The study’s implications extend to applications in human simulation, LLM agent cooperation, and human-agent collaboration.</li>
+<li>Understanding the intrinsic properties of agent trust can have implications for human simulation, agent cooperation, and human-agent collaboration.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The findings suggest the potential for LLM agents to simulate complex human interactions and societal systems.</li>
+<li>The study’s implications extend to applications in human simulation, LLM agent cooperation, and human-agent collaboration, highlighting the significance of the research in understanding and leveraging LLM agents in various scenarios.</li>
+<li>The challenges of manipulating agent trust and the potential impact of reasoning strategies on LLM agents’ behaviors are significant, highlighting the need for further research in this area.</li>
+<li>The data on the impact of race on agent trust provides insights into trust dynamics, and the behavior of language model agents in trust games contributes to understanding the role of race in trust dynamics and the behavior of language model agents in trust games.</li>
+<li>The prompts for different trust game scenarios are essential for understanding how large language model agents simulate human trust behaviors in various settings, contributing to a deeper understanding of the dynamics of trust and cooperation in social interactions.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04559v1">https://arxiv.org/abs/2402.04559v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04559v1">https://browse.arxiv.org/html/2402.04559v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>31254</td>
 </tr>
 </tbody>
 </table>
@@ -610,45 +896,23 @@
 
  ]]></description>
   <category>social-sciences</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Minds_versus_Machines_Rethinking_Entailment_Verification_with_Language_Models/2024-02-06-Minds_versus_Machines_Rethinking_Entailment_Verification_with_Language_Models.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
+  <category>hci</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Can_Large_Language_Model_Agents_Simulate_Human_Trust_Behaviors/2024-02-07-Can_Large_Language_Model_Agents_Simulate_Human_Trust_Behaviors.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04559v1/image_1.png" medium="image" type="image/png"/>
 </item>
 <item>
-  <title>HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal</title>
-  <dc:creator>Mantas Mazeika, Long Phan, Xuwang Yin, Andy Zou, Zifan Wang, Norman Mu, Elham Sakhaee, Nathaniel Li, Steven Basart, Bo Li, David Forsyth, Dan Hendrycks</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/HarmBench_A_Standardized_Evaluation_Framework_for_Automated_Red_Teaming_and_Robust_Refusal/2024-02-06-HarmBench_A_Standardized_Evaluation_Framework_for_Automated_Red_Teaming_and_Robust_Refusal.html</link>
+  <title>ChatScratch: An AI-Augmented System Toward Autonomous Visual Programming Learning for Children Aged 6-12</title>
+  <dc:creator>Liuqing Chen, Shuhong Xiao, Yunnong Chen, Ruoyu Wu, Yaxuan Song, Lingyun Sun</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/ChatScratch_An_AI_Augmented_System_Toward_Autonomous_Visual_Programming_Learning_for_Children_Aged_6_12/2024-02-07-ChatScratch_An_AI_Augmented_System_Toward_Autonomous_Visual_Programming_Learning_for_Children_Aged_6_12.html</link>
   <description><![CDATA[ 
 
 
 
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.04249v1/image_1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
-<ul>
-<li>The article introduces HarmBench, a standardized evaluation framework for automated red teaming, and discusses its significance in evaluating and improving the safety of Large Language Models (LLMs).</li>
-<li>It outlines the functional categories of behavior, evaluation pipeline, curation of harmful behaviors, and differential harm within the HarmBench framework.</li>
-<li>The article provides an extensive list of references to related works and research papers in the field of adversarial attacks and defenses in natural language processing and large language models.</li>
-<li>It presents the development of an adversarial training method for robust refusal, called Robust Refusal Dynamic Defense (R2D2), and discusses its significance in addressing the need for model-level defenses beyond standard fine-tuning.</li>
-</ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
-<ol type="1">
-<li>HarmBench serves as a valuable framework for evaluating and improving the safety of Large Language Models (LLMs).</li>
-<li>The R2D2 method presents a novel approach to adversarial training for LLMs, with potential implications for improving their robustness against adversarial attacks.</li>
-<li>The article provides valuable insights into the performance of different models in carrying out successful attacks on the HarmBench validation set, shedding light on the effectiveness of each model in different attack scenarios.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<ul>
-<li>The article effectively addresses the lack of a standardized evaluation framework for automated red teaming and highlights the potential of HarmBench in enabling large-scale comparisons and the development of stronger attacks and defenses.</li>
-<li>The comprehensive overview of the HarmBench framework emphasizes its significance in evaluating and improving the safety of LLMs, highlighting the need for sophisticated defense strategies and the ethical implications of advancing AI development.</li>
-<li>The extensive list of references provides a valuable resource for researchers and practitioners in the field of adversarial attacks and defenses in natural language processing and large language models, demonstrating the collaborative nature of academic inquiry in this domain.</li>
-<li>The development of the R2D2 method addresses the need for model-level defenses beyond standard fine-tuning, providing a novel approach to adversarial training for LLMs with potential implications for improving their robustness against adversarial attacks.</li>
-</ul>
-</section>
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04975v1/image_1.png" class="img-fluid"></p>
+<p><strong>Summary:</strong> The academic article discusses the challenges faced by children aged 6-12 in learning programming through Scratch and introduces ChatScratch, an AI-augmented system designed to address these challenges. The authors identify three main obstacles to children’s autonomous Scratch learning: artist’s block in project planning, bounded creativity in asset creation, and inadequate coding guidance during implementation. ChatScratch employs structured interactive storyboards, visual cues, digital drawing, advanced image generation technologies, and Scratch-specialized Large Language Models (LLMs) to overcome these barriers. A study comparing Scratch and ChatScratch shows that ChatScratch fosters autonomous programming learning and contributes to the creation of high-quality, personally meaningful Scratch projects for children. The article also discusses the implementation of ChatScratch, its evaluation, and the creative stories developed by children using the system.</p>
+<p><strong>Major Findings:</strong> 1. ChatScratch fosters autonomous programming learning and contributes to the creation of high-quality, personally meaningful Scratch projects for children. 2. The use of a Scratch-specialized Large Language Model for the code assistant demonstrates an innovative approach to providing tailored programming guidance to children. 3. ChatScratch enhances children’s creative expression, code quality, and supports iterative creation and personal preferences in project development.</p>
+<p><strong>Analysis and Critique:</strong> - The study’s findings demonstrate the effectiveness of ChatScratch in fostering autonomous learning and promoting creativity in young learners. - The use of a within-subjects study with 24 children adds credibility to the evaluation of ChatScratch’s impact on children’s programming abilities and creativity. - The section provides valuable insights into the challenges children face in learning Scratch programming and the design objectives for ChatScratch, emphasizing the importance of supporting iterative creation and personalization in project development. - The article’s focus on integrating computational thinking and programming skills into early childhood education has implications for the future workforce and the development of a digitally literate society.</p>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
@@ -659,15 +923,15 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-02-07</td>
+<td>2024-02-08</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.04249v1">https://arxiv.org/abs/2402.04249v1</a></td>
+<td><a href="https://arxiv.org/abs/2402.04975v1">https://arxiv.org/abs/2402.04975v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.04249v1">https://browse.arxiv.org/html/2402.04249v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2402.04975v1">https://browse.arxiv.org/html/2402.04975v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
@@ -675,168 +939,7 @@
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>39372</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>architectures</category>
-  <category>production</category>
-  <category>security</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/HarmBench_A_Standardized_Evaluation_Framework_for_Automated_Red_Teaming_and_Robust_Refusal/2024-02-06-HarmBench_A_Standardized_Evaluation_Framework_for_Automated_Red_Teaming_and_Robust_Refusal.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04249v1/image_1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Leak, Cheat, Repeat: Data Contamination and Evaluation Malpractices in Closed-Source LLMs</title>
-  <dc:creator>Simone Balloccu, Patrícia Schmidtová, Mateusz Lango, Ondřej Dušek</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Leak_Cheat_Repeat_Data_Contamination_and_Evaluation_Malpractices_in_Closed_Source_LLMs/2024-02-06-Leak_Cheat_Repeat_Data_Contamination_and_Evaluation_Malpractices_in_Closed_Source_LLMs.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.03927v1/image_1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
-<ul>
-<li><p>The article discusses data contamination and evaluation malpractices in the context of Large Language Models (LLMs), focusing on OpenAI’s GPT-3.5 and GPT-4. It provides a systematic analysis of 255 papers evaluating these models, revealing data leakage and evaluation malpractices. The authors propose suggested practices for the evaluation of closed-source LLMs.</p></li>
-<li><p>The majority of papers that leaked data were published before the official release of the ChatGPT API. The web interface access decreased after March 2023, but some work continued to use it until September 2023. The leaked data after the API release suggests that some researchers are unaware of OpenAI’s data policy or do not consider it a problem. The severity of data leaks was quantified, with over 4.7M samples leaked from 263 unique datasets. Most samples came from whole datasets, followed by test and development sets, and training sets. The leaked data included examples’ labels, which is considered the worst case of data leaking. The evaluation of ChatGPT’s performance was often unfair, with comparisons to open models missing or unequal comparisons. The evaluation reproducibility and fairness were also analyzed.</p></li>
-<li><p>The section covers various aspects of ChatGPT, such as its multilingual learning capabilities, performance evaluation on benchmark datasets, meta-analysis after 2.5 months, information extraction capabilities, and its potential in reviving anime characters in reality. Additionally, the section discusses the use of ChatGPT as a database interface, its promise in detecting and discriminating hateful, offensive, and toxic comments on social media, and its grounding via dynamic knowledge adapting over heterogeneous sources. Furthermore, the section delves into guiding large language models via directional stimulus prompting, holistic evaluation of language models, and few-shot text classification for finance. The section also explores ChatGPT’s capabilities in zero-shot text-to-SQL, modeling ambiguity, and evaluating large language models on graphs. Additionally, it covers the evaluation of logical reasoning ability, code generation, vulnerability description mappings, and NLG evaluation using GPT-4. Lastly, the section discusses the future of large language models and their potential in generative pre-training.</p></li>
-<li><p>The utility of ChatGPT throughout the entire clinical workflow is explored in this academic paper. The authors investigate the potential of large language models, such as ChatGPT, for various applications in the clinical domain. They analyze the performance of ChatGPT in tasks such as summarization, question answering, knowledge retrieval, and more.</p></li>
-<li><p>This section provides additional details on the evaluation reproducibility and fairness of the work reviewed. Concrete numbers for the assessment of reproducibility and evaluation practices are presented in Tables 2 and 3. Additionally, Tables 4, 5, and 6 show the datasets that have been leaked to ChatGPT, categorized according to the task and the level of leakage.</p></li>
-</ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
-<ol type="1">
-<li>Data leakage and evaluation malpractices are prevalent in the evaluation of Large Language Models, particularly with respect to OpenAI’s GPT-3.5 and GPT-4.</li>
-<li>ChatGPT demonstrates diverse capabilities, including multilingual learning, information extraction, and addressing real-world issues such as detecting hateful and offensive comments on social media.</li>
-<li>ChatGPT shows potential for various applications in the clinical domain, including summarization, question answering, and knowledge retrieval.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<ul>
-<li>The findings highlight the need for improved evaluation practices and transparency in the use of large language models, particularly in addressing data leakage and ensuring fairness and reproducibility.</li>
-<li>The diverse capabilities of ChatGPT underscore its potential impact on real-world applications, but further empirical studies and comprehensive evaluations are necessary to understand its effectiveness and limitations in different domains.</li>
-<li>The detailed statistics and information provided in the section on evaluation reproducibility and fairness offer transparency and insight into the validity and trustworthiness of the evaluated models and their outputs.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03927v1">https://arxiv.org/abs/2402.03927v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03927v1">https://browse.arxiv.org/html/2402.03927v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>31020</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>architectures</category>
-  <category>production</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Leak_Cheat_Repeat_Data_Contamination_and_Evaluation_Malpractices_in_Closed_Source_LLMs/2024-02-06-Leak_Cheat_Repeat_Data_Contamination_and_Evaluation_Malpractices_in_Closed_Source_LLMs.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.03927v1/image_1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Professional Agents – Evolving Large Language Models into Autonomous Experts with Human-Level Competencies</title>
-  <dc:creator>Zhixuan Chu, Yan Wang, Feng Zhu, Lu Yu, Longfei Li, Jinjie Gu</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Professional_Agents____Evolving_Large_Language_Models_into_Autonomous_Experts_with_Human_Level_Competencies/2024-02-06-Professional_Agents____Evolving_Large_Language_Models_into_Autonomous_Experts_with_Human_Level_Competencies.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/posts/Professional_Agents____Evolving_Large_Language_Models_into_Autonomous_Experts_with_Human_Level_Competencies/https:/browse.arxiv.org/html/2402.03628v1/x1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
-<ul>
-<li>The article introduces the concept of Professional Agents (PAgents) as an application framework that utilizes large language models to create autonomous agents with specialized expertise.</li>
-<li>It discusses the genesis, evolution, and multi-agent synergy aspects of PAgents, providing a pipeline for constructing PAgents that can replicate and exceed human-level expertise through continuous learning.</li>
-</ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
-<ol type="1">
-<li><strong>Advancements in Large Language Models (LLMs):</strong>
-<ul>
-<li>LLMs like GPT-3, PaLM, and ChatGPT demonstrate human-like language fluency and reasoning capacities, showcasing potential for artificial general intelligence (AGI).</li>
-<li>LLMs can craft high-quality long-form text, hold conversations, translate between languages, comprehend and respond to queries, and generate code based on textual descriptions.</li>
-</ul></li>
-<li><strong>Agents and Artificial General Intelligence (AGI):</strong>
-<ul>
-<li>Agents capable of autonomous planning and action have shown promise as a pathway to achieving AGI, adapting to acquire skills and knowledge displayed by human experts in various fields.</li>
-<li>The advent of agents with human and super-human level AGI promises to transform professional services in revolutionary ways, expanding the capacities of companies and industries.</li>
-</ul></li>
-<li><strong>Professional Agents Framework:</strong>
-<ul>
-<li>The PAgents framework entails a tri-layered architecture for genesis, evolution, and synergy, including a base tool layer, middle agent layer, and top synergy layer.</li>
-<li>PAgents are initialized according to a specified “gene” and can constantly evolve through self-evolution, coevolution, human feedback evolution, gene refinement, and guidance from superstratum PAgents.</li>
-</ul></li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<ul>
-<li>The article presents a comprehensive framework for developing PAgents, but it raises several challenges and limitations, including sample inefficiency in learning, brittleness when operating outside training distributions, insufficient reasoning abilities for multifaceted tasks, expressing complex motor skills for physical embodiment, and difficulty ensuring human-aligned behavior as agent capabilities grow.</li>
-<li>Mitigating these issues to create increasingly capable, safe, and robust PAgents will require innovations in prompt engineering, simulator design, memory architectures, model training techniques, explainability methods, and policy learning algorithms.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03628v1">https://arxiv.org/abs/2402.03628v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03628v1">https://browse.arxiv.org/html/2402.03628v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>8060</td>
+<td>27135</td>
 </tr>
 </tbody>
 </table>
@@ -847,393 +950,45 @@
  ]]></description>
   <category>hci</category>
   <category>education</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Professional_Agents____Evolving_Large_Language_Models_into_Autonomous_Experts_with_Human_Level_Competencies/2024-02-06-Professional_Agents____Evolving_Large_Language_Models_into_Autonomous_Experts_with_Human_Level_Competencies.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://browse.arxiv.org/html/2402.03628v1/x1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Scaling Laws for Downstream Task Performance of Large Language Models</title>
-  <dc:creator>Berivan Isik, Natalia Ponomareva, Hussein Hazimeh, Dimitris Paparas, Sergei Vassilvitskii, Sanmi Koyejo</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Scaling_Laws_for_Downstream_Task_Performance_of_Large_Language_Models/2024-02-06-Scaling_Laws_for_Downstream_Task_Performance_of_Large_Language_Models.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.04177v1/image_1.png" class="img-fluid"></p>
-<p>B.3 Comparison of T5-3B and T5-770M In Figures 7 and 8, we compare the scaling behavior of T5-3B and T5-770M models for the en-de and en-fr translation tasks. We observe that the scaling laws for both models are consistent with each other, showing similar trends in the scaling behavior for both the BLEU score and the downstream cross-entropy loss. This suggests that the scaling laws are robust and consistent across different model sizes. Figure 7: Comparison of scaling behavior for T5-3B and T5-770M models for the en-de translation task. (top) BLEU score vs pretraining dataset size: f(Dp) = (log(A · Dα p))β. (bottom) Cross-entropy (CE) validation loss vs pretraining dataset size: L(Dp) = E + A Dα p . Figure 8: Comparison of scaling behavior for T5-3B and T5-770M models for the en-fr translation task. (top) BLEU score vs pretraining dataset size: f(Dp) = (log(A · Dα p))β. (bottom) Cross-entropy (CE) validation loss vs pretraining dataset size: L(Dp) = E + A Dα p . Overall, the comparison of the scaling behavior between T5-3B and T5-770M models shows that the scaling laws are consistent and provide similar insights into the relationship between pretraining dataset size and downstream task performance for both models. This consistency across different model sizes adds credibility to the findings and insights derived from the scaling laws.</p>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.04177v1">https://arxiv.org/abs/2402.04177v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.04177v1">https://browse.arxiv.org/html/2402.04177v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>15391</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>architectures</category>
-  <category>production</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Scaling_Laws_for_Downstream_Task_Performance_of_Large_Language_Models/2024-02-06-Scaling_Laws_for_Downstream_Task_Performance_of_Large_Language_Models.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04177v1/image_1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Can Generative Agents Predict Emotion?</title>
-  <dc:creator>Ciaran Regan, Nanami Iwahashi, Shogo Tanaka, Mizuki Oka</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Can_Generative_Agents_Predict_Emotion/2024-02-06-Can_Generative_Agents_Predict_Emotion.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/../bayesian-beagle.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
-<ul>
-<li>The article presents a template for PRIME AI Style, providing a structured format for academic writing.</li>
-<li>The template includes sections such as Abstract, Keywords, Introduction, Headings, Examples of citations, figures, tables, and Conclusion.</li>
-<li>It emphasizes the importance of proper formatting, organization, and citation in academic writing.</li>
-</ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
-<ol type="1">
-<li>The template provides a clear structure for academic writing, including sections such as Abstract, Keywords, Introduction, and Conclusion.</li>
-<li>It emphasizes the significance of proper citation and referencing, providing examples of how to cite sources and include figures and tables.</li>
-<li>The article highlights the importance of consistency and clarity in academic writing, ensuring that the content is well-organized and easy to follow.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<ul>
-<li>The article lacks specific examples or detailed guidelines for writing in the PRIME AI Style, making it challenging for readers to fully understand how to implement the template.</li>
-<li>While the template provides a structured format, it does not address potential challenges or variations in academic writing, such as different citation styles or specific requirements for various disciplines.</li>
-<li>The article could benefit from more practical examples and detailed explanations to help readers effectively apply the PRIME AI Style template in their academic writing.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.04232v1">https://arxiv.org/abs/2402.04232v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.04232v1">https://browse.arxiv.org/html/2402.04232v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>2475</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>hci</category>
-  <category>social-sciences</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Can_Generative_Agents_Predict_Emotion/2024-02-06-Can_Generative_Agents_Predict_Emotion.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Position Paper: Against Spurious Sparks-Dovelating Inflated AI Claims</title>
-  <dc:creator>Patrick Altmeyer, Andrew M. Demetriou, Antony Bartlett, Cynthia C. S. Liem</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Position_Paper_Against_Spurious_Sparks_Dovelating_Inflated_AI_Claims/2024-02-06-Position_Paper_Against_Spurious_Sparks_Dovelating_Inflated_AI_Claims.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.03962v1/image_1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
-<p>In this position paper, the authors discuss the tendency to attribute human-like qualities to Large Language Models (LLMs) in the context of Artificial General Intelligence (AGI). They argue that the current search for AGI is prone to over-attributing human-like qualities to LLMs due to professional incentives, human biases, and methodological setups. The authors present several experiments to demonstrate that the discovery of human-interpretable patterns in latent spaces should not be a surprising outcome. They also call for the academic community to exercise extra caution in interpreting and communicating about AI research outcomes.</p>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
-<ol type="1">
-<li>The authors argue that the current search for AGI is prone to over-attributing human-like qualities to LLMs due to professional incentives, human biases, and methodological setups.</li>
-<li>Several experiments demonstrate that the discovery of human-interpretable patterns in latent spaces should not be a surprising outcome.</li>
-<li>The authors call for the academic community to exercise extra caution in interpreting and communicating about AI research outcomes.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<ul>
-<li>The authors provide a comprehensive and critical analysis of the current state of AI research, highlighting the potential biases and limitations in interpreting AI outcomes.</li>
-<li>They emphasize the need for rigorous testing and caution in attributing human-like qualities to AI systems, especially in the context of AGI.</li>
-<li>The paper raises important questions about the interpretation and communication of AI research outcomes, calling for a more nuanced and thorough approach to understanding the capabilities of AI systems.</li>
-</ul>
-<p>Overall, the paper provides valuable insights into the challenges and potential biases in AI research, emphasizing the need for critical evaluation and careful interpretation of AI outcomes.</p>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03962v1">https://arxiv.org/abs/2402.03962v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03962v1">https://browse.arxiv.org/html/2402.03962v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>15626</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>hci</category>
-  <category>social-sciences</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Position_Paper_Against_Spurious_Sparks_Dovelating_Inflated_AI_Claims/2024-02-06-Position_Paper_Against_Spurious_Sparks_Dovelating_Inflated_AI_Claims.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.03962v1/image_1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Systematic Biases in LLM Simulations of Debates</title>
-  <dc:creator>Amir Taubenfeld, Yaniv Dover, Roi Reichart, Ariel Goldstein</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Systematic_Biases_in_LLM_Simulations_of_Debates/2024-02-06-Systematic_Biases_in_LLM_Simulations_of_Debates.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.04049v1/image_1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
-<ul>
-<li>Recent advancements in natural language processing, especially the emergence of Large Language Models (LLMs), have opened exciting possibilities for constructing computational simulations designed to replicate human behavior accurately.</li>
-<li>However, LLMs are complex statistical learners without straightforward deductive rules, making them prone to unexpected behaviors.</li>
-<li>In this study, the limitations of LLMs in simulating human interactions, particularly focusing on LLMs’ ability to simulate political debates, are highlighted.</li>
-<li>Findings indicate a tendency for LLM agents to conform to the model’s inherent social biases despite being directed to debate from certain political perspectives.</li>
-<li>The study reinforces these observations using an automatic self-fine-tuning method, which enables the manipulation of the biases within the LLM and demonstrates that agents subsequently align with the altered biases.</li>
-<li>These results underscore the need for further research to develop methods that help agents overcome these biases, a critical step toward creating more realistic simulations.</li>
-</ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
-<ol type="1">
-<li>LLM agents tend to conform to the model’s inherent social biases despite being directed to debate from certain political perspectives.</li>
-<li>The study reinforces these observations using an automatic self-fine-tuning method, which enables the manipulation of the biases within the LLM and demonstrates that agents subsequently align with the altered biases.</li>
-<li>The results underscore the need for further research to develop methods that help agents overcome these biases, a critical step toward creating more realistic simulations.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<ul>
-<li>The study provides valuable insights into the limitations of LLMs in simulating human interactions, particularly in the context of political debates.</li>
-<li>The findings raise important questions about the reliability and accuracy of LLM-based simulations, especially in capturing diverse human perspectives and behaviors.</li>
-<li>The study’s focus on the need for further research to develop methods that help agents overcome biases is a critical step toward creating more realistic simulations.</li>
-<li>However, the study’s scope is limited to debates involving LLM agents, and further research is needed to explore the broader implications of LLM biases in large-scale simulations and real-world applications.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.04049v1">https://arxiv.org/abs/2402.04049v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.04049v1">https://browse.arxiv.org/html/2402.04049v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>12506</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>hci</category>
-  <category>architectures</category>
-  <category>production</category>
-  <category>social-sciences</category>
-  <category>education</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Systematic_Biases_in_LLM_Simulations_of_Debates/2024-02-06-Systematic_Biases_in_LLM_Simulations_of_Debates.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04049v1/image_1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Iterative Prompt Refinement for Radiation Oncology Symptom Extraction Using Teacher-Student Large Language Models</title>
-  <dc:creator>Reza Khanmohammadi, Ahmed I Ghanem, Kyle Verdecchia, Ryan Hall, Mohamed Elshaikh, Benjamin Movsas, Hassan Bagher-Ebadian, Indrin Chetty, Mohammad M. Ghassemi, Kundan Thind</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Iterative_Prompt_Refinement_for_Radiation_Oncology_Symptom_Extraction_Using_Teacher_Student_Large_Language_Models/2024-02-06-Iterative_Prompt_Refinement_for_Radiation_Oncology_Symptom_Extraction_Using_Teacher_Student_Large_Language_Models.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.04075v1/image_1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
-<ul>
-<li>The study introduces a novel teacher-student architecture using Large Language Models (LLMs) to improve prostate cancer radiotherapy symptom extraction from clinical notes.</li>
-<li>The iterative prompt refinement process involved 294 single symptom clinical notes across 12 symptoms, with up to 16 rounds of refinement per epoch.</li>
-<li>Results showed significant improvements in extracting symptoms from both single and multi-symptom notes.</li>
-</ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
-<ol type="1">
-<li>The teacher-student architecture using Large Language Models (LLMs) significantly improved the extraction of symptoms from both single and multi-symptom clinical notes.</li>
-<li>The iterative prompt refinement process led to substantial increases in accuracy, precision, recall, and F1 scores for both single and multi-symptom notes.</li>
-<li>The study demonstrated the effectiveness of advanced prompt engineering in LLMs for radiation oncology use.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
-<ul>
-<li>The study’s findings are promising, but potential limitations include the small sample size of single symptom notes used for optimization, which may have led to overfitting.</li>
-<li>Hyperparameter selection for both student and teacher models could have a significant impact on the overall optimization process and should be further explored.</li>
-<li>The study’s approach presents a pathway for self-optimized local LLM agents that can extract key concepts in medical notes with a zero-shot learning approach, addressing data privacy concerns in healthcare. However, further research and experimentation are needed to enhance robustness and performance.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.04075v1">https://arxiv.org/abs/2402.04075v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.04075v1">https://browse.arxiv.org/html/2402.04075v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>5555</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>production</category>
   <category>prompt-engineering</category>
-  <category>education</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Iterative_Prompt_Refinement_for_Radiation_Oncology_Symptom_Extraction_Using_Teacher_Student_Large_Language_Models/2024-02-06-Iterative_Prompt_Refinement_for_Radiation_Oncology_Symptom_Extraction_Using_Teacher_Student_Large_Language_Models.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04075v1/image_1.png" medium="image" type="image/png"/>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/ChatScratch_An_AI_Augmented_System_Toward_Autonomous_Visual_Programming_Learning_for_Children_Aged_6_12/2024-02-07-ChatScratch_An_AI_Augmented_System_Toward_Autonomous_Visual_Programming_Learning_for_Children_Aged_6_12.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04975v1/image_1.png" medium="image" type="image/png"/>
 </item>
 <item>
-  <title>Can Large Language Models Detect Rumors on Social Media?</title>
-  <dc:creator>Qiang Liu, Xiang Tao, Junfei Wu, Shu Wu, Liang Wang</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Can_Large_Language_Models_Detect_Rumors_on_Social_Media/2024-02-06-Can_Large_Language_Models_Detect_Rumors_on_Social_Media.html</link>
+  <title>The Future of Cognitive Strategy-enhanced Persuasive Dialogue Agents: New Perspectives and Trends</title>
+  <dc:creator>Mengqi Chen, Bin Guo, Hao Wang, Haoyu Li, Qian Zhao, Jingqi Liu, Yasan Ding, Yan Pan, Zhiwen Yu</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/The_Future_of_Cognitive_Strategy_enhanced_Persuasive_Dialogue_Agents_New_Perspectives_and_Trends/2024-02-07-The_Future_of_Cognitive_Strategy_enhanced_Persuasive_Dialogue_Agents_New_Perspectives_and_Trends.html</link>
   <description><![CDATA[ 
 
 
 
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.03916v1/image_1.png" class="img-fluid"></p>
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04631v1/image_1.png" class="img-fluid"></p>
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary">Summary:</h3>
 <ul>
-<li>The authors propose the LeRuD approach to address the challenges of reasoning over complex propagation information on social media, using prompts to teach LLMs to concentrate on important clues in news and comments, and dividing the propagation information into a Chain-of-Propagation to reduce the burden on LLMs.</li>
-<li>Extensive experiments on Twitter and Weibo datasets show that LeRuD outperforms several state-of-the-art rumor detection models by 2.4% to 7.6% and demonstrates promising rumor detection ability in few-shot or zero-shot scenarios.</li>
-<li>LeRuD uses reasoning from a commonsense perspective to judge the credibility of news samples, considering factors such as the regularity of writing, adequacy of details, plausibility of contents, attitudes of the public, and consistency of comments to make its judgments.</li>
+<li>The article introduces the concept of cognitive strategy-enhanced persuasive dialogue agents (CogAgent) and discusses the cognitive strategies that can be used to change users’ cognitive psychological states.</li>
+<li>It provides a formalized definition of three typical cognitive strategies: persuasion strategy, topic path planning strategy, and argument structure prediction strategy, highlighting their significance in enhancing the persuasiveness of dialogue content.</li>
+<li>The availability of diverse datasets for different persuasive dialogue scenarios provides a valuable resource for training and evaluating CogAgent, enabling the development of persuasive dialogue systems across various applications.</li>
+<li>The section also discusses the interpretability of the persuasive process, the importance of multimodal capabilities in persuasive dialogue systems, and the co-optimization of data and models for CogAgent.</li>
+<li>The extensive list of references provides a comprehensive overview of the existing literature in natural language processing, dialogue systems, and related areas, serving as a valuable resource for further exploration of the topics covered in the article.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li>LeRuD outperforms several state-of-the-art rumor detection models by 2.4% to 7.6%.</li>
-<li>LeRuD demonstrates promising rumor detection ability in few-shot or zero-shot scenarios.</li>
-<li>LeRuD uses reasoning from a commonsense perspective to judge the credibility of news samples, considering various factors to make its judgments.</li>
+<li>Cognitive strategies such as persuasion strategy, topic path planning strategy, and argument structure prediction strategy play a crucial role in enhancing the persuasiveness of dialogue content.</li>
+<li>Diverse datasets for different persuasive dialogue scenarios provide a rich resource for training and evaluating CogAgent, enabling the development of persuasive dialogue systems across various applications.</li>
+<li>The importance of interpretability, multimodal capabilities, and co-optimization of data and models for CogAgent in the context of persuasive dialogue systems.</li>
 </ol>
 </section>
 <section id="analysis-and-critique" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
 <ul>
-<li>The LeRuD approach addresses the limitations of LLMs in reasoning over excessive information and presents a novel solution to improve their performance in detecting rumors on social media platforms.</li>
-<li>The use of AI to assess the credibility of news based on user comments on social media platforms has implications for combating misinformation and fake news by leveraging AI technology to gauge public trust and skepticism.</li>
-<li>The analysis of news articles and comments highlights the importance of considering writing style, specific details, and the presence of conflicting opinions in the comments to determine the credibility of news sources. This process demonstrates the significance of critical evaluation in assessing the authenticity of news.</li>
+<li>The article provides valuable insights into the development and application of cognitive strategies in persuasive dialogue systems, but it could benefit from a more in-depth discussion of potential limitations and methodological issues.</li>
+<li>While the diverse datasets are highlighted as valuable resources, the article could further discuss potential challenges in using these datasets and the need for standardized evaluation metrics.</li>
+<li>The section on interpretability, multimodal capabilities, and co-optimization of data and models provides important considerations for the development of persuasive dialogue systems, but further exploration of potential challenges and future research directions would enhance the article’s depth.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -1246,15 +1001,15 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-02-07</td>
+<td>2024-02-08</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03916v1">https://arxiv.org/abs/2402.03916v1</a></td>
+<td><a href="https://arxiv.org/abs/2402.04631v1">https://arxiv.org/abs/2402.04631v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03916v1">https://browse.arxiv.org/html/2402.03916v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2402.04631v1">https://browse.arxiv.org/html/2402.04631v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
@@ -1262,7 +1017,85 @@
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>27219</td>
+<td>30676</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>social-sciences</category>
+  <category>hci</category>
+  <category>prompt-engineering</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/The_Future_of_Cognitive_Strategy_enhanced_Persuasive_Dialogue_Agents_New_Perspectives_and_Trends/2024-02-07-The_Future_of_Cognitive_Strategy_enhanced_Persuasive_Dialogue_Agents_New_Perspectives_and_Trends.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04631v1/image_1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Multimodal Query Suggestion with Multi-Agent Reinforcement Learning from Human Feedback</title>
+  <dc:creator>Zheng Wang, Bingzheng Gan, Wei Shi</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Multimodal_Query_Suggestion_with_Multi_Agent_Reinforcement_Learning_from_Human_Feedback/2024-02-07-Multimodal_Query_Suggestion_with_Multi_Agent_Reinforcement_Learning_from_Human_Feedback.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04867v1/image_1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<ul>
+<li>The Multimodal Query Suggestion (MMQS) task aims to improve search results by generating query suggestions based on user query images.</li>
+<li>The RL4Sugg framework, leveraging Large Language Models (LLMs) with Multi-Agent Reinforcement Learning from Human Feedback, has been validated to improve search results by 18% compared to existing approaches.</li>
+<li>The proposed approach uses GPT-4 to automate image-suggestion pair collection and user intent annotation, balancing automation and manual effort through a threshold-based mechanism.</li>
+<li>The RL4Sugg model addresses the challenges of data collection and capturing intentionality and diversity, leading to enhanced user engagement in real-world search engine products.</li>
+<li>The MMQS framework uses a bandit setting to model the environment and applies the policy gradient method for learning in the Markov Decision Process (MDP) for Agent-D.</li>
+<li>RL4Sugg has been applied in generation-based and retrieval-based scenarios, addressing the cold-start problem faced by the model.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>The RL4Sugg framework improves search results by 18% compared to existing approaches.</li>
+<li>The use of GPT-4 for automating image-suggestion pair collection and user intent annotation balances automation and manual effort effectively.</li>
+<li>The strategic division of labor between Agent-I and Agent-D optimizes both intentionality and diversity in the MMQS task.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The article provides comprehensive details about the technical aspects of the proposed approach, contributing to a better understanding of the MMQS framework and its practical applications.</li>
+<li>The study addresses the challenges of data collection and capturing intentionality and diversity, but potential biases or limitations in the data collection process are not thoroughly discussed.</li>
+<li>The article could benefit from further exploration of potential biases in the data collection process and a more in-depth discussion of the cold-start problem faced by RL4Sugg. Additionally, further research on the long-term impact of RL4Sugg on user engagement in real-world search engine products would be valuable.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04867v1">https://arxiv.org/abs/2402.04867v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04867v1">https://browse.arxiv.org/html/2402.04867v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>19642</td>
 </tr>
 </tbody>
 </table>
@@ -1272,167 +1105,166 @@
 
  ]]></description>
   <category>production</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Can_Large_Language_Models_Detect_Rumors_on_Social_Media/2024-02-06-Can_Large_Language_Models_Detect_Rumors_on_Social_Media.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.03916v1/image_1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Automatic Robotic Development through Collaborative Framework by Large Language Models</title>
-  <dc:creator>Zhirong Luan, Yujun Lai</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Automatic_Robotic_Development_through_Collaborative_Framework_by_Large_Language_Models/2024-02-06-Automatic_Robotic_Development_through_Collaborative_Framework_by_Large_Language_Models.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.03699v1/image_1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
-<ul>
-<li>The article proposes an automated collaboration framework for robot development using large language models (LLMs).</li>
-<li>The framework employs multiple LLMs in distinct roles—analysts, programmers, and testers—to handle diverse, critical tasks within the development process.</li>
-<li>Through this framework, complex robot development tasks can be accomplished without requiring specialized knowledge, relying solely on non-experts’ participation.</li>
-</ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings"><strong>Major Findings:</strong></h3>
-<ol type="1">
-<li>The proposed framework utilizes multiple LLMs in distinct roles—analysts, programmers, and testers—to handle diverse, critical tasks within the development process.</li>
-<li>Analysts delve deep into user requirements, enabling programmers to produce precise code, while testers fine-tune the parameters based on user feedback for practical robot application.</li>
-<li>Clear collaboration rules emulate real-world teamwork among LLMs, enabling individuals with no expertise in robotics to accomplish highly complex robot development tasks.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique"><strong>Analysis and Critique:</strong></h3>
-<ul>
-<li>The article presents a novel approach to automated robot development, but it may face challenges in real-world implementation and practical scalability.</li>
-<li>The reliance on large language models for complex tasks raises concerns about the interpretability and explainability of the generated code.</li>
-<li>The experimental results demonstrate the feasibility of the proposed framework, but further research is needed to address potential limitations and refine the collaborative development process.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03699v1">https://arxiv.org/abs/2402.03699v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03699v1">https://browse.arxiv.org/html/2402.03699v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>5670</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
-  <category>architectures</category>
-  <category>education</category>
-  <category>programming</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Automatic_Robotic_Development_through_Collaborative_Framework_by_Large_Language_Models/2024-02-06-Automatic_Robotic_Development_through_Collaborative_Framework_by_Large_Language_Models.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.03699v1/image_1.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Embedding Large Language Models into Extended Reality: Opportunities and Challenges for Inclusion, Engagement, and Privacy</title>
-  <dc:creator>Efe Bozkir, Süleyman Özdel, Ka Hei Carrie Lau, Mengdi Wang, Hong Gao, Enkelejda Kasneci</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Embedding_Large_Language_Models_into_Extended_Reality_Opportunities_and_Challenges_for_Inclusion_Engagement_and_Privacy/2024-02-06-Embedding_Large_Language_Models_into_Extended_Reality_Opportunities_and_Challenges_for_Inclusion_Engagement_and_Privacy.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://bayesian-beagle.netlify.app/img/2402.03907v1/image_1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
-<ul>
-<li>Recent developments in computer graphics, hardware, artificial intelligence (AI), and human-computer interaction have led to extended reality (XR) devices and setups becoming more pervasive.</li>
-<li>Large language models (LLMs) can be embedded in virtual avatars or as narratives to facilitate more inclusive experiences through prompt engineering according to user profiles and fine-tuning the LLMs for particular purposes.</li>
-<li>LLMs can enhance diversity, equity, and engagement in XR environments, but may also lead to privacy invasions.</li>
-</ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings"><strong>Major Findings:</strong></h3>
-<ol type="1">
-<li>LLMs can be used to create more inclusive and engaging XR experiences through prompt engineering and fine-tuning for specific purposes.</li>
-<li>The versatile conversational capabilities of LLMs can lead to more engaging XR environments, making XR more pervasive in everyday life.</li>
-<li>Combining user-provided information with biometric sensor data in LLM-powered environments may lead to novel privacy invasions, necessitating an investigation into user privacy concerns and preferences.</li>
-</ol>
-</section>
-<section id="analysis-and-critique" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-and-critique"><strong>Analysis and Critique:</strong></h3>
-<ul>
-<li>The use of LLMs in XR environments presents promising opportunities for inclusion, diversity, and engagement. However, the potential for privacy invasions and the ethical implications of combining user-provided information with biometric data need to be carefully considered and addressed.</li>
-<li>The rapid advancements in LLM technology and its integration into XR environments may outpace the development of ethical guidelines and privacy-preserving methods, posing a challenge for researchers and developers.</li>
-<li>Longitudinal studies and ongoing assessments of user privacy attitudes and behaviors in LLM-powered XR environments are necessary to ensure that privacy concerns are adequately addressed.</li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
-</tr>
-<tr class="even">
-<td>Date Generated</td>
-<td>2024-02-07</td>
-</tr>
-<tr class="odd">
-<td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03907v1">https://arxiv.org/abs/2402.03907v1</a></td>
-</tr>
-<tr class="even">
-<td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03907v1">https://browse.arxiv.org/html/2402.03907v1</a></td>
-</tr>
-<tr class="odd">
-<td>Truncated</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>Word Count</td>
-<td>13421</td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
- ]]></description>
   <category>hci</category>
   <category>architectures</category>
-  <category>production</category>
-  <category>robustness</category>
-  <category>prompt-engineering</category>
-  <category>security</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Embedding_Large_Language_Models_into_Extended_Reality_Opportunities_and_Challenges_for_Inclusion_Engagement_and_Privacy/2024-02-06-Embedding_Large_Language_Models_into_Extended_Reality_Opportunities_and_Challenges_for_Inclusion_Engagement_and_Privacy.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bayesian-beagle.netlify.app/img/2402.03907v1/image_1.png" medium="image" type="image/png"/>
+  <guid>https://bayesian-beagle.netlify.app/posts/Multimodal_Query_Suggestion_with_Multi_Agent_Reinforcement_Learning_from_Human_Feedback/2024-02-07-Multimodal_Query_Suggestion_with_Multi_Agent_Reinforcement_Learning_from_Human_Feedback.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04867v1/image_1.png" medium="image" type="image/png"/>
 </item>
 <item>
-  <title>Batch Universal Prediction</title>
-  <dc:creator>Marco Bondaschi, Michael Gastpar</dc:creator>
-  <link>https://bayesian-beagle.netlify.app/posts/Batch_Universal_Prediction/2024-02-06-Batch_Universal_Prediction.html</link>
+  <title>An Enhanced Prompt-Based LLM Reasoning Scheme via Knowledge Graph-Integrated Collaboration</title>
+  <dc:creator>Yihao Li, Ru Zhang, Jianyi Liu, Gongshen Liu</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/An_Enhanced_Prompt_Based_LLM_Reasoning_Scheme_via_Knowledge_Graph_Integrated_Collaboration/2024-02-07-An_Enhanced_Prompt_Based_LLM_Reasoning_Scheme_via_Knowledge_Graph_Integrated_Collaboration.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04978v1/image_1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
+<ul>
+<li>Large Language Models (LLMs) have shown exceptional performance in Natural Language Processing (NLP) tasks but face challenges in practical applications.</li>
+<li>This study proposes a collaborative training-free reasoning scheme involving cooperation between Knowledge Graph (KG) and LLMs to overcome these limitations.</li>
+<li>The scheme involves using LLMs to iteratively explore KG, selectively retrieving task-relevant knowledge subgraphs to support reasoning, and explicitly elucidating the reasoning process.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li><strong>Challenges with LLMs:</strong> LLMs face issues with hallucinations, inadequate knowledge updating, and limited transparency in the reasoning process.</li>
+<li><strong>Collaborative Training-Free Reasoning Scheme:</strong> The proposed scheme involves tight cooperation between KG and LLMs, enhancing the reasoning abilities of LLMs and effectively utilizing latent knowledge within LLMs.</li>
+<li><strong>Experimental Results:</strong> The scheme significantly progressed across multiple datasets, notably achieving over a 10% improvement on the QALD10 dataset compared to the best baseline and the fine-tuned state-of-the-art (SOTA) work.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The proposed scheme demonstrates superior performance compared to baseline methods and previous SOTA works, showcasing its ability to handle specialized and complex tasks more efficiently.</li>
+<li>The study acknowledges limitations in answering counting questions and the impact of low-quality knowledge retrieval on LLM reasoning.</li>
+<li>Further experiments demonstrate the adaptability and effectiveness of the scheme with different KGs and LLMs, highlighting its potential to enhance the reasoning capabilities of smaller LLMs and compete effectively with larger LLMs.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04978v1">https://arxiv.org/abs/2402.04978v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04978v1">https://browse.arxiv.org/html/2402.04978v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>13166</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>production</category>
+  <category>education</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/An_Enhanced_Prompt_Based_LLM_Reasoning_Scheme_via_Knowledge_Graph_Integrated_Collaboration/2024-02-07-An_Enhanced_Prompt_Based_LLM_Reasoning_Scheme_via_Knowledge_Graph_Integrated_Collaboration.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04978v1/image_1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Chatbots in Knowledge-Intensive Contexts: Comparing Intent and LLM-Based Systems</title>
+  <dc:creator>Samuel Kernan Freire, Chaofan Wang, Evangelos Niforatos</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/Chatbots_in_Knowledge_Intensive_Contexts_Comparing_Intent_and_LLM_Based_Systems/2024-02-07-Chatbots_in_Knowledge_Intensive_Contexts_Comparing_Intent_and_LLM_Based_Systems.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04955v1/image_1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
+<ul>
+<li>Cognitive assistants (CA) are chatbots that provide context-aware support to human workers in knowledge-intensive tasks.</li>
+<li>Recent advances in natural language processing (NLP) have led to large language models (LLM) that enable CAs to converse in a more flexible, human-like manner.</li>
+<li>A user study comparing an LLM-based CA to an intent-based system revealed that LLM-based CAs exhibited better user experience, task completion rate, usability, and perceived performance than intent-based systems.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>LLM-based CAs exhibited better user experience, task completion rate, usability, and perceived performance than intent-based systems.</li>
+<li>The information contained in the foundation models can be extended by providing context material, a process called retrieval augmented generation (RAG).</li>
+<li>LLM-based systems could help alleviate some of the constraints of intent-based systems as they are quick to deploy and have superior NLP capabilities.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The study suggests that LLM-based CAs could help workers retrieve information and share knowledge more efficiently than intent-based systems.</li>
+<li>However, it is important to consider the ethical, productivity, and safety implications of using LLM-based systems, especially due to the potential for hallucinated information.</li>
+<li>The study’s limitations include the use of industrial design master students instead of factory workers and the challenge of comparing the two NLP systems fairly.</li>
+<li>Future work could explore the impact of LLM-based systems on work tasks and associated risks, as well as the incorporation of suggested inputs and multimodality in knowledge-intensive contexts.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04955v1">https://arxiv.org/abs/2402.04955v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04955v1">https://browse.arxiv.org/html/2402.04955v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>8304</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>production</category>
+  <category>social-sciences</category>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/Chatbots_in_Knowledge_Intensive_Contexts_Comparing_Intent_and_LLM_Based_Systems/2024-02-07-Chatbots_in_Knowledge_Intensive_Contexts_Comparing_Intent_and_LLM_Based_Systems.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04955v1/image_1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>A Sober Look at LLMs for Material Discovery: Are They Actually Good for Bayesian Optimization Over Molecules?</title>
+  <dc:creator>Agustinus Kristiadi, Felix Strieth-Kalthoff, Marta Skreta, Pascal Poupart, Alán Aspuru-Guzik, Geoff Pleiss</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/A_Sober_Look_at_LLMs_for_Material_Discovery_Are_They_Actually_Good_for_Bayesian_Optimization_Over_Molecules/2024-02-07-A_Sober_Look_at_LLMs_for_Material_Discovery_Are_They_Actually_Good_for_Bayesian_Optimization_Over_Molecules.html</link>
   <description><![CDATA[ 
 
 
@@ -1441,26 +1273,25 @@
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary">Summary:</h3>
 <ul>
-<li>Large language models (LLMs) have gained popularity for generating human-like English sentences.</li>
-<li>LLMs are predictors that estimate the probability of a sequence of words given the past.</li>
-<li>The article introduces the notion of batch regret and studies its asymptotical value for add-constant predictors in memoryless and first-order Markov sources.</li>
+<li>The article explores the use of large language models (LLMs) in Bayesian optimization (BO) for material discovery, highlighting the challenges in material discovery and the role of BO in leveraging prior knowledge for efficient exploration of a large molecular space. It introduces the concept of LLMs as fixed feature extractors and discusses the use of parameter-efficient finetuning methods and Bayesian neural networks to obtain the posterior of the LLM surrogate. The authors present their contributions, including the study of LLMs for material discovery, the development of software for principled BO with LLMs, and insights on the usefulness of LLMs for scientific discovery.</li>
+<li>The use of parameter-efficient fine-tuning (PEFT) methods to optimize LLMs for BO in molecular discovery is discussed, comparing the performance of general-purpose LLMs and chemistry-specific LLMs as feature extractors in BO. The impact of prompting on BO performance and the effectiveness of finetuned LLM surrogates with fixed-feature surrogates are also explored.</li>
+<li>The article also delves into the use of LLMs as surrogate models for BO over molecules, comparing finetuned LLM surrogates to fixed-feature surrogates and highlighting the challenges of using LLMs due to their computational expense and memory limitations. It discusses related work on the usage of LLMs for BO and the application of generative models for continuous optimization of molecules.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li>LLMs are essentially predictors that estimate the probability of the next words in an online fashion.</li>
-<li>The article introduces the concept of batch regret as a modification of the classical average regret to evaluate LLMs from a universal prediction perspective.</li>
-<li>The study focuses on the asymptotical batch regret for add-constant predictors in memoryless and first-order Markov sources.</li>
+<li>LLMs can be effectively optimized for BO in molecular discovery using parameter-efficient fine-tuning methods, with chemistry-specific LLMs showing promising performance as feature extractors.</li>
+<li>The choice of prompt and molecular representation significantly influences the performance of LLM-based Bayesian optimization, emphasizing the importance of these factors in the optimization process.</li>
+<li>The computational expense and memory limitations of LLMs present challenges in their application as surrogate models for BO over molecules, but their potential for aiding scientific discovery in chemistry is evident.</li>
 </ol>
 </section>
 <section id="analysis-and-critique" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
 <ul>
-<li>The article provides valuable insights into the evaluation of large language models from a universal prediction perspective.</li>
-<li>However, the article lacks practical examples or applications of the proposed concepts.</li>
-<li>The theoretical nature of the study may limit its immediate applicability in real-world scenarios.</li>
-<li>Further research is needed to validate the proposed concepts in practical settings and to explore their potential impact on language model evaluation.</li>
+<li>The article provides valuable insights into the practical application of LLMs in molecular discovery and Bayesian optimization, shedding light on the challenges, advantages, and potential of LLM-based optimization methods.</li>
+<li>However, the computational expense and memory limitations of LLMs pose significant practical challenges, and further research is needed to address these limitations and optimize the efficiency of LLM-based optimization methods.</li>
+<li>The study’s focus on the application of LLMs in material discovery and the development of software for principled BO with LLMs is commendable, but additional research is required to fully understand the implications and limitations of LLM-based optimization in scientific applications.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -1473,23 +1304,23 @@
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-02-07</td>
+<td>2024-02-08</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
-<td><a href="https://arxiv.org/abs/2402.03901v1">https://arxiv.org/abs/2402.03901v1</a></td>
+<td><a href="https://arxiv.org/abs/2402.05015v1">https://arxiv.org/abs/2402.05015v1</a></td>
 </tr>
 <tr class="even">
 <td>HTML</td>
-<td><a href="https://browse.arxiv.org/html/2402.03901v1">https://browse.arxiv.org/html/2402.03901v1</a></td>
+<td><a href="https://browse.arxiv.org/html/2402.05015v1">https://browse.arxiv.org/html/2402.05015v1</a></td>
 </tr>
 <tr class="odd">
 <td>Truncated</td>
-<td>False</td>
+<td>True</td>
 </tr>
 <tr class="even">
 <td>Word Count</td>
-<td>8083</td>
+<td>19253</td>
 </tr>
 </tbody>
 </table>
@@ -1499,9 +1330,157 @@
 
  ]]></description>
   <category>production</category>
-  <guid>https://bayesian-beagle.netlify.app/posts/Batch_Universal_Prediction/2024-02-06-Batch_Universal_Prediction.html</guid>
-  <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
+  <category>education</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/A_Sober_Look_at_LLMs_for_Material_Discovery_Are_They_Actually_Good_for_Bayesian_Optimization_Over_Molecules/2024-02-07-A_Sober_Look_at_LLMs_for_Material_Discovery_Are_They_Actually_Good_for_Bayesian_Optimization_Over_Molecules.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
   <media:content url="https://bayesian-beagle.netlify.app/bayesian-beagle.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>MLLM-as-a-Judge: Assessing Multimodal LLM-as-a-Judge with Vision-Language Benchmark</title>
+  <dc:creator>Dongping Chen, Ruoxi Chen, Shilin Zhang, Yinuo Liu, Yaochen Wang, Huichi Zhou, Qihui Zhang, Pan Zhou, Yao Wan, Lichao Sun</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/MLLM_as_a_Judge_Assessing_Multimodal_LLM_as_a_Judge_with_Vision_Language_Benchmark/2024-02-07-MLLM_as_a_Judge_Assessing_Multimodal_LLM_as_a_Judge_with_Vision_Language_Benchmark.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04788v1/image_1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<ul>
+<li>The article introduces a novel benchmark, MLLM-AS-A-JUDGE, to assess the ability of Multimodal Large Language Models (MLLMs) in assisting judges. It discusses the challenges MLLMs face in judgment, including diverse biases, hallucinatory responses, and inconsistencies, even for advanced models such as GPT-4V. The study reveals that MLLMs demonstrate remarkable human-like discernment in Pair Comparisons, but there is a significant divergence from human preferences in Scoring Evaluation and Batch Ranking tasks. The section also discusses the experiments conducted on human agreement to address situations that traditional metrics may not capture adequately. It highlights the performance of MLLMs in scoring evaluation, pair comparison, and batch ranking tasks, as well as their consistency in decision-making. The section also presents the analysis of the “Analyze-then-Judge” setting, focusing on image-instruction pairs and their impact on mitigating hallucinations. The authors present two high-quality subsets of data, one with human preference scores of 5 and the other with instances of hallucinations. The section also provides a comprehensive overview of the capabilities and limitations of Large Language Models (LLMs) as evaluators in Natural Language Processing (NLP) tasks. It discusses the rapid development of LLMs, their use as evaluators, and advancements in their abilities, such as Chain-of-Thought reasoning and training-free instruction following. The section also discusses the use of various AI models as judges in assessing the quality of responses to user instructions, along with the results of their performance and additional experimental tests. Finally, it presents a scenario where different AI assistants provide responses to user instructions, which are then evaluated based on their adherence to the user’s original instruction and how well they address the user’s inquiry.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>MLLMs demonstrate remarkable human-like discernment in Pair Comparisons.</li>
+<li>There is a significant divergence from human preferences in Scoring Evaluation and Batch Ranking tasks.</li>
+<li>The performance of different AI models as judges in assessing the quality of responses to user instructions varies significantly.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The findings emphasize the pressing need for enhancements and further research efforts regarding MLLMs as fully reliable evaluators, particularly in tasks that require human-like judgment and decision-making.</li>
+<li>The study provides valuable insights into the performance and limitations of MLLMs in judging tasks, highlighting the need for improvements in consistency and mitigation of biases and hallucinations.</li>
+<li>The content is significant as it provides a comprehensive understanding of the capabilities and limitations of LLMs and MLLMs as evaluators, emphasizing the need for a more holistic approach to evaluation.</li>
+<li>The results of the experiments shed light on the effectiveness and limitations of AI models in evaluating responses to user instructions, highlighting the importance of human agreement bias checking and the impact of response length distribution on the judgments made by the AI models.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04788v1">https://arxiv.org/abs/2402.04788v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04788v1">https://browse.arxiv.org/html/2402.04788v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>24799</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>social-sciences</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/MLLM_as_a_Judge_Assessing_Multimodal_LLM_as_a_Judge_with_Vision_Language_Benchmark/2024-02-07-MLLM_as_a_Judge_Assessing_Multimodal_LLM_as_a_Judge_with_Vision_Language_Benchmark.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04788v1/image_1.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>PaDeLLM-NER: Parallel Decoding in Large Language Models for Named Entity Recognition</title>
+  <dc:creator>Jinghui Lu, Ziwei Yang, Yanjie Wang, Xuejing Liu, Can Huang</dc:creator>
+  <link>https://bayesian-beagle.netlify.app/posts/PaDeLLM_NER_Parallel_Decoding_in_Large_Language_Models_for_Named_Entity_Recognition/2024-02-07-PaDeLLM_NER_Parallel_Decoding_in_Large_Language_Models_for_Named_Entity_Recognition.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://bayesian-beagle.netlify.app/img/2402.04838v1/image_1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<ul>
+<li>The article introduces a new approach, PaDeLLM-NER, to reduce generation latency for Named Entity Recognition (NER) using Large Language Models (LLMs).</li>
+<li>The de-duplication technique in the PaDeLLM-NER model addresses the issue of duplicate mentions by employing prediction probability to remove repeated mentions.</li>
+<li>The potential of using LLMs in few-shot scenarios and the challenges associated with accurately counting the number of mentions and instances of recomputation within the pipeline are discussed.</li>
+<li>Various aspects of the model training and evaluation process, including dataset statistics, label mapping, sequence length reduction, error analysis, model scaling up, and reformulation examples, are explored.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>PaDeLLM-NER significantly increases inference speed and maintains the quality of predictions, outperforming previous approaches.</li>
+<li>The de-duplication technique in the PaDeLLM-NER model improves the accuracy of the NER model by removing repeated mentions, enhancing precision.</li>
+<li>The adaptability of LLMs to few-shot scenarios and the proposed improvements to address challenges related to accurate counting and recomputation are crucial for maximizing the potential of LLMs.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The article provides valuable insights into addressing the challenge of high latency in LLMs and offers a more efficient inference scheme for NER tasks.</li>
+<li>The de-duplication technique is crucial for improving the accuracy of the NER model and ensures efficient and accurate identification of duplicate mentions without incurring additional costs.</li>
+<li>The proposed improvements for LLMs in few-shot scenarios emphasize the importance of enhancing the efficiency and accuracy of LLMs for successful implementation in various applications.</li>
+<li>The findings suggest the need for further exploration of model scaling and its impact on performance across different datasets and domains.</li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td>gpt-3.5-turbo-1106</td>
+</tr>
+<tr class="even">
+<td>Date Generated</td>
+<td>2024-02-08</td>
+</tr>
+<tr class="odd">
+<td>Abstract</td>
+<td><a href="https://arxiv.org/abs/2402.04838v1">https://arxiv.org/abs/2402.04838v1</a></td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td><a href="https://browse.arxiv.org/html/2402.04838v1">https://browse.arxiv.org/html/2402.04838v1</a></td>
+</tr>
+<tr class="odd">
+<td>Truncated</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Word Count</td>
+<td>16407</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>architectures</category>
+  <guid>https://bayesian-beagle.netlify.app/posts/PaDeLLM_NER_Parallel_Decoding_in_Large_Language_Models_for_Named_Entity_Recognition/2024-02-07-PaDeLLM_NER_Parallel_Decoding_in_Large_Language_Models_for_Named_Entity_Recognition.html</guid>
+  <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bayesian-beagle.netlify.app/img/2402.04838v1/image_1.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>

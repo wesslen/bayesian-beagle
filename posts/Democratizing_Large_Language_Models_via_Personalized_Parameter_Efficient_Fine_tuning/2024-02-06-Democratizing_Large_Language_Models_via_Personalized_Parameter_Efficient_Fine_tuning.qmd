@@ -1,0 +1,41 @@
+
+---
+title: "Democratizing Large Language Models via Personalized Parameter-Efficient Fine-tuning"
+id: "2402.04401v1"
+description: "OPPU improves large language model personalization, outperforming existing methods across diverse tasks."
+author: Zhaoxuan Tan, Qingkai Zeng, Yijun Tian, Zheyuan Liu, Bing Yin, Meng Jiang
+date: "2024-02-06"
+image: "https://browse.arxiv.org/html/2402.04401v1/x1.png"
+categories: ['prompt-engineering', 'recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.04401v1/x1.png)
+
+### Summary:
+- Personalization in large language models (LLMs) is increasingly important, aiming to align LLM’s interactions, content, and recommendations with individual user preferences.
+- Recent advances in LLM personalization have spotlighted effective prompt design, by enriching user queries with non-parametric knowledge through behavior history retrieval and textual profiles.
+- To address these shortcomings, we introduce One PEFT Per User (OPPU)111The code is available at https://github.com/TamSiuhin/OPPU, which employs personalized parameter-efficient fine-tuning (PEFT) modules, to store user-specific behavior patterns and preferences.
+
+### Major Findings:
+1. OPPU significantly outperforms existing prompt-based methods across seven diverse tasks in the LaMP benchmark.
+2. OPPU's enhanced capabilities in handling user behavior shifts, modeling users at different active levels, maintaining robustness across various user history formats, and displaying versatility with different PEFT methods.
+3. OPPU's pioneering approach to PEFT-based LLM personalization ensures LLM ownership and significantly improves the model’s ability to adapt to shifts in user behavior.
+
+### Analysis and Critique:
+- The article does not address the potential ethical concerns related to privacy, data bias, and accessibility in LLM personalization.
+- The limitations of OPPU are identified, including the focus on one specific task per user and the potential biases in user interests.
+- The efficiency analysis of OPPU demonstrates the linear growth of training time with the increase in average tokens per history entry.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-08       |
+| Abstract | [https://arxiv.org/abs/2402.04401v1](https://arxiv.org/abs/2402.04401v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.04401v1](https://browse.arxiv.org/html/2402.04401v1)       |
+| Truncated       | False       |
+| Word Count       | 10037       |

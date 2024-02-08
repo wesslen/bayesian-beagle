@@ -1,0 +1,42 @@
+
+---
+title: "Detecting Generated Native Ads in Conversational Search"
+id: "2402.04889v1"
+description: "Conversational search engines may integrate advertising, but LLMs can be used to block them."
+author: Sebastian Schmidt, Ines Zelch, Janek Bevendorff, Benno Stein, Matthias Hagen, Martin Potthast
+date: "2024-02-07"
+image: "../../../bayesian-beagle.png"
+categories: ['production', 'security', 'robustness', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+- Conversational search engines use large language models (LLMs) to generate answers to queries.
+- This paper investigates whether LLMs can be used to block generated native ads.
+- The study compiles a large dataset of ad-prone queries and generated answers with automatically integrated ads to experiment with fine-tuned sentence transformers and state-of-the-art LLMs on the task of recognizing the ads.
+
+### Major Findings:
+1. Conversational search engines use LLMs to generate answers to queries.
+2. LLMs can be used to block generated native ads.
+3. The study compiles a large dataset of ad-prone queries and generated answers with automatically integrated ads to experiment with fine-tuned sentence transformers and state-of-the-art LLMs on the task of recognizing the ads.
+
+### Analysis and Critique:
+- The study demonstrates that sentence transformers can be trained to identify generated native ads with high recall and precision scores.
+- LLMs struggle with the task of recognizing ads, indicating potential limitations in their effectiveness.
+- The study highlights that organic responses from search engines already contain advertising language, which may affect the precision of ad-blocking systems.
+- The findings suggest the feasibility of generative native ads as well as the potential to defend against them on the client side.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-08       |
+| Abstract | [https://arxiv.org/abs/2402.04889v1](https://arxiv.org/abs/2402.04889v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.04889v1](https://browse.arxiv.org/html/2402.04889v1)       |
+| Truncated       | False       |
+| Word Count       | 6787       |

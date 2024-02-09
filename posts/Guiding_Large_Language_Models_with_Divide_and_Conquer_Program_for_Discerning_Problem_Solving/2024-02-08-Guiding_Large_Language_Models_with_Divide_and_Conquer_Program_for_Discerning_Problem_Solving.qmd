@@ -1,0 +1,34 @@
+
+---
+title: "Guiding Large Language Models with Divide-and-Conquer Program for Discerning Problem Solving"
+id: "2402.05359v1"
+description: "Foundation models like Large Language Models have many applications. Prompt design can unlock their potential."
+author: Yizhou Zhang, Lun Du, Defu Cao, Qiang Fu, Yan Liu
+date: "2024-02-08"
+image: "https://browse.arxiv.org/html/2402.05359v1/x1.png"
+categories: ['education', 'robustness', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.05359v1/x1.png)
+
+. In the first example, for long integer multiplication, the sequential sub-task tackling strategy will calculate the multiplication of each pair of numbers one by one, and then merge the results. In contrast, the parallel sub-task tackling strategy will calculate the multiplication of each pair of numbers in parallel, and then merge the results. Similarly, in the second example for hallucination detection, the sequential sub-task tackling strategy will verify each sentence one by one, and then merge the results. In contrast, the parallel sub-task tackling strategy will verify each sentence in parallel, and then merge the results.
+
+The advantage of the parallel sub-task tackling strategy is that it can handle tasks with repetitive sub-tasks more efficiently, as it can process multiple sub-tasks simultaneously. This is especially useful for tasks that require extensive computation or verification of multiple similar sub-tasks. On the other hand, the sequential sub-task tackling strategy may be more suitable for tasks that involve a clear dependency between sub-tasks, where the output of one sub-task is required as input for the next sub-task.
+
+In the context of prompting strategies for large language models, the parallel sub-task tackling strategy, as implemented in the Divide-and-Conquer program, has shown to be effective in handling tasks with repetitive sub-tasks and deceptive contents. This strategy disentangles the task decomposition, sub-task resolution, and resolution assembly processes, allowing the model to handle sub-tasks in parallel and avoid disruptions in the task resolution process. This approach has demonstrated superior performance in tasks such as large integer multiplication, hallucination detection, and misinformation detection.
+
+While the parallel sub-task tackling strategy has shown promise, it is important to note that the choice of strategy may depend on the specific characteristics of the task at hand. Further research is needed to explore the applicability of different sub-task tackling strategies in various domains and task types.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-09       |
+| Abstract | [https://arxiv.org/abs/2402.05359v1](https://arxiv.org/abs/2402.05359v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.05359v1](https://browse.arxiv.org/html/2402.05359v1)       |
+| Truncated       | False       |
+| Word Count       | 11100       |

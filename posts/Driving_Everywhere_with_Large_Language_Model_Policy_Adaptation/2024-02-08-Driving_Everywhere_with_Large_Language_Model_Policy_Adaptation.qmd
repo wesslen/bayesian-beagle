@@ -1,0 +1,45 @@
+
+---
+title: "Driving Everywhere with Large Language Model Policy Adaptation"
+id: "2402.05932v1"
+description: "LLaDA helps human and autonomous drivers adapt to new traffic rules and environments."
+author: Boyi Li, Yue Wang, Jiageng Mao, Boris Ivanovic, Sushant Veer, Karen Leung, Marco Pavone
+date: "2024-02-08"
+image: "../../img/2402.05932v1/image_1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.05932v1/image_1.png)
+
+### Summary:
+- LLaDA is a tool that adapts driving behavior to new environments by leveraging large language models (LLMs) to interpret traffic rules in local driver handbooks.
+- It can be used by both human drivers and autonomous vehicles to drive everywhere by adapting their tasks and motion plans to traffic rules in new locations.
+- LLaDA's instructions are useful in disambiguating unexpected situations and outperforms baseline planning approaches on all metrics.
+
+### Major Findings:
+1. LLaDA enables human drivers and autonomous vehicles to drive everywhere by adapting their tasks and motion plans to traffic rules in new locations.
+2. LLaDA leverages the zero-shot generalizability of LLMs to interpret traffic rules in local driver handbooks and provides useful instructions in unexpected situations.
+3. LLaDA outperforms baseline planning approaches on all metrics and can be immediately applied to any autonomous driving stack to improve performance in new locations.
+
+### Analysis and Critique:
+- LLaDA's use of large language models (LLMs) may pose computational challenges for closed-loop use in an autonomous vehicle planning stack.
+- The quality of scene descriptions provided by GPT-4V may impact the accuracy of LLaDA's instructions, indicating a need for improved scene descriptions.
+- LLaDA is sensitive to the quality of scene descriptions and may require an unexpected scenario detector to reduce computational burden.
+- LLaDA has the potential to reduce road accidents caused by tourists unaware of local traffic rules and expand the operations of autonomous vehicles beyond geo-fenced regions.
+- Future work includes improving GPT-4V's scene descriptions, developing an unexpected scenario detector, and obtaining safety certificates for LLM outputs.
+
+Overall, LLaDA shows promise in adapting driving behavior to new environments, but further research and development are needed to address its limitations and improve its functionality.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-09       |
+| Abstract | [https://arxiv.org/abs/2402.05932v1](https://arxiv.org/abs/2402.05932v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.05932v1](https://browse.arxiv.org/html/2402.05932v1)       |
+| Truncated       | False       |
+| Word Count       | 11265       |

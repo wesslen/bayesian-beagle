@@ -1,0 +1,48 @@
+
+---
+title: "Efficient Models for the Detection of Hate, Abuse and Profanity"
+id: "2402.05624v1"
+description: "LLMs trained on web data may generate hateful or profane content. HAP detection is crucial."
+author: Christoph Tillmann, Aashka Trivedi, Bishwaranjan Bhattacharjee
+date: "2024-02-08"
+image: "../../img/2402.05624v1/image_1.png"
+categories: ['social-sciences', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.05624v1/image_1.png)
+
+### **Summary:**
+- Large Language Models (LLMs) are used for various NLP tasks, but they are prone to generating Hate, Abuse, and Profanity (HAP) due to exposure to such content during training.
+- The article describes the creation of HAP detectors and their use in making models civil and acceptable in their output.
+- The HAP detectors are trained as NLP classifiers to assign a binary label (HAP / non-HAP) to every sentence of the input text.
+
+### Major Findings:
+1. **Working of a HAP Detector**
+   - HAP classification is treated as an NLP task where a binary label is assigned to each sentence.
+   - HAP detectors are currently supported for 11 languages and assign a HAP score to each segment of text.
+
+2. **Model Architecture and Training**
+   - HAP detectors are BERT-like transformer models, with a small and efficient model called IBM-HAP-4L for English.
+   - The IBM-HAP-4L model was created using knowledge distillation from a larger teacher model and shows strong performance with faster inference.
+
+3. **Latency and Throughput**
+   - The IBM-HAP-4L model provides a significant speedup in inference time and throughput compared to the BERT-Base model.
+
+### Analysis and Critique:
+- The article provides valuable insights into the development and application of HAP detectors for various languages, addressing the need for civil and unbiased language models.
+- However, the article lacks a detailed discussion on the potential biases and limitations of the HAP detectors, especially in the context of cultural and linguistic nuances in different languages.
+- Further research is needed to address the challenges of detecting HAP content in multilingual contexts and to ensure the effectiveness of HAP detectors across diverse languages and cultures.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-09       |
+| Abstract | [https://arxiv.org/abs/2402.05624v1](https://arxiv.org/abs/2402.05624v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.05624v1](https://browse.arxiv.org/html/2402.05624v1)       |
+| Truncated       | False       |
+| Word Count       | 7539       |

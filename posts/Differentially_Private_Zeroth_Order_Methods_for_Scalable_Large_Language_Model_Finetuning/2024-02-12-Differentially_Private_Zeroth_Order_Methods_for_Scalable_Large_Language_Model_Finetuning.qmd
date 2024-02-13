@@ -1,0 +1,39 @@
+
+---
+title: "Differentially Private Zeroth-Order Methods for Scalable Large Language Model Finetuning"
+id: "2402.07818v1"
+description: "DP finetuning of LLMs for privacy, utility, and scalability using zeroth-order methods."
+author: Z Liu, J Lou, W Bao, Z Qin, K Ren
+date: "2024-02-12"
+image: "../../img/2402.07818v1/image_1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.07818v1/image_1.png)
+
+### Summary:
+The article discusses the need for differentially private (DP) finetuning of pretrained Large Language Models (LLMs) to safeguard the privacy of task-specific datasets. It introduces DP zeroth-order methods for LLM pretraining to address the scalability bottleneck of SGD and presents a comprehensive study both theoretically and empirically. The proposed stagewise DP zeroth-order method dynamically schedules key hyperparameters to enhance scalability and reduces trainable parameters by repurposing a data-free pruning technique. The theoretical analysis and extensive empirical evaluations demonstrate the superiority of the proposed DP zeroth-order methods for LLM finetuning. The section also provides the foundational assumptions and algorithms for differentiable privacy fine-tuning with zeroth-order optimization, as well as insights into the optimal tuning of parameters and the impact of privacy budget on the performance of language models. Additionally, it outlines the steps for training, including the hyperparameters and values used in the experiment, and presents experiments on RoBERTa-large with different learning rates and privacy budgets.
+
+### Major Findings:
+1. The proposed DP zeroth-order methods offer a promising direction for developing privacy-preserving LLM finetuning methods.
+2. The optimal tuning of parameters and the impact of privacy budget on the performance of language models are crucial considerations for efficient and privacy-preserving optimization techniques.
+3. The specific hyperparameters and values used in the experiment, as well as the complete proof for Lemma 6, provide practical insights into the methodology and results of the study.
+
+### Analysis and Critique:
+- The article's focus on privacy-preserving LLM applications and the potential of DP zeroth-order methods to achieve a better "privacy-utility-scalability" tradeoff for LLM finetuning is a significant contribution.
+- The exploration of adaptive pruning rates and further research on stagewise DP Zeroth-order methods with adaptive pruning rate are areas that require further investigation.
+- The specific hyperparameters and values used in the experiment, as well as the complete proof for Lemma 6, provide valuable insights into the methodology and results of the study.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-13       |
+| Abstract | [https://arxiv.org/abs/2402.07818v1](https://arxiv.org/abs/2402.07818v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.07818v1](https://browse.arxiv.org/html/2402.07818v1)       |
+| Truncated       | True       |
+| Word Count       | 16370       |

@@ -1,0 +1,40 @@
+
+---
+title: "Suppressing Pink Elephants with Direct Principle Feedback"
+id: "2402.07896v1"
+description: "Methods like RLHF and Constitutional AI train language models, but controlling them at inference time is important. Using Direct Principle Feedback improves performance on the Pink Elephant Problem."
+author: Louis Castricato, Nathan Lile, Suraj Anand, Hailey Schoelkopf, Siddharth Verma, Stella Biderman
+date: "2024-02-12"
+image: "../../img/2402.07896v1/image_1.png"
+categories: ['architectures', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.07896v1/image_1.png)
+
+### Summary:
+Existing methods for controlling language models involve determining which LLM behaviors are desirable and training them into a language model. However, in many cases, it is desirable for LLMs to be controllable at inference time, so that they can be used in multiple contexts with diverse needs. The Pink Elephant Problem illustrates the challenge of instructing a model to not discuss an undesired "Pink Elephant" entity or topic and instead discuss an alternative desired "Grey Elephant." The authors apply a novel simplification of Constitutional AI, Direct Principle Feedback, which skips the ranking of responses and uses DPO directly on critiques and revisions. Their results show that after DPF fine-tuning on a synthetic Pink Elephants dataset, their 13B fine-tuned LLaMA 2 model significantly outperforms Llama-2-13B-Chat and a prompted baseline, and performs within error, equivalently to GPT-4, in their curated test set assessing the Pink Elephant Problem.
+
+### Major Findings:
+1. The Pink Elephant Problem illustrates the challenge of instructing a model to avoid discussing an undesired entity and instead discuss a preferred entity.
+2. The authors apply a novel simplification of Constitutional AI, Direct Principle Feedback, which skips the ranking of responses and uses DPO directly on critiques and revisions.
+3. Results show that after DPF fine-tuning on a synthetic Pink Elephants dataset, their 13B fine-tuned LLaMA 2 model significantly outperforms Llama-2-13B-Chat and a prompted baseline, and performs within error, equivalently to GPT-4, in their curated test set assessing the Pink Elephant Problem.
+
+### Analysis and Critique:
+- The article provides a novel approach to controlling language models at inference time, addressing the Pink Elephant Problem.
+- The use of Direct Principle Feedback (DPF) shows promising results in fine-tuning language models to avoid discussing undesired topics.
+- The study's focus on synthetic preference data and the use of DPO directly on critiques and revisions is a significant contribution to the field.
+- The article could benefit from a more detailed discussion of potential ethical implications and limitations of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-13       |
+| Abstract | [https://arxiv.org/abs/2402.07896v1](https://arxiv.org/abs/2402.07896v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.07896v1](https://browse.arxiv.org/html/2402.07896v1)       |
+| Truncated       | False       |
+| Word Count       | 14936       |

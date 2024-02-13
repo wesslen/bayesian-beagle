@@ -1,0 +1,40 @@
+
+---
+title: "Anchor-based Large Language Models"
+id: "2402.07616v1"
+description: "AnLLM uses anchor-based attention to reduce memory demand and improve inference speed for LLMs."
+author: Jianhui Pang, Fanghua Ye, Derek F. Wong, Longyue Wang
+date: "2024-02-12"
+image: "../../../bayesian-beagle.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+Large language models (LLMs) predominantly employ decoder-only transformer architectures, necessitating the retention of keys/values information for historical tokens to provide contextual information and avoid redundant computation. However, the substantial size and parameter volume of these LLMs require massive GPU memory. This memory demand increases with the length of the input text, leading to an urgent need for more efficient methods of information storage and processing. This study introduces the Anchor-based LLM (AnLLM), which utilizes an innovative anchor-based self-attention network (AnSAN) and an anchor-based inference strategy. This approach enables LLMs to compress sequence information into an anchor token, reducing the keys/values cache and enhancing inference efficiency. Experiments show that the AnLLM maintains comparable accuracy with up to 99% keys/values cache reduction and up to 3.5 times faster inference.
+
+### Major Findings:
+1. The AnLLM introduces an innovative anchor-based self-attention network (AnSAN) and an anchor-based inference strategy to compress sequence information into an anchor token, reducing the keys/values cache and enhancing inference efficiency.
+2. Experiments demonstrate that the AnLLM maintains comparable accuracy with up to 99% keys/values cache reduction and up to 3.5 times faster inference.
+3. The AnLLM significantly improves computational efficiency and resource utilization, demonstrating the potential of the anchor-based attention approach in the context of LLMs for real-time inference in practical applications.
+
+### Analysis and Critique:
+- The study provides a novel approach to address the memory demand and computational efficiency issues associated with large language models.
+- The experiments demonstrate the effectiveness of the AnLLM in reducing keys/values cache and improving inference efficiency.
+- The study lacks a detailed discussion of potential limitations or challenges associated with the proposed approach.
+- Further research is needed to explore the scalability and generalizability of the AnLLM approach across different types of language models and tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-13       |
+| Abstract | [https://arxiv.org/abs/2402.07616v1](https://arxiv.org/abs/2402.07616v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.07616v1](https://browse.arxiv.org/html/2402.07616v1)       |
+| Truncated       | False       |
+| Word Count       | 12912       |

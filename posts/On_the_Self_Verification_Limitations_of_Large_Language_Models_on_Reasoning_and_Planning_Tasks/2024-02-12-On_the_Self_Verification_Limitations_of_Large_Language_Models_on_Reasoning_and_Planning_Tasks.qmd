@@ -1,0 +1,45 @@
+
+---
+title: "On the Self-Verification Limitations of Large Language Models on Reasoning and Planning Tasks"
+id: "2402.08115v1"
+description: "LLMs struggle with reasoning, but external verification improves performance more than self-critique."
+author: Kaya Stechly, Karthik Valmeekam, Subbarao Kambhampati
+date: "2024-02-12"
+image: "../../img/2402.08115v1/image_1.png"
+categories: ['prompt-engineering', 'robustness', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.08115v1/image_1.png)
+
+### Summary:
+- The paper investigates the effectiveness of Large Language Models (LLMs) in self-critiquing and self-verification in reasoning and planning tasks.
+- The evaluation of LLMs in reasoning and planning tasks reveals poor performance in self-critique abilities, with substantial performance gains attributed to the existence of a sound verifier and the opportunity to make multiple guesses.
+- Detailed examples and insights into the prompts and backprompts generated for the Game of 24 and Graph Coloring problems are provided, highlighting the iterative problem-solving process and feedback loop involved in generating correct responses.
+- The section "LLM as Verifier" presents examples of LLM output on the verification task, demonstrating the verifier's ability to identify incorrect color assignments and provide feedback on the validity of the coloring.
+- A detailed and iterative process of attempting to verify the validity of a plan within the context of a game involving various objects and actions is outlined, emphasizing the complexity and interdependence of the conditions and actions involved.
+- The practical application of GPT-4 as a verifier for plans involving actions between objects is showcased, demonstrating its ability to analyze the conditions and requirements of each action and determine the validity of the plan based on these factors.
+
+### Major Findings:
+1. LLMs perform poorly in self-critique abilities, with substantial performance gains attributed to the existence of a sound verifier and the opportunity to make multiple guesses.
+2. Detailed examples and insights into the prompts and backprompts generated for problem-solving tasks highlight the iterative problem-solving process and feedback loop involved in generating correct responses.
+3. The practical application of GPT-4 as a verifier for plans involving actions between objects demonstrates its ability to analyze complex scenarios and determine plan validity.
+
+### Analysis and Critique:
+- The findings suggest that the benefits of iterative prompting and verification can be misattributed to opaque self-critique and rich feedback, emphasizing the importance of using external sound systems for verification in future implementations of LLMs for reasoning tasks.
+- The poor performance of LLMs in self-critique abilities suggests that they may not be suitable for roles as verifiers and critique generators in reasoning and planning tasks, highlighting the need for alternative approaches to improve their performance.
+- The detailed examples and insights provided in the paper are crucial in understanding the limitations and potential applications of LLMs in reasoning and planning tasks, shedding light on the challenges and strategies involved in eliciting correct responses.
+- The practical application of GPT-4 as a verifier for plans involving actions between objects has implications for the development of AI systems capable of understanding and evaluating complex plans and scenarios, opening up avenues for further research and development in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-14       |
+| Abstract | [https://arxiv.org/abs/2402.08115v1](https://arxiv.org/abs/2402.08115v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.08115v1](https://browse.arxiv.org/html/2402.08115v1)       |
+| Truncated       | True       |
+| Word Count       | 24033       |

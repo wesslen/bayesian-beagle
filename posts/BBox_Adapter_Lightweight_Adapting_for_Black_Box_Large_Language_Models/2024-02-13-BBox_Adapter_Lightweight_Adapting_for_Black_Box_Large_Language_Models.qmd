@@ -1,0 +1,43 @@
+
+---
+title: "BBox-Adapter: Lightweight Adapting for Black-Box Large Language Models"
+id: "2402.08219v1"
+description: "Adapting black-box LLMs like GPT-4 and Gemini is challenging. BBox-Adapter improves performance and cost efficiency."
+author: Haotian Sun, Yuchen Zhuang, Wei Wei, Chao Zhang, Bo Dai
+date: "2024-02-13"
+image: "https://browse.arxiv.org/html/2402.08219v1/x1.png"
+categories: ['production', 'education', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.08219v1/x1.png)
+
+The markdown summary of the academic article "BBox-Adapter: Lightweight Adapting for Black-Box Large Language Models" is as follows:
+
+### Summary:
+- Adapting state-of-the-art Large Language Models (LLMs) like GPT-4 and Gemini for specific tasks is challenging due to the opacity in their parameters, embeddings, and output probabilities.
+- Existing fine-tuning adaptation methods are inapplicable to black-box LLMs, and adapting these models is only possible through their API services, raising concerns about transparency, privacy, and cost.
+- To address these challenges, the authors introduce BBox-Adapter, a novel lightweight adapter for black-box LLMs. BBox-Adapter distinguishes target and source domain data by treating target data as positive and source data as negative. It employs a ranking-based Noise Contrastive Estimation (NCE) loss to promote the likelihood of target domain data while penalizing that of the source domain. Furthermore, it features an online adaptation mechanism, which incorporates real-time positive data sampling from ground-truth, human, or AI feedback, coupled with negative data from previous adaptations. Extensive experiments demonstrate BBox-Adapter’s effectiveness and cost efficiency, improving model performance by up to x across diverse tasks and domains, while reducing training and inference costs by x and x, respectively.
+
+### Major Findings:
+1. Adapting black-box LLMs is challenging due to the opacity in their parameters, embeddings, and output probabilities.
+2. BBox-Adapter distinguishes target and source domain data and employs a ranking-based Noise Contrastive Estimation (NCE) loss to promote the likelihood of target domain data while penalizing that of the source domain.
+3. Extensive experiments demonstrate BBox-Adapter’s effectiveness and cost efficiency, improving model performance by up to x across diverse tasks and domains, while reducing training and inference costs by x and x, respectively.
+
+### Analysis and Critique:
+- The article presents a novel approach to adapting black-box LLMs, addressing the challenges of transparency, privacy, and cost associated with existing fine-tuning adaptation methods.
+- The use of a ranking-based NCE loss and an online adaptation mechanism demonstrates the potential of BBox-Adapter to improve model performance and reduce training and inference costs.
+- However, the article does not address potential limitations or biases in the proposed approach, and further research is needed to evaluate the generalizability and scalability of BBox-Adapter across different LLMs and tasks. Additionally, the article lacks a detailed discussion of potential ethical considerations and societal implications of using BBox-Adapter for black-box LLM adaptation.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-14       |
+| Abstract | [https://arxiv.org/abs/2402.08219v1](https://arxiv.org/abs/2402.08219v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.08219v1](https://browse.arxiv.org/html/2402.08219v1)       |
+| Truncated       | False       |
+| Word Count       | 14211       |

@@ -1,0 +1,42 @@
+
+---
+title: "Improving Black-box Robustness with In-Context Rewriting"
+id: "2402.08225v1"
+description: "LLM-TTA improves OOD robustness for NLP models without regressing ID performance."
+author: Kyle O'Brien, Nathan Ng, Isha Puri, Jorge Mendez, Hamid Palangi, Yoon Kim, Marzyeh Ghassemi, Thomas Hartvigsen
+date: "2024-02-13"
+image: "https://browse.arxiv.org/html/2402.08225v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.08225v1/x1.png)
+
+### **Summary:**
+- Machine learning models often struggle with unseen out-of-distribution (OOD) inputs, especially in real-world settings such as content moderation, spam detection, and healthcare.
+- Test-time augmentation (TTA) is a post-hoc technique that aggregates predictions across multiple augmentations of the test input to improve robustness.
+- LLM-TTA, which uses large language model (LLM)-generated augmentations, outperforms conventional augmentation functions across sentiment, toxicity, and news classification tasks for BERT and T5 models, improving BERT’s OOD robustness by an average of 4.30 percentage points without regressing average in-distribution (ID) performance.
+
+### **Major Findings:**
+1. LLM-TTA Improves OOD Robustness:
+   - ICR improves a BERT classifier’s absolute accuracy on OOD data by an average of 4.86% for sentiment, 6.85% for toxicity, and 1.18% for news topics, with minimal regression to ID performance.
+   - TTA with conventional augmentation functions often hurts both ID and OOD performance.
+   - Selectively augmenting high-entropy test inputs improves efficiency, reducing the percentage of test inputs requiring augmentation by an average of 57.76% while still improving robustness.
+
+### **Analysis and Critique:**
+- The study demonstrates the effectiveness of LLM-TTA in improving OOD robustness without modifying the task model’s weights or training regime.
+- However, the study does not address potential biases in the LLM-generated augmentations or the impact of different LLM models on the results.
+- Further research is needed to explore the generalizability of LLM-TTA across different NLP tasks and model architectures. Additionally, the study does not discuss the computational costs associated with LLM-TTA, which could be a potential limitation in real-world applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-14       |
+| Abstract | [https://arxiv.org/abs/2402.08225v1](https://arxiv.org/abs/2402.08225v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.08225v1](https://browse.arxiv.org/html/2402.08225v1)       |
+| Truncated       | False       |
+| Word Count       | 5606       |

@@ -1,0 +1,41 @@
+
+---
+title: "Large Language Model Interaction Simulator for Cold-Start Item Recommendation"
+id: "2402.09176v1"
+description: "LLM-InS simulates user behavior for cold items, improving recommendation performance."
+author: Feiran Huang, Zhenghang Yang, Junyi Jiang, Yuanchen Bei, Yijie Zhang, Hao Chen
+date: "2024-02-14"
+image: "https://browse.arxiv.org/html/2402.09176v1/x1.png"
+categories: ['architectures', 'recommender', 'hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.09176v1/x1.png)
+
+### **Summary:**
+- Recommending cold items is a challenge for collaborative filtering models due to the lack of historical user interactions.
+- Existing cold-start models use mapping functions to generate fake behavioral embeddings for cold items, but these have significant differences from real behavioral embeddings.
+- The proposed LLM Interaction Simulator (LLM-InS) models users' behavior patterns based on the content aspect, allowing recommender systems to simulate interactions for each cold item and transform them from cold to warm items directly.
+
+### **Major Findings:**
+1. LLM-InS outperforms nine state-of-the-art cold-start methods and three LLM models in cold-start item recommendations.
+2. The generative embedding simulation models perform better in warm and overall recommendation than dropout embedding simulation models.
+3. LLM-InS excels beyond all embedding simulation baseline models in overall, cold, and warm recommendation performance.
+
+### **Analysis and Critique:**
+- The proposed LLM-InS addresses the limitations of conventional cold-start models by leveraging patterns from warm users and items to simulate realistic interactions for cold items.
+- The LLM-InS's innovative workflow comprises a large language model-powered sequence of filtering, refining, and updating stages, allowing for effective integration of the recommendation task with LLM.
+- The experiments demonstrate the effectiveness and universality of LLM-InS, highlighting its superior performance over existing methods and current state-of-the-art LLM recommendation models.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-15       |
+| Abstract | [https://arxiv.org/abs/2402.09176v1](https://arxiv.org/abs/2402.09176v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.09176v1](https://browse.arxiv.org/html/2402.09176v1)       |
+| Truncated       | False       |
+| Word Count       | 8421       |

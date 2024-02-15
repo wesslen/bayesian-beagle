@@ -1,0 +1,41 @@
+
+---
+title: "Learning How To Ask: Cycle-Consistency Refines Prompts in Multimodal Foundation Models"
+id: "2402.08756v1"
+description: "CyclePrompt uses cycle-consistency to improve LLM performance without fine-tuning or external data."
+author: Maurice Diesendruck, Jianzhe Lin, Shima Imani, Gayathri Mahalingam, Mingyang Xu, Jie Zhao
+date: "2024-02-13"
+image: "https://browse.arxiv.org/html/2402.08756v1/extracted/5405198/fig2-diagram.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.08756v1/extracted/5405198/fig2-diagram.png)
+
+### **Summary:**
+- The article introduces a technique called CyclePrompt, which uses cycle-supervised learning to refine prompts in multimodal foundation models.
+- The technique employs both forward and backward maps to perform cycle-consistency entirely in-context, using cycle-consistency as a free supervisory signal to iteratively craft the prompt.
+- CyclePrompt is demonstrated in two domains: code generation and image captioning, achieving state-of-the-art results without the need for expensive fine-tuning or external environments.
+
+### **Major Findings:**
+1. CyclePrompt uses cycle-supervised learning to refine prompts entirely in-context, demonstrating effectiveness in code generation and image captioning.
+2. The technique achieves state-of-the-art results in the HumanEval coding benchmark and outperforms baseline zero-shot GPT4V captions in vision-language tasks.
+3. The forward generator is identified as the most critical component, followed by the discriminator, and the backward generator.
+
+### **Analysis and Critique:**
+- The article provides a comprehensive overview of the CyclePrompt technique and its application in code generation and image captioning.
+- The findings demonstrate the potential of in-context, cycle-based reflection and refinement as a simple and powerful tool for optimizing model use.
+- The article acknowledges the importance of the forward generator and the discriminator, highlighting the need for further research to characterize modality misalignment and improve understanding of model knowledge.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-15       |
+| Abstract | [https://arxiv.org/abs/2402.08756v1](https://arxiv.org/abs/2402.08756v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.08756v1](https://browse.arxiv.org/html/2402.08756v1)       |
+| Truncated       | False       |
+| Word Count       | 6734       |

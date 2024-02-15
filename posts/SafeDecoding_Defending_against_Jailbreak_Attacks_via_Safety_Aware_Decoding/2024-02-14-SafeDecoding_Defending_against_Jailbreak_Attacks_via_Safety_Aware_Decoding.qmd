@@ -1,0 +1,41 @@
+
+---
+title: "SafeDecoding: Defending against Jailbreak Attacks via Safety-Aware Decoding"
+id: "2402.08983v1"
+description: "TL;DR: SafeDecoding defends LLMs from jailbreak attacks, reducing harm without compromising helpfulness."
+author: Zhangchen Xu, Fengqing Jiang, Luyao Niu, Jinyuan Jia, Bill Yuchen Lin, Radha Poovendran
+date: "2024-02-14"
+image: "https://browse.arxiv.org/html/2402.08983v1/x1.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.08983v1/x1.png)
+
+### Summary:
+The article introduces SafeDecoding, a safety-aware decoding strategy for large language models (LLMs) to defend against jailbreak attacks. SafeDecoding aims to generate helpful and harmless responses to user queries while mitigating the success of jailbreak attacks. The article presents extensive experiments on five LLMs using six state-of-the-art jailbreak attacks and four benchmark datasets, showing that SafeDecoding significantly reduces the attack success rate and harmfulness of jailbreak attacks without compromising the helpfulness of responses to benign user queries. The article also provides an analysis of related work, decoding strategies, and the problem setting.
+
+### Major Findings:
+1. SafeDecoding significantly reduces the attack success rate and harmfulness of jailbreak attacks without compromising the helpfulness of responses to benign user queries.
+2. SafeDecoding outperforms six defense methods in defending against jailbreak attacks.
+3. SafeDecoding is efficient, with a negligible computation overhead, and allows LLMs to be helpful when responding to queries from benign users.
+
+### Analysis and Critique:
+- SafeDecoding is effective in defending against jailbreak attacks, but there are limitations in some rare instances where the model may initially reject a user’s harmful queries but subsequently agree with them, leading to inconsistency in the decoding process.
+- The article focuses on large language models, and the performance of SafeDecoding on emerging multimodal large language models is subject to future investigation.
+- The development of SafeDecoding may lead to the development of new attack strategies aiming to bypass SafeDecoding, which requires further investigation and mitigation strategies.
+
+Overall, the article provides valuable insights into defending against jailbreak attacks and highlights the potential impact and limitations of SafeDecoding in the context of large language models.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-15       |
+| Abstract | [https://arxiv.org/abs/2402.08983v1](https://arxiv.org/abs/2402.08983v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.08983v1](https://browse.arxiv.org/html/2402.08983v1)       |
+| Truncated       | False       |
+| Word Count       | 9330       |

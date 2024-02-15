@@ -1,0 +1,43 @@
+
+---
+title: "Attacking Large Language Models with Projected Gradient Descent"
+id: "2402.09154v1"
+description: "LLM alignment methods easily broken by adversarial prompts, but PGD attack is faster and more effective."
+author: Simon Geisler, Tom Wollschläger, M. H. I. Abdalla, Johannes Gasteiger, Stephan Günnemann
+date: "2024-02-14"
+image: "https://browse.arxiv.org/html/2402.09154v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.09154v1/x1.png)
+
+### **Summary:**
+- Adversarial attacks on Large Language Models (LLMs) are currently dominated by discrete optimization methods, but these are computationally expensive.
+- The authors propose a Projected Gradient Descent (PGD) approach for attacking LLMs, which operates on a continuously relaxed input prompt and is up to one order of magnitude faster than state-of-the-art discrete optimization methods.
+- The PGD approach is effective, flexible, and efficient, achieving the same results as discrete optimization with lower computational cost.
+
+### Major Findings:
+1. PGD for LLMs is up to one order of magnitude faster than state-of-the-art discrete optimization methods.
+2. The PGD approach is effective and flexible, achieving the same results as discrete optimization with lower computational cost.
+3. Ordinary gradient-based optimization methods have previously failed to effectively attack LLMs, but the PGD approach overcomes this limitation.
+
+### Analysis and Critique:
+- The PGD approach proposed in the article shows promising results in attacking LLMs, but the potential limitations and unanswered questions include:
+  - The impact of the proposed attacks on real-world applications and ethical considerations.
+  - The need for further research to understand the limitations and potential risks associated with efficient adversarial attacks on LLMs.
+  - The white-box assumption of knowing the model parameters and architecture details may limit the applicability of the proposed approach to real-world scenarios.
+  - The need for additional experiments against AI assistants deployed for public use to assess the practical implications of the proposed attacks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-15       |
+| Abstract | [https://arxiv.org/abs/2402.09154v1](https://arxiv.org/abs/2402.09154v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.09154v1](https://browse.arxiv.org/html/2402.09154v1)       |
+| Truncated       | False       |
+| Word Count       | 3766       |

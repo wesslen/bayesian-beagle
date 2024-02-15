@@ -1,0 +1,42 @@
+
+---
+title: "Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation"
+id: "2402.09267v1"
+description: "New approach improves factual accuracy in large language models without human annotations."
+author: Xiaoying Zhang, Baolin Peng, Ye Tian, Jingyan Zhou, Lifeng Jin, Linfeng Song, Haitao Mi, Helen Meng
+date: "2024-02-14"
+image: "../../img/2402.09267v1/image_1.png"
+categories: ['architectures', 'robustness', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.09267v1/image_1.png)
+
+### Summary:
+- The article introduces the concept of **Self-Alignment for Factuality** to address factual inaccuracies in large language models (LLMs).
+- It proposes leveraging the self-evaluation capability of an LLM to provide training signals that steer the model towards factuality.
+- The authors incorporate a self-evaluation component, **SELF-EVAL**, and design **SK-TUNING** to augment the LLM’s self-evaluation ability, substantially enhancing factual accuracy over LLAMA family models across knowledge-intensive tasks on TruthfulQA and BioGEN.
+- The article evaluates the capability of factuality estimation by assessing the model's confidence in selecting the correct answer and distinguishing it from a randomly sampled incorrect answer, demonstrating the efficacy of the **SK-TUNING** framework in improving the model's confidence estimation.
+
+### Major Findings:
+1. The proposed **Self-Alignment for Factuality** approach substantially enhances factual accuracy over LLAMA family models across knowledge-intensive tasks.
+2. The **SK-TUNING** framework shows strong efficacy in improving the model's confidence estimation, as demonstrated in Table 3.
+3. The results suggest that the proposed self-alignment approach offers a promising starting point for investigating LLM's factuality self-alignment.
+
+### Analysis and Critique:
+- The article presents a promising approach to enhancing the factual accuracy of LLMs, addressing the challenges of hallucinations and improving confidence estimation and calibration.
+- The methodology outlined in the article provides valuable insights into the potential applications of the proposed framework in different domains and emphasizes the significance of confidence estimation and calibration in LLMs.
+- However, further research is needed to explore the scalability and generalizability of the proposed approach across different types of language understanding tasks and datasets. Additionally, the article could benefit from discussing potential limitations and ethical considerations associated with the use of large language models.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-15       |
+| Abstract | [https://arxiv.org/abs/2402.09267v1](https://arxiv.org/abs/2402.09267v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.09267v1](https://browse.arxiv.org/html/2402.09267v1)       |
+| Truncated       | True       |
+| Word Count       | 21341       |

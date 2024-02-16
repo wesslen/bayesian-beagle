@@ -1,0 +1,42 @@
+
+---
+title: "CodeMind: A Framework to Challenge Large Language Models for Code Reasoning"
+id: "2402.09664v1"
+description: "CodeMind evaluates LLMs' code reasoning abilities, showing fair understanding for simple programs but drops for complex ones."
+author: Changshu Liu, Shizhuo Dylan Zhang, Reyhaneh Jabbarvand
+date: "2024-02-15"
+image: "https://browse.arxiv.org/html/2402.09664v1/x1.png"
+categories: ['robustness', 'programming', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.09664v1/x1.png)
+
+### **Summary:**
+- CodeMind is a framework designed to evaluate the code reasoning abilities of Large Language Models (LLMs) for code synthesis.
+- The framework currently supports three code reasoning tasks: Independent Execution Reasoning (IER), Dependent Execution Reasoning (DER), and Specification Reasoning (SR).
+- Evaluation of nine LLMs across five benchmarks in two different programming languages using CodeMind shows that LLMs understand control flow constructs and are capable of reasoning how inputs evolve to output, especially for simple programs and the ones they can correctly synthesize.
+
+### **Major Findings:**
+1. LLMs have a good grasp of code constructs, but their performance drops for code with higher complexity, non-trivial logical and arithmetic operators, non-primitive types, and API calls.
+2. Specification reasoning does not imply execution reasoning, and ranking LLMs based on test passing can be different compared to code reasoning.
+3. There is a strong negative correlation between the complexity of the code and the performance of LLMs in Independent Execution Reasoning (IER).
+
+### **Analysis and Critique:**
+- LLMs struggle with general inductive code reasoning, especially for more complex code, non-primitive types, and API calls.
+- The ranking of LLMs based on code synthesis does not necessarily reflect their reasoning abilities on the same code, indicating the need for a framework like CodeMind to complement the evaluation of LLMs for code.
+- LLMs have a good understanding of code constructs, but they struggle with conditional statements, loop conditions, arithmetic and logic operators, and reasoning about the values of complex output types.
+- The study provides valuable insights into the limitations and challenges of LLMs for code reasoning, highlighting the need for further research and development in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-16       |
+| Abstract | [https://arxiv.org/abs/2402.09664v1](https://arxiv.org/abs/2402.09664v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.09664v1](https://browse.arxiv.org/html/2402.09664v1)       |
+| Truncated       | False       |
+| Word Count       | 7181       |

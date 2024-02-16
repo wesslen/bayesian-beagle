@@ -1,0 +1,42 @@
+
+---
+title: "Unlocking Structure Measuring: Introducing PDD, an Automatic Metric for Positional Discourse Coherence"
+id: "2402.10175v1"
+description: "New metric measures discourse coherence in long-form text, outperforms existing methods."
+author: Yinhong Liu, Yixuan Su, Ehsan Shareghi, Nigel Collier
+date: "2024-02-15"
+image: "../../../bayesian-beagle.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### **Summary:**
+- Recent large language models (LLMs) have shown remarkable performance in aligning generated text with user intentions across various tasks.
+- Existing lexical or semantic metrics such as BLEU, ROUGE, BertScore cannot effectively capture the discourse coherence.
+- In this paper, a novel automatic metric designed to quantify the discourse divergence between two long-form articles is presented. Extensive experiments on three datasets from representative domains demonstrate that the metric aligns more closely with human preferences and GPT-4 coherence evaluation, outperforming existing evaluation methods.
+
+### Major Findings:
+1. Real-life texts often exhibit underlying structures, and the development of discourse-specific automatic evaluation methods for assessing the output of LLMs warrants greater focus and exploration.
+2. The proposed automatic metric, Positional Discourse Divergence (PDD), is designed to evaluate the underlying discourse structure of articles in comparison to references. It partitions the sentences of an article into multiple position bins and calculates the divergence in discourse structures within each bin.
+3. PDD demonstrates the highest agreement with human judgments on coherence across all three domains, including News Discourse, Long-Form Question Answering, and Recipe1M+.
+
+### Analysis and Critique:
+- The proposed PDD metric requires a discourse classifier, which may limit its applicability to domains with specific discourse schemas.
+- The choice of bin number N affects the performance of PDD, and determining the optimal bin number may require domain expertise.
+- PDD consistently exhibits high kappa scores across diverse domains, emphasizing the significance of preserving discourse structure in text across various subject areas.
+- The PDD metric significantly outperforms baseline metrics such as Exact Match, Rouge-L, and BLEU, while achieving comparable performance with BertScore. This suggests that PDD is effective in capturing the divergence between discourse structures in text generation.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-16       |
+| Abstract | [https://arxiv.org/abs/2402.10175v1](https://arxiv.org/abs/2402.10175v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.10175v1](https://browse.arxiv.org/html/2402.10175v1)       |
+| Truncated       | False       |
+| Word Count       | 9167       |

@@ -1,0 +1,42 @@
+
+---
+title: "Rewards-in-Context: Multi-objective Alignment of Foundation Models with Dynamic Preference Adjustment"
+id: "2402.10207v1"
+description: "TL;DR: RiC simplifies and adapts foundation model alignment to human preferences, outperforming RL."
+author: Rui Yang, Xiaoman Pan, Feng Luo, Shuang Qiu, Han Zhong, Dong Yu, Jianshu Chen
+date: "2024-02-15"
+image: "../../img/2402.10207v1/image_1.png"
+categories: ['architectures', 'social-sciences', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.10207v1/image_1.png)
+
+### Summary:
+- The introduction of the Rewards-in-Context (RiC) algorithm addresses the multi-objective alignment problem of large foundation models with human preferences. It conditions the response of a foundation model on multiple rewards in its prompt context and applies supervised fine-tuning for alignment. The algorithm consists of three stages: offline training, online training, and inference. RiC demonstrates efficacy in aligning Large Language Models (LLMs) and diffusion models to accommodate diverse rewards with only around 10% GPU hours compared with multi-objective RL baseline.
+- The optimization problem of multi-objective alignment using the RiC framework is discussed, introducing the regularization constraint and set, as well as the preference-to-reward mappings. A closed-form solution under practical conditions and a theorem regarding the solution of the optimization problem are presented.
+- The application of the RiC method to the text-to-image generation task is explored, demonstrating a trade-off relationship between aesthetic and compressible rewards that can be adjusted based on the assigned preference.
+- The determination of preference-to-reward mapping in the context of multi-objective alignment of foundation models with dynamic preference adjustment is discussed, outlining the optimization problem, its reformulation, and the proof of Theorem 3.1.
+- The limitations of RiC in effectively differentiating between positively correlated rewards are highlighted, emphasizing the need for further improvement in RiC to address this issue.
+
+### Major Findings:
+1. The RiC algorithm effectively aligns large foundation models with diverse human preferences, demonstrating efficacy in accommodating diverse rewards with minimal training costs.
+2. The RiC framework provides a closed-form solution and theorem for the optimization problem of multi-objective alignment, laying the foundation for practical implementation.
+3. RiC showcases adaptability and effectiveness in balancing diverse objectives based on user preferences, as demonstrated in the context of text-to-image generation.
+
+### Analysis and Critique:
+- The RiC algorithm's limitations in differentiating between positively correlated rewards need to be addressed to enhance its ability to generate responses that align more closely with the Pareto front.
+- The practical implications of the RiC framework in handling multi-objective alignment are significant, but further research is needed to address its limitations and enhance its effectiveness in diverse applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-16       |
+| Abstract | [https://arxiv.org/abs/2402.10207v1](https://arxiv.org/abs/2402.10207v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.10207v1](https://browse.arxiv.org/html/2402.10207v1)       |
+| Truncated       | True       |
+| Word Count       | 21274       |

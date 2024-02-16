@@ -1,0 +1,42 @@
+
+---
+title: "QUICK: Quantization-aware Interleaving and Conflict-free Kernel for efficient LLM inference"
+id: "2402.10076v1"
+description: "QUICK optimizes CUDA kernels for faster inference of quantized Large Language Models. Up to 1.91x speedup."
+author: Taesu Kim, Jongho Lee, Daehyun Ahn, Sarang Kim, Jiwoong Choi, Minkyu Kim, Hyungjun Kim
+date: "2024-02-15"
+image: "../../img/2402.10076v1/image_1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.10076v1/image_1.png)
+
+### **Summary:**
+- QUICK is a set of optimized CUDA kernels designed for efficient inference of quantized Large Language Models (LLMs).
+- The method addresses the shared memory bank-conflict problem of state-of-the-art mixed precision matrix multiplication kernels.
+- QUICK demonstrates up to 1.91x speedup over existing kernels of AutoAWQ on larger batches and up to 1.94x throughput gain on representative LLM models on various NVIDIA GPU devices.
+
+### Major Findings:
+1. **Enhancing the Efficiency of Large Language Models:** The demand for deploying state-of-the-art models in real-world scenarios has led to the adoption of model compression techniques such as quantization and pruning.
+2. **Challenges of Weight-Only Quantization:** Weight-only quantization has garnered attention for compressing the memory footprint of LLMs, but existing open-source kernels for mixed-precision GEMM have limitations in throughput due to the overhead associated with weight dequantization.
+3. **Introducing QUICK:** QUICK proposes a novel way to remove the shared memory write-back bank conflicts of mixed precision matrix multiplication by reordering the quantized weight matrix offline.
+
+### Analysis and Critique:
+- The article effectively addresses the challenges associated with mixed precision GEMM kernels and proposes a practical solution in the form of QUICK.
+- The experimental results demonstrate the superior performance of QUICK compared to existing implementations, showcasing its potential for enhancing the efficiency of LLM inference.
+- However, the article acknowledges the need for further research to optimize the dequantization process and improve the efficiency of mixed precision GEMM kernels, especially for larger batch sizes.
+- Overall, the article provides valuable insights into the optimization of CUDA kernels for efficient inference of quantized LLMs, but it also highlights the need for ongoing research and development in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-16       |
+| Abstract | [https://arxiv.org/abs/2402.10076v1](https://arxiv.org/abs/2402.10076v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.10076v1](https://browse.arxiv.org/html/2402.10076v1)       |
+| Truncated       | False       |
+| Word Count       | 5728       |

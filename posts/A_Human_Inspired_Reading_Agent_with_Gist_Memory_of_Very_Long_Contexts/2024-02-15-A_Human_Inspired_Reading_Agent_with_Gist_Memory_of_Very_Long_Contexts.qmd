@@ -1,0 +1,45 @@
+
+---
+title: "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts"
+id: "2402.09727v1"
+description: "ReadAgent extends LLM context length by 20x, outperforming baselines on reading comprehension tasks."
+author: Kuang-Huei Lee, Xinyun Chen, Hiroki Furuta, John Canny, Ian Fischer
+date: "2024-02-15"
+image: "../../img/2402.09727v1/image_1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.09727v1/image_1.png)
+
+### Summary:
+- The article introduces ReadAgent, an LLM agent system that increases the effective context length up to 20× in experiments. It uses advanced language capabilities of LLMs to store content in memory episodes, compress those episodes into short episodic memories called gist memories, and take actions to look up passages in the original text if needed. ReadAgent outperforms baselines on three long-document reading comprehension tasks while extending the effective context window by 3 − 20×.
+- The implementation of a human-inspired reading agent with gist memory for evaluating long-context reading comprehension is discussed. It introduces two prompts for judging exact and partial matches between model responses and reference answers, as well as two evaluation scores for strict and permissive evaluations. The section also compares the performance of the reading agent with baselines using conventional retrieval methods and discusses the use of gist memory for reasoning directly over compressed information.
+- The performance of different techniques in the QMSum dataset is discussed, focusing on the impact of compression rates on performance. ReadAgent-S outperforms ReadAgent-P and all baselines, but at the cost of more requests in the retrieval phase. The section also discusses the challenges of the QMSum dataset and the limitations of using ROUGE scores for comparisons.
+- The evaluation of ReadAgent for web navigation using the Mind2Web dataset is presented, showing the effectiveness of ReadAgent in predicting next-step actions for web navigation tasks.
+- The section discusses the performance of the ReadAgent model in comparison to other baselines, highlighting its strong performance and the advantages of gisting in reducing input tokens.
+- The QMSum test results for the PaLM 2-L model are presented, including means and standard deviations across 3 runs, as well as the authors' contributions to the development of the method and experiments.
+
+### Major Findings:
+1. ReadAgent outperforms baselines on long-document reading comprehension tasks while extending the effective context window by 3 − 20×.
+2. The use of gist memory for reasoning directly over compressed information shows promising results in handling long-context reading comprehension tasks.
+3. ReadAgent demonstrates strong performance compared to other baselines, highlighting the advantages of gisting in reducing input tokens.
+
+### Analysis and Critique:
+- The article provides valuable contributions to the field of language understanding, particularly in the context of long-document reading comprehension tasks.
+- The comparison of performance across different datasets and the challenges associated with evaluating long-context reading comprehension techniques shed light on the effectiveness and limitations of these methods.
+- The practical utility of ReadAgent in autonomous web navigation scenarios indicates its potential for real-world applications.
+- The empirical data on the performance of the PaLM 2-L model adds credibility to the study and provides insight into the expertise and effort invested in the project.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-16       |
+| Abstract | [https://arxiv.org/abs/2402.09727v1](https://arxiv.org/abs/2402.09727v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.09727v1](https://browse.arxiv.org/html/2402.09727v1)       |
+| Truncated       | True       |
+| Word Count       | 24264       |

@@ -1,0 +1,43 @@
+
+---
+title: "RS-DPO: A Hybrid Rejection Sampling and Direct Preference Optimization Method for Alignment of Large Language Models"
+id: "2402.10038v1"
+description: "RLHF with PPO unstable, DPO relies on contrastive responses, RS-DPO combines rejection sampling for improved alignment."
+author: Saeed Khaki, JinJin Li, Lan Ma, Liu Yang, Prathap Ramachandra
+date: "2024-02-15"
+image: "https://browse.arxiv.org/html/2402.10038v1/extracted/5409495/RLHF_flowchart.png"
+categories: ['social-sciences', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.10038v1/extracted/5409495/RLHF_flowchart.png)
+
+### **Summary:**
+- Reinforcement learning from human feedback (RLHF) is used to align large language models with user intent.
+- Proximal policy optimization (PPO) based RLHF is occasionally unstable and computationally expensive.
+- Direct preference optimization (DPO) addresses these challenges but relies on contrastive responses from human annotators and alternative language models.
+- The proposed method, RS-DPO, combines rejection sampling (RS) and DPO to address these challenges and effectively fine-tunes large language models with limited resources.
+
+### **Major Findings:**
+1. RS-DPO effectively fine-tunes large language models with limited resource environments, leading to improved alignment with user intent.
+2. RS-DPO outperforms existing methods, including RS, PPO, and DPO.
+3. The proposed method demonstrates stability and robustness against variations in the reward model quality, consistently outperforming existing methods like DPO, PPO, and RS.
+
+### **Analysis and Critique:**
+- The rejection sampling method is not performing well due to its limitations in utilizing responses for alignment and not taking advantage of the remaining generated responses.
+- The proposed RS-DPO method is less resource-intensive compared to PPO, making it practical for applications in limited resource environments.
+- The study primarily focuses on the helpfulness objective derived from open-source preference datasets, limiting its generalizability to other objectives such as harmlessness.
+- The proposed method demonstrates robustness against reward model quality, requiring only a single run to train each model successfully.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-16       |
+| Abstract | [https://arxiv.org/abs/2402.10038v1](https://arxiv.org/abs/2402.10038v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.10038v1](https://browse.arxiv.org/html/2402.10038v1)       |
+| Truncated       | False       |
+| Word Count       | 6627       |

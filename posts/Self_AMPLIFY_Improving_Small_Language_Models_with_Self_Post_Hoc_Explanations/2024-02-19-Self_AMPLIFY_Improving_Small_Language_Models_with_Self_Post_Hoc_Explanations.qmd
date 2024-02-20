@@ -1,0 +1,42 @@
+
+---
+title: "Self-AMPLIFY: Improving Small Language Models with Self Post Hoc Explanations"
+id: "2402.12038v1"
+description: "Self-AMPLIFY automates rationale generation for Small Language Models, improving performance."
+author: Milan Bhan, Jean-Noel Vittaut, Nicolas Chesneau, Marie-Jeanne Lesot
+date: "2024-02-19"
+image: "../../img/2402.12038v1/image_1.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.12038v1/image_1.png)
+
+### Summary:
+- Self-AMPLIFY is a method to generate rationales from post hoc explanation methods applied to Small Language Models (SLMs) to improve their own performance.
+- The method targets samples, generates rationales, and builds a final prompt to leverage in-context learning (ICL).
+- Self-AMPLIFY is evaluated on two SLMs and two datasets, showing good results against competitors.
+
+### Major Findings:
+1. Incorporating natural language rationales in the prompt and In-Context Learning (ICL) has led to a significant improvement of Large Language Models (LLMs) performance.
+2. Self-AMPLIFY is the first method to apply post hoc explanation methods to SLMs to generate rationales to improve their own performance in a fully automated manner.
+3. Self-AMPLIFY outperforms traditional input-output prompting and Auto-CoT in generating important tokens as rationales before answering as expected.
+
+### Analysis and Critique:
+- The selection strategy has a significant impact on the results, with the error selection strategy being more advantageous for Self-AMPLIFY compared to its competitors.
+- Self-AMPLIFY leads to better results in general on the ARC Challenge dataset with almost every type of post hoc explainer.
+- The quality of the generated rationales is not assessed, and the computational cost of using KernelShap and DeepLift is substantial.
+- The study is limited to two datasets and two language models, and the conclusions would have more weight if other datasets were included in the study.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-20       |
+| Abstract | [https://arxiv.org/abs/2402.12038v1](https://arxiv.org/abs/2402.12038v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.12038v1](https://browse.arxiv.org/html/2402.12038v1)       |
+| Truncated       | False       |
+| Word Count       | 11563       |

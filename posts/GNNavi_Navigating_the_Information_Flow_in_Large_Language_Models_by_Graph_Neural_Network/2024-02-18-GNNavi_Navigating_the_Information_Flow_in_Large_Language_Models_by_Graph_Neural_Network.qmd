@@ -1,0 +1,46 @@
+
+---
+title: "GNNavi: Navigating the Information Flow in Large Language Models by Graph Neural Network"
+id: "2402.11709v1"
+description: "TL;DR: GNNavi improves prompt-based fine-tuning for large language models with minimal parameter updates."
+author: Shuzhou Yuan, Ercong Nie, Michael Färber, Helmut Schmid, Hinrich Schütze
+date: "2024-02-18"
+image: "../../img/2402.11709v1/image_1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.11709v1/image_1.png)
+
+### Summary:
+- The article introduces a novel prompt-based parameter-efficient fine-tuning (PEFT) approach called GNNAVI, leveraging insights into In-Context Learning's (ICL) information flow dynamics.
+- GNNAVI employs a Graph Neural Network (GNN) layer to guide the aggregation and distribution of information flow during prompt processing.
+- Experiments on text classification tasks with GPT-2 and Llama2 show that GNNAVI surpasses standard prompt-based fine-tuning methods in few-shot settings by updating just 0.2% to 0.5% of parameters.
+- GNNAVI is compared with prevalent PEFT approaches, such as prefix tuning, LoRA, and Adapter in terms of performance and efficiency.
+- The integration of GNNAVI with GPT2-XL and Llama2, modification of source codes, and comparison with various baselines are discussed, showing that GNNAVI outperforms other methods, especially in low-data settings.
+- The section also provides details about the hyperparameters used for GNNAVI and other baselines, demonstration templates, label words, full results, and the formula of the saliency score.
+- A table presents the results of different training methods in terms of accuracy, comparing models such as GPT2-XL, LoRA, Prefix, Adapter, FPFT, GNNAVI-GCN, and GNNAVI-SAGE across various datasets.
+
+### Major Findings:
+1. GNNAVI surpasses standard prompt-based fine-tuning methods in few-shot settings by updating just 0.2% to 0.5% of parameters.
+2. GNNAVI outperforms other methods, especially in low-data settings, when integrated with GPT2-XL and Llama2.
+3. The comparative analysis of different training methods and models across various datasets provides valuable insights into their performance and effectiveness.
+
+### Analysis and Critique:
+- The article introduces a novel and promising approach, GNNAVI, addressing the limitations of prompt-based fine-tuning methods in low-data scenarios.
+- The integration of GNNAVI with existing models and comparison with various baselines demonstrate its potential as a parameter-efficient fine-tuning method for language models.
+- The details about the experimental setup and results contribute to the transparency and reproducibility of the research findings.
+- The comparative analysis of the performance of different training methods and models across various datasets offers valuable insights for researchers and practitioners in the field of natural language processing and machine learning.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-20       |
+| Abstract | [https://arxiv.org/abs/2402.11709v1](https://arxiv.org/abs/2402.11709v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.11709v1](https://browse.arxiv.org/html/2402.11709v1)       |
+| Truncated       | True       |
+| Word Count       | 16490       |

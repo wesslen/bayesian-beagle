@@ -1,0 +1,42 @@
+
+---
+title: "MARS: Meaning-Aware Response Scoring for Uncertainty Estimation in Generative LLMs"
+id: "2402.11756v1"
+description: "Generative LLMs need better accuracy estimation. MARS improves uncertainty estimation in LLMs."
+author: Yavuz Faruk Bakman, Duygu Nur Yaldiz, Baturalp Buyukates, Chenyang Tao, Dimitrios Dimitriadis, Salman Avestimehr
+date: "2024-02-19"
+image: "../../img/2402.11756v1/image_1.png"
+categories: ['robustness', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.11756v1/image_1.png)
+
+### **Summary:**
+- Generative Large Language Models (LLMs) are widely used for various tasks but can produce inaccurate or misleading outputs.
+- Uncertainty Estimation (UE) in generative LLMs is an evolving domain, with probability-based methods commonly employing length-normalized scoring.
+- The proposed Meaning-Aware Response Scoring (MARS) is a novel scoring function that considers the semantic contribution of each token in the generated sequence in the context of the question.
+
+### Major Findings:
+1. MARS significantly improves UE performance across various datasets and models.
+2. MARS provides a universal and significant improvement in UE performance for an extensive list of LLMs.
+3. MARS replaces length-normalized scoring in probability-based UE methods, resulting in improved performance.
+
+### Analysis and Critique:
+- The proposed MARS scoring function shows promising results in improving the reliability of generative LLM outputs.
+- The study provides a theoretical foundation for heuristic design choices in previous works and offers flexibility for defining new distributions for the meaning of generated sequences.
+- The computational efficiency of MARS is optimized through the training of a BERT-like model for the importance function, resulting in improved performance and generalizability to test sets.
+- The study is limited to closed-ended question-answering tasks in English and may benefit from further exploration in open-ended question-answering tasks and other languages. Additionally, the potential biases and uncertainties of generative LLMs should be considered in real-world applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-20       |
+| Abstract | [https://arxiv.org/abs/2402.11756v1](https://arxiv.org/abs/2402.11756v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.11756v1](https://browse.arxiv.org/html/2402.11756v1)       |
+| Truncated       | False       |
+| Word Count       | 15150       |

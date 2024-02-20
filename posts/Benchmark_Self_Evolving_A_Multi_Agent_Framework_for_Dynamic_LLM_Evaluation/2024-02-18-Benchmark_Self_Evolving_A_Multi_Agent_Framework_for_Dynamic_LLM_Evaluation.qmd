@@ -1,0 +1,39 @@
+
+---
+title: "Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation"
+id: "2402.11443v1"
+description: "Benchmark framework dynamically evaluates Large Language Models, revealing performance decline and widening model performance discrepancies."
+author: Siyuan Wang, Zhuohan Long, Zhihao Fan, Zhongyu Wei, Xuanjing Huang
+date: "2024-02-18"
+image: "../../../bayesian-beagle.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+In summary, the benchmark self-evolving framework dynamically evaluates Large Language Models (LLMs) to provide a more accurate assessment of their capabilities and limitations. The framework utilizes a multi-agent system to manipulate the context or question of original instances, reframing new evolving instances with high confidence that dynamically extend existing benchmarks. The experimental results show a general performance decline in most LLMs against their original results, indicating a more accurate reflection of the models' capabilities. The framework also widens performance discrepancies between different models and within the same model across various tasks, facilitating more informed model selection for specific applications.
+
+### Major Findings:
+1. The framework leads to a general performance decline in most LLMs against their original results, indicating a more accurate reflection of the models' capabilities.
+2. The framework widens performance discrepancies between different models and within the same model across various tasks, facilitating more informed model selection for specific applications.
+
+### Analysis and Critique:
+- The framework effectively exposes the limitations of LLMs, including their vulnerability to perturbations, diminished generalization capabilities on more complex problems, and inadequacies in addressing questions targeting specific sub-abilities.
+- The framework demonstrates resistance against data contamination, highlighting its effectiveness in mitigating evaluation bias caused by data contamination.
+- The framework introduces a small number of instances with inaccuracies, which may result in less accurate assessments of LLMs.
+
+Overall, the benchmark self-evolving framework provides a dynamic solution for LLM evaluation, effectively exposing the limitations of LLMs and mitigating evaluation bias caused by data contamination. However, it may introduce a small number of instances with inaccuracies, which could impact the accuracy of LLM assessments.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-20       |
+| Abstract | [https://arxiv.org/abs/2402.11443v1](https://arxiv.org/abs/2402.11443v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.11443v1](https://browse.arxiv.org/html/2402.11443v1)       |
+| Truncated       | False       |
+| Word Count       | 15311       |

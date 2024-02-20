@@ -1,0 +1,44 @@
+
+---
+title: "SciAgent: Tool-augmented Language Models for Scientific Reasoning"
+id: "2402.11451v1"
+description: "TL;DR: Introducing tool-augmented scientific reasoning for Large Language Models, with impressive performance in experiments."
+author: Yubo Ma, Zhibin Gou, Junheng Hao, Ruochen Xu, Shuohang Wang, Liangming Pan, Yujiu Yang, Yixin Cao, Aixin Sun
+date: "2024-02-18"
+image: "../../img/2402.11451v1/image_1.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.11451v1/image_1.png)
+
+### Summary:
+- The article introduces the development of a tool-augmented training corpus named MATHFUNC, including over 30,000 samples and roughly 6,000 tools. It also presents SCIAGENT, a tool-augmented model designed for scientific problem solving, and constructs SCITOOLBENCH to evaluate LLMs' abilities with tool assistance. The authors conduct extensive experiments on SCITOOLBENCH, confirming the effectiveness of SCIAGENT, which outperforms other LLMs in accuracy.
+- SCIAGENT is a tool-augmented scientific reasoning model with four modules: Planning, Retrieval, Action, and Execution. It is trained using language models in three out of four modules. SCITOOLBENCH is a benchmark for assessing the scientific reasoning capabilities of language models when aided by tools, covering five domains and a diverse range of questions and domain-specific toolsets.
+- The impact of retriever quality and the benefit of retrieved functions on the performance of agents in scientific reasoning tasks is discussed, highlighting the robustness of tool-augmented agents and the positive correlation between the hit ratio of retrieved functions and task accuracy. The section also addresses the limitations of the study, particularly in the compilation of toolsets in SciToolBench.
+- The article provides an overview of scientific reasoning and tool learning in the context of large language models (LLMs), emphasizing the need for more powerful math-oriented LLMs and the development of tool-augmented agents for scientific reasoning tasks. It also discusses the challenges in reasoning across other scientific domains and the capabilities of LLMs in leveraging external tools for problem-solving.
+- The process of constructing positive and negative functions for the benchmark is detailed, ensuring the accuracy and effectiveness of the benchmark. The section also provides a Python program to solve mathematical questions using the sympy library, demonstrating the application of Python programming to solve mathematical problems.
+
+### Major Findings:
+1. The development of SCIAGENT and SCITOOLBENCH significantly enhances the scientific reasoning capabilities of language models, outperforming other LLMs in accuracy.
+2. The positive correlation between the hit ratio of retrieved functions and task accuracy highlights the importance of retrieved functions in scientific reasoning tasks.
+3. The article addresses the challenges and advancements in scientific reasoning using LLMs, emphasizing the need for more powerful math-oriented LLMs and the development of tool-augmented agents.
+
+### Analysis and Critique:
+- The article provides valuable insights into the impact of retriever quality and the benefit of retrieved functions on the performance of agents in scientific reasoning tasks. However, it is essential to address the limitations of the study, particularly in the compilation of toolsets in SciToolBench, to ensure the reliability and effectiveness of the benchmark.
+- The overview of scientific reasoning and tool learning in the context of LLMs sets the stage for subsequent evaluation and training details, providing a comprehensive understanding of the context and challenges in scientific reasoning with LLMs.
+- The detailed process of constructing positive and negative functions for the benchmark ensures the accuracy and effectiveness of the benchmark, contributing to the reliability of the evaluation of language models.
+- The Python program provided demonstrates the application of Python programming to solve mathematical problems using the sympy library, providing a structured approach to solving mathematical questions and making the program efficient and reusable. However, the encountered error message highlights the importance of defining necessary functions for successful code execution.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-20       |
+| Abstract | [https://arxiv.org/abs/2402.11451v1](https://arxiv.org/abs/2402.11451v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.11451v1](https://browse.arxiv.org/html/2402.11451v1)       |
+| Truncated       | True       |
+| Word Count       | 30634       |

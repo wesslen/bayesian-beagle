@@ -1,0 +1,42 @@
+
+---
+title: "Enhancing Multilingual Capabilities of Large Language Models through Self-Distillation from Resource-Rich Languages"
+id: "2402.12204v1"
+description: "TL;DR: SDRRL method improves multilingual performance of large language models. Source code available."
+author: Yuanchi Zhang, Yile Wang, Zijun Liu, Shuo Wang, Xiaolong Wang, Peng Li, Maosong Sun, Yang Liu
+date: "2024-02-19"
+image: "../../../bayesian-beagle.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+- Large language models (LLMs) have been pre-trained on multilingual corpora, but their performance lags behind in most languages compared to a few resource-rich languages.
+- The common approach to mitigate this issue is to translate training data from resource-rich languages into other languages and then continue training. However, this approach has limitations and may degrade the capabilities in the original primary language.
+- The proposed method, SDRRL, effectively improves multilingual performance by leveraging the internal capabilities of LLMs on resource-rich languages.
+
+### Major Findings:
+1. The language distribution in the data is highly imbalanced, leading to significant limitations in the capabilities of LLMs across most languages.
+2. The translate-then-SFT method encounters several challenges, including limited multilingual enhancement and noisy translations, adversely affecting the quality of the generated text and the multilingual abilities of the LLMs.
+3. SDRRL significantly enhances multilingual capabilities while minimizing the impact on original performance in resource-rich languages.
+
+### Analysis and Critique:
+- The proposed method, SDRRL, effectively addresses the limitations of existing approaches and improves multilingual performance.
+- The method demonstrates strong robustness in generation tasks and maintains the original strong capabilities in English.
+- The study provides a comprehensive analysis of the method's effectiveness and generalizability across different LLMs and languages.
+- The method may lead to cultural unfairness for mid- and low-resource languages, which should be considered in future research.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-20       |
+| Abstract | [https://arxiv.org/abs/2402.12204v1](https://arxiv.org/abs/2402.12204v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.12204v1](https://browse.arxiv.org/html/2402.12204v1)       |
+| Truncated       | False       |
+| Word Count       | 6726       |

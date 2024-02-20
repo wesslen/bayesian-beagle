@@ -1,0 +1,43 @@
+
+---
+title: "CovRL: Fuzzing JavaScript Engines with Coverage-Guided Reinforcement Learning for LLM-based Mutation"
+id: "2402.12222v1"
+description: "CovRL-Fuzz combines language models and reinforcement learning for improved bug-finding in JavaScript engines."
+author: Jueon Eom, Seyeon Jeong, Taekyoung Kwon
+date: "2024-02-19"
+image: "../../img/2402.12222v1/image_1.png"
+categories: ['robustness', 'architectures', 'security', 'production', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.12222v1/image_1.png)
+
+### Summary:
+- The paper introduces CovRL-Fuzz, a novel technique that combines Large Language Models (LLMs) with reinforcement learning from coverage feedback to improve fuzzing for JavaScript engines.
+- CovRL-Fuzz outperforms existing fuzzers in terms of code coverage and bug-finding capabilities, identifying 48 real-world security-related bugs, including 39 previously unknown vulnerabilities and 11 CVEs.
+- The implementation of CovRL-Fuzz involves context-aware mutations, coverage-weighted rewarding, and finetuning using the Proximal Policy Optimization (PPO) algorithm, demonstrating its effectiveness in achieving high code coverage and bug detection.
+
+### Major Findings:
+1. CovRL-Fuzz significantly outperforms existing fuzzers in identifying real-world security-related bugs, including previously unknown vulnerabilities.
+2. The use of context-aware mutations and coverage-weighted rewarding in CovRL-Fuzz improves code coverage and minimizes syntax and semantic errors.
+3. The finetuning of CovRL-Fuzz using the PPO algorithm demonstrates its effectiveness in enhancing automated testing and bug-finding processes.
+
+### Analysis and Critique:
+- The introduction of CovRL-Fuzz represents a significant advancement in the field of fuzzing, particularly for JavaScript engines, and has the potential to enhance automated testing and bug-finding processes.
+- The section on the design of CovRL-Fuzz provides a detailed description of the technique's workflow and components, highlighting its technical sophistication and potential for improving fuzzing processes.
+- The implementation and evaluation of CovRL-Fuzz demonstrate its effectiveness in achieving high code coverage, low error rates, and bug detection, setting a new standard for fuzzing techniques in JavaScript engines.
+- The results of the manual analysis and ablation study confirm the superiority of CovRL-Fuzz in discovering unique bugs and achieving higher coverage improvements, further emphasizing its significance in bug detection and software testing.
+- The identification of specific vulnerabilities in JavaScript engines underscores the importance of understanding and mitigating potential security risks associated with these engines.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-20       |
+| Abstract | [https://arxiv.org/abs/2402.12222v1](https://arxiv.org/abs/2402.12222v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.12222v1](https://browse.arxiv.org/html/2402.12222v1)       |
+| Truncated       | True       |
+| Word Count       | 22740       |

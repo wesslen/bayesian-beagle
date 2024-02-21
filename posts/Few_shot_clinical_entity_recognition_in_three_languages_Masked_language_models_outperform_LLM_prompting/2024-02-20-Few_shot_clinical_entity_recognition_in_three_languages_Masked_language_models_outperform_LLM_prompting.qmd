@@ -1,0 +1,43 @@
+
+---
+title: "Few shot clinical entity recognition in three languages: Masked language models outperform LLM prompting"
+id: "2402.12801v1"
+description: "Large Language Models not ready for clinical entity recognition; better for speeding up data annotation."
+author: Marco Naguib, Xavier Tannier, Aurélie Névéol
+date: "2024-02-20"
+image: "../../../bayesian-beagle.png"
+categories: ['social-sciences', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### **Summary:**
+The article evaluates the performance of Large Language Models (LLMs) for few-shot clinical entity recognition in English, French, and Spanish. The study compares the performance of 10 auto-regressive language models using prompting and 16 masked language models for text encoding in a biLSTM-CRF supervised tagger. The experiments show that masked language models outperform auto-regressive models for named entity recognition in the clinical domain, even in a few-shot set-up. The results are consistent across the three languages and suggest that few-shot learning using large language models is not yet production-ready for named entity recognition in the clinical domain.
+
+### **Major Findings:**
+1. Masked language models outperform auto-regressive models for named entity recognition in the clinical domain, even in a few-shot set-up.
+2. The performance of larger prompt-based models does not carry over to the clinical domain, where lighter supervised taggers relying on masked language models perform better.
+3. The CO2 impact of masked language models is inferior to that of auto-regressive models in all experiments.
+
+### **Analysis and Critique:**
+- The study highlights the limitations of few-shot learning using large language models for named entity recognition in the clinical domain, suggesting that the performance is not yet production-ready.
+- The article acknowledges the environmental impact of the language models, with masked language models showing lower CO2 emissions compared to auto-regressive models.
+- The study raises concerns about data contamination and the difficulty in controlling for it due to the size of the training corpora used for creating large language models.
+- Ablation experiments were conducted to assess the contribution of different steps in the approach, including comparing tagging prompts to listing prompts, testing different samples and sample sizes, and evaluating the hyperparameter grid search method.
+
+### **Conclusion:**
+The study concludes that while masked language models outperform auto-regressive models for named entity recognition in the clinical domain, few-shot learning performance is significantly lower in the clinical vs. general domain. The authors suggest that few-shot use of large language models should be limited to assisting gold standard annotation rather than effective information extraction.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-21       |
+| Abstract | [https://arxiv.org/abs/2402.12801v1](https://arxiv.org/abs/2402.12801v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.12801v1](https://browse.arxiv.org/html/2402.12801v1)       |
+| Truncated       | False       |
+| Word Count       | 6982       |

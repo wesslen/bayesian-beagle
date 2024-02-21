@@ -1,0 +1,43 @@
+
+---
+title: "CIF-Bench: A Chinese Instruction-Following Benchmark for Evaluating the Generalizability of Large Language Models"
+id: "2402.13109v1"
+description: "TL;DR: CIF-Bench tests LLMs' generalizability to Chinese, revealing limitations and evaluation biases."
+author: Yizhi LI, Ge Zhang, Xingwei Qu, Jiali Li, Zhaoqun Li, Zekun Wang, Hao Li, Ruibin Yuan, Yinghao Ma, Kai Zhang, Wangchunshu Zhou, Yiming Liang, Lei Zhang, Lei Ma, Jiajun Zhang, Zuowen Li, Stephen W. Huang, Chenghua Lin, Wenhu Chen, Jie Fu
+date: "2024-02-20"
+image: "https://browse.arxiv.org/html/2402.13109v1/x12.png"
+categories: ['social-sciences', 'architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.13109v1/x12.png)
+
+### Summary:
+The article introduces the Chinese Instruction-Following Benchmark (CIF-Bench), which aims to evaluate the zero-shot generalizability of large language models (LLMs) to the Chinese language. The benchmark comprises 150 tasks and 15,000 input-output pairs, designed to test complex reasoning and Chinese cultural nuances across 20 categories. The authors release only half of the dataset publicly to mitigate evaluation bias and introduce diversified instructions to minimize score variance. The evaluation of selected LLMs reveals a noticeable performance gap, with the best model scoring only 52.9%, highlighting the limitations of LLMs in less familiar language and task contexts.
+
+### Major Findings:
+1. The CIF-Bench benchmark comprises 150 tasks and 15,000 input-output pairs, designed to evaluate the zero-shot generalizability of LLMs to the Chinese language.
+2. The best-performing model on CIF-Bench scored only 52.9%, indicating a noticeable performance gap and highlighting the limitations of LLMs in less familiar language and task contexts.
+3. The authors release only half of the dataset publicly to mitigate evaluation bias and introduce diversified instructions to minimize score variance.
+
+### Analysis and Critique:
+- The benchmark is challenging for existing LLMs, with the highest score barely reaching 52.9%.
+- LLMs perform worse when language is transferred, indicating limitations in language transferability.
+- Data contamination exists, as evidenced by the noticeable performance drop when using different input-output pairs from the public and private splits.
+- Diversified instructions increase evaluation robustness, stabilizing evaluation scores for all tested LLMs.
+- Human annotation for verification shows substantial reliability, with an average agreement of 0.49 and an average Cohen’s kappa of 0.3729.
+
+The article provides valuable insights into the limitations of current LLMs in handling Chinese tasks and emphasizes the need for more culturally informed and linguistically diverse models. However, potential limitations include the reliance on human subjects for annotation, the selection of baseline models, and the presence of offensive content in the data. Additionally, the article acknowledges the potential for data leakage and bias in the evaluation process.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-21       |
+| Abstract | [https://arxiv.org/abs/2402.13109v1](https://arxiv.org/abs/2402.13109v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.13109v1](https://browse.arxiv.org/html/2402.13109v1)       |
+| Truncated       | False       |
+| Word Count       | 6069       |

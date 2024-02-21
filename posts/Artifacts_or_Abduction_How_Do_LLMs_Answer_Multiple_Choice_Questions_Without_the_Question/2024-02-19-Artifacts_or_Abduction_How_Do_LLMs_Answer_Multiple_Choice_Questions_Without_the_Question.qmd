@@ -1,0 +1,41 @@
+
+---
+title: "Artifacts or Abduction: How Do LLMs Answer Multiple-Choice Questions Without the Question?"
+id: "2402.12483v1"
+description: "LLMs perform well on MCQA with choices-only prompts, using group dynamics and question inference."
+author: Nishant Balepur, Abhilasha Ravichander, Rachel Rudinger
+date: "2024-02-19"
+image: "https://browse.arxiv.org/html/2402.12483v1/extracted/5418316/data/full_vs_artifact1.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.12483v1/extracted/5418316/data/full_vs_artifact1.png)
+
+The article investigates the ability of large language models (LLMs) to answer multiple-choice questions without access to the question itself. The study uses three MCQA datasets and four LLMs to probe if LLMs can perform MCQA with choices-only prompts. The key findings are as follows:
+
+1. **Memorization:** The study finds no strong evidence that LLMs memorize the test sets, suggesting that high choices-only accuracy is not solely due to memorization.
+
+2. **Choice Dynamics:** LLMs may use individual priors on choices and group dynamics of choices, indicating that LLMs reason over all choices rather than just using cues from individual choices.
+
+3. **Question Inference:** LLMs can use abductive reasoning to infer the original question from the choices, suggesting that LLMs may have the ability to verbalize MCQA inferences via abductive reasoning.
+
+The study concludes that LLMs can achieve high choices-only accuracy in MCQA benchmarks, even in few-shot settings with limited exemplars. The authors suggest that future research should focus on better understanding LLM decision-making in MCQA and designing more resilient benchmarks that limit the influence of artifacts.
+
+**Analysis and Critique:**
+- The study provides valuable insights into the decision-making of LLMs in partial-input settings, shedding light on the potential use of abductive reasoning and the limitations of memorization.
+- The findings have implications for the evaluation of LLMs in MCQA benchmarks, highlighting the need for more robust protocols and transparent evaluations.
+- However, the study is limited by its black-box experimental setup and the use of default parameters, which may not fully capture the nuances of LLM decision-making. Further research is needed to explore the impact of different decoding strategies and model sizes on artifact exploitation in MCQA.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-21       |
+| Abstract | [https://arxiv.org/abs/2402.12483v1](https://arxiv.org/abs/2402.12483v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.12483v1](https://browse.arxiv.org/html/2402.12483v1)       |
+| Truncated       | False       |
+| Word Count       | 10781       |

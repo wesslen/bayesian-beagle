@@ -1,0 +1,43 @@
+
+---
+title: "Softmax Probabilities (Mostly) Predict Large Language Model Correctness on Multiple-Choice Q&A"
+id: "2402.13213v1"
+description: "Large language models overconfident on Q&A tasks; wrong answers associated with smaller maximum softmax probabilities. Abstaining improves performance."
+author: Benjamin Plaut, Khanh Nguyen, Tu Trinh
+date: "2024-02-20"
+image: "https://browse.arxiv.org/html/2402.13213v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.13213v1/x1.png)
+
+### **Summary:**
+- Large language models (LLMs) have shown impressive capabilities but still struggle with overconfidence, leading to incorrect responses.
+- The study hypothesized that wrong answers on multiple-choice Q&A tasks would be associated with lower maximum softmax probabilities (MSPs) and maximum logits.
+- The study found strong evidence for the hypothesis among models that perform well on the original Q&A task, with the average AUROC ranging from  to .
+- The study proposed a multiple-choice Q&A task with an option to abstain and showed that performance can be improved by selectively abstaining based on the MSP of the initial model response.
+
+### **Major Findings:**
+1. The study found strong evidence for the hypothesis that wrong answers on multiple-choice Q&A tasks are associated with lower MSPs and maximum logits.
+2. Among the six LLMs with the best Q&A performance, the average AUROC ranged from  to .
+3. The study proposed a multiple-choice Q&A task with an option to abstain and showed that performance can be improved by selectively abstaining based on the MSP of the initial model response.
+
+### **Analysis and Critique:**
+- The study demonstrated the viability and importance of incorporating uncertainty information into LLM responses, but it did not address the root causes of these phenomena.
+- The study found that LLMs are not particularly calibrated and generally exhibit overly confident MSPs, which could be a limitation in practical applications.
+- The study did not find a significant correlation between model size and AUROC, suggesting that adding more parameters does not directly improve the model’s representation of uncertainty.
+- The study showed that the uncertainty signals from softmax probabilities and/or logits can be leveraged to improve performance on practical language tasks, but it did not address potential ethical implications of using uncertainty information in LLM responses.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-21       |
+| Abstract | [https://arxiv.org/abs/2402.13213v1](https://arxiv.org/abs/2402.13213v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.13213v1](https://browse.arxiv.org/html/2402.13213v1)       |
+| Truncated       | False       |
+| Word Count       | 6647       |

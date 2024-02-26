@@ -41,6 +41,7 @@ format:
 
 
 def remove_unicode_accents(input_str):
+    input_str = input_str.replace("$\infty$", "Infinity")
     return input_str.replace("\\'", "")
 
 
@@ -118,6 +119,7 @@ def create_qmd_file(example, output_folder, force_generate_all=False):
     """
     title = remove_unicode_accents(example["meta"]["title"])
     folder_name = convert_to_folder_name(title)
+    example["meta"]["title"] = title
     example["meta"]["subtitle"] = remove_unicode_accents(example["meta"]["subtitle"])
     example["meta"]["subtitle"] = remove_patterns(example["meta"]["subtitle"])
     current_date = example["meta"]["publish_date"]

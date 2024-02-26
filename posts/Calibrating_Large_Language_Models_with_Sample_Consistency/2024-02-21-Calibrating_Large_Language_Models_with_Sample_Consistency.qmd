@@ -1,0 +1,39 @@
+
+---
+title: "Calibrating Large Language Models with Sample Consistency"
+id: "2402.13904v1"
+description: "LLMs need calibrated confidence; consistency-based methods outperform post-hoc approaches, with potential for model enhancement."
+author: Qing Lyu, Kumar Shridhar, Chaitanya Malaviya, Li Zhang, Yanai Elazar, Niket Tandon, Marianna Apidianaki, Mrinmaya Sachan, Chris Callison-Burch
+date: "2024-02-21"
+image: "https://browse.arxiv.org/html/2402.13904v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.13904v1/x1.png)
+
+### Summary:
+The article explores the potential of deriving confidence from the distribution of multiple randomly sampled model generations, via three measures of consistency. The authors perform an extensive evaluation across various open and closed-source models on nine reasoning datasets. Results show that consistency-based calibration methods outperform existing post-hoc approaches. Meanwhile, the authors find that factors such as intermediate explanations, model scaling, and larger sample sizes enhance calibration, while instruction-tuning makes calibration more difficult. Moreover, confidence scores obtained from consistency have the potential to enhance model performance. Finally, the authors offer practical guidance on choosing suitable consistency metrics for calibration, tailored to the characteristics of various LMs.
+
+### Major Findings:
+1. Consistency-based calibration methods outperform existing post-hoc approaches.
+2. Factors such as intermediate explanations, model scaling, and larger sample sizes enhance calibration, while instruction-tuning makes calibration more difficult.
+3. Confidence scores obtained from consistency have the potential to enhance model performance.
+
+### Analysis and Critique:
+- The article provides a comprehensive analysis of the effectiveness of consistency-based calibration methods, offering practical guidance for choosing suitable consistency metrics for calibration.
+- The study is limited in scope, focusing on only four reasoning tasks across nine datasets, and certain comparisons are based solely on a single pair of models.
+- The authors acknowledge the limitations and ethical considerations of their study, emphasizing the importance of trustworthiness and transparency in LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-26       |
+| Abstract | [https://arxiv.org/abs/2402.13904v1](https://arxiv.org/abs/2402.13904v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.13904v1](https://browse.arxiv.org/html/2402.13904v1)       |
+| Truncated       | False       |
+| Word Count       | 9363       |

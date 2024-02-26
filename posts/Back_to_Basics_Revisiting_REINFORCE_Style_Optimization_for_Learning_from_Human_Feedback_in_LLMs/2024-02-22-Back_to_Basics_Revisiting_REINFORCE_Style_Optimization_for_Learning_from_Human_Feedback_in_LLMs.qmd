@@ -1,0 +1,44 @@
+
+---
+title: "Back to Basics: Revisiting REINFORCE Style Optimization for Learning from Human Feedback in LLMs"
+id: "2402.14740v1"
+description: "RLHF needs efficient AI alignment; PPO is costly, but simpler methods can outperform."
+author: Arash Ahmadian, Chris Cremer, Matthias Gallé, Marzieh Fadaee, Julia Kreutzer, Ahmet Üstün, Sara Hooker
+date: "2024-02-22"
+image: "https://browse.arxiv.org/html/2402.14740v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.14740v1/x1.png)
+
+### Summary:
+- AI alignment in the form of Reinforcement Learning from Human Feedback (RLHF) is crucial for large language models (LLMs).
+- Proximal Policy Optimization (PPO) is the canonical method for RLHF but has high computational cost and sensitive hyperparameter tuning.
+- The authors propose that the motivational principles behind PPO are less practical in RLHF and advocate for a less computationally expensive method.
+- They revisit the formulation of alignment from human preferences in the context of RL and show that simpler REINFORCE-style optimization variants outperform PPO and other "RL-free" methods.
+- The study suggests that careful adaptation to LLMs alignment characteristics enables benefiting from online RL optimization at low cost.
+
+### Major Findings:
+1. PPO is not the right tool for RL in RLHF. Vanilla Policy Gradient REINFORCE consistently outperforms PPO.
+2. REINFORCE Leave-One-Out (RLOO) outperforms key baselines and makes better use of online samples than RAFT.
+3. Modeling partial completions is unnecessary for LLM preference training. Modeling the full generations preserves performance while reducing complexity in the RL stage and significantly accelerating learning.
+
+### Analysis and Critique:
+- The study provides valuable insights into the limitations of PPO and the benefits of simpler REINFORCE-style optimization in RLHF.
+- The experimental setup and evaluation metrics are comprehensive, providing a thorough analysis of the proposed methods.
+- However, the study could benefit from a more detailed discussion of potential biases or limitations in the experimental design.
+- Further research could explore the generalizability of the findings to other types of language models and alignment tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-26       |
+| Abstract | [https://arxiv.org/abs/2402.14740v1](https://arxiv.org/abs/2402.14740v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.14740v1](https://browse.arxiv.org/html/2402.14740v1)       |
+| Truncated       | False       |
+| Word Count       | 6085       |

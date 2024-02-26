@@ -1,0 +1,41 @@
+
+---
+title: "Scaling Efficient LLMs"
+id: "2402.14746v1"
+description: "Efficient LLMs need fewer parameters for desired accuracy, with implications for training corpus size."
+author: B. N. Kausik
+date: "2024-02-22"
+image: "../../../bayesian-beagle.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### **Summary:**
+- The article explores the efficiency of Large Language Models (LLMs) by comparing theoretical and empirical estimates for training loss to obtain upper and lower bounds on the number of unique sequences in a natural training corpus as a function of its size.
+
+### **Major Findings:**
+1. Efficient LLMs require the fewest parameters to achieve the desired accuracy on a training corpus.
+2. To double the number of skills represented in a training corpus, the corpus must scale roughly between three and five fold.
+3. If the number of parameters of an LLM is smaller than the number of unique sequences in the training corpus, scaling up can uncover emergent skills.
+
+### **Analysis and Critique:**
+- The article provides valuable insights into the efficiency of LLMs, but it relies heavily on theoretical and empirical estimates, which may not fully capture the complexity of natural language processing.
+- The assumptions made about the probability distribution of unique sequences being isomorphic across natural training corpora may not hold true in all cases, leading to potential biases in the findings.
+- The implications for emergent abilities in LLMs need to be further validated through empirical studies to ensure their practical applicability.
+
+Overall, while the article presents interesting findings, further research and empirical validation are necessary to confirm the scalability and efficiency of LLMs in natural language processing.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-26       |
+| Abstract | [https://arxiv.org/abs/2402.14746v1](https://arxiv.org/abs/2402.14746v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.14746v1](https://browse.arxiv.org/html/2402.14746v1)       |
+| Truncated       | False       |
+| Word Count       | 6925       |

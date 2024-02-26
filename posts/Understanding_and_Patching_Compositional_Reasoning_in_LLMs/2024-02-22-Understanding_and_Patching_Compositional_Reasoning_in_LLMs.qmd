@@ -1,0 +1,41 @@
+
+---
+title: "Understanding and Patching Compositional Reasoning in LLMs"
+id: "2402.14328v1"
+description: "LLMs struggle with compositional reasoning, but our research uncovers and fixes the root causes."
+author: Zhaoyi Li, Gangwei Jiang, Hong Xie, Linqi Song, Defu Lian, Ying Wei
+date: "2024-02-22"
+image: "https://browse.arxiv.org/html/2402.14328v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.14328v1/x1.png)
+
+### Summary:
+Understanding and Patching Compositional Reasoning in LLMs
+
+- LLMs struggle with compositional reasoning tasks, leading to a "compositionality gap" in question-answering tasks.
+- The research embarks on a quest to uncover the root causes of compositional reasoning failures of LLMs, revealing that most of them stem from improperly generated or leveraged implicit reasoning results.
+- The study locates multi-head self-attention (MHSA) modules within the middle layers, which emerge as the linchpins in accurate generation and leveraging of implicit reasoning results.
+
+### Major Findings:
+1. Successful compositional reasoning within LLMs hinges on its awareness of generating and leveraging implicit reasoning results.
+2. MHSA modules in the middle layers (18/19-th layer) are significantly in charge of properly generating and leveraging implicit reasoning results.
+3. CREME, a lightweight method to patch errors in compositional reasoning, proves to be highly performing, on correctly answering not only the query used for editing but also the paraphrased queries and other compositional queries sharing the first-hop knowledge.
+
+### Analysis and Critique:
+- The study provides valuable insights into the inner workings of LLMs and offers a promising method, CREME, to address compositional reasoning failures. However, the study is limited by the scale of LLMs used and the specific focus on factual knowledge. Further research is needed to validate the findings on larger LLMs and other types of compositional reasoning tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-26       |
+| Abstract | [https://arxiv.org/abs/2402.14328v1](https://arxiv.org/abs/2402.14328v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.14328v1](https://browse.arxiv.org/html/2402.14328v1)       |
+| Truncated       | False       |
+| Word Count       | 12442       |

@@ -1,0 +1,41 @@
+
+---
+title: "Is LLM-as-a-Judge Robust? Investigating Universal Adversarial Attacks on Zero-shot LLM Assessment"
+id: "2402.14016v1"
+description: "LLMs vulnerable to simple attacks, raising concerns about reliability in real-world scenarios."
+author: Vyas Raina, Adian Liusie, Mark Gales
+date: "2024-02-21"
+image: "https://browse.arxiv.org/html/2402.14016v1/x1.png"
+categories: ['robustness', 'production', 'architectures', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.14016v1/x1.png)
+
+### **Summary:**
+- Large Language Models (LLMs) are increasingly used in real-world situations such as for written exams or benchmarking systems.
+- This study is the first to analyze the vulnerability of judge-LLMs against adversaries attempting to manipulate outputs.
+- Experiments demonstrate that both LLM-scoring and pairwise LLM-comparative assessment are vulnerable to simple concatenation attacks, with LLM-scoring being particularly susceptible.
+
+### Major Findings:
+1. Both LLM-scoring and pairwise LLM-comparative assessment are vulnerable to simple concatenation attacks.
+2. Concatenating a universal phrase of under 5 tokens can trick systems into providing significantly higher assessment scores.
+3. Phrases learned on smaller open-source LLMs can be applied to larger closed-source models, highlighting the pervasive nature of the adversarial vulnerabilities.
+
+### Analysis and Critique:
+- The limitations and robustness of LLM-as-a-judge have been less well-studied, raising concerns about academic integrity and the reliability of LLMs-as-a-judge methods.
+- The study's findings underscore the importance of addressing vulnerabilities in LLM assessment methods before deployment in high-stakes real-world scenarios.
+- The study's focus on zero-shot LLM assessment methods and simple attacks may not fully capture the complexity of real-world adversarial scenarios, suggesting the need for further research into more sophisticated attacks and defenses.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-26       |
+| Abstract | [https://arxiv.org/abs/2402.14016v1](https://arxiv.org/abs/2402.14016v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.14016v1](https://browse.arxiv.org/html/2402.14016v1)       |
+| Truncated       | False       |
+| Word Count       | 7258       |

@@ -1,0 +1,42 @@
+
+---
+title: "Towards Cross-Tokenizer Distillation: the Universal Logit Distillation Loss for LLMs"
+id: "2402.12030v2"
+description: "TL;DR: Universal Logit Distillation compresses knowledge from large language models for wider applicability."
+author: Nicolas Boizard, Kevin El Haddad, Céline Hudelot, Pierre Colombo
+date: "2024-02-20"
+image: "https://browse.arxiv.org/html/2402.12030v2/extracted/5419742/tokenize-vocabularies-small.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.12030v2/extracted/5419742/tokenize-vocabularies-small.png)
+
+### **Summary:**
+- Large language models (LLMs) are resource-intensive and impractical for many industrial use cases due to cost, latency, and hardware constraints.
+- Knowledge distillation (KD) offers a solution by compressing knowledge from large models to smaller ones, but existing methods based on logits have limitations.
+- The Universal Logit Distillation (ULD) loss, grounded in optimal transport, addresses these limitations and enables distillation across models with different architectures and tokenizers.
+
+### **Major Findings:**
+1. A universal logit distillation loss, ULD loss, was introduced, which has virtually no assumptions on the teacher and student architectures.
+2. Experimental results demonstrated the effectiveness of ULD loss in enabling distillation across models with different architectures and tokenizers.
+3. The code, model weights, and generated datasets were made openly available to facilitate future research.
+
+### **Analysis and Critique:**
+- The ULD loss effectively improves the performance of every student model on a variety of downstream tasks using any teacher.
+- ULD loss achieves better overall results and matches the performance of teacher-generated text distillation with only half of the training dataset or student size, while effectively preventing overfitting.
+- Incorporating ULD loss during training stabilizes both ULD and Cross-entropy loss, contributing to stabilizing the distillation process over training and mitigating overfitting issues.
+- The ULD loss effectively transfers knowledge from any pair of teacher/student decoders and can enhance the performance of an encoder-decoder student model.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-26       |
+| Abstract | [https://arxiv.org/abs/2402.12030v2](https://arxiv.org/abs/2402.12030v2)        |
+| HTML     | [https://browse.arxiv.org/html/2402.12030v2](https://browse.arxiv.org/html/2402.12030v2)       |
+| Truncated       | False       |
+| Word Count       | 7828       |

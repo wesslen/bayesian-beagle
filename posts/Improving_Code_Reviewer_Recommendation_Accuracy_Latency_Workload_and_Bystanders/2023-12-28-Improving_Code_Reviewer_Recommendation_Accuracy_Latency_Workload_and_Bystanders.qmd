@@ -12,7 +12,7 @@ format:
     code-overflow: wrap
 ---
 
-![](None)
+![](../../../bayesian-beagle.png)
 
 ### Summary
 This paper presents a series of experiments conducted at Meta to improve code reviewer recommendation. The company's existing recommender, RevRecV1, was found to be inaccurate and slow due to its reliance on file authorship frequency for reviewer assignment. The authors developed RevRecV2, which uses author-reviewer familiarity, reviewer workload, and the bystander effect factors to improve accuracy and latency. They found significant improvements in accuracy (14 percentage points) and reduction in latency (14 times) with RevRecV2. RevRecWL, designed to balance reviewer workload, showed a reduction in workload when a reasonable candidate with lower workload was available. However, there were no statistically significant changes in review cycle time or latency. The BystanderRecRnd, designed to reduce the bystander effect, reduced time-in-review by 11.6% with no regressions in guardrail metrics.
@@ -30,7 +30,7 @@ One potential problem with the paper is the dependency on historical data for si
 |          |          |
 |----------|----------|
 | Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-02-02       |
+| Date Generated     | 2024-02-26       |
 | Abstract | [http://arxiv.org/abs/2312.17169v1](http://arxiv.org/abs/2312.17169v1)        |
 | HTML     | [https://browse.arxiv.org/html/2312.17169v1](https://browse.arxiv.org/html/2312.17169v1)       |
 | Truncated       | False       |

@@ -12,7 +12,7 @@ format:
     code-overflow: wrap
 ---
 
-![](None)
+![](../../../bayesian-beagle.png)
 
 ### Summary:
 - Efficiently serving large language models (LLMs) requires batching many requests together to reduce the cost per request. Yet, the key-value (KV) cache, which stores attention keys and values to avoid re-computations, significantly increases memory demands and becomes the new bottleneck in speed and memory usage. This memory demand increases with larger batch sizes and longer context lengths. Additionally, the inference speed is limited by the size of KV cache, as the GPU’s SRAM must load the entire KV cache from the main GPU memory for each token generated, causing the computational core to be idle during this process.
@@ -32,7 +32,7 @@ format:
 |          |          |
 |----------|----------|
 | Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-02-06       |
+| Date Generated     | 2024-02-26       |
 | Abstract | [https://arxiv.org/abs/2402.02750v1](https://arxiv.org/abs/2402.02750v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.02750v1](https://browse.arxiv.org/html/2402.02750v1)       |
 | Truncated       | False       |

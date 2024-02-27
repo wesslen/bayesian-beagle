@@ -1,0 +1,48 @@
+
+---
+title: "Immunization against harmful fine-tuning attacks"
+id: "2402.16382v1"
+description: "TL;DR: Large language models can be purposely fine-tuned for harmful goals, requiring effective defense strategies."
+author: Domenic Rosati, Jan Wehner, Kai Williams, Łukasz Bartoszcze, Jan Batzner, Hassan Sajjad, Frank Rudzicz
+date: "2024-02-26"
+image: "https://browse.arxiv.org/html/2402.16382v1/x1.png"
+categories: ['robustness', 'security', 'architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.16382v1/x1.png)
+
+### **Summary:**
+- The article presents a new threat model called "Harmful Fine-Tuning Attacks" that focuses on bad actors purposely fine-tuning Large Language Models (LLMs) to achieve harmful goals.
+- The authors propose a set of conditions for effective defense against harmful fine-tuning in LLMs, called "Immunization conditions," which include resistance, stability, generalization, and trainability.
+- The paper also discusses various approaches to immunization, such as meta-learning, adversarial training, non-transferable learning, and irreversible transformations.
+
+### **Major Findings:**
+1. **Motivation:**
+   - Safety techniques for LLMs can be easily circumvented by fine-tuning them on harmful samples, leading to the need for defenses against these attacks.
+   - The concern is not merely academic, as public models on Huggingface have been adapted from open-source models to output harmful content.
+
+2. **Threat Model for Harmful Fine-tuning Attacks:**
+   - The goal of harmful fine-tuning is to use an LLM to cause harm, which may involve removing existing safety guards or further training on a harmful dataset.
+   - Attackers achieve this goal by using the training objective on a given safety aligned model to minimize the loss function by taking training steps up to their compute budget.
+
+3. **Immunization Conditions:**
+   - The conditions for successful defense include resistance, stability, generalization, and trainability, which are essential for preventing harmful fine-tuning attacks.
+
+### **Analysis and Critique:**
+- The article provides a comprehensive analysis of harmful fine-tuning attacks and proposes a formal framework for defense, known as "Immunization conditions."
+- The empirical evaluation of the proposed immunization method demonstrates resistance against harmful training but raises questions about stability and trainability.
+- The paper highlights the need for further research to validate and improve the proposed immunization conditions, especially in terms of generalization and trainability. Additionally, the limitations of the proposed defense methods need to be addressed, and the impact of immunization on test-time attacks should be explored.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-27       |
+| Abstract | [https://arxiv.org/abs/2402.16382v1](https://arxiv.org/abs/2402.16382v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.16382v1](https://browse.arxiv.org/html/2402.16382v1)       |
+| Truncated       | False       |
+| Word Count       | 7691       |

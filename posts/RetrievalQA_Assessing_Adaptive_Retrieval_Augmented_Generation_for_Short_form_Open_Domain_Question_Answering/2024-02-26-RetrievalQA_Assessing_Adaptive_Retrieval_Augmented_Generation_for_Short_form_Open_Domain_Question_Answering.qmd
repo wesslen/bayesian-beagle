@@ -1,0 +1,43 @@
+
+---
+title: "RetrievalQA: Assessing Adaptive Retrieval-Augmented Generation for Short-form Open-Domain Question Answering"
+id: "2402.16457v1"
+description: "ARAG improves retrieval efficiency, but lacks evaluation. RetrievalQA tests ARAG methods. Time-Aware Adaptive Retrieval proposed."
+author: Zihan Zhang, Meng Fang, Ling Chen
+date: "2024-02-26"
+image: "https://browse.arxiv.org/html/2402.16457v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.16457v1/x1.png)
+
+### Summary:
+- The article introduces the concept of adaptive retrieval-augmented generation (ARAG) and presents a benchmark dataset, RetrievalQA, to evaluate existing ARAG methods.
+- The dataset comprises 1,271 short-form questions covering new world and long-tail knowledge, where external information must be retrieved to answer correctly.
+- The authors observe that existing ARAG methods heavily rely on threshold tuning and propose a new method, Time-Aware Adaptive REtrieval (TA-ARE), to help large language models (LLMs) assess the necessity of retrieval without calibration or additional training.
+
+### Major Findings:
+1. The authors find that calibration-based ARAG methods heavily rely on threshold tuning, while vanilla prompting is inadequate for guiding LLMs to make reliable retrieval decisions.
+2. The proposed TA-ARE method significantly improves all baselines, with an average gain of 15% for retrieval accuracy and 8% for question-answering accuracy.
+3. The authors observe that LLMs can potentially discern the need for resource retrieval, indicating the potential for improved awareness of when retrieval is necessary.
+
+### Analysis and Critique:
+- The authors acknowledge limitations in their work, including potential inaccuracies in the dataset construction and the focus on short-form QA without assessing long-form generation tasks.
+- They also recognize the need for further research to improve retrieval relevance and accuracy and to optimize prompt templates for LLMs.
+- The ethical statement ensures compliance with legal and ethical standards in data collection and research methodologies.
+
+Overall, the article provides valuable insights into the challenges and improvements in adaptive retrieval-augmented generation for short-form open-domain question-answering. However, further research is needed to address the identified limitations and potential biases in the evaluation of ARAG methods.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-27       |
+| Abstract | [https://arxiv.org/abs/2402.16457v1](https://arxiv.org/abs/2402.16457v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.16457v1](https://browse.arxiv.org/html/2402.16457v1)       |
+| Truncated       | False       |
+| Word Count       | 5161       |

@@ -1,0 +1,42 @@
+
+---
+title: "LLMs with Chain-of-Thought Are Non-Causal Reasoners"
+id: "2402.16048v1"
+description: "LLMs reasoning and CoTs show surprising discrepancies with human reasoning processes. Factors influencing causal structure explored. Code released."
+author: Guangsheng Bao, Hongbo Zhang, Linyi Yang, Cunxiang Wang, Yue Zhang
+date: "2024-02-25"
+image: "https://browse.arxiv.org/html/2402.16048v1/x1.png"
+categories: ['hci', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.16048v1/x1.png)
+
+### **Summary:**
+- The paper explores the role of Chain of Thought (CoT) in Large Language Models (LLMs) reasoning and its potential to improve task performance.
+- The analysis reveals a surprising frequency of correct answers following incorrect CoTs and vice versa, raising questions about the underlying mechanics of how LLMs generate answers.
+- Causal analysis uncovers the Structural Causal Model (SCM) that LLMs approximate and highlights discrepancies between LLM and human reasoning processes.
+- Factors influencing the causal structure of the implied SCM, such as in-context learning, supervised fine-tuning, and reinforcement learning on human feedback, significantly impact the causal relations.
+
+### Major Findings:
+1. CoT does not consistently improve task performance, with instances where incorrect CoTs lead to correct answers and vice versa, indicating a potential spurious correlation between the answers and their contexts.
+2. The implied SCMs are significantly influenced by in-context learning (ICL), supervised fine-tuning (SFT), and reinforcement learning on human feedback (RLHF), suggesting that these common techniques in LLMs may not necessarily enhance the reasoning ability of the models.
+3. The analysis of causal relationships reveals that LLMs may exhibit different underlying SCM types on different tasks, where the Instructions often act as the confounder for CoTs and Answers, leading the CoT in LLMs to make type 1 and 2 errors due to spurious correlation.
+
+### Analysis and Critique:
+- The study mainly focuses on Generative Pre-Training (GPT) language models, setting aside other models such as BERT and GLM for future exploration.
+- The research predominantly deals with standard mathematical and logical reasoning, not including areas like commonsense and symbolic reasoning within its scope.
+- The study offers a structure for comprehending the decision-making process and reasoning of LLMs, which could contribute to increased transparency and accountability in AI systems. However, it also highlights potential biases and limitations in the reasoning capabilities of LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-27       |
+| Abstract | [https://arxiv.org/abs/2402.16048v1](https://arxiv.org/abs/2402.16048v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.16048v1](https://browse.arxiv.org/html/2402.16048v1)       |
+| Truncated       | False       |
+| Word Count       | 6771       |

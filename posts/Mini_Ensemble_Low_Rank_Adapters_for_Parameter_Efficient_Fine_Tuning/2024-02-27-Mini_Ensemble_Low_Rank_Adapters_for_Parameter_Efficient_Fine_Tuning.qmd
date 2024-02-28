@@ -1,0 +1,40 @@
+
+---
+title: "Mini-Ensemble Low-Rank Adapters for Parameter-Efficient Fine-Tuning"
+id: "2402.17263v1"
+description: "MELoRA improves performance with fewer parameters than LoRA in NLP tasks."
+author: Pengjie Ren, Chengshun Shi, Shiguang Wu, Mengqi Zhang, Zhaochun Ren, Maarten de Rijke, Zhumin Chen, Jiahuan Pei
+date: "2024-02-27"
+image: "https://browse.arxiv.org/html/2402.17263v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.17263v1/x1.png)
+
+### Summary:
+- **PEFT** is a popular method for tailoring pre-trained large language models, especially as the models’ scale and the diversity of tasks increase.
+- **MELoRA** is a mini-ensemble low-rank adapters that uses fewer trainable parameters while maintaining a higher rank, thereby offering improved performance potential.
+- MELoRA achieves better performance with 8 times fewer trainable parameters on natural language understanding tasks and 36 times fewer trainable parameters on instruction following tasks, demonstrating its effectiveness.
+
+### Major Findings:
+1. MELoRA achieves better performance with 8 times fewer trainable parameters on natural language understanding tasks and 36 times fewer trainable parameters on instruction following tasks.
+2. MELoRA maintains a higher rank with fewer parameters, has a more flexible rank, and lower complexity compared to LoRA.
+3. The optimal equivalent ranks vary across datasets and tasks, and the performance of MELoRA consistently exhibits a pattern of initially increasing with the number of mini LoRAs and then decreasing.
+
+### Analysis and Critique:
+- The proposed method introduces a new hyper-parameter, the number of mini-LoRAs, which indicates the number of mini-LoRAs. The best number of mini-LoRAs varies with different datasets, requiring more tuning parameters to achieve optimal performance.
+- The study has ethical considerations and uses public pre-trained LLMs and datasets to conduct experiments, ensuring no ethical problems. However, the risks of developing large language models should be considered.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-28       |
+| Abstract | [https://arxiv.org/abs/2402.17263v1](https://arxiv.org/abs/2402.17263v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.17263v1](https://browse.arxiv.org/html/2402.17263v1)       |
+| Truncated       | False       |
+| Word Count       | 6911       |

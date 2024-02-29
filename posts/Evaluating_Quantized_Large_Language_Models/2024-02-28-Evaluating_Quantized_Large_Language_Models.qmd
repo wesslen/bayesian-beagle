@@ -1,0 +1,37 @@
+
+---
+title: "Evaluating Quantized Large Language Models"
+id: "2402.18158v1"
+description: "PTQ reduces LLM cost, memory consumption, and computational overhead. Thorough evaluation of quantized LLMs."
+author: Shiyao Li, Xuefei Ning, Luning Wang, Tengxuan Liu, Xiangsheng Shi, Shengen Yan, Guohao Dai, Huazhong Yang, Yu Wang
+date: "2024-02-28"
+image: "../../img/2402.18158v1/image_1.png"
+categories: ['social-sciences', 'production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2402.18158v1/image_1.png)
+
+### Summary:
+- The article evaluates the impact of post-training quantization (PTQ) on large language models (LLMs) across various tasks and model families. It discusses the effects of quantization on different tensor types, context length, and emergent abilities, as well as its implications for adversarial attacks, ethics, and dialogue abilities. The findings provide insights into the performance of quantized LLMs and recommendations for applying quantization techniques.
+
+### Major Findings:
+1. Quantization has varying effects on different tensor types, with weight-only quantization leading to performance gains and KV cache quantization causing performance loss.
+2. The tolerance for quantization varies based on the model size and the quantization method used, with larger models exhibiting higher tolerance for weight-only quantization.
+3. Quantization has consistent effects across different positions, with only a few exceptions, and is more sensitive to mathematical multi-step reasoning and self-calibration abilities.
+
+### Analysis and Critique:
+- The article provides valuable insights into the impact of quantization on LLMs' performance across various tasks and model families. However, it is essential to address the challenges of restoring performance with extremely low bit-width quantization methods and further investigate the impact of quantization on multi-turn dialogues. Additionally, the lack of a clear relationship between quantization and adversarial robustness highlights the need for further research in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-29       |
+| Abstract | [https://arxiv.org/abs/2402.18158v1](https://arxiv.org/abs/2402.18158v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.18158v1](https://browse.arxiv.org/html/2402.18158v1)       |
+| Truncated       | True       |
+| Word Count       | 48972       |

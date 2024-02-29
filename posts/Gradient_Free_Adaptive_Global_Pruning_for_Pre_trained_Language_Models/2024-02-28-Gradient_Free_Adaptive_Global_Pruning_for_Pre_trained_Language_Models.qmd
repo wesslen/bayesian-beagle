@@ -1,0 +1,40 @@
+
+---
+title: "Gradient-Free Adaptive Global Pruning for Pre-trained Language Models"
+id: "2402.17946v1"
+description: "TL;DR: AdaGP improves LLM efficiency with global pruning and modular function optimization."
+author: Guangji Bai, Yijiang Li, Chen Ling, Kibaek Kim, Liang Zhao
+date: "2024-02-28"
+image: "https://browse.arxiv.org/html/2402.17946v1/extracted/5436159/figures/adagp_intro.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.17946v1/extracted/5436159/figures/adagp_intro.png)
+
+### **Summary:**
+The article introduces Adaptive Global Pruning (AdaGP), a novel framework for compressing large language models (LLMs) by introducing sparsity to enhance memory and computational efficiency. AdaGP redefines the global pruning process into manageable subproblems, allowing for resource-efficient optimization with global optimality. The proposed approach not only facilitates a pragmatic application on LLMs but also demonstrates significant performance improvements, particularly in high-sparsity regimes where it surpasses current state-of-the-art methods.
+
+### **Major Findings:**
+1. Large language models (LLMs) necessitate significant computational resources, leading to extensive efforts in model compression, including pruning, quantization, knowledge distillation, and low-rank factorization.
+2. Traditional global pruning is impractical for LLMs due to scalability issues, while local pruning leads to suboptimal solutions, especially in high-sparsity regimes.
+3. Adaptive Global Pruning (AdaGP) decomposes the global pruning objective into many subproblems, each of which can be solved using low resources and can coordinate each other toward the global pruning objective. It consistently improves the performance of local pruning methods, particularly in high sparsity regimes.
+
+### **Analysis and Critique:**
+- AdaGP marks a significant step forward in efficient pruning of large language models, but there is an inevitable balance between sparsity and performance that requires careful calibration.
+- The effectiveness of AdaGP may vary across different models and tasks, and its generalizability to all scenarios remains an area for further exploration.
+- The approach assumes certain structural properties of the neural network, such as layer-wise decomposability, which may not hold for all architectures.
+- The article provides detailed experiments and results, showcasing the potential of AdaGP in enhancing the performance and accessibility of LLMs. However, further research and refinement are needed to address the limitations and challenges identified.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-29       |
+| Abstract | [https://arxiv.org/abs/2402.17946v1](https://arxiv.org/abs/2402.17946v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.17946v1](https://browse.arxiv.org/html/2402.17946v1)       |
+| Truncated       | False       |
+| Word Count       | 6875       |

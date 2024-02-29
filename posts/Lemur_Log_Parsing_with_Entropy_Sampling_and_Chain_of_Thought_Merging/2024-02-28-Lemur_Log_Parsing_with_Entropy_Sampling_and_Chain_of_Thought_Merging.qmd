@@ -1,0 +1,41 @@
+
+---
+title: "Lemur: Log Parsing with Entropy Sampling and Chain-of-Thought Merging"
+id: "2402.18205v1"
+description: "TL;DR: Lemur framework improves log parsing with entropy sampling and chain-of-thought merging for better system monitoring."
+author: Hongcheng Guo, Wei Zhang, Anjie Le, Jian Yang, Jiaheng Liu, Zhoujun Li, Tieqiao Zheng, Shi Xu, Runqiang Zang, Liangfan Zheng, Bo Zhang
+date: "2024-02-28"
+image: "https://browse.arxiv.org/html/2402.18205v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2402.18205v1/x1.png)
+
+### **Summary:**
+- Logs are crucial for monitoring system behaviors and log parsing is essential for automating log analytics.
+- Existing log parsers rely on human-made rules and fail to identify correct templates due to a focus on statistical features and ignorance of semantic information in log messages.
+- Lemur, a new log parsing framework, introduces entropy sampling and chain-of-thought merging to address these challenges and achieves state-of-the-art performance and efficiency.
+
+### **Major Findings:**
+1. Lemur introduces entropy sampling to efficiently cluster typical logs and chain-of-thought merging for large language models to enhance log template merging.
+2. Lemur outperforms other state-of-the-art methods in F1 score of grouping and template accuracy.
+3. Lemur is the first unsupervised framework to combine information entropy and large language models for online log parsing.
+
+### **Analysis and Critique:**
+- Syntax-based log parsers are heavily dependent on meticulously crafted rules and their performance diminishes with the increase in log data volume and complexity.
+- Semantic-based log parsers falter in understanding semantics when applied to unfamiliar domains.
+- Lemur's entropy sampling and chain-of-thought merging show promising results, but the improvement with chain-of-thought merging is limited, likely due to the relative simplicity of the loghub datasets.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | gpt-3.5-turbo-1106       |
+| Date Generated     | 2024-02-29       |
+| Abstract | [https://arxiv.org/abs/2402.18205v1](https://arxiv.org/abs/2402.18205v1)        |
+| HTML     | [https://browse.arxiv.org/html/2402.18205v1](https://browse.arxiv.org/html/2402.18205v1)       |
+| Truncated       | False       |
+| Word Count       | 5116       |

@@ -6,9 +6,14 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent / "scripts"))
 from unittest.mock import patch
 
-from summarizer import (OpenAIAssistant,  # extract_text_from_html,
-                        count_token, extract_first_png_image, get_url_content,
-                        is_valid_arxiv_id, remove_double_quotes)
+from summarizer import (
+    FireworksAIAssistant,  # extract_text_from_html,
+    count_token,
+    extract_first_png_image,
+    get_url_content,
+    is_valid_arxiv_id,
+    remove_double_quotes,
+)
 
 # def test_extract_text_from_html():
 #     html_content = """
@@ -92,11 +97,11 @@ def test_valid_arxiv_html():
 
 
 # For the OpenAI integration, you would mock the API call and any network-related functionalities
-@patch("summarizer.OpenAIAssistant.get_summary")
+@patch("summarizer.FireworksAIAssistant.get_summary")
 def test_get_summary(mock_get_summary):
     mock_get_summary.return_value = "summarized text"
 
-    assistant = OpenAIAssistant()
+    assistant = FireworksAIAssistant()
     summary = assistant.get_summary("A long academic text", "summarize")
     assert summary == "summarized text"
     mock_get_summary.assert_called_once()

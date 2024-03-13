@@ -60,10 +60,10 @@ pip install -r requirements-langchain.txt
 
 # Curate arxiv ids in data/input.jsonl, ensure they have HTML renderings
 
-# Run the summary generation script
+# Generate summaries
 python scripts/summarizer.py data/input.jsonl
 
-# Run the summary generation script
+# Create quarto posts of summaries
 python scripts/generate_qmd.py data/output.jsonl posts
 
 # Build the Quarto blog

@@ -349,7 +349,7 @@ class FireworksAIAssistant:
             return text
 
     def get_map_reduce(self, split_docs):
-        llm = ChatFireworks(temperature=self.temperature, model_name=self.model)
+        llm = ChatFireworks(temperature=self.temperature, model_name=self.model, max_tokens=200)
 
         map_template = read_prompt_as_string("templates/map_summarization.txt")
         map_prompt = PromptTemplate.from_template(map_template)
@@ -457,7 +457,7 @@ class FireworksAIAssistant:
 
         prompt = PromptTemplate.from_template(system_message)
         # Define LLM chain with the rendered prompt
-        llm = ChatFireworks(temperature=self.temperature, model_name=self.model)
+        llm = ChatFireworks(temperature=self.temperature, model_name=self.model, max_tokens=500)
         llm_chain = LLMChain(llm=llm, prompt=prompt)
 
         # Define StuffDocumentsChain
@@ -477,7 +477,7 @@ class FireworksAIAssistant:
 
 MODEL = "accounts/fireworks/models/mixtral-8x7b-instruct"
 TEMPERATURE = 0.1
-THRESHOLD = 30000
+THRESHOLD = 27500
 assistant = FireworksAIAssistant(
     model=MODEL, temperature=TEMPERATURE, threshold=THRESHOLD
 )

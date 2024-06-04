@@ -526,60 +526,67 @@ def summarize(
                     logging.info(f"Arxiv ID {arxiv_id} already processed. Skipping.")
                     continue
 
-            # Get summary using the 'summarization' template
-            summary = assistant.get_summary(arxiv_id, "summarization")
-            if summary is None:
-                logger.error(
-                    f"Skipping record {arxiv_id} due to an error in text summarization."
-                )
-                continue  # Skip current record
-
-            # if summary["output_text"][0:9] == "I'm sorry":
-            #     continue # skip if
-
-            # # run tldr
-            tldr_response = assistant.get_summary(arxiv_id, "tldr")
-            if tldr_response is None:
-                logger.error(
-                    f"Skipping record {arxiv_id} due to an error in creating tldr."
-                )
-
-            output_data = {
-                "id": arxiv_id,
-                "text": summary["output_text"],
-                "meta": {
-                    "links": {
-                        "pdf": f"https://arxiv.org/pdf/{arxiv_id}.pdf",
-                        "html": f"https://browse.arxiv.org/html/{arxiv_id}",
-                        "abs": f"https://arxiv.org/abs/{arxiv_id}",
-                    },
-                    "authors": summary["input_documents"][0].metadata["Authors"],
-                    "title": remove_double_quotes(
-                        summary["input_documents"][0].metadata["Title"]
-                    ),
-                    "subtitle": remove_double_quotes(
-                        summary["input_documents"][0].metadata["Title"]
+            try:
+                # Get summary using the 'summarization' template
+                summary = assistant.get_summary(arxiv_id, "summarization")
+                if summary is None:
+                    logger.error(
+                        f"Skipping record {arxiv_id} due to an error in text summarization."
                     )
-                    if tldr_response is None
-                    else remove_double_quotes(tldr_response["output_text"]),
-                    "categories": categories,
-                    "publish_date": summary["input_documents"][0].metadata["Published"],
-                    "model": MODEL,
-                    "temperature": TEMPERATURE,
-                    "image": summary["input_documents"][0].metadata["png_url"],
-                    "word_count": summary["input_documents"][0].metadata["word_count"],
-                    "extraction": summary["input_documents"][0].metadata["extraction"],
-                    "is_truncated": summary["input_documents"][0].metadata[
-                        "is_truncated"
-                    ],
-                },
-            }
+                    continue  # Skip current record
 
-            with output_path.open("a") as output_file:
-                output_file.write(json.dumps(output_data) + "\n")
+                # if summary["output_text"][0:9] == "I'm sorry":
+                #     continue # skip if
 
-            logging.info(f"Summary for {arxiv_id} written to {output_path}")
+                # # run tldr
+                tldr_response = assistant.get_summary(arxiv_id, "tldr")
+                if tldr_response is None:
+                    logger.error(
+                        f"Skipping record {arxiv_id} due to an error in creating tldr."
+                    )
 
+                output_data = {
+                    "id": arxiv_id,
+                    "text": summary["output_text"],
+                    "meta": {
+                        "links": {
+                            "pdf": f"https://arxiv.org/pdf/{arxiv_id}.pdf",
+                            "html": f"https://browse.arxiv.org/html/{arxiv_id}",
+                            "abs": f"https://arxiv.org/abs/{arxiv_id}",
+                        },
+                        "authors": summary["input_documents"][0].metadata["Authors"],
+                        "title": remove_double_quotes(
+                            summary["input_documents"][0].metadata["Title"]
+                        ),
+                        "subtitle": remove_double_quotes(
+                            summary["input_documents"][0].metadata["Title"]
+                        )
+                        if tldr_response is None
+                        else remove_double_quotes(tldr_response["output_text"]),
+                        "categories": categories,
+                        "publish_date": summary["input_documents"][0].metadata["Published"],
+                        "model": MODEL,
+                        "temperature": TEMPERATURE,
+                        "image": summary["input_documents"][0].metadata["png_url"],
+                        "word_count": summary["input_documents"][0].metadata["word_count"],
+                        "extraction": summary["input_documents"][0].metadata["extraction"],
+                        "is_truncated": summary["input_documents"][0].metadata[
+                            "is_truncated"
+                        ],
+                    },
+                }
+
+                with output_path.open("a") as output_file:
+                    output_file.write(json.dumps(output_data) + "\n")
+
+                logging.info(f"Summary for {arxiv_id} written to {output_path}")
+
+            except requests.exceptions.RequestException as e:
+                if e.response.status_code == 502:
+                    logging.error(f"502 Bad Gateway error for {arxiv_id}. Skipping.")
+                    continue
+                else:
+                    raise
 
 if __name__ == "__main__":
     app()

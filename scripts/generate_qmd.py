@@ -41,7 +41,7 @@ format:
 
 
 def remove_unicode_accents(input_str):
-    input_str = input_str.replace("$\infty$", "Infinity")
+    input_str = input_str.replace("$\\infty$", "Infinity")
     return input_str.replace("\\'", "")
 
 
@@ -77,15 +77,16 @@ def remove_accents(input_str):
 
 def get_image_path(example):
     image_path = example.get("meta", {}).get("image", None)
-    
+
     if image_path is None:
         image = "../../../bayesian-beagle.png"
     elif "img/" in image_path:
         image = f"../../{image_path}"
     else:
         image = image_path
-    
+
     return image
+
 
 def convert_to_folder_name(title):
     """

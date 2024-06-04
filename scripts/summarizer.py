@@ -17,11 +17,13 @@ from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from langchain.chains.llm import LLMChain
 from langchain.docstore.document import Document
 from langchain.text_splitter import TokenTextSplitter
-from langchain_community.document_loaders import (ArxivLoader,
-                                                  PDFMinerPDFasHTMLLoader,
-                                                  TextLoader)
+from langchain_community.document_loaders import (
+    ArxivLoader,
+    PDFMinerPDFasHTMLLoader,
+    TextLoader,
+)
 from langchain_core.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI
+from langchain_fireworks.chat_models import ChatFireworks
 from PIL import Image
 from strip_tags import strip_tags
 
@@ -305,12 +307,21 @@ def extract_first_png_image(html_content):
 
 
 def get_tiktoken_count(text, encoding):
-    token_integers = encoding.encode(text)
+    token_integers = encoding.encode(
+        text, disallowed_special=(encoding.special_tokens_set - {"<|endoftext|>"})
+    )
     return len(token_integers)
 
 
-class OpenAIAssistant:
-    def __init__(self, model="gpt-3.5-turbo-1106", temperature=0.3, threshold=16000):
+class FireworksAIAssistant:
+    def __init__(
+        self,
+        base_url="https://api.fireworks.ai/inference/v1",
+        model="accounts/fireworks/models/mixtral-8x7b-instruct",
+        temperature=0.3,
+        threshold=16000,
+    ):
+        self.base_url = base_url
         self.model = model
         self.temperature = temperature
         self.threshold = threshold
@@ -338,7 +349,7 @@ class OpenAIAssistant:
             return text
 
     def get_map_reduce(self, split_docs):
-        llm = ChatOpenAI(temperature=self.temperature, model_name=self.model)
+        llm = ChatFireworks(temperature=self.temperature, model_name=self.model, max_tokens=200)
 
         map_template = read_prompt_as_string("templates/map_summarization.txt")
         map_prompt = PromptTemplate.from_template(map_template)
@@ -399,7 +410,7 @@ class OpenAIAssistant:
         if prompt_name == "summarization":
             # Load the template based on prompt_name
             system_message = read_prompt_as_string(f"templates/{prompt_name}.txt")
-            # count words, if longer than 15,000 then truncate
+            # count words, if longer than 30,000 then truncate
             word_count = get_tiktoken_count(docs[0].page_content, encoding)
             logging.info(f"Raw {word_count} word counts")
             if word_count > self.threshold:
@@ -407,7 +418,13 @@ class OpenAIAssistant:
                     f"Warning: HTML content for {arxiv_id} exceeds {THRESHOLD} tokens. Running Map-Reduce summarization."
                 )
 
-                text_splitter = TokenTextSplitter(chunk_size=5000, chunk_overlap=100)
+                text_splitter = TokenTextSplitter(
+                    chunk_size=5000,
+                    chunk_overlap=100,
+                    disallowed_special=(
+                        encoding.special_tokens_set - {"<|endoftext|>"}
+                    ),
+                )
 
                 split_docs = text_splitter.split_documents(docs)
                 split_docs = [doc for doc in split_docs if len(doc.page_content) > 100]
@@ -440,7 +457,7 @@ class OpenAIAssistant:
 
         prompt = PromptTemplate.from_template(system_message)
         # Define LLM chain with the rendered prompt
-        llm = ChatOpenAI(temperature=self.temperature, model_name=self.model)
+        llm = ChatFireworks(temperature=self.temperature, model_name=self.model, max_tokens=500)
         llm_chain = LLMChain(llm=llm, prompt=prompt)
 
         # Define StuffDocumentsChain
@@ -458,10 +475,12 @@ class OpenAIAssistant:
         return result
 
 
-MODEL = "gpt-3.5-turbo-1106"
+MODEL = "accounts/fireworks/models/mixtral-8x22b-instruct"
 TEMPERATURE = 0.1
-THRESHOLD = 16000
-assistant = OpenAIAssistant(model=MODEL, temperature=TEMPERATURE, threshold=THRESHOLD)
+THRESHOLD = 27500
+assistant = FireworksAIAssistant(
+    model=MODEL, temperature=TEMPERATURE, threshold=THRESHOLD
+)
 encoding = tiktoken.get_encoding("cl100k_base")
 
 
@@ -472,7 +491,7 @@ def summarize(
     force_generate_all: bool = typer.Option(False, "-f", "--force-generate-all"),
 ):
     """
-    Summarizes texts from Arxiv HTML pages listed in a JSONL file using OpenAI's Chat API.
+    Summarizes texts from Arxiv HTML pages listed in a JSONL file using Firework AI's Chat API.
 
     Args:
     input_jsonl (str): Path to the input JSONL file.

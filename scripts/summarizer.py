@@ -475,7 +475,7 @@ class FireworksAIAssistant:
         return result
 
 
-MODEL = "accounts/fireworks/models/mixtral-8x7b-instruct"
+MODEL = "accounts/fireworks/models/mixtral-8x22b-instruct"
 TEMPERATURE = 0.1
 THRESHOLD = 27500
 assistant = FireworksAIAssistant(

@@ -58,6 +58,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -123,12 +126,21 @@ ul.task-list li input[type="checkbox"] {
 </header><main class="content" id="quarto-document-content">
 <p>Welcome to the Bayesian beagle blog! This project is a unique intersection of machine learning and scientific communication, providing a platform where readers can quickly get insights from the latest research papers hosted on <a href="https://arxiv.org/">ArXiv</a>. Utilizing state-of-the-art Large Language Models (LLMs), our system generates concise, comprehensible summaries of complex research articles, covering a wide array of disciplines.</p>
 <p>Our blog is built using <a href="https://quarto.org/">Quarto</a>, an open-source scientific and technical publishing system designed for creating beautiful, data-driven content. It is then published with <a href="https://app.netlify.com/">Netlify</a>.</p>
-<pre class="mermaid"><code>graph LR
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
     A["Download daily Arxiv articles"] --&gt; B["Predict and Filter LLM topic"]
     B --&gt; C["Summarize short docs"]
     B --&gt; D["Summarize by Map-Reduce long docs"]
     C --&gt; E["Update website with summaries daily"]
-    D --&gt; E</code></pre>
+    D --&gt; E
+</pre>
+</div>
+</div>
+</div>
+</div>
 
 
 </main>  

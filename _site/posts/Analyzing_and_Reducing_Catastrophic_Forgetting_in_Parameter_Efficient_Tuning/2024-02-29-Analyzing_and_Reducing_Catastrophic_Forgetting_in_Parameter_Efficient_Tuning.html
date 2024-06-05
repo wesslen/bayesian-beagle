@@ -157,18 +157,30 @@ ul.task-list li input[type="checkbox"] {
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary">Summary</h3>
 <ul>
-<li>Large Language Models (LLMs) suffer from catastrophic forgetting when continuously fine-tuned on complex domain-specific tasks.</li>
-<li>The study explores the geometric connections of different minima in the continual learning scenario of LLMs through the lens of mode connectivity.</li>
-<li>The authors propose Interpolation-based LoRA (I-LoRA), a simple yet effective method that strikes a balance between plasticity and stability in LLMs’ continual learning.</li>
-<li>I-LoRA consistently outperforms previous state-of-the-art approaches in eight domain-specific CL benchmarks with up to 10% performance gains.</li>
+<li>LLMs suffer from catastrophic forgetting when continuously fine-tuned on complex and diverse domain-specific downstream tasks.</li>
+<li>The paper investigates the geometric connections of different minima through the lens of mode connectivity.</li>
+<li>Experiments reveal the mode connectivity phenomenon in the LLMs continual learning scenario, which can balance plasticity and stability.</li>
+<li>A new method, Interpolation-based LoRA (I-LoRA), is proposed, demonstrating significant improvement over previous state-of-the-art approaches.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
 <ol type="1">
-<li><strong>Mode Connectivity in LLMs:</strong> The study uncovers the mode connectivity phenomenon in the LLMs continual learning scenario, where different minima can be connected by a low-loss valley.</li>
-<li>**I-LoRA</li>
+<li><strong>Catastrophic forgetting in LLMs:</strong> Large language models (LLMs) experience a significant decrease in inference performance on historical tasks when continuously fine-tuned on complex and diverse domain-specific downstream tasks.</li>
+<li><strong>Mode connectivity in LLMs:</strong> The paper uncovers the mode connectivity phenomenon in the LLMs continual learning scenario, which can strike a balance between plasticity and stability.</li>
+<li><strong>Interpolation-based LoRA (I-LoRA):</strong> A new method is proposed, demonstrating significant improvement over previous state-of-the-art approaches in eight domain-specific CL benchmarks.</li>
 </ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique</h3>
+<ul>
+<li>The paper focuses on the geometric connections of different minima through the lens of mode connectivity, which is an interesting and novel approach to addressing catastrophic forgetting.</li>
+<li>The experiments are well-designed and provide strong evidence for the mode connectivity phenomenon in the LLMs continual learning scenario.</li>
+<li>The proposed I-LoRA method significantly improves over previous state-of-the-art approaches in eight domain-specific CL benchmarks.</li>
+<li>The paper could benefit from further exploration of the limitations and potential biases in the proposed method, as well as discussing areas that require further research or clarification.</li>
+<li>The authors might also consider comparing their method with other existing works that explore strategies like memory replay, regularization, and parameter isolation.</li>
+<li>The paper could provide more insights into the real-world applications of the proposed method and its potential impact on the industry.</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -180,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

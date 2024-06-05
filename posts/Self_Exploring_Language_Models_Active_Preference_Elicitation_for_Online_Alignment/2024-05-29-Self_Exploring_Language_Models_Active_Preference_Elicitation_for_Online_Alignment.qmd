@@ -1,0 +1,44 @@
+
+---
+title: "Self-Exploring Language Models: Active Preference Elicitation for Online Alignment"
+id: "2405.19332v1"
+description: "SELM improves LLM alignment by optimistically exploring high-reward, diverse responses, outperforming DPO on benchmarks."
+author: Shenao Zhang, Donghan Yu, Hiteshi Sharma, Ziyi Yang, Shuohang Wang, Hany Hassan, Zhaoran Wang
+date: "2024-05-29"
+image: "https://browse.arxiv.org/html/2405.19332v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.19332v1/x1.png)
+
+# Summary:
+
+The paper proposes a novel method called Self-Exploring Language Models (SELM) for online alignment of large language models (LLMs) with human intentions. SELM incorporates an optimism term into the reward-fitting objective, enabling the model to actively explore potentially high-reward regions while exploiting observed data. This approach addresses the limitations of standard online RLHF algorithms that passively explore the response space and may suffer from premature convergence and overfitting.
+
+# Major Findings:
+
+1. SELM introduces a bilevel self-exploring objective that balances exploitation and exploration, leading to more diverse and high-quality responses.
+2. The proposed method outperforms DPO in terms of exploration efficiency by selectively favoring responses with high potential rewards.
+3. Experiments with Zephyr-7B-SFT and Llama-3-8B-Instruct models demonstrate that SELM significantly improves performance on instruction-following benchmarks and academic benchmarks.
+
+# Analysis and Critique:
+
+1. The paper presents a well-structured and coherent summary of the proposed method, providing clear explanations and derivations.
+2. The experimental results demonstrate the effectiveness of SELM in enhancing the alignment and capabilities of large language models.
+3. The paper acknowledges that the proposed technique is orthogonal to the adopted online RLHF workflow, suggesting potential for integration with more sophisticated alignment frameworks.
+4. The paper could benefit from a more detailed discussion of the limitations and potential biases of the proposed method, as well as suggestions for future work.
+5. The paper could also provide more insights into the trade-off between exploration and exploitation, and the impact of the optimism coefficient on the model's performance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.19332v1](https://arxiv.org/abs/2405.19332v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19332v1](https://browse.arxiv.org/html/2405.19332v1)       |
+| Truncated       | False       |
+| Word Count       | 7088       |

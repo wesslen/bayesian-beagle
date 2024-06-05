@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yong Yang, Xuhong Zhang, Yi Jiang, Xi Chen, Haoyu Wang, Shouling Ji, Zonghui Wang">
 <meta name="dcterms.date" content="2024-02-29">
-<meta name="description" content="Threat of Prompt Leakage in Large Language Models: A Novel Attack Framework (PRSA) Effectively Infers Target Prompts.">
+<meta name="description" content="New framework steals prompts from commercial language models, highlighting prompt leakage security concern.">
 
 <title>Bayesian beagle - PRSA: Prompt Reverse Stealing Attacks against Large Language Models</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - PRSA: Prompt Reverse Stealing Attacks against Large Language Models">
-<meta property="og:description" content="Threat of Prompt Leakage in Large Language Models: A Novel Attack Framework (PRSA) Effectively Infers Target Prompts.">
+<meta property="og:description" content="New framework steals prompts from commercial language models, highlighting prompt leakage security concern.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2402.19200v1/extracted/5440247/figures/prompt_jailbreaking.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Threat of Prompt Leakage in Large Language Models: A Novel Attack Framework (PRSA) Effectively Infers Target Prompts.
+    New framework steals prompts from commercial language models, highlighting prompt leakage security concern.
   </div>
 </div>
 
@@ -158,21 +158,33 @@ ul.task-list li input[type="checkbox"] {
 
 <p><img src="https://browse.arxiv.org/html/2402.19200v1/extracted/5440247/figures/prompt_jailbreaking.png" class="img-fluid"></p>
 <section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
 <ul>
-<li>Prompt Stealing Attacks against Large Language Models (LLMs) pose a risk to intellectual property rights due to the exposure of input-output pairs.</li>
-<li>PRSA, a novel attack framework, is proposed to infer target prompts by analyzing critical features of input-output pairs using a generative model.</li>
+<li>Prompt Stealing Attacks against Large Language Models (LLMs) pose a risk to intellectual property rights.</li>
+<li>PRSA (Prompt Reverse Stealing Attacks) is a novel attack framework that infers and steals target prompts by analyzing critical features of input-output pairs.</li>
 <li>PRSA consists of two main phases: prompt mutation and prompt pruning.</li>
-<li>Prompt mutation uses a prompt attention algorithm based on differential feedback to optimize the generative model.</li>
-<li>Prompt pruning identifies and masks input-dependent words to enhance the surrogate prompt’s generality.</li>
-<li>PRSA is effective in stealing prompts across various categories in the marketplace and LLM application platforms.</li>
+<li>The prompt mutation phase uses a prompt attention algorithm based on differential feedback to capture critical features.</li>
+<li>The prompt pruning phase identifies and masks words dependent on specific inputs, enabling prompts to accommodate diverse inputs.</li>
+<li>PRSA poses a severe threat in real-world scenarios, as demonstrated by its effectiveness and generality across various categories and platforms.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
 <ol type="1">
-<li>PRSA poses a severe threat in real-world scenarios, stealing prompts effectively across various categories in the marketplace and</li>
+<li>PRSA can effectively steal prompts from various categories in the marketplace with high success rates.</li>
+<li>PRSA can achieve success rates of 91.5% and 82.3% on popular LLM application platforms OpenGPT and GPTsdex, respectively, at a low cost.</li>
+<li>PRSA has been reported to prompt service providers, and collaborative efforts are being made to implement protective measures for prompt copyright.</li>
 </ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique</h3>
+<ul>
+<li>The paper focuses on the risks of prompt leakage from revealed input-output pairs in LLMs.</li>
+<li>The study highlights the need for risk awareness among prompt service providers and the implementation of prompt copyright protection measures.</li>
+<li>The paper could benefit from further exploration of possible defenses, such as input obfuscation and prompt watermarking, to provide a more comprehensive analysis.</li>
+<li>The paper could also discuss potential countermeasures that LLM providers could implement to mitigate the risks of PRSA.</li>
+<li>Further research could investigate the effectiveness of PRSA on other cross-modal large models and refine attack scenarios to reveal broader security vulnerabilities.</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -184,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

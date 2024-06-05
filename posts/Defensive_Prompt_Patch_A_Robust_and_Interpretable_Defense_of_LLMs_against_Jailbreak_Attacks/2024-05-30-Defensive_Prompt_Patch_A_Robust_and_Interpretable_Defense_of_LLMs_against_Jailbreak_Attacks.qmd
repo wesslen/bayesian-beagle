@@ -1,0 +1,40 @@
+
+---
+title: "Defensive Prompt Patch: A Robust and Interpretable Defense of LLMs against Jailbreak Attacks"
+id: "2405.20099v1"
+description: "DPP is a novel defense mechanism for LLMs, reducing jailbreak attacks while preserving utility, outperforming existing strategies."
+author: Chen Xiong, Xiangyu Qi, Pin-Yu Chen, Tsung-Yi Ho
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.20099v1/x1.png"
+categories: ['prompt-engineering', 'robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.20099v1/x1.png)
+
+# Summary:
+
+The paper introduces a novel prompt-based defense mechanism called Defensive Prompt Patch (DPP) to protect large language models (LLMs) against jailbreak attacks. DPP is designed to minimize the Attack Success Rate (ASR) while preserving the high utility of LLMs. The method uses strategically designed interpretable suffix prompts to thwart a wide range of standard and adaptive jailbreak techniques. Empirical results on LLAMA-2-7B-Chat and Mistral-7B-Instruct-v0.2 models demonstrate the robustness and adaptability of DPP, showing significant reductions in ASR with negligible impact on utility.
+
+# Major Findings:
+
+1. DPP is a novel prompt-based defense mechanism that uses adversarial and utility datasets to iteratively optimize and refine a suffix prompt, balancing alignment and utility.
+2. DPP significantly reduces the ASR to 3.8% on the LLAMA-2-7B-Chat model without compromising utility and extends robust defense capabilities to less-aligned models like the Mistral-7B-Instruct-v0.2.
+3. DPP outperforms existing defense strategies in balancing safety and functionality and provides a scalable and interpretable solution applicable to various LLM platforms.
+
+# Analysis and Critique:
+
+The paper presents a promising approach to defending LLMs against jailbreak attacks. The use of interpretable suffix prompts and the iterative optimization process make DPP a practical and scalable solution. However, the paper does not discuss the potential limitations or shortcomings of the approach, such as the computational cost of training and the impact on model inference time. Additionally, the paper does not provide a comprehensive comparison with other defense strategies, which could help to better understand the strengths and weaknesses of DPP. Further research is needed to evaluate the effectiveness of DPP in real-world scenarios and to explore potential improvements and optimizations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.20099v1](https://arxiv.org/abs/2405.20099v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.20099v1](https://browse.arxiv.org/html/2405.20099v1)       |
+| Truncated       | False       |
+| Word Count       | 10760       |

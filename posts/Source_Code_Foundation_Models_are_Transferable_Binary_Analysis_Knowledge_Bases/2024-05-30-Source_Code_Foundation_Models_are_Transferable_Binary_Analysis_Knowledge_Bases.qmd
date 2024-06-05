@@ -1,0 +1,44 @@
+
+---
+title: "Source Code Foundation Models are Transferable Binary Analysis Knowledge Bases"
+id: "2405.19581v1"
+description: "Probe-and-recover framework improves binary code analysis, boosting summarization & function name recovery."
+author: Zian Su, Xiangzhe Xu, Ziyang Huang, Kaiyuan Zhang, Xiangyu Zhang
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.19581v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.19581v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel probe-and-recover framework, ProRec, designed to bridge the semantic gap between binary code and human-understandable source code. ProRec integrates an aligned binary-source encoder-decoder model with black-box large language models to synthesize symbol-rich code fragments from binary input, providing valuable context for improving binary analysis tasks. The framework demonstrates significant improvements in both binary summarization and binary function name recovery tasks.
+
+### Major Findings:
+
+1. ProRec significantly enhances performance in binary summarization tasks, with a 10.3% relative gain in CHRF and a 16.7% relative gain in a GPT4-based metric for summarization.
+2. The framework improves binary function name recovery tasks, with a 6.7% and 7.4% absolute increase in token-level precision and recall, respectively.
+3. ProRec outperforms directly letting the LLM to reason, leveraging both cross-modal aligned knowledge and strong reasoning ability of LLMs.
+
+### Analysis and Critique:
+
+1. The paper experiments with a simple architecture and straightforward alignment of the binary-source prober, which might not be optimal for ProRec. Future work could explore better prober architecture and alignment objectives.
+2. The current focus of ProRec is on intra-procedure analysis, similar to most existing work. An important direction for future research is extending ProRec to inter-procedure scenarios, where additional information from the whole program such as call-graph can be leveraged.
+3. The paper does not discuss the potential limitations and biases of the framework, such as the impact of the quality and diversity of the training data on the performance of ProRec.
+4. The evaluation of ProRec is primarily based on the performance in binary summarization and binary function name recovery tasks. Additional evaluation metrics and tasks could provide a more comprehensive understanding of the framework's capabilities and limitations.
+5. The paper does not discuss the potential applications and use cases of ProRec in real-world scenarios, which could help demonstrate the practical value and impact of the framework.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.19581v1](https://arxiv.org/abs/2405.19581v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19581v1](https://browse.arxiv.org/html/2405.19581v1)       |
+| Truncated       | False       |
+| Word Count       | 8584       |

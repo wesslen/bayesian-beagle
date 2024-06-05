@@ -8,7 +8,7 @@
 
 <meta name="author" content="Nikola Jovanović, Robin Staab, Martin Vechev">
 <meta name="dcterms.date" content="2024-02-29">
-<meta name="description" content="Automated watermark stealing enables effective spoofing, scrubbing of LLM schemes. This summarizes the article’s main point that a new watermark stealing (WS) algorithm can be used to both spoof and scrub state-of-the-art large language models (LLMs) with a high success rate, challenging common beliefs about the robustness of LLM watermarking.">
+<meta name="description" content="New study reveals LLM watermarking vulnerability: Under $50, attackers can spoof and scrub state-of-the-art schemes with 80% success rate.">
 
 <title>Bayesian beagle - Watermark Stealing in Large Language Models</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Watermark Stealing in Large Language Models">
-<meta property="og:description" content="Automated watermark stealing enables effective spoofing, scrubbing of LLM schemes. This summarizes the article’s main point that a new watermark stealing (WS) algorithm can be used to both spoof and scrub state-of-the-art large language models (LLMs) with a high success rate, challenging common beliefs about the robustness of LLM watermarking.">
+<meta property="og:description" content="New study reveals LLM watermarking vulnerability: Under $50, attackers can spoof and scrub state-of-the-art schemes with 80% success rate.">
 <meta property="og:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Automated watermark stealing enables effective spoofing, scrubbing of LLM schemes. This summarizes the article’s main point that a new watermark stealing (WS) algorithm can be used to both spoof and scrub state-of-the-art large language models (LLMs) with a high success rate, challenging common beliefs about the robustness of LLM watermarking.
+    New study reveals LLM watermarking vulnerability: Under $50, attackers can spoof and scrub state-of-the-art schemes with 80% success rate.
   </div>
 </div>
 
@@ -154,19 +154,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="../../../bayesian-beagle.png" class="img-fluid"></p>
-<section id="watermark-stealing-in-large-language-models" class="level3">
-<h3 class="anchored" data-anchor-id="watermark-stealing-in-large-language-models">Watermark Stealing in Large Language Models</h3>
-<p><strong>Summary:</strong></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
 <ul>
-<li>LLM watermarking has been proposed as a promising way to detect AI-generated content.</li>
-<li>However, the authors identify a fundamental vulnerability called watermark stealing (WS), where querying the API of a watermarked LLM can reverse-engineer the watermark, enabling spoofing and scrubbing attacks.</li>
-<li>The authors propose an automated WS algorithm and demonstrate that, for under $50, an attacker can successfully spoof and scrub state-of-the-art watermarked schemes with an average success rate of over 80%.</li>
+<li>Watermark stealing (WS) is identified as a fundamental vulnerability in large language model (LLM) watermarking schemes.</li>
+<li>WS enables spoofing and scrubbing attacks, which were previously unnoticed or less effective.</li>
+<li>An automated WS algorithm is proposed and used in the first comprehensive study of spoofing and scrubbing in realistic settings.</li>
+<li>For under $50, an attacker can both spoof and scrub state-of-the-art schemes with an average success rate of over 80%.</li>
 </ul>
-<p><strong>Major Findings:</strong></p>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li>Watermark stealing (WS) is a fundamental vulnerability in LLM watermarking schemes.</li>
-<li>An attacker can use WS to launch both spoofing and scrubbing attacks on state-of-the-art watermarked</li>
+<li>Watermark stealing (WS) is a fundamental vulnerability in LLM watermarking schemes, enabling practical spoofing and scrubbing attacks.</li>
+<li>The first automated WS algorithm is proposed, demonstrating that for under $50, an attacker can successfully spoof and scrub state-of-the-art watermarking schemes with an average success rate of over 80%.</li>
+<li>The findings challenge common beliefs about LLM watermarking, highlighting the need for more robust schemes.</li>
 </ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The study focuses on watermarking schemes for LLMs, which may not generalize to other types of models or watermarking methods.</li>
+<li>The effectiveness of the proposed WS algorithm depends on the availability and quality of the API and the auxiliary model.</li>
+<li>The paper assumes a specific pricing model for the API, which may not reflect the actual costs of using LLMs in different scenarios.</li>
+<li>The paper could benefit from a more detailed discussion of the ethical implications of watermarking and WS, especially in the context of AI-generated content.</li>
+<li>Further research is needed to evaluate the robustness of LLM watermarking schemes against other types of attacks and to develop more robust watermarking methods.</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -178,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

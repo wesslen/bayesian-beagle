@@ -1,0 +1,43 @@
+
+---
+title: "Prompting Large Language Models with Human Error Markings for Self-Correcting Machine Translation"
+id: "2406.02267v1"
+description: "Human error markings guide LLM to focus on corrections, improving technical domain translation."
+author: Nathaniel Berger, Stefan Riezler, Miriam Exel, Matthias Huck
+date: "2024-06-04"
+image: "../../../bayesian-beagle.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary:
+
+The paper presents a pilot study on enhancing translation memories (TMs) produced by post-editing (PE) for the needs of correct and consistent term translation in technical domains. The study investigates a two-step scenario where a human translator marks errors in the first translation step, and in a second step, a few similar examples are extracted from the PE-TM to prompt a large language model (LLM). The experiment shows that the additional effort of augmenting translations with human error markings guides the LLM to focus on a correction of the marked errors, yielding consistent improvements over automatic PE (APE) and MT from scratch.
+
+# Major Findings:
+
+1. The study shows that selecting in-context examples based on similarity of source-side embeddings and providing error markings on hypotheses lets the LLM infer focused corrections of marked errors.
+2. Overall translation quality is improved over few-shot prompt-based translation and over automatic post-editing.
+3. The results of the study suggest that the proposed approach could complement translation memories and terminology databases by up-to-date and domain-specific information in the PE-TM, and be used in a scenario where a user marks errors in MT hypotheses.
+
+# Analysis and Critique:
+
+* The study is limited to a single domain (IT) and a single language pair (English-German). Further research is needed to evaluate the proposed approach in other domains and language pairs.
+* The study does not provide a detailed analysis of the types of errors that can be corrected by the proposed approach. It would be interesting to investigate whether the approach is more effective for certain types of errors (e.g., terminology errors) than for others.
+* The study does not discuss the potential impact of the proposed approach on the post-editing process. It would be important to evaluate whether the proposed approach can reduce the post-editing effort and improve the efficiency of the translation process.
+* The study does not provide a comparison with other approaches to improving MT quality, such as fine-tuning or transfer learning. It would be useful to compare the proposed approach with these methods to better understand its strengths and limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.02267v1](https://arxiv.org/abs/2406.02267v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.02267v1](https://browse.arxiv.org/html/2406.02267v1)       |
+| Truncated       | False       |
+| Word Count       | 4603       |

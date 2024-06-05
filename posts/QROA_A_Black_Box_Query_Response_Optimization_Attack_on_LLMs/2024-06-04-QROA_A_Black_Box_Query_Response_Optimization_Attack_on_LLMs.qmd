@@ -1,0 +1,42 @@
+
+---
+title: "QROA: A Black-Box Query-Response Optimization Attack on LLMs"
+id: "2406.02044v1"
+description: "QROA method exploits LLMs for harmful content via black-box queries, achieving 80%+ ASR on various models, including Llama2-chat."
+author: Hussein Jawad, Nicolas J. -B. BRUNEL
+date: "2024-06-04"
+image: "../../../bayesian-beagle.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary:
+
+The paper introduces a novel optimization-based strategy called Query-Response Optimization Attack (QROA) designed to exploit Large Language Models (LLMs) through a black-box, query-only interaction. Unlike previous approaches, QROA does not require access to the model’s logit information or any other internal data and operates solely through the standard query-response interface of LLMs. The method iteratively updates tokens to maximize a designed reward function, inspired by deep Q-learning and Greedy coordinate descent. The authors tested QROA on various LLMs such as Vicuna, Falcon, and Mistral, achieving an Attack Success Rate (ASR) over 80%. The method was also tested against Llama2-chat, achieving good ASR with a suboptimal initial trigger seed. The study demonstrates the feasibility of generating jailbreak attacks against deployed LLMs in the public domain using black-box optimization methods, enabling more comprehensive safety testing of LLMs.
+
+## Major Findings:
+1. QROA is a black-box and query-only method, an optimization-based attack that is not based on human-crafted templates, allowing the attack to be more general and flexible.
+2. QROA achieves an ASR over 80% when tested on various LLMs such as Vicuna, Falcon, and Mistral.
+3. QROA achieves good ASR with a suboptimal initial trigger seed when tested against Llama2-chat, a fine-tuned version of Llama2 designed to resist Jailbreak attacks.
+
+## Analysis and Critique:
+- The paper presents an innovative approach to exploiting LLMs through a black-box, query-only interaction, which is a significant contribution to the field.
+- The method's ability to achieve high ASR on various LLMs demonstrates its effectiveness and potential for use in real-world scenarios.
+- However, the paper does not discuss the potential ethical implications of using such attacks or the countermeasures that could be implemented to prevent them.
+- Additionally, the paper does not provide a detailed comparison of QROA with other existing methods, which could help to better understand its strengths and limitations.
+- The authors also do not discuss the potential impact of the attack on the model's
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.02044v1](https://arxiv.org/abs/2406.02044v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.02044v1](https://browse.arxiv.org/html/2406.02044v1)       |
+| Truncated       | False       |
+| Word Count       | 11903       |

@@ -2,7 +2,7 @@
 ---
 title: "Scaling Laws for Downstream Task Performance of Large Language Models"
 id: "2402.04177v1"
-description: "Scaling laws in transfer learning for language models impact downstream performance in machine translation."
+description: "Investigating scaling behavior in transfer learning for machine translation: size and alignment of pretraining data matter. Possible to predict BLEU score with log-law when aligned."
 author: Berivan Isik, Natalia Ponomareva, Hussein Hazimeh, Dimitris Paparas, Sergei Vassilvitskii, Sanmi Koyejo
 date: "2024-02-06"
 image: "../../img/2402.04177v1/image_1.png"
@@ -14,37 +14,31 @@ format:
 
 ![](../../img/2402.04177v1/image_1.png)
 
-B.3
-Comparison of T5-3B and T5-770M
-In Figures 7 and 8, we compare the scaling behavior of T5-3B and T5-770M models for the en-de and en-fr
-translation tasks. We observe that the scaling laws for both models are consistent with each other, showing
-similar trends in the scaling behavior for both the BLEU score and the downstream cross-entropy loss. This
-suggests that the scaling laws are robust and consistent across different model sizes.
-Figure 7: Comparison of scaling behavior for T5-3B and T5-770M models for the en-de translation task.
-(top) BLEU score vs pretraining dataset size: f(Dp) = (log(A · Dα
-p))β. (bottom) Cross-entropy (CE)
-validation loss vs pretraining dataset size: L(Dp) = E +
-A
-Dα
-p .
-Figure 8: Comparison of scaling behavior for T5-3B and T5-770M models for the en-fr translation task.
-(top) BLEU score vs pretraining dataset size: f(Dp) = (log(A · Dα
-p))β. (bottom) Cross-entropy (CE)
-validation loss vs pretraining dataset size: L(Dp) = E +
-A
-Dα
-p .
-Overall, the comparison of the scaling behavior between T5-3B and T5-770M models shows that the scaling
-laws are consistent and provide similar insights into the relationship between pretraining dataset size and
-downstream task performance for both models. This consistency across different model sizes adds credibility
-to the findings and insights derived from the scaling laws.
+### Scaling Laws for Downstream Task Performance of Large Language Models
+
+**Summary:**
+- This study investigates the scaling behavior of large language models (LLMs) in a transfer learning setting, specifically for machine translation tasks.
+- The authors find that the size of the finetuning dataset and the distribution alignment between the pretraining and downstream data significantly influence the scaling behavior.
+- With sufficient alignment, both downstream cross-entropy and BLEU score improve monotonically with more pretraining data.
+- In cases of moderate misalignment, the BLEU score may fluctuate or get worse with more pretraining, while downstream cross-entropy still improves monotonically.
+
+**Major Findings:**
+1. The size of the finetuning dataset and the distribution alignment between the pretraining and downstream data significantly influence the scaling behavior of LLMs in a transfer learning setting.
+2. With sufficient alignment, both downstream cross-entropy and BLEU score improve monotonically with more pretraining data.
+3. In cases of moderate misalignment, the BLEU score may fluctuate or get worse with more pretraining, while downstream cross-entropy still improves monotonically.
+
+**Analysis and Critique:**
+- The study focuses on machine translation tasks, which may limit the generalizability of the findings to other downstream tasks.
+- The authors acknowledge that there are cases where moderate misalignment causes the BLEU score to fluctuate or get worse with more pretraining, but they do not provide a clear explanation for this phenomenon.
+- The study could benefit from a more thorough discussion of the limitations and potential biases in the experimental design.
+- Further research is needed to determine if these findings hold true for other types of downstream tasks and to explore the underlying mechanisms that cause the BLEU score to fluctuate in cases of moderate misalignment.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
-| Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-03-13       |
+| Model     | accounts/fireworks/models/mixtral-8x7b-instruct       |
+| Date Generated     | 2024-06-05       |
 | Abstract | [https://arxiv.org/abs/2402.04177v1](https://arxiv.org/abs/2402.04177v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.04177v1](https://browse.arxiv.org/html/2402.04177v1)       |
 | Truncated       | False       |

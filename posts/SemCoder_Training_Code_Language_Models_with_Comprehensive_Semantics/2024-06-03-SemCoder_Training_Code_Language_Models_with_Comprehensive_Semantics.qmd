@@ -1,0 +1,43 @@
+
+---
+title: "SemCoder: Training Code Language Models with Comprehensive Semantics"
+id: "2406.01006v1"
+description: "TL;DR: SemCoder, a 6.7B-parameter Code LLM, outperforms GPT-3.5-turbo in code generation and execution reasoning, integrating semantics from multiple dimensions."
+author: Yangruibo Ding, Jinjun Peng, Marcus J. Min, Gail Kaiser, Junfeng Yang, Baishakhi Ray
+date: "2024-06-03"
+image: "../../img/2406.01006v1/image_1.png"
+categories: ['education', 'prompt-engineering', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2406.01006v1/image_1.png)
+
+# Summary:
+The paper "SEMCODER: Training Code Language Models with Comprehensive Semantics" introduces a novel strategy to train Code LLMs with a comprehensive understanding of semantics, including high-level functional descriptions, local execution effects, and overall input/output behavior. The authors propose training Code LLMs to write code and represent and reason about execution behaviors using natural language, mimicking human verbal debugging. The proposed approach led to the development of SEMCODER, a Code LLM with 6.7B parameters, which shows competitive performance with GPT-3.5-turbo on code generation and execution reasoning tasks.
+
+## Major Findings:
+1. SEMCODER achieves 81.1% on HumanEval (GPT-3.5-turbo: 76.8%) and 54.5% on CRUXEval-I (GPT-3.5-turbo: 50.3%).
+2. The study demonstrates the potential of applying learned semantics to improve Code LLMs' debugging and self-refining capabilities.
+3. The paper introduces a unique strategy called Monologue Reasoning to align static source code with dynamic execution states, helping models correlate written code with its runtime behavior.
+
+## Analysis and Critique:
+The paper presents an innovative approach to training Code LLMs with comprehensive semantics, which has shown promising results in code generation and execution reasoning tasks. However, the study has some limitations and potential areas for improvement.
+
+Firstly, the paper relies on a powerful LLM, GPT-3.5-turbo, to generate monologue annotation data, which may not be feasible for smaller models. Future work could explore the possibility of using a larger base model to generate the monologue annotations using the base model itself.
+
+Secondly, the paper suggests that training on input and output prediction tasks indirectly benefits code generation and downstream tasks like self-refinement. However, a more direct way to improve performance in code generation and self-refinement is to ask the model to self-verify its own solution by generating forward monologue for the test cases given in the natural language specification before finalizing the solution.
+
+Lastly, the paper does not discuss the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.01006v1](https://arxiv.org/abs/2406.01006v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.01006v1](https://browse.arxiv.org/html/2406.01006v1)       |
+| Truncated       | False       |
+| Word Count       | 18724       |

@@ -154,20 +154,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2402.19465v1/x1.png" class="img-fluid"></p>
-<section id="tracing-trustworthiness-dynamics-in-large-language-models-pre-training" class="level3">
-<h3 class="anchored" data-anchor-id="tracing-trustworthiness-dynamics-in-large-language-models-pre-training">Tracing Trustworthiness Dynamics in Large Language Models Pre-training</h3>
+<section id="towards-tracing-trustworthiness-dynamics-revisiting-pre-training-period-of-large-language-models" class="level3">
+<h3 class="anchored" data-anchor-id="towards-tracing-trustworthiness-dynamics-revisiting-pre-training-period-of-large-language-models">Towards Tracing Trustworthiness Dynamics: Revisiting Pre-training Period of Large Language Models</h3>
 <p><strong>Summary:</strong></p>
 <ul>
-<li>This study explores the trustworthiness of large language models (LLMs) during the pre-training phase, focusing on five dimensions: reliability, privacy, toxicity, fairness, and robustness.</li>
-<li>Linear probing is applied to LLMs, revealing that they can distinguish concepts in each trustworthiness dimension early in pre-training.</li>
-<li>Steering vectors are extracted from LLMs’ pre-training checkpoints to enhance their trustworthiness.</li>
-<li>Mutual information probing during pre-training uncovers a two-phase phenomenon: fitting and compression.</li>
+<li>The trustworthiness of large language models (LLMs) is crucial and has been the focus of most studies on fully pre-trained LLMs.</li>
+<li>This paper explores the untapped potential of pre-training by focusing on five key dimensions of trustworthiness: reliability, privacy, toxicity, fairness, and robustness.</li>
+<li>Linear probing is applied to LLMs, revealing that they can distinguish concepts in each trustworthiness dimension during the early pre-training period.</li>
+<li>Steering vectors are extracted from a LLM’s pre-training checkpoints to enhance the LLM’s trustworthiness.</li>
+<li>Mutual information estimation is probed during pre-training, observing a two-phase phenomenon: fitting and compression.</li>
 </ul>
 <p><strong>Major Findings:</strong></p>
 <ol type="1">
-<li>LLMs in early pre-training can already distinguish concepts in trustworthiness dimensions through linear probing.</li>
-<li>Steering vectors extracted from pre-training checkpoints can enhance the LLM’s trustworthiness</li>
+<li>LLMs in early pre-training can already distinguish concepts in each trustworthiness dimension, as shown by high probing accuracy.</li>
+<li>Steering vectors extracted from pre-training checkpoints can enhance the SFT model’s trustworthiness, achieving performance that matches or exceeds that of vectors extracted directly from the SFT model.</li>
+<li>During the pre-training period of LLMs, there exist two distinct phases regarding trustworthiness: fitting and compression.</li>
 </ol>
+<p><strong>Analysis and Critique:</strong></p>
+<ul>
+<li>The paper provides an initial exploration of trustworthiness modeling during LLM pre-training, but further research is needed to unveil new insights and spur further developments in the field.</li>
+<li>The paper could benefit from a more detailed explanation of the methodology, particularly in the extraction of steering vectors and the investigation of the dynamics of trustworthiness during pre-training.</li>
+<li>The paper could also discuss potential limitations and challenges, such as the computational resources required for pre-training and probing, the generalizability of the findings to other LLMs and trustworthiness dimensions, and the potential impact of pre-training data and objectives on the trustworthiness of LLMs.</li>
+<li>Future research could focus on developing more sophisticated methods for enhancing trustworthiness during pre-training, investigating the relationship between pre-training dynamics and trustworthiness, and exploring the effectiveness of transfer learning and fine-tuning for improving trust</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -179,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

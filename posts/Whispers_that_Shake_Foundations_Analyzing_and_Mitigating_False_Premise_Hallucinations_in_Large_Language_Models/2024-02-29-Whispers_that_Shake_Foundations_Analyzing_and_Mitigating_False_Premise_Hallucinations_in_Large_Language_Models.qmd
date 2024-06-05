@@ -16,22 +16,33 @@ format:
 
 ### **Summary:**
 
-- False premise hallucination is a significant issue in Large Language Models (LLMs) where models generate false text based on false premise questions.
-- A study analyzes this issue and proposes a method called FAITH (False premise Attention head constraIning for miTigating Hallucinations) to mitigate it.
-- FAITH constrains a small subset of attention heads, called false premise heads, that disturb the knowledge extraction process, leading to false premise hallucinations.
-- Experiments show that constraining only a few attention heads in the model yields a significant increase in model performance.
+- Large Language Models (LLMs) suffer from hallucinations, particularly false premise hallucinations where the model generates incorrect information based on false premises in the input.
+- A comprehensive analysis of false premise hallucinations reveals that a small subset of attention heads, called false premise heads, disturb the knowledge extraction process.
+- A novel method, FAITH, is proposed to mitigate false premise hallucinations by constraining false premise attention heads during model inference.
 
-### Major Findings:
+**Major Findings:**
 
-1. **False Premise Hallucination:** A specific type of hallucination in LLMs where models generate false text based on false premise questions.
-2. **False Premise Heads:** A small subset of attention heads in LLMs that
+1. False premise hallucinations are a significant issue in LLMs, leading to the generation of incorrect information based on false premises.
+2. A small subset of attention heads, called false premise heads, are responsible for the occurrence of false premise hallucinations.
+3. Constraining false premise attention heads during model inference significantly reduces false premise hallucinations, leading to improved model performance.
+
+**Analysis and Critique:**
+
+- The study provides valuable insights into the internal workings of false premise hallucinations in LLMs.
+- The proposed FAITH method effectively mitigates false premise hallucinations, demonstrating the importance of attention head constraining in LLMs.
+- The analysis is limited to models with up to 13 billion parameters. Future research should investigate the applicability of FAITH to larger models.
+- The calculation of influence for multiple attention heads is time-consuming. Future research could focus on efficient methods for selecting the most influential joint contribution of multiple attention heads.
+
+---
+
+For the complete summary, including the detailed explanation of the paper's content, headings, formatting, and critical analysis, please refer to the markdown summary provided in the response.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | accounts/fireworks/models/mixtral-8x7b-instruct       |
-| Date Generated     | 2024-03-13       |
+| Date Generated     | 2024-06-05       |
 | Abstract | [https://arxiv.org/abs/2402.19103v1](https://arxiv.org/abs/2402.19103v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.19103v1](https://browse.arxiv.org/html/2402.19103v1)       |
 | Truncated       | False       |

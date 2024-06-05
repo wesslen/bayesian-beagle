@@ -1,0 +1,43 @@
+
+---
+title: "LLMs Beyond English: Scaling the Multilingual Capability of LLMs with Cross-Lingual Feedback"
+id: "2406.01771v1"
+description: "xLLMs-100: New multilingual LLM for 100 languages, outperforming peers on five benchmarks."
+author: Wen Lai, Mohsen Mesgar, Alexander Fraser
+date: "2024-06-03"
+image: "https://browse.arxiv.org/html/2406.01771v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.01771v1/x1.png)
+
+### Summary:
+
+The paper introduces xLLMs-100, a set of two large language models (LLMs) that support 100 languages, aiming to enhance the multilingual capabilities of LLMs in understanding and generating tasks. The models are trained on a novel multilingual instruction dataset containing 100 languages and a cross-lingual human feedback dataset to improve the generating capability. Experiments on five benchmarks demonstrate the effectiveness of the datasets and the multilingual capability of the models in both high-resource and low-resource languages.
+
+### Major Findings:
+
+1. xLLMs-100 significantly outperforms its peers across the benchmarks by considerable margins, defining a new state-of-the-art multilingual LLM that supports 100 languages.
+2. The multilingual capabilities of xLLMs-100 are consistently superior in high-resource languages compared to low-resource languages, highlighting the challenge of training a robust decoder for low-resource languages due to the scarcity of training corpora.
+3. Instructions written in English outperform instructions written in non-English languages, aligning with initial expectations and attributed to the accumulation of biases in LLMs' understanding of instructions across different languages.
+
+### Analysis and Critique:
+
+1. The paper does not conduct an analysis on toxicity, domain, bias, and fairness aspects of xLLMs-100, which should be discussed more in future work.
+2. The experiments are limited to 7B size on LLaMA and BLOOM, and the constructed human feedback dataset currently covers 30 languages. Extending the cross-lingual human feedback dataset and deploying the dataset for larger LLMs (e.g., 13B and 70B models) are promising future work.
+3. A noticeable discrepancy persists between xLLMs-100, small language models (SLMs), and the current state-of-the-art LLMs, such as ChatGPT. Bridging this gap will be a critical objective in future research.
+4. The paper does not address the tokenizer issue in LLMs, which is an important step towards expanding LLMs to new languages. Addressing this in future work is essential.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.01771v1](https://arxiv.org/abs/2406.01771v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.01771v1](https://browse.arxiv.org/html/2406.01771v1)       |
+| Truncated       | False       |
+| Word Count       | 8328       |

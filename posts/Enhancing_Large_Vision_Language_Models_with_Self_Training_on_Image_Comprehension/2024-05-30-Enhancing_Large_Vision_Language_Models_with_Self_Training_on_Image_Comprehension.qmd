@@ -1,0 +1,40 @@
+
+---
+title: "Enhancing Large Vision Language Models with Self-Training on Image Comprehension"
+id: "2405.19716v1"
+description: "STIC improves LVLMs' image comprehension via self-training, reducing supervised data needs by 70% and boosting performance by 4% on average."
+author: Yihe Deng, Pan Lu, Fan Yin, Ziniu Hu, Sheng Shen, James Zou, Kai-Wei Chang, Wei Wang
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.19716v1/x3.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.19716v1/x3.png)
+
+### Summary:
+
+The paper introduces a novel self-training approach called Self-Training on Image Comprehension (STIC) to enhance the image comprehension capabilities of large vision language models (LVLMs). STIC is a two-stage self-training process that creates a preference dataset for image descriptions from unlabeled images and refines reasoning abilities through description-infused fine-tuning. The method demonstrates significant performance improvements across seven vision-language benchmarks, with an average accuracy gain of 4.0% while using 50% less supervised fine-tuning data than the current method.
+
+### Major Findings:
+
+1. STIC achieves consistent and significant performance improvements across seven vision-language benchmarks, with an average accuracy gain of 4.0% over the base LVLM and a notable gain of 6.4% on ScienceQA.
+2. The method does not require pre-labeled information of the images, contrasting with recent works that rely on such information for constructing vision-language preference data.
+3. STIC enables a base LVLM to evolve from self-generated image captions, eliminating the need for additional supervised and preference data from human annotators or advanced teacher models.
+
+### Analysis and Critique:
+
+While STIC demonstrates promising results in enhancing the capabilities of 7B LVLMs, there are potential limitations and areas for improvement. The method's applicability to larger models, such as those with 13B, 40B, and 100B parameters, should be investigated if computational resources permit. Additionally, the impact of the image distribution used in self-training on STIC should be examined to further refine its effectiveness with curated image datasets. Lastly, an examination of the effects of various image corruptions and "bad" prompts on STIC could provide valuable insights into the effective generation of dispreferred samples.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.19716v1](https://arxiv.org/abs/2405.19716v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19716v1](https://browse.arxiv.org/html/2405.19716v1)       |
+| Truncated       | False       |
+| Word Count       | 9067       |

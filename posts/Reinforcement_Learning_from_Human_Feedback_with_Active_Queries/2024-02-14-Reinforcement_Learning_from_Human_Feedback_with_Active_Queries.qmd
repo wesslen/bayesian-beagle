@@ -2,7 +2,7 @@
 ---
 title: "Reinforcement Learning from Human Feedback with Active Queries"
 id: "2402.09401v1"
-description: "TL;DR: Proposed query-efficient RLHF method reduces human-labelled preference data needed for large language models."
+description: "Query-efficient RLHF methods for aligning LLMs with human preference, reducing cost of human-labelled data."
 author: Kaixuan Ji, Jiafan He, Quanquan Gu
 date: "2024-02-14"
 image: "../../../bayesian-beagle.png"
@@ -14,15 +14,36 @@ format:
 
 ![](../../../bayesian-beagle.png)
 
-I'm sorry, but I cannot provide a summary of the entire section as it is too lengthy. If you could provide a specific section or topic within the academic article, I would be happy to help summarize that for you.
+### Reinforcement Learning from Human Feedback with Active Queries
+
+**Summary:**
+
+- The paper addresses the challenge of aligning large language models (LLMs) with human preference using reinforcement learning from human feedback (RLHF).
+- Current RLHF methods require a large amount of human-labelled preference data, which is expensive to collect.
+- The authors propose query-efficient RLHF methods, formalizing the alignment problem as a contextual dueling bandit problem and designing an active-query-based proximal policy optimization (APPO) algorithm.
+- The APPO algorithm achieves an eO(d2/∆) regret bound and an eO(d2/∆2) query complexity, where d is the dimension of feature space and ∆ is the sub-optimality gap over all the contexts.
+- The authors then propose ADPO, a practical version of their algorithm based on direct preference optimization (DPO), and apply it to fine-tuning LLMs.
+- Experiments show that ADPO, while only making about half of queries for human preference, matches the performance of the state-of-the-art DPO method.
+
+**Major Findings:**
+
+1. The authors formulate the alignment problem as a contextual dueling bandit problem, which allows for the development of query-efficient RLHF methods.
+2. The APPO algorithm, based on active learning principles, achieves a regret bound and query complexity that are independent of the size of the action space, making it more favorable in practice.
+3. The practical version of the algorithm, ADPO, matches the performance of the state-of-the-art DPO method while requiring significantly fewer queries for human preference.
+
+**Analysis and Critique:**
+
+- The paper focuses on the fine-tuning process of LLMs, which is an essential step in building capable and helpful models. However, the authors could provide more context on the broader implications of their work and its potential applications.
+- The authors assume a known sub-optimal gap ∆, which might not be the case in real-world scenarios. Exploring methods to estimate or adapt to an unknown ∆ could strengthen the practical applicability of the proposed algorithms.
+- The paper could benefit from a more thorough comparison with existing RLHF methods
 
 ## Appendix
 
 |          |          |
 |----------|----------|
-| Model     | gpt-3.5-turbo-1106       |
-| Date Generated     | 2024-03-13       |
+| Model     | accounts/fireworks/models/mixtral-8x7b-instruct       |
+| Date Generated     | 2024-06-05       |
 | Abstract | [https://arxiv.org/abs/2402.09401v1](https://arxiv.org/abs/2402.09401v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.09401v1](https://browse.arxiv.org/html/2402.09401v1)       |
-| Truncated       | True       |
+| Truncated       | False       |
 | Word Count       | 17363       |

@@ -1,0 +1,48 @@
+
+---
+title: "Strengthened Symbol Binding Makes Large Language Models Reliable Multiple-Choice Selectors"
+id: "2406.01026v1"
+description: "LLMs struggle with selection bias in MCQs due to poor Multiple Choice Symbol Binding. The PIF algorithm enhances MCSB, reducing bias and improving accuracy."
+author: Mengge Xue, Zhenyu Hu, Meng Zhao, Liqun Liu, Kuo Liao, Shuang Li, Honglin Han, Chengguo Yin
+date: "2024-06-03"
+image: "https://browse.arxiv.org/html/2406.01026v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.01026v1/x1.png)
+
+### Summary:
+
+The paper "Strengthened Symbol Binding Makes Large Language Models Reliable Multiple-Choice Selectors" explores the selection bias problem in Multiple-Choice Questions (MCQs) within the Supervised Fine-Tuning (SFT) phase of Large Language Models (LLMs). The authors reveal that selection bias persists in the SFT phase due to the LLM's inadequate Multiple Choice Symbol Binding (MCSB) ability, which is the model's struggle to associate answer options with their corresponding symbols.
+
+To enhance the model's MCSB capability, the authors incorporate option contents into the loss function and adjust the weights of the option symbols and contents. They introduce an efficient SFT algorithm for MCQs, called Point-wise Intelligent Feedback (PIF), which constructs negative instances by randomly combining incorrect option contents with all candidate symbols and proposes a point-wise loss to provide feedback on these negative samples into LLMs.
+
+The experimental results demonstrate that PIF significantly reduces the model's selection bias by improving its MCSB capability, leading to a substantial enhancement in the accuracy for MCQs.
+
+### Major Findings:
+
+1. Selection bias persists in the SFT phase of LLMs for MCQs due to the LLM's inadequate MCSB ability.
+2. The authors propose an efficient SFT algorithm, PIF, to enhance the model's MCSB capability and reduce selection bias.
+3. PIF significantly reduces the model's selection bias and improves the accuracy for MCQs.
+
+### Analysis and Critique:
+
+The paper provides a novel approach to addressing the selection bias problem in MCQs within the SFT phase of LLMs. The proposed PIF algorithm effectively enhances the model's MCSB capability and reduces selection bias, leading to improved accuracy for MCQs. However, the paper does not discuss the potential limitations or unanswered questions that may arise from the proposed method.
+
+One potential limitation is the computational resources required to implement the PIF algorithm, as it involves constructing negative instances and providing feedback on these negative samples. Additionally, the paper does not explore the potential impact of the proposed method on the model's performance in other tasks or domains.
+
+Fur
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.01026v1](https://arxiv.org/abs/2406.01026v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.01026v1](https://browse.arxiv.org/html/2406.01026v1)       |
+| Truncated       | False       |
+| Word Count       | 7224       |

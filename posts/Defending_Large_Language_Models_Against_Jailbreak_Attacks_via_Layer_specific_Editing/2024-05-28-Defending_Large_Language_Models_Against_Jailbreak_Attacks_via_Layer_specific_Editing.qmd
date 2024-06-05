@@ -1,0 +1,40 @@
+
+---
+title: "Defending Large Language Models Against Jailbreak Attacks via Layer-specific Editing"
+id: "2405.18166v1"
+description: "TL;DR: LED method improves LLMs' resilience against jailbreak attacks, maintaining performance on benign prompts."
+author: Wei Zhao, Zhe Li, Yige Li, Ye Zhang, Jun Sun
+date: "2024-05-28"
+image: "https://browse.arxiv.org/html/2405.18166v1/x1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.18166v1/x1.png)
+
+### Summary:
+
+This paper investigates the defense mechanisms of large language models (LLMs) against harmful and adversarial prompts, focusing on layer-wise pruning and decoding analysis. The authors find that some layers play a crucial role in defending against harmful queries, while many layers' defense capabilities are not fully utilized due to the unbalanced distribution of safety layers. To enhance the robustness of LLMs against adversarial attacks, the authors propose a layer-specific editing approach called LED, which significantly reduces the attack success rate (ASR) across different LLMs under various jailbreak attacks while preserving their helpfulness on benign benchmarks. The paper concludes by discussing limitations and future work, advocating for further research into understanding the functions of different components of LLMs to refine defense mechanisms and broaden their applicability.
+
+### Major Findings:
+
+1. Some layers in LLMs play a crucial role in defending against harmful queries, while many layers' defense capabilities are not fully utilized due to the unbalanced distribution of safety layers.
+2. The proposed layer-specific editing approach, LED, significantly reduces the ASR across different LLMs under various jailbreak attacks while preserving their helpfulness on benign benchmarks.
+3. LED does not require any adversarial samples and achieves higher performance with fewer datasets compared to fine-tuning methods.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive investigation of the defense mechanisms of LLMs against harmful and adversarial prompts, focusing on layer-wise pruning and decoding analysis. The proposed LED approach effectively enhances the robustness of LLMs against adversarial attacks while maintaining their helpfulness on benign benchmarks. However, the paper does not address the issue of erasing harmful knowledge from the model, which remains an open question. Additionally, the paper does not discuss the potential impact of the proposed approach on the model's performance on other tasks or the computational cost of implementing LED. Further research is needed to address these limitations and broaden the applicability of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.18166v1](https://arxiv.org/abs/2405.18166v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.18166v1](https://browse.arxiv.org/html/2405.18166v1)       |
+| Truncated       | False       |
+| Word Count       | 6401       |

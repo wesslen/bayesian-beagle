@@ -1,0 +1,45 @@
+
+---
+title: "Efficient LLM-Jailbreaking by Introducing Visual Modality"
+id: "2405.20015v1"
+description: "This paper presents a method for jailbreaking language models using multimodal inputs, outperforming existing methods in efficiency and effectiveness."
+author: Zhenxing Niu, Yuyao Sun, Haodong Ren, Haoxuan Ji, Quan Wang, Xiaoke Ma, Gang Hua, Rong Jin
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.20015v1/extracted/5628747/figs/fig1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.20015v1/extracted/5628747/figs/fig1.png)
+
+# Summary:
+
+This paper proposes an efficient LLM-jailbreaking approach by constructing a multimodal large language model (MLLM) and performing MLLM-jailbreak. The approach begins by introducing a visual module into the target LLM, then conducts an efficient MLLM-jailbreak to generate jailbreaking embeddings (embJS). The embJS are then converted into text space to facilitate the jailbreaking of the target LLM. This approach is more efficient than direct LLM-jailbreaking, as MLLMs are more vulnerable to jailbreaking than pure LLMs.
+
+## Major Findings:
+
+1. The proposed approach surpasses current state-of-the-art methods in terms of both efficiency and effectiveness.
+2. The approach exhibits superior cross-class jailbreaking capabilities, suggesting that to enhance the attack success rate (ASR) for a particular class, one can utilize not only the harmful queries from that class but also those from its correlated classes.
+3. The approach is related to another type of jailbreaking method focusing on optimization over token embeddings, known as embedding-based jailbreak. However, it is found that embedding-based jailbreak is ineffective because the optimized embeddings often have no corresponding discrete token. The proposed approach, however, outperforms embedding-based jailbreaking in terms of effectiveness.
+
+## Analysis and Critique:
+
+1. The paper does not provide a clear explanation of how the visual module is incorporated into the target LLM, which could be a potential limitation.
+2. The paper does not discuss the potential ethical implications of jailbreaking LLMs, which is an important consideration given the potential for misuse.
+3. The paper does not provide a detailed comparison with other jailbreaking methods, which could be useful for understanding the strengths and weaknesses of the proposed approach.
+4. The paper does not discuss the potential for defense against jailbreaking attacks, which is an important consideration for the security of LLMs.
+5. The paper does not provide a clear explanation of how the embJS are converted into text space, which could be a potential limitation.
+6. The paper does not discuss the potential for generalization of the proposed approach to other types of LLMs, which could be a potential limitation.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.20015v1](https://arxiv.org/abs/2405.20015v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.20015v1](https://browse.arxiv.org/html/2405.20015v1)       |
+| Truncated       | False       |
+| Word Count       | 6968       |

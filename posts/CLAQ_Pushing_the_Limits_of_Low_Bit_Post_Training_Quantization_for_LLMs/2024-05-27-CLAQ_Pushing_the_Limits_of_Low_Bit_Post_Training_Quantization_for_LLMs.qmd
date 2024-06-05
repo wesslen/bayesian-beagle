@@ -1,0 +1,40 @@
+
+---
+title: "CLAQ: Pushing the Limits of Low-Bit Post-Training Quantization for LLMs"
+id: "2405.17233v1"
+description: "CLAQ: New LLM quantization method excels in low-bit scenarios, outperforming existing methods."
+author: Haoyu Wang, Bei Liu, Hang Shao, Bo Xiao, Ke Zeng, Guanglu Wan, Yanmin Qian
+date: "2024-05-27"
+image: "https://browse.arxiv.org/html/2405.17233v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.17233v1/x1.png)
+
+### Summary:
+
+The paper presents a novel and effective Column-Level Adaptive weight Quantization (CLAQ) framework for Large Language Models (LLMs) that utilizes three distinct column-level strategies to enhance the performance of low-bit (i.e., 2-bit and 3-bit) quantization. The framework includes a K-Means clustering based quantization, an outlier-guided adaptive precision search strategy, and a dynamic outlier reservation scheme. The proposed method achieves state-of-the-art results across different bit settings, especially in extremely low-bit scenarios.
+
+### Major Findings:
+
+1. The K-Means clustering based quantization method allows dynamic generation of quantization centroids for each column of a parameter matrix, which excels in more accurately approximating the parameter distribution of pre-trained models.
+2. The outlier-guided adaptive precision search strategy can dynamically assign varying bit-widths to different columns, which can significantly boost the performance of the low-bit quantized LLMs with only a slight increase in memory footprint.
+3. The dynamic outlier reservation scheme retains some parameters in their original float point precision, in trade-off of boosted model performance.
+
+### Analysis and Critique:
+
+The proposed CLAQ framework is a promising approach for LLM quantization, as it achieves state-of-the-art results across different bit settings, especially in extremely low-bit scenarios. However, the paper does not provide a detailed comparison with other quantization methods, such as quantization-aware training (QAT) approaches, which could have provided a more comprehensive evaluation of the proposed method. Additionally, the paper does not discuss the potential limitations of the proposed method, such as the computational overhead of the K-Means clustering based quantization and the impact of the outlier reservation scheme on the model's performance. Finally, the paper does not provide a detailed analysis of the impact of the proposed method on the model's performance in downstream tasks, which could have provided a more comprehensive evaluation of the proposed method.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.17233v1](https://arxiv.org/abs/2405.17233v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.17233v1](https://browse.arxiv.org/html/2405.17233v1)       |
+| Truncated       | False       |
+| Word Count       | 7623       |

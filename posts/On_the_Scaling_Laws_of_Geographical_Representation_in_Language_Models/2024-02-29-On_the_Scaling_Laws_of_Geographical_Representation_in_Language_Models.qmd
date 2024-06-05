@@ -2,7 +2,7 @@
 ---
 title: "On the Scaling Laws of Geographical Representation in Language Models"
 id: "2402.19406v1"
-description: "Language Models Contain and Scale with Geographical Bias"
+description: "Geographical knowledge in language models scales with size, but larger models don't reduce training data bias."
 author: Nathan Godey, Éric de la Clergerie, Benoît Sagot
 date: "2024-02-29"
 image: "https://browse.arxiv.org/html/2402.19406v1/x1.png"
@@ -16,26 +16,28 @@ format:
 
 ### Summary:
 
-- Recent studies have shown that language models implicitly embed geographical information in their hidden representations.
-- This geographical knowledge can be observed even in tiny models and scales consistently as the model size increases.
-- Larger language models cannot mitigate the geographical bias inherited from the training data.
+- The paper investigates how geographical knowledge is embedded and scales in language models.
+- Geographical information can be extracted from models as small as 14M parameters, and the performance increases with model size.
+- Larger models are more geographically biased than smaller ones, and this bias is correlated with the frequency of country names in the training data.
 
 ### Major Findings:
 
-1. **Geographical knowledge in language models:** Geographical knowledge is observable even in tiny models and scales consistently as the model size increases.
-2. **Geographical bias in language models:** Larger language models cannot mitigate the geographical bias inherited from the training data.
-3. **Correlation between model performance and training data frequency:** The performance of models in terms of geographical probing is correlated with the frequency of corresponding country names in the training data.
+1. **Geographical information in small models:** Geographical information can be extracted from models with as few as 14M parameters, indicating that this capability is present even in tiny models.
+2. **Performance increases with model size:** The performance of probes in extracting geographical information seems to increase with model size, suggesting that larger models have a better capacity to embed geographical knowledge.
+3. **Geographical bias in larger models:** Larger models are more geographically biased than smaller ones, and this bias is correlated with the frequency of country names in the training data, indicating that the bias is inherited from the data used for training.
 
 ### Analysis and Critique:
 
-- The study does not provide a clear definition of what constitutes a "tiny"
+- The paper focuses on analyzing the geographical knowledge embedded in language models, but it could benefit from a more in-depth discussion on the potential consequences and implications of this bias in real-world applications.
+- The authors mention that the better performance of larger models is not solely related to the ability of probes to extract better patterns from higher-dimensionality hidden representations, but it would be helpful to provide more evidence or experimental results to support this claim.
+- The paper could also discuss potential methods or techniques to mitigate the observed geographical bias in language models, providing insights for future research in this area.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | accounts/fireworks/models/mixtral-8x7b-instruct       |
-| Date Generated     | 2024-03-13       |
+| Date Generated     | 2024-06-05       |
 | Abstract | [https://arxiv.org/abs/2402.19406v1](https://arxiv.org/abs/2402.19406v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.19406v1](https://browse.arxiv.org/html/2402.19406v1)       |
 | Truncated       | False       |

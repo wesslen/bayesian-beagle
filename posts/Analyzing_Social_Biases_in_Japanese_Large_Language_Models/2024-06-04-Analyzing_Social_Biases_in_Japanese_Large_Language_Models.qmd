@@ -1,0 +1,43 @@
+
+---
+title: "Analyzing Social Biases in Japanese Large Language Models"
+id: "2406.02050v1"
+description: "LLMs in Japanese show improved accuracy but increased bias after instruction-tuning, while warning prompts reduce bias in some models."
+author: Hitomi Yanaka, Han Namgi, Ryoma Kumon, Jie Lu, Masashi Takeshita, Ryo Sekizawa, Taisei Kato, Hiromi Arai
+date: "2024-06-04"
+image: "https://browse.arxiv.org/html/2406.02050v1/extracted/5623979/images/figure2.png"
+categories: ['social-sciences', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.02050v1/extracted/5623979/images/figure2.png)
+
+### Summary:
+
+This study focuses on analyzing social biases in Japanese Large Language Models (LLMs) by constructing the Japanese Bias Benchmark dataset for Question Answering (JBBQ) based on the English bias benchmark BBQ. The results show that while current Japanese LLMs improve their accuracies on JBBQ by instruction-tuning, their bias scores become larger. Additionally, augmenting their prompts with warnings about social biases reduces the effect of biases in some models.
+
+### Major Findings:
+
+1. **Improved Accuracies with Instruction-tuning**: Current Japanese LLMs improve their performance on JBBQ by instruction-tuning. However, this improvement is accompanied by an increase in their bias scores.
+2. **Reduction in Bias with Prompt Augmentation**: Augmenting prompts with warnings about social biases can mitigate the effect of social biases in some models.
+3. **Variation in Bias Scores**: The study reveals that the extent of social biases varies across different models and categories, with some models and categories showing higher bias scores than others.
+
+### Analysis and Critique:
+
+- **Limited Scope**: The study excludes four categories (Nationality, Race, Religion, Socio-economic status) from the original BBQ, which limits the range of social categories in JBBQ. This limitation could be addressed in future work by expanding the social categories of JBBQ to consider the Japanese social context.
+- **Lack of Intersectional Bias Analysis**: The study does not address intersectional bias, which is the bias that arises from the intersection of two or more categories. In future work, it would be beneficial to create data to evaluate such intersectional bias.
+- **Potential Bias in Evaluation Metrics**: The evaluation metrics used in the study might not fully capture the extent of social biases in Japanese LLMs. For instance, the bias scores of Disability status, Gender identity, and Sexual orientation tend to be positive for Japanese LLMs, which might indicate a bias towards these specific categories.
+- **Zero-shot Evaluation Challenges**: The zero-shot evaluation results suggest that some models, such as llm-jp and gpt-3.5, fail to answer multiple-choice
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.02050v1](https://arxiv.org/abs/2406.02050v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.02050v1](https://browse.arxiv.org/html/2406.02050v1)       |
+| Truncated       | False       |
+| Word Count       | 3999       |

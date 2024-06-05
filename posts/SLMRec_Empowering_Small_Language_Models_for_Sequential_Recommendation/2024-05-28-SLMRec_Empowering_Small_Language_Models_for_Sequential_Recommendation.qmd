@@ -1,0 +1,37 @@
+
+---
+title: "SLMRec: Empowering Small Language Models for Sequential Recommendation"
+id: "2405.17890v1"
+description: "TL;DR: Small language models can outperform large ones in sequential recommendations, offering efficiency and speed."
+author: Wujiang Xu, Zujie Liang, Jiaojiao Han, Xuying Ning, Wenfang Lin, Linxun Chen, Feng Wei, Yongfeng Zhang
+date: "2024-05-28"
+image: "https://browse.arxiv.org/html/2405.17890v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.17890v1/x1.png)
+
+Summary:
+The paper explores the effectiveness of large language models (LLMs) in sequential recommendation tasks. The authors conduct experiments on large-scale industry datasets to investigate the effects of reducing the number of parameters during training and inference stages. They find that the improvement of the model's performance is not consistent with the increase in the number of parameters, and some layers of LLMs are redundant in the downstream recommendation task. Motivated by these findings, the authors propose a method called SLMRec, which adopts a simple yet effective knowledge distillation approach to align the representation knowledge. The proposed method achieves competitive performance with baselines using LLMs sized over 7 billion parameters while using only 13% of the parameters and achieving up to 6.6x/8.0x speedup in training/inference time costs.
+
+Major Findings:
+1. The improvement of the model's performance is not consistent with the increase in the number of parameters.
+2. Some layers of LLMs are redundant in the downstream recommendation task.
+3. The proposed method, SLMRec, achieves competitive performance with baselines using LLMs sized over 7 billion parameters while using only 13% of the parameters and achieving up to 6.6x/8.0x speedup in training/inference time costs.
+
+Analysis and Critique:
+The paper provides a novel approach to improving the efficiency of LLMs in sequential recommendation tasks. The proposed method, SLMRec, achieves competitive performance with baselines using LLMs sized over 7 billion parameters while using only 13% of the parameters and achieving up to 6.6x/8.0x speedup in training/inference time costs. However, the paper does not provide a detailed analysis of the limitations and potential biases of the proposed method. Additionally, the paper does not discuss the methodological issues, conflicting evidence, or areas that require further research or clarification. The paper could benefit from a more comprehensive analysis of the proposed method's strengths and weaknesses.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.17890v1](https://arxiv.org/abs/2405.17890v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.17890v1](https://browse.arxiv.org/html/2405.17890v1)       |
+| Truncated       | False       |
+| Word Count       | 6690       |

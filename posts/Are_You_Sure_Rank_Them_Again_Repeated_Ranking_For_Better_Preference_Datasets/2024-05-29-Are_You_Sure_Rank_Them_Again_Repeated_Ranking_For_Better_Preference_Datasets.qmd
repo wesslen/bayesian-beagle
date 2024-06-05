@@ -1,0 +1,45 @@
+
+---
+title: "Are You Sure? Rank Them Again: Repeated Ranking For Better Preference Datasets"
+id: "2405.18952v1"
+description: "Repeat Ranking with RLAIF improves LLM alignment with human preferences, prioritizing quality over quantity in dataset generation."
+author: Peter Devine
+date: "2024-05-29"
+image: "https://browse.arxiv.org/html/2405.18952v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.18952v1/x1.png)
+
+### Summary:
+
+The paper "Are You Sure? Rank Them Again: Repeated Ranking For Better Preference Datasets" explores the use of repeated rankings from an AI evaluator (GPT-4) to improve the quality of preference datasets for training reinforcement learning from AI feedback (RLAIF) models. The authors propose the Repeat Ranking method, where responses are evaluated multiple times and the consistency of the rankings is used as a filter for inclusion or exclusion from the training set. The study uses 2,714 multilingual prompts and 7 LLMs to generate responses, which are then ranked five times each by GPT-4. The results show that training on the more consistently ranked responses gives greater downstream evaluation performance compared to training on all data for a majority of languages tested.
+
+### Major Findings:
+
+1. The Repeat Ranking method, which involves evaluating the same responses multiple times and training only on those responses which are consistently ranked, leads to improved downstream evaluation performance compared to the standard practice of training on all available prompts.
+2. The study highlights the quality versus quantity trade-off in RLAIF dataset generation and offers a stackable strategy for enhancing dataset and thus model quality.
+3. The use of repeated rankings from an AI evaluator (GPT-4) can improve the quality of preference datasets for training RLAIF models, leading to better downstream evaluation performance.
+
+### Analysis and Critique:
+
+* The study's findings are based on a relatively small dataset of 2,714 prompts, which may not be representative of the larger population of prompts.
+* The study does not address the potential for bias in the AI evaluator (GPT-4) and how this may impact the quality of the preference dataset.
+* The study does not explore the potential for using other AI evaluators or a combination of AI and human evaluators to improve the quality of the preference dataset.
+* The study does not address the potential for overfitting to the AI evaluator's preferences, which could limit the generalizability of the results.
+* The study does not explore the potential for using other evaluation metrics, such as human evaluation, to assess the quality of the preference dataset.
+* The study does not address the potential for using other RLAIF methods, such
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.18952v1](https://arxiv.org/abs/2405.18952v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.18952v1](https://browse.arxiv.org/html/2405.18952v1)       |
+| Truncated       | False       |
+| Word Count       | 7153       |

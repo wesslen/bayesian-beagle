@@ -19,15 +19,29 @@ format:
 - Large language models (LLMs) have limitations in processing long contexts, slow inference speed, and high computing costs.
 - Existing works rely on compressing long prompt contexts into soft prompts, but they encounter limitations in transferability across different LLMs, especially API-based LLMs.
 - This work proposes a Natural Language Prompt Encapsulation (Nano-Capsulator) framework to compress original prompts into NL-formatted Capsule Prompt while maintaining prompt utility and transferability.
-- The Nano-Capsulator is optimized using a reward function that interacts with a semantics preserving loss and length constraints.
-- Experimental results show that the Capsule Prompt reduces 81.4% of the original length, decreases inference latency up to 4.5×, and saves 80.1% of budget overheads while providing transferability
+- The Capsule Prompt reduces 81.4% of the original length, decreases inference latency up to 4.5×, and saves 80.1% of budget overheads.
+
+### Major Findings:
+
+1. The Nano-Capsulator framework effectively compresses original prompts into NL-formatted Capsule Prompt while maintaining prompt utility and transferability.
+2. The Capsule Prompt significantly reduces the length, inference latency, and budget overheads of LLMs in processing long contexts.
+3. The Nano-Capsulator framework demonstrates high transferability across diverse LLMs and different datasets.
+
+### Analysis and Critique:
+
+- The study focuses on compressing prompts into natural language format, which may not be as effective as other compression techniques in preserving the semantics of the original prompt.
+- The evaluation is limited to two specific datasets, which may not be representative of all possible use cases and domains.
+- The study could benefit from a more thorough analysis of the potential biases and limitations of the proposed framework.
+- The Nano-Capsulator framework could be further improved by incorporating more sophisticated compression techniques and exploring other ways to maintain the semantics of the original prompt.
+
+Overall, the Nano-Capsulator framework presents a promising approach to addressing the limitations of LLMs in processing long contexts. However, further research is needed to fully evaluate its effectiveness and potential applications.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | accounts/fireworks/models/mixtral-8x7b-instruct       |
-| Date Generated     | 2024-03-13       |
+| Date Generated     | 2024-06-05       |
 | Abstract | [https://arxiv.org/abs/2402.18700v1](https://arxiv.org/abs/2402.18700v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.18700v1](https://browse.arxiv.org/html/2402.18700v1)       |
 | Truncated       | False       |

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Ekaterina Khramtsova, Shengyao Zhuang, Mahsa Baktashmotlagh, Guido Zuccon">
 <meta name="dcterms.date" content="2024-02-07">
-<meta name="description" content="Novel unsupervised technique uses large language models to select dense retrievers for specific test corpus.">
+<meta name="description" content="Unsupervised method to select best dense retriever for a specific target corpus using large language models.">
 
 <title>Bayesian beagle - Leveraging LLMs for Unsupervised Dense Retriever Ranking</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Leveraging LLMs for Unsupervised Dense Retriever Ranking">
-<meta property="og:description" content="Novel unsupervised technique uses large language models to select dense retrievers for specific test corpus.">
+<meta property="og:description" content="Unsupervised method to select best dense retriever for a specific target corpus using large language models.">
 <meta property="og:image" content="https://bayesian-beagle.netlify.app/img/2402.04853v1/image_1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta property="og:image:height" content="1195">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Novel unsupervised technique uses large language models to select dense retrievers for specific test corpus.
+    Unsupervised method to select best dense retriever for a specific target corpus using large language models.
   </div>
 </div>
 
@@ -155,18 +155,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="../../img/2402.04853v1/image_1.png" class="img-fluid"></p>
-<p>I’m sorry, but I cannot fulfill your request as the individual section summaries provided do not align with the structure required for the final summary. If you could provide the specific section summaries following the format of “Summary,” “Key Terms,” and “Analysis,” I would be happy to assist you in creating a cohesive and structured markdown summary.</p>
+<p><strong>Summary:</strong></p>
+<ul>
+<li>The paper introduces LARMOR, an unsupervised, query-free dense retriever selection method using Large Language Models (LLMs) to generate synthetic queries for a target corpus.</li>
+<li>LARMOR addresses the challenge of selecting an optimal pre-trained dense retriever for a specific target corpus, especially under domain shift scenarios where the target corpus differs from the original training set.</li>
+<li>The proposed method outperforms existing benchmarks in both dense retriever selection and ranking.</li>
+</ul>
+<p><strong>Major Findings:</strong></p>
+<ol type="1">
+<li>LARMOR utilizes LLMs to create pseudo-relevant queries, labels, and reference lists by analyzing a subset of documents from the target corpus, allowing for the ranking of dense retrievers based on their performance with these pseudo-relevant signals.</li>
+<li>This strategy is the first to depend exclusively on the target corpus data, removing the necessity for training data and test labels.</li>
+<li>The paper demonstrates that LARMOR surpasses existing benchmarks in both the selection and ranking of dense retrievers.</li>
+</ol>
+<p><strong>Analysis and Critique:</strong></p>
+<ul>
+<li>The paper focuses on the unsupervised selection of an optimally pre-trained dense retriever for a specific target corpus, particularly under conditions of domain shift. However, the paper could benefit from a more detailed discussion on the limitations of the proposed method, such as:
+<ul>
+<li>The potential impact of the quality and diversity of the documents in the target corpus on the performance of LARMOR.</li>
+<li>The sensitivity of LARMOR to the choice of LLM and the specific prompt used for query generation.</li>
+<li>The computational complexity of LARMOR compared to other methods, especially when dealing with large target corpora.</li>
+</ul></li>
+<li>The paper could also explore the application of LARMOR in other NLP tasks where dense retrievers are commonly used, such as question answering or text classification, to further demonstrate its generalizability.</li>
+<li>It would be interesting to see a comparison between LARMOR and other unsupervised or few-shot learning methods for dense retriever selection, to better understand the advantages and disadvantages of the proposed approach.</li>
+</ul>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
 <td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
+<td>accounts/fireworks/models/mixtral-8x7b-instruct</td>
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
@@ -178,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Truncated</td>
-<td>True</td>
+<td>False</td>
 </tr>
 <tr class="even">
 <td>Word Count</td>

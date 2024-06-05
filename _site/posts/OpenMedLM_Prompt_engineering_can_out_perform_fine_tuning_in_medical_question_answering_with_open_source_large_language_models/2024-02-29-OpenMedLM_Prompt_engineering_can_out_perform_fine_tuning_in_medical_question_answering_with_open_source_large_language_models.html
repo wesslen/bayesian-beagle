@@ -162,16 +162,26 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
 <ul>
 <li>The article presents OpenMedLM, a prompting platform that delivers state-of-the-art performance for open-source large language models (LLMs) on medical benchmarks.</li>
-<li>OpenMedLM utilizes various prompting strategies, including zero-shot, few-shot, chain-of-thought, and ensemble/self-consistency voting, to optimize the performance of open-source foundation models.</li>
-<li>The platform demonstrates that open-source models can provide transparency and compliance required in healthcare, surpassing previous best-performing models that relied on extensive fine-tuning and specialized medical data.</li>
+<li>OpenMedLM utilizes a series of prompting strategies, including zero-shot, few-shot, chain-of-thought, and ensemble/self-consistency voting, to optimize the performance of open-source foundation LLMs on medical tasks.</li>
+<li>The authors demonstrate that OpenMedLM outperforms previous best performing open-source models that leveraged computationally costly extensive fine-tuning.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings"><strong>Major Findings:</strong></h3>
 <ol type="1">
-<li>OpenMedLM achieves state-of-the-art results on three common medical LLM benchmarks, outperforming previous models that used computationally costly extensive fine-tuning.</li>
-<li>The model displays the first results</li>
+<li>OpenMedLM delivers state-of-the-art results on three common medical LLM benchmarks, surpassing the previous best performing open-source models without the need for specialized fine-tuning.</li>
+<li>The model achieves a 72.6% accuracy on the MedQA benchmark, outperforming the previous SOTA by 2.4%, and establishes itself as the first open-source LLM to surpass 80% accuracy on the MMLU medical-subset benchmark.</li>
+<li>The study highlights medical-specific emergent properties in open-source LLMs and showcases the benefits of further leveraging prompt engineering to improve the performance of accessible LLMs for medical applications.</li>
 </ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique"><strong>Analysis and Critique:</strong></h3>
+<ul>
+<li>The article focuses on open-source LLMs, which have inherent advantages in terms of transparency and compliance, making them suitable for healthcare applications. However, the study could benefit from a more thorough discussion on the limitations of open-source models, such as potential biases in training data and the challenges of maintaining and updating these models.</li>
+<li>While the study demonstrates the effectiveness of prompt engineering techniques, it would be beneficial to compare these methods with fine-tuning approaches to provide a more comprehensive understanding of their relative merits.</li>
+<li>The authors mention the potential for catastrophic forgetting in performance optimization methods like full-parameter fine-tuning. A more detailed exploration of this phenomenon and its implications for medical applications could provide valuable insights for researchers and practitioners in the field.</li>
+<li>The study could also include an analysis of the computational costs associated with different prompt engineering techniques and fine-tuning methods to help</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -183,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

@@ -1,0 +1,43 @@
+
+---
+title: "Luna: An Evaluation Foundation Model to Catch Language Model Hallucinations with High Accuracy and Low Cost"
+id: "2406.00975v1"
+description: "Luna, a fine-tuned DeBERTa-large encoder, outperforms GPT-3.5 in hallucination detection for RAG systems, offering 97% cost and 96% latency reduction."
+author: Masha Belyi, Robert Friel, Shuai Shao, Atindriyo Sanyal
+date: "2024-06-03"
+image: "https://browse.arxiv.org/html/2406.00975v1/extracted/5638893/figures/CostVsAUROC.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.00975v1/extracted/5638893/figures/CostVsAUROC.png)
+
+### Summary:
+
+Luna is a lightweight DeBERTa-large encoder fine-tuned for hallucination detection in Retriever-Augmented Generation (RAG) settings. It outperforms GPT-3.5 and commercial evaluation frameworks on the hallucination detection task, with a 97% reduction in cost and 96% reduction in latency. Luna is designed to generalize across multiple industry verticals and out-of-domain data, making it an ideal candidate for industry-scale language model applications.
+
+### Major Findings:
+
+1. Luna is a DeBERTa-large encoder fine-tuned for hallucination detection in RAG settings, outperforming GPT-3.5 and commercial evaluation frameworks.
+2. Luna achieves a 97% reduction in cost and 96% reduction in latency compared to other models, making it a cost-effective and efficient solution for industry-scale applications.
+3. Luna is designed to generalize across multiple industry verticals and out-of-domain data, making it a versatile tool for various language model applications.
+
+### Analysis and Critique:
+
+1. While Luna demonstrates strong performance in hallucination detection, it may not be as effective in detecting open-domain hallucinations due to its size and lack of world knowledge.
+2. The use of LLM annotations for training and evaluation data may introduce potential noise and bias, which could impact the model's performance.
+3. Luna is trained on sentence-level annotations, which may not fully capture the complexity of compound sentences with partially supported claims. Future work could explore token-level labels for improved performance.
+4. A comprehensive RAG evaluation model should assess all dimensions of the RAG system, including the quality of the retriever. Future work could leverage Luna for measuring a suite of RAG metrics, potentially enhancing the performance of each metric through shared weights in the base encoder layers.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.00975v1](https://arxiv.org/abs/2406.00975v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.00975v1](https://browse.arxiv.org/html/2406.00975v1)       |
+| Truncated       | False       |
+| Word Count       | 6449       |

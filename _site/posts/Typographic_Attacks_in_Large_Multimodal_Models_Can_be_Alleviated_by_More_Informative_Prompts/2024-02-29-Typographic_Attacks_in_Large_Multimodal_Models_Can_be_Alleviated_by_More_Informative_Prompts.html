@@ -8,7 +8,7 @@
 
 <meta name="author" content="Hao Cheng, Erjia Xiao, Renjing Xu">
 <meta name="dcterms.date" content="2024-02-29">
-<meta name="description" content="LMMs’ vulnerability to typographic attacks: a study on typographic distractibility and mitigation methods.">
+<meta name="description" content="LMMs’ vulnerability to typographic attacks: a study on tuning typographic factors and improving performance with informative prompts.">
 
 <title>Bayesian beagle - Typographic Attacks in Large Multimodal Models Can be Alleviated by More Informative Prompts</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Typographic Attacks in Large Multimodal Models Can be Alleviated by More Informative Prompts">
-<meta property="og:description" content="LMMs’ vulnerability to typographic attacks: a study on typographic distractibility and mitigation methods.">
+<meta property="og:description" content="LMMs’ vulnerability to typographic attacks: a study on tuning typographic factors and improving performance with informative prompts.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2402.19150v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    LMMs’ vulnerability to typographic attacks: a study on typographic distractibility and mitigation methods.
+    LMMs’ vulnerability to typographic attacks: a study on tuning typographic factors and improving performance with informative prompts.
   </div>
 </div>
 
@@ -158,17 +158,28 @@ ul.task-list li input[type="checkbox"] {
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
 <ul>
-<li>Large Multimodal Models (LMMs) incorporate pre-trained Vision Language Models (VLMs) and Large Language Models (LLMs) to perform various multimodal tasks in the joint space of vision and language.</li>
-<li>A security vulnerability to LMMs is the Typographic Attack, which disrupts VLMs.</li>
-<li>This study investigates the distractibility of LMMs by typography and proposes a prompt information enhancement method to mitigate the effects of typography.</li>
+<li>Large Multimodal Models (LMMs) incorporate pre-trained Vision Language Models (VLMs) and Large Language Models (LLMs) for various multimodal tasks in the vision and language space.</li>
+<li>Typographic attacks have been identified as a security vulnerability for LMMs, affecting VLMs’ understanding of visual content.</li>
+<li>This study investigates the impact of typographic attacks on LMMs, introducing a Typographic Dataset to evaluate distractibility across various multimodal subtasks and typographic factors.</li>
+<li>The research discovers that LMMs can partially distinguish visual contents and typos, and proposes a prompt information enhancement method to mitigate the effects of typography.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings"><strong>Major Findings:</strong></h3>
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li>LMMs can partially distinguish visual contents and typos when confronted with typographic attacks, indicating that embeddings from vision encoders contain enough information to distinguish visual contents and typos in images.</li>
-<li>By providing more informative texts to match images, CLIP’s performance of zero-shot classification on typo-ridden images can be</li>
+<li><strong>Typographic Attacks and LMMs:</strong> Typographic attacks disrupt VLMs, affecting LMMs’ performance on multimodal tasks. The study introduces a Typographic Dataset to evaluate the distractibility of LMMs.</li>
+<li><strong>Typographic Factors’ Impact:</strong> The study examines various typographic factors, such as font size, color, opacity, and spatial positioning, and their influence on LMMs’ performance.</li>
+<li><strong>Mitigating Typographic Attacks:</strong> The research proposes a prompt information enhancement method to improve LMMs’ ability to distinguish visual contents and typos, reducing the impact of typographic attacks.</li>
 </ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li><em>Limited Dataset Scope:</em> The Typographic Dataset is derived from specific datasets, which may not cover the full range of potential tasks and scenarios for LMMs.</li>
+<li><em>Assumptions on Typographic Attacks:</em> The study assumes that typographic attacks primarily affect VLMs, without considering potential interactions between VLMs and LLMs in LMMs.</li>
+<li><em>Prompt Information Enhancement Method:</em> The proposed method focuses on improving LMMs’ performance by enhancing prompts, which may not address all aspects of typographic attacks’ impact on LMMs.</li>
+</ul>
+<p>Additional research could be conducted to address these limitations and further explore the impact of typographic attacks on LMMs, considering a wider range of tasks, scenarios, and potential interactions between VLMs and LLMs.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -180,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

@@ -1,0 +1,40 @@
+
+---
+title: "ANAH: Analytical Annotation of Hallucinations in Large Language Models"
+id: "2405.20315v1"
+description: "TL;DR: ANAH dataset helps measure and reduce hallucinations in LLMs, improving their performance."
+author: Ziwei Ji, Yuzhe Gu, Wenwei Zhang, Chengqi Lyu, Dahua Lin, Kai Chen
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.20315v1/x1.png"
+categories: ['production', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.20315v1/x1.png)
+
+### Summary:
+
+The paper presents ANAH, a bilingual dataset that offers Analytical Annotation of Hallucinations in Large Language Models (LLMs) within Generative Question Answering. The dataset consists of 12k sentence-level annotations for 4.3k LLM responses covering over 700 topics, constructed by a human-in-the-loop pipeline. The fine granularity of the hallucination annotations allows for the quantitative confirmation that the hallucinations of LLMs progressively accumulate in the answer. The dataset can be used to train and evaluate hallucination annotators, and extensive experiments have shown that the generative annotator trained with ANAH can surpass all open-source LLMs and GPT-3.5, obtain performance competitive with GPT-4, and exhibits better generalization ability on unseen questions.
+
+### Major Findings:
+
+1. The paper introduces ANAH, a novel large-scale Chinese-English benchmark that assesses the LLMs’ ability to annotate the LLM hallucinations sentence-by-sentence, in the scenario of knowledge-based generative question answering.
+2. The dataset covers a broad domain range, including topics, questions, and answers, and is challenging for hallucination detection. The statistical results of the hallucination annotations quantitatively confirm that hallucinations progressively accumulate in the LLM responses.
+3. The dataset can be used to train and evaluate hallucination annotators. The generative annotators trained with ANAH achieve an accuracy of 81.01%, surpassing open-source models and rivaling GPT-4 in performance with a smaller size and lower source cost.
+
+### Analysis and Critique:
+
+The paper presents a comprehensive and fine-grained measurement of the hallucination problem in LLMs, which is crucial for their wide applications. The ANAH dataset provides a valuable resource for the community to study and mitigate the hallucination problem in LLMs. However, the paper does not discuss the limitations of the dataset or the potential biases that may have been introduced during the annotation process. Additionally, the paper does not provide any information on the diversity of the annotators or the inter-annotator agreement, which could impact the quality of the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.20315v1](https://arxiv.org/abs/2405.20315v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.20315v1](https://browse.arxiv.org/html/2405.20315v1)       |
+| Truncated       | False       |
+| Word Count       | 4800       |

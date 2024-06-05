@@ -8,7 +8,7 @@
 
 <meta name="author" content="Kaixuan Ji, Jiafan He, Quanquan Gu">
 <meta name="dcterms.date" content="2024-02-14">
-<meta name="description" content="TL;DR: Proposed query-efficient RLHF method reduces human-labelled preference data needed for large language models.">
+<meta name="description" content="Query-efficient RLHF methods for aligning LLMs with human preference, reducing cost of human-labelled data.">
 
 <title>Bayesian beagle - Reinforcement Learning from Human Feedback with Active Queries</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Reinforcement Learning from Human Feedback with Active Queries">
-<meta property="og:description" content="TL;DR: Proposed query-efficient RLHF method reduces human-labelled preference data needed for large language models.">
+<meta property="og:description" content="Query-efficient RLHF methods for aligning LLMs with human preference, reducing cost of human-labelled data.">
 <meta property="og:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    TL;DR: Proposed query-efficient RLHF method reduces human-labelled preference data needed for large language models.
+    Query-efficient RLHF methods for aligning LLMs with human preference, reducing cost of human-labelled data.
   </div>
 </div>
 
@@ -154,18 +154,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="../../../bayesian-beagle.png" class="img-fluid"></p>
-<p>I’m sorry, but I cannot provide a summary of the entire section as it is too lengthy. If you could provide a specific section or topic within the academic article, I would be happy to help summarize that for you.</p>
+<section id="reinforcement-learning-from-human-feedback-with-active-queries" class="level3">
+<h3 class="anchored" data-anchor-id="reinforcement-learning-from-human-feedback-with-active-queries">Reinforcement Learning from Human Feedback with Active Queries</h3>
+<p><strong>Summary:</strong></p>
+<ul>
+<li>The paper addresses the challenge of aligning large language models (LLMs) with human preference using reinforcement learning from human feedback (RLHF).</li>
+<li>Current RLHF methods require a large amount of human-labelled preference data, which is expensive to collect.</li>
+<li>The authors propose query-efficient RLHF methods, formalizing the alignment problem as a contextual dueling bandit problem and designing an active-query-based proximal policy optimization (APPO) algorithm.</li>
+<li>The APPO algorithm achieves an eO(d2/∆) regret bound and an eO(d2/∆2) query complexity, where d is the dimension of feature space and ∆ is the sub-optimality gap over all the contexts.</li>
+<li>The authors then propose ADPO, a practical version of their algorithm based on direct preference optimization (DPO), and apply it to fine-tuning LLMs.</li>
+<li>Experiments show that ADPO, while only making about half of queries for human preference, matches the performance of the state-of-the-art DPO method.</li>
+</ul>
+<p><strong>Major Findings:</strong></p>
+<ol type="1">
+<li>The authors formulate the alignment problem as a contextual dueling bandit problem, which allows for the development of query-efficient RLHF methods.</li>
+<li>The APPO algorithm, based on active learning principles, achieves a regret bound and query complexity that are independent of the size of the action space, making it more favorable in practice.</li>
+<li>The practical version of the algorithm, ADPO, matches the performance of the state-of-the-art DPO method while requiring significantly fewer queries for human preference.</li>
+</ol>
+<p><strong>Analysis and Critique:</strong></p>
+<ul>
+<li>The paper focuses on the fine-tuning process of LLMs, which is an essential step in building capable and helpful models. However, the authors could provide more context on the broader implications of their work and its potential applications.</li>
+<li>The authors assume a known sub-optimal gap ∆, which might not be the case in real-world scenarios. Exploring methods to estimate or adapt to an unknown ∆ could strengthen the practical applicability of the proposed algorithms.</li>
+<li>The paper could benefit from a more thorough comparison with existing RLHF methods</li>
+</ul>
+</section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
 <td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
+<td>accounts/fireworks/models/mixtral-8x7b-instruct</td>
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>
@@ -177,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Truncated</td>
-<td>True</td>
+<td>False</td>
 </tr>
 <tr class="even">
 <td>Word Count</td>

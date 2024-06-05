@@ -1,0 +1,40 @@
+
+---
+title: "NoteLLM-2: Multimodal Large Representation Models for Recommendation"
+id: "2405.16789v1"
+description: "TL;DR: NoteLLM-2 enhances multimodal representation by focusing on visual content in LLMs, using prompt viewpoint and late fusion."
+author: Chao Zhang, Haoxin Zhang, Shiwei Wu, Di Wu, Tong Xu, Yan Gao, Yao Hu, Enhong Chen
+date: "2024-05-27"
+image: "https://browse.arxiv.org/html/2405.16789v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.16789v1/x1.png)
+
+### Summary:
+
+The paper explores the use of Large Language Models (LLMs) to improve textual comprehension in multimodal representation tasks under item-to-item (I2I) recommendation scenarios. The authors propose an end-to-end training method that can customize the integration of any existing LLMs and vision encoders, reducing reliance on open-source Multimodal Large Language Models (MLLMs) that require costly multimodal pre-training. To address the issue of ignoring visual information in end-to-end training, the authors propose NoteLLM-2, which contains multimodal In-Context Learning (mICL) and late fusion methods. The effectiveness of this approach is confirmed through extensive experiments.
+
+### Major Findings:
+
+1. The proposed end-to-end training method can customize the integration of any existing LLMs and vision encoders, reducing reliance on open-source MLLMs and their costly multimodal pre-training.
+2. The NoteLLM-2 framework, which includes mICL and late fusion methods, effectively addresses the problem of ignoring visual information in end-to-end training, enhancing the overall performance of the models.
+3. The mICL method enhances the performance of all models, while late fusion is more effective in models with relatively small vision encoders. However, only late fusion may not fully and effectively interact with LLMs when the vision encoder is more powerful, leading to a loss in performance.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to enhancing multimodal representation tasks using LLMs, addressing the limitations of existing MLLMs and their reliance on costly multimodal pre-training. The proposed end-to-end training method and NoteLLM-2 framework effectively improve the performance of the models, particularly in terms of visual information representation. However, the paper does not discuss the potential limitations and challenges of the proposed approach, such as the computational resources required for training and the potential biases in the data used for training the models. Additionally, the paper does not provide a comprehensive comparison with other state-of-the-art methods in the field, which could further validate the effectiveness of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.16789v1](https://arxiv.org/abs/2405.16789v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.16789v1](https://browse.arxiv.org/html/2405.16789v1)       |
+| Truncated       | False       |
+| Word Count       | 7838       |

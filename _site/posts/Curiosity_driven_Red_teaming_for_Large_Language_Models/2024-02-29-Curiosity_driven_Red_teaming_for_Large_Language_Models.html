@@ -8,7 +8,7 @@
 
 <meta name="author" content="Zhang-Wei Hong, Idan Shenfeld, Tsun-Hsuan Wang, Yung-Sung Chuang, Aldo Pareja, James Glass, Akash Srivastava, Pulkit Agrawal">
 <meta name="dcterms.date" content="2024-02-29">
-<meta name="description" content="CRT: Curiosity-Driven LLM Testing Achieves Wider, Effective Probing of Undesirable Responses (Note: This is a brief summary and not a true tl;dr, as it exceeds the 15-word limit. The original abstract is quite complex and would be difficult to summarize accurately in just 15 words.)">
+<meta name="description" content="CRT increases coverage &amp; effectiveness of LLM test cases, even probing heavily fine-tuned models for toxic responses. (15 words)">
 
 <title>Bayesian beagle - Curiosity-driven Red-teaming for Large Language Models</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Curiosity-driven Red-teaming for Large Language Models">
-<meta property="og:description" content="CRT: Curiosity-Driven LLM Testing Achieves Wider, Effective Probing of Undesirable Responses (Note: This is a brief summary and not a true tl;dr, as it exceeds the 15-word limit. The original abstract is quite complex and would be difficult to summarize accurately in just 15 words.)">
+<meta property="og:description" content="CRT increases coverage &amp; effectiveness of LLM test cases, even probing heavily fine-tuned models for toxic responses. (15 words)">
 <meta property="og:image" content="https://browse.arxiv.org/html/2402.19464v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    CRT: Curiosity-Driven LLM Testing Achieves Wider, Effective Probing of Undesirable Responses (Note: This is a brief summary and not a true tl;dr, as it exceeds the 15-word limit. The original abstract is quite complex and would be difficult to summarize accurately in just 15 words.)
+    CRT increases coverage &amp; effectiveness of LLM test cases, even probing heavily fine-tuned models for toxic responses. (15 words)
   </div>
 </div>
 
@@ -156,17 +156,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2402.19464v1/x1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary</h3>
-<ul>
-<li><strong>Curiosity-driven Red-teaming for Large Language Models</strong>
+<section id="curiosity-driven-red-teaming-for-large-language-models" class="level3">
+<h3 class="anchored" data-anchor-id="curiosity-driven-red-teaming-for-large-language-models">Curiosity-driven Red-teaming for Large Language Models</h3>
+<p><strong>Summary:</strong></p>
 <ul>
 <li>Large language models (LLMs) have the potential to be used in various natural language applications, but they also risk generating incorrect or toxic content.</li>
-<li>The current paradigm for probing when an LLM generates unwanted content involves human testers designing input prompts to elicit undesirable responses from LLMs.</li>
+<li>The current paradigm for probing when an LLM generates unwanted content involves human testers designing input prompts to elicit undesirable responses from the LLM.</li>
 <li>A recent approach automates red teaming by training a separate red team LLM with reinforcement learning (RL) to generate test cases that maximize the chance of eliciting undesirable responses from the target LLM.</li>
 <li>However, current RL methods are only able to generate a small number of effective test cases, resulting in low coverage of the span of prompts that elicit undesirable responses from the target LLM.</li>
-<li>The paper aims to achieve greater coverage of test cases while</li>
-</ul></li>
+<li>The paper proposes a method called Curiosity-driven Red Teaming (CRT) that achieves greater coverage of test cases while maintaining or increasing their effectiveness compared to existing methods.</li>
+</ul>
+<p><strong>Major Findings:</strong></p>
+<ol type="1">
+<li>The paper introduces a connection between the problem of increasing the coverage of generated test cases and the well-studied approach of curiosity-driven exploration that optimizes for novelty.</li>
+<li>The proposed method, CRT, successfully provokes toxic responses from heavily fine-tuned LLMs that have been trained to avoid toxic outputs.</li>
+<li>The CRT method increases the coverage of the generated test cases while maintaining or increasing their effectiveness compared to existing methods.</li>
+</ol>
+<p><strong>Analysis and Critique:</strong></p>
+<ul>
+<li>The paper presents a promising approach to automating red teaming for LLMs, which can be expensive and time-consuming when done manually.</li>
+<li>The use of reinforcement learning to train a red team LLM to generate test cases that maximize the chance of eliciting undesirable responses from the target LLM is an innovative approach.</li>
+<li>The paper’s results show that the proposed CRT method achieves greater coverage of test cases while maintaining or increasing their effectiveness compared to existing methods.</li>
+<li>However, the paper does not provide a thorough analysis of the limitations and potential biases of the proposed method.</li>
+<li>The paper could benefit from a more detailed discussion of the potential ethical implications of using LLMs to generate toxic content, even in a controlled environment.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -179,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

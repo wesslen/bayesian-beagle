@@ -1,0 +1,45 @@
+
+---
+title: "Beyond Imitation: Learning Key Reasoning Steps from Dual Chain-of-Thoughts in Reasoning Distillation"
+id: "2405.19737v1"
+description: "TL;DR: EDIT method improves smaller language models by learning from reasoning mistakes, enhancing key reasoning steps."
+author: Chengwei Dai, Kun Li, Wei Zhou, Songlin Hu
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.19737v1/x1.png"
+categories: ['prompt-engineering', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.19737v1/x1.png)
+
+### Summary:
+
+The paper presents a novel method called mistakE-Driven key reasonIng step distillaTion (EDIT) for improving the reasoning abilities of smaller language models (SLMs) by learning from the mistakes of larger language models (LLMs). The method involves generating dual CoTs data with similar reasoning paths but divergent conclusions, and then applying the minimum edit distance algorithm to locate key reasoning steps. The effectiveness of EDIT is demonstrated through extensive experiments on both in-domain and out-of-domain benchmark reasoning datasets.
+
+### Major Findings:
+
+1. The proposed EDIT method outperforms previous distillation methods by allowing students to learn key reasoning steps from dual CoTs data, rather than simply imitating the teacher's reasoning forms.
+2. Extensive experiments show that student models distilled by EDIT exhibit higher performance and generalization than the baselines on both in-domain and out-of-domain benchmark reasoning datasets.
+3. Further analyses indicate that EDIT can generate higher-quality CoTs with more correct key reasoning steps by auto evaluation and case studies.
+4. The study also shows that logical errors in dual CoTs provide more significant benefits than knowledge or mathematical calculation errors, potentially paving the way for future research on the efficient use of mistakes.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to improving the reasoning abilities of SLMs by learning from the mistakes of LLMs. The proposed EDIT method addresses a shortfall in previous distillation methods, which may result in students mimicking the teacher's reasoning forms but making errors or omissions in key reasoning steps. The extensive experiments and analyses provide strong evidence for the effectiveness of the proposed method.
+
+However, the paper does not discuss the potential limitations or shortcomings of the proposed method. For example, it is unclear how the proposed method would perform on more complex reasoning tasks or in scenarios where the LLMs make more diverse types of mistakes. Additionally, the paper does not provide a detailed comparison with other recent approaches to improving the reasoning abilities of SLMs, such as those based on reinforcement learning or meta-learning.
+
+Overall, the paper makes a valuable contribution to the field of language model distillation and provides a promising direction for future research. However, further investigation is needed to fully understand the strengths and limitations of the proposed method and to
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.19737v1](https://arxiv.org/abs/2405.19737v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19737v1](https://browse.arxiv.org/html/2405.19737v1)       |
+| Truncated       | False       |
+| Word Count       | 8041       |

@@ -1,0 +1,44 @@
+
+---
+title: "One Token Can Help! Learning Scalable and Pluggable Virtual Tokens for Retrieval-Augmented Large Language Models"
+id: "2405.19670v1"
+description: "RAG Improvement: Pluggable Virtual Tokens Preserve LLMs' General Capabilities"
+author: Yutao Zhu, Zhaoheng Huang, Zhicheng Dou, Ji-Rong Wen
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.19670v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.19670v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel method called SPRING (Scalable and Pluggable viRtual tokens for retrIeval-augmeNted Generation) to improve the performance of large language models (LLMs) in retrieval-augmented generation (RAG) scenarios without compromising their general generation capabilities. SPRING adds trainable virtual tokens to help LLMs learn RAG problems, fine-tuning only the embeddings of these tokens while maintaining the LLMs' original parameters. This approach enhances LLMs' performance in RAG scenarios and preserves their general generation abilities. SPRING is trained with Mistral-7b, LLaMA-2-7b, Phi-3-4b, and QWen-1.8b on nine commonly used QA datasets and evaluated in both in-domain and out-of-domain tasks.
+
+### Major Findings:
+
+1. SPRING improves the average EM and F1 scores by more than 33% and 12% across nine QA datasets, respectively, while adding only 0.2M parameters in total.
+2. SPRING is scalable, allowing the number of virtual tokens to be adjusted according to the needs of the inference scenario. Even just one token can substantially improve the LLMs' performance in RAG scenarios.
+3. SPRING is pluggable, enabling it to be applied in a plug-and-play manner. When retrieval is triggered, simply adding the virtual tokens can lead to better performance. In non-RAG scenarios, the virtual tokens are not added, preserving the LLMs' original capabilities.
+4. SPRING is generalizable, ensuring robustness regardless of the number of retrieved results. There is no need to retrain SPRING with each update to the retrieval system, enhancing its practicality and efficiency.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to improving LLMs' performance in RAG scenarios without compromising their general generation abilities. However, the following points should be considered:
+
+1. The paper does not discuss the potential limitations or unintended consequences of using SPRING, such as the impact on the computational resources required for training and inference.
+2. The paper does not provide a detailed comparison of S
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.19670v1](https://arxiv.org/abs/2405.19670v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19670v1](https://browse.arxiv.org/html/2405.19670v1)       |
+| Truncated       | False       |
+| Word Count       | 6223       |

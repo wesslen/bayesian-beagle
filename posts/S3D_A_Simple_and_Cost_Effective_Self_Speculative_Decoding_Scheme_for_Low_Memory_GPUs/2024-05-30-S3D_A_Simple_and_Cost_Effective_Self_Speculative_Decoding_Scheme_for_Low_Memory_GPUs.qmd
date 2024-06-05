@@ -1,0 +1,47 @@
+
+---
+title: "S3D: A Simple and Cost-Effective Self-Speculative Decoding Scheme for Low-Memory GPUs"
+id: "2405.20314v1"
+description: "S3D: Efficient speculative decoding method for LLM inference, offering high performance-memory ratio with minimal changes and training data."
+author: Wei Zhong, Manasa Bharadwaj
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.20314v1/x2.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.20314v1/x2.png)
+
+### Summary:
+
+- The paper introduces Skippy Simultaneous Speculative Decoding (S3D), a cost-effective self-speculative decoding method for low-memory GPUs.
+- S3D features mid-layer skipping and simultaneous multi-token predictions, offering no added VRAM costs and high training efficiency.
+- S3D overcomes the limited speedups in smaller models compared to Zhang et al. (2023a).
+- The paper formalizes the relationship between the number of skipped layers and speedup in self-speculative decoding, verifying the optimal number of token predictors.
+- S3D demonstrates optimal performance-memory ratios among recent open-source SD models, avoiding significant quantization overheads and outperforming the previous fastest SD method, EAGLE, under 8-bit quantization by up to 3.9x in speedups on A10G GPU.
+- By switching to a smaller target model, S3D creates a more effective SD model based on Phi-3, which decodes 1.4 to 2 times faster than EAGLE on A10G while using less VRAM.
+
+### Major Findings:
+
+1. S3D is a cost-effective self-speculative decoding method for low-memory GPUs, featuring mid-layer skipping and simultaneous multi-token predictions.
+2. S3D overcomes the limited speedups in smaller models compared to Zhang et al. (2023a) and demonstrates optimal performance-memory ratios among recent open-source SD models.
+3. S3D outperforms the previous fastest SD method, EAGLE, under 8-bit quantization by up to 3.9x in speedups on A10G GPU.
+4. By switching to a smaller target model, S3D creates a more effective SD model based on Phi-3, which decodes 1.4 to 2 times faster than EAGLE on A10G while using less VRAM.
+
+### Analysis and Critique:
+
+- The paper provides a detailed explanation of the S3D method and its advantages over existing SD methods.
+- The formalization of the relationship between the number of skipped layers and speedup
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.20314v1](https://arxiv.org/abs/2405.20314v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.20314v1](https://browse.arxiv.org/html/2405.20314v1)       |
+| Truncated       | False       |
+| Word Count       | 8567       |

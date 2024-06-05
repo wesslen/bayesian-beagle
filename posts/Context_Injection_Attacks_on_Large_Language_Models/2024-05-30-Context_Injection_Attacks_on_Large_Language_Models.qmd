@@ -1,0 +1,41 @@
+
+---
+title: "Context Injection Attacks on Large Language Models"
+id: "2405.20234v1"
+description: "TL;DR: Attack methodology on LLMs like ChatGPT and Llama-2 exploits context injection, achieving up to 97% success in eliciting disallowed responses."
+author: Cheng'an Wei, Kai Chen, Yue Zhao, Yujia Gong, Lu Xiang, Shenchen Zhu
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.20234v1/x1.png"
+categories: ['robustness', 'hci', 'architectures', 'production', 'programming', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.20234v1/x1.png)
+
+**Summary:**
+
+The paper explores the vulnerabilities of Large Language Models (LLMs) such as ChatGPT and Llama-2 in interactive and structured data scenarios. The authors identify that LLMs can be exposed to misleading context from untrusted sources, leading to undesired behaviors. They propose a systematic methodology for conducting context injection attacks aimed at eliciting disallowed responses by introducing fabricated context. The authors present two context fabrication strategies, acceptance elicitation and word anonymization, which effectively create misleading contexts that can be structured with attacker-customized prompt templates. Comprehensive evaluations on real-world LLMs confirm the efficacy of the proposed attack with success rates reaching 97%. The paper also discusses potential countermeasures for attack detection and developing more secure models.
+
+**Major Findings:**
+
+1. LLMs can be exposed to misleading context from untrusted sources, leading to undesired behaviors.
+2. Context injection attacks can be used to elicit disallowed responses by introducing fabricated context.
+3. Acceptance elicitation and word anonymization are effective context fabrication strategies for creating misleading contexts.
+4. The proposed context injection attack methodology has been shown to be effective on real-world LLMs with success rates reaching 97%.
+
+**Analysis and Critique:**
+
+The paper provides a comprehensive analysis of the vulnerabilities of LLMs in interactive and structured data scenarios. The authors' proposed methodology for context injection attacks is well-structured and effectively demonstrates the potential risks associated with LLMs. However, the paper does not discuss the ethical implications of such attacks or the potential harm they could cause. Additionally, the paper does not provide a detailed analysis of the limitations of the proposed attack methodology or potential countermeasures that could be employed to mitigate the risks. Overall, the paper provides valuable insights into the challenges associated with the real-world deployment of LLMs and highlights the need for further research in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.20234v1](https://arxiv.org/abs/2405.20234v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.20234v1](https://browse.arxiv.org/html/2405.20234v1)       |
+| Truncated       | False       |
+| Word Count       | 12102       |

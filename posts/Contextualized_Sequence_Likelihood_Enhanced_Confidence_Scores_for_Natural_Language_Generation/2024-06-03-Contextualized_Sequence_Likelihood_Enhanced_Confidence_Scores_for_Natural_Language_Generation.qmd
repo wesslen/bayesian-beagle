@@ -1,0 +1,47 @@
+
+---
+title: "Contextualized Sequence Likelihood: Enhanced Confidence Scores for Natural Language Generation"
+id: "2406.01806v1"
+description: "CSL improves LLM confidence scores using attention values, outperforming baselines in QA tasks."
+author: Zhen Lin, Shubhendu Trivedi, Jimeng Sun
+date: "2024-06-03"
+image: "https://browse.arxiv.org/html/2406.01806v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.01806v1/x1.png)
+
+### Summary:
+
+- The paper introduces a new confidence measure called Contextualized Sequence Likelihood (CSL) for natural language generation tasks.
+- CSL enhances the predicted sequence probability by assigning different weights to various tokens using attention values elicited from the base LLM.
+- CSL is easy to implement, fast to compute, and offers potential for further improvement with task-specific prompts.
+- CSL has demonstrated significantly higher reliability than state-of-the-art baselines in predicting generation quality across several QA datasets and a diverse array of LLMs.
+
+### Major Findings:
+
+1. CSL significantly outperforms baselines in predicting the accuracy of each response, offering a more reliable confidence measure for natural language generation tasks.
+2. CSL is easy to implement and fast to compute, making it a practical choice for practitioners.
+3. CSL offers potential for further improvement with task-specific prompts, allowing for greater customization and flexibility.
+
+### Analysis and Critique:
+
+- The paper presents a promising new approach to confidence measures for natural language generation tasks.
+- However, the interpretability of attention weights is often obscured by the nature of the self-attention mechanism, which may limit the practical application of CSL.
+- The current prompt is tailored for question-answering and may require modifications for other tasks, limiting the generalizability of CSL.
+- The current approach cannot leverage external information for "fact-checking," which may be a limitation in certain contexts.
+- Future research should address these issues and expand the toolkit available to practitioners for assessing the reliability of large language models.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.01806v1](https://arxiv.org/abs/2406.01806v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.01806v1](https://browse.arxiv.org/html/2406.01806v1)       |
+| Truncated       | False       |
+| Word Count       | 7653       |

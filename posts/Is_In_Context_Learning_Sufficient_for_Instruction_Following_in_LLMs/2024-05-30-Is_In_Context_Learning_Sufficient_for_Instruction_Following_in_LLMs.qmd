@@ -1,0 +1,44 @@
+
+---
+title: "Is In-Context Learning Sufficient for Instruction Following in LLMs?"
+id: "2405.19874v1"
+description: "ICL alignment underperforms vs. instruction fine-tuning, but a greedy selection approach for ICL examples improves performance."
+author: Hao Zhao, Maksym Andriushchenko, Francesco Croce, Nicolas Flammarion
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.19874v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.19874v1/x1.png)
+
+### Summary:
+
+This paper evaluates the effectiveness of in-context learning (ICL) alignment using the Urial method proposed by Lin et al. (2024) on established instruction following benchmarks. The authors find that while ICL alignment with Urial is effective, it still underperforms compared to instruction fine-tuning, especially with more capable base models. The authors also find that adding more ICL demonstrations for long-context LLMs does not systematically improve instruction following performance. To address this limitation, the authors propose a greedy selection approach for ICL examples that improves performance but does not bridge the gap to instruction fine-tuning. The paper also provides a series of ablation studies to better understand the reasons behind the remaining gap and shows how some aspects of ICL depart from existing knowledge and are specific to the instruction tuning setting.
+
+### Major Findings:
+
+1. ICL alignment with Urial is effective but underperforms compared to instruction fine-tuning on established benchmarks such as MT-Bench and AlpacaEval 2.0 (LC).
+2. Adding more ICL demonstrations for long-context LLMs does not systematically improve instruction following performance.
+3. A greedy selection approach for ICL examples improves performance but does not bridge the gap to instruction fine-tuning.
+
+### Analysis and Critique:
+
+1. The paper provides a more nuanced picture of ICL as an alignment technique compared to previous works.
+2. The paper highlights the limitations of ICL alignment with Urial and the need for further research to bridge the gap to instruction fine-tuning.
+3. The paper does not provide a clear explanation for why adding more ICL demonstrations does not improve performance for long-context LLMs.
+4. The paper does not address the potential impact of the quality and diversity of the ICL examples on the performance of the model.
+5. The paper does not discuss the potential implications of the findings for the development of more effective alignment techniques for LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.19874v1](https://arxiv.org/abs/2405.19874v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19874v1](https://browse.arxiv.org/html/2405.19874v1)       |
+| Truncated       | False       |
+| Word Count       | 5825       |

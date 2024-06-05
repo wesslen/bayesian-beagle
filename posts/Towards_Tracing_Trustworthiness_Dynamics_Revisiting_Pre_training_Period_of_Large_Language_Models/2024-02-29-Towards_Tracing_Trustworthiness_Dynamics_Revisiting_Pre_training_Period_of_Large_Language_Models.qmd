@@ -14,26 +14,35 @@ format:
 
 ![](https://browse.arxiv.org/html/2402.19465v1/x1.png)
 
-### Tracing Trustworthiness Dynamics in Large Language Models Pre-training
+### Towards Tracing Trustworthiness Dynamics: Revisiting Pre-training Period of Large Language Models
 
 **Summary:**
 
-- This study explores the trustworthiness of large language models (LLMs) during the pre-training phase, focusing on five dimensions: reliability, privacy, toxicity, fairness, and robustness.
-- Linear probing is applied to LLMs, revealing that they can distinguish concepts in each trustworthiness dimension early in pre-training.
-- Steering vectors are extracted from LLMs' pre-training checkpoints to enhance their trustworthiness.
-- Mutual information probing during pre-training uncovers a two-phase phenomenon: fitting and compression.
+- The trustworthiness of large language models (LLMs) is crucial and has been the focus of most studies on fully pre-trained LLMs.
+- This paper explores the untapped potential of pre-training by focusing on five key dimensions of trustworthiness: reliability, privacy, toxicity, fairness, and robustness.
+- Linear probing is applied to LLMs, revealing that they can distinguish concepts in each trustworthiness dimension during the early pre-training period.
+- Steering vectors are extracted from a LLM's pre-training checkpoints to enhance the LLM's trustworthiness.
+- Mutual information estimation is probed during pre-training, observing a two-phase phenomenon: fitting and compression.
 
 **Major Findings:**
 
-1. LLMs in early pre-training can already distinguish concepts in trustworthiness dimensions through linear probing.
-2. Steering vectors extracted from pre-training checkpoints can enhance the LLM's trustworthiness
+1. LLMs in early pre-training can already distinguish concepts in each trustworthiness dimension, as shown by high probing accuracy.
+2. Steering vectors extracted from pre-training checkpoints can enhance the SFT model's trustworthiness, achieving performance that matches or exceeds that of vectors extracted directly from the SFT model.
+3. During the pre-training period of LLMs, there exist two distinct phases regarding trustworthiness: fitting and compression.
+
+**Analysis and Critique:**
+
+- The paper provides an initial exploration of trustworthiness modeling during LLM pre-training, but further research is needed to unveil new insights and spur further developments in the field.
+- The paper could benefit from a more detailed explanation of the methodology, particularly in the extraction of steering vectors and the investigation of the dynamics of trustworthiness during pre-training.
+- The paper could also discuss potential limitations and challenges, such as the computational resources required for pre-training and probing, the generalizability of the findings to other LLMs and trustworthiness dimensions, and the potential impact of pre-training data and objectives on the trustworthiness of LLMs.
+- Future research could focus on developing more sophisticated methods for enhancing trustworthiness during pre-training, investigating the relationship between pre-training dynamics and trustworthiness, and exploring the effectiveness of transfer learning and fine-tuning for improving trust
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | accounts/fireworks/models/mixtral-8x7b-instruct       |
-| Date Generated     | 2024-03-13       |
+| Date Generated     | 2024-06-05       |
 | Abstract | [https://arxiv.org/abs/2402.19465v1](https://arxiv.org/abs/2402.19465v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.19465v1](https://browse.arxiv.org/html/2402.19465v1)       |
 | Truncated       | False       |

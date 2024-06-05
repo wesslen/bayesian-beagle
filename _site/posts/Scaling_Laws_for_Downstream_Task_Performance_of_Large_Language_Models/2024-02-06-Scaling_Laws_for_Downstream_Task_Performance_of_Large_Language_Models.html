@@ -8,7 +8,7 @@
 
 <meta name="author" content="Berivan Isik, Natalia Ponomareva, Hussein Hazimeh, Dimitris Paparas, Sergei Vassilvitskii, Sanmi Koyejo">
 <meta name="dcterms.date" content="2024-02-06">
-<meta name="description" content="Scaling laws in transfer learning for language models impact downstream performance in machine translation.">
+<meta name="description" content="Investigating scaling behavior in transfer learning for machine translation: size and alignment of pretraining data matter. Possible to predict BLEU score with log-law when aligned.">
 
 <title>Bayesian beagle - Scaling Laws for Downstream Task Performance of Large Language Models</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Scaling Laws for Downstream Task Performance of Large Language Models">
-<meta property="og:description" content="Scaling laws in transfer learning for language models impact downstream performance in machine translation.">
+<meta property="og:description" content="Investigating scaling behavior in transfer learning for machine translation: size and alignment of pretraining data matter. Possible to predict BLEU score with log-law when aligned.">
 <meta property="og:image" content="https://bayesian-beagle.netlify.app/img/2402.04177v1/image_1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 <meta property="og:image:height" content="432">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Scaling laws in transfer learning for language models impact downstream performance in machine translation.
+    Investigating scaling behavior in transfer learning for machine translation: size and alignment of pretraining data matter. Possible to predict BLEU score with log-law when aligned.
   </div>
 </div>
 
@@ -156,18 +156,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="../../img/2402.04177v1/image_1.png" class="img-fluid"></p>
-<p>B.3 Comparison of T5-3B and T5-770M In Figures 7 and 8, we compare the scaling behavior of T5-3B and T5-770M models for the en-de and en-fr translation tasks. We observe that the scaling laws for both models are consistent with each other, showing similar trends in the scaling behavior for both the BLEU score and the downstream cross-entropy loss. This suggests that the scaling laws are robust and consistent across different model sizes. Figure 7: Comparison of scaling behavior for T5-3B and T5-770M models for the en-de translation task. (top) BLEU score vs pretraining dataset size: f(Dp) = (log(A · Dα p))β. (bottom) Cross-entropy (CE) validation loss vs pretraining dataset size: L(Dp) = E + A Dα p . Figure 8: Comparison of scaling behavior for T5-3B and T5-770M models for the en-fr translation task. (top) BLEU score vs pretraining dataset size: f(Dp) = (log(A · Dα p))β. (bottom) Cross-entropy (CE) validation loss vs pretraining dataset size: L(Dp) = E + A Dα p . Overall, the comparison of the scaling behavior between T5-3B and T5-770M models shows that the scaling laws are consistent and provide similar insights into the relationship between pretraining dataset size and downstream task performance for both models. This consistency across different model sizes adds credibility to the findings and insights derived from the scaling laws.</p>
+<section id="scaling-laws-for-downstream-task-performance-of-large-language-models" class="level3">
+<h3 class="anchored" data-anchor-id="scaling-laws-for-downstream-task-performance-of-large-language-models">Scaling Laws for Downstream Task Performance of Large Language Models</h3>
+<p><strong>Summary:</strong> - This study investigates the scaling behavior of large language models (LLMs) in a transfer learning setting, specifically for machine translation tasks. - The authors find that the size of the finetuning dataset and the distribution alignment between the pretraining and downstream data significantly influence the scaling behavior. - With sufficient alignment, both downstream cross-entropy and BLEU score improve monotonically with more pretraining data. - In cases of moderate misalignment, the BLEU score may fluctuate or get worse with more pretraining, while downstream cross-entropy still improves monotonically.</p>
+<p><strong>Major Findings:</strong> 1. The size of the finetuning dataset and the distribution alignment between the pretraining and downstream data significantly influence the scaling behavior of LLMs in a transfer learning setting. 2. With sufficient alignment, both downstream cross-entropy and BLEU score improve monotonically with more pretraining data. 3. In cases of moderate misalignment, the BLEU score may fluctuate or get worse with more pretraining, while downstream cross-entropy still improves monotonically.</p>
+<p><strong>Analysis and Critique:</strong> - The study focuses on machine translation tasks, which may limit the generalizability of the findings to other downstream tasks. - The authors acknowledge that there are cases where moderate misalignment causes the BLEU score to fluctuate or get worse with more pretraining, but they do not provide a clear explanation for this phenomenon. - The study could benefit from a more thorough discussion of the limitations and potential biases in the experimental design. - Further research is needed to determine if these findings hold true for other types of downstream tasks and to explore the underlying mechanisms that cause the BLEU score to fluctuate in cases of moderate misalignment.</p>
+</section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
 <td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
+<td>accounts/fireworks/models/mixtral-8x7b-instruct</td>
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

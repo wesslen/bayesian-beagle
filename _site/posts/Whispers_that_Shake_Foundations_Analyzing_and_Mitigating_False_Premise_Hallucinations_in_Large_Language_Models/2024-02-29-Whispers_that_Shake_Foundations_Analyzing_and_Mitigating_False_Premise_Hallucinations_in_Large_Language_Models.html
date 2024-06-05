@@ -157,18 +157,25 @@ ul.task-list li input[type="checkbox"] {
 <section id="summary" class="level3">
 <h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
 <ul>
-<li>False premise hallucination is a significant issue in Large Language Models (LLMs) where models generate false text based on false premise questions.</li>
-<li>A study analyzes this issue and proposes a method called FAITH (False premise Attention head constraIning for miTigating Hallucinations) to mitigate it.</li>
-<li>FAITH constrains a small subset of attention heads, called false premise heads, that disturb the knowledge extraction process, leading to false premise hallucinations.</li>
-<li>Experiments show that constraining only a few attention heads in the model yields a significant increase in model performance.</li>
+<li>Large Language Models (LLMs) suffer from hallucinations, particularly false premise hallucinations where the model generates incorrect information based on false premises in the input.</li>
+<li>A comprehensive analysis of false premise hallucinations reveals that a small subset of attention heads, called false premise heads, disturb the knowledge extraction process.</li>
+<li>A novel method, FAITH, is proposed to mitigate false premise hallucinations by constraining false premise attention heads during model inference.</li>
 </ul>
-</section>
-<section id="major-findings" class="level3">
-<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<p><strong>Major Findings:</strong></p>
 <ol type="1">
-<li><strong>False Premise Hallucination:</strong> A specific type of hallucination in LLMs where models generate false text based on false premise questions.</li>
-<li><strong>False Premise Heads:</strong> A small subset of attention heads in LLMs that</li>
+<li>False premise hallucinations are a significant issue in LLMs, leading to the generation of incorrect information based on false premises.</li>
+<li>A small subset of attention heads, called false premise heads, are responsible for the occurrence of false premise hallucinations.</li>
+<li>Constraining false premise attention heads during model inference significantly reduces false premise hallucinations, leading to improved model performance.</li>
 </ol>
+<p><strong>Analysis and Critique:</strong></p>
+<ul>
+<li>The study provides valuable insights into the internal workings of false premise hallucinations in LLMs.</li>
+<li>The proposed FAITH method effectively mitigates false premise hallucinations, demonstrating the importance of attention head constraining in LLMs.</li>
+<li>The analysis is limited to models with up to 13 billion parameters. Future research should investigate the applicability of FAITH to larger models.</li>
+<li>The calculation of influence for multiple attention heads is time-consuming. Future research could focus on efficient methods for selecting the most influential joint contribution of multiple attention heads.</li>
+</ul>
+<hr>
+<p>For the complete summary, including the detailed explanation of the paper’s content, headings, formatting, and critical analysis, please refer to the markdown summary provided in the response.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -180,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

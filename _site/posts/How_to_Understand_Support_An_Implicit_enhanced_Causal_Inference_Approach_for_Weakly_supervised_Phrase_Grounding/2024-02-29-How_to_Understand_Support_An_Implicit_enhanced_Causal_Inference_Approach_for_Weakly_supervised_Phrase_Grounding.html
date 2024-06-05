@@ -157,16 +157,28 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="summary">Summary</h3>
 <ul>
 <li>Weakly-supervised Phrase Grounding (WPG) is an emerging task in multimodal learning that involves inferring fine-grained phrase-region matching using coarse-grained sentence-image pairs for training.</li>
-<li>Existing studies on WPG often overlook implicit phrase-region matching relations, which are crucial for evaluating a model’s ability to understand deep multimodal semantics.</li>
-<li>This paper proposes an Implicit-Enhanced Causal Inference (IECI) approach that uses intervention and counterfactual techniques to address the challenges of modeling implicit relations and highlighting them beyond the explicit.</li>
-<li>A high-quality implicit-enhanced dataset is annotated to evaluate IECI, and results show its advantages over state-of-the-art baselines.</li>
+<li>Existing studies on WPG largely ignore the implicit phrase-region matching relations, which are crucial for evaluating the capability of models in understanding deep multimodal semantics.</li>
+<li>This paper proposes an Implicit-Enhanced Causal Inference (IECI) approach that leverages both intervention and counterfactual techniques to tackle the challenges of modeling implicit relations and highlighting them beyond the explicit.</li>
+<li>A high-quality implicit-enhanced dataset is annotated to evaluate IECI, and detailed evaluations show the great advantages of IECI over state-of-the-art baselines.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
 <ol type="1">
-<li><strong>Implicit Relations in WPG:</strong> The paper highlights the importance</li>
+<li>The IECI approach significantly outperforms advanced multimodal LLMs on the implicit-enhanced dataset, demonstrating its potential for evaluating multimodal LLMs in this direction.</li>
+<li>The intervention technique in IECI effectively mitigates confounding bias in modeling implicit relations, while the counterfactual technique highlights implicit relations beyond the explicit, addressing the imbalance problem between them.</li>
+<li>The annotated implicit-enhanced dataset provides a valuable resource for evaluating the ability of models in understanding deep multimodal semantics.</li>
 </ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique</h3>
+<ul>
+<li>The paper focuses on the implicit phrase-region matching relations problem in WPG, which is an important aspect often overlooked in existing studies.</li>
+<li>The IECI approach combines both intervention and counterfactual techniques, providing a comprehensive solution to the challenges of modeling implicit relations and highlighting them beyond the explicit.</li>
+<li>The annotated implicit-enhanced dataset is a valuable contribution, but its generalizability to other datasets and tasks should be further investigated.</li>
+<li>The paper could benefit from a more thorough discussion of the limitations and potential biases in the dataset and the IECI approach.</li>
+<li>The paper could also explore the application of the IECI approach to other multimodal learning tasks to further validate its effectiveness.</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -178,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

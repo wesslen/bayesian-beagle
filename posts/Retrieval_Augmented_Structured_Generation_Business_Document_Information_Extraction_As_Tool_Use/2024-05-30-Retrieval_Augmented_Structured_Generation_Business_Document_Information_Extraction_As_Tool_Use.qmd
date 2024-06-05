@@ -1,0 +1,49 @@
+
+---
+title: "Retrieval Augmented Structured Generation: Business Document Information Extraction As Tool Use"
+id: "2405.20245v1"
+description: "LLMs with RASG outperform LMMs in BDIE tasks, offering practical benefits in real-world applications."
+author: Franz Louis Cesista, Rui Aguiar, Jason Kim, Paolo Acilo
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.20245v1/extracted/5616372/rasg-v2.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.20245v1/extracted/5616372/rasg-v2.png)
+
+# Summary:
+
+- The paper presents a novel framework for Business Document Information Extraction (BDIE) called Retrieval Augmented Structured Generation (RASG).
+- RASG is a tool use problem that models BDIE as a transformation of unstructured information into a structured format for downstream systems.
+- RASG achieves state-of-the-art (SOTA) results on both Key Information Extraction (KIE) and Line Items Recognition (LIR) tasks on BDIE benchmarks.
+- The paper also proposes a new metric class for LIR, General Line Items Recognition Metric (GLIRM), which is more aligned with practical BDIE use cases.
+- The paper claims that while Large Multimodal Models (LMMs) might sometimes offer marginal performance benefits, Large Language Models (LLMs) + RASG is often superior given real-world applications and constraints of BDIE.
+
+# Major Findings:
+
+1. RASG achieves SOTA results on both KIE and LIR tasks on BDIE benchmarks.
+2. LLMs with RASG are competitive with or surpass current SOTA LMMs without RASG on BDIE benchmarks.
+3. A new metric class for LIR, GLIRM, is proposed, which is more aligned with practical BDIE use cases.
+4. A heuristic algorithm for backcalculating bounding boxes of predicted line items and tables without the need for vision encoders is provided.
+
+# Analysis and Critique:
+
+- The paper presents a novel and promising approach to BDIE, but it is unclear how well it would perform in real-world applications.
+- The paper does not provide a detailed comparison of RASG with other existing BDIE frameworks, making it difficult to evaluate its performance.
+- The proposed GLIRM metric for LIR is a significant contribution, but it is unclear how well it would perform in practice.
+- The paper does not discuss the limitations of RASG, such as its dependence on the availability of downstream systems and the quality of the retrieval mechanism.
+- The paper does not provide a detailed analysis of the computational cost and scalability of R
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.20245v1](https://arxiv.org/abs/2405.20245v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.20245v1](https://browse.arxiv.org/html/2405.20245v1)       |
+| Truncated       | False       |
+| Word Count       | 3711       |

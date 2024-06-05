@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yifei Zhou, Andrea Zanette, Jiayi Pan, Sergey Levine, Aviral Kumar">
 <meta name="dcterms.date" content="2024-02-29">
-<meta name="description" content="ArCHer: Hierarchical RL for Efficient Multi-turn Decision-making in LLMs This paper proposes a new algorithmic framework, ArCHer, for developing multi-turn reinforcement learning (RL) algorithms for large language models (LLMs) used in goal-directed decision-making tasks. ArCHer uses a hierarchical RL approach, running two RL algorithms in parallel: a high-level off-policy RL algorithm that trains a value function to aggregate reward over utterances, and a low-level RL algorithm that utilizes this high-level value function to train a token-by-token policy within each utterance. The paper finds that ArCHer significantly improves efficiency and performance on multi-turn tasks, with a sample efficiency of about 100x over existing on-policy methods. The project page and code can be found at <https://yifeizhou02.">
+<meta name="description" content="ArCHer: Hierarchical RL for Efficient Multi-turn Decision-Making with LLMs This paper proposes a new algorithmic framework, ArCHer, for developing multi-turn reinforcement learning (RL) algorithms for fine-tuning large language models (LLMs) in goal-directed decision-making tasks. ArCHer adopts a hierarchical RL approach, running two RL algorithms in parallel: a high-level off-policy RL algorithm that trains a value function to aggregate reward over utterances, and a low-level RL algorithm that utilizes this high-level value function to train a token-by-token policy within each utterance or turn. The paper finds that ArCHer significantly improves efficiency and performance on multi-turn tasks, with a sample efficiency of about 100x over existing on-policy methods, and benefits from scaling up model capacity. The project page and code can be found at https://yifeizhou02.github.io/archer.io/ and https://github.com/YifeiZhou02/ArCHer, respectively.">
 
 <title>Bayesian beagle - ArCHer: Training Language Model Agents via Hierarchical Multi-Turn RL</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - ArCHer: Training Language Model Agents via Hierarchical Multi-Turn RL">
-<meta property="og:description" content="ArCHer: Hierarchical RL for Efficient Multi-turn Decision-making in LLMs This paper proposes a new algorithmic framework, ArCHer, for developing multi-turn reinforcement learning (RL) algorithms for large language models (LLMs) used in goal-directed decision-making tasks. ArCHer uses a hierarchical RL approach, running two RL algorithms in parallel: a high-level off-policy RL algorithm that trains a value function to aggregate reward over utterances, and a low-level RL algorithm that utilizes this high-level value function to train a token-by-token policy within each utterance. The paper finds that ArCHer significantly improves efficiency and performance on multi-turn tasks, with a sample efficiency of about 100x over existing on-policy methods. The project page and code can be found at <https://yifeizhou02.">
+<meta property="og:description" content="ArCHer: Hierarchical RL for Efficient Multi-turn Decision-Making with LLMs This paper proposes a new algorithmic framework, ArCHer, for developing multi-turn reinforcement learning (RL) algorithms for fine-tuning large language models (LLMs) in goal-directed decision-making tasks. ArCHer adopts a hierarchical RL approach, running two RL algorithms in parallel: a high-level off-policy RL algorithm that trains a value function to aggregate reward over utterances, and a low-level RL algorithm that utilizes this high-level value function to train a token-by-token policy within each utterance or turn. The paper finds that ArCHer significantly improves efficiency and performance on multi-turn tasks, with a sample efficiency of about 100x over existing on-policy methods, and benefits from scaling up model capacity. The project page and code can be found at https://yifeizhou02.github.io/archer.io/ and https://github.com/YifeiZhou02/ArCHer, respectively.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2402.19446v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    ArCHer: Hierarchical RL for Efficient Multi-turn Decision-making in LLMs This paper proposes a new algorithmic framework, ArCHer, for developing multi-turn reinforcement learning (RL) algorithms for large language models (LLMs) used in goal-directed decision-making tasks. ArCHer uses a hierarchical RL approach, running two RL algorithms in parallel: a high-level off-policy RL algorithm that trains a value function to aggregate reward over utterances, and a low-level RL algorithm that utilizes this high-level value function to train a token-by-token policy within each utterance. The paper finds that ArCHer significantly improves efficiency and performance on multi-turn tasks, with a sample efficiency of about 100x over existing on-policy methods. The project page and code can be found at &lt;https://yifeizhou02.
+    ArCHer: Hierarchical RL for Efficient Multi-turn Decision-Making with LLMs This paper proposes a new algorithmic framework, ArCHer, for developing multi-turn reinforcement learning (RL) algorithms for fine-tuning large language models (LLMs) in goal-directed decision-making tasks. ArCHer adopts a hierarchical RL approach, running two RL algorithms in parallel: a high-level off-policy RL algorithm that trains a value function to aggregate reward over utterances, and a low-level RL algorithm that utilizes this high-level value function to train a token-by-token policy within each utterance or turn. The paper finds that ArCHer significantly improves efficiency and performance on multi-turn tasks, with a sample efficiency of about 100x over existing on-policy methods, and benefits from scaling up model capacity. The project page and code can be found at <a href="https://yifeizhou02.github.io/archer.io/" class="uri">https://yifeizhou02.github.io/archer.io/</a> and <a href="https://github.com/YifeiZhou02/ArCHer" class="uri">https://github.com/YifeiZhou02/ArCHer</a>, respectively.
   </div>
 </div>
 
@@ -155,13 +155,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2402.19446v1/x1.png" class="img-fluid"></p>
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<section id="archer-training-language-model-agents-via-hierarchical-multi-turn-rl" class="level3">
+<h3 class="anchored" data-anchor-id="archer-training-language-model-agents-via-hierarchical-multi-turn-rl">ArCHer: Training Language Model Agents via Hierarchical Multi-Turn RL</h3>
+<p><strong>Summary:</strong></p>
 <ul>
-<li>Large language models (LLMs) have the potential to address decision-making or “agent” problems that can be expressed in text or natural language.</li>
+<li>Large language models (LLMs) have the potential to address a wide variety of decision-making or “agent” problems that can be expressed in text or natural language.</li>
 <li>Current RL methods for LLMs largely focus on single-turn reward maximization, which cannot effectively train LLMs to seek and incorporate information over multiple turns, perform credit assignment, or reason about their past actions.</li>
-<li>The paper proposes an algorithmic framework, ArCHer, for developing multi-turn RL algorithms for fine-tuning LLMs, preserving the flexibility of existing single-turn RL methods while accommodating multiple turns, long horizons, and delayed rewards effectively.</li>
-<li>ArCHer adopts a hierarchical RL approach, running two RL algorithms in parallel: a high-level off-policy RL algorithm that trains a value function to aggregate reward over utterances, and a low-level RL algorithm that utilizes this high-level</li>
+<li>The proposed framework, ArCHer, adopts a hierarchical RL approach and runs two RL algorithms in parallel: a high-level off-policy RL algorithm that trains a value function to aggregate reward over utterances, and a low-level RL algorithm that utilizes this high-level value function to train a token-by-token policy within each utterance or turn.</li>
+<li>Empirically, ArCHer significantly improves efficiency and performance on multi-turn tasks, attaining sample efficiency of about 100x over existing on-policy methods.</li>
+</ul>
+<p><strong>Major Findings:</strong></p>
+<ol type="1">
+<li>ArCHer, a hierarchical RL framework, is designed for multi-turn RL algorithms to train LLMs directly for long-term objective maximization.</li>
+<li>ArCHer runs two RL algorithms in parallel: a high-level off-policy RL algorithm for value function aggregation and a low-level RL algorithm for token-by-token policy training.</li>
+<li>ArCHer significantly improves efficiency and performance on multi-turn tasks, attaining sample efficiency of about 100x over existing on-policy methods.</li>
+</ol>
+<p><strong>Analysis and Critique:</strong></p>
+<ul>
+<li>ArCHer’s hierarchical RL approach effectively addresses the challenges of multi-turn RL for LLMs, but the paper could provide more details on the specific RL algorithms used in the high-level and low-level components.</li>
+<li>The paper demonstrates ArCHer’s performance on multi-turn tasks, but it would be beneficial to see how it performs on a wider range of decision-making or “agent” problems.</li>
+<li>The paper could also discuss potential limitations and future research directions, such as exploring other hierarchical RL approaches, addressing the cold-start problem, and incorporating more sophisticated reward modeling techniques.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -174,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

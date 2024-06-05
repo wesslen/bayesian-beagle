@@ -1,0 +1,44 @@
+
+---
+title: "Quantitative Certification of Bias in Large Language Models"
+id: "2405.18780v1"
+description: "QuaCer-B: A framework to certify and quantify bias in large language models, providing formal guarantees for unbiased responses."
+author: Isha Chaudhary, Qian Hu, Manoj Kumar, Morteza Ziyadi, Rahul Gupta, Gagandeep Singh
+date: "2024-05-29"
+image: "https://browse.arxiv.org/html/2405.18780v1/x1.png"
+categories: ['hci', 'prompt-engineering', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.18780v1/x1.png)
+
+### Summary:
+
+This paper proposes a novel certification framework, QuaCer-B, to quantitatively certify the bias in the responses of instruction-tuned Large Language Models (LLMs). The framework takes a set of novel bias specifications as inputs, which are precise mathematical representations defining the desirable property of absence of bias in large sets of prompts. The bias is defined as an asymmetry in the responses of a target LLM to prompts that only differ by sensitive attributes that are intuitively unimportant for the responses.
+
+### Major Findings:
+
+1. The paper introduces a new approach to certifying LLMs with formal guarantees, which operates on a large (potentially infinite) space of inputs, precisely captured as a specification. This approach provides guarantees on the behavior of the underlying model that generalizes to unseen inputs satisfying the specification.
+2. The paper presents a general framework, QuaCer-B, to specify and quantitatively certify the bias in the responses of instruction-tuned LLMs. QuaCer-B takes a set of novel bias specifications as inputs, which are precise mathematical representations defining the desirable property of absence of bias in large sets of prompts.
+3. The paper introduces a certification algorithm that estimates the probability of biased responses for given specifications and inputs with high confidence and a permissible-bias error term. The algorithm obtains Clopper-Pearson confidence intervals with confidence  to bound the probability term within .
+
+### Analysis and Critique:
+
+The proposed certification framework, QuaCer-B, is a promising approach to quantitatively certify the bias in the responses of instruction-tuned LLMs. The framework provides a general and flexible way to specify and certify the bias in LLMs, which can be applied to both open-source and closed-source models.
+
+However, the paper does not provide a comprehensive evaluation of the proposed framework. The paper only presents a few examples of bias specifications and does not provide a systematic evaluation of the framework's performance on a large set of prompts and LLMs. Additionally, the paper does not discuss the limitations and potential biases of the proposed framework.
+
+Furthermore, the paper does not provide a clear definition of the sensitive attributes that are considered in the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.18780v1](https://arxiv.org/abs/2405.18780v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.18780v1](https://browse.arxiv.org/html/2405.18780v1)       |
+| Truncated       | False       |
+| Word Count       | 8667       |

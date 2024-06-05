@@ -1,0 +1,44 @@
+
+---
+title: "Multi-modal Generation via Cross-Modal In-Context Learning"
+id: "2405.18304v1"
+description: "MGCC generates images from complex prompts using LLMs and diffusion models, outperforming existing methods on VIST and VisDial datasets."
+author: Amandeep Kumar, Muzammal Naseer, Sanath Narayan, Rao Muhammad Anwer, Salman Khan, Hisham Cholakkal
+date: "2024-05-28"
+image: "https://browse.arxiv.org/html/2405.18304v1/x2.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.18304v1/x2.png)
+
+### Summary:
+
+The paper introduces a novel method called Multi-modal Generation via Cross-Modal In-Context Learning (MGCC) for generating images from complex multimodal prompt sequences. The MGCC method leverages the capabilities of large language models (LLMs) and diffusion models to address the challenges faced by existing methods in capturing fine-grained details and maintaining contextual coherence. The proposed method includes a Cross-Modal Refinement module to learn cross-modal dependencies and a contextual object grounding module to generate object bounding boxes for scenes with multiple objects. The MGCC demonstrates a diverse range of multimodal capabilities and outperforms existing methods on two benchmark datasets.
+
+### Major Findings:
+
+1. The MGCC method achieves a CLIP Similarity score of 0.284 on the Visual Story Generation (VIST) dataset, outperforming the state-of-the-art GILL method, which scored 0.279.
+2. On the Visual Dialogue Context (VisDial) dataset, the MGCC method achieves an impressive CLIP score of 0.292, significantly outperforming the existing state-of-the-art method, which scored 0.281.
+3. The Cross-Modal Refinement module in the MGCC method enables the model to explicitly learn the correspondence between text and image tokens using cross-attentions, improving semantic understanding of the scene based on the input prompt sequence.
+
+### Analysis and Critique:
+
+1. The MGCC method effectively addresses the limitations of existing methods by training on image-captions alone, avoiding the need for extensive compute resources and potential loss of generalization.
+2. The introduction of the Cross-Modal Refinement module and contextual object grounding module in the MGCC method significantly improves the quality and alignment of generated images with the prompts.
+3. The MGCC method demonstrates superior performance on two benchmark datasets, highlighting its effectiveness in handling lengthy multimodal inputs and generating contextually accurate images.
+4. However, the MGCC method may still face challenges in generating accurate images for lengthy descriptions and scenes with multiple objects, as indicated by the performance deterioration in such scenarios.
+5. The method's rel
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.18304v1](https://arxiv.org/abs/2405.18304v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.18304v1](https://browse.arxiv.org/html/2405.18304v1)       |
+| Truncated       | False       |
+| Word Count       | 6426       |

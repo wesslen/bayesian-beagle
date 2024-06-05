@@ -1,0 +1,47 @@
+
+---
+title: "Toxicity Detection for Free"
+id: "2405.18822v1"
+description: "LLMs can struggle with toxic prompts. MULI, a method using LLM introspection, outperforms SOTA toxicity detectors with minimal cost."
+author: Zhanhao Hu, Julien Piet, Geng Zhao, Jiantao Jiao, David Wagner
+date: "2024-05-29"
+image: "https://browse.arxiv.org/html/2405.18822v1/x1.png"
+categories: ['prompt-engineering', 'robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.18822v1/x1.png)
+
+### Summary:
+
+- The paper explores Moderation Using LLM Introspection (MULI), a method for detecting toxic prompts using information extracted directly from LLMs.
+- MULI leverages the distribution of alternative refusal responses and the distribution of the first response token's logits to detect toxicities.
+- A toy model based on the logits of specific starting tokens achieves reliable performance without requiring training or additional computational cost.
+- A more robust detector is built using a sparse logistic regression model on the first response token logits, which outperforms state-of-the-art detectors under multiple metrics.
+
+### Major Findings:
+
+1. MULI detects toxic prompts using the information extracted directly from LLMs, such as the distribution of alternative refusal responses and the distribution of the first response token's logits.
+2. A toy model based on the logits of specific starting tokens achieves reliable performance without requiring training or additional computational cost.
+3. A more robust detector is built using a sparse logistic regression model on the first response token logits, which outperforms state-of-the-art detectors under multiple metrics.
+
+### Analysis and Critique:
+
+- The paper presents an innovative approach to toxicity detection using LLM introspection, which has the potential to improve the performance of toxicity detectors.
+- The use of a sparse logistic regression model on the first response token logits is a promising approach to building a more robust detector.
+- However, the paper does not provide a detailed comparison with other state-of-the-art detectors, which makes it difficult to evaluate the performance of MULI.
+- The paper also does not discuss the potential limitations or biases of MULI, which is an important consideration in the development of toxicity detectors.
+- Further research is needed to evaluate the performance of MULI in real-world applications and to address any potential limitations or biases.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.18822v1](https://arxiv.org/abs/2405.18822v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.18822v1](https://browse.arxiv.org/html/2405.18822v1)       |
+| Truncated       | False       |
+| Word Count       | 6250       |

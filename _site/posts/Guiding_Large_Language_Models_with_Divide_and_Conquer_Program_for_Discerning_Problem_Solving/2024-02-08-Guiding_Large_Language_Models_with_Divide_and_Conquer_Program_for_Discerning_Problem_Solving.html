@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yizhou Zhang, Lun Du, Defu Cao, Qiang Fu, Yan Liu">
 <meta name="dcterms.date" content="2024-02-08">
-<meta name="description" content="Foundation models like Large Language Models have many applications. Prompt design can unlock their potential.">
+<meta name="description" content="Guided Divide-and-Conquer strategy enhances LLM’s handling of tasks with repetitive sub-tasks and deceptive contents.">
 
 <title>Bayesian beagle - Guiding Large Language Models with Divide-and-Conquer Program for Discerning Problem Solving</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Guiding Large Language Models with Divide-and-Conquer Program for Discerning Problem Solving">
-<meta property="og:description" content="Foundation models like Large Language Models have many applications. Prompt design can unlock their potential.">
+<meta property="og:description" content="Guided Divide-and-Conquer strategy enhances LLM’s handling of tasks with repetitive sub-tasks and deceptive contents.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2402.05359v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Foundation models like Large Language Models have many applications. Prompt design can unlock their potential.
+    Guided Divide-and-Conquer strategy enhances LLM’s handling of tasks with repetitive sub-tasks and deceptive contents.
   </div>
 </div>
 
@@ -155,21 +155,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="https://browse.arxiv.org/html/2402.05359v1/x1.png" class="img-fluid"></p>
-<p>. In the first example, for long integer multiplication, the sequential sub-task tackling strategy will calculate the multiplication of each pair of numbers one by one, and then merge the results. In contrast, the parallel sub-task tackling strategy will calculate the multiplication of each pair of numbers in parallel, and then merge the results. Similarly, in the second example for hallucination detection, the sequential sub-task tackling strategy will verify each sentence one by one, and then merge the results. In contrast, the parallel sub-task tackling strategy will verify each sentence in parallel, and then merge the results.</p>
-<p>The advantage of the parallel sub-task tackling strategy is that it can handle tasks with repetitive sub-tasks more efficiently, as it can process multiple sub-tasks simultaneously. This is especially useful for tasks that require extensive computation or verification of multiple similar sub-tasks. On the other hand, the sequential sub-task tackling strategy may be more suitable for tasks that involve a clear dependency between sub-tasks, where the output of one sub-task is required as input for the next sub-task.</p>
-<p>In the context of prompting strategies for large language models, the parallel sub-task tackling strategy, as implemented in the Divide-and-Conquer program, has shown to be effective in handling tasks with repetitive sub-tasks and deceptive contents. This strategy disentangles the task decomposition, sub-task resolution, and resolution assembly processes, allowing the model to handle sub-tasks in parallel and avoid disruptions in the task resolution process. This approach has demonstrated superior performance in tasks such as large integer multiplication, hallucination detection, and misinformation detection.</p>
-<p>While the parallel sub-task tackling strategy has shown promise, it is important to note that the choice of strategy may depend on the specific characteristics of the task at hand. Further research is needed to explore the applicability of different sub-task tackling strategies in various domains and task types.</p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
+<ul>
+<li>Foundation models, like Large Language Models (LLMs), have shown significant potential in various applications.</li>
+<li>Appropriate prompt design, such as Chain-of-Thoughts, can unlock LLM’s powerful capacity in diverse areas.</li>
+<li>However, when handling tasks involving repetitive sub-tasks and deceptive contents, existing prompting strategies may suffer from insufficient expressive power or intermediate errors triggered by hallucination.</li>
+<li>The paper proposes a Divide-and-Conquer program to guide LLMs, ensuring superior expressive power and disentangling task decomposition, sub-task resolution, and resolution assembly processes.</li>
+<li>Theoretical analysis and experiments indicate that the proposed method outperforms typical prompting strategies in tasks with intermediate errors and deceptive contents.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings"><strong>Major Findings:</strong></h3>
+<ol type="1">
+<li>The Divide-and-Conquer program guides LLMs to handle tasks with intermediate errors and deceptive contents more effectively.</li>
+<li>The proposed method extends the expressive power of fixed-depth Transformer, achieving better performance in tasks with intermediate errors and deceptive contents.</li>
+<li>The Divide-and-Conquer program ensures a clear separation of tasks, reducing the likelihood of intermediate errors and improving overall model performance.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique"><strong>Analysis and Critique:</strong></h3>
+<ul>
+<li>The paper presents a novel approach to addressing intermediate errors and deceptive contents in LLMs by introducing a Divide-and-Conquer program.</li>
+<li>The theoretical analysis and experimental results support the proposed method’s effectiveness.</li>
+<li>However, the paper could benefit from further exploration of the Divide-and-Conquer program’s limitations and potential issues, such as the impact of task complexity and the scalability of the approach.</li>
+<li>Investigating the Divide-and-Conquer program’s applicability to other foundation models and tasks could provide valuable insights for future research.</li>
+<li>Addressing the potential impact of deceptive contents on the Divide-and-Conquer program’s performance would strengthen the paper’s contribution.</li>
+</ul>
+</section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
 <td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
+<td>accounts/fireworks/models/mixtral-8x7b-instruct</td>
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

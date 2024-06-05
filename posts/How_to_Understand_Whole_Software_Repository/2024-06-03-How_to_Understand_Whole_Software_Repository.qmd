@@ -1,0 +1,46 @@
+
+---
+title: "How to Understand Whole Software Repository?"
+id: "2406.01422v1"
+description: "TL;DR: RepoUnderstander improves ASE by understanding whole repositories, outperforming SWE-agent by 18.5%."
+author: Yingwei Ma, Qingping Yang, Rongyu Cao, Binhua Li, Fei Huang, Yongbin Li
+date: "2024-06-03"
+image: "https://browse.arxiv.org/html/2406.01422v1/x1.png"
+categories: ['robustness', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.01422v1/x1.png)
+
+### Summary:
+
+The paper "How to Understand Whole Software Repository?" (2018) presents a novel method called RepoUnderstander, which aims to guide agents to comprehensively understand entire software repositories. The method is designed to address the limitations of existing approaches that focus on local information, leading to difficulties in capturing the global context and interdependencies within the software system.
+
+RepoUnderstander first condenses the extensive and complex repository-level information into a hierarchical structure by constructing a repository knowledge graph. This is achieved by parsing the software structure and analyzing it in a top-down manner. The repository is organized into a hierarchical tree that allows a clear understanding of the context and scope of the code. The tree structure is further extended into a reference graph that captures function call relationships.
+
+To enhance the agents' repository understanding, a Monte Carlo Tree Search (MCTS) enhanced repository exploration strategy is proposed. This method systematically explores the repository knowledge graph and prioritizes the discovery of critical information such as repository functions and dependency structures that have a greater impact on resolving issues. By simulating multiple trajectories and evaluating their importance, MCTS dynamically narrows the search space and focuses computational resources on the most relevant areas.
+
+RepoUnderstander also guides the agents to summarize, analyze, and plan according to global experiences. This enables the agents to effectively and efficiently collect and learn task-relevant repository-level knowledge, facilitating precise fault localization and informed patch generation.
+
+### Major Findings:
+
+1. The paper highlights the importance of understanding the whole software repository as a critical path to achieving automatic software engineering (ASE).
+2. RepoUnderstander is proposed as a novel method that guides agents to comprehensively understand entire repositories by constructing a repository knowledge graph and using an MCTS enhanced repository exploration strategy.
+3. RepoUnderstander achieves state-of-the-art performance on the SWE-bench Lite benchmark, outperforming existing RAG-based and agent-based systems.
+
+### Analysis and Critique:
+
+RepoUnderstander addresses the limitations of existing approaches by focusing on understanding the whole software repository. The method effectively condenses extensive and complex repository-level information into a hierarchical structure, improving performance and efficiency.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.01422v1](https://arxiv.org/abs/2406.01422v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.01422v1](https://browse.arxiv.org/html/2406.01422v1)       |
+| Truncated       | False       |
+| Word Count       | 10556       |

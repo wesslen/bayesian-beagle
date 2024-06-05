@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yiju Guo, Ganqu Cui, Lifan Yuan, Ning Ding, Jiexin Wang, Huimin Chen, Bowen Sun, Ruobing Xie, Jie Zhou, Yankai Lin, Zhiyuan Liu, Maosong Sun">
 <meta name="dcterms.date" content="2024-02-29">
-<meta name="description" content="CPO aligns language models with human preferences, improving multi-objective alignment and reducing alignment tax impact.">
+<meta name="description" content="CPO aligns language models with human preferences, improving multi-objective alignment while reducing alignment tax impact.">
 
 <title>Bayesian beagle - Controllable Preference Optimization: Toward Controllable Multi-Objective Alignment</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Controllable Preference Optimization: Toward Controllable Multi-Objective Alignment">
-<meta property="og:description" content="CPO aligns language models with human preferences, improving multi-objective alignment and reducing alignment tax impact.">
+<meta property="og:description" content="CPO aligns language models with human preferences, improving multi-objective alignment while reducing alignment tax impact.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2402.19085v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    CPO aligns language models with human preferences, improving multi-objective alignment and reducing alignment tax impact.
+    CPO aligns language models with human preferences, improving multi-objective alignment while reducing alignment tax impact.
   </div>
 </div>
 
@@ -155,17 +155,36 @@ ul.task-list li input[type="checkbox"] {
 
 <p><img src="https://browse.arxiv.org/html/2402.19085v1/x1.png" class="img-fluid"></p>
 <section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary:</h3>
+<h3 class="anchored" data-anchor-id="summary"><strong>Summary:</strong></h3>
 <ul>
-<li>Controllable Preference Optimization (CPO) is a method for aligning large language models (LLMs) with human preferences and values, specifically targeting helpful, honest, and harmless LLMs.</li>
-<li>The “3H” principle can lead to trade-offs between objectives, known as the “alignment tax,” where improving one alignment objective might negatively impact others.</li>
-<li>CPO introduces controllable preference supervised fine-tuning (CPSFT) and controllable direct preference optimization (CDPO) to optimize LLMs based on explicit preference conditions, mitigating the alignment tax and achieving Pareto improvements in multi-objective alignment.</li>
+<li>The article introduces Controllable Preference Optimization (CPO), a method for multi-objective alignment in large language models (LLMs) that optimizes preferences for different objectives, such as helpfulness, honesty, and harmlessness.</li>
+<li>CPO surpasses baseline methods in aligning with single objectives, thereby mitigating the impact of the “alignment tax” and achieving Pareto improvements in multi-objective alignment.</li>
+<li>The authors argue that controllability is key to multi-objective alignment, and propose to provide explicit preference conditions to ground LLMs for desirable behaviors.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li><strong>Controllable Preference Optimization</strong>: CPO, consisting of CPSFT and CDPO, explicitly specifies preference scores for different objectives, guiding the model to generate responses that meet the requirements, sur</li>
+<li>CPO provides responses that match various preferences among the “3H” desiderata.</li>
+<li>CPO outperforms baseline methods in aligning with single objectives, leading to improved multi-objective alignment.</li>
+<li>Controllability is crucial for multi-objective alignment, and CPO enables the optimization of preferences for different objectives.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The article does not provide a thorough comparison of CPO with other state-of-the-art multi-objective alignment techniques.</li>
+<li>The authors assume that users prioritize utility for problem-solving questions and moralities for controversial questions, which might not always be the case.</li>
+<li>The authors do not discuss potential biases introduced by the preference conditions, which could affect the model’s behavior and performance.</li>
+<li>The experimental evaluation is limited to two datasets, and it would be beneficial to test CPO on a broader range of datasets and scenarios.</li>
+</ul>
+<p>Structured markdown summary:</p>
+<p>```markdown ## <strong>Summary:</strong> - <a href="#introduction-to-controllable-preference-optimization-cpo">Introduction to Controllable Preference Optimization (CPO)</a> - <a href="#cpo-improves-multi-objective-alignment-for-llms">CPO improves multi-objective alignment for LLMs</a> - <a href="#controllability-is-key-to-multi-objective-alignment">Controllability is key to multi-objective alignment</a></p>
+</section>
+<section id="major-findings-1" class="level2">
+<h2 class="anchored" data-anchor-id="major-findings-1">Major Findings:</h2>
+<ol type="1">
+<li>[CPO matches various preferences among the “3H” desiderata](#finding-1-cpo-</li>
 </ol>
 </section>
 <section id="appendix" class="level2">
@@ -178,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

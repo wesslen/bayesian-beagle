@@ -163,16 +163,26 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Large language models (LLMs) have shown impressive performance in mathematical reasoning benchmarks, but there are debates about their understanding and application of mathematical knowledge.</li>
 <li>A new benchmark, GSM-Plus, is introduced to evaluate the robustness of LLMs’ math reasoning capability by testing various question variations.</li>
-<li>The experiments on 25 LLMs and 4 prompting techniques show that LLMs’ performances are not robust, with mistakes made even on previously solved problems with new statements or altered targets.</li>
-<li>An iterative method generating and verifying intermediate thoughts based on reasoning goals and calculation results is explored to achieve more robust performance.</li>
+<li>Experiments on 25 LLMs and 4 prompting techniques show that LLMs’ performances are not robust, with mistakes made even on previously solved problems with new statements or altered targets.</li>
+<li>An iterative method generating and verifying intermediate thoughts based on reasoning goals and calculation results is explored for more robust performance.</li>
 </ul>
 </section>
 <section id="major-findings" class="level3">
 <h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
 <ol type="1">
-<li><strong>Performance varies among LLMs:</strong> Different LLMs exhibit varying levels of math reasoning abilities, with even top-performing models making mistakes on altered problems.</li>
-<li><strong>Non-robust performance:</strong> LLMs struggle with new statements or altered targets, even</li>
+<li><strong>Performance varies among LLMs:</strong> Different LLMs exhibit varying levels of math reasoning abilities, with some struggling with problems that have been solved in GSM8K when new statements are added or question targets are altered.</li>
+<li><strong>Limited robustness:</strong> Even when LLMs accurately solve GSM8K questions, they struggle with answering the variations in GSM-Plus, particularly in critical thinking, arithmetic variation, and distractor insertion.</li>
+<li><strong>Prompting techniques’ lack of robustness:</strong> All investigated prompting techniques show a lack of robustness, especially for arithmetic variation and critical thinking. A compositional prompting method, however, demonstrates good performance on both GSM8K and GSM-Plus.</li>
 </ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li><strong>Limited scope of evaluation:</strong> The evaluation focuses on LLMs’ performance on the GSM8K dataset and its variations, which may not generalize to other mathematical domains or problem types.</li>
+<li><strong>Annotation difficulties:</strong> Underexplored perturbations, such as arithmetic variation and critical thinking, remain challenging due to annotation difficulties, potentially limiting the comprehensiveness of the evaluation.</li>
+<li><strong>Reliance on GPT-4:</strong> The dataset construction relies on GPT-4’s question-rewriting capabilities, which may not always be reliable, necessitating human revision and potentially introducing biases or errors.</li>
+<li><strong>Lack of interpretability:</strong> The study does not provide insights into why LLMs struggle with specific question variations or perturbations, leaving open questions about the underlying causes of their limited robustness.</li>
+</ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
@@ -184,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

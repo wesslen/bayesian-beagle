@@ -1,0 +1,40 @@
+
+---
+title: "TAIA: Large Language Models are Out-of-Distribution Data Learners"
+id: "2405.20192v1"
+description: "TL;DR: TAIA method improves LLMs performance in data-scarce domains, using only fine-tuned attention parameters for inference."
+author: Shuyang Jiang, Yusheng Liao, Ya Zhang, Yu Wang, Yanfeng Wang
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.20192v1/x4.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.20192v1/x4.png)
+
+### Summary:
+
+The paper proposes a novel method called TAIA (Training All parameters but Inferring with only Attention) to improve the performance of large language models (LLMs) in data-scarce domains with domain-mismatched data. The authors re-evaluate the Transformer architecture and discover that not all parameter updates during fine-tuning contribute positively to downstream performance. They find that within the self-attention and feed-forward networks, only the fine-tuned attention parameters are particularly beneficial when the training set’s distribution does not fully align with the test set. The authors empirically validate TAIA using two general instruction-tuning datasets and evaluate it on seven downstream tasks involving math, reasoning, and knowledge understanding across LLMs of different parameter sizes and fine-tuning techniques. The results demonstrate that TAIA achieves superior improvements compared to both the fully fine-tuned model and the base model in most scenarios, with significant performance gains.
+
+### Major Findings:
+
+1. The authors discover that not all parameter updates during fine-tuning contribute positively to downstream performance.
+2. Within the self-attention and feed-forward networks, only the fine-tuned attention parameters are particularly beneficial when the training set’s distribution does not fully align with the test set.
+3. The proposed TAIA method achieves superior improvements compared to both the fully fine-tuned model and the base model in most scenarios, with significant performance gains.
+
+### Analysis and Critique:
+
+The paper presents an interesting and novel approach to improving the performance of LLMs in data-scarce domains with domain-mismatched data. The authors provide a detailed analysis of the Transformer architecture and propose a simple yet effective method to address the issue of catastrophic forgetting during fine-tuning. The empirical results demonstrate the effectiveness of TAIA in improving the performance of LLMs on downstream tasks. However, the paper does not discuss the potential limitations or drawbacks of the proposed method, such as the increased computational cost or the need for additional hyperparameter tuning. Additionally, the paper does not compare TAIA to other existing methods for addressing the issue of catastrophic forgetting during fine-tuning. Overall, the paper provides a valuable contribution to the field of LLMs
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.20192v1](https://arxiv.org/abs/2405.20192v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.20192v1](https://browse.arxiv.org/html/2405.20192v1)       |
+| Truncated       | False       |
+| Word Count       | 10062       |

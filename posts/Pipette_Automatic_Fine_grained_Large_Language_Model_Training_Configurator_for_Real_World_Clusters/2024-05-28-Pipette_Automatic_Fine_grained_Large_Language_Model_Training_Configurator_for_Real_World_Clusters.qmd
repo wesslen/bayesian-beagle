@@ -1,0 +1,40 @@
+
+---
+title: "Pipette: Automatic Fine-grained Large Language Model Training Configurator for Real-World Clusters"
+id: "2405.18093v1"
+description: "Pipette: Automatic tool for optimizing LLM training on GPUs, offering faster, memory-efficient configurations."
+author: Jinkyu Yim, Jaeyong Song, Yerim Choi, Jaebeen Lee, Jaewon Jung, Hongsun Jang, Jinho Lee
+date: "2024-05-28"
+image: "https://browse.arxiv.org/html/2405.18093v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.18093v1/x1.png)
+
+### Summary:
+
+The paper introduces Pipette, an automatic fine-grained large language model (LLM) training configurator for real-world clusters. Pipette addresses the challenges of finding the optimal configuration for 3D parallelism, which splits a model along the data batch, pipeline stage, and intra-layer tensor dimensions. The heterogeneous nature of interconnect speeds and the memory requirement per GPU are often ignored in previous studies, leading to sub-optimal configurations. Pipette uses better performance models, a memory estimator, and fine-grained individual GPU assignment to achieve faster configurations that satisfy memory constraints. The paper evaluates Pipette on large clusters and shows that it provides significant speedup over prior art.
+
+### Major Findings:
+
+1. Pipette devises better performance models and a memory estimator to address the challenges of finding the optimal configuration for 3D parallelism.
+2. Pipette uses fine-grained individual GPU assignment to achieve faster configurations that satisfy memory constraints.
+3. Pipette provides significant speedup over prior art when evaluated on large clusters.
+
+### Analysis and Critique:
+
+The paper presents a promising solution to the challenges of finding the optimal configuration for 3D parallelism in LLM training. The use of better performance models, a memory estimator, and fine-grained individual GPU assignment are well-justified and supported by the evaluation results. However, the paper does not discuss the limitations or potential biases of Pipette. It would be helpful to know if there are any methodological issues, conflicting evidence, or areas that require further research or clarification. Additionally, the paper does not provide a comparison with other state-of-the-art methods for LLM training, which would help to establish the superiority of Pipette.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.18093v1](https://arxiv.org/abs/2405.18093v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.18093v1](https://browse.arxiv.org/html/2405.18093v1)       |
+| Truncated       | False       |
+| Word Count       | 5509       |

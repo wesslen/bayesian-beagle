@@ -1,0 +1,44 @@
+
+---
+title: "Explore then Determine: A GNN-LLM Synergy Framework for Reasoning over Knowledge Graph"
+id: "2406.01145v1"
+description: "EtD framework combines LLMs with GNNs for KGQA, improving performance and reducing costs."
+author: Guangyi Liu, Yongqi Zhang, Yong Li, Quanming Yao
+date: "2024-06-03"
+image: "https://browse.arxiv.org/html/2406.01145v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.01145v1/x1.png)
+
+# Summary:
+
+The paper proposes an Explore-then-Determine (EtD) framework that synergizes Large Language Models (LLMs) with Graph Neural Networks (GNNs) for reasoning over Knowledge Graphs (KGs). The framework consists of two stages: the Explore stage and the Determine stage. In the Explore stage, an LLM-empowered GNN module is designed to perform compositional learning on the KG, exploring promising candidates and fine-grained compositional knowledge of the question. In the Determine stage, the information gathered from the exploration is organized to create a knowledge-enhanced multiple-choice prompt, which a frozen LLM then uses to determine the final answer. The framework leverages the precision of GNN-based compositional learning and the language understanding prowess of LLMs, effectively combining explicit knowledge from KGs with implicit knowledge in LLMs. Extensive experiments demonstrate the superiority of EtD, achieving accurate, efficient, and faithful reasoning over KGs.
+
+## Major Findings:
+
+1. The proposed Explore-then-Determine (EtD) framework synergizes LLMs with GNNs for reasoning over KGs, effectively combining explicit knowledge from KGs with implicit knowledge in LLMs.
+2. The Explore stage employs an LLM-empowered GNN module to perform compositional learning on the KG, exploring promising candidates and fine-grained compositional knowledge of the question.
+3. The Determine stage uses a frozen LLM to determine the final answer based on a knowledge-enhanced multiple-choice prompt, which is created using the information gathered from the exploration.
+4. Extensive experiments demonstrate the superiority of EtD, achieving accurate, efficient, and faithful reasoning over KGs.
+
+## Analysis and Critique:
+
+The proposed framework is a promising approach to reasoning over KGs, as it effectively combines explicit knowledge from KGs with implicit knowledge in LLMs. However, there are some potential limitations and areas for improvement.
+
+1. The exploration depth is preset based on the characteristics of the dataset, which may not always be optimal. It is worth exploring how to use LLM to determine the depth of exploration in the future.
+2. The framework relies on the accuracy of the G
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.01145v1](https://arxiv.org/abs/2406.01145v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.01145v1](https://browse.arxiv.org/html/2406.01145v1)       |
+| Truncated       | False       |
+| Word Count       | 7833       |

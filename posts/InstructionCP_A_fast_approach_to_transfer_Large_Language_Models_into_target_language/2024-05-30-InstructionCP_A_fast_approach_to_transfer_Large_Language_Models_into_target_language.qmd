@@ -1,0 +1,43 @@
+
+---
+title: "InstructionCP: A fast approach to transfer Large Language Models into target language"
+id: "2405.20175v1"
+description: "InsCP improves language models' multilingual abilities without losing conversational skills or RLHF, using fewer resources."
+author: Kuang-Ming Chen, Hung-yi Lee
+date: "2024-05-30"
+image: "../../../bayesian-beagle.png"
+categories: ['prompt-engineering', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary:
+
+**Summary:**
+The paper proposes a novel fine-tuning approach called Instruction Continual Pre-training (InsCP) for large language models (LLMs) to adapt to non-English languages. InsCP merges continual pre-training (CP) and supervised fine-tuning (SFT) into a unified one-step training process. The authors investigate whether LLMs, equipped with their own templates, can recognize tags during CP and hypothesize that providing a chat template during CP prevents the model from forgetting its conversational abilities. The experiments demonstrate that the model, after undergoing InsCP on LLaMA3-instruct, effectively performs in Traditional Chinese when prompted with Traditional Chinese input, surpassing the performance of LLaMA3-instruct. The model also retains its ability to respond appropriately to English prompts and exhibits consistent performance in both English and Traditional Chinese on the TruthfulQA benchmark.
+
+**Major Findings:**
+1. InsCP enables LLMs to acquire language proficiency more rapidly than the original CP method.
+2. LLaMA3-InsCP demonstrates remarkable language proficiency, consistently responding in the appropriate language, regardless of whether provided with English or Traditional Chinese input prompts.
+3. InsCP does not significantly impact the model's original English knowledge and can effectively preserve the LLM's inherent abilities while also enhancing its performance in target language domains.
+
+**Analysis and Critique:**
+1. The choice of data used in InsCP significantly influences its outcomes, and conducting InsCP necessitates the utilization of low-perplexity instruction-following data, which can be challenging to acquire in abundance for certain languages.
+2. Both data size and data quality remain challenges when implementing InsCP.
+3. The paper does not discuss the potential limitations of InsCP, such as the impact of the model's size on the effectiveness of InsCP or the potential for overfitting to the target language.
+4. The paper does not provide a comparison of InsCP with other fine-tuning methods, such as domain-adaptive pre-training or multi-task learning.
+5. The paper does not discuss the potential ethical implications of using InsCP, such as the potential for the model to generate harmful or biased content in the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.20175v1](https://arxiv.org/abs/2405.20175v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.20175v1](https://browse.arxiv.org/html/2405.20175v1)       |
+| Truncated       | False       |
+| Word Count       | 5106       |

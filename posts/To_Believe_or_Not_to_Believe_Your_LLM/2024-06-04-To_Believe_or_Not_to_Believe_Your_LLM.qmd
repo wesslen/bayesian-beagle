@@ -1,0 +1,43 @@
+
+---
+title: "To Believe or Not to Believe Your LLM"
+id: "2406.02543v1"
+description: "New metric detects unreliable LLM outputs due to lack of knowledge, even in multi-answer responses, via iterative prompting."
+author: Yasin Abbasi Yadkori, Ilja Kuzborskij, András György, Csaba Szepesvári
+date: "2024-06-04"
+image: "https://browse.arxiv.org/html/2406.02543v1/extracted/5640955/prob_London.png"
+categories: ['robustness', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.02543v1/extracted/5640955/prob_London.png)
+
+### Summary:
+
+The paper explores uncertainty quantification in large language models (LLMs) to identify when the uncertainty in responses given a query is large. The authors distinguish between two sources of uncertainty: epistemic and aleatoric. Epistemic uncertainty arises from a lack of knowledge about the ground truth, while aleatoric uncertainty comes from irreducible randomness. The authors derive an information-theoretic metric to reliably detect when only epistemic uncertainty is large, indicating an unreliable output. This condition can be computed based solely on the output of the model obtained through iterative prompting. The authors conduct experiments demonstrating the advantage of their formulation and investigate how the probabilities assigned to a given output by an LLM can be amplified by iterative prompting.
+
+### Major Findings:
+
+1. The authors derive an information-theoretic metric to detect when only epistemic uncertainty is large, indicating an unreliable output.
+2. The authors propose a computable lower bound on this metric, which turns out to be a mutual information of an LLM-derived joint distribution over responses.
+3. The authors discuss an algorithm for hallucination detection based on thresholding a finite-sample mutual information estimator, where the threshold is computed automatically through a calibration procedure.
+4. The authors identify a simple mechanistic explanation for how the model output can be changed through iterative prompting using previous responses, focusing on a single self-attention head.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to uncertainty quantification in LLMs, addressing the challenge of distinguishing between epistemic and aleatoric uncertainty. The proposed information-theoretic metric and computable lower bound provide a practical means of detecting when only epistemic uncertainty is large, which can be useful for identifying unreliable outputs. The authors' experiments demonstrate the advantage of their formulation, and their investigation into the amplification of probabilities assigned to a given output by an LLM through iterative prompting is of independent interest.
+
+However, the paper does not address potential limitations or biases in the proposed approach. For example, the authors do not discuss the impact of the choice of iterative prompting strategy on the reliability of the output or the potential for overfitting to the training data. Additionally, the authors do not
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2406.02543v1](https://arxiv.org/abs/2406.02543v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.02543v1](https://browse.arxiv.org/html/2406.02543v1)       |
+| Truncated       | False       |
+| Word Count       | 12576       |

@@ -2,9 +2,7 @@
 ---
 title: "Watermark Stealing in Large Language Models"
 id: "2402.19361v1"
-description: "Automated watermark stealing enables effective spoofing, scrubbing of LLM schemes.
-
-This summarizes the article's main point that a new watermark stealing (WS) algorithm can be used to both spoof and scrub state-of-the-art large language models (LLMs) with a high success rate, challenging common beliefs about the robustness of LLM watermarking."
+description: "New study reveals LLM watermarking vulnerability: Under $50, attackers can spoof and scrub state-of-the-art schemes with 80% success rate."
 author: Nikola Jovanović, Robin Staab, Martin Vechev
 date: "2024-02-29"
 image: "../../../bayesian-beagle.png"
@@ -16,25 +14,33 @@ format:
 
 ![](../../../bayesian-beagle.png)
 
-### Watermark Stealing in Large Language Models
+### **Summary:**
 
-**Summary:**
+- Watermark stealing (WS) is identified as a fundamental vulnerability in large language model (LLM) watermarking schemes.
+- WS enables spoofing and scrubbing attacks, which were previously unnoticed or less effective.
+- An automated WS algorithm is proposed and used in the first comprehensive study of spoofing and scrubbing in realistic settings.
+- For under $50, an attacker can both spoof and scrub state-of-the-art schemes with an average success rate of over 80%.
 
-* LLM watermarking has been proposed as a promising way to detect AI-generated content.
-* However, the authors identify a fundamental vulnerability called watermark stealing (WS), where querying the API of a watermarked LLM can reverse-engineer the watermark, enabling spoofing and scrubbing attacks.
-* The authors propose an automated WS algorithm and demonstrate that, for under $50, an attacker can successfully spoof and scrub state-of-the-art watermarked schemes with an average success rate of over 80%.
+### Major Findings:
 
-**Major Findings:**
+1. Watermark stealing (WS) is a fundamental vulnerability in LLM watermarking schemes, enabling practical spoofing and scrubbing attacks.
+2. The first automated WS algorithm is proposed, demonstrating that for under $50, an attacker can successfully spoof and scrub state-of-the-art watermarking schemes with an average success rate of over 80%.
+3. The findings challenge common beliefs about LLM watermarking, highlighting the need for more robust schemes.
 
-1. Watermark stealing (WS) is a fundamental vulnerability in LLM watermarking schemes.
-2. An attacker can use WS to launch both spoofing and scrubbing attacks on state-of-the-art watermarked
+### Analysis and Critique:
+
+- The study focuses on watermarking schemes for LLMs, which may not generalize to other types of models or watermarking methods.
+- The effectiveness of the proposed WS algorithm depends on the availability and quality of the API and the auxiliary model.
+- The paper assumes a specific pricing model for the API, which may not reflect the actual costs of using LLMs in different scenarios.
+- The paper could benefit from a more detailed discussion of the ethical implications of watermarking and WS, especially in the context of AI-generated content.
+- Further research is needed to evaluate the robustness of LLM watermarking schemes against other types of attacks and to develop more robust watermarking methods.
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | accounts/fireworks/models/mixtral-8x7b-instruct       |
-| Date Generated     | 2024-03-13       |
+| Date Generated     | 2024-06-05       |
 | Abstract | [https://arxiv.org/abs/2402.19361v1](https://arxiv.org/abs/2402.19361v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.19361v1](https://browse.arxiv.org/html/2402.19361v1)       |
 | Truncated       | False       |

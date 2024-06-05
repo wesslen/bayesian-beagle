@@ -1,0 +1,48 @@
+
+---
+title: "Kernel Language Entropy: Fine-grained Uncertainty Quantification for LLMs from Semantic Similarities"
+id: "2405.20003v1"
+description: "KLE: A novel method for uncertainty estimation in LLMs, improving trustworthiness by detecting hallucinations and considering semantic similarities."
+author: Alexander Nikitin, Jannik Kossen, Yarin Gal, Pekka Marttinen
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.20003v1/x2.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.20003v1/x2.png)
+
+### Summary:
+
+- The paper proposes Kernel Language Entropy (KLE), a novel method for uncertainty estimation in white- and black-box LLMs.
+- KLE defines positive semidefinite unit trace kernels to encode the semantic similarities of LLM outputs and quantifies uncertainty using the von Neumann entropy.
+- KLE considers pairwise semantic dependencies between answers (or semantic clusters), providing more fine-grained uncertainty estimates than previous methods based on hard clustering of answers.
+- The paper theoretically proves that KLE generalizes the previous state-of-the-art method called semantic entropy and empirically demonstrates that it improves uncertainty quantification performance across multiple natural language generation datasets and LLM architectures.
+
+### Major Findings:
+
+1. KLE provides a more fine-grained uncertainty estimation than previous methods by considering pairwise semantic dependencies between answers or semantic clusters.
+2. KLE generalizes the previous state-of-the-art method called semantic entropy, as proven theoretically in the paper.
+3. KLE improves uncertainty quantification performance across multiple natural language generation datasets and LLM architectures, as demonstrated empirically in the paper.
+
+### Analysis and Critique:
+
+- The paper provides a well-structured and coherent summary of the proposed KLE method, highlighting its advantages over previous methods for uncertainty estimation in LLMs.
+- The theoretical proof of KLE generalizing semantic entropy is a significant contribution, as it establishes the method's superiority over the previous state-of-the-art.
+- The empirical demonstration of KLE's improved performance across multiple datasets and LLM architectures further strengthens the paper's claims.
+- However, the paper does not discuss any potential limitations or shortcomings of the proposed method, such as its computational complexity or the need for large amounts of data for training.
+- Additionally, the paper does not address the potential impact of KLE on the interpretability of LLM outputs or its applicability to other NLP tasks beyond natural language generation.
+- Future work could explore these aspects and further validate the method's performance in real-world applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.20003v1](https://arxiv.org/abs/2405.20003v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.20003v1](https://browse.arxiv.org/html/2405.20003v1)       |
+| Truncated       | False       |
+| Word Count       | 8835       |

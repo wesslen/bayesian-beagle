@@ -1,0 +1,44 @@
+
+---
+title: "PertEval: Unveiling Real Knowledge Capacity of LLMs with Knowledge-Invariant Perturbations"
+id: "2405.19740v1"
+description: "PertEval toolkit reveals overestimated performance of LLMs on raw benchmarks, offering a more reliable evaluation of their knowledge capacity."
+author: Jiatong Li, Renjun Hu, Kunzhe Huang, Yan Zhuang, Qi Liu, Mengxiao Zhu, Xing Shi, Wei Lin
+date: "2024-05-30"
+image: "https://browse.arxiv.org/html/2405.19740v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.19740v1/x1.png)
+
+# Summary:
+
+PertEval is a toolkit designed to evaluate the knowledge capacity of large language models (LLMs) using knowledge-invariant perturbations. These perturbations employ human-like restatement techniques to generate test samples from static benchmarks, ensuring that knowledge-critical content is retained while altering irrelevant details. The toolkit also includes a suite of transition analyses to compare performance on raw vs. perturbed test sets, accurately assessing LLMs' genuine knowledge capacity.
+
+## Major Findings:
+
+1. **Inflated Performance on Raw Benchmarks**: PertEval reveals significantly inflated performance of LLMs on raw benchmarks, including an absolute 21% overestimation for GPT-4.
+2. **Uncertainty to Specious Knowledge**: Through response pattern analysis, PertEval discovers that LLMs retain uncertainty to specious knowledge, potentially resolved through rote memorization, leading to inflated performance.
+3. **Detailed Transition Analyses**: Detailed transition analyses by PertEval can illuminate weaknesses in existing LLMs' knowledge mastery and guide the development of refinement.
+
+## Analysis and Critique:
+
+PertEval serves as an essential tool for evaluating the real knowledge capacity of LLMs when applied to any existing close-ended benchmarks. However, it is important to note that the toolkit's effectiveness depends on the quality and diversity of the perturbations used. The perturbations should be designed to cover a wide range of possible test scenarios in real-world conditions, and the transition analyses should be robust enough to accurately measure the LLMs' performance.
+
+Moreover, while PertEval can help uncover the true knowledge capacity of LLMs, it does not directly address the issue of data contamination. Although it mitigates the risk by generating new test data, the possibility of LLMs being fine-tuned to "memorize" the test data still exists. Therefore, further research is needed to develop more robust methods to prevent data contamination and ensure the integrity of the evaluation process.
+
+In conclusion, PertEval is a valuable tool for evaluating the knowledge capacity of LLMs, but its effectiveness is contingent on the quality of the perturbations and the robustness of the transition analyses. Additionally, further efforts are needed to address the issue of
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.19740v1](https://arxiv.org/abs/2405.19740v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19740v1](https://browse.arxiv.org/html/2405.19740v1)       |
+| Truncated       | False       |
+| Word Count       | 8977       |

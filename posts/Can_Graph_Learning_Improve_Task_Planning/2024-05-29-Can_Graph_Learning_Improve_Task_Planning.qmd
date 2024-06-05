@@ -1,0 +1,44 @@
+
+---
+title: "Can Graph Learning Improve Task Planning?"
+id: "2405.19119v1"
+description: "Graph learning with GNNs improves LLMs' task planning, outperforming existing methods even without training."
+author: Xixi Wu, Yifei Shen, Caihua Shan, Kaitao Song, Siwei Wang, Bohang Zhang, Jiarui Feng, Hong Cheng, Wei Chen, Yun Xiong, Dongsheng Li
+date: "2024-05-29"
+image: "https://browse.arxiv.org/html/2405.19119v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.19119v1/x1.png)
+
+# Summary
+
+The paper explores graph learning-based methods for task planning, a direction that is orthogonal to the prevalent focus on prompt design. The authors argue that the biases of attention and auto-regressive loss impede LLMs' ability to effectively navigate decision-making on graphs, which is adeptly addressed by graph neural networks (GNNs). The authors propose integrating GNNs with LLMs to enhance overall performance. Extensive experiments demonstrate that GNN-based methods surpass existing solutions even without training, and minimal training can further enhance their performance. Additionally, the proposed approach complements prompt engineering and fine-tuning techniques.
+
+## Major Findings
+
+1. The paper presents a formulation of task planning as a graph decision-making problem, initiating the exploration of graph learning methodologies to enhance performance.
+2. The authors prove that Transformers have expressiveness to solve graph decision-making problems based on edge list input, but inductive biases of attention and the auto-regressive loss function may serve as obstacles to their full potential.
+3. Based on the theoretical analysis, the authors introduce an additional GNN for sub-task retrieval, available in both training-free and training-based variants. The experiments on diverse LLMs and planning datasets demonstrate that the proposed method outperforms existing solutions with much less computation time. Furthermore, the performance is further enhanced by improved prompts or a fine-tuned model.
+
+## Analysis and Critique
+
+The paper presents an interesting approach to task planning by integrating GNNs with LLMs. The authors provide a theoretical analysis of the limitations of LLMs in processing graph-based tasks and propose a solution that complements existing techniques such as prompt engineering and fine-tuning. The extensive experiments conducted by the authors demonstrate the effectiveness of their approach.
+
+However, there are some potential limitations and areas for improvement. The authors acknowledge that their proposed method is straightforward and more sophisticated GNN-based decision-making algorithms could potentially offer further improvements. Additionally, the construction of the task graph currently requires manual effort, and investigating automated graph generation techniques for this application is another promising direction for future work.
+
+Overall, the paper provides a valuable contribution to the field of task planning and offers a promising direction for future research.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.19119v1](https://arxiv.org/abs/2405.19119v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19119v1](https://browse.arxiv.org/html/2405.19119v1)       |
+| Truncated       | False       |
+| Word Count       | 12443       |

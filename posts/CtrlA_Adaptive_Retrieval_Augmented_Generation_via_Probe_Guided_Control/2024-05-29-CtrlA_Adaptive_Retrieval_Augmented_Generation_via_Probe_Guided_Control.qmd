@@ -1,0 +1,35 @@
+
+---
+title: "CtrlA: Adaptive Retrieval-Augmented Generation via Probe-Guided Control"
+id: "2405.18727v1"
+description: "CtrlA, a novel adaptive RAG framework, uses honesty and confidence probes to improve LLM honesty and determine retrieval necessity, outperforming existing methods."
+author: Huanshuo Liu, Hao Zhang, Zhijiang Guo, Kuicai Dong, Xiangyang Li, Yi Quan Lee, Cong Zhang, Yong Liu
+date: "2024-05-29"
+image: "../../img/2405.18727v1/image_1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2405.18727v1/image_1.png)
+
+The refusal handling module HR is crucial for both TriviaQA and PopQA, with a particularly significant impact on PopQA. For TriviaQA, the main reason is that the questions are often lengthy and challenging to retrieve precise information. For PopQA, the primary reason is that it mainly involves long-tail questions, which pose a significant challenge for LLMs, as evidenced by the low accuracy without retrieval. As a result, HR will be activated more frequently to tackle the refusal response and conduct more retrieval actions.
+
+Table 9: The impacts of refusal handling module. Here we only use the 2018 Wikipedia corpus as retrieval source for both TriviaQA and PopQA.
+
+TriviaQA | PopQA
+Acc (%) | Acc (%)
+w/ HR | 70.8 | 44.1
+w/o HR | 68.3 | 38.0
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.18727v1](https://arxiv.org/abs/2405.18727v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.18727v1](https://browse.arxiv.org/html/2405.18727v1)       |
+| Truncated       | False       |
+| Word Count       | 26572       |

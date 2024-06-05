@@ -17,25 +17,35 @@ format:
 ### **Summary:**
 
 - Large Language Models (LLMs) have shown remarkable potential across various applications and domains, including games.
-- This paper surveys the current state of the art across the various applications of LLMs in and for games.
-- Underexplored areas and promising directions for future uses of LLMs in games are discussed.
+- This paper surveys the current state of LLMs in games, discussing their roles and identifying underexplored areas and promising directions.
+- LLMs can take different roles within a game, such as playing a game, designing a game, or modeling players.
 
 ### **Major Findings:**
 
-1. LLMs can take various roles within a game, such as playing a game, designing a game, or modeling players.
-2. LLMs can be used to generate game content, such as levels, missions, and dialogue, and to provide assistance to players and designers.
-3. LLMs can improve the accessibility and inclusivity of games by providing alternative ways of interacting with the game world and generating diverse and inclusive content.
+1. LLMs can play games by transforming their typical output space into the input space of the game, with three general classes of games well-suited for LLM players: (a) games with compactly represented states and actions, (b) games with natural language input and output, and (c) games with external programs controlling player actions via an API.
+2. LLMs can be used as NPCs, controlling dialogue and behavior, providing unique advantages in emulating human behavior.
+3. LLMs can act as player assistants, enriching or guiding the player experience through tailored interactions and explanations.
 
 ### **Analysis and Critique:**
 
-- While LLMs have shown promising results in generating text, they can
+- While LLMs show promise in various roles within games, there are limitations and challenges to consider:
+  - Hallucinations and factual errors may affect certain applications, such as NPCs hallucinating quests or player assistants providing suggestions based on wrong assumptions.
+  - LLMs may struggle to capture user intent, especially in expressions of sarcasm, which can impact applications with direct conversation with the user.
+  - LLMs can lose context and struggle with continuity, affecting long-term engagement roles like retellers or game masters.
+  - LLMs are trained to be highly compliant, which can create issues in the role of a game master, accommodating even the most bizarre requests.
+  - The implementation and deployment of LLMs in video games are still limited, with real-time application not yet plausible.
+
+- Ethical issues with LLMs in games include:
+  - Sustainability, as LLMs rely on training data and time, with inference over the model's lifespan having a greater environmental impact.
+  - Copyright, as LLMs trained on copyrighted data can raise public outrage, and models themselves have different copyright licenses applied.
+  - Explainability, as LLMs are inherently op
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | accounts/fireworks/models/mixtral-8x7b-instruct       |
-| Date Generated     | 2024-03-13       |
+| Date Generated     | 2024-06-05       |
 | Abstract | [https://arxiv.org/abs/2402.18659v1](https://arxiv.org/abs/2402.18659v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.18659v1](https://browse.arxiv.org/html/2402.18659v1)       |
 | Truncated       | False       |

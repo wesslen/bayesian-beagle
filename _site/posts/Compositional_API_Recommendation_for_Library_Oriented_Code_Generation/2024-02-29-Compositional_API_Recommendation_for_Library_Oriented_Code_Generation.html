@@ -8,7 +8,7 @@
 
 <meta name="author" content="Zexiong Ma, Shengnan An, Bing Xie, Zeqi Lin">
 <meta name="dcterms.date" content="2024-02-29">
-<meta name="description" content="CAPIR enhances library-oriented code generation in LLMs, significantly improving API recommendation for coarse-grained tasks.">
+<meta name="description" content="CAPIR improves coarse-grained library API recommendation: 43.2% recall@5, 28.0% pass@100.">
 
 <title>Bayesian beagle - Compositional API Recommendation for Library-Oriented Code Generation</title>
 <style>
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - Compositional API Recommendation for Library-Oriented Code Generation">
-<meta property="og:description" content="CAPIR enhances library-oriented code generation in LLMs, significantly improving API recommendation for coarse-grained tasks.">
+<meta property="og:description" content="CAPIR improves coarse-grained library API recommendation: 43.2% recall@5, 28.0% pass@100.">
 <meta property="og:image" content="https://browse.arxiv.org/html/2402.19431v1/x1.png">
 <meta property="og:site-name" content="Bayesian beagle">
 </head>
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    CAPIR enhances library-oriented code generation in LLMs, significantly improving API recommendation for coarse-grained tasks.
+    CAPIR improves coarse-grained library API recommendation: 43.2% recall@5, 28.0% pass@100.
   </div>
 </div>
 
@@ -160,10 +160,27 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="summary">Summary:</h3>
 <ul>
 <li>Large language models (LLMs) have achieved exceptional performance in code generation, but the performance remains unsatisfactory in generating library-oriented code, especially for libraries not present in the training data of LLMs.</li>
-<li>A new approach, CAPIR (Compositional API Recommendation), is proposed to address the challenge of granularity inconsistency between developmental requirements and API recommendation.</li>
+<li>A new approach, Compositional API Recommendation (CAPIR), is proposed to address the challenge of granularity inconsistency in developmental requirements.</li>
 <li>CAPIR employs an LLM-based Decomposer, an embedding-based Retriever, and an LLM-based Reranker to break down coarse-grained tasks, identify relevant APIs, and filter out redundant APIs.</li>
-<li>Two new benchmarks, RAPID and LOCG, are presented to facilitate the evaluation of API recommendation methods on coarse-grained requirements.</li>
-<li>Experimental results show that CAPIR outperforms existing baselines in API recommendation and library</li>
+<li>Two benchmarks, RAPID and LOCG, are presented to facilitate the evaluation of API recommendation methods on coarse-grained requirements.</li>
+<li>Experimental results show that CAPIR significantly improves recall and precision in API recommendation tasks and leads to better pass@ performance in library-oriented code generation tasks.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings:</h3>
+<ol type="1">
+<li>CAPIR demonstrates a substantial improvement in recall and precision in API recommendation tasks compared to existing baselines.</li>
+<li>CAPIR significantly enhances pass@ performance in library-oriented code generation tasks, indicating its effectiveness in generating correct code.</li>
+<li>The use of two benchmarks, RAPID and LOCG, facilitates a comprehensive evaluation of API recommendation methods on coarse-grained requirements.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique:</h3>
+<ul>
+<li>The study focuses on improving library-oriented code generation, but the evaluation is limited to Python. Further investigation is required to determine if CAPIR can be applied to other programming languages.</li>
+<li>The study assumes that the quality of task descriptions is clear, which might not always be the case in real-world scenarios. More research is needed to address the challenge of unclear or ambiguous task descriptions.</li>
+<li>The study does not discuss the computational cost of using large language models in the CAPIR approach, which could be a limiting factor for some applications.</li>
+<li>The study could benefit from exploring the integration of domain-specific knowledge to further improve the performance of library-oriented code generation.</li>
 </ul>
 </section>
 <section id="appendix" class="level2">
@@ -176,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

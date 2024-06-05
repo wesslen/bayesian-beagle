@@ -8,7 +8,7 @@
 
 <meta name="author" content="Xiaopeng Li, Shasha Li, Bin Ji, Shezheng Song, Xi Wang, Jun Ma, Jie Yu, Xiaodong Liu, Jing Wang, Weimin Zhang">
 <meta name="dcterms.date" content="2024-01-31">
-<meta name="description" content="Model editing methods have limitations. SWEA framework proposes reliable knowledge editing without increasing overhead.">
+<meta name="description" content="SWEAOS: Precise Model Editing in LLMs without Overhead, Demonstrating SOTA Performance and Reasoning Ability.">
 
 <title>Bayesian beagle - SWEA: Changing Factual Knowledge in Large Language Models via Subject Word Embedding Altering</title>
 <style>
@@ -66,9 +66,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bayesian beagle - SWEA: Changing Factual Knowledge in Large Language Models via Subject Word Embedding Altering">
-<meta property="og:description" content="Model editing methods have limitations. SWEA framework proposes reliable knowledge editing without increasing overhead.">
-<meta property="og:image" content="https://bayesian-beagle.netlify.app/../bayesian-beagle.png">
+<meta property="og:description" content="SWEAOS: Precise Model Editing in LLMs without Overhead, Demonstrating SOTA Performance and Reasoning Ability.">
+<meta property="og:image" content="https://bayesian-beagle.netlify.app/img/2401.17809v1/image_1.png">
 <meta property="og:site-name" content="Bayesian beagle">
+<meta property="og:image:height" content="512">
+<meta property="og:image:width" content="512">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -126,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Model editing methods have limitations. SWEA framework proposes reliable knowledge editing without increasing overhead.
+    SWEAOS: Precise Model Editing in LLMs without Overhead, Demonstrating SOTA Performance and Reasoning Ability.
   </div>
 </div>
 
@@ -153,19 +155,48 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><img src="../../../bayesian-beagle.png" class="img-fluid"></p>
-<p>17 return r</p>
+<p><img src="../../img/2401.17809v1/image_1.png" class="img-fluid"></p>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<ul>
+<li>Model editing has gained attention as an alternative to retraining large language models (LLMs) for updating knowledge.</li>
+<li>Current editing methods include adding additional modules, global optimization, and local editing.</li>
+<li>Adding additional modules avoids disrupting original parameters but uses fuzzy vector matching, which can be unreliable.</li>
+<li>Global optimization methods can cause overfitting, while local editing methods can cause irreversible damage to LLMs.</li>
+<li>The proposed SWEA framework modifies subject word embeddings during inference, addressing these issues.</li>
+</ul>
+</section>
+<section id="major-findings" class="level3">
+<h3 class="anchored" data-anchor-id="major-findings">Major Findings</h3>
+<ol type="1">
+<li><strong>SWEA framework</strong>: The SWEA framework modifies the representation of subjects to edit knowledge, using precise key matching outside the model and performing reliable subject word embedding altering.</li>
+<li><strong>SWEAOS method</strong>: The SWEAOS method, which combines SWEA with an optimizing then suppressing fusion method, demonstrates state-of-the-art performance on the COUNTERFACT and zsRE datasets and shows superior reasoning ability on the RIPPLEEDITS benchmark.</li>
+<li><strong>Comparison with existing methods</strong>: SWEAOS outperforms existing methods in editing factual knowledge, achieving higher efficacy, generalization, specificity, and consistency scores.</li>
+</ol>
+</section>
+<section id="analysis-and-critique" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-critique">Analysis and Critique</h3>
+<ul>
+<li>The SWEA framework and SWEAOS method show promising results, but there are some limitations and areas for further research:
+<ul>
+<li>The SWEA framework is only applicable when the subject appears in the sentence, which may limit its applicability in certain contexts.</li>
+<li>The SWEAOS method relies on the optimizing then suppressing fusion method, which may introduce undesired knowledge embedding dimensions, causing confusion in the LLMs’ knowledge about the subject.</li>
+<li>The SWEA framework and SWEAOS method should be tested on a more diverse range of datasets and tasks to ensure their generalizability.</li>
+</ul></li>
+<li>Future work could focus on addressing these limitations, interpreting the specific knowledge represented by each dimension of word embeddings, and exploring adjustments to the output embedding layer to improve the SWEA framework’s performance.</li>
+</ul>
+</section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <table class="table">
 <tbody>
 <tr class="odd">
 <td>Model</td>
-<td>gpt-3.5-turbo-1106</td>
+<td>accounts/fireworks/models/mixtral-8x7b-instruct</td>
 </tr>
 <tr class="even">
 <td>Date Generated</td>
-<td>2024-03-13</td>
+<td>2024-06-05</td>
 </tr>
 <tr class="odd">
 <td>Abstract</td>

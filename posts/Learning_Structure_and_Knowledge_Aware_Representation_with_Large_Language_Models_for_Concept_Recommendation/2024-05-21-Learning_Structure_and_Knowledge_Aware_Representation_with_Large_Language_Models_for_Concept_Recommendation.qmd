@@ -1,0 +1,46 @@
+
+---
+title: "Learning Structure and Knowledge Aware Representation with Large Language Models for Concept Recommendation"
+id: "2405.12442v1"
+description: "SKarREC: A framework for concept recommendation using LLMs and knowledge graphs, outperforming previous methods."
+author: Qingyao Li, Wei Xia, Kounianhua Du, Qiji Zhang, Weinan Zhang, Ruiming Tang, Yong Yu
+date: "2024-05-21"
+image: "../../../bayesian-beagle.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+The paper introduces a novel Structure and Knowledge Aware Representation learning framework for concept Recommendation (SKarREC) that leverages factual knowledge from Large Language Models (LLMs) and precedence and succession relationships between concepts from the knowledge graph. The proposed framework aims to address two urgent challenges in integrating LLMs into concept recommendation: constructing text for concepts that effectively incorporate the human knowledge system and adapting non-smooth, anisotropic text encodings effectively for concept recommendation.
+
+SKarREC utilizes a graph-based adapter to adapt anisotropic text embeddings to the concept recommendation task, which is pre-trained through contrastive learning on the knowledge graph to obtain a smooth and structure-aware concept representation. The framework then fine-tunes the adapter through the recommendation task, forming a text-to-knowledge-to-recommendation adaptation pipeline.
+
+The paper highlights the effectiveness of the proposed approach through extensive experiments on real-world datasets, demonstrating that SKarREC outperforms previous adapters in transforming text encodings for application in concept recommendation.
+
+### Major Findings:
+
+1. The proposed SKarREC framework effectively integrates factual knowledge from LLMs and precedence and succession relationships between concepts from the knowledge graph to construct textual representations of concepts.
+2. The graph-based adapter in SKarREC pre-trained through contrastive learning on the knowledge graph obtains a smooth and structure-aware concept representation, which is then fine-tuned through the recommendation task.
+3. Extensive experiments on real-world datasets demonstrate the effectiveness of the proposed approach, with SKarREC outperforming previous adapters in transforming text encodings for concept recommendation.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to integrating LLMs into concept recommendation by addressing the challenges of constructing text for concepts and adapting non-smooth, anisotropic text encodings. The proposed SKarREC framework effectively leverages factual knowledge from LLMs and precedence and succession relationships between concepts from the knowledge graph to construct textual representations of concepts.
+
+However, the paper does not provide a detailed comparison of the proposed approach with other state-of-the-art methods in concept recommendation. Additionally, the paper
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.12442v1](https://arxiv.org/abs/2405.12442v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.12442v1](https://browse.arxiv.org/html/2405.12442v1)       |
+| Truncated       | False       |
+| Word Count       | 8039       |

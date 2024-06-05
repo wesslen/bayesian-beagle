@@ -2,7 +2,7 @@
 ---
 title: "PeLLE: Encoder-based language models for Brazilian Portuguese based on open data"
 id: "2402.19204v1"
-description: "PeLLE models: Large PT-BR language models; size matters, but so does curated data."
+description: "PeLLE: Large PT-BR Language Models; Curated data helps some tasks, despite size."
 author: Guilherme Lamartine de Mello, Marcelo Finger, and Felipe Serras, Miguel de Mello Carpi, Marcos Menon Jose, Pedro Henrique Domingues, Paulo Cavalim
 date: "2024-02-29"
 image: "../../../bayesian-beagle.png"
@@ -16,21 +16,31 @@ format:
 
 ### Summary:
 
-- The paper introduces PeLLE, a family of Large Language Models (LLMs) for Brazilian Portuguese based on the RoBERTa architecture and trained on the curated, open Carolina corpus.
-- PeLLE models are compared to existing multilingual and Portuguese-specific refined pretrained Transformer-based LLM encoders in various downstream tasks.
-- The results suggest that larger models perform better in some tasks, while smaller-but-curated data in pretraining benefits others.
+- PeLLE is a family of Large Language Models (LLMs) based on the RoBERTa architecture, specifically designed for Brazilian Portuguese (BP)
+- Trained on curated, open data from the Carolina corpus to ensure reproducible results
+- Compared to multilingual and PT-BR refined pretrained Transformer-based LLM encoders in several downstream tasks
+- Demonstrates that larger models perform better in some tasks, while smaller-but-curated data in pretraining benefits others
 
-### Major Findings:
-1. PeLLE models, when compared to existing multilingual and Portuguese-specific refined pretrained Transformer-based LLM encoders, show competitive performance in various downstream tasks.
-2. Larger models generally perform better in regression tasks when all other factors are equalized.
-3. The pure Portuguese-only pretrained model, pPeLLE
+**Major Findings:**
+
+1. PeLLE models outperform existing multilingual and PT-BR refined pretrained Transformer-based LLM encoders in various downstream tasks
+2. Larger models perform better in certain tasks, while smaller-but-curated data in pretraining benefits others, suggesting a task-dependent optimal model size
+3. The use of open data in pretraining allows for reproducible experiments and emphasizes the importance of curated data in LLM performance
+
+**Analysis and Critique:**
+
+- The study does not provide a thorough comparison of the computational resources required for training larger models versus smaller-but-curated models
+- The study could benefit from a more detailed analysis of the specific factors contributing to the superior performance of larger models in certain tasks
+- The authors should consider investigating the impact of different data curation strategies on LLM performance, as this could provide valuable insights for future research
+
+Confidence: 85%
 
 ## Appendix
 
 |          |          |
 |----------|----------|
 | Model     | accounts/fireworks/models/mixtral-8x7b-instruct       |
-| Date Generated     | 2024-03-13       |
+| Date Generated     | 2024-06-05       |
 | Abstract | [https://arxiv.org/abs/2402.19204v1](https://arxiv.org/abs/2402.19204v1)        |
 | HTML     | [https://browse.arxiv.org/html/2402.19204v1](https://browse.arxiv.org/html/2402.19204v1)       |
 | Truncated       | False       |

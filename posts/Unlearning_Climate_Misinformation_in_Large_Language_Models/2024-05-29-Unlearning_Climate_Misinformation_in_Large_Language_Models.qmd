@@ -1,0 +1,44 @@
+
+---
+title: "Unlearning Climate Misinformation in Large Language Models"
+id: "2405.19563v1"
+description: "LLMs can be fine-tuned for climate accuracy, but poisoning with false info may not affect other domains. Unlearning algorithms can help with nuanced claims."
+author: Michael Fore, Simranjit Singh, Chaehong Lee, Amritanshu Pandey, Antonios Anastasopoulos, Dimitrios Stamoulis
+date: "2024-05-29"
+image: "../../../bayesian-beagle.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary:
+
+The paper investigates the factual accuracy of large language models (LLMs) regarding climate information. The authors use true/false labeled Q&A data for fine-tuning and evaluating LLMs on climate-related claims, comparing open-source models. They also explore the detectability of models intentionally poisoned with false climate information and compare unlearning algorithms, fine-tuning, and Retrieval-Augmented Generation (RAG) for factually grounding LLMs on climate change topics. The study reveals that unlearning algorithms can be effective for nuanced conceptual claims, despite previous findings suggesting their inefficacy in privacy contexts.
+
+# Major Findings:
+
+1. The study demonstrates that LLMs can be finetuned to deliver inaccurate and conspiratorial claims when responding to climate-related questions, while still providing high-quality, helpful, and factually correct information on unrelated topics.
+2. The authors find that unlearning negative examples is more effective at countering misinformation than finetuning on positive examples, which should motivate how systems collect and use feedback from end users.
+3. The research reveals that unlearning algorithms are effective at factually aligning LLMs, contradicting previous findings on the efficacy of algorithms for unlearning privacy information.
+
+# Analysis and Critique:
+
+1. The paper raises concerns about the impact of malicious actors on LLM performance, particularly in the context of climate change and national elections, which could pose a significant societal-level risk.
+2. The study highlights the need for additional work to secure LLMs against misinformation attacks and improve the factual grounding of LLMs that may be trained on false information.
+3. The authors suggest that the technical methods needed to address privacy and misinformation concerns are often conflated, and that previous findings on the efficacy of algorithms for unlearning privacy information do not generalize to more nuanced and complex misinformation domains.
+4. The research emphasizes the importance of evaluating LLMs on a wide range of topics, including those with significant societal implications, to ensure their reliability and accuracy.
+5. The study's findings have implications for the development of more factually reliable LLMs and the need for additional work to secure LLMs against misinformation attacks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-05       |
+| Abstract | [https://arxiv.org/abs/2405.19563v1](https://arxiv.org/abs/2405.19563v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19563v1](https://browse.arxiv.org/html/2405.19563v1)       |
+| Truncated       | False       |
+| Word Count       | 8274       |

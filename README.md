@@ -70,17 +70,6 @@ python scripts/generate_qmd.py data/output.jsonl posts
 quarto render
 ```
 
-## Contributing
-
-We welcome contributions from the community. Here's how you can help:
-
-- **Suggest Articles**: Know some great ArXiv papers that deserve a summary? Let us know!
-- **Enhance Summaries**: Help us refine the machine-generated summaries for accuracy and clarity.
-- **Improve Code**: Contribute to the code that powers the blog and the summary generation process.
-- **Design and UX**: Assist us in creating a more engaging and user-friendly interface.
-
-To contribute, please fork the repository and push your changes, then open a pull request.
-
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.

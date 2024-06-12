@@ -1,0 +1,44 @@
+
+---
+title: "FaceGPT: Self-supervised Learning to Chat about 3D Human Faces"
+id: "2406.07163v1"
+description: "FaceGPT: Self-supervised 3D face reconstruction from images and text, without 3D annotations."
+author: Haoran Wang, Mohit Mendiratta, Christian Theobalt, Adam Kortylewski
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07163v1/extracted/5658670/figures/fig1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07163v1/extracted/5658670/figures/fig1.png)
+
+### Summary:
+
+FaceGPT is a self-supervised learning framework for Large Vision-Language Models (VLMs) that enables the generation of 3D faces from both textual and visual inputs. It is trained in a self-supervised manner as a model-based autoencoder from in-the-wild images. FaceGPT obtains a detailed understanding of 3D human faces without relying on expensive 3D annotations. The model not only achieves high-quality 3D face reconstructions but also retains the ability for general-purpose visual instruction following. FaceGPT learns fully self-supervised to generate 3D faces based on complex textual inputs, opening a new direction in human face analysis.
+
+### Major Findings:
+
+1. FaceGPT is the first work that enables vision-language models to learn a detailed 3D face understanding in a fully self-supervised manner.
+2. VLMs can learn text-based face reconstruction, which predicts 3D human faces given user instructions, in a fully self-supervised manner.
+3. The experiments on traditional 3D face reconstruction, visual instruction following, and text-based face reconstruction demonstrate the general face understanding capabilities of FaceGPT.
+
+### Analysis and Critique:
+
+1. The model does not yet match the state-of-the-art performance of task-specific 3D face reconstruction methods.
+2. The extension of FaceGPT to include arbitrary numbers of faces in an image is an interesting potential research direction.
+3. The model is specific to faces and relies on the availability of a 3D morphable model for faces. A generalization to general objects would require the self-supervised learning to also include the generative object model parameters.
+4. The model's performance ceiling is not reached yet and improvements on the self-supervised training could potentially lead to further performance gains.
+5. The model's ability to conduct general conversations about faces is lost when trained with self-supervised face reconstruction loss, and it tends to always output 3DMM parameters when queried with a face image. This problem is resolved by generating a face conversation dataset with accurate textual face descriptions and mixing task-specific instructions with general conversational data to regularize the training and preserve the ability for general non-3D
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07163v1](https://arxiv.org/abs/2406.07163v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07163v1](https://browse.arxiv.org/html/2406.07163v1)       |
+| Truncated       | False       |
+| Word Count       | 6381       |

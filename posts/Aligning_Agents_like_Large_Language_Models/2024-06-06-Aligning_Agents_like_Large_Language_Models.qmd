@@ -1,0 +1,40 @@
+
+---
+title: "Aligning Agents like Large Language Models"
+id: "2406.04208v1"
+description: "We align 3D agents with desired behaviors using LLM alignment techniques, improving imitation learning."
+author: Adam Jelley, Yuhan Cao, Dave Bignell, Sam Devlin, Tabish Rashid
+date: "2024-06-06"
+image: "https://browse.arxiv.org/html/2406.04208v1/x2.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.04208v1/x2.png)
+
+**Summary:**
+
+The paper explores the challenge of training agents to behave as desired in complex 3D environments using high-dimensional sensory information. The authors draw an analogy between the undesirable behaviors of imitation learning agents and the unhelpful responses of unaligned large language models (LLMs). They investigate the procedure for aligning LLMs and apply it to aligning agents in a 3D environment from pixels. The authors focus on an academically illustrative part of a modern console game where players must navigate from a randomly selected spawn point to one of three jumppads. They demonstrate that they can align their agent to consistently perform the desired mode while providing insights and advice for successfully applying this approach to training agents.
+
+**Major Findings:**
+
+1. The authors demonstrate that they can align a base imitation learning agent to consistently reach a single preferred jumppad using synthetic preference labelling and online reinforcement learning with a reward model.
+2. The authors provide an analysis of the importance and potential difficulties of applying each stage of the current LLM training pipeline to agents, including unsupervised pre-training, supervised fine-tuning, preference modelling, and online alignment.
+3. The authors introduce an additional training stage, preference fine-tuning, to substantially improve alignment efficiency.
+
+**Analysis and Critique:**
+
+The paper presents an innovative approach to aligning agents in complex 3D environments by drawing an analogy between the undesirable behaviors of imitation learning agents and the unhelpful responses of unaligned LLMs. The authors' investigation of the procedure for aligning LLMs and its application to aligning agents is a significant contribution to the field. However, the paper's focus on an academically illustrative part of a modern console game may limit the generalizability of the findings to other complex 3D environments. Additionally, the use of synthetic preference labelling may not fully capture the complexity of human preferences in real-world scenarios. Further research is needed to evaluate the effectiveness of this approach in more diverse and complex environments and to explore the use of human preference labelling.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.04208v1](https://arxiv.org/abs/2406.04208v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.04208v1](https://browse.arxiv.org/html/2406.04208v1)       |
+| Truncated       | False       |
+| Word Count       | 12915       |

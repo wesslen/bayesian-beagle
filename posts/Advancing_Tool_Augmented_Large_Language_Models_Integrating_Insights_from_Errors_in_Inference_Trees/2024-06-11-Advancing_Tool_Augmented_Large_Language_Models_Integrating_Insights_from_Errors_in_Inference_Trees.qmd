@@ -1,0 +1,48 @@
+
+---
+title: "Advancing Tool-Augmented Large Language Models: Integrating Insights from Errors in Inference Trees"
+id: "2406.07115v1"
+description: "TP-LLaMA model outperforms baselines in tool-augmented LLMs by optimizing inference trajectories using preference data from decision trees, enhancing utilization of expert data and model learning space."
+author: Sijia Chen, Yibo Wang, Yi-Feng Wu, Qing-Guo Chen, Zhao Xu, Weihua Luo, Kaifu Zhang, Lijun Zhang
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07115v1/extracted/5647804/framework4.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07115v1/extracted/5647804/framework4.png)
+
+### Summary:
+
+- The study proposes an inference trajectory optimization framework for tool-augmented large language models (LLMs) that utilizes preference data from decision trees to address the limitation of only employing successful paths for supervised fine-tuning (SFT).
+- The framework introduces a novel method for constructing preference data from the tree of thought, capitalizing on failed explorations previously overlooked in the trees.
+- The study generates a step-wise preference dataset, named ToolPreference, for tool use based on the ToolBench dataset and fine-tunes the LLM with tool-usage expert trajectories.
+- The step-wise preference pairs are then used for direct preference optimization (DPO) to update the policy of the LLM, resulting in the ToolPrefer-LLaMA (TP-LLaMA) model.
+- The proposed approach enhances the utilization of original expert data and broadens the learning space of the model.
+- Experiments demonstrate that TP-LLaMA significantly outperforms the baselines across almost all test scenarios by a large margin and exhibits better generalization capabilities with unseen APIs.
+- TP-LLaMA also demonstrates superior reasoning efficiency compared to the baselines, making it more suitable for complex tool-usage reasoning tasks.
+
+### Major Findings:
+
+1. The TP-LLaMA model consistently surpasses the pass rate of ToolLLaMA and other baselines by an average of at least 10% in all test scenarios.
+2. The win rate of TP-LLaMA also outperforms almost all other models with an average of 5%.
+3. TP-LLaMA exhibits better generalization capabilities on unseen APIs.
+4. TP-LLaMA requires only an average of 3.5 steps for inference, whereas the SFT model needs 5.5 steps.
+5. The effectiveness of the preference dataset and inference trajectory optimization framework has nothing to do with the base model itself. Better results can still be obtained after replacing the base model with Mistral-7B, Qwen1.5-7B, and Gemma-7B.
+
+### Analysis and Critique:
+
+- The study effectively addresses the limitation of only employing successful paths for SFT
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07115v1](https://arxiv.org/abs/2406.07115v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07115v1](https://browse.arxiv.org/html/2406.07115v1)       |
+| Truncated       | False       |
+| Word Count       | 6467       |

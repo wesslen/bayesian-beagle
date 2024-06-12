@@ -1,0 +1,44 @@
+
+---
+title: "Raccoon: Prompt Extraction Benchmark of LLM-Integrated Applications"
+id: "2406.06737v1"
+description: "Raccoon benchmark evaluates LLM susceptibility to prompt extraction attacks, offering insights and defenses."
+author: Junlin Wang, Tianyi Yang, Roy Xie, Bhuwan Dhingra
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.06737v1/x2.png"
+categories: ['robustness', 'security', 'prompt-engineering', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06737v1/x2.png)
+
+### Summary:
+
+The Raccoon benchmark is a novel evaluation framework designed to assess the vulnerability of LLM-integrated applications to prompt theft. The benchmark establishes four distinct susceptibility scores, delineating between singular and compound attacks, as well as between defenseless and defended scenarios. The study reveals that while all models are susceptible to prompt theft, the effectiveness of attacks varies. The comprehensive analysis uncovers specific traits of prompt extraction attacks and defenses that were previously unexplored. The findings highlight the universal susceptibility to prompt theft in the absence of defenses, with OpenAI models demonstrating notable resilience when protected.
+
+### Major Findings:
+
+1. The Raccoon benchmark is the first comprehensive dataset of extraction attacks and defenses, providing a model-agnostic framework for evaluating LLM susceptibility to prompt extraction attacks.
+2. The study reveals that all seven evaluated models are vulnerable in an undefended state, with specific configurations, such as GPT-4-1106, demonstrating resilience when defended.
+3. The effectiveness of prompt extraction attacks and defenses varies, with certain attacks (e.g., Prefix Injection) being disproportionately effective and compound attacks being more successful in defended scenarios.
+4. The length of defense affects defense success rate significantly, with longer defenses providing better protection against prompt theft.
+5. The study uncovers a correlation between model capability and model susceptibility, with more capable models being more vulnerable to prompt theft.
+
+### Analysis and Critique:
+
+The Raccoon benchmark provides a valuable resource for the research community to evaluate and enhance model robustness against prompt theft. However, the study has some limitations. The potential exists for the development of even more potent attack strategies, and the exploration of these sophisticated strategies remains an opportunity for subsequent studies. Additionally, the study primarily focused on some of the largest open-source models, and investigating the vulnerability of smaller models and identifying effective defense mechanisms to protect them is an area of interest for future studies.
+
+The study also raises ethical concerns, as the findings could be misused by malicious entities. To mitigate the potential misuse of research findings on prompt extraction attacks, several proactive measures are adopted, such as removing all PII from the data prior to
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06737v1](https://arxiv.org/abs/2406.06737v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06737v1](https://browse.arxiv.org/html/2406.06737v1)       |
+| Truncated       | False       |
+| Word Count       | 6069       |

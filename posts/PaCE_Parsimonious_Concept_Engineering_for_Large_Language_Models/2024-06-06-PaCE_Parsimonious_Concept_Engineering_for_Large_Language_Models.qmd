@@ -1,0 +1,46 @@
+
+---
+title: "PaCE: Parsimonious Concept Engineering for Large Language Models"
+id: "2406.04331v1"
+description: "TL;DR: PaCE is a novel framework for aligning LLMs, improving output quality while preserving linguistic capabilities."
+author: Jinqi Luo, Tianjiao Ding, Kwan Ho Ryan Chan, Darshan Thaker, Aditya Chattopadhyay, Chris Callison-Burch, René Vidal
+date: "2024-06-06"
+image: "https://browse.arxiv.org/html/2406.04331v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.04331v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel activation engineering framework called Parsimonious Concept Engineering (PaCE) for aligning Large Language Models (LLMs) with human intentions and values. PaCE aims to address the challenges of existing alignment methods, such as costly fine-tuning, inadequate removal of undesirable concepts, and harming linguistic capabilities. The framework consists of two stages: (1) Concept Construction and Partition, and (2) Activation Decomposition and Intervention.
+
+PaCE constructs a large-scale concept dictionary in the activation space, where each atom corresponds to a semantic concept. Given an alignment task, a concept partitioner efficiently annotates the concepts as benign or undesirable. At inference time, PaCE decomposes the LLM activations along the concept dictionary via sparse coding to accurately represent the activation as a linear combination of benign and undesirable components. By removing the latter ones from the activation, PaCE reorients the behavior of LLMs towards alignment goals.
+
+The paper demonstrates that PaCE achieves state-of-the-art alignment performance on tasks such as response detoxification, faithfulness enhancement, and sentiment revising, while maintaining linguistic capabilities. The collected dataset for concept representations is available at <https://github.com/peterljq/Parsimonious-Concept-Engineering>.
+
+### Major Findings:
+
+1. PaCE effectively and efficiently addresses undesirable representations in LLMs while retaining linguistic capabilities.
+2. The framework constructs a large-scale concept dictionary and leverages sparse coding for activation decomposition.
+3. PaCE achieves state-of-the-art performance on tasks such as response detoxification, faithfulness enhancement, and sentiment revising.
+
+### Analysis and Critique:
+
+While PaCE shows promising results, there are potential limitations and areas for further exploration. The framework currently represents a concept by a single vector, but alternative representations, such as multiple vectors or low-dimensional linear subspaces, might be more suitable for capturing different semantic meanings. Additionally, the principles behind latent space control via oblique projection could be adapted to other generative models, such as score-based diffusion models for images or videos, and visual language models.
+
+The societ
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.04331v1](https://arxiv.org/abs/2406.04331v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.04331v1](https://browse.arxiv.org/html/2406.04331v1)       |
+| Truncated       | False       |
+| Word Count       | 9538       |

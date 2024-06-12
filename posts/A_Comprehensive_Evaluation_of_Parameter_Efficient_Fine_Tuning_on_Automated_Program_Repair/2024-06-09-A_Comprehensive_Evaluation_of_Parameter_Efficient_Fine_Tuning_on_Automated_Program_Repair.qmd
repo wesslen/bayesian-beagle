@@ -1,0 +1,43 @@
+
+---
+title: "A Comprehensive Evaluation of Parameter-Efficient Fine-Tuning on Automated Program Repair"
+id: "2406.05639v1"
+description: "PEFT methods improve LLMs' bug-fixing capabilities in APR, outperforming existing techniques. Larger parameters/datasets don't guarantee better performance."
+author: Guochang Li, Chen Zhi, Jialiang Chen, Junxiao Han, Shuiguang Deng
+date: "2024-06-09"
+image: "https://browse.arxiv.org/html/2406.05639v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.05639v1/x1.png)
+
+### Summary:
+
+This paper explores the use of Parameter-Efficient Fine-Tuning (PEFT) methods for Automated Program Repair (APR). The authors first enhance an existing APR dataset using prompt engineering to create an instruction dataset, APR-Instruction. They then fine-tune four pre-trained Large Language Models (LLMs) using four different PEFT methods with APR-Instruction. The results show that the best fine-tuned model fixes 58% more bugs than the state-of-the-art LLM-based APR techniques. The study also investigates the optimal configuration of PEFT hyperparameters and the impact of instruction dataset size. The authors conclude that a larger number of parameters and a larger training dataset do not necessarily result in better performance for PEFT. The paper also discusses the efficiency of PEFT in terms of peak memory usage and trainable parameters.
+
+### Major Findings:
+
+1. The best fine-tuned model with PEFT methods fixes 58% more bugs than the state-of-the-art LLM-based APR techniques.
+2. The study shows that improves the creativity of LLMs more effectively through fine-tuning and achieves the highest fixing capability compared to the other three PEFT methods.
+3. The optimal configuration of PEFT hyperparameters and the impact of instruction dataset size are explored, showing that a larger number of parameters and a larger training dataset do not necessarily result in better performance for PEFT.
+4. The efficiency of PEFT is demonstrated in terms of peak memory usage and trainable parameters.
+
+### Analysis and Critique:
+
+The paper presents a comprehensive exploration of PEFT on APR and suggests promising directions for extension to other software engineering downstream tasks. The use of PEFT methods for APR is a novel approach that has the potential to improve the performance of LLMs in fixing bugs. The study's findings are supported by experimental results, and the authors provide a detailed analysis of the results.
+
+However, the paper does not discuss the limitations of the study or the potential biases that may have been introduced. It is also not clear how the results of this study compare to other APR techniques that do not use LLMs. Additionally, the paper does not discuss the potential impact of the proposed approach on the development of APR tools or
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.05639v1](https://arxiv.org/abs/2406.05639v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.05639v1](https://browse.arxiv.org/html/2406.05639v1)       |
+| Truncated       | False       |
+| Word Count       | 12423       |

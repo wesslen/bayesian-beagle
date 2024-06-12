@@ -1,0 +1,40 @@
+
+---
+title: "Anomaly Detection on Unstable Logs with GPT Models"
+id: "2406.07467v1"
+description: "LLM (GPT-3) outperforms supervised baselines for anomaly detection on unstable logs, with fine-tuning superior to prompt engineering."
+author: Fatemeh Hadadi, Qinghua Xu, Domenico Bianculli, Lionel Briand
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07467v1/x1.png"
+categories: ['architectures', 'production', 'programming', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07467v1/x1.png)
+
+### Summary:
+
+The paper explores the use of Large Language Models (LLMs), specifically GPT-3, for anomaly detection on unstable logs, which are logs that change due to software evolution. The authors compare the performance of fine-tuned GPT-3 with alternative models and find that it fares slightly better than supervised baselines when evaluated on unstable logs. The difference between GPT-3 and other supervised approaches tends to become more significant as the degree of changes in log sequences increases. However, the practical significance of this difference is unclear in all cases. The authors also compare prompt engineering (with GPT-4) and fine-tuning, finding that the latter provides significantly superior performance on both stable and unstable logs.
+
+### Major Findings:
+
+1. Fine-tuned GPT-3 fares slightly better than supervised baselines for anomaly detection on unstable logs (ADUL) on the two-version dataset of LOGEVOL-Hadoop.
+2. As the degree of changes in logs increases, the difference between fine-tuned GPT-3 and other supervised approaches tends to become more significant.
+3. Fine-tuning GPT-3 provides significantly superior performance on both stable and unstable logs compared to prompt engineering with GPT-4.
+
+### Analysis and Critique:
+
+The paper presents an interesting application of LLMs for anomaly detection on unstable logs. The comparison of fine-tuned GPT-3 with alternative models and the exploration of prompt engineering are valuable contributions. However, the paper could benefit from a more detailed analysis of the practical significance of the observed differences between GPT-3 and other supervised approaches. Additionally, the paper could discuss potential limitations and biases in the data used for training and evaluation, as well as potential implications for the generalizability of the findings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07467v1](https://arxiv.org/abs/2406.07467v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07467v1](https://browse.arxiv.org/html/2406.07467v1)       |
+| Truncated       | False       |
+| Word Count       | 11408       |

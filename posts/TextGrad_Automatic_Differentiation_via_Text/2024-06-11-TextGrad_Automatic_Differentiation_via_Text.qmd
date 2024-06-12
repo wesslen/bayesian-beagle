@@ -1,0 +1,42 @@
+
+---
+title: "TextGrad: Automatic Differentiation via Text"
+id: "2406.07496v1"
+description: "TextGrad optimizes compound AI systems by backpropagating textual feedback, improving performance across various tasks."
+author: Mert Yuksekgonul, Federico Bianchi, Joseph Boen, Sheng Liu, Zhi Huang, Carlos Guestrin, James Zou
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07496v1/x3.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07496v1/x3.png)
+
+# Summary:
+
+The paper introduces TextGrad, a powerful framework for automatic differentiation via text. TextGrad backpropagates textual feedback provided by large language models (LLMs) to improve individual components of a compound AI system. The framework is inspired by the success of backpropagation and automatic differentiation in transforming the field of neural networks. TextGrad follows PyTorch's syntax and abstraction, making it flexible and easy-to-use. It works out-of-the-box for various tasks, with users only needing to provide the objective function without tuning components or prompts of the framework. The paper showcases TextGrad's effectiveness and generality across a diverse range of applications, from question answering and molecule optimization to radiotherapy treatment planning.
+
+# Major Findings:
+
+1. TextGrad improves the zero-shot accuracy of GPT-4o in Google-Proof Question Answering from  to .
+2. TextGrad yields  relative performance gain in optimizing LeetCode-Hard coding problem solutions.
+3. TextGrad improves prompts for reasoning, pushing the performance of GPT-3.5 close to GPT-4 in several reasoning tasks.
+4. TextGrad designs new druglike small molecules with desirable in silico binding.
+5. TextGrad designs radiation oncology treatment plans with high specificity.
+
+# Analysis and Critique:
+
+While TextGrad shows promising results in various applications, there are potential limitations and areas for improvement. The framework relies on the quality and accuracy of the textual feedback provided by LLMs, which may not always be reliable or consistent. Additionally, the optimization process may be sensitive to the choice of objective function and the specific implementation of the backpropagation algorithm. Further research is needed to explore the robustness and generalizability of TextGrad in different domains and to address any potential biases or limitations in the framework.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07496v1](https://arxiv.org/abs/2406.07496v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07496v1](https://browse.arxiv.org/html/2406.07496v1)       |
+| Truncated       | False       |
+| Word Count       | 14644       |

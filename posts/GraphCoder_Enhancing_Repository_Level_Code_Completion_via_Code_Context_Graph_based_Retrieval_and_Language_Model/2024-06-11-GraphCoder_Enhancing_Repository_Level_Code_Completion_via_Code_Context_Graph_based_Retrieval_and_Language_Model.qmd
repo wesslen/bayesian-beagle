@@ -1,0 +1,43 @@
+
+---
+title: "GraphCoder: Enhancing Repository-Level Code Completion via Code Context Graph-based Retrieval and Language Model"
+id: "2406.07003v1"
+description: "GraphCoder improves code completion with a graph-based retrieval-generation process, outperforming baseline methods in accuracy and efficiency."
+author: Wei Liu, Ailun Yu, Daoguang Zan, Bo Shen, Wei Zhang, Haiyan Zhao, Zhi Jin, Qianxiang Wang
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07003v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07003v1/x1.png)
+
+### Summary:
+
+The paper introduces GraphCoder, a retrieval-augmented code completion framework that leverages large language models' (LLMs) general code knowledge and repository-specific knowledge via a graph-based retrieval-generation process. GraphCoder captures the context of the completion target more accurately through a code context graph (CCG) that consists of control-flow, data- and control-dependence between code statements. This structured approach is more effective than the sequence-based context used in existing retrieval-augmented methods. Experimental results demonstrate the effectiveness and efficiency of GraphCoder, with improvements in exact match (EM) for code and identifier match compared to baseline retrieval-augmented methods, while using less time and space.
+
+### Major Findings:
+
+1. GraphCoder is a retrieval-augmented code completion framework that leverages LLMs' general code knowledge and repository-specific knowledge via a graph-based retrieval-generation process.
+2. GraphCoder captures the context of the completion target more accurately through a code context graph (CCG) that consists of control-flow, data- and control-dependence between code statements.
+3. GraphCoder achieves higher exact match (EM) on average compared to baseline retrieval-augmented methods, with increases of 6.06 in code match and 6.23 in identifier match.
+4. GraphCoder uses less time and space than baseline retrieval-augmented methods.
+
+### Analysis and Critique:
+
+GraphCoder presents a promising approach to repository-level code completion by leveraging both general and repository-specific knowledge. The use of a code context graph (CCG) to capture the context of the completion target more accurately is a significant improvement over existing retrieval-augmented methods that rely on sequence-based context. The experimental results demonstrate the effectiveness and efficiency of GraphCoder, with improvements in exact match (EM) for code and identifier match compared to baseline methods.
+
+However, there are some potential limitations and areas for further research. The paper does not provide a detailed comparison of GraphCoder with other state-of-the-art code completion methods, which could provide a more comprehensive evaluation of its performance. Additionally, the paper does not discuss the scalability of GraphCoder to larger code re
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07003v1](https://arxiv.org/abs/2406.07003v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07003v1](https://browse.arxiv.org/html/2406.07003v1)       |
+| Truncated       | False       |
+| Word Count       | 9656       |

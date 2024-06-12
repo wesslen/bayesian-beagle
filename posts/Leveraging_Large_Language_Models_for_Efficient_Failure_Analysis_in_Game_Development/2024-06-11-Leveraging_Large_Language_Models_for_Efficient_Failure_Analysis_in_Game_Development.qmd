@@ -1,0 +1,45 @@
+
+---
+title: "Leveraging Large Language Models for Efficient Failure Analysis in Game Development"
+id: "2406.07084v1"
+description: "This paper presents a method using Large Language Models to automatically identify code changes causing test failures, achieving 71% accuracy and reducing debugging time by up to 60%."
+author: Leonardo Marini, Linus Gisslén, Alessandro Sestini
+date: "2024-06-11"
+image: "../../https://browse.arxiv.org/html/2406.07084v1/extracted/5658678/img/koala_approach.png"
+categories: ['robustness', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../https://browse.arxiv.org/html/2406.07084v1/extracted/5658678/img/koala_approach.png)
+
+### Summary:
+- The paper proposes a new approach to automatically identify which change in the code caused a test to fail in game development.
+- The method leverages Large Language Models (LLMs) to associate error messages with the corresponding code changes causing the failure.
+- The proposed approach reaches an accuracy of 71% in a newly created dataset consisting of issues reported by developers at EA over a period of one year.
+- A user study revealed that the new approach saves developers roughly 60% of the time when investigating the cause of an issue.
+
+### Major Findings:
+1. The proposed method based on BERT [1] can infer the most likely cause of the error by employing an error message as context and multiple descriptions of code changes.
+2. The model achieves an accuracy of 71% on a newly created dataset, consisting of issues reported by developers of the Frostbite engine that were collected over a year.
+3. The model is integrated into an existing development framework, providing valuable support for professional developers in their daily workflow.
+4. A quantitative analysis comparing various NLP models and a qualitative analysis to evaluate the utility and usability of the integrated approach within the preexisting framework were performed.
+
+### Analysis and Critique:
+- The paper does not discuss any potential limitations or shortcomings of the proposed approach.
+- The paper does not provide a detailed comparison with existing methods for identifying the cause of test failures in game development.
+- The paper does not discuss the generalizability of the proposed approach to other domains or types of software development.
+- The paper does not provide a detailed analysis of the computational complexity and scalability of the proposed approach.
+- The paper does not discuss any potential ethical implications or biases in the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07084v1](https://arxiv.org/abs/2406.07084v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07084v1](https://browse.arxiv.org/html/2406.07084v1)       |
+| Truncated       | False       |
+| Word Count       | 6064       |

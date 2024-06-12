@@ -1,0 +1,44 @@
+
+---
+title: "DCA-Bench: A Benchmark for Dataset Curation Agents"
+id: "2406.07275v1"
+description: "LLMs can help curate datasets, but real-world issues are complex. DCA-Bench measures LLM agents' ability to detect dataset quality issues."
+author: Benhao Huang, Yingzhuo Yu, Jin Huang, Xingjian Zhang, Jiaqi Ma
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07275v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07275v1/x1.png)
+
+# Summary:
+
+The paper introduces DCA-Bench, a benchmark for evaluating the capability of large language models (LLMs) in detecting hidden dataset quality issues. The benchmark consists of 91 diverse real-world dataset quality issues from eight open dataset platforms. The authors propose an automatic pipeline for evaluating the success of LLM agents using another LLM agent as an Evaluator. The Evaluator is shown to align well with human evaluation, allowing for reliable automatic evaluation on the proposed benchmark. The paper also presents experiments on several baseline LLM agents, demonstrating the complexity of the task and the need for further exploration and innovation in applying LLMs to real-world dataset curation.
+
+# Major Findings:
+
+1. DCA-Bench is a comprehensive benchmark for evaluating LLM agents' capability to discover data quality issues across online dataset platforms.
+2. The proposed benchmark includes 91 representative samples from 8 online dataset platforms, classified into 4 types with 18 tags according to their various content and difficulty.
+3. The benchmark provides multiple difficulty levels with four levels of hints for each test case, making the task more achievable and gauging the information required for the Curator to detect these issues.
+4. The paper introduces an automatic and accurate evaluation scheme using GPT4 to replace human annotators, demonstrating that the LLM-based Evaluator empirically aligns well with human evaluation.
+5. The proposed benchmark can also serve as a testbed for evaluating LLMs' capability of problem discovery in addition to problem-solving, which is a critical area that has been under-explored.
+
+# Analysis and Critique:
+
+1. The paper provides a well-structured and comprehensive benchmark for evaluating LLM agents in dataset curation. However, the benchmark is limited to text-based datasets and does not consider other modalities such as images or audios.
+2. The paper focuses on the initial step of the curation pipeline, which is detecting data quality issues. However, it does not address the subsequent steps of fixing or improving the detected issues.
+3. The paper demonstrates the complexity of the task and the need for further exploration and innovation in applying LLMs to real-world dataset curation. However, it does not provide specific
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07275v1](https://arxiv.org/abs/2406.07275v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07275v1](https://browse.arxiv.org/html/2406.07275v1)       |
+| Truncated       | False       |
+| Word Count       | 8553       |

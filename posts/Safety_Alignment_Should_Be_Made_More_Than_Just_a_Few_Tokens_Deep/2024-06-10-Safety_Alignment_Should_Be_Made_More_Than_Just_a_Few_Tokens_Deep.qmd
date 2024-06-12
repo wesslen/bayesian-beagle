@@ -1,0 +1,41 @@
+
+---
+title: "Safety Alignment Should Be Made More Than Just a Few Tokens Deep"
+id: "2406.05946v1"
+description: "Shallow safety alignment in LLMs can lead to vulnerabilities; deepening alignment beyond initial tokens can improve robustness."
+author: Xiangyu Qi, Ashwinee Panda, Kaifeng Lyu, Xiao Ma, Subhrajit Roy, Ahmad Beirami, Prateek Mittal, Peter Henderson
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.05946v1/extracted/5652106/figs/prefilling/harmful_hexphi_kl.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.05946v1/extracted/5652106/figs/prefilling/harmful_hexphi_kl.png)
+
+### Summary:
+
+The paper discusses the issue of shallow safety alignment in large language models (LLMs), where the alignment adapts the model's generative distribution primarily over only its very first few output tokens. This issue can lead to various vulnerabilities, including susceptibility to adversarial suffix attacks, prefilling attacks, decoding parameter attacks, and fine-tuning attacks. The authors propose a solution to deepen the safety alignment beyond just the first few tokens, which can often meaningfully improve robustness against some common exploits. They also introduce a regularized fine-tuning objective that makes the safety alignment more persistent against fine-tuning attacks by constraining updates on initial tokens.
+
+### Major Findings:
+
+1. Shallow safety alignment is a common issue in current LLMs, where the alignment adapts the model's generative distribution primarily over only its very first few output tokens.
+2. This issue can lead to various vulnerabilities, including susceptibility to adversarial suffix attacks, prefilling attacks, decoding parameter attacks, and fine-tuning attacks.
+3. Deepening the safety alignment beyond just the first few tokens can often meaningfully improve robustness against some common exploits.
+4. A regularized fine-tuning objective that makes the safety alignment more persistent against fine-tuning attacks by constraining updates on initial tokens has been proposed.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive analysis of the shallow safety alignment issue in LLMs and its potential consequences. The proposed solutions, such as deepening the safety alignment and introducing a regularized fine-tuning objective, are promising and could potentially improve the robustness of LLMs against various exploits. However, the paper does not provide empirical evidence to support the effectiveness of these proposed solutions. Additionally, the paper does not discuss the potential limitations or drawbacks of the proposed solutions. Further research is needed to evaluate the effectiveness and limitations of these proposed solutions.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.05946v1](https://arxiv.org/abs/2406.05946v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.05946v1](https://browse.arxiv.org/html/2406.05946v1)       |
+| Truncated       | False       |
+| Word Count       | 16740       |

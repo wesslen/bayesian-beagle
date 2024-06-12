@@ -1,0 +1,40 @@
+
+---
+title: "Chain of Agents: Large Language Models Collaborating on Long-Context Tasks"
+id: "2406.02818v1"
+description: "Chain-of-Agents (CoA) improves long-context tasks by dividing text among agents, showing up to 10% improvement over baselines."
+author: Yusen Zhang, Ruoxi Sun, Yanfei Chen, Tomas Pfister, Rui Zhang, Sercan Ö. Arik
+date: "2024-06-04"
+image: "https://browse.arxiv.org/html/2406.02818v1/extracted/5644403/figures/CoA.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.02818v1/extracted/5644403/figures/CoA.png)
+
+### Summary:
+
+The Chain-of-Agents (CoA) framework is a novel approach that enables multi-agent collaboration through natural language to address the challenge of effectively processing long contexts in Large Language Models (LLMs). CoA consists of multiple worker agents who sequentially communicate to handle different segmented portions of the text, followed by a manager agent who synthesizes these contributions into a coherent final output. The framework processes the entire input by interleaving reading and reasoning, and mitigates long context focus issues by assigning each agent a short context. Comprehensive evaluation on a wide range of long-context tasks in question answering, summarization, and code completion demonstrates significant improvements over strong baselines of RAG, Full-Context, and multi-agent LLMs.
+
+### Major Findings:
+
+1. CoA is a training-free, task-agnostic, and highly interpretable framework that processes the entire input by interleaving reading and reasoning, and mitigates long context focus issues by assigning each agent a short context.
+2. CoA outperforms RAG and Full-Context baselines by up to 10% on a wide range of long-context tasks in question answering, summarization, and code completion.
+3. CoA is a cost-effective framework that reduces time complexity from O(n) to O(n/c), where n is input tokens and c is the context limit of LLMs.
+
+### Analysis and Critique:
+
+While CoA has shown promising results in addressing the challenge of effectively processing long contexts in LLMs, there are still some limitations and potential areas for improvement. One limitation is that CoA does not explore other forms of communication approaches, such as debating or complex discussions. Additionally, the cost and latency of running CoA can be further reduced by replacing some LLMs with more effective models via model routing. Future work could also explore finetuning or in-context learning to improve communication effectiveness between LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.02818v1](https://arxiv.org/abs/2406.02818v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.02818v1](https://browse.arxiv.org/html/2406.02818v1)       |
+| Truncated       | False       |
+| Word Count       | 6877       |

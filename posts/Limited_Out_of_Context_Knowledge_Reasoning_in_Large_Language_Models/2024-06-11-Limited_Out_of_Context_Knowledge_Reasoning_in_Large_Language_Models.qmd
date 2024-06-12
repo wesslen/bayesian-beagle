@@ -1,0 +1,41 @@
+
+---
+title: "Limited Out-of-Context Knowledge Reasoning in Large Language Models"
+id: "2406.07393v1"
+description: "LLMs struggle with out-of-context reasoning and cross-lingual knowledge transfer, despite training adjustments."
+author: Peng Hu, Changjiang Gao, Ruiqi Gao, Jiajun Chen, Shujian Huang
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07393v1/extracted/5658916/IN_CONTEXT.png"
+categories: ['architectures', 'production', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07393v1/extracted/5658916/IN_CONTEXT.png)
+
+### Summary:
+
+This paper investigates the Out-of-Context Knowledge Reasoning (OCKR) capabilities of Large Language Models (LLMs), focusing on their ability to infer new knowledge from their training data rather than from the context or prompt. The study uses a synthetic dataset with seven representative OCKR tasks to evaluate the LLaMA2-13B-chat model. The results show that the model's proficiency in OCKR is limited, regardless of whether the knowledge is trained in separate or adjacent settings. Training the model to reason with complete reasoning data did not result in significant improvement. However, training the model to perform explicit knowledge retrieval helped in only one of the tasks, indicating that the model's limited OCKR capabilities are due to difficulties in retrieving relevant knowledge. The study also evaluates the model's ability to transfer knowledge across languages and finds that it exhibits limited ability in this area as well.
+
+### Major Findings:
+
+1. The LLaMA2-13B-chat model shows limited OCKR ability, even with knowledge occurring adjacently during training.
+2. Training the model with reasoning examples does not lead to significant improvement, suggesting that enhancing reasoning ability in general is insufficient for effective OCKR.
+3. With the help of CoT, the model achieves over 90% accuracy in one task but does not surpass the random level in other two tasks. This indicates that the model can effectively retrieve attribute knowledge but struggles with correctly retrieving relational knowledge, which might be a limiting factor in OCKR.
+4. In both the Separate and Adjacent settings, the performance in cross-lingual scenarios surpasses that of the monolingual, but the overall performance is still weak.
+
+### Analysis and Critique:
+
+The study provides a comprehensive evaluation of the OCKR capabilities of LLMs, highlighting their limitations in this area. However, the study is limited to a few selected models, with the largest model being only 13B parameters. This limitation prevents the assessment of the capabilities of more advanced models, such as GPT-4. Additionally, the study only evaluates the models' OCKR abilities using supervised fine-tuning and does not consider the impact of other training stages, such as reinforcement learning from human feedback. The
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07393v1](https://arxiv.org/abs/2406.07393v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07393v1](https://browse.arxiv.org/html/2406.07393v1)       |
+| Truncated       | False       |
+| Word Count       | 5931       |

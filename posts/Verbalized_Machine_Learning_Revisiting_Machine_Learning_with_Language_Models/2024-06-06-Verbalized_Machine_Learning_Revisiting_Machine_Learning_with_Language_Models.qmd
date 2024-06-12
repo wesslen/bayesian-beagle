@@ -1,0 +1,50 @@
+
+---
+title: "Verbalized Machine Learning: Revisiting Machine Learning with Language Models"
+id: "2406.04344v1"
+description: "VML uses LLMs to solve ML problems, offering easy encoding of inductive bias, automatic model class selection, and interpretable learner updates."
+author: Tim Z. Xiao, Robert Bamler, Bernhard Schölkopf, Weiyang Liu
+date: "2024-06-06"
+image: "https://browse.arxiv.org/html/2406.04344v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.04344v1/x1.png)
+
+### Summary:
+
+The paper introduces the framework of Verbalized Machine Learning (VML), which uses natural language as the representation of the model parameter space. This framework enables many new possibilities for interpretability, as the decision rules and patterns learned from data are stored and summarized by natural language. The core idea behind VML is that we can define a machine learning model using natural language, and the training of such a model is based on the iterative update of natural language.
+
+The major advantages of VML include:
+
+1. Easy encoding of inductive bias: Prior knowledge about the problem and hypothesis class can be encoded in natural language and fed into the LLM-parameterized learner.
+2. Automatic model class selection: The optimizer can automatically select a concrete model class based on data and verbalized prior knowledge, and it can update the model class during training.
+3. Interpretable learner updates: The LLM-parameterized optimizer can provide explanations for why each learner update is performed.
+
+The paper conducts several studies to empirically evaluate the effectiveness of VML and hopes that VML can serve as a stepping stone to stronger interpretability and trustworthiness in ML.
+
+### Major Findings:
+
+1. VML enables easy encoding of inductive bias, which allows for the incorporation of prior knowledge about the problem and hypothesis class into the model training.
+2. VML allows for automatic model class selection, where the optimizer can automatically select a concrete model class based on data and verbalized prior knowledge, and update the model class during training.
+3. VML provides interpretable learner updates, as the LLM-parameterized optimizer can provide explanations for why each learner update is performed.
+
+### Analysis and Critique:
+
+The paper presents an interesting and novel approach to machine learning, using natural language as the representation of the model parameter space. This framework has the potential to improve interpretability and trustworthiness in ML, as it allows for the easy encoding of inductive bias and the automatic selection of model classes. However, there are some potential limitations and areas for improvement.
+
+One potential limitation is the reliance on LLMs, which may not always be able to accurately represent complex mathematical functions. Additionally, the use of natural language as the model parameter space may limit the scalability of
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.04344v1](https://arxiv.org/abs/2406.04344v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.04344v1](https://browse.arxiv.org/html/2406.04344v1)       |
+| Truncated       | False       |
+| Word Count       | 10781       |

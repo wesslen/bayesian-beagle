@@ -1,0 +1,44 @@
+
+---
+title: "THaLLE: Text Hyperlocally Augmented Large Language Extension -- Technical Report"
+id: "2406.07505v1"
+description: "LLMs show promise in financial analysis, with our 8B THaLLE models outperforming others on mock CFA exams."
+author: KBTG Labs, Danupat Khamnuansin, Atthakorn Petchsod, Anuruth Lertpiya, Pornchanan Balee, Thanawat Lodkaew, Tawunrat Chalothorn, Thadpong Pongthawornkamol, Monchai Lertsutthiwong
+date: "2024-06-11"
+image: "../../../bayesian-beagle.png"
+categories: ['architectures', 'production', 'prompt-engineering', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+The paper presents Financial Analyst Extension to the Text Hyperlocally Augmented Large Language Extension (THaLLE), a series of 8B LLMs consistently achieving highest performance on mock CFA exams against models of comparable size. The authors thoroughly document the fine-tuning techniques used to facilitate future research. Additionally, they introduce the use of Flare CFA, a publicly available dataset for evaluating LLMs as a financial advisor.
+
+### Major Findings:
+
+1. The latest instruction-following models (Gemma, Llama3, and Qwen2, released in 2024) excel in the CFA exam for both the Flare CFA and the internal mock exam.
+2. Supervised Fine-tuning (SFT) experiments on instruction-following models for MRC tasks, with internal mock CFA exams, show improvement in both task-following aspects and achieve higher scores across the test set.
+3. Direct Preference Optimization (DPO) experiments on instruction-following models for MRC tasks, with internal mock CFA exams, also show improvement in both task-following aspects and achieve higher scores across the test set.
+
+### Analysis and Critique:
+
+1. The paper does not provide a clear comparison between the performance of the proposed models and other existing models in the field.
+2. The paper does not discuss the limitations of the proposed models or the potential biases that may have been introduced during the fine-tuning process.
+3. The paper does not provide a detailed analysis of the results, such as the performance of the models on different types of questions or the impact of the fine-tuning techniques on the models' performance.
+4. The paper does not discuss the potential applications of the proposed models in real-world financial analysis or advisory roles.
+5. The paper does not provide a clear roadmap for future research or potential improvements to the proposed models.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07505v1](https://arxiv.org/abs/2406.07505v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07505v1](https://browse.arxiv.org/html/2406.07505v1)       |
+| Truncated       | False       |
+| Word Count       | 5344       |

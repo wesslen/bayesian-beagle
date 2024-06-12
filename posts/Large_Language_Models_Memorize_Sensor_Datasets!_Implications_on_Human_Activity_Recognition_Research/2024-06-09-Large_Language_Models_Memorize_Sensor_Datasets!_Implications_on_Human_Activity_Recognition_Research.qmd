@@ -1,0 +1,46 @@
+
+---
+title: "Large Language Models Memorize Sensor Datasets! Implications on Human Activity Recognition Research"
+id: "2406.05900v1"
+description: "LLMs may have seen HAR benchmark data during training, potentially skewing evaluation results."
+author: Harish Haresamudram, Hrudhai Rajasekhar, Nikhil Murlidhar Shanbhogue, Thomas Ploetz
+date: "2024-06-09"
+image: "https://browse.arxiv.org/html/2406.05900v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.05900v1/x1.png)
+
+### Summary:
+
+The paper investigates whether Large Language Models (LLMs) have been trained on standard Human Activity Recognition (HAR) datasets, potentially leading to contamination of training data and rendering experimental evaluations meaningless. The authors apply memorization tests to LLMs, comparing the LLM-generated output to the original data. They found a non-negligible amount of matches, suggesting that the LLM under investigation, GPT-4, has seen wearable sensor data from the benchmark datasets during training. The Daphnet dataset, in particular, can be reproduced relatively accurately by GPT-4.
+
+### Major Findings:
+
+1. LLMs, such as GPT-4, have been trained on vast amounts of publicly available data, including potentially standard HAR datasets.
+2. Memorization tests applied to LLMs reveal that GPT-4 has seen wearable sensor data from the benchmark datasets during training.
+3. The Daphnet dataset can be reproduced relatively accurately by GPT-4, indicating potential memorization.
+
+### Analysis and Critique:
+
+1. The paper raises concerns about the validity of experimental evaluations of LLM-based HAR systems, as the LLMs may have been trained on test data, violating the principles of machine learning.
+2. The authors' approach of applying memorization tests to LLMs is a valuable method for investigating potential data contamination.
+3. The findings suggest that the reported recognition results for LLM-based HAR systems may be over-optimistic and misguiding for practical applications beyond mere benchmark evaluations.
+4. The paper could have explored the implications of these findings on the broader field of HAR research and discussed potential solutions to address the issue of data contamination.
+5. The authors could have provided more detailed information on the specific HAR datasets used in their investigation and the extent of memorization observed for each dataset.
+6. The paper could have discussed the potential impact of data contamination on the generalizability and robustness of LLM-based HAR systems.
+7. The authors could have suggested strategies for mitigating the risk of data contamination in future research on LLM-based HAR systems.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.05900v1](https://arxiv.org/abs/2406.05900v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.05900v1](https://browse.arxiv.org/html/2406.05900v1)       |
+| Truncated       | False       |
+| Word Count       | 6787       |

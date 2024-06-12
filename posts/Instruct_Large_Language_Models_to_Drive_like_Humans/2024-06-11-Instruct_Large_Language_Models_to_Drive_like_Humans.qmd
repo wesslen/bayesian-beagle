@@ -1,0 +1,42 @@
+
+---
+title: "Instruct Large Language Models to Drive like Humans"
+id: "2406.07296v1"
+description: "InstructDriver: Transforming LLM into a motion planner with human-aligned behavior for autonomous driving."
+author: Ruijun Zhang, Xianda Guo, Wenzhao Zheng, Chenming Zhang, Kurt Keutzer, Long Chen
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07296v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07296v1/x1.png)
+
+### Summary:
+
+The paper introduces InstructDriver, a method to align large language models (LLMs) with human driving behavior by generating a series of instructions based on human driving logic. The proposed InstructChain module combines instructions to reason about the final planning trajectory. InstructDriver allows the incorporation of human rules and learns from driving data, achieving both interpretability and data scalability. The method is evaluated using the real-world closed-loop motion planning nuPlan benchmark, demonstrating the effectiveness of the LLM planner in a real-world setting.
+
+### Major Findings:
+
+1. InstructDriver aligns LLMs with human driving behavior by generating a series of instructions based on human driving logic.
+2. The InstructChain module enables LLMs to explicitly follow the execution of instructions, providing a high degree of interpretability.
+3. Extensive open-loop and closed-loop experiments within the nuPlan framework validate the effectiveness of the proposed methods, achieving competitive performance metrics.
+
+### Analysis and Critique:
+
+While the paper presents promising results, there are some limitations and potential areas for improvement. The performance of InstructDriver still lags behind conventional methods, and the use of LLMs for motion planning is currently impractical for real-time applications. The proposed method's performance in closed-loop simulation experiments remains suboptimal, indicating a need for further instruction design to enhance closed-loop performance. Additionally, due to the high computational resource demands of LLM inference, the current method has not been simulated within the val14 framework, which includes more diverse scenarios.
+
+In conclusion, the paper presents a novel approach to aligning LLMs with human driving behavior using the InstructDriver method and the InstructChain module. The proposed method is evaluated using the nuPlan benchmark, demonstrating its effectiveness in a real-world setting. However, further research is needed to address the limitations and improve the performance of the proposed method in real-time and closed-loop scenarios.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07296v1](https://arxiv.org/abs/2406.07296v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07296v1](https://browse.arxiv.org/html/2406.07296v1)       |
+| Truncated       | False       |
+| Word Count       | 5303       |

@@ -1,0 +1,43 @@
+
+---
+title: "Buffer of Thoughts: Thought-Augmented Reasoning with Large Language Models"
+id: "2406.04271v1"
+description: "BoT improves LLMs' reasoning, outperforming SOTA methods on 10 tasks with 12% cost, potentially surpassing Llama3-70B with Llama3-8B."
+author: Ling Yang, Zhaochen Yu, Tianjun Zhang, Shiyi Cao, Minkai Xu, Wentao Zhang, Joseph E. Gonzalez, Bin Cui
+date: "2024-06-06"
+image: "https://browse.arxiv.org/html/2406.04271v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.04271v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel thought-augmented reasoning approach called Buffer of Thoughts (BoT) to enhance the accuracy, efficiency, and robustness of large language models (LLMs). BoT utilizes a meta-buffer to store informative high-level thoughts, or thought-templates, distilled from problem-solving processes across various tasks. For each problem, a relevant thought-template is retrieved and adapted with specific reasoning structures for efficient reasoning. The buffer-manager dynamically updates the meta-buffer to enhance its capacity as more tasks are solved.
+
+BoT significantly improves precision, efficiency, and robustness across a diverse array of tasks. It achieves significant performance improvements over previous state-of-the-art methods, such as 11% on Game of 24, 20% on Geometric Shapes, and 51% on Checkmate-in-One, while requiring only 12% of the cost of multi-query prompting methods on average. Notably, Llama3-8B + BoT has the potential to surpass Llama3-70B model.
+
+### Major Findings:
+
+1. Buffer of Thoughts (BoT) is a novel thought-augmented reasoning framework that enhances the accuracy, efficiency, and robustness of LLM-based reasoning.
+2. Meta-buffer stores informative high-level thoughts distilled from different problems, and adaptively instantiates each thought template to address each specific task.
+3. Buffer-manager distills thought-templates from various solutions and continually improves the capacity of meta-buffer as more tasks are solved.
+4. BoT achieves significant performance improvements over previous state-of-the-art methods, such as 11% on Game of 24, 20% on Geometric Shapes, and 51% on Checkmate-in-One, while requiring only 12% of the cost of multi-query prompting methods on average.
+
+### Analysis and Critique:
+
+While BoT demonstrates significant improvements in accuracy, efficiency, and robustness, it may still face limitations when addressing problems requiring human-like creativity. Additionally, if BoT initializes the meta-buffer with a weaker model, the quality of the derived thought-templates may be
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.04271v1](https://arxiv.org/abs/2406.04271v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.04271v1](https://browse.arxiv.org/html/2406.04271v1)       |
+| Truncated       | False       |
+| Word Count       | 6204       |

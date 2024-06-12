@@ -1,0 +1,44 @@
+
+---
+title: "Can Language Models Serve as Text-Based World Simulators?"
+id: "2406.06485v1"
+description: "LLMs, like GPT-4, are not yet reliable text-based world simulators, despite their capabilities, as per the ByteSized32-State-Prediction benchmark."
+author: Ruoyao Wang, Graham Todd, Ziang Xiao, Xingdi Yuan, Marc-Alexandre Côté, Peter Clark, Peter Jansen
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.06485v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06485v1/x1.png)
+
+### Summary:
+
+The paper explores the potential of large language models (LLMs) as text-based world simulators, capable of predicting how actions change different world states. The authors introduce a new benchmark, ByteSized32-State-Prediction, containing a dataset of text game state transitions and accompanying game tasks. They test GPT-4 on this dataset and find that, despite its impressive performance, it is still an unreliable world simulator without further innovations. The work contributes new insights into current LLM’s capabilities and weaknesses, as well as a novel benchmark to track future progress.
+
+### Major Findings:
+
+1. LLMs broadly fail to capture state transitions not directly related to agent actions, as well as transitions that require arithmetic, common-sense, or scientific reasoning.
+2. Across a variety of conditions, model accuracy does not exceed 59.9% for transitions in which a non-trivial change in the world state occurs.
+3. LLMs are not yet ready to act as reliable world simulators without further innovation.
+
+### Analysis and Critique:
+
+1. The study focuses on two strong in-context learning LLMs, GPT-3.5 and GPT-4, and their ability to act as explicit formal simulators. However, other models may perform better, and the proposed task and dataset should be used in a mindful manner due to potential misinformation and hallucinations introduced by the specific LLM selected.
+2. The state spaces produced in this work are focused around the domain of common-sense and early (elementary) scientific reasoning, which may not be representative of other domains.
+3. The study does not address using LLMs as simulators for highly domain-specific areas, such as physical or medical simulation.
+4. The proposed LLM-Sim task could be affected by misinformation and hallucinations introduced by the specific LLM selected by the user, which may generate misleading or non-factual information.
+5. The study highlights the issue with using LLMs as text-based world simulators, as they may not be suitable or safe to be deployed in settings where they directly interact with humans, especially children, e.g., in an educational setting.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06485v1](https://arxiv.org/abs/2406.06485v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06485v1](https://browse.arxiv.org/html/2406.06485v1)       |
+| Truncated       | False       |
+| Word Count       | 6025       |

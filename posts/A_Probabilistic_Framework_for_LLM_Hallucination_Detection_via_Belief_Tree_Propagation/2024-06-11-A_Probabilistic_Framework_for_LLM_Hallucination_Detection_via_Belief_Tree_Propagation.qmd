@@ -1,0 +1,44 @@
+
+---
+title: "A Probabilistic Framework for LLM Hallucination Detection via Belief Tree Propagation"
+id: "2406.06950v1"
+description: "BTProp: New method improves hallucination detection in LLMs by 3%-9% via a belief tree and hidden Markov tree model."
+author: Bairu Hou, Yang Zhang, Jacob Andreas, Shiyu Chang
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.06950v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06950v1/x1.png)
+
+### Summary:
+
+The paper presents a probabilistic framework, Belief Tree Propagation (BTProp), for LLM hallucination detection. The method introduces a belief tree of logically related statements by recursively decomposing a parent statement into child statements with three decomposition strategies. It then builds a hidden Markov tree model to integrate the LLM's belief scores in these statements in a principled way. Experiment results show that BTProp improves baselines by 3%-9% (evaluated by AUROC and AUC-PR) on multiple hallucination detection benchmarks.
+
+### Major Findings:
+
+1. BTProp introduces a belief tree of logically related statements by recursively decomposing a parent statement into child statements with three decomposition strategies.
+2. BTProp builds a hidden Markov tree model to integrate the LLM's belief scores in these statements in a principled way.
+3. Experiment results show that BTProp improves baselines by 3%-9% (evaluated by AUROC and AUC-PR) on multiple hallucination detection benchmarks.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to LLM hallucination detection, which is a significant problem in the field. The use of a belief tree and a hidden Markov tree model is an innovative approach to integrating the LLM's belief scores in a principled way. The experimental results are promising, showing significant improvements over baselines.
+
+However, there are some potential limitations to this approach. The reliance on a belief tree and a hidden Markov tree model may make the approach computationally expensive, which could limit its applicability in real-world scenarios. Additionally, the approach may be sensitive to the quality of the LLM's belief scores, which could be affected by factors such as the quality of the training data and the complexity of the task.
+
+Further research is needed to address these limitations and to evaluate the approach in a wider range of scenarios. It would also be interesting to explore the potential of this approach for other tasks, such as text summarization and question answering, where LLM hallucination is also a significant problem.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06950v1](https://arxiv.org/abs/2406.06950v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06950v1](https://browse.arxiv.org/html/2406.06950v1)       |
+| Truncated       | False       |
+| Word Count       | 10310       |

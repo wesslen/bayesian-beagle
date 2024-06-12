@@ -1,0 +1,40 @@
+
+---
+title: "Text-to-Drive: Diverse Driving Behavior Synthesis via Large Language Models"
+id: "2406.04300v1"
+description: "TL;DR: Text-to-Drive (T2D) uses LLMs to generate diverse driving behaviors for autonomous vehicle simulation, offering a scalable and intuitive method for human operators."
+author: Phat Nguyen, Tsun-Hsuan Wang, Zhang-Wei Hong, Sertac Karaman, Daniela Rus
+date: "2024-06-06"
+image: "https://browse.arxiv.org/html/2406.04300v1/extracted/5649616/Figures/teaser.png"
+categories: ['hci', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.04300v1/extracted/5649616/Figures/teaser.png)
+
+### Summary:
+
+The paper introduces Text-to-Drive (T2D), a knowledge-driven method for simulation that enables text-to-driving behavior synthesis and diverse driving behavior generation. T2D leverages Large Language Models (LLMs) to generate diverse descriptions of driving behaviors and then synthesizes them in simulation. The method facilitates the use of LLM-based reasoning by encapsulating the logic in state machines, which aids in downstream tasks such as summarizing low-level observations, assessing policy alignment with behavior description, and shaping the auxiliary reward. T2D maintains the behavioral context across natural language, code, and driving policy, enabling accurate simulation of driving behavior. The method surpasses baselines in generating diverse trajectories and offers a natural language interface to embed human preferences into driving simulations.
+
+### Major Findings:
+
+1. T2D generates more diverse trajectories compared to other baselines and offers a natural language interface that allows for interactive incorporation of human preference.
+2. The method facilitates the use of LLM-based reasoning by encapsulating the logic in state machines, which aids in downstream tasks such as summarizing low-level observations, assessing policy alignment with behavior description, and shaping the auxiliary reward.
+3. T2D effectively retains the behavioral context across natural language, code, and driving policy, enabling it to simulate a driving behavior from a description.
+
+### Analysis and Critique:
+
+While T2D demonstrates promising results in generating diverse driving behaviors, there are some potential limitations and areas for improvement. One limitation is the reliance on LLMs, which may not always generate accurate or relevant descriptions of driving behaviors. Additionally, the method does not explicitly account for real-world complexities, such as following traffic regulations, which could limit its applicability in real-world scenarios. Future work could explore integrating T2D with data-driven simulators and incorporating perception layers to address these limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.04300v1](https://arxiv.org/abs/2406.04300v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.04300v1](https://browse.arxiv.org/html/2406.04300v1)       |
+| Truncated       | False       |
+| Word Count       | 10490       |

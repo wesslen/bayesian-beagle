@@ -1,0 +1,44 @@
+
+---
+title: "Merging Improves Self-Critique Against Jailbreak Attacks"
+id: "2406.07188v1"
+description: "Merging and self-critique improve LLM robustness against jailbreak attacks."
+author: Victor Gallego
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07188v1/extracted/5659021/images/merging.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07188v1/extracted/5659021/images/merging.png)
+
+### Summary:
+
+The paper introduces a framework for defending against jailbreak attacks on large language models (LLMs) by improving the model's capability to sanitize its output and further fine-tuning it over sanitized synthetic data. The approach leverages self-critique techniques and introduces an external critic model that can be merged with the original model to improve self-critique capabilities. The results demonstrate that the combination of merging and self-critique can significantly reduce the attack success rate of adversaries, offering a promising defense mechanism against jailbreak attacks.
+
+### Major Findings:
+
+1. The paper proposes a framework for defending against jailbreak attacks by improving the base model's output sanitization and further fine-tuning it over sanitized synthetic data.
+2. The framework introduces an external critic model that can be merged with the original model to improve self-critique capabilities, thus more robustly rewriting its original response to avoid harmful or illegal responses.
+3. The combination of merging and self-critique can significantly reduce the attack success rate of adversaries, offering a promising defense mechanism against jailbreak attacks.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison of the proposed framework with other existing defense mechanisms against jailbreak attacks.
+2. The paper does not discuss the potential limitations or drawbacks of the proposed framework, such as the computational overhead of merging models or the potential for overfitting during fine-tuning.
+3. The paper does not provide a detailed analysis of the synthetic data used for fine-tuning, such as its quality, diversity, or potential biases.
+4. The paper does not discuss the potential ethical implications of using synthetic data for fine-tuning, such as the risk of perpetuating biases or stereotypes.
+5. The paper does not provide a detailed analysis of the computational costs of the proposed framework, such as the time and resources required for merging models or fine-tuning over synthetic data.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07188v1](https://arxiv.org/abs/2406.07188v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07188v1](https://browse.arxiv.org/html/2406.07188v1)       |
+| Truncated       | False       |
+| Word Count       | 3164       |

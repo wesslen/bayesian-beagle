@@ -1,0 +1,46 @@
+
+---
+title: "Single-Codec: Single-Codebook Speech Codec towards High-Performance Speech Generation"
+id: "2406.07422v1"
+description: "Single-Codec, a single-sequence codec, improves TTS efficiency and robustness, outperforming multi-codebook codecs in quality, bandwidth, and LLM-TTS performance."
+author: Hanzhao Li, Liumeng Xue, Haohan Guo, Xinfa Zhu, Yuanjun Lv, Lei Xie, Yunlin Chen, Hao Yin, Zhifei Li
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07422v1/x1.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07422v1/x1.png)
+
+### Summary:
+
+The paper introduces Single-Codec, a single-codebook speech codec designed to improve the efficiency and robustness of large language models (LLMs) in text-to-speech (TTS) systems. Unlike multi-codebook codecs, Single-Codec employs a disentangled VQ-VAE to decouple speech into a time-invariant embedding and a phonetically-rich discrete sequence. The encoder is enhanced with contextual modeling using a BLSTM module, a hybrid sampling module to alleviate distortion, and a resampling module to encourage discrete units to carry more phonetic information.
+
+### Major Findings:
+
+1. Single-Codec demonstrates higher reconstruction quality with a lower bandwidth of only 304bps compared to multi-codebook codecs such as EnCodec and TiCodec.
+2. The effectiveness of Single-Codec is validated by LLM-TTS experiments, showing improved naturalness and intelligibility.
+3. The use of a BLSTM module for contextual modeling, a hybrid sampling module, and a resampling module enhances the performance and applicability of Single-Codec in speech synthesis.
+
+### Analysis and Critique:
+
+While Single-Codec shows promising results in improving the efficiency and robustness of LLMs in TTS systems, there are some potential limitations and areas for further research.
+
+1. The paper does not provide a detailed comparison of Single-Codec with other state-of-the-art single-codebook codecs, making it difficult to assess its relative performance.
+2. The paper does not discuss the potential impact of the lower bandwidth on the quality of the synthesized speech, which could be a concern for some applications.
+3. The paper does not explore the potential trade-offs between the different components of Single-Codec, such as the BLSTM module and the hybrid sampling module, which could be important for optimizing the performance of the codec.
+
+Overall, Single-Codec is a promising approach to improving the efficiency and robustness of LLMs in TTS systems, but further research is needed to fully understand its strengths and limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07422v1](https://arxiv.org/abs/2406.07422v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07422v1](https://browse.arxiv.org/html/2406.07422v1)       |
+| Truncated       | False       |
+| Word Count       | 4062       |

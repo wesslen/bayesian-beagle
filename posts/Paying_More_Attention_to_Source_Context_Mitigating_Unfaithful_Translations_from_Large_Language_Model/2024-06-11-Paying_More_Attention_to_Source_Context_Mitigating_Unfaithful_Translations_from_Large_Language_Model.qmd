@@ -1,0 +1,46 @@
+
+---
+title: "Paying More Attention to Source Context: Mitigating Unfaithful Translations from Large Language Model"
+id: "2406.07036v1"
+description: "LLMs can generate unfaithful translations due to bias towards target tokens. Our methods encourage LLMs to focus more on source context, reducing hallucinatory translations."
+author: Hongbin Zhang, Kehai Chen, Xuefeng Bai, Yang Xiang, Min Zhang
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07036v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07036v1/x1.png)
+
+Summary:
+
+The paper focuses on the issue of unfaithful translations in large language models (LLMs) due to insufficient focus on the source context. The authors propose three methods to address this issue: reweight attention, contrastive decoding, and target-constrained tuning. The reweight attention method adjusts the attention weight of the source context to help models focus on the source context during generation. Contrastive decoding reduces the influence of target prefixes, and target-constrained tuning encourages LLMs to avoid excessive dependence on specific target prefixes. The experimental results show that the proposed methods improve translation performance across several language pairs in the proposed unfaithful translation test sets, outperforming baseline methods and effectively reducing the phenomenon of hallucinatory and unfaithful translations.
+
+Major Findings:
+
+1. The reweight attention method outperforms vanilla zeroshot prompting, showing an average improvement of 2.1 BLEU and 4.7 COMET.
+2. The contrastive decoding strategy significantly improves the translation performance of LLMs, outperforming the baseline with an average improvement of 1.2 BLEU and 3.3 COMET.
+3. The proposed target-constrained tuning consistently outperforms vanilla instruction tuning, with an average gain of 1.05 BLEU and 0.58 COMET.
+
+Analysis and Critique:
+
+1. The proposed methods are effective in addressing the issue of unfaithful translations in LLMs, but they incur a higher computational cost compared to the standard settings.
+2. The proposed methods have not been tested with other generation strategies, such as beam search, top-k sampling, or nucleus sampling.
+3. The proposed methods have not been evaluated on other seq2seq tasks, such as summarization.
+4. The proposed methods have not been tested on other LLMs, such as ChatGPT or GPT-4.
+5. The proposed methods have not been evaluated on other language pairs, such as low-resource or distant languages.
+6. The proposed methods have not been evaluated on other evaluation metrics, such as BLEURT or METEOR.
+7. The proposed methods have not been evaluated on other test
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07036v1](https://arxiv.org/abs/2406.07036v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07036v1](https://browse.arxiv.org/html/2406.07036v1)       |
+| Truncated       | False       |
+| Word Count       | 10716       |

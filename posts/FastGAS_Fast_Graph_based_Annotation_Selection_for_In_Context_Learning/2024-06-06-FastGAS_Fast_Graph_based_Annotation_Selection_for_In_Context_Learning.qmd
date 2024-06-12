@@ -1,0 +1,52 @@
+
+---
+title: "FastGAS: Fast Graph-based Annotation Selection for In-Context Learning"
+id: "2406.03730v1"
+description: "FastGAS: A graph-based method for efficient instance selection in in-context learning, improving performance and reducing selection time."
+author: Zihan Chen, Song Wang, Cong Shen, Jundong Li
+date: "2024-06-06"
+image: "https://browse.arxiv.org/html/2406.03730v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.03730v1/x1.png)
+
+# Summary:
+**FastGAS: Fast Graph-based Annotation Selection for In-Context Learning**
+
+**Summary:**
+- FastGAS is a graph-based selection method designed to efficiently identify high-quality instances for in-context learning (ICL) while minimizing computational overhead.
+- The method constructs a data similarity graph based on instance similarities and employs a graph partitioning algorithm to partition the graph into pieces.
+- Within each piece, a greedy approach is used to pick the most representative nodes, aggregating nodes from diverse pieces and annotating the corresponding instances.
+- FastGAS outperforms prior approaches in terms of performance and significantly reduces selection time.
+
+**Major Findings:**
+1. FastGAS improves the overall performance on seven datasets in three types of tasks.
+2. For all tasks, FastGAS only needs a few seconds to complete the instance selection process.
+3. Theoretical guarantee for the effectiveness of the greedy selection algorithm is provided.
+
+**Analysis and Critique:**
+- FastGAS addresses the limitation of existing methods, which often require a long time to select instances due to their complexity.
+- The method effectively balances the diversity and representativeness of the annotated samples.
+- FastGAS significantly reduces the time cost compared to existing methods, making it more practical for real-world applications.
+- The method's performance is not affected by the annotation budget, as the most time-intensive processes are not affected by the budget.
+- The hyperparameter plays a critical role in graph partitioning, determining the number of components into which the graph is divided.
+- The method's performance is not affected by the choice of text embedding models, as it consistently achieves top performance across different embedding models.
+- The method's primary constraint is the inability to automatically select the most appropriate number of partitions and the most appropriate number of neighbors during the data similarity graph construction.
+- The method's efficiency is enhanced by adopting a greedy selection process that is carried out separately for each piece, but the interrelations between samples across different graph pieces are not explored.
+- The method's evaluation is limited to LLMs up to 7B in size due to hardware limitations and available time.
+- The method's efficacy with larger
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.03730v1](https://arxiv.org/abs/2406.03730v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.03730v1](https://browse.arxiv.org/html/2406.03730v1)       |
+| Truncated       | False       |
+| Word Count       | 8522       |

@@ -1,0 +1,44 @@
+
+---
+title: "An LLM-Assisted Easy-to-Trigger Backdoor Attack on Code Completion Models: Injecting Disguised Vulnerabilities against Strong Detection"
+id: "2406.06822v1"
+description: "CodeBreaker: LLM-assisted backdoor attack framework for code completion models, evading vulnerability detection."
+author: Shenao Yan, Shen Wang, Yue Duan, Hanbin Hong, Kiho Lee, Doowon Kim, Yuan Hong
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.06822v1/x1.png"
+categories: ['robustness', 'security', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06822v1/x1.png)
+
+**Summary:**
+
+The paper introduces CodeBreaker, a pioneering LLM-assisted backdoor attack framework on code completion models. Unlike recent attacks that embed malicious payloads in detectable or irrelevant sections of the code, CodeBreaker leverages LLMs (e.g., GPT-4) for sophisticated payload transformation, ensuring that both the poisoned data for fine-tuning and generated code can evade strong vulnerability detection. CodeBreaker stands out with its comprehensive coverage of vulnerabilities, making it the first to provide such an extensive set for evaluation.
+
+**Major Findings:**
+
+1. CodeBreaker is the first LLM-assisted backdoor attack on code completion against strong vulnerability detection, ensuring that both the poisoned data (for fine-tuning) and the generated insecure suggestions (during inferences) are undetectable by static analysis tools.
+2. CodeBreaker can bypass the LLMs-based vulnerability detection, which has been empirically shown to be more powerful than static analyses.
+3. CodeBreaker injects malicious payloads in the code, ensuring that the attack can be launched even if comments are not loaded for fine-tuning. It is also designed for easy activation and can be effectively triggered by any code or string triggers.
+4. CodeBreaker aims to minimize the code transformation for better stealthiness and provides a novel framework to tune the stealthiness and evasion performance per their tradeoff.
+5. CodeBreaker takes the first cut to analyze static analysis rules for 247 vulnerabilities, categorizing them into dataflow analysis, string matching, and constant analysis. It also considers text trigger and different code triggers in its attack settings.
+
+**Analysis and Critique:**
+
+While CodeBreaker presents a significant advancement in backdoor attacks on code completion models, there are potential limitations and areas for improvement. The reliance on LLMs for payload transformation and obfuscation may introduce new vulnerabilities in the LLMs themselves, as they are used to facilitate adversarial attacks. Additionally, the effectiveness of CodeBreaker may be limited by the quality and contextual understanding of the LLMs used, as well as the ability to fine-tune these models for specific tasks.
+
+Further research is needed to explore the potential for more robust defenses
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06822v1](https://arxiv.org/abs/2406.06822v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06822v1](https://browse.arxiv.org/html/2406.06822v1)       |
+| Truncated       | False       |
+| Word Count       | 11894       |

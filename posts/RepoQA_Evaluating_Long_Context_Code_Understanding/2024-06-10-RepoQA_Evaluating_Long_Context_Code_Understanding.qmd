@@ -1,0 +1,42 @@
+
+---
+title: "RepoQA: Evaluating Long Context Code Understanding"
+id: "2406.06025v1"
+description: "RepoQA benchmark evaluates LLMs on long-context code understanding, showing gaps in open vs. proprietary models and language-specific strengths."
+author: Jiawei Liu, Jia Le Tian, Vijay Daita, Yuxiang Wei, Yifeng Ding, Yuhan Katherine Wang, Jun Yang, Lingming Zhang
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.06025v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06025v1/x1.png)
+
+# Summary:
+RepoQA is a benchmark proposed to evaluate the long-context code understanding capabilities of Large Language Models (LLMs). Unlike existing benchmarks that focus on general and synthetic use cases, RepoQA aims to exercise the code understanding ability of LLMs by creating tasks that closely reflect real-life long-context uses. The initial task in RepoQA is called Searching Needle Function (SNF), inspired by code search. SNF involves constructing 500 code search tests from 50 repositories across 5 programming languages. Each test provides an LLM with an instruction, a long context of code, the description of the desired function, and a repetition of the instruction. By understanding the description and code, the model is expected to retrieve the desired function.
+
+# Major Findings:
+1. RepoQA is the first benchmark for long-context code understanding, focusing on the code domain and real-life long-context uses.
+2. RepoQA proposes an automatic pipeline to build evaluation sets for the Searching Needle Function task.
+3. RepoQA is multilingual and comprehensive, covering 500 code search tasks gathered from 50 repositories across 5 modern programming languages.
+4. Using RepoQA, the authors comprehensively evaluate 33 models and show interesting findings into the long-context abilities of current foundation models.
+
+# Analysis and Critique:
+1. The authors do not provide a detailed comparison of RepoQA with other existing benchmarks, making it difficult to assess its advantages and limitations.
+2. The evaluation of 33 models is not described in detail, and the findings are not discussed in-depth, leaving room for further analysis and discussion.
+3. The authors do not discuss potential biases or limitations in the data curation process, which could impact the validity and reliability of the benchmark.
+4. The authors do not provide a clear definition of "long-context" in the context of code understanding, making it difficult to compare RepoQA with other benchmarks that focus on long-context understanding.
+5. The authors do not discuss the potential impact of the choice of programming languages and repositories on the generalizability of the benchmark.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06025v1](https://arxiv.org/abs/2406.06025v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06025v1](https://browse.arxiv.org/html/2406.06025v1)       |
+| Truncated       | False       |
+| Word Count       | 2740       |

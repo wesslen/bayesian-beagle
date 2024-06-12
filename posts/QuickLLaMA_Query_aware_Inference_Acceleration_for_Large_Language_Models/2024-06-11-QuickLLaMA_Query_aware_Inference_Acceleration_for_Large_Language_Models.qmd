@@ -1,0 +1,42 @@
+
+---
+title: "QuickLLaMA: Query-aware Inference Acceleration for Large Language Models"
+id: "2406.07528v1"
+description: "Q-LLM enhances LLMs' context understanding, improving accuracy on benchmarks without extra training."
+author: Jingyao Li, Han Shi, Xin Jiang, Zhenguo Li, Hong Xu, Jiaya Jia
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07528v1/x3.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07528v1/x3.png)
+
+### Summary:
+
+The paper introduces Query-aware Inference for LLMs (Q-LLM), a system designed to process extensive sequences akin to human cognition. Q-LLM focuses on memory data relevant to a given query, accurately capturing pertinent information within a fixed window size and providing precise answers to queries. It requires no additional training and can be seamlessly integrated with any LLMs. The performance of Q-LLM is assessed using LLaMA3-8B-inst and Mistral-7B-inst-v0.2 as foundational models. Q-LLM can read Harry Potter with 100K tokens within half a minute on a single 800 GPU and accurately answer the questions. On widely recognized benchmarks, Q-LLM improved performance by 7.17% compared to the current state-of-the-art on LLaMA3 and by 3.26% on Mistral on the -bench. In the Needle-in-a-Haystack task, Q-LLM improved upon the current SOTA by 7.0% on Mistral and achieved 100% on LLaMA3.
+
+### Major Findings:
+
+1. Q-LLM can process extensive sequences in a manner similar to human cognition, accurately capturing pertinent information within a fixed window size and providing precise answers to queries.
+2. Q-LLM does not require extra training and can be seamlessly integrated with any LLMs.
+3. Q-LLM can read Harry Potter with 100K tokens within half a minute on a single 800 GPU and accurately answer the questions.
+4. On widely recognized benchmarks, Q-LLM improved performance by 7.17% compared to the current state-of-the-art on LLaMA3 and by 3.26% on Mistral on the -bench.
+5. In the Needle-in-a-Haystack task, Q-LLM improved upon the current SOTA by 7.0% on Mistral and achieved 100% on LLaMA3.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed explanation of how Q-LLM selects the relevant memory data for a given
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07528v1](https://arxiv.org/abs/2406.07528v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07528v1](https://browse.arxiv.org/html/2406.07528v1)       |
+| Truncated       | False       |
+| Word Count       | 7459       |

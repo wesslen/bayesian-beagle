@@ -1,0 +1,45 @@
+
+---
+title: "Large language models for generating rules, yay or nay?"
+id: "2406.06835v1"
+description: "LLMs can aid engineering safety-critical systems by generating logic rules, but lack threshold generation ability."
+author: Shangeetha Sivasothy, Scott Barnett, Rena Logothetis, Mohamed Abdelrazek, Zafaryab Rasool, Srikanth Thudumu, Zac Brannelly
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.06835v1/extracted/5638595/images/Proposed_Approach.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06835v1/extracted/5638595/images/Proposed_Approach.png)
+
+### Summary:
+- The paper presents a novel approach for software developers to collaborate with subject-matter experts on creating logical rules using Large Language Models (LLMs) like GPT-3.5 and GPT-4.
+- The proposed approach, RuleFlex, consists of four components: linguistic interface, rule generation engine, dynamic rule modifier, and API generator.
+- The study evaluates the proposed approach by conducting experiments with four prompt engineering techniques (instruction following, imitation, chain of thought, and few-shot) and two different LLMs (GPT-3.5 and GPT-4).
+- The generated rules were compared to the rules from an industry case study, the Pandemic intervention Monitoring System (PiMS), where rules were specified manually by clinicians.
+- The benefits of the proposed approach include reducing implementation costs and faster validation time of clinical rules through rule and code synthesis.
+
+### Major Findings:
+1. LLMs have a world model that bootstraps implementation, enabling them to generate logic rules.
+2. LLMs generated less number of rules compared to experts, with GPT-3.5 producing an average of 2 to 4 conditions and GPT-4 showing an average ranging from 2 to 8 conditions.
+3. LLMs do not have the capacity to generate thresholds for each rule, as they failed to mention domain-specific variables such as myalgia, diarrhoea, and runny nose, which PiMS had covered.
+
+### Analysis and Critique:
+- The study highlights the potential of LLMs in augmenting the requirements' elicitation process by providing access to a world model for domains.
+- However, the evaluation results show that LLMs are not consistent among responses, and their performance is limited by the lack of domain-specific information.
+- The study focuses on one domain-specific dataset, limiting the generalization of the findings. Future work should evaluate the approach on other domain-specific datasets to improve generalizability.
+- The study considers only two dimensions, interpretability and accuracy, and does not consider other factors such as trustworthy AI, fairness, and robustness.
+- The field of LLMs is rapidly evolving, and future research should explore additional prompt engineering techniques, evaluate the approach on different data types, and consider other evaluation metrics and architectures
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06835v1](https://arxiv.org/abs/2406.06835v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06835v1](https://browse.arxiv.org/html/2406.06835v1)       |
+| Truncated       | False       |
+| Word Count       | 4575       |

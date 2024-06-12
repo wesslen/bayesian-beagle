@@ -1,0 +1,44 @@
+
+---
+title: "Machine Against the RAG: Jamming Retrieval-Augmented Generation with Blocker Documents"
+id: "2406.05870v1"
+description: "TL;DR: RAG systems are vulnerable to jamming attacks using blocker documents, which can prevent them from answering queries. New methods for generating blocker documents are proposed and existing safety metrics are found to be inadequate. Defenses against blocker documents are also discussed."
+author: Avital Shafran, Roei Schuster, Vitaly Shmatikov
+date: "2024-06-09"
+image: "https://browse.arxiv.org/html/2406.05870v1/extracted/5654614/figures/rag_sketch.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.05870v1/extracted/5654614/figures/rag_sketch.png)
+
+**Summary:**
+
+The paper introduces a new class of denial-of-service vulnerabilities in retrieval-augmented generation (RAG) systems, where a single "blocker" document in the RAG database can cause the system to refuse to answer certain queries. The authors demonstrate this attack against several popular large language models (LLMs) and show that resistance to jamming is a novel LLM-safety property not captured by existing safety and trustworthiness metrics.
+
+The authors investigate several methods for generating blocker documents, including a new method based on black-box optimization that does not require knowledge of the embedding or LLM used by the target RAG system. They also discuss the limitations of this method, such as producing blocker documents that have no semantics and can be easily filtered out from RAG databases.
+
+The paper concludes with a discussion of future research directions, such as minimizing the number of queries to the target RAG system, generating blocker documents with access to a RAG system whose database is not exactly the same as the target system, and generating passive blocker documents that are difficult to detect or even semantically plausible.
+
+**Major Findings:**
+
+1. The authors demonstrate a new class of denial-of-service vulnerabilities in RAG systems, where a single blocker document can cause the system to refuse to answer certain queries.
+2. The authors show that resistance to jamming is a novel LLM-safety property not captured by existing safety and trustworthiness metrics.
+3. The authors investigate several methods for generating blocker documents, including a new method based on black-box optimization that does not require knowledge of the embedding or LLM used by the target RAG system.
+
+**Analysis and Critique:**
+
+The paper presents an interesting and novel attack on RAG systems, highlighting a previously unrecognized vulnerability. The authors' investigation of different methods for generating blocker documents is thorough and well-presented. However, the paper could benefit from a more in-depth discussion of the potential real-world implications of this attack and possible countermeasures. Additionally, the limitations of the black-box optimization method for generating blocker documents should be further explored and addressed.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.05870v1](https://arxiv.org/abs/2406.05870v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.05870v1](https://browse.arxiv.org/html/2406.05870v1)       |
+| Truncated       | False       |
+| Word Count       | 12156       |

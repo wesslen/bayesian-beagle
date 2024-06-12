@@ -1,0 +1,44 @@
+
+---
+title: "Are Large Language Models Actually Good at Text Style Transfer?"
+id: "2406.05885v1"
+description: "LLMs struggle with TST in non-English languages, but finetuning improves results, highlighting the need for dedicated datasets."
+author: Sourabrata Mukherjee, Atul Kr. Ojha, Ondřej Dušek
+date: "2024-06-09"
+image: "../../img/2406.05885v1/image_1.png"
+categories: ['prompt-engineering', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2406.05885v1/image_1.png)
+
+**Summary:**
+
+This paper evaluates the performance of large language models (LLMs) on Text Style Transfer (TST), specifically focusing on sentiment transfer and text detoxification across three languages: English, Hindi, and Bengali. The study analyzes the capabilities of pre-trained LLMs using zero-shot and few-shot prompting as well as parameter-efficient finetuning on publicly available datasets. The evaluation is conducted using automatic metrics, GPT-4, and human evaluations, revealing that while some prompted LLMs perform well in English, their performance in other languages remains average. However, finetuning significantly improves results compared to zero-shot and few-shot prompting, making them comparable to previous state-of-the-art.
+
+**Major Findings:**
+
+1. GPT-3.5 consistently outperforms other models on zero-shot prompting across all languages, achieving the highest accuracy and average scores.
+2. Few-shot prompting generally improves performance compared to zero-shot, especially in English. GPT-3.5 stays in the lead, with high scores in all languages.
+3. Finetuning brings the highest gains across the board, with strong performance from most LLMs, including ones weak at zero-shot and few-shot. Most finetuned LLMs are comparable to prompted GPT-3.5 and previous SOTA models.
+4. English consistently shows the highest performance, while Hindi and Bengali benefit significantly from few-shot and finetuning approaches.
+
+**Analysis and Critique:**
+
+1. The study focuses on two subtasks of TST, sentiment transfer, and text detoxification, and three languages: English, Hindi, and Bengali. However, the evaluation is limited to these specific tasks and languages, which may not fully capture the diversity of linguistic styles and cultural nuances across different languages.
+2. The study mainly explores basic prompt techniques and finetuning for LLMs, overlooking other approaches that could contribute to advancing TST tasks.
+3. The high cost of running LLMs limited the extensive hyperparameter optimization, and the study did not conduct any extensive preliminary experiments on the English and Hindi style transfer development set.
+4. The study mainly focuses on the performance of LLMs in TST tasks, but it does not
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.05885v1](https://arxiv.org/abs/2406.05885v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.05885v1](https://browse.arxiv.org/html/2406.05885v1)       |
+| Truncated       | False       |
+| Word Count       | 27021       |

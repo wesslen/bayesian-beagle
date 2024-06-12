@@ -1,0 +1,40 @@
+
+---
+title: "CAAP: Context-Aware Action Planning Prompting to Solve Computer Tasks with Front-End UI Only"
+id: "2406.06947v1"
+description: "LLM-based agent uses screenshots for context, achieving 94.4% success on MiniWoB++ problems with 1.48 demos per type, enabling broader automation applications."
+author: Junhee Cho, Jihoon Kim, Daseul Bae, Jinho Choo, Youngjune Gwon, Yeong-Dae Kwon
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.06947v1/x1.png"
+categories: ['prompt-engineering', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06947v1/x1.png)
+
+**Summary:**
+
+The paper introduces an LLM-based agent that operates solely on the basis of screenshots for recognizing environments, while leveraging in-context learning to eliminate the need for collecting large datasets of human demonstration. The proposed method, named Context-Aware Action Planning (CAAP) prompting, encourages the agent to meticulously review the context in various angles. The agent achieves a success rate of 94.4% on 67 types of MiniWoB++ problems, utilizing only 1.48 demonstrations per problem type. The method offers the potential for broader applications, especially for tasks that require inter-application coordination on computers or smartphones.
+
+**Major Findings:**
+
+1. The proposed LLM-based agent operates exclusively through human-oriented front-end UI channels for both input and output, eliminating the constraints associated with HTML/DOM and application-specific API calls.
+2. The CAAP prompting technique enhances the ICL ability of an LLM-based agent in managing complex desktop tasks by systematically structuring contextual information and leveraging syntactic patterns that trigger optimal CoT reasoning.
+3. The paper proposes fairer metrics for comparing the performance of agents in the MiniWoB++ benchmark, addressing the issue of selectively chosen subgroups of tasks in previous studies.
+
+**Analysis and Critique:**
+
+The paper presents a novel approach to LLM-based agents that addresses the limitations of existing methods reliant on HTML or DOM inputs and those that combine supervised learning (SL) and reinforcement learning (RL). The proposed agent operates solely on visual inputs and utilizes a large language model (LLM). The CAAP prompting approach is introduced to enhance the decision-making capabilities of ICL-based agents. The evaluations using the MiniWoB++ benchmark demonstrate the superiority of the proposed method. However, the scope of validation remains limited, and further research is needed to evaluate the agent across a broader array of benchmarks. Additionally, the agent's reliance on visual observation data may lead to observation failures, as demonstrated in the case study. The paper also acknowledges the limitations of the benchmark directives and the need for more comprehensive assessment from a research perspective.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06947v1](https://arxiv.org/abs/2406.06947v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06947v1](https://browse.arxiv.org/html/2406.06947v1)       |
+| Truncated       | False       |
+| Word Count       | 10877       |

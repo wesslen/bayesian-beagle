@@ -1,0 +1,38 @@
+
+---
+title: "Reinforcement Learning from Human Feedback without Reward Inference: Model-Free Algorithm and Instance-Dependent Analysis"
+id: "2406.07455v1"
+description: "RLHF not harder than classic RL; end-to-end RLHF can improve performance by avoiding pitfalls in reward inference."
+author: Qining Zhang, Honghao Wei, Lei Ying
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07455v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07455v1/x1.png)
+
+### Summary:
+
+This paper presents a model-free RLHF (Reinforcement Learning from Human Feedback) algorithm called Batched Sequential Action Dueling (BASD) for episodic MDPs with general trajectory-wise rewards. The algorithm identifies the optimal policy directly from human preference information in a backward manner, employing a dueling bandit sub-routine that constantly duels actions to identify the superior one. The algorithm adopts a reward-free exploration and best-arm-identification-like adaptive stopping criteria to equalize the visitation among all states in the same decision step while moving to the previous step as soon as the optimal action is identifiable. The algorithm has a provable, instance-dependent sample complexity that resembles the result in classic RL, where the optimal policy is the Condorcet winner when human preferences are obtained with large batch sizes. The algorithm can be transformed into an explore-then-commit algorithm with logarithmic regret and generalized to discounted MDPs using a frame-based approach. The results show that RLHF is not significantly harder than classic RL and end-to-end RLHF may deliver improved performance by avoiding pitfalls in reward inferring such as overfit and distribution shift.
+
+### Major Findings:
+
+1. The paper proposes a model-free RLHF algorithm called Batched Sequential Action Dueling (BASD) for episodic MDPs with general trajectory-wise rewards.
+2. The algorithm identifies the optimal policy directly from human preference information in a backward manner, employing a dueling bandit sub-routine that constantly duels actions to identify the superior one.
+3. The algorithm adopts a reward-free exploration and best-arm-identification-like adaptive stopping criteria to equalize the visitation among all states in the same decision step while moving to the previous step as soon as the optimal action is identifiable.
+4. The algorithm has a provable, instance-dependent sample complexity that resembles the result in classic RL, where the optimal policy is the Condorcet winner when human preferences are obtained with large batch sizes.
+5. The algorithm can be transformed into an explore-then-commit algorithm with logarithmic regret and generalized to discounted MDPs
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07455v1](https://arxiv.org/abs/2406.07455v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07455v1](https://browse.arxiv.org/html/2406.07455v1)       |
+| Truncated       | False       |
+| Word Count       | 11143       |

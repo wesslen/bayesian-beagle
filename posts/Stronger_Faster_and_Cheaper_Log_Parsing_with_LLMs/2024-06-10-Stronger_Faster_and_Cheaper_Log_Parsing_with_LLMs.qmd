@@ -1,0 +1,46 @@
+
+---
+title: "Stronger, Faster, and Cheaper Log Parsing with LLMs"
+id: "2406.06156v1"
+description: "LogBatcher: Cost-effective LLM-based log parser with no training or labeled data, using clustering and cache matching for efficient parsing."
+author: Yi Xiao, Van-Hoang Le, Hongyu Zhang
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.06156v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06156v1/x1.png)
+
+### Summary:
+
+LogBatcher is a novel, cost-effective LLM-based log parser that does not require any training process or labeled data. It leverages latent characteristics of log data and reduces the LLM inference overhead by batching a group of logs. The parser is designed to address the limitations of existing log parsers, such as the reliance on heuristics or handcrafted features, which may not generalize well across diverse log sources or require extensive model tuning.
+
+### Major Findings:
+
+1. **Effective and Efficient Log Parsing:** LogBatcher has been shown to be effective and efficient for log parsing through extensive experiments on the public LogPai dataset.
+2. **Demonstration-Free and Training-Free:** LogBatcher is the first demonstration-free LLM-based log parsing framework, to the best of our knowledge. It does not require any training overhead and is cost-effective for parsing large-scale log data.
+3. **Log-Specific Prompting Strategy:** LogBatcher introduces a log-specific prompting strategy to provide LLMs with a batch of logs, which allows LLMs to better incorporate the latent commonalities and variabilities among log messages. This strategy also reduces the token consumption of LLMs.
+
+### Analysis and Critique:
+
+While LogBatcher has shown promising results, there are a few potential limitations and areas for improvement:
+
+1. **Dependence on LLMs:** The performance of LogBatcher is heavily dependent on the capabilities of the LLMs used. If the LLMs do not have a strong understanding of the log data, the performance of LogBatcher may be compromised.
+2. **Potential for Bias:** The clustering algorithm used in LogBatcher may introduce bias, as it groups logs based on their similarities. This could potentially lead to the misclassification of logs, especially if the logs are not well-represented in the training data.
+3. **Scalability:** While LogBatcher has been shown to be effective for parsing large-scale log data, its scalability may be limited by the computational resources required to process the log data.
+
+In conclusion, LogBatcher is a promising approach for log parsing that leverages the power of LLMs. However, further
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06156v1](https://arxiv.org/abs/2406.06156v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06156v1](https://browse.arxiv.org/html/2406.06156v1)       |
+| Truncated       | False       |
+| Word Count       | 11355       |

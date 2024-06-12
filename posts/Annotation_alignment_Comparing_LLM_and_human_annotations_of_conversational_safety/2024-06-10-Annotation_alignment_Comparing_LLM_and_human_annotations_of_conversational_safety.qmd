@@ -1,0 +1,48 @@
+
+---
+title: "Annotation alignment: Comparing LLM and human annotations of conversational safety"
+id: "2406.06369v1"
+description: "GPT-4 aligns with human safety perceptions, but more data is needed to assess demographic disparities and idiosyncratic variation."
+author: Rajiv Movva, Pang Wei Koh, Emma Pierson
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.06369v1/extracted/5656708/figures/may20_DICES350_correlations_with_gpt4_N=5000.png"
+categories: ['security', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06369v1/extracted/5656708/figures/may20_DICES350_correlations_with_gpt4_N=5000.png)
+
+### Summary:
+
+- The study examines the alignment between LLMs and human annotators in assessing conversational safety using the DICES dataset, which consists of 350 conversations rated for safety by 112 annotators from 10 race-gender groups.
+- GPT-4 achieves a Pearson correlation of 0.62 with the average annotator rating, outperforming the median annotator's correlation with the average (0.54).
+- Larger datasets are needed to determine whether GPT-4 exhibits disparities in how well it correlates with demographic groups.
+- There is substantial idiosyncratic variation in correlation within groups, suggesting that race & gender do not fully capture differences in alignment.
+- GPT-4 cannot predict when one demographic group finds a conversation more unsafe than another.
+
+### Major Findings:
+
+1. GPT-4 outperforms the median annotator in terms of correlation with the average annotator rating, achieving a Pearson correlation of 0.62.
+2. The dataset is underpowered to detect demographic differences in annotator-LLM alignment, as confidence intervals are wide.
+3. There is substantial idiosyncratic variation in alignment with GPT-4 within demographic groups, suggesting that context and characteristics beyond race & gender may be necessary to explain why annotators align with GPT-4 to differing extents.
+
+### Analysis and Critique:
+
+- The study's main limitation is the lack of sufficient power to detect potentially meaningful differences in annotator-LLM alignment due to the small dataset.
+- The use of a single dataset (DICES) may limit the generalizability of the findings to other contexts.
+- The study does not explore the impact of different prompt definitions on GPT-4 ratings, which could potentially increase alignment with annotators.
+- The study does not consider conversational safety in languages other than English, which may bring their own sets of contextual harms.
+- The study inherits the same conceptualization of safety as the dataset used, which may require additions or subtractions to be more relevant in other contexts.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06369v1](https://arxiv.org/abs/2406.06369v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06369v1](https://browse.arxiv.org/html/2406.06369v1)       |
+| Truncated       | False       |
+| Word Count       | 7965       |

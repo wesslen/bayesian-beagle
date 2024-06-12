@@ -1,0 +1,41 @@
+
+---
+title: "DR-RAG: Applying Dynamic Document Relevance to Retrieval-Augmented Generation for Question-Answering"
+id: "2406.07348v1"
+description: "DR-RAG improves QA accuracy by enhancing document retrieval, using a two-stage framework and a small classifier, while maintaining efficiency."
+author: Zijian Hei, Weiling Wei, Wenjie Ou, Juyi Qiao, Junming Jiao, Zhiqing Zhu, Guowen Song
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07348v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07348v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel two-stage retrieval framework called Dynamic-Relevant Retrieval-Augmented Generation (DR-RAG) to improve document retrieval recall and the accuracy of answers in question-answering (QA) systems. DR-RAG addresses the challenge of retrieving relevant documents with low relevance to the query, which are crucial for generating accurate answers. The framework employs a small classifier to determine the contribution of retrieved documents to answering the query and retrieve the relatively relevant documents. DR-RAG significantly improves the efficiency of the experiment by calling the large language models (LLMs) only once. The experimental results on multi-hop QA datasets demonstrate that DR-RAG can significantly improve the accuracy of the answers and achieve new progress in QA systems.
+
+### Major Findings:
+
+1. DR-RAG is a two-stage retrieval framework that improves document retrieval recall and the accuracy of answers in QA systems.
+2. A small classifier is applied to two different selection strategies to determine the contribution of the retrieved documents to answering the query and retrieve the relatively relevant documents.
+3. DR-RAG calls the LLMs only once, significantly improving the efficiency of the experiment.
+4. The experimental results on multi-hop QA datasets show that DR-RAG can significantly improve the accuracy of the answers and achieve new progress in QA systems.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to improving the performance of QA systems by addressing the challenge of retrieving relevant documents with low relevance to the query. The proposed DR-RAG framework demonstrates significant improvements in document retrieval recall and the accuracy of answers. However, the paper does not provide a detailed comparison with other state-of-the-art retrieval-augmented generation methods, which could have strengthened the evaluation of the proposed approach. Additionally, the paper does not discuss the potential limitations or shortcomings of the proposed framework, such as the scalability of the small classifier or the generalizability of the approach to other QA tasks. Further research is needed to address these limitations and evaluate the proposed framework in more diverse and challenging QA scenarios.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07348v1](https://arxiv.org/abs/2406.07348v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07348v1](https://browse.arxiv.org/html/2406.07348v1)       |
+| Truncated       | False       |
+| Word Count       | 6121       |

@@ -1,0 +1,45 @@
+
+---
+title: "MolX: Enhancing Large Language Models for Molecular Learning with A Multi-Modal Extension"
+id: "2406.06777v1"
+description: "LLMs struggle with molecule-related tasks; this study introduces MolX, a multi-modal external module, to enhance LLMs' molecule comprehension, outperforming baselines in various downstream tasks."
+author: Khiem Le, Zhichun Guo, Kaiwen Dong, Xiaobao Huang, Bozhao Nan, Roshni Iyer, Xiangliang Zhang, Olaf Wiest, Wei Wang, Nitesh V. Chawla
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.06777v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06777v1/x1.png)
+
+# Summary:
+
+The paper introduces a novel framework, MolX, to enhance the ability of Large Language Models (LLMs) to comprehend molecules. MolX is a multi-modal external module that utilizes specific encoders to extract fine-grained features from both SMILES strings and 2D molecular graph representations. It also incorporates a human-defined molecular fingerprint to leverage its embedded domain knowledge. The whole model, with the LLM frozen, is pre-trained with a versatile strategy including a diverse set of tasks to establish an alignment between MolX and the LLM's textual input space.
+
+## Major Findings:
+
+1. MolX significantly improves the performance of LLMs on various molecule-related tasks, outperforming baselines on tasks such as molecule-to-text translation, retrosynthesis, and property prediction.
+2. MolX can act as a plug-in module to the LLM, enhancing its performance on molecule-related tasks while fully preserving its general-purpose usage on other domains.
+3. The proposed method only introduces a small number of trainable parameters, making it an efficient solution for enhancing LLMs.
+
+## Analysis and Critique:
+
+1. The paper does not discuss the potential limitations of the MolX framework, such as its performance on more complex molecular structures or its ability to handle large-scale molecular datasets.
+2. The paper does not provide a comparison with other multi-modal approaches for molecular learning, which could provide a more comprehensive evaluation of the proposed method.
+3. The paper does not discuss the potential applications of MolX in other domains, such as drug discovery or materials science, which could provide additional insights into its potential impact.
+4. The paper does not discuss the potential ethical implications of using LLMs for molecular learning, such as the potential for bias in the generated molecular structures or the potential for misuse in the development of harmful substances.
+
+Overall, the paper presents a promising approach for enhancing the ability of LLMs to comprehend molecules. However, further research is needed to fully evaluate its limitations, compare it with other approaches, and explore its potential applications and ethical implications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06777v1](https://arxiv.org/abs/2406.06777v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06777v1](https://browse.arxiv.org/html/2406.06777v1)       |
+| Truncated       | False       |
+| Word Count       | 8694       |

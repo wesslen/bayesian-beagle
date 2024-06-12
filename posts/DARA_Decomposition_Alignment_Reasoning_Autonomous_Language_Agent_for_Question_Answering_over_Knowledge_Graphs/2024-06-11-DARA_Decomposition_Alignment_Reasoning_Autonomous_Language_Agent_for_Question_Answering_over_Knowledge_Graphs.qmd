@@ -1,0 +1,42 @@
+
+---
+title: "DARA: Decomposition-Alignment-Reasoning Autonomous Language Agent for Question Answering over Knowledge Graphs"
+id: "2406.07080v1"
+description: "DARA framework improves LLM-powered agents' KGQA performance, outperforming in-context learning-based agents and alternative fine-tuned agents."
+author: Haishuo Fang, Xiaodan Zhu, Iryna Gurevych
+date: "2024-06-11"
+image: "https://browse.arxiv.org/html/2406.07080v1/x1.png"
+categories: ['hci', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.07080v1/x1.png)
+
+### Summary:
+
+The paper introduces the Decomposition-Alignment-Reasoning Agent (DARA) framework, which improves the neural-symbolic reasoning capabilities of language agents powered by Large Language Models (LLMs) in Knowledge Graph Question Answering (KGQA). DARA effectively parses questions into formal queries through a dual mechanism: high-level iterative task decomposition and low-level task grounding. The framework can be efficiently trained with a small number of high-quality reasoning trajectories. Experimental results demonstrate that DARA fine-tuned on LLMs outperforms both in-context learning-based agents with GPT-4 and alternative fine-tuned agents across different benchmarks in zero-shot evaluation.
+
+### Major Findings:
+
+1. DARA is a novel language agent framework for KGQA that surpasses the framework proposed in AgentBench by explicitly disentangling high-level task decomposition and low-level task grounding (schema items selection and logical form construction).
+2. Fine-tuned DARA achieves state-of-the-art performance compared with both ICL-based and other fine-tuned agents (AgentLMs and fine-tuned AgentBench) across the three important benchmarks in zero-shot evaluation. Moreover, training with 768 reasoning trajectories, DARA can achieve highly competitive performances comparable to enumerating-and-ranking-based models trained on larger data.
+3. The ongoing challenge of generating high-quality reasoning trajectories for language agents in KGQA with GPT-4 has been revealed. This is in contrast to previous studies that demonstrate the success of ChatGPT or GPT-4 in annotation, suggesting a potential avenue for future research: how to automatically generate high-quality data for language agent use cases where the most advanced LLMs (e.g. GPT-4) face their limitations.
+
+### Analysis and Critique:
+
+While DARA shows promising results in improving the neural-symbolic reasoning capabilities of language agents in KGQA, there are some potential limitations and areas for improvement.
+
+1. The paper does not provide a detailed comparison of DARA with other state-of-the-art methods in KGQA, making it difficult
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.07080v1](https://arxiv.org/abs/2406.07080v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.07080v1](https://browse.arxiv.org/html/2406.07080v1)       |
+| Truncated       | False       |
+| Word Count       | 8918       |

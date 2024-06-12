@@ -1,0 +1,40 @@
+
+---
+title: "How Alignment and Jailbreak Work: Explain LLM Safety through Intermediate Hidden States"
+id: "2406.05644v1"
+description: "LLMs learn ethics in pre-training, align concepts with emotions, and refine for safe output. Jailbreaks disrupt this process, causing harm."
+author: Zhenhong Zhou, Haiyang Yu, Xinghua Zhang, Rongwu Xu, Fei Huang, Yongbin Li
+date: "2024-06-09"
+image: "../../img/2406.05644v1/image_1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2406.05644v1/image_1.png)
+
+**Summary:**
+
+This paper explores how alignment and jailbreak work in large language models (LLMs) by using weak classifiers to explain LLM safety through intermediate hidden states. The authors confirm that LLMs learn ethical concepts during pre-training rather than alignment and can identify malicious and normal inputs in the early layers. Alignment associates the early concepts with emotion guesses in the middle layers and then refines them to specific reject tokens for safe generations. Jailbreak disturbs the transformation of early unethical classification into negative emotions. The paper conducts experiments on models from 7B to 70B across various model families to prove their conclusion.
+
+**Major Findings:**
+
+1. LLMs learn ethical concepts during pre-training and can distinguish between malicious and normal inputs in the early layers.
+2. Alignment associates the early ethical concepts with emotion guesses in the middle layers and refines them to specific reject tokens for safe generations.
+3. Jailbreak disturbs the transformation of early unethical classification into negative emotions, causing LLMs to generate harmful content.
+
+**Analysis and Critique:**
+
+The paper provides a novel perspective on LLM safety by explaining how alignment and jailbreak work through intermediate hidden states. The use of weak classifiers to explain LLM safety is an innovative approach that could be applied to other aspects of LLM behavior. However, the paper does not discuss the limitations of using weak classifiers or the potential biases that may be introduced. Additionally, the paper does not address the potential risks of jailbreak, such as the generation of harmful content, and how these risks can be mitigated. Overall, the paper provides valuable insights into LLM safety and offers a new perspective on how alignment and jailbreak work.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.05644v1](https://arxiv.org/abs/2406.05644v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.05644v1](https://browse.arxiv.org/html/2406.05644v1)       |
+| Truncated       | False       |
+| Word Count       | 19114       |

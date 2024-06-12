@@ -1,0 +1,40 @@
+
+---
+title: "Language Models Resist Alignment"
+id: "2406.06144v1"
+description: "Alignment fine-tuning in LLMs is elastic and can revert to pre-training behavior, especially with larger models and more pre-training data."
+author: Jiaming Ji, Kaile Wang, Tianyi Qiu, Boyuan Chen, Jiayi Zhou, Changye Li, Hantao Lou, Yaodong Yang
+date: "2024-06-10"
+image: "https://browse.arxiv.org/html/2406.06144v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.06144v1/x1.png)
+
+### Summary:
+
+The paper explores the elasticity of post-alignment models, which is the tendency to revert to the behavior distribution formed during the pre-training phase upon further fine-tuning. The authors use compression theory to formally derive that such fine-tuning process disproportionately undermines alignment compared to pre-training, potentially by orders of magnitude. They conduct experimental validations to confirm the presence of elasticity across models of varying types and sizes. The discovery signifies the importance of taming the inherent elasticity of LLMs, thereby overcoming the resistance of LLMs to alignment finetuning.
+
+### Major Findings:
+
+1. The paper demonstrates the elasticity of post-alignment models, which is the tendency to revert to the behavior distribution formed during the pre-training phase upon further fine-tuning.
+2. The authors use compression theory to formally derive that such fine-tuning process disproportionately undermines alignment compared to pre-training, potentially by orders of magnitude.
+3. The authors conduct experimental validations to confirm the presence of elasticity across models of varying types and sizes.
+
+### Analysis and Critique:
+
+The paper provides a novel perspective on the alignment of LLMs by introducing the concept of elasticity. The authors' use of compression theory to derive their findings is a unique approach that adds to the robustness of their results. However, the paper does not discuss the potential implications of elasticity on the generalization capabilities of LLMs. Additionally, the authors do not provide a clear solution to overcome the resistance of LLMs to alignment finetuning. Further research is needed to explore these aspects and provide a more comprehensive understanding of the implications of elasticity in LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.06144v1](https://arxiv.org/abs/2406.06144v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.06144v1](https://browse.arxiv.org/html/2406.06144v1)       |
+| Truncated       | False       |
+| Word Count       | 5000       |

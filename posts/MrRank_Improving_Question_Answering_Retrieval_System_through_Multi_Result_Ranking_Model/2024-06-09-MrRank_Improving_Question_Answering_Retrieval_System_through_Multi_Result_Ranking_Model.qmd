@@ -1,0 +1,40 @@
+
+---
+title: "MrRank: Improving Question Answering Retrieval System through Multi-Result Ranking Model"
+id: "2406.05733v1"
+description: "New method combines IR systems for LLMs, improving performance and reducing hallucinations."
+author: Danupat Khamnuansin, Tawunrat Chalothorn, Ekapol Chuangsuwanich
+date: "2024-06-09"
+image: "https://browse.arxiv.org/html/2406.05733v1/extracted/5654108/images/fig_system_overview.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.05733v1/extracted/5654108/images/fig_system_overview.png)
+
+### Summary:
+
+The paper proposes an approach to improve question answering retrieval performance by combining multiple models using a re-ranking approach. The authors focus on combining a neural-based model as the primary retriever and BM25 as a supporting model. The proposed method involves two stages: the retrieval stage, where off-the-shelf retrievers generate a candidate pool, and the re-ranking stage, where a re-ranking network constructs the final ranking from the candidate pool. The authors demonstrate that their approach outperforms the current state-of-the-art on ReQA SQuAD, achieving an average enhancement of 13.6% in the mean reciprocal rank (MRR) across datasets.
+
+### Major Findings:
+
+1. The proposed method combines two different types of model architectures (term weighting and neural networks) to improve question answering retrieval performance.
+2. The authors conducted experiments on two distinct styles of ReQA datasets to demonstrate the effectiveness of combining multiple models using the re-ranking approach.
+3. The proposed method outperforms the current state-of-the-art on ReQA SQuAD, surpassing all individual retrieval models, RRF, and the statistical routing strategy.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to improve question answering retrieval performance by combining multiple models using a re-ranking approach. The authors demonstrate the effectiveness of their method through empirical evaluations, showing significant performance improvements over other combining strategies. However, the method requires the selection of a main retriever, which may introduce a cap on the final performance. Additionally, the computational cost of the model scales with the number of re-ranking indexes fed through the re-ranker, which may present challenges when deploying the model in situations with a tight compute budget. Future work could explore the possibility of eliminating the need for main retrieval model selection and complementing the proposed approach with other full-weight update fine-tuning techniques to further enhance performance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-12       |
+| Abstract | [https://arxiv.org/abs/2406.05733v1](https://arxiv.org/abs/2406.05733v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.05733v1](https://browse.arxiv.org/html/2406.05733v1)       |
+| Truncated       | False       |
+| Word Count       | 5268       |

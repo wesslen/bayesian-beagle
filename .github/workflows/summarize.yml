@@ -40,32 +40,13 @@ jobs:
         python -m pip install -r requirements-langchain.txt
     - name: Fetch File from Repo #2
       run: |
-        curl -O "https://raw.githubusercontent.com/wesslen/arxiv-frontpage/main/data/input.jsonl"
-        mv input.jsonl input_new.jsonl
-    - name: Compare, Append New Data and commit and push
-      run: |
-        # Extract unique keys from both files
-        jq -r '.id' data/input.jsonl > keys_input.txt
-        jq -r '.id' input_new.jsonl > keys_input_new.txt
-        # Sort the key files
-        sort keys_input.txt > sorted_keys_input.txt
-        sort keys_input_new.txt > sorted_keys_input_new.txt
-        # Find keys that are in input_new.jsonl but not in input.jsonl
-        comm -23 sorted_keys_input_new.txt sorted_keys_input.txt > unique_keys.txt
-        # Check if unique_keys.txt is not empty
-        if [ -s unique_keys.txt ]; then
-          # Extract objects with unique keys and append
-          while read key; do
-            jq -c --arg id "$key" '. | select(.id == $id)' input_new.jsonl >> new_records.jsonl
-          done < unique_keys.txt
-          cat new_records.jsonl >> data/input.jsonl
-          git config user.name "Automated"
-          git config user.email "actions@users.noreply.github.com"
-          git add data/input.jsonl
-          timestamp=$(date -u)
-          git commit -m "Update input.jsonl from Frontpage: ${timestamp}" || exit 0
-          git push
-        fi
+        curl -f -O "https://raw.githubusercontent.com/wesslen/arxiv-frontpage/main/data/input.jsonl"
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add data/input.jsonl
+        timestamp=$(date -u)
+        git commit -m "Update input.jsonl from Frontpage: ${timestamp}" || exit 0
+        git push
     - name: Run summarization
       run: |
         FORCE_FLAG=""

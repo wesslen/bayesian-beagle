@@ -1,0 +1,41 @@
+
+---
+title: "Preference Learning Algorithms Do Not Learn Preference Rankings"
+id: "2405.19534v1"
+description: "Despite high performance, preference-tuned LLMs often have low ranking accuracy, due to limitations in the DPO objective and a gap between observed and idealized ranking accuracies."
+author: Angelica Chen, Sadhika Malladi, Lily H. Zhang, Xinyi Chen, Qiuyi Zhang, Rajesh Ranganath, Kyunghyun Cho
+date: "2024-05-29"
+image: "https://browse.arxiv.org/html/2405.19534v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.19534v1/x1.png)
+
+### Summary:
+
+Preference learning algorithms, such as RLHF and DPO, are used to align large language models (LLMs) with human preferences. However, the understanding of their inner workings is still limited. This study investigates the conventional wisdom that preference learning trains models to assign higher likelihoods to more preferred outputs than less preferred outputs, measured via ranking accuracy. Surprisingly, most state-of-the-art preference-tuned models achieve a ranking accuracy of less than 70% on common preference datasets. The study further derives the idealized ranking accuracy that a preference-tuned LLM would achieve if it optimized the DPO or RLHF objective perfectly. The results show that existing models exhibit a significant alignment gap – a gap between the observed and idealized ranking accuracies. This discrepancy is attributed to the DPO objective, which is empirically and theoretically ill-suited to fix even mild ranking errors in the reference model.
+
+### Major Findings:
+
+1. Most state-of-the-art preference-tuned models achieve a ranking accuracy of less than 70% on common preference datasets.
+2. Existing models exhibit a significant alignment gap between the ranking accuracy they achieve and the accuracy achievable under idealized conditions.
+3. Preference learning rarely corrects incorrect rankings. Even mild ranking errors in the reference model can make it virtually impossible for DPO and its variants to correct the ranking.
+4. Ranking accuracy strongly correlates with the empirically popular win rate metric when the model is close to the reference model used in the objective.
+
+### Analysis and Critique:
+
+The study provides valuable insights into the limitations of current preference learning algorithms. However, it does not provide a clear solution to overcome these limitations. The study also does not discuss the potential impact of these limitations on the performance of LLMs in real-world applications. Furthermore, the study focuses on a specific set of preference learning algorithms and does not explore other potential approaches to align LLMs with human preferences. Future research could build on this study to develop more effective preference learning algorithms and explore their impact on the performance of LLMs in various applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-14       |
+| Abstract | [https://arxiv.org/abs/2405.19534v1](https://arxiv.org/abs/2405.19534v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.19534v1](https://browse.arxiv.org/html/2405.19534v1)       |
+| Truncated       | False       |
+| Word Count       | 10665       |

@@ -1,0 +1,47 @@
+
+---
+title: "LLMs for User Interest Exploration: A Hybrid Approach"
+id: "2405.16363v1"
+description: "Hybrid framework with LLMs and classic models improves novel interest discovery, boosting user enjoyment."
+author: Jianling Wang, Haokai Lu, Yifan Liu, He Ma, Yueqi Wang, Yang Gu, Shuzhou Zhang, Ningren, Han, Shuchao Bi, Lexi Baugher, Ed Chi, Minmin Chen
+date: "2024-05-25"
+image: "https://browse.arxiv.org/html/2405.16363v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2405.16363v1/x1.png)
+
+### Summary:
+
+* The article introduces a hybrid hierarchical framework that combines Large Language Models (LLMs) and classic recommendation models for user interest exploration.
+* The framework controls the interfacing between LLMs and classic recommendation models through "interest clusters" with adjustable granularity.
+* LLMs generate novel interest descriptions within predefined clusters, while classic recommendation models, such as transformer-based sequence recommenders, are restricted to return items within the novel clusters.
+* The approach was tested on an industrial-scale commercial platform serving billions of users, resulting in increased exploration of novel interests and overall user enjoyment.
+
+### Major Findings:
+
+1. The hybrid hierarchical framework effectively combines LLMs and classic recommendation models, leveraging LLMs' reasoning and generalization capabilities and classic models' strong personalization and grounded item corpus knowledge.
+2. LLMs are fine-tuned using a diverse and balanced set of novel interest transitions from real-world user interactions for controlled generation and user behavior alignment, ensuring LLMs generate novel interests that match predefined clusters and align with actual user behaviors.
+3. Topical clusters are used instead of items to represent users' high-level interests, allowing for a limited historical cluster sequence length and moving expensive LLM inference to the offline stage, making it feasible to serve LLM-generated novel interest transitions online.
+
+### Analysis and Critique:
+
+* The article presents a promising approach to user interest exploration by combining LLMs and classic recommendation models, addressing the limitations of traditional feedback loop-based systems.
+* The use of topical clusters to represent user interests and the fine-tuning process for controlled generation and user behavior alignment are innovative solutions to the challenges of deploying LLMs in industrial-scale recommendation systems.
+* However, the article does not discuss the potential biases or limitations of the proposed approach, such as the reliance on predefined interest clusters, the potential for overfitting during fine-tuning, or the scalability of the method for extremely large-scale platforms.
+* Additionally, the article does not provide a detailed comparison with other state-of-the-art methods for user interest exploration, making it difficult to assess the relative performance of the proposed approach.
+* Future research should address these limitations and provide a more comprehensive evaluation of the proposed method.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-14       |
+| Abstract | [https://arxiv.org/abs/2405.16363v1](https://arxiv.org/abs/2405.16363v1)        |
+| HTML     | [https://browse.arxiv.org/html/2405.16363v1](https://browse.arxiv.org/html/2405.16363v1)       |
+| Truncated       | False       |
+| Word Count       | 5005       |

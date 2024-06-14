@@ -1,0 +1,41 @@
+
+---
+title: "The current status of large language models in summarizing radiology report impressions"
+id: "2406.02134v1"
+description: "LLMs struggle to replace radiologists in summarizing radiology reports, despite few-shot prompt improvements."
+author: Danqing Hu, Shanyuan Zhang, Qing Liu, Xiaofeng Zhu, Bing Liu
+date: "2024-06-04"
+image: "https://browse.arxiv.org/html/2406.02134v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.02134v1/x1.png)
+
+### Summary:
+
+This study explores the capability of eight large language models (LLMs) in summarizing radiology report impressions. The authors collect three types of radiology reports (CT, PET-CT, and Ultrasound) from Peking University Cancer Hospital and Institute. They use the report findings to construct zero-shot, one-shot, and three-shot prompts with complete example reports to generate impressions. The evaluation metrics include automatic quantitative evaluation (BLEU, ROUGE-L, and METEOR) and human evaluation (completeness, correctness, conciseness, verisimilitude, and replaceability). Two thoracic surgeons and one radiologist compare the generated impressions with the reference impressions and score each impression under the five human evaluation metrics. The results show a gap between the generated and reference impressions, with LLMs achieving comparable performance in completeness and correctness but lower scores in conciseness and verisimilitude. Using few-shot prompts can improve LLMs' performance in conciseness and verisimilitude, but clinicians still think LLMs cannot replace radiologists in summarizing radiology impressions.
+
+### Major Findings:
+1. There is a gap between the generated impressions and reference impressions, with LLMs achieving comparable performance in completeness and correctness but lower scores in conciseness and verisimilitude.
+2. Using few-shot prompts can improve LLMs' performance in conciseness and verisimilitude, but clinicians still think LLMs cannot replace radiologists in summarizing radiology impressions.
+3. The best LLMs for each type of report are Tongyi Qianwen for PET-CT, ERNIE Bot for CT, and ChatGPT for Ultrasound.
+
+### Analysis and Critique:
+- The study provides valuable insights into the performance of LLMs in summarizing radiology report impressions, highlighting the strengths and limitations of different models.
+- The use of both automatic quantitative and human evaluation metrics provides a comprehensive assessment of the generated impressions.
+- The study could be improved by including more types of radiology reports and involving more clinicians in the evaluation process to increase the generalizability of the findings.
+- The study does not discuss the potential impact of LLMs on the workload
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-14       |
+| Abstract | [https://arxiv.org/abs/2406.02134v1](https://arxiv.org/abs/2406.02134v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.02134v1](https://browse.arxiv.org/html/2406.02134v1)       |
+| Truncated       | False       |
+| Word Count       | 7591       |

@@ -1,0 +1,46 @@
+
+---
+title: "Raising the Bar: Investigating the Values of Large Language Models via Generative Evolving Testing"
+id: "2406.14230v1"
+description: "TL;DR: GETA dynamically tests LLMs' moral baselines, addressing the issue of outdated evaluation data, and accurately assesses their values."
+author: Han Jiang, Xiaoyuan Yi, Zhihua Wei, Shu Wang, Xing Xie
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14230v1/x1.png"
+categories: ['robustness', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14230v1/x1.png)
+
+**Summary:**
+
+The paper proposes a novel framework called GETA (Generative Evolving Testing of vAlues) to address the evaluation chronoeffect problem in assessing the value alignment of Large Language Models (LLMs). GETA incorporates an iteratively-updated item generator that infers each LLM's moral boundaries and generates difficulty-tailored testing items, accurately reflecting the true alignment extent. This process theoretically learns a joint distribution of item and model response, with item difficulty and value conformity as latent variables. The generator co-evolves with the LLM, addressing the chronoeffect. The paper evaluates various popular LLMs and demonstrates that GETA can create difficulty-matching testing items and more accurately assess LLMs' values, better consistent with their performance on unseen OOD and i.i.d. items.
+
+**Major Findings:**
+
+1. GETA is a novel framework that combines Computerized Adaptive Testing (CAT) and Automatic Item Generation (AIG) to facilitate adaptive testing tailored to each LLM, mitigating evaluation chronoeffect.
+2. GETA can create difficulty-matching testing items and more accurately assess LLMs' values, better consistent with their performance on unseen OOD and i.i.d. items.
+3. GETA has been evaluated on diverse mainstream LLMs like GPT, Gemini, LLaMA, and Mistral, demonstrating its superiority over previous evaluation paradigms.
+
+**Analysis and Critique:**
+
+The paper presents a promising approach to address the evaluation chronoeffect problem in assessing the value alignment of LLMs. However, there are some potential limitations and areas for further research:
+
+1. The paper does not provide a comprehensive comparison of GETA with other existing evaluation methods, which could help to better understand its strengths and weaknesses.
+2. The paper does not discuss the potential biases and limitations of the item generator, which could impact the accuracy and fairness of the evaluation results.
+3. The paper does not provide a detailed analysis of the computational cost and scalability of GETA, which could be important factors for practical applications.
+
+Overall, the paper presents an innovative approach to address a significant challenge in evaluating LLMs, and further research is needed to fully understand its
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14230v1](https://arxiv.org/abs/2406.14230v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14230v1](https://browse.arxiv.org/html/2406.14230v1)       |
+| Truncated       | False       |
+| Word Count       | 11743       |

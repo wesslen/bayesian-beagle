@@ -1,0 +1,42 @@
+
+---
+title: "Jailbreak Paradox: The Achilles' Heel of LLMs"
+id: "2406.12702v1"
+description: "Jailbreaking foundation models: Perfect detection is impossible, and weaker models can't consistently detect jailbreaks in stronger models."
+author: Abhinav Rao, Monojit Choudhury, Somak Aditya
+date: "2024-06-18"
+image: "../../../bayesian-beagle.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+The article introduces two paradoxes concerning jailbreak of foundation models: the impossibility of constructing a perfect jailbreak classifier and the inability of a weaker model to consistently detect whether a stronger model is jailbroken or not. The authors provide formal proofs for these paradoxes and a short case study on Llama and GPT4-o to demonstrate their findings. The article discusses the broader theoretical and practical repercussions of these results.
+
+### Major Findings:
+
+1. **Impossibility of Perfect Jailbreak Classifiers**: The authors prove that it is impossible to construct a universal and perfect jailbreak classifier for any model, irrespective of its power and alignment. This is due to the lack of a fixed and deterministic definition of alignment, which makes it impossible to prevent any model from getting jailbroken.
+
+2. **Weaker Models Cannot Detect Jailbreaks in Stronger Models**: The authors show that weaker models cannot detect whether a stronger model is jailbroken or not. This is because there is a pareto-dominant relationship between two models, where one model performs better than the other in at least one capability. In such cases, the weaker model cannot confidently classify or encode the input, which implies it cannot classify both with high confidence.
+
+3. **Practical Repercussions**: The authors discuss the practical repercussions of these results on jailbreak research. They argue that automatic benchmarking of models for jailbreak on a fixed dataset is useful only for "weak" models. For powerful models, such benchmarking will be inherently faulty and a futile exercise. They also suggest that research on jailbreak prevention and detection should focus more on designing new ways to jailbreak powerful models than to prevent them.
+
+### Analysis and Critique:
+
+The article provides a novel perspective on the jailbreak of foundation models and introduces two paradoxes that challenge the current understanding of this issue. The formal proofs and the case study on Llama and GPT4-o provide strong support for the authors' arguments. However, the article does not discuss the potential solutions to these paradoxes, which could be a limitation. Additionally, the article assumes that a fixed and deterministic definition of alignment is hard to come by, which
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12702v1](https://arxiv.org/abs/2406.12702v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12702v1](https://browse.arxiv.org/html/2406.12702v1)       |
+| Truncated       | False       |
+| Word Count       | 4006       |

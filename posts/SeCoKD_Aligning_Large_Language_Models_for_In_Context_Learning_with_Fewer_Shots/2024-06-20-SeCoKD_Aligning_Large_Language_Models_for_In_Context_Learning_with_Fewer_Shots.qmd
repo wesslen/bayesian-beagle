@@ -1,0 +1,48 @@
+
+---
+title: "SeCoKD: Aligning Large Language Models for In-Context Learning with Fewer Shots"
+id: "2406.14208v1"
+description: "SeCoKD improves LLMs' performance with fewer demonstrations, outperforming base models and Supervised Fine-tuning, especially in zero-shot and one-shot settings."
+author: Weixing Wang, Haojin Yang, Christoph Meinel
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14208v1/x1.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14208v1/x1.png)
+
+### Summary:
+
+- The paper presents SeCoKD, a self-Knowledge Distillation (KD) training framework that aligns the student model with a heavily prompted variation, thereby increasing the utilization of a single demonstration.
+- SeCoKD is designed to reduce the number of demonstrations needed in the context by increasing the utilization of a single demonstration.
+- The method significantly improves the model performance on zero-shot and one-shot learning, outperforming the base model and Supervised Fine-tuning (SFT) by 30% and 10%, respectively.
+- SeCoKD not only enhances performance on the training task but also maintains robustness across different tasks, unlike SFT, which can reduce accuracy on unseen tasks.
+- The method simplifies tasks by converting difficult queries into easier ones when the same demonstration is provided.
+
+### Major Findings:
+
+1. SeCoKD significantly improves the model performance on zero-shot and one-shot learning, outperforming the base model and Supervised Fine-tuning (SFT) by 30% and 10%, respectively.
+2. SeCoKD not only enhances performance on the training task but also maintains robustness across different tasks, unlike SFT, which can reduce accuracy on unseen tasks.
+3. SeCoKD simplifies tasks by converting difficult queries into easier ones when the same demonstration is provided.
+
+### Analysis and Critique:
+
+- The paper presents a novel approach to reducing the number of demonstrations needed for In-Context Learning (ICL) by increasing the utilization of a single demonstration.
+- The method is shown to significantly improve the model performance on zero-shot and one-shot learning, outperforming the base model and Supervised Fine-tuning (SFT) by 30% and 10%, respectively.
+- The method also maintains robustness across different tasks, unlike SFT, which can reduce accuracy on unseen tasks.
+- However, the paper does not provide a detailed analysis of the limitations of the method, such as the potential for overfitting or the impact on the model's ability to generalize to new tasks.
+- Additionally, the paper does not provide a comparison with other KD methods,
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14208v1](https://arxiv.org/abs/2406.14208v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14208v1](https://browse.arxiv.org/html/2406.14208v1)       |
+| Truncated       | False       |
+| Word Count       | 6370       |

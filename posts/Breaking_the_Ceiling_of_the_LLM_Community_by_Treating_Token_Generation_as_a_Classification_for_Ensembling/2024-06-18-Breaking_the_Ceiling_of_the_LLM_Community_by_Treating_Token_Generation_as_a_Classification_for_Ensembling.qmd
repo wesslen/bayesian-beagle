@@ -1,0 +1,47 @@
+
+---
+title: "Breaking the Ceiling of the LLM Community by Treating Token Generation as a Classification for Ensembling"
+id: "2406.12585v1"
+description: "GaC: Ensembling LLMs by treating token generation as classification improves performance and reduces latency."
+author: Yao-Ching Yu, Chun-Chih Kuo, Ziqi Ye, Yu-Cheng Chang, Yueh-Se Li
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12585v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12585v1/x1.png)
+
+### Summary:
+
+The paper proposes a novel approach to ensemble Large Language Models (LLMs) by treating the generation of each token as a classification task (GaC). This method fully utilizes the probability information at each generation step and prevents LLMs from producing early incorrect tokens that lead to snowballing errors. The authors experiment with ensembling state-of-the-art LLMs on several benchmarks and observe improved performance compared to single models. They also find that ensembling only key tokens results in better performance with lower latency.
+
+### Major Findings:
+
+1. The proposed GaC approach for ensembling LLMs improves performance on various benchmarks, including exams, mathematics, reasoning, and knowledge-based QA.
+2. Ensembling only key tokens leads to better performance with lower latency across benchmarks.
+3. The study demonstrates that the collective wisdom of LLMs can be effectively exploited by simplifying problems into binary tasks, achieving better results.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other ensemble methods, making it difficult to assess the advantages and disadvantages of the proposed approach.
+2. The authors do not discuss the potential limitations of the GaC method, such as the increased computational resources required for ensembling multiple models.
+3. The study does not address the issue of tokenization discrepancies between different LLMs, which could potentially impact the performance of the ensembled models.
+4. The paper does not provide a clear explanation of how the key tokens are selected for ensembling, which could be an important factor in determining the overall performance of the method.
+5. The authors do not discuss the potential impact of the proposed approach on the generalization of the ensembled models, which is an important consideration in the development of LLMs.
+6. The study does not address the potential biases introduced by the ensembling process, which could impact the fairness and reliability of the ensembled models.
+7. The paper does not provide a detailed analysis of the computational complexity of the proposed method, which is an important factor in determining its feasibility for practical applications.
+8. The authors do not discuss the potential implications of the proposed approach for the development of LLMs, such as its impact on the design of model architectures and training procedures.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12585v1](https://arxiv.org/abs/2406.12585v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12585v1](https://browse.arxiv.org/html/2406.12585v1)       |
+| Truncated       | False       |
+| Word Count       | 5835       |

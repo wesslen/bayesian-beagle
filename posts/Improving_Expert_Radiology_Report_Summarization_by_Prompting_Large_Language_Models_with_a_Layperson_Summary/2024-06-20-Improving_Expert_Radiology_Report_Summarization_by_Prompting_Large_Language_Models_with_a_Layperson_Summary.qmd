@@ -1,0 +1,47 @@
+
+---
+title: "Improving Expert Radiology Report Summarization by Prompting Large Language Models with a Layperson Summary"
+id: "2406.14500v1"
+description: "This paper presents a novel method for radiology report summarization, improving accuracy and accessibility, especially in out-of-domain tests."
+author: Xingmeng Zhao, Tongnian Wang, Anthony Rios
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14500v1/x1.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14500v1/x1.png)
+
+### Summary:
+
+- The paper introduces a novel prompting strategy for improving radiology report summarization (RRS) by first generating a layperson summary.
+- This approach simplifies complex information and normalizes key observations, inspired by doctor-patient communication techniques.
+- The method is evaluated on the MIMIC-CXR, CheXpert, and MIMIC-III datasets, benchmarked against 7B/8B parameter open-source large language models (LLMs) like Meta-Llama-3-8B-Instruct.
+- Results demonstrate improvements in summarization accuracy and accessibility, particularly in out-of-domain tests, with improvements as high as 5% for some metrics.
+
+### Major Findings:
+
+1. The proposed prompting strategy improves RRS by generating a layperson summary before the expert summary, combining it with few-shot in-context learning.
+2. Evaluation of LLM performance on three RRS datasets (MIMIC-CXR, CheXpert, and MIMIC-III) shows improved performance, especially in out-of-domain tests.
+3. Comprehensive analysis determines the optimal modality for in-context learning, the required number of examples, and the impact of layperson summaries on impressions.
+
+### Analysis and Critique:
+
+- The paper presents a promising approach to improving RRS using LLMs, leveraging doctor-patient communication techniques to simplify complex information.
+- The evaluation on multiple datasets and benchmarking against open-source LLMs provide a comprehensive comparison of the proposed method.
+- However, the paper does not discuss potential limitations or shortcomings, such as the generalizability of the approach to other medical domains or the impact of different LLM architectures.
+- Additionally, the paper does not address the potential ethical implications of using LLMs for RRS, such as the risk of biased outputs or the need for human oversight in clinical decision-making.
+- Future work could explore these aspects and further validate the proposed method's effectiveness in real-world clinical settings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14500v1](https://arxiv.org/abs/2406.14500v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14500v1](https://browse.arxiv.org/html/2406.14500v1)       |
+| Truncated       | False       |
+| Word Count       | 8909       |

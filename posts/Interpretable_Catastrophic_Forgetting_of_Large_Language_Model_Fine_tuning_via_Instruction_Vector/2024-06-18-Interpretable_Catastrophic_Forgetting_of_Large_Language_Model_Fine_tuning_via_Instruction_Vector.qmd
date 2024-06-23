@@ -1,0 +1,42 @@
+
+---
+title: "Interpretable Catastrophic Forgetting of Large Language Model Fine-tuning via Instruction Vector"
+id: "2406.12227v1"
+description: "Fine-tuning LLMs may not erase previous skills, but add specialized reasoning; IV-guided training mitigates catastrophic forgetting."
+author: Gangwei Jiang, Zhaoyi Li, Caigao Jiang, Siqiao Xue, Jun Zhou, Linqi Song, Defu Lian, Ying Wei
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12227v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12227v1/x1.png)
+
+### Summary:
+
+This paper explores the phenomenon of catastrophic forgetting in large language models (LLMs) during fine-tuning. The authors propose the Instruction Vector (IV) framework to capture model representations highly related to specific instruction-following capabilities, making it possible to understand model-intrinsic forgetting. Through the analysis of IV dynamics pre and post-training, the authors suggest that fine-tuning mostly adds specialized reasoning patterns instead of erasing previous skills, which may appear as forgetting. The paper also introduces an IV-guided training method to mitigate catastrophic forgetting by preserving the original computation graph. Empirical tests on three benchmarks confirm the efficacy of this new approach.
+
+### Major Findings:
+
+1. The paper introduces a new perspective on catastrophic forgetting by using Knowledge and Instruction Probability to evaluate how well LLMs retain task-specific knowledge and follow instructions after tuning, showing that changes in instruction adherence mainly drive performance declines.
+2. The authors are the first to interpret forgetting with the Instruction Vector framework, identifying inherent changes during fine-tuning. The findings indicate that fine-tuning generally introduces specialized reasoning patterns rather than removing existing skills.
+3. The paper develops an IV-guided training approach that focuses on preserving and realigning the model’s computational graph during fine-tuning. This significantly enhances the general and in-context learning capabilities across various datasets in continual learning.
+
+### Analysis and Critique:
+
+1. The paper provides a novel perspective on catastrophic forgetting in LLMs, focusing on the capabilities developed during pre-training and alignment phases. However, the proposed IV-guided training method does not directly address the problem of forgetting newly learned knowledge in most cases and needs to be combined with existing continual learning methods to acquire this ability.
+2. The authors aggregate attention heads to extract the Instruction vector, which is fast and efficient but susceptible to input noise and may suffer from insufficient expressiveness. Future work could use optimization-based methods to extract a more generalized and accurate Instruction vector.
+3. Due to limitations in experimental resources, the authors did not conduct experiments on multiple backbones. In the future, they plan to validate their hypothesis about forgetting on
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12227v1](https://arxiv.org/abs/2406.12227v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12227v1](https://browse.arxiv.org/html/2406.12227v1)       |
+| Truncated       | False       |
+| Word Count       | 8412       |

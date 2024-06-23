@@ -1,0 +1,48 @@
+
+---
+title: "Adversarial Attacks on Large Language Models in Medicine"
+id: "2406.12259v1"
+description: "LLMs in healthcare are vulnerable to adversarial attacks, requiring robust security measures for safe deployment."
+author: Yifan Yang, Qiao Jin, Furong Huang, Zhiyong Lu
+date: "2024-06-18"
+image: "../../img/2406.12259v1/image_1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2406.12259v1/image_1.png)
+
+### Summary:
+
+- The study investigates the vulnerability of Large Language Models (LLMs) to adversarial attacks in medical tasks using real-world patient data.
+- Both open-source and proprietary LLMs are susceptible to manipulation across multiple tasks, with domain-specific tasks requiring more adversarial data in model fine-tuning.
+- Integrating adversarial data does not significantly degrade overall model performance on medical benchmarks but leads to noticeable shifts in fine-tuned model weights.
+- The research highlights the urgent need for robust security measures and the development of defensive mechanisms to safeguard LLMs in medical applications.
+
+### Major Findings:
+
+1. LLMs are vulnerable to adversarial attacks via prompt manipulation or model fine-tuning with poisoned training data.
+2. Both attack methods lead to harmful results in medical scenarios across three tasks: COVID-19 vaccination guidance, medication prescribing, and diagnostic tests recommendations.
+3. Fine-tuning attack requires more adversarial samples in its training dataset for domain-specific medical tasks than those in the general domain.
+
+### Analysis and Critique:
+
+- The study effectively demonstrates the vulnerability of LLMs to adversarial attacks in medical tasks, highlighting the need for robust security measures.
+- The research is limited to a specific set of LLMs and does not encompass the full spectrum of available models, which may have varying susceptibility to attacks.
+- The prompts used in this work are manually designed, and automated methods to generate different prompts could vary the observed behavioral changes.
+- The effectiveness of attacks could vary with models that have undergone fine-tuning with specific medical knowledge, which is not explored in this study.
+- The research does not provide reliable techniques to detect outputs altered through such manipulations or universal methods to mitigate models trained with adversarial samples.
+- The study's findings underscore the imperative for advanced security protocols in the deployment of LLMs to ensure their reliable use in critical sectors.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12259v1](https://arxiv.org/abs/2406.12259v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12259v1](https://browse.arxiv.org/html/2406.12259v1)       |
+| Truncated       | False       |
+| Word Count       | 9477       |

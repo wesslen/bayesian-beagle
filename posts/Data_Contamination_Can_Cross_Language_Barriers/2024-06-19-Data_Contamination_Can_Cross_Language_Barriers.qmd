@@ -1,0 +1,47 @@
+
+---
+title: "Data Contamination Can Cross Language Barriers"
+id: "2406.13236v1"
+description: "New method detects deep contamination in large language models, evading current methods."
+author: Feng Yao, Yufan Zhuang, Zihao Sun, Sunan Xu, Animesh Kumar, Jingbo Shang
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13236v1/x1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13236v1/x1.png)
+
+### Summary:
+
+The paper presents a cross-lingual form of contamination that inflates LLMs’ performance while evading current detection methods. This is achieved by intentionally injecting contamination by overfitting LLMs on the translated versions of benchmark test sets. The authors propose generalization-based approaches to unmask such deeply concealed contamination. They examine the LLM’s performance change after modifying the original benchmark by replacing the false answer choices with correct ones from other questions. Contaminated models can hardly generalize to such easier situations, where the false choices can be not even wrong, as all choices are correct in their memorization.
+
+### Major Findings:
+
+1. Cross-lingual contamination can easily fool existing detection methods, but not the proposed generalization-based methods.
+2. Cross-lingual contamination can be utilized in interpreting LLMs’ working mechanisms and in post-training LLMs for enhanced multilingual capabilities.
+3. The code and dataset used in the study can be obtained from the provided GitHub repository.
+
+### Analysis and Critique:
+
+The paper presents an interesting approach to identifying and addressing a significant issue in the development of LLMs. The use of cross-lingual contamination to inflate LLMs’ performance is a novel concept, and the proposed generalization-based approaches to detect such contamination are well-reasoned and supported by experimental results.
+
+However, the paper does not discuss the potential ethical implications of this method. If LLMs can be trained to perform well on benchmarks by simply memorizing translated versions of the test sets, this could lead to models that appear to be more capable than they actually are. This could have serious consequences in real-world applications where LLMs are used to make important decisions.
+
+Additionally, the paper does not address the potential for this method to be used maliciously. If a malicious actor were to use this method to inflate the performance of an LLM, they could use it to gain an unfair advantage in competitions or to deceive potential customers.
+
+Finally, the paper does not discuss the potential for this method to be used to improve LLMs’ performance in a more legitimate way. For example, it could be used to help LLMs learn to generalize better to new languages or to improve their performance on multilingual tasks.
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13236v1](https://arxiv.org/abs/2406.13236v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13236v1](https://browse.arxiv.org/html/2406.13236v1)       |
+| Truncated       | False       |
+| Word Count       | 7163       |

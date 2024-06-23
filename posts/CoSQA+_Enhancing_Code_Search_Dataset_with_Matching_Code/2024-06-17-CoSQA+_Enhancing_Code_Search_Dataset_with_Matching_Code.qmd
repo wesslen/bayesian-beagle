@@ -1,0 +1,39 @@
+
+---
+title: "CoSQA+: Enhancing Code Search Dataset with Matching Code"
+id: "2406.11589v1"
+description: "CoSQA+ improves code search with diverse, high-quality query-code pairs, outperforming CoSQA and introducing a new metric, MMRR."
+author: Jing Gong, Yanghui Wu, Linxi Liang, Zibin Zheng, Yanlin Wang
+date: "2024-06-17"
+image: "https://browse.arxiv.org/html/2406.11589v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.11589v1/x1.png)
+
+### Summary:
+
+The paper introduces CoSQA+, a new benchmark for code search that pairs high-quality queries with multiple suitable codes. The queries are reused from CoSQA, and the codes are collected from diverse sources, including StaQC and CSN datasets. The candidate pairs are formed by pairing queries with these codes, and the process is automated using large language models (LLMs) for annotation, filtering, and code generation for queries without suitable matches. The paper demonstrates that CoSQA+ has superior quality over CoSQA through extensive experiments. A new metric, Mean Multi-choice Reciprocal Rank (MMRR), is proposed to assess one-to-N code search performance.
+
+### Major Findings:
+
+1. CoSQA+ pairs high-quality queries with multiple suitable codes, addressing the limitations of existing code search datasets that use unrealistic queries, mismatched codes, and one-to-one query-code pairing.
+2. The construction process of CoSQA+ involves query and code collection, candidate pairs construction, model annotation, and missing code generation. The process is automated using LLMs, including Claude 3 Sonnet and GPT-4o.
+3. CoSQA+ has demonstrated superior quality over CoSQA in a quality comparison between the two datasets. In a random selection of 1000 query-code pairs, 62.9% of the paired codes from CoSQA+ were selected as better.
+4. When CodeBERT is fine-tuned on CoSQA+, it demonstrates superior performance in the CSN Python than when fine-tuned on CoSQA, with the MMRR of 0.902 for CoSQA+ versus 0.850 for CoSQA.
+5. Automated Claude 3 Sonnet annotation yields performance close to human levels, with a Krippendorff’s Alpha of 0.628 and an accuracy of 84% in exact match conditions.
+6. The MMRR metric proves to be highly reliable and stable for evaluating the effectiveness of multi-choice code search on CoSQA+, as evidenced by Cronbach’s Alpha of 0.9
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.11589v1](https://arxiv.org/abs/2406.11589v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.11589v1](https://browse.arxiv.org/html/2406.11589v1)       |
+| Truncated       | False       |
+| Word Count       | 6587       |

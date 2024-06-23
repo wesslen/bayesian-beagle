@@ -1,0 +1,47 @@
+
+---
+title: "Multi-Stage Balanced Distillation: Addressing Long-Tail Challenges in Sequence-Level Knowledge Distillation"
+id: "2406.13114v1"
+description: "BalDistill improves LLM knowledge distillation for long-tailed data, enhancing distilled model efficiency and efficacy."
+author: Yuhang Zhou, Jing Zhu, Paiheng Xu, Xiaoyu Liu, Xiyao Wang, Danai Koutra, Wei Ai, Furong Huang
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13114v1/extracted/5676955/figures/pipeline.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13114v1/extracted/5676955/figures/pipeline.png)
+
+### Summary:
+
+The paper introduces the Multi-Stage Balanced Distillation (BalDistill) framework, which aims to improve the performance of sequence-level knowledge distillation (KD) under long-tailed data distributions. BalDistill iteratively balances training data within a fixed computational budget by dynamically selecting representative head domain examples and synthesizing tail domain examples. The framework achieves state-of-the-art performance across diverse long-tailed datasets, enhancing both the efficiency and efficacy of the distilled models.
+
+### Major Findings:
+
+1. BalDistill addresses the challenge of applying sequence-level KD to long-tailed distributions, where the teacher model is a black-box LLM.
+2. The framework combines active example selection with synthetic data generation for multiple stages to maintain training balance within predefined budget limits.
+3. BalDistill demonstrably improves the student models' effectiveness and robustness across diverse domains, setting new benchmarks in performance.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other KD methods that use more complex loss functions or augment the generated rationales.
+2. The experiments are limited to decoder-only student models (Llama3 and Llama2), and incorporating more encoder-decoder models could benefit future studies.
+3. The paper focuses on knowledge distillation in Large Language Models (LLMs), and future work could explore the application of knowledge distillation in Large Vision-Language Models (LVLMs).
+4. The paper does not discuss the potential impact of the proposed method on reducing hallucination in small LVLMs.
+5. The paper does not provide a detailed analysis of the computational cost and time required for the BalDistill framework.
+6. The paper does not discuss the potential limitations of the proposed method, such as the reliance on the quality of the teacher model's rationales and the potential for overfitting to the synthetic data.
+
+Overall, the paper presents an innovative and promising approach to improving the performance of sequence-level KD under long-tailed data distributions. However, further research is needed to address the limitations and potential shortcomings of the proposed method.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13114v1](https://arxiv.org/abs/2406.13114v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13114v1](https://browse.arxiv.org/html/2406.13114v1)       |
+| Truncated       | False       |
+| Word Count       | 7892       |

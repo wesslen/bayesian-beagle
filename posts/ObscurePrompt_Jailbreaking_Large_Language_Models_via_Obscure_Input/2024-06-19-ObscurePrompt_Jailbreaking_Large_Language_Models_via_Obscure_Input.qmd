@@ -1,0 +1,43 @@
+
+---
+title: "ObscurePrompt: Jailbreaking Large Language Models via Obscure Input"
+id: "2406.13662v1"
+description: "ObscurePrompt: New method for jailbreaking LLMs, improving attack effectiveness and defense robustness."
+author: Yue Huang, Jingyu Tang, Dongping Chen, Bingda Tang, Yao Wan, Lichao Sun, Xiangliang Zhang
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13662v1/x2.png"
+categories: ['robustness', 'prompt-engineering', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13662v1/x2.png)
+
+### Summary:
+
+The paper introduces a novel method called ObscurePrompt for jailbreaking Large Language Models (LLMs). The approach is inspired by the fragile alignments observed in Out-of-Distribution (OOD) data. The method begins by constructing a base prompt that integrates well-known jailbreaking techniques and then utilizes powerful LLMs to obscure the original prompt through iterative transformations. The goal is to bolster the attack's robustness. Comprehensive experiments demonstrate that ObscurePrompt substantially improves upon previous methods in terms of attack effectiveness and maintains efficacy against two prevalent defense mechanisms.
+
+### Major Findings:
+
+1. The paper introduces a novel and straightforward approach named ObscurePrompt to jailbreaking LLMs using obscure inputs. This method is training-free and operates in a black-box setting, meaning it does not require access to the internal architecture of the target LLMs.
+2. The observation about LLMs' fragile alignment on OOD data is a key finding. By visualizing the representations of different queries within the hidden states of LLMs, it was observed that OOD queries (i.e., obscure queries) can significantly weaken the ethical decision boundary.
+3. Comprehensive experiments are performed to validate the efficacy of the method, which demonstrates superior performance over existing baselines for both black-box and white-box attacks. Other key findings from the experiments include: (1) the number of integrated prompts significantly influences the attack success rate; (2) combining all types of jailbreak strategies does not necessarily result in the most effective attack; (3) the proposed method remains effective against mainstream defenses.
+
+### Analysis and Critique:
+
+1. The paper provides a fresh perspective on jailbreaking LLMs by focusing on the use of obscure inputs. This approach addresses the inadequacies in current LLM safety measures against OOD data.
+2. The method is straightforward and does not require access to the internal parameters of the target LLMs, making it more practical and applicable than previous methods.
+3. The paper's reliance on specific and fixed prompt templates may limit its generalizability. Future research could explore more flexible and adaptable methods for generating obscure inputs.
+4. The paper does not discuss the potential ethical implications
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13662v1](https://arxiv.org/abs/2406.13662v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13662v1](https://browse.arxiv.org/html/2406.13662v1)       |
+| Truncated       | False       |
+| Word Count       | 7246       |

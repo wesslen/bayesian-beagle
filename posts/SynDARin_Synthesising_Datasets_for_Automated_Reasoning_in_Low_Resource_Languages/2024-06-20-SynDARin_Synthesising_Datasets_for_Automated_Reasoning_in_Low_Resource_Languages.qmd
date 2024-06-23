@@ -1,0 +1,48 @@
+
+---
+title: "SynDARin: Synthesising Datasets for Automated Reasoning in Low-Resource Languages"
+id: "2406.14425v1"
+description: "SynDARin generates QA datasets for low-resource languages, maintaining quality and diversity, and filtering out poor translations, enabling evaluation of LLMs."
+author: Gayane Ghazaryan, Erik Arakelyan, Pasquale Minervini, Isabelle Augenstein
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14425v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14425v1/x1.png)
+
+### Summary:
+
+- The authors propose a novel method, SynDARin, for generating and validating QA datasets for low-resource languages.
+- The method involves mining parallel English and target language paragraphs, generating synthetic MC question-answer pairs in English, translating them, and validating the quality.
+- The authors test the method by creating a QA dataset with K samples for the Armenian language, showing that 80% of the generated English data maintains quality and diversity, while the translation validation pipeline can filter out 20% of data with poor quality.
+- The generated dataset is non-trivial and can be used to evaluate reasoning capabilities in low-resource languages.
+
+### Major Findings:
+
+1. The proposed method, SynDARin, allows for the generation of QA datasets for low-resource languages, maintaining content quality and reducing the likelihood of factual errors.
+2. The human evaluation of the generated English data shows that 80% of it maintains quality and diversity in question types and topics.
+3. The translation validation pipeline can filter out 20% of data with poor quality, ensuring the overall quality of the final QA dataset.
+
+### Analysis and Critique:
+
+- The proposed method has only been tested for a smaller-scale QA dataset creation in Armenian, limiting its applicability to a wider cross-lingual study.
+- The study benchmarks should be extended and analyzed further in more multilingual, low-resource languages.
+- In the case of extremely rare low-resource languages, the automatic translation part within the pipeline would require either the development of such a translation method, robust cross-lingual transfer from a similar language, or direct manual effort, all of which are bound to introduce either qualitative or logistic complications while creating the final QA resource.
+- The authors acknowledge that the proposed methods have currently been tested only for a smaller-scale QA dataset creation in Armenian, thus not allowing them to complete a wider cross-lingual study.
+- The study benchmarks should be extended and analyzed further in more multilingual, low-resource languages.
+- In the case of extremely rare low-resource languages, the automatic translation part within the pipeline would require either the development of such a translation method, robust cross-lingual transfer from a similar language, or direct manual
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14425v1](https://arxiv.org/abs/2406.14425v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14425v1](https://browse.arxiv.org/html/2406.14425v1)       |
+| Truncated       | False       |
+| Word Count       | 3686       |

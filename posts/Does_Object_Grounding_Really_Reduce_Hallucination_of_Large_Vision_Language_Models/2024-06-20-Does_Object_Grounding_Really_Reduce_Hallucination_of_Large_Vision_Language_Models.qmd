@@ -1,0 +1,41 @@
+
+---
+title: "Does Object Grounding Really Reduce Hallucination of Large Vision-Language Models?"
+id: "2406.14492v1"
+description: "Grounding objectives minimally reduce object hallucination in open caption generation, despite previous claims."
+author: Gregor Geigle, Radu Timofte, Goran Glavaš
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14492v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14492v1/x1.png)
+
+### Summary:
+
+This study investigates the impact of grounding objectives on Large Vision-Language Models (LVLMs) and their tendency to hallucinate, or generate incorrect information. The authors argue that previous research suggesting grounding objectives reduce hallucination is not empirically justified, as it relies on flawed evaluation protocols. The current study offers a systematic analysis of the effect of fine-grained object grounding on LVLM hallucination under a more realistic evaluation protocol. The results of extensive experiments over three backbone LLMs reveal that grounding objectives have little to no effect on object hallucination in open caption generation.
+
+### Major Findings:
+
+1. The study finds that under a sound evaluation protocol, including grounding objectives—referring expressions and grounded captioning—to LVLM training has little to no effect on object hallucination, both in QA-based evaluation and open-ended captioning.
+2. Enforcing generation of grounded captions at inference time slightly reduces object hallucinations but the effect is small and comes at the cost of (slight) reduction in caption detailedness.
+3. A qualitative inspection of grounded captions also confirms that forcing the model to generate a bounding box for mentioned objects most often does not prevent it from hallucinating content.
+4. In sum, the study finds that grounding objectives fail to meaningfully reduce LVLM hallucination, calling for novel methodological proposals towards hallucination reduction.
+
+### Analysis and Critique:
+
+The study provides a comprehensive analysis of the effects of grounding objectives on LVLM object hallucination in open (i.e., free-form) image captioning, addressing the shortcomings of existing hallucination evaluation protocols. However, the study has some limitations. The authors had to fix certain modeling decisions due to a limited computational budget, which may have affected the results. Additionally, the findings are based on reliance on imperfect automatic metrics, which may not fully capture the complexity of the problem. Despite these limitations, the study provides valuable insights into the impact of grounding objectives on LVLM hallucination and highlights the need for further research in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14492v1](https://arxiv.org/abs/2406.14492v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14492v1](https://browse.arxiv.org/html/2406.14492v1)       |
+| Truncated       | False       |
+| Word Count       | 7908       |

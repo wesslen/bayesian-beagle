@@ -1,0 +1,46 @@
+
+---
+title: "Jogging the Memory of Unlearned Model Through Targeted Relearning Attack"
+id: "2406.13356v1"
+description: "Existing unlearning methods in LLMs can be reversed by targeted relearning attacks, using small, loosely related data sets."
+author: Shengyuan Hu, Yiwei Fu, Zhiwei Steven Wu, Virginia Smith
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13356v1/x1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13356v1/x1.png)
+
+### Summary:
+
+In this study, the authors explore a simple and surprisingly effective attack on unlearned models, specifically focusing on finetuning-based approaches for unlearning in large language models (LLMs). They demonstrate that a small amount of potentially auxiliary data can 'jog' the memory of unlearned models, causing them to behave similarly to their pre-unlearning state. The authors formalize this unlearning-relearning pipeline for LLMs and conduct case studies on three popular unlearning benchmarks: WMDP, TOFU, and Who's Harry Potter (WHP). The results show that their relearning attack can successfully drive the model to output unlearned knowledge under various practical settings.
+
+### Major Findings:
+
+1. The targeted relearning attack is effective in recovering unlearned hazardous knowledge in the WMDP benchmark using public articles.
+2. The attack can also successfully relearn private information in the TOFU and WHP datasets when using a small and highly limited subset of unlearned data as the relearn set.
+3. The study reveals that evaluating query completions on the unlearned model alone may give a false sense of unlearning quality.
+4. The approach of using benign public information to finetune the unlearned model is surprisingly effective in recovering unlearned knowledge.
+5. The study motivates the exploration of unlearning heuristics beyond approximate, gradient-based optimization to produce more robust baselines for machine unlearning.
+
+### Analysis and Critique:
+
+The authors' work provides valuable insights into the limitations of current unlearning methods and the potential for targeted relearning attacks. However, there are some areas that could benefit from further exploration:
+
+1. The study focuses on finetuning-based unlearning schemes, and it would be interesting to see if the proposed attack can be generalized to other unlearning approaches.
+2. The authors mention the need to study the relation between the relearn set and the queries used for evaluation, as the relearn set might contain direct answers to the evaluation queries. This aspect could be further investigated to ensure that relearning occurs due to triggering the memory of the approximately unlearned model, rather than simply learning the knowledge again from scratch.
+3. The study could be expanded to include a more diverse set of unlearning benchmarks
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13356v1](https://arxiv.org/abs/2406.13356v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13356v1](https://browse.arxiv.org/html/2406.13356v1)       |
+| Truncated       | False       |
+| Word Count       | 5602       |

@@ -1,0 +1,50 @@
+
+---
+title: "GUI Action Narrator: Where and When Did That Action Take Place?"
+id: "2406.13719v1"
+description: "GUI automation is improved with multimodal LLMs, aided by a new video captioning benchmark and framework, GUI Narrator, which uses cursor as visual prompt."
+author: Qinchen Wu, Difei Gao, Kevin Qinghong Lin, Zhuoyu Wu, Xiangwu Guo, Peiran Li, Weichen Zhang, Hengxu Wang, Mike Zheng Shou
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13719v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13719v1/x1.png)
+
+### Summary:
+
+- The paper introduces a video captioning benchmark for GUI actions, Act2Cap, consisting of 4,189 diverse video captioning samples.
+- The task presents unique challenges compared to natural scene video captioning, such as denser information and rapid, subtle events.
+- The authors propose a simple yet effective framework, GUI Narrator, for GUI video captioning that utilizes the cursor as a visual prompt to enhance the interpretation of high-resolution screenshots.
+- The framework employs a cursor detector, a multimodal LLM model, and mechanisms for selecting keyframes and key regions to generate captions.
+- Experimental results indicate that even advanced multimodal models struggle with the task, but the proposed strategy effectively enhances model performance.
+
+### Major Findings:
+
+1. The Act2Cap benchmark addresses the unique demands of GUI video captioning, featuring 4,189 samples and covering various software environments.
+2. The GUI Narrator framework utilizes the cursor as a visual prompt and a lightweight detection model to enhance the model's attention to high-resolution details around the cursor.
+3. Evaluations reveal that even the most advanced models struggle with the unique demands of GUI scenarios, with the best-performing model achieving only 19.5% accuracy.
+4. The proposed framework effectively enhances the performance of both open-source and closed-source models.
+
+### Analysis and Critique:
+
+- The paper presents a novel approach to GUI video captioning, addressing the unique challenges of dense information and rapid, subtle events.
+- The Act2Cap benchmark and GUI Narrator framework provide a valuable resource for evaluating and improving the performance of multimodal models in GUI automation.
+- However, the paper does not discuss potential limitations or biases in the dataset or the proposed framework.
+- The evaluation of model performance is based on a single metric, which may not fully capture the complexity of the task.
+- The paper does not provide a detailed comparison with existing methods or a comprehensive analysis of the results.
+- Future work could address these limitations by incorporating a more diverse set of evaluation metrics, comparing the proposed approach with other methods, and conducting a more thorough analysis of
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13719v1](https://arxiv.org/abs/2406.13719v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13719v1](https://browse.arxiv.org/html/2406.13719v1)       |
+| Truncated       | False       |
+| Word Count       | 6190       |

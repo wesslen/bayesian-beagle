@@ -1,0 +1,41 @@
+
+---
+title: "Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective"
+id: "2406.14023v1"
+description: "LLMs exhibit implicit bias, with GLM-3 outperforming GPT-3.5 and GPT-4 in defending against attacks. Deception attacks are most effective."
+author: Yuchen Wen, Keping Bi, Wei Chen, Jiafeng Guo, Xueqi Cheng
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14023v1/x1.png"
+categories: ['social-sciences', 'prompt-engineering', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14023v1/x1.png)
+
+### Summary:
+
+The paper "Evaluating Implicit Bias in Large Language Models by Attacking From a Psychometric Perspective" presents a rigorous evaluation of implicit bias in large language models (LLMs) using a psychometric approach. The authors propose three attack methods inspired by cognitive and social psychology principles: Disguise, Deception, and Teaching. These methods are used to build evaluation datasets for four common bias types: age, gender, race, and sex orientation. The study finds that all three attack methods effectively elicit LLMs' inner bias, with Deception attacks being the most effective. The results also show that GLM-3 performs the best in defending against these attacks, compared to GPT-3.5 and GPT-4. The study further reveals that LLMs could output content of other bias types when being taught with one type of bias.
+
+### Major Findings:
+
+1. All three attack methods (Disguise, Deception, and Teaching) can successfully elicit LLMs' inner bias, with Deception attacks being the most effective.
+2. Regarding bias performance, the ranking from less to more is GLM-3, GPT-4, and GPT-3.5, probably due to the stricter regulation of LLMs in China.
+3. The LLMs have demonstrated less bias in the bias types that draw more social attention, e.g., gender and race.
+4. Notably, when Teaching attacks provide LLMs with one type of bias examples (e.g., race), other types of bias can be elicited (gender, religion) from LLMs, showing the inherent bias in the models.
+
+### Analysis and Critique:
+
+The paper provides a novel and rigorous approach to evaluating implicit bias in LLMs. The use of psychometric principles to design attack methods is a significant contribution to the field. However, the study has some limitations. The evaluation data is adapted from four important bias categories of the CBBQ dataset, which is a bias dataset extracted from Chinese corpora. This may not comprehensively cover all biases from various cultural backgrounds. Additionally, the study is limited by the cost of using LLMs' API and the diversity of LLMs, evaluating only some of the most popular and representative LLMs. More LLMs' evaluations could be completed by applying the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14023v1](https://arxiv.org/abs/2406.14023v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14023v1](https://browse.arxiv.org/html/2406.14023v1)       |
+| Truncated       | False       |
+| Word Count       | 7014       |

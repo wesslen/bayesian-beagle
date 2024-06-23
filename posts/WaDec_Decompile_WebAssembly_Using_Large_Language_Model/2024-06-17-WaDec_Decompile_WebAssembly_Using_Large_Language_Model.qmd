@@ -1,0 +1,40 @@
+
+---
+title: "WaDec: Decompile WebAssembly Using Large Language Model"
+id: "2406.11346v1"
+description: "WaDec, a fine-tuned LLM, decompiles Wasm binary code into readable source code, outperforming current tools with improved metrics and code comprehension."
+author: Xinyu She, Yanjie Zhao, Haoyu Wang
+date: "2024-06-17"
+image: "https://browse.arxiv.org/html/2406.11346v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.11346v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel approach, WaDec, which utilizes a fine-tuned large language model (LLM) to interpret and decompile WebAssembly (Wasm) binary code into a more comprehensible, higher-level source code representation. The LLM was meticulously fine-tuned using a specialized dataset of wat-c code snippets, employing self-supervised learning techniques. This enables WaDec to effectively decompile not only complete wat functions but also finer-grained wat code snippets.
+
+### Major Findings:
+
+1. WaDec markedly outperforms current state-of-the-art tools, offering substantial improvements across several metrics. It achieves a code inflation rate of only 3.34%, a dramatic 97% reduction compared to the state-of-the-art’s 116.94%.
+2. Unlike baselines’ output that cannot be directly compiled or executed, WaDec maintains a recompilability rate of 52.11%, a re-execution rate of 43.55%, and an output consistency of 27.15%.
+3. WaDec significantly exceeds state-of-the-art performance in AST edit distance by 185%, cyclomatic complexity by 8%, and cosine similarity by 41%, achieving an average code similarity above 50%.
+
+### Analysis and Critique:
+
+While WaDec demonstrates significant improvements in decompiling Wasm binary code, there are still potential areas for further research and development. The paper does not discuss the impact of optimization levels on WaDec's performance, which could be a crucial factor in real-world applications. Additionally, the study does not explore the potential of combining WaDec with traditional decompilation techniques to handle data structures more effectively. Lastly, the paper does not address the potential for accelerating the decompilation rate of LLMs, which could greatly enhance the efficiency of the decompilation process.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.11346v1](https://arxiv.org/abs/2406.11346v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.11346v1](https://browse.arxiv.org/html/2406.11346v1)       |
+| Truncated       | False       |
+| Word Count       | 10923       |

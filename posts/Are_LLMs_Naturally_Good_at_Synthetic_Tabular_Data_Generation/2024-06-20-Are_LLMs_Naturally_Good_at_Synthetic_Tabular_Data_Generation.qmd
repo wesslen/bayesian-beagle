@@ -1,0 +1,40 @@
+
+---
+title: "Are LLMs Naturally Good at Synthetic Tabular Data Generation?"
+id: "2406.14541v1"
+description: "LLMs struggle with generating synthetic tables; this paper proposes a permutation-aware approach to improve their performance."
+author: Shengzhe Xu, Cho-Ting Lee, Mandar Sharma, Raquib Bin Yousuf, Nikhil Muralidhar, Naren Ramakrishnan
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14541v1/extracted/5679407/figures/intro_observation_single_class.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14541v1/extracted/5679407/figures/intro_observation_single_class.png)
+
+### Summary:
+
+The paper explores the use of large language models (LLMs) for synthetic tabular data generation, a task that has been largely underexplored. The authors demonstrate that LLMs, used as-is or after traditional fine-tuning, are inadequate as synthetic table generators due to their autoregressive nature and inability to model conditional mixtures of distributions. The authors propose a solution by making LLMs permutation-aware, which allows them to overcome some of these deficiencies.
+
+### Major Findings:
+
+1. LLMs, used as-is or after traditional fine-tuning, are severely inadequate as synthetic table generators due to their autoregressive nature and inability to model conditional mixtures of distributions.
+2. The authors propose a solution by making LLMs permutation-aware, which allows them to overcome some of these deficiencies.
+3. The proposed solution is evaluated on a range of datasets featuring a diverse mix of attribute types, functional dependencies, and complex relationships. The results demonstrate that the proposed solution is the state-of-the-art in reproducing underlying relationships in generated synthetic data.
+
+### Analysis and Critique:
+
+The paper presents an interesting approach to using LLMs for synthetic tabular data generation. The authors identify a significant problem with the current use of LLMs for this task and propose a solution that addresses some of the deficiencies. However, the paper does not provide a detailed analysis of the limitations of the proposed solution or a comparison with other existing methods. Additionally, the paper does not discuss the potential biases or limitations of the proposed solution, which could impact the quality of the generated synthetic data. Overall, the paper provides a valuable contribution to the field of synthetic data generation, but further research is needed to fully evaluate the proposed solution and its potential impact.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14541v1](https://arxiv.org/abs/2406.14541v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14541v1](https://browse.arxiv.org/html/2406.14541v1)       |
+| Truncated       | False       |
+| Word Count       | 10309       |

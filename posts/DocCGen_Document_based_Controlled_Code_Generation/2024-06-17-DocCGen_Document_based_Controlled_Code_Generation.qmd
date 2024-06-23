@@ -1,0 +1,48 @@
+
+---
+title: "DocCGen: Document-based Controlled Code Generation"
+id: "2406.11925v1"
+description: "DocCGen improves LLMs for structured DSLs like YAML, JSON by leveraging documentation for better code generation."
+author: Sameer Pimparkhede, Mehant Kammakomati, Srikanth G. Tamilselvam, Prince Kumar, Ashok Pon Kumar, Pushpak Bhattacharyya
+date: "2024-06-17"
+image: "https://browse.arxiv.org/html/2406.11925v1/images/constrain%20gen%20flow%20diagram.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.11925v1/images/constrain%20gen%20flow%20diagram.png)
+
+### Summary:
+
+The paper introduces DocCGen, a framework designed to improve the performance of large language models (LLMs) in generating code for domain-specific languages (DSLs) such as YAML and JSON. The framework breaks down the natural language (NL) to code generation task into two steps: library detection and constrained decoding. The first step identifies the correct libraries using library documentation, while the second step utilizes schema rules extracted from the documentation to guide the decoding process.
+
+The authors evaluate DocCGen on two complex structured languages, Ansible YAML and Bash command, in both out-of-domain (OOD) and in-domain (ID) settings. The results show that DocCGen consistently improves the performance of different-sized language models across all six evaluation metrics, reducing syntactic and semantic errors in structured code.
+
+### Major Findings:
+
+1. DocCGen improves the performance of LLMs in generating code for DSLs by breaking down the NL-to-code generation task into two steps: library detection and constrained decoding.
+2. The framework outperforms state-of-the-art techniques and models in generating code for Ansible YAML and Bash command in both OOD and ID settings.
+3. DocCGen reduces syntactic and semantic errors in structured code, making it more reliable for generating code in DSLs.
+
+### Analysis and Critique:
+
+DocCGen presents a promising approach to improving the performance of LLMs in generating code for DSLs. The two-step process of library detection and constrained decoding allows the framework to leverage the rich knowledge available in library documentation, which is often maintained by enterprises.
+
+However, the framework's reliance on library documentation may also be a limitation. If the documentation is incomplete or inaccurate, the framework's performance may be affected. Additionally, the framework's performance may vary depending on the quality and availability of the library documentation.
+
+Another potential limitation is the framework's computational overhead. Constrained decoding adds a computational overhead during inference, which may impact the framework's practicality in resource-constrained environments.
+
+Despite these potential limitations, DocCGen offers a novel approach to improving the performance of LLMs in
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.11925v1](https://arxiv.org/abs/2406.11925v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.11925v1](https://browse.arxiv.org/html/2406.11925v1)       |
+| Truncated       | False       |
+| Word Count       | 9497       |

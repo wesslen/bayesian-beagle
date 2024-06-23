@@ -1,0 +1,40 @@
+
+---
+title: "CREF: An LLM-based Conversational Software Repair Framework for Programming Tutors"
+id: "2406.13972v1"
+description: "LLMs show potential for program repair, but data leakage is a concern. A new benchmark, TutorCode, is introduced to evaluate LLMs' repair capabilities. Tutor guidance is found to be the most effective in enhancing LLM repair performance. A conversational semi-automatic repair framework, Cref, is proposed to assist human programming tutors, demonstrating significant improvement in repair performance."
+author: Boyang Yang, Haoye Tian, Weiguo Pian, Haoran Yu, Haitao Wang, Jacques Klein, Tegawendé F. Bissyandé, Shunfu Jin
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.13972v1/extracted/5679865/figures/prompts.png"
+categories: ['programming', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13972v1/extracted/5679865/figures/prompts.png)
+
+### Summary:
+
+The paper introduces a novel LLM-based Conversational program REpair Framework (Cref) for tutors, which leverages the conversational abilities of LLMs and incorporates three types of augmented information: tutor guidance, solution description, and failing test cases. The framework is evaluated using TutorCode, a large-scale uncrawled benchmark consisting of 1,239 C++ defect codes and associated information. The study assesses the realistic repair capabilities of 12 prominent LLMs and demonstrates the significant difference in performance on HumanEval and TutorCode. The experimental results show that tutor guidance significantly improves the repair performance of LLMs, while failing test cases have a limited impact due to the lengthy prompt problem. To mitigate this issue, a strategy called MultiRegenerate is proposed, which repairs incorrect code through three distinct conversational sessions. Cref outperforms the baseline and T&S&F in terms of AVG-5 and RPSR metrics and yields superior AVG-5 and comparable RPSR results compared to MultiRegenerate. The study concludes that incorporating historical failing repairs can significantly enhance repair capabilities in LLMs by fully exploiting their conversational potential. Cref acts as an assisting tool for tutors, reducing response times by 71.2% and costs by 69.9%, and improving the tutoring process and student learning experiences.
+
+### Major Findings:
+
+1. Tutor guidance significantly improves the repair performance of LLMs, while failing test cases have a limited impact due to the lengthy prompt problem.
+2. The MultiRegenerate strategy is proposed to mitigate the adverse effects of lengthy prompts by repairing incorrect code through three distinct conversational sessions.
+3. Cref outperforms the baseline and T&S&F in terms of AVG-5 and RPSR metrics and yields superior AVG-5 and comparable RPSR results compared to MultiRegenerate.
+4. Incorporating historical failing repairs can significantly enhance repair capabilities in LLMs by fully exploiting their conversational potential.
+5. Cref acts as an assisting tool for tutors, reducing response times by 71.2% and costs by 69.9%, and improving the tutoring process and student learning experiences.
+
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13972v1](https://arxiv.org/abs/2406.13972v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13972v1](https://browse.arxiv.org/html/2406.13972v1)       |
+| Truncated       | False       |
+| Word Count       | 12780       |

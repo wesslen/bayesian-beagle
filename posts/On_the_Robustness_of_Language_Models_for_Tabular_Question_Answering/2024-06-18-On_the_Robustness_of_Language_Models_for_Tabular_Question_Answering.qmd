@@ -1,0 +1,43 @@
+
+---
+title: "On the Robustness of Language Models for Tabular Question Answering"
+id: "2406.12719v1"
+description: "LLMs, like Llama3, excel in table comprehension, but improvements are needed for robustness and handling domain-specific data."
+author: Kushal Raj Bhandari, Sixue Xing, Soham Dan, Jianxi Gao
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12719v1/extracted/5674184/figure/avg_fewshot_operation.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12719v1/extracted/5674184/figure/avg_fewshot_operation.png)
+
+### Summary:
+
+This study evaluates the robustness of Large Language Models (LLMs) for Tabular Question Answering (TQA) tasks, focusing on their ability to interpret tabular data under various augmentations and perturbations. The research assesses the influence of in-context learning, model scale, instruction tuning, and domain biases on TQA performance. The study uses Wikipedia-based WTQ and financial report-based TAT-QA TQA datasets for evaluation.
+
+### Major Findings:
+
+1. Instructions significantly enhance TQA performance, with recent models like Llama3 exhibiting greater robustness over earlier versions.
+2. Data contamination and practical reliability issues persist, especially with WTQ.
+3. Larger models and newer architectures, such as Llama3, are more effective at table reasoning tasks.
+4. Instruction-based fine-tuning enhances the model’s ability to handle complex reasoning tasks.
+5. Model size contributes significantly to TQA performance, with larger models generally showing higher performance.
+6. LLMs exhibit domain biases, particularly towards Wikipedia-based datasets, which can inflate performance metrics.
+
+### Analysis and Critique:
+
+The study provides valuable insights into the robustness of LLMs for TQA tasks, highlighting the importance of instruction tuning, model scale, and domain biases. However, the research has some limitations. The evaluation is limited to WTQ and TAT-QA datasets, and a broader range of datasets could provide a more comprehensive comparison. The study did not involve any structural aware or fine-tuned models for tabular datasets, which could significantly impact performance. Additionally, the evaluation relies on exact match accuracy, which limits the scope of evaluation for question answering tasks. Future studies should employ more nuanced evaluation metrics to better assess the robustness of the models in TQA tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12719v1](https://arxiv.org/abs/2406.12719v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12719v1](https://browse.arxiv.org/html/2406.12719v1)       |
+| Truncated       | False       |
+| Word Count       | 3509       |

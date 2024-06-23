@@ -1,0 +1,41 @@
+
+---
+title: "SNAP: Unlearning Selective Knowledge in Large Language Models with Negative Instructions"
+id: "2406.12329v1"
+description: "Snap framework selectively unlearns information from LLMs, preserving performance and unlearning specified data."
+author: Minseok Choi, Daniel Rim, Dohyun Lee, Jaegul Choo
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12329v1/x1.png"
+categories: ['programming', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12329v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel framework called Snap for selectively unlearning information in large language models (LLMs) using negative instructions. The framework is designed to generate obliterated responses about the information to be forgotten while retaining the original LLM performance. Snap consists of three key steps: 1) negative instruction generation, which utilizes GPT-4 and GPT-3.5 to build the forgetting set; 2) hard retaining data augmentation, which creates related instructions and their normal responses to build the retaining set; and 3) OT unlearning, which involves the Wasserstein regularization that enforces adequate change in weights from the initial parameters of the LLM. The framework is evaluated on various NLP benchmarks and demonstrates the ability to retain the original LLM capabilities while successfully unlearning the specified information.
+
+### Major Findings:
+
+1. The paper introduces the notion of negative instructions that are used to train LLMs to generate obliterated responses.
+2. The paper proposes Hard Retaining Data Augmentation and demonstrates that hard positives are effective for selective unlearning.
+3. The paper presents the novel Wasserstein Regularization that minimizes the change in parameters during instruction tuning.
+4. The paper successfully removes Peter Parker, as well as a set of other identities, from the LLM while retaining the original LLM capabilities.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to selectively unlearning information in LLMs using negative instructions. The use of hard retaining data augmentation and Wasserstein regularization are effective in retaining the original LLM performance while unlearning the specified information. However, the paper does not address the potential limitations of the framework, such as the scalability of the approach for larger LLMs or the impact of the unlearning process on the overall performance of the LLM. Additionally, the paper does not provide a comparison with other unlearning methods in the literature, which would be useful in evaluating the effectiveness of the proposed framework.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12329v1](https://arxiv.org/abs/2406.12329v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12329v1](https://browse.arxiv.org/html/2406.12329v1)       |
+| Truncated       | False       |
+| Word Count       | 7278       |

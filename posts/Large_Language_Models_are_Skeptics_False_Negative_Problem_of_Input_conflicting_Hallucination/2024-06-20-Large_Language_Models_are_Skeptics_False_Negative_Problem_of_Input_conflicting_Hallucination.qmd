@@ -1,0 +1,49 @@
+
+---
+title: "Large Language Models are Skeptics: False Negative Problem of Input-conflicting Hallucination"
+id: "2406.13929v1"
+description: "LLMs tend to generate false negative responses, but context and query rewriting can help."
+author: Jongyoon Song, Sangwon Yu, Sungroh Yoon
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.13929v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13929v1/x1.png)
+
+### Summary:
+
+- The paper identifies a new category of bias in large language models (LLMs) that induces input-conflicting hallucinations, where LLMs generate responses inconsistent with the input context.
+- This issue, termed the false negative problem, refers to the phenomenon where LLMs are predisposed to return negative judgments when assessing the correctness of a statement given the context.
+- Experiments involving pairs of statements with contradictory factual directions reveal that LLMs exhibit a bias toward false negatives and present greater overconfidence when responding with False.
+- The relationship between the false negative problem and context and query rewriting is analyzed, and both are found to effectively tackle false negatives in LLMs.
+
+### Major Findings:
+
+1. LLMs have a bias towards denying true statements given the context, which is termed the false negative problem.
+2. The accuracy of context-based factuality discrimination for statements varies depending on the target answer of the statement.
+3. The false negative problem is consistently observed across various LLMs, including Mistral, ChatGPT, and GPT-4.
+4. Both context and query rewriting effectively tackle the false negative problem in various LLMs.
+
+### Analysis and Critique:
+
+- The paper provides a comprehensive analysis of the false negative problem in LLMs, highlighting the bias towards denying true statements given the context.
+- The experiments conducted using pairs of statements with contradictory factual directions provide strong evidence of the false negative problem in LLMs.
+- The analysis of the relationship between the false negative problem and context and query rewriting is insightful and provides a potential solution to tackle the problem.
+- However, the paper does not discuss the potential causes of the false negative problem in LLMs, which could be an area for further research.
+- Additionally, the paper does not explore the impact of the false negative problem on the performance of LLMs in real-world applications, which could be an important consideration for practitioners.
+- Overall, the paper provides valuable insights into the false negative problem in LLMs and highlights the need for further research to address this issue.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13929v1](https://arxiv.org/abs/2406.13929v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13929v1](https://browse.arxiv.org/html/2406.13929v1)       |
+| Truncated       | False       |
+| Word Count       | 4576       |

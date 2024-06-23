@@ -1,0 +1,40 @@
+
+---
+title: "Asynchronous Large Language Model Enhanced Planner for Autonomous Driving"
+id: "2406.14556v1"
+description: "AsyncDriver: LLM-enhanced framework for precise, controllable autonomous driving, reducing LLM's computational cost."
+author: Yuan Chen, Zi-han Ding, Ziqin Wang, Yan Wang, Lijun Zhang, Si Liu
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14556v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14556v1/x1.png)
+
+### Summary:
+
+The paper introduces AsyncDriver, a novel asynchronous LLM-enhanced closed-loop framework for autonomous driving. The framework aligns vectorized scene information with a series of routing instructions to form multi-modal features, leveraging LLM's capability for scene reasoning. The proposed Adaptive Injection Block integrates routing information into any transformer-based real-time planner, enhancing its ability to understand and follow language instructions. The approach achieves outstanding closed-loop performance in nuPlan's challenging scenarios. The asynchronous inference between LLM and the real-time planner significantly increases inference speed with minimal loss in accuracy, reducing computational costs introduced by LLM.
+
+### Major Findings:
+
+1. AsyncDriver, a new asynchronous LLM-enhanced closed-loop framework, leverages LLM's capability for scene reasoning to extract scene-associated instruction features as guidance for real-time planners.
+2. The proposed Adaptive Injection Block integrates routing information into any transformer-based real-time planner, enhancing its ability to understand and follow language instructions.
+3. AsyncDriver achieves outstanding closed-loop performance in nuPlan's challenging scenarios, with asynchronous inference between LLM and the real-time planner significantly increasing inference speed with minimal loss in accuracy.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to integrating LLMs into autonomous driving systems, leveraging their capabilities for scene reasoning and instruction following. The proposed asynchronous inference scheme could significantly enhance the prospects for integrating LLMs into practical applications within the autonomous driving sector. However, the paper falls short of substantiating the generalization properties of LLMs for the planning task. Future research should rigorously assess the generalization and transfer potential of LLMs in vectorized scenarios. Additionally, the paper does not discuss potential biases or limitations in the data used for training and evaluation, which could impact the performance and applicability of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14556v1](https://arxiv.org/abs/2406.14556v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14556v1](https://browse.arxiv.org/html/2406.14556v1)       |
+| Truncated       | False       |
+| Word Count       | 9407       |

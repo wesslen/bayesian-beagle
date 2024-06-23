@@ -1,0 +1,40 @@
+
+---
+title: "Robust Few-shot Transfer Learning for Knowledge Base Question Answering with Unanswerable Questions"
+id: "2406.14313v1"
+description: "FUn-FuSIC improves few-shot KBQA with unanswerable questions, outperforming existing models."
+author: Riya Sawhney, Indrajit Bhattacharya, Mausam
+date: "2024-06-20"
+image: "../../../bayesian-beagle.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+The paper proposes a novel task of few-shot transfer learning for KBQA with unanswerable questions, addressing the need for robust and low-resource KBQA systems. The authors present FUn-FuSIC, an extension of the state-of-the-art few-shot transfer model for answerable-only KBQA, which handles unanswerability by iteratively prompting an LLM to generate logical forms for the question and providing feedback using diverse checks. The model adapts self-consistency to assess the LLM's confidence in deciding answerability. Experiments on newly constructed datasets demonstrate that FUn-FuSIC outperforms suitable adaptations of the SoTA model for KBQA with unanswerability and the SoTA model for answerable-only few-shot-transfer KBQA.
+
+### Major Findings:
+
+1. FUn-FuSIC, a novel model for few-shot transfer learning for KBQA with unanswerable questions, outperforms existing models in handling unanswerability and low-resource settings.
+2. The model extends the state-of-the-art few-shot transfer model for answerable-only KBQA by iteratively prompting an LLM to generate logical forms and providing feedback using diverse checks.
+3. FUn-FuSIC adapts self-consistency to assess the LLM's confidence in deciding answerability, improving the model's performance in handling unanswerable questions.
+
+### Analysis and Critique:
+
+The paper presents a well-structured and coherent summary of the proposed model, FUn-FuSIC, for few-shot transfer learning for KBQA with unanswerable questions. The authors provide a clear explanation of the model's architecture and its advantages over existing models. The experimental results demonstrate the model's superior performance in handling unanswerability and low-resource settings. However, the paper does not discuss potential limitations, unanswered questions, or biases that may have been apparent while reviewing the text. Additionally, the paper does not provide a detailed comparison with other state-of-the-art models for KBQA with unanswerable questions, which could have strengthened the paper's claims.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14313v1](https://arxiv.org/abs/2406.14313v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14313v1](https://browse.arxiv.org/html/2406.14313v1)       |
+| Truncated       | False       |
+| Word Count       | 10473       |

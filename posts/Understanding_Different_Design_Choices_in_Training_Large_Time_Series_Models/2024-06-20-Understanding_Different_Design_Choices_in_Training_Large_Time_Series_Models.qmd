@@ -1,0 +1,40 @@
+
+---
+title: "Understanding Different Design Choices in Training Large Time Series Models"
+id: "2406.14045v1"
+description: "LTSM-bundle outperforms existing methods in time series forecasting, using novel prompting strategies and best design choices."
+author: Yu-Neng Chuang, Songchen Li, Jiayi Yuan, Guanchu Wang, Kwei-Herng Lai, Leisheng Yu, Sirui Ding, Chia-Yuan Chang, Qiaoyu Tan, Daochen Zha, Xia Hu
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14045v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14045v1/x1.png)
+
+### Summary:
+
+This paper presents a comprehensive analysis of important design choices in training Large Time Series Models (LTSMs), focusing on pre-processing techniques, model configurations, and dataset configurations. The authors propose a novel statistical prompting strategy called time series prompt, which generates prompts by extracting global features from the training dataset. The study introduces LTSM-bundle, which bundles the best design choices identified in the analysis for training LTSMs. Empirical results demonstrate that LTSM-bundle achieves superior zero-shot and few-shot performances compared to state-of-the-art LTSMs and traditional TSF methods on benchmark datasets.
+
+### Major Findings:
+
+1. Time series prompt, a statistical prompting strategy, enhances LTSM training by extracting global features from the training dataset, providing a robust statistical description of each dataset.
+2. LTSM-bundle, which incorporates and bundles the most effective design choices identified in the study, yields superior zero-shot and few-shot performances compared to state-of-the-art LTSMs on benchmark datasets.
+3. With just 5% training data, LTSM-bundle achieves comparable performance as the baselines trained on the full training data, showing the promise of its generalization capability.
+
+### Analysis and Critique:
+
+The paper provides a thorough analysis of various design choices in training LTSMs, offering valuable insights for future research in this domain. The proposed time series prompt and LTSM-bundle demonstrate promising results, outperforming existing methods in zero-shot and few-shot scenarios. However, the study could benefit from further investigation into the limitations and potential biases of the proposed methods. Additionally, exploring the applicability of LTSM-bundle in real-world scenarios and comparing its performance with other state-of-the-art methods would provide a more comprehensive evaluation of its effectiveness.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14045v1](https://arxiv.org/abs/2406.14045v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14045v1](https://browse.arxiv.org/html/2406.14045v1)       |
+| Truncated       | False       |
+| Word Count       | 7858       |

@@ -1,0 +1,43 @@
+
+---
+title: "Distributional reasoning in LLMs: Parallel reasoning processes in multi-hop reasoning"
+id: "2406.13858v1"
+description: "LLMs perform multi-hop reasoning via interpretable embeddings, revealing parallel reasoning paths and potential intermediate answers."
+author: Yuval Shalev, Amir Feder, Ariel Goldstein
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13858v1/extracted/5679422/images/chain.png"
+categories: ['prompt-engineering', 'hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13858v1/extracted/5679422/images/chain.png)
+
+### Summary:
+
+The paper presents a novel and interpretable analysis of internal multi-hop reasoning processes in large language models (LLMs). The authors demonstrate that the prediction process for compositional reasoning questions can be modeled using a simple linear transformation between two semantic category spaces. During inference, the middle layers of the network generate highly interpretable embeddings that represent a set of potential intermediate answers for the multi-hop question. Statistical analyses show that a corresponding subset of tokens is activated in the model’s output, implying the existence of parallel reasoning paths. These observations hold true even when the model lacks the necessary knowledge to solve the task. The findings can help uncover the strategies that LLMs use to solve reasoning tasks and offer insights into the types of thought processes that can emerge from artificial intelligence.
+
+### Major Findings:
+
+1. The prediction process for compositional reasoning questions in LLMs can be modeled using a simple linear transformation between two semantic category spaces.
+2. During inference, the middle layers of the network generate highly interpretable embeddings that represent a set of potential intermediate answers for the multi-hop question.
+3. Statistical analyses show that a corresponding subset of tokens is activated in the model’s output, implying the existence of parallel reasoning paths.
+4. These observations hold true even when the model lacks the necessary knowledge to solve the task.
+
+### Analysis and Critique:
+
+The paper provides a valuable contribution to the understanding of internal multi-hop reasoning processes in LLMs. The use of a simple linear transformation to model the prediction process is an innovative approach that can help uncover the strategies that LLMs use to solve reasoning tasks. The authors' findings on the existence of parallel reasoning paths and the generation of highly interpretable embeddings in the middle layers of the network are particularly noteworthy.
+
+However, the paper does not discuss the limitations of the proposed approach or the potential biases that may be introduced by the use of a linear transformation. Additionally, the authors do not provide a detailed comparison of their approach with other existing methods for analyzing multi-hop reasoning processes in LLMs. Further research is needed to validate the proposed approach and to explore its potential applications in other domains.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13858v1](https://arxiv.org/abs/2406.13858v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13858v1](https://browse.arxiv.org/html/2406.13858v1)       |
+| Truncated       | False       |
+| Word Count       | 7199       |

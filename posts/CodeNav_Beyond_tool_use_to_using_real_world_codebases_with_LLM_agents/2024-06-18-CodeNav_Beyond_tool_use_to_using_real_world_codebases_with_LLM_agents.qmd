@@ -1,0 +1,49 @@
+
+---
+title: "CodeNav: Beyond tool-use to using real-world codebases with LLM agents"
+id: "2406.12276v1"
+description: "CodeNav: LLM agent navigates unseen code repositories, solving queries without manual tool registration, and outperforms tool-use agents in benchmarks."
+author: Tanmay Gupta, Luca Weihs, Aniruddha Kembhavi
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12276v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12276v1/x1.png)
+
+### Summary:
+
+CodeNav is an LLM agent that navigates and leverages previously unseen code repositories to solve user queries. Unlike tool-use LLM agents that require "registration" of all relevant tools via manual descriptions within the LLM context, CodeNav automatically indexes and searches over code blocks in the target codebase, finds relevant code snippets, imports them, and uses them to iteratively generate a solution with execution feedback. The authors showcase three case studies where CodeNav is used for solving complex user queries using three diverse codebases and quantitatively compare the effectiveness of code-use to tool-use on three benchmarks.
+
+### Major Findings:
+
+1. CodeNav is a novel code-use paradigm for LLM agents that moves beyond tool-use to directly using real-world codebases to solve complex user queries.
+2. CodeNav formulates code-use as a multi-step interaction between a single LLM agent and stateful retrieval and code execution environments.
+3. On three tool-use benchmarks (m&m’s, M3ToolEval, and API-Bank), CodeNav is competitive with tool-use without requiring arduous tool registration.
+4. The effect of library or tool description richness on code-use performance is studied.
+5. The advantage of having access to the source code as part of retrieval result as opposed to just function signatures or docstrings is investigated.
+6. Three case studies demonstrate the promise of code-use agents on solving complex queries using real-world codebases.
+
+### Analysis and Critique:
+
+While the authors present an innovative approach to using LLM agents for code-use, there are some potential limitations and areas for improvement.
+
+1. The authors do not provide a detailed comparison of the performance of CodeNav with other state-of-the-art code-use or tool-use agents.
+2. The authors do not discuss the scalability of CodeNav to larger and more complex codebases.
+3. The authors do not provide a detailed analysis of the computational resources required to run CodeNav.
+4. The authors do not discuss the potential security risks associated with allowing an LLM agent to execute arbitrary code on a user's machine.
+5. The authors do not discuss the potential for CodeNav to
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12276v1](https://arxiv.org/abs/2406.12276v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12276v1](https://browse.arxiv.org/html/2406.12276v1)       |
+| Truncated       | False       |
+| Word Count       | 10119       |

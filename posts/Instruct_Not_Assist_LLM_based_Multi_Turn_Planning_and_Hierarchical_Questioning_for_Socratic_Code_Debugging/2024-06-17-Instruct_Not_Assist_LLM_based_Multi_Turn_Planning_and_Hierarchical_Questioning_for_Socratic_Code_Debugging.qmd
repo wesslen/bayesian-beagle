@@ -1,0 +1,48 @@
+
+---
+title: "Instruct, Not Assist: LLM-based Multi-Turn Planning and Hierarchical Questioning for Socratic Code Debugging"
+id: "2406.11709v1"
+description: "TreeInstruct, a state-space planning-based agent, effectively guides students in debugging code using Socratic questioning."
+author: Priyanka Kargupta, Ishika Agarwal, Dilek Hakkani-Tur, Jiawei Han
+date: "2024-06-17"
+image: "https://browse.arxiv.org/html/2406.11709v1/x2.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.11709v1/x2.png)
+
+### Summary:
+
+- The paper introduces TreeInstruct, an Instructor agent guided by a novel state space-based planning algorithm that asks probing questions to help students independently identify and resolve errors in their code.
+- TreeInstruct estimates a student’s conceptual and syntactical knowledge to dynamically construct a question tree based on their responses and current knowledge state, effectively addressing both independent and dependent mistakes concurrently in a multi-turn interaction setting.
+- The authors construct a more challenging multi-bug dataset of 150 coding problems, incorrect solutions, and bug fixes, all carefully constructed and annotated by experts.
+- Extensive evaluation shows TreeInstruct’s state-of-the-art performance on both datasets, proving it to be a more effective instructor than baselines.
+- A real-world case study with five students of varying skill levels further demonstrates TreeInstruct’s ability to guide students to debug their code efficiently with minimal turns and highly Socratic questioning.
+
+### Major Findings:
+
+1. TreeInstruct, an Instructor agent, effectively guides students to debug their code by asking probing questions and estimating their conceptual and syntactical knowledge to construct a question tree.
+2. The authors construct a challenging multi-bug dataset of 150 coding problems, incorrect solutions, and bug fixes, all carefully constructed and annotated by experts.
+3. Extensive evaluation shows TreeInstruct’s state-of-the-art performance on both datasets, proving it to be a more effective instructor than baselines.
+
+### Analysis and Critique:
+
+- The paper presents a novel approach to code debugging by using an Instructor agent that asks probing questions and estimates a student’s knowledge to construct a question tree.
+- The authors construct a challenging multi-bug dataset, which is a significant contribution to the field.
+- The extensive evaluation and real-world case study demonstrate the effectiveness of TreeInstruct in guiding students to debug their code efficiently.
+- However, the paper does not discuss any potential limitations or shortcomings of the proposed approach, such as the scalability of the method or its applicability to other domains.
+- Additionally, the paper does not provide a comparison with other existing methods for code debugging, which could have strengthened the argument for the effectiveness of TreeInstruct
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.11709v1](https://arxiv.org/abs/2406.11709v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.11709v1](https://browse.arxiv.org/html/2406.11709v1)       |
+| Truncated       | False       |
+| Word Count       | 9274       |

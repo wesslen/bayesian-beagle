@@ -1,0 +1,40 @@
+
+---
+title: "Learning to Generate Answers with Citations via Factual Consistency Models"
+id: "2406.13124v1"
+description: "This paper proposes a method using factual consistency models to improve citation accuracy in LLMs, reducing hallucinations and enhancing reliability."
+author: Rami Aly, Zhiqiang Tang, Samson Tan, George Karypis
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13124v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13124v1/x1.png)
+
+### Summary:
+
+The paper presents a novel approach to improve the citation generation in large language models (LLMs) using factual consistency models (FCMs). The proposed method, CaLF (Citation Learning via Factual Consistency Models), is a weakly-supervised fine-tuning approach that alternates between generating texts with citations and supervised fine-tuning with FCM-filtered citation data. The method focuses on learning factual unit tokens, as measured by an FCM, and has been evaluated on the ALCE few-shot citation benchmark with various instruction-tuned LLMs. The results demonstrate superior performance compared to in-context learning, vanilla supervised fine-tuning, and state-of-the-art methods, with an average improvement of 1.8, 1.3, and 0.8 citation F1 points, respectively. Additionally, the citation generation ability robustly transfers to unseen datasets in a domain transfer setting, contributing to the lowest factual error rate across baselines.
+
+### Major Findings:
+
+1. The proposed CaLF method outperforms in-context learning, vanilla supervised fine-tuning, and state-of-the-art methods in citation generation for LLMs, with an average improvement of 1.8, 1.3, and 0.8 citation F1 points, respectively.
+2. The citation generation ability of CaLF robustly transfers to unseen datasets in a domain transfer setting, contributing to the lowest factual error rate across baselines.
+3. The method focuses on learning factual unit tokens, as measured by an FCM, and has been evaluated on the ALCE few-shot citation benchmark with various instruction-tuned LLMs.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to improve the citation generation in LLMs using FCMs. The proposed method, CaLF, demonstrates superior performance compared to existing methods and has the ability to transfer to unseen datasets. However, the paper does not discuss the limitations or potential biases of the FCMs used in the method. Additionally, the evaluation is limited to the ALCE few-shot citation benchmark, and further evaluation on other benchmarks and datasets is necessary to establish the generaliz
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13124v1](https://arxiv.org/abs/2406.13124v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13124v1](https://browse.arxiv.org/html/2406.13124v1)       |
+| Truncated       | False       |
+| Word Count       | 13245       |

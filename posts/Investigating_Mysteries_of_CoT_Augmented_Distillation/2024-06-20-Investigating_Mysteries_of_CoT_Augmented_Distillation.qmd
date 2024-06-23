@@ -1,0 +1,45 @@
+
+---
+title: "Investigating Mysteries of CoT-Augmented Distillation"
+id: "2406.14511v1"
+description: "CoT sequences after labels improve student model performance, even when incoherent or partial. No reasoning needed at test time."
+author: Somin Wadhwa, Silvio Amir, Byron C. Wallace
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14511v1/x1.png"
+categories: ['production', 'education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14511v1/x1.png)
+
+### Summary:
+
+This paper investigates the effectiveness of using "chain of thought" (CoT) reasoning in model distillation, where a large "teacher" model's CoT sequences are used to fine-tune a smaller "student" model. The authors perform ablations to understand why and how this additional training signal helps in model distillation. They report some potentially surprising results:
+
+1. Placing CoT sequences after labels (rather than before) results in better downstream performance. This means that no student "reasoning" is necessary at test time to realize gains.
+2. When rationales are appended in this way, they need not be coherent reasoning sequences to yield improvements. Performance increases are robust to permutations of CoT tokens.
+3. A small number of key tokens are sufficient to achieve improvements equivalent to those observed when full rationales are used in model distillation.
+
+### Major Findings:
+
+1. CoT-augmented distillation works better when rationales are provided after labels. Standard CoT reasoning elicited zero-shot from massive LMs yields rationales as prefixes that logically lead to the label tokens. However, smaller models perform consistently better when rationales follow labels in distillation targets.
+2. When appended to target labels, token-level order, length, and coherence of rationales does not matter. However, these things do matter when rationales are preprended. When the rationales are placed before the final label during fine-tuning, masking, shuffling, or altering coherent rationales significantly degrades model performance.
+3. Motivated by the preceding observations, the authors run controlled experiments to establish that there are certain key, contextual tokens that connect the input to the final label, and appending these tokens to labels is sufficient to achieve performance on-par with coherent CoT-like rationales. It is solely the presence of these tokens at training time that leads to downstream performance improvements.
+
+### Analysis and Critique:
+
+* The paper provides valuable insights into the role of CoT reasoning in model distillation, highlighting the importance of the position of rationales and the presence of key tokens.
+* The findings challenge the assumption that student models benefit from learning to mimic the relevant "reasoning"
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14511v1](https://arxiv.org/abs/2406.14511v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14511v1](https://browse.arxiv.org/html/2406.14511v1)       |
+| Truncated       | False       |
+| Word Count       | 8455       |

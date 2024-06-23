@@ -1,0 +1,44 @@
+
+---
+title: "RL on Incorrect Synthetic Data Scales the Efficiency of LLM Math Reasoning by Eight-Fold"
+id: "2406.14532v1"
+description: "Finetuning LLMs with model-generated data can improve math reasoning, especially with self-generated correct solutions and per-step negative responses. This approach can double efficiency and reduce spurious correlations."
+author: Amrith Setlur, Saurabh Garg, Xinyang Geng, Naman Garg, Virginia Smith, Aviral Kumar
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14532v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14532v1/x1.png)
+
+**Summary:**
+
+The paper investigates the use of synthetic data for improving math reasoning capabilities of large language models (LLMs). The authors find that while the typical approach of collecting new questions and corresponding positive (correct) solutions from capable models like GPT-4/Gemini-1.5 presents underwhelming data scaling, the sample efficiency of the same data can be improved up to 2× by sampling more positive traces from the 7B sized models SFT-ed on the original data. However, training on positive self-generated synthetic data alone often amplifies the model’s dependence on spurious steps, that erroneously appear to lead to a good solution but do not generalize to novel problems and hurt test performance.
+
+The authors show that negative (incorrect) traces sampled from the same SFT model can be used to address the failure modes of training on only positive data. In particular, negative data can be used to estimate advantage values for every step, and using these advantage estimates via RL enables us to address this problem. The authors show how the advantages can be used implicitly by preference optimization objectives. They show how training on an instance of this objective leads to 8× improvements in sample efficiency of the synthetic data used.
+
+**Major Findings:**
+
+1. The typical approach of collecting new questions and corresponding positive (correct) solutions from capable models like GPT-4/Gemini-1.5 presents underwhelming data scaling.
+2. The sample efficiency of the same data can be improved up to 2× by sampling more positive traces from the 7B sized models SFT-ed on the original data.
+3. Training on positive self-generated synthetic data alone often amplifies the model’s dependence on spurious steps, that erroneously appear to lead to a good solution but do not generalize to novel problems and hurt test performance.
+4. Negative (incorrect) traces sampled from the same SFT model can be used to address the failure modes of training on only positive data.
+5. Negative data can be used to estimate advantage values for every step, and using these advantage estimates via RL enables us to address this problem.
+6. Training on an instance of this objective leads to 8× improvements in sample efficiency of the synthetic data used.
+
+**Analysis and Critique:**
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14532v1](https://arxiv.org/abs/2406.14532v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14532v1](https://browse.arxiv.org/html/2406.14532v1)       |
+| Truncated       | False       |
+| Word Count       | 15465       |

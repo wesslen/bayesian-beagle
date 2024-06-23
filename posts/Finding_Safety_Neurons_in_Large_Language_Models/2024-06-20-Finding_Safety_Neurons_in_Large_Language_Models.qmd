@@ -1,0 +1,40 @@
+
+---
+title: "Finding Safety Neurons in Large Language Models"
+id: "2406.14144v1"
+description: "Safety neurons in LLMs can restore 90% safety with 5% intervention, transferable across datasets, and aid in detecting unsafe outputs."
+author: Jianhui Chen, Xiaozhi Wang, Zijun Yao, Yushi Bai, Lei Hou, Juanzi Li
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14144v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14144v1/x1.png)
+
+### Summary:
+
+This paper explores the inner mechanisms of safety alignment in large language models (LLMs) from the perspective of mechanistic interpretability. The authors propose generation-time activation contrasting to locate safety neurons and dynamic activation patching to evaluate their causal effects. Experiments on multiple recent LLMs show that safety neurons are sparse and effective, with intervention on about 5% of all neurons restoring up to 90% of safety performance. Safety neurons also encode transferable mechanisms, exhibiting consistent effectiveness on different red-teaming datasets. The findings of safety neurons interpret the "alignment tax," which refers to the trade-off between harmlessness and helpfulness in LLMs. The authors observe that the identified key neurons for safety and helpfulness significantly overlap, but they require different activation patterns of the shared neurons. Furthermore, the paper demonstrates an application of safety neurons in detecting unsafe outputs before generation, improving model safety by refusing to respond when harmful content is detected.
+
+### Major Findings:
+
+1. Safety neurons are sparse and effective, with intervention on about 5% of all neurons restoring up to 90% of safety performance.
+2. Safety neurons encode transferable mechanisms, exhibiting consistent effectiveness on different red-teaming datasets.
+3. The findings of safety neurons interpret the "alignment tax," which refers to the trade-off between harmlessness and helpfulness in LLMs.
+
+### Analysis and Critique:
+
+The paper provides a novel approach to understanding the inner workings of safety alignment in LLMs by identifying and analyzing safety neurons. The proposed methods, generation-time activation contrasting and dynamic activation patching, offer valuable insights into the causal effects of these neurons on safety behaviors. However, the paper does not address potential limitations or biases in the methodology, such as the generalizability of the findings to other LLMs or the impact of different model architectures on the results. Additionally, the paper does not discuss the potential implications of these findings for the development and deployment of LLMs in real-world applications. Further research is needed to address these limitations and explore the broader implications of the findings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14144v1](https://arxiv.org/abs/2406.14144v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14144v1](https://browse.arxiv.org/html/2406.14144v1)       |
+| Truncated       | False       |
+| Word Count       | 10356       |

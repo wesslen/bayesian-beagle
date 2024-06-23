@@ -1,0 +1,44 @@
+
+---
+title: "A Critical Study of What Code-LLMs (Do Not) Learn"
+id: "2406.11930v1"
+description: "Code-LLMs struggle to encode relations between syntax and identifiers, with larger models encoding less code info than smaller ones."
+author: Abhinav Anand, Shweta Verma, Krishna Narasimhan, Mira Mezini
+date: "2024-06-17"
+image: "https://browse.arxiv.org/html/2406.11930v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.11930v1/x1.png)
+
+### Summary:
+
+This paper presents a critical study of what code-LLMs (code-based large language models) learn and do not learn. The study focuses on the fine-grained analysis of attention maps and hidden representations of code-LLMs. The research reveals that code-LLMs only encode relations among specific subsets of input tokens, specifically between syntactic tokens and among identifiers, but fail to encode relations between syntactic tokens and identifiers. The study also found that fine-tuned models encode these relations poorly compared to their pre-trained counterparts. Additionally, larger models with billions of parameters encode significantly less information about code than models with only a few hundred million parameters.
+
+### Major Findings:
+
+1. Code-LLMs only encode relations among specific subsets of input tokens, specifically between syntactic tokens and among identifiers, but fail to encode relations between syntactic tokens and identifiers.
+2. Fine-tuned models encode these relations poorly compared to their pre-trained counterparts.
+3. Larger models with billions of parameters encode significantly less information about code than models with only a few hundred million parameters.
+
+### Analysis and Critique:
+
+The study provides valuable insights into the limitations of code-LLMs in encoding code structure, which has not been explored in previous research. The findings suggest that there is a significant gap in encoding some code properties, which could explain the poor performance of code-LLMs on real-world tasks. However, the study does not provide a solution to this problem, and further research is needed to explore novel training techniques and/or architectures to enhance models' capability to encode code properties.
+
+One limitation of the study is that it only focuses on Python code, which may not be representative of other programming languages. Additionally, the study does not consider the impact of different tokenizers on the analysis of attention maps and hidden representations. Future research could extend this study to other programming languages and explore the impact of different tokenizers on the results.
+
+Overall, the study provides a valuable contribution to the field of code-LLMs by highlighting their limitations in encoding code structure. The findings of this study can inform the development of more robust and effective code-LLMs in the future.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.11930v1](https://arxiv.org/abs/2406.11930v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.11930v1](https://browse.arxiv.org/html/2406.11930v1)       |
+| Truncated       | False       |
+| Word Count       | 10566       |

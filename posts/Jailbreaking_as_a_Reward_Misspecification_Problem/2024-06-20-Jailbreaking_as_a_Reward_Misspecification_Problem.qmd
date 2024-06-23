@@ -1,0 +1,44 @@
+
+---
+title: "Jailbreaking as a Reward Misspecification Problem"
+id: "2406.14393v1"
+description: "TL;DR: New system (ReMiss) detects harmful prompts in LLMs, outperforming previous methods."
+author: Zhihui Xie, Jiahui Gao, Lei Li, Zhenguo Li, Qi Liu, Lingpeng Kong
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14393v1/x1.png"
+categories: ['architectures', 'prompt-engineering', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14393v1/x1.png)
+
+### Summary:
+
+The paper proposes a novel perspective that attributes the vulnerability of large language models (LLMs) to reward misspecification during the alignment process. The authors introduce a metric, ReGap, to quantify the extent of reward misspecification and demonstrate its effectiveness in detecting harmful backdoor prompts. They also present ReMiss, a system for automated red teaming that generates adversarial prompts against various target aligned LLMs, achieving state-of-the-art attack success rates on the AdvBench benchmark while preserving human readability.
+
+### Major Findings:
+
+1. The paper introduces a new perspective that attributes the vulnerability of LLMs to reward misspecification during the alignment process, where the reward function fails to accurately rank the quality of the responses.
+2. The authors characterize implicit rewards through the behavioral deviations from a reference model and introduce a new metric, ReGap, to evaluate the extent of reward misspecification.
+3. ReMiss, an automated red-teaming system, is proposed to generate adversarial prompts for various aligned LLMs, achieving state-of-the-art attack success rates on the AdvBench benchmark while preserving human readability.
+
+### Analysis and Critique:
+
+1. The paper provides a unique perspective on the vulnerability of LLMs, attributing it to reward misspecification during the alignment process. However, the authors do not discuss the potential limitations of this perspective or compare it to other existing perspectives on LLM vulnerabilities.
+2. The proposed ReMiss system for automated red teaming is shown to be effective in generating adversarial prompts against various target aligned LLMs. However, the authors do not discuss the potential biases or limitations of the system, such as its dependence on the availability of a reference model or its computational requirements.
+3. The paper does not provide a detailed comparison of ReMiss to other existing methods for generating adversarial prompts, making it difficult to evaluate its relative performance and advantages.
+4. The authors do not discuss the potential ethical implications of their proposed method for generating adversarial prompts, such as the potential for misuse or the need for responsible use of the technology.
+5. The paper does not provide a clear discussion of the potential applications or use cases of the proposed method, making it difficult to evaluate
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14393v1](https://arxiv.org/abs/2406.14393v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14393v1](https://browse.arxiv.org/html/2406.14393v1)       |
+| Truncated       | False       |
+| Word Count       | 7548       |

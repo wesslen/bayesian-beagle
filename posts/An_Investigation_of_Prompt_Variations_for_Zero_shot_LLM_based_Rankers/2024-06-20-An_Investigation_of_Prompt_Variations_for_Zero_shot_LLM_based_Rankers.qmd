@@ -1,0 +1,46 @@
+
+---
+title: "An Investigation of Prompt Variations for Zero-shot LLM-based Rankers"
+id: "2406.14117v1"
+description: "Prompt components and wordings significantly impact zero-shot LLM ranking effectiveness, sometimes more than ranking algorithms."
+author: Shuoqi Sun, Shengyao Zhuang, Shuai Wang, Guido Zuccon
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14117v1/extracted/5679960/figures/stability/Stability-FlanT5-large-dl19.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14117v1/extracted/5679960/figures/stability/Stability-FlanT5-large-dl19.png)
+
+### Summary:
+
+This paper investigates the use of Large Language Models (LLMs) to create zero-shot rankers, focusing on re-rankers where an initial set of documents is retrieved from the index, and a subset is provided to the re-ranker for producing the final search engine results. The study aims to understand the impact of specific components and wordings used in prompts on the effectiveness of rankers based on zero-shot LLMs.
+
+### Major Findings:
+
+1. **Ranking Algorithms and LLM Backbones Matter**: The study finds that ranking algorithms and LLM backbones contribute to differences between methods for zero-shot LLM ranking. However, the choice of prompt components and wordings significantly affects the ranking.
+
+2. **Prompt Components and Wordings Impact Ranker's Effectiveness**: The choice of prompt components and wordings can have more impact on the ranker's effectiveness than the actual ranking algorithms. Differences among ranking methods become more blurred when prompt variations are considered.
+
+3. **Importance of Prompt Optimization**: The study highlights the importance of prompt optimization in harnessing the full capabilities of LLMs. Strategic prompt design is not only beneficial but necessary to improve the performance of LLMs across a wide range of tasks and contexts.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive analysis of the impact of prompts on LLM-based rankers. However, it does not explore the adaptation of self-optimizers to prompts for zero-shot LLM rankers, which could be a direction for future work. Additionally, the study does not consider the use of generative LLMs to obtain dense representations of documents and queries for dense retrieval, which could also be affected by the issues investigated.
+
+The paper also acknowledges the limitations of the study, including the lack of consideration for query latency, the limited number of prompt variations due to computational constraints, and the use of non-commercial LLMs due to the high costs involved in using commercial APIs.
+
+Finally, the paper raises ethical considerations regarding the substantial energy consumption and potential societal biases in the rankings produced by the zero-shot LLM rankers. Future research could explore ways to mitigate these biases through prompt engineering.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14117v1](https://arxiv.org/abs/2406.14117v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14117v1](https://browse.arxiv.org/html/2406.14117v1)       |
+| Truncated       | False       |
+| Word Count       | 7110       |

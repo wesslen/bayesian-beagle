@@ -1,0 +1,44 @@
+
+---
+title: "Beyond Under-Alignment: Atomic Preference Enhanced Factuality Tuning for Large Language Models"
+id: "2406.12416v1"
+description: "LLMs struggle with factuality in OOD datasets; APEFT framework improves factuality by 3.45% on average."
+author: Hongbang Yuan, Yubo Chen, Pengfei Cao, Zhuoran Jin, Kang Liu, Jun Zhao
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12416v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12416v1/x1.png)
+
+### Summary:
+
+This paper explores the issue of hallucination in large language models (LLMs), where they generate seemingly convincing but factually erroneous responses. The authors propose using preference learning to fine-tune models and align them with factuality. However, they find that existing work primarily evaluates fine-tuned models on in-domain (ID) datasets, and the factuality on out-of-domain (OOD) datasets remains underexplored.
+
+The authors conduct a comprehensive evaluation of the factuality of different models tuned by various preference learning algorithms and demonstrate that their performance on OOD datasets either increases minimally or decreases. They reveal that the main cause of the model's failure to uphold factuality under a distribution shift is under-alignment, rather than over-alignment, by analyzing the token distribution shift of the models before and after tuning.
+
+The authors propose APEFT (Atomic Preference Enhanced Factuality Tuning), a framework that enhances the model's awareness of factuality at the granularity of individual facts. Extensive experiments demonstrate that APEFT improves model performance by an average of  on both ID and OOD datasets, which is highly effective.
+
+### Major Findings:
+
+1. Existing work on preference learning for LLMs primarily evaluates factuality on in-domain datasets, and the factuality on out-of-domain datasets remains underexplored.
+2. The main cause of the model's failure to uphold factuality under a distribution shift is under-alignment, rather than over-alignment.
+3. APEFT, a framework that enhances the model's awareness of factuality at the granularity of individual facts, improves model performance by an average of  on both ID and OOD datasets.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive evaluation of the factuality of different models tuned by various preference learning algorithms and proposes a novel framework, APEFT, to enhance the model's awareness of factuality. However, the paper does not discuss the potential limitations or biases of the proposed framework. Additionally, the paper does not provide a detailed comparison of APEFT with other existing methods for improving the factuality
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12416v1](https://arxiv.org/abs/2406.12416v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12416v1](https://browse.arxiv.org/html/2406.12416v1)       |
+| Truncated       | False       |
+| Word Count       | 6437       |

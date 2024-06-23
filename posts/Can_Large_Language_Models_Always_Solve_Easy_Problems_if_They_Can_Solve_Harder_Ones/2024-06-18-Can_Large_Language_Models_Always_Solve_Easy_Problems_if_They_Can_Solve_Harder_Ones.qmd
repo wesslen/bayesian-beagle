@@ -1,0 +1,40 @@
+
+---
+title: "Can Large Language Models Always Solve Easy Problems if They Can Solve Harder Ones?"
+id: "2406.12809v1"
+description: "LLMs, like GPT-4, show inconsistency despite high capability; harder data boosts consistency."
+author: Zhe Yang, Yichang Zhang, Tianyu Liu, Jian Yang, Junyang Lin, Chang Zhou, Zhifang Sui
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12809v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12809v1/x1.png)
+
+### Summary:
+
+The paper explores the hard-to-easy inconsistency in large language models (LLMs), where they can solve harder problems but fail at easier ones. The authors develop a benchmark called ConsisEval, which includes data from three domains: instruction following, code, and mathematics. Each entry in the benchmark consists of a pair of questions with a strict order of difficulty. The authors also propose a new metric, consistency score, to quantitatively measure this inconsistency from a probabilistic perspective. They conduct extensive experiments on various LLMs and find that GPT-4 achieves the highest consistency score of 92.2%, but still exhibits inconsistent behaviors due to distraction by redundant information, misinterpretation of questions, etc. The paper also finds that models with stronger capabilities typically exhibit higher consistency, but exceptions exist. Additionally, models show higher consistency when trained under hard data than easy data, and that holds the same under few-shot setting (in-context learning with harder demonstration examples shows better consistency).
+
+### Major Findings:
+
+1. GPT-4 achieves the highest consistency score of 92.2%, but still exhibits inconsistent behaviors due to distraction by redundant information, misinterpretation of questions, etc.
+2. Models with stronger capabilities typically exhibit higher consistency, but exceptions exist.
+3. Hard data enhances consistency for both fine-tuning and in-context learning.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive analysis of the hard-to-easy inconsistency in LLMs and proposes a new benchmark and metric to evaluate this inconsistency. The authors conduct extensive experiments on various LLMs and provide valuable insights into the behavior of these models. However, the paper does not discuss the limitations of the proposed benchmark and metric, such as the potential for data leakage and the lack of human evaluation results. Additionally, the paper does not explore the underlying reasons for the inconsistency in LLMs and how to solve this problem. Overall, the paper provides a valuable contribution to the field of LLMs and paves the way for future research in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12809v1](https://arxiv.org/abs/2406.12809v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12809v1](https://browse.arxiv.org/html/2406.12809v1)       |
+| Truncated       | False       |
+| Word Count       | 9280       |

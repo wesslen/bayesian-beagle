@@ -1,0 +1,44 @@
+
+---
+title: "LiveMind: Low-latency Large Language Models with Simultaneous Inference"
+id: "2406.14319v1"
+description: "New framework reduces LLM inference latency by up to 93% with incomplete prompts, improving interactive experience and accuracy."
+author: Chuangtao Chen, Grace Li Zhang, Xunzhao Yin, Cheng Zhuo, Ulf Schlichtmann, Bing Li
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14319v1/x1.png"
+categories: ['architectures', 'education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14319v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel low-latency inference framework for large language models (LLMs) called LiveMind, which enables LLMs to perform inferences with incomplete prompts. By reallocating computational processes to the prompt input phase, LiveMind achieves a substantial reduction in latency, enhancing the interactive experience for users. The framework manages the visibility of the streaming prompt to the model, allowing it to infer from incomplete prompts or await additional prompts. Compared with traditional inference methods, LiveMind demonstrates an average reduction of 59% in response latency on the MMLU-Pro dataset, while maintaining comparable accuracy. Additionally, the framework facilitates collaborative inference and output across different models, achieving an average 68% reduction in response latency and a 5.5% improvement in accuracy compared with the small language model (SLM) baseline.
+
+### Major Findings:
+
+1. LiveMind enables LLMs to process input concurrently with its streaming, reducing the number of tokens required for inference and decreasing the latency perceived by users.
+2. The framework allows for collaborative inference and output across different models, utilizing an LLM for inference and an SLM for output, which can further reduce latency while maintaining better inference accuracy.
+3. The proposed framework demonstrates a significant reduction in response latency, with an average reduction of 59% on the MMLU-Pro dataset compared with traditional inference methods, while maintaining comparable accuracy.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other existing low-latency inference frameworks for LLMs, making it difficult to evaluate the performance of LiveMind in relation to other methods.
+2. The paper does not discuss the potential limitations or drawbacks of the proposed framework, such as the impact on the quality of inferences or the computational resources required for implementation.
+3. The paper does not provide a clear explanation of how the framework manages the visibility of the streaming prompt to the model, which could be important for understanding the underlying mechanisms of the proposed approach.
+4. The paper does not discuss the potential applications or use cases of the proposed framework, which could help to demonstrate its practical utility and relevance.
+5. The paper does
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14319v1](https://arxiv.org/abs/2406.14319v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14319v1](https://browse.arxiv.org/html/2406.14319v1)       |
+| Truncated       | False       |
+| Word Count       | 8602       |

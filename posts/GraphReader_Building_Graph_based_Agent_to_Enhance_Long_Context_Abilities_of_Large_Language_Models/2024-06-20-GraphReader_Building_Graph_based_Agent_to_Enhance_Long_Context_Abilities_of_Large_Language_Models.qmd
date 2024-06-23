@@ -1,0 +1,47 @@
+
+---
+title: "GraphReader: Building Graph-based Agent to Enhance Long-Context Abilities of Large Language Models"
+id: "2406.14550v1"
+description: "GraphReader outperforms GPT-4-128k on long-context tasks, using a 4k context window and a graph-based agent system."
+author: Shilong Li, Yancheng He, Hangyu Guo, Xingyuan Bu, Ge Bai, Jie Liu, Jiaheng Liu, Xingwei Qu, Yangguang Li, Wanli Ouyang, Wenbo Su, Bo Zheng
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14550v1/x1.png"
+categories: ['architectures', 'production', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14550v1/x1.png)
+
+### Summary:
+
+The paper introduces GraphReader, a graph-based agent system designed to handle long texts by structuring them into a graph and employing an agent to explore this graph autonomously. The agent first undertakes a step-by-step analysis and devises a rational plan upon receiving a question. It then invokes a set of predefined functions to read node content and neighbors, facilitating a coarse-to-fine exploration of the graph. Throughout the exploration, the agent continuously records new insights and reflects on current circumstances to optimize the process until it has gathered sufficient information to generate an answer.
+
+Experimental results on the LV-Eval dataset reveal that GraphReader, using a 4k context window, consistently outperforms GPT-4-128k across context lengths from 16k to 256k by a large margin. Additionally, the approach demonstrates superior performance on four challenging single-hop and multi-hop benchmarks.
+
+### Major Findings:
+
+1. GraphReader is a novel agent system that organizes long texts into a graph structure, leveraging predefined functions and notebook to facilitate planning and reflection during exploration.
+2. GraphReader establishes a scalable long-context capability based on a 4k context window, demonstrating performance that is comparable to or surpasses GPT-4 with a 128k context window across varying context lengths.
+3. Extensive experiments conducted on four challenging benchmarks demonstrate that GraphReader achieves superior performance in complex single-hop and multi-hop QA tasks.
+
+### Analysis and Critique:
+
+While the paper presents an innovative approach to handling long-context tasks, there are a few potential limitations and areas for improvement:
+
+1. The paper does not provide a detailed comparison with other graph-based methods for handling long-context tasks, which could help to better understand the advantages and disadvantages of GraphReader.
+2. The paper does not discuss the potential impact of the graph construction process on the performance of GraphReader. For instance, the quality of the graph could be affected by the choice of the segmentation method, the granularity of the atomic facts, and the normalization process.
+3. The paper does not provide a detailed analysis of the computational complexity of GraphReader, which could be an important factor for practical applications.
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14550v1](https://arxiv.org/abs/2406.14550v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14550v1](https://browse.arxiv.org/html/2406.14550v1)       |
+| Truncated       | False       |
+| Word Count       | 7927       |

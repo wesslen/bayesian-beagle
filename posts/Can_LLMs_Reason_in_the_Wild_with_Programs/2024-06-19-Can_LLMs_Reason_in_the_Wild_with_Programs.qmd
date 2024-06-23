@@ -1,0 +1,40 @@
+
+---
+title: "Can LLMs Reason in the Wild with Programs?"
+id: "2406.13764v1"
+description: "LLMs struggle with ambiguous, mixed-scope reasoning; fine-tuning with diverse data helps."
+author: Yuan Yang, Siheng Xiong, Ali Payani, Ehsan Shareghi, Faramarz Fekri
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13764v1/x1.png"
+categories: ['programming', 'education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13764v1/x1.png)
+
+### Summary:
+
+The paper introduces the task of reasoning in the wild, where an LLM is tasked with solving a reasoning problem of unknown type by identifying sub-problems and their corresponding formalisms, then writing a program to solve each sub-problem, guided by a tactic. The authors create a large tactic-guided trajectory dataset containing detailed solutions to a diverse set of reasoning problems, ranging from well-defined single-form reasoning to ambiguous and hybrid ones. The experiments reveal that existing LLMs fail significantly on problems with ambiguous and mixed scope, revealing critical limitations and overfitting issues. Fine-tuning a local LLM on the trajectories data leads to better performance.
+
+### Major Findings:
+
+1. Existing LLMs fail significantly on problems with ambiguous and mixed scope, revealing critical limitations and overfitting issues.
+2. Fine-tuning a local LLM on the trajectories data leads to better performance.
+3. The task of reasoning in the wild is a promising direction for evaluating LLMs' reasoning abilities in more realistic scenarios.
+
+### Analysis and Critique:
+
+The paper presents an interesting and important task for evaluating LLMs' reasoning abilities in more realistic scenarios. The creation of a large tactic-guided trajectory dataset is a significant contribution, as it allows for the evaluation of LLMs on a diverse set of reasoning problems. However, the paper could benefit from a more detailed analysis of the results, including a discussion of the strengths and weaknesses of different LLMs and an exploration of the potential reasons for their performance on the task. Additionally, the paper could provide more details on the fine-tuning process and the specific tactics used to guide the LLMs. Overall, the paper is a valuable contribution to the field of LLM evaluation and provides a promising direction for future research.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13764v1](https://arxiv.org/abs/2406.13764v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13764v1](https://browse.arxiv.org/html/2406.13764v1)       |
+| Truncated       | False       |
+| Word Count       | 13142       |

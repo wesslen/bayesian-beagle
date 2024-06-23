@@ -1,0 +1,48 @@
+
+---
+title: "LangTopo: Aligning Language Descriptions of Graphs with Tokenized Topological Modeling"
+id: "2406.13250v1"
+description: "LangTopo framework aligns LLMs with GNNs for graph structure modeling, improving LLMs' graph data handling."
+author: Zhong Guan, Hongke Zhao, Likang Wu, Ming He, Jianpin Fan
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13250v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13250v1/x1.png)
+
+# Summary:
+
+LangTopo: Aligning Language Descriptions of Graphs with Tokenized Topological Modeling
+
+## Summary:
+
+The paper introduces a novel framework, LangTopo, which aligns graph structure modeling with natural language understanding at the token level. LangTopo quantifies the graph structure modeling capabilities of GNNs and LLMs by constructing a codebook for the graph modality and performs consistency maximization. This process aligns the text description of LLM with the topological modeling of GNN, allowing LLM to learn the ability of GNN to capture graph structures, enabling LLM to handle graph-structured data independently. The effectiveness of the proposed method is demonstrated on multiple datasets.
+
+## Major Findings:
+
+1. The paper proposes LangTopo, a new framework for learning graph structures using LLMs, which enables LLMs to learn GNNs' ability to model graph structures through supervised learning.
+2. LangTopo achieves alignment between the natural language descriptive text in LLMs and the processing and operation of GNN models by constructing a codebook for the graph data modality.
+3. Unlike existing paradigms that usually introduce external modules to recognize graph structures, LangTopo endows the LLM itself with the ability to model graph structures, obviating the need for external data or model integration during inference.
+
+## Analysis and Critique:
+
+1. The paper presents a promising approach to addressing the challenges of combining the structural modeling capacity of GNNs with the text processing capability of LLMs.
+2. The use of an external GNN to extract spatial structure embeddings and training a projection layer or adapter to inject these embeddings into the LLM has been a common approach, but LLMs still lack the ability to handle graph data independently and continue to rely on external models during inference.
+3. The paper's focus on modeling, rather than embedding, is a significant contribution to the field, as it addresses the fundamental issue of LLMs lacking the capability to model graph structures.
+4. The paper's evaluation on multiple datasets demonstrates the effectiveness of the proposed method, but further research is needed to explore the generalizability and scalability of LangTopo.
+5. The paper's limitation is the unexplored scenario of jointly training with multiple datasets for graph modality
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13250v1](https://arxiv.org/abs/2406.13250v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13250v1](https://browse.arxiv.org/html/2406.13250v1)       |
+| Truncated       | False       |
+| Word Count       | 10341       |

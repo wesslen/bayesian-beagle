@@ -1,0 +1,48 @@
+
+---
+title: "Defending Against Social Engineering Attacks in the Age of LLMs"
+id: "2406.12263v1"
+description: "LLMs aid digital deception, but struggle with detection. ConvoSentinel, a modular defense pipeline, improves CSE detection and adaptability."
+author: Lin Ai, Tharindu Kumarage, Amrita Bhattacharjee, Zizhou Liu, Zheng Hui, Michael Davinroy, James Cook, Laura Cassani, Kirill Trapeznikov, Matthias Kirchner, Arslan Basharat, Anthony Hoogs, Joshua Garland, Huan Liu, Julia Hirschberg
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12263v1/extracted/5674558/figures/data_generation.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12263v1/extracted/5674558/figures/data_generation.png)
+
+### Summary:
+
+- The study investigates the dual role of Large Language Models (LLMs) in chat-based social engineering (CSE) attacks, both as facilitators and defenders.
+- A novel dataset, SEConvo, is developed to simulate CSE scenarios in academic and recruitment contexts.
+- The study finds that off-the-shelf LLMs generate high-quality CSE content, but their detection capabilities are suboptimal, leading to increased operational costs for defense.
+- A modular defense pipeline, ConvoSentinel, is proposed to improve detection at both the message and conversation levels, offering enhanced adaptability and cost-effectiveness.
+- The retrieval-augmented module in ConvoSentinel identifies malicious intent by comparing messages to a database of similar conversations, enhancing CSE detection at all stages.
+
+### Major Findings:
+
+1. LLMs can be manipulated to conduct CSE attempts, as demonstrated by the SEConvo dataset.
+2. Off-the-shelf LLMs have limited capabilities in detecting and mitigating LLM-initiated CSE attempts, with performance heavily dependent on the number of few-shot examples.
+3. ConvoSentinel, a modular pipeline, improves CSE detection at both message and conversation levels, offering improved adaptability and cost-effectiveness.
+
+### Analysis and Critique:
+
+- The study highlights the need for advanced strategies to leverage LLMs in cybersecurity, as they pose significant risks as automated social engineering attackers.
+- The proposed ConvoSentinel pipeline addresses the limitations of off-the-shelf LLMs in CSE detection, but its effectiveness is contingent on the quality and comprehensiveness of the historical database used for comparison.
+- The study's focus on specific academic and recruitment contexts may limit the generalizability of its findings to other domains where CSE attacks occur.
+- The use of LLMs to simulate conversations between victims and attackers in CSE scenarios may introduce issues such as hallucination and sycophancy, potentially affecting the reliability of the simulated dataset.
+- Future research should aim to expand the scope of the study, explore advanced detection techniques, and consider the broader ethical and practical implications of leveraging LLMs for cybersecurity applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12263v1](https://arxiv.org/abs/2406.12263v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12263v1](https://browse.arxiv.org/html/2406.12263v1)       |
+| Truncated       | False       |
+| Word Count       | 7850       |

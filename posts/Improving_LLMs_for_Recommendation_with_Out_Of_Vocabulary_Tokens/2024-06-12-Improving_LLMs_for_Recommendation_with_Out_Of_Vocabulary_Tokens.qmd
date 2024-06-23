@@ -1,0 +1,42 @@
+
+---
+title: "Improving LLMs for Recommendation with Out-Of-Vocabulary Tokens"
+id: "2406.08477v1"
+description: "TL;DR: Improving LLM-based recommender systems with out-of-vocabulary tokens for better user-item representation."
+author: Ting-Ji Huang, Jia-Qi Yang, Chunxu Shen, Kai-Qi Liu, De-Chuan Zhan, Han-Jia Ye
+date: "2024-06-12"
+image: "https://browse.arxiv.org/html/2406.08477v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.08477v1/x1.png)
+
+### Summary:
+
+The paper explores the use of Large Language Models (LLMs) in recommendation systems, focusing on the tokenization of users and items. The authors argue that the use of in-vocabulary tokens, which are typically pretrained on natural language tasks, lack the expressive power for distinctive users and items, weakening the recommendation ability even after fine-tuning on recommendation tasks. To address this, the authors propose a framework that emphasizes the role of out-of-vocabulary (OOV) tokens in addition to in-vocabulary ones. They claim that the memorization of OOV tokens captures correlations of users/items as well as diversity of OOV tokens. By clustering the learned representations from historical user-item interactions, the authors make the representations of user/item combinations share the same OOV tokens if they have similar properties. Integrating these OOV tokens into the LLM’s vocabulary allows for better distinction between users and items and enhanced capture of user-item relationships during fine-tuning on downstream tasks. The proposed framework outperforms existing state-of-the-art methods across various downstream recommendation tasks.
+
+### Major Findings:
+
+1. The use of in-vocabulary tokens for tokenizing users and items in LLM-based recommendation systems lacks the expressive power for distinctive users and items, weakening the recommendation ability even after fine-tuning on recommendation tasks.
+2. The proposed framework emphasizes the role of out-of-vocabulary (OOV) tokens in addition to in-vocabulary ones, with the memorization of OOV tokens capturing correlations of users/items as well as diversity of OOV tokens.
+3. By clustering the learned representations from historical user-item interactions, the proposed framework makes the representations of user/item combinations share the same OOV tokens if they have similar properties.
+4. Integrating these OOV tokens into the LLM’s vocabulary allows for better distinction between users and items and enhanced capture of user-item relationships during fine-tuning on downstream tasks.
+5. The proposed framework outperforms existing state-of-the-art methods across various downstream recommendation tasks.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to token
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.08477v1](https://arxiv.org/abs/2406.08477v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.08477v1](https://browse.arxiv.org/html/2406.08477v1)       |
+| Truncated       | False       |
+| Word Count       | 9535       |

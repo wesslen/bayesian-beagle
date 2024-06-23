@@ -1,0 +1,40 @@
+
+---
+title: "The Fire Thief Is Also the Keeper: Balancing Usability and Privacy in Prompts"
+id: "2406.14318v1"
+description: "ProSan: A framework for anonymizing prompts in LLMs, maintaining usability, and adapting to resource conditions."
+author: Zhili Shen, Zihang Xi, Ying He, Wei Tong, Jingyu Hua, Sheng Zhong
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14318v1/x1.png"
+categories: ['prompt-engineering', 'robustness', 'hci', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14318v1/x1.png)
+
+**Summary:**
+
+The paper introduces Prompt Privacy Sanitizer (ProSan), an end-to-end framework for prompt privacy protection that balances usability and privacy. ProSan generates anonymized prompts by removing contextual privacy while maintaining task usability and human readability. It can be seamlessly integrated into the online LLM service pipeline. ProSan dynamically adjusts its protection targets and strength based on the importance of words and the privacy leakage risk of prompts. It is also capable of adapting to diverse computational resource conditions, ensuring privacy protection even for mobile devices with limited computing power.
+
+**Major Findings:**
+
+1. ProSan effectively removes private information across various tasks, including question answering, text summarization, and code generation, with minimal reduction in task performance.
+2. ProSan can be adjusted in terms of privacy protection performance and computational load requirements, allowing basic privacy protection for ordinary users with limited computing resources and high-level anonymization of multiple data types for enterprises with abundant computing power.
+3. ProSan operates independently of other components in the NLP pipeline, ensuring seamless integration into mainstream NLP pipelines.
+
+**Analysis and Critique:**
+
+The paper presents a promising approach to addressing the issue of privacy leaks in prompts. However, it does not provide a comprehensive evaluation of the framework's performance across a wide range of tasks and datasets. Additionally, the paper does not discuss potential limitations or biases in the framework, such as the reliance on self-information for measuring privacy risk, which may not fully capture the complexity of privacy in natural language. Further research is needed to evaluate the framework's robustness and generalizability, as well as to explore alternative methods for measuring privacy risk.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14318v1](https://arxiv.org/abs/2406.14318v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14318v1](https://browse.arxiv.org/html/2406.14318v1)       |
+| Truncated       | False       |
+| Word Count       | 11663       |

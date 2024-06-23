@@ -1,0 +1,43 @@
+
+---
+title: "Self-play with Execution Feedback: Improving Instruction-following Capabilities of Large Language Models"
+id: "2406.13542v1"
+description: "AutoIF is a new method for automatically generating instruction-following training data for LLMs, improving performance across three training algorithms."
+author: Guanting Dong, Keming Lu, Chengpeng Li, Tingyu Xia, Bowen Yu, Chang Zhou, Jingren Zhou
+date: "2024-06-19"
+image: "https://browse.arxiv.org/html/2406.13542v1/x2.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.13542v1/x2.png)
+
+### Summary:
+- The paper introduces AutoIF, a scalable and reliable method for automatically generating instruction-following training data for Supervised Fine-tuning (SFT) or Reinforcement Learning from Human Feedback (RLHF).
+- AutoIF transforms the validation of instruction-following data quality into code verification, requiring LLMs to generate instructions, the corresponding code to check the correctness of the instruction responses, and unit test samples to verify the code’s correctness.
+- The method achieves significant improvements across three training algorithms, SFT, Offline DPO, and Online DPO, when applied to the top open-source LLMs, Qwen2 and LLaMA3, in self-alignment and strong-to-weak distillation settings.
+
+### Major Findings:
+1. AutoIF is the first scalable and reliable method for automatically generating instruction-following training data for SFT or RLHF.
+2. The method achieves significant improvements across three training algorithms, SFT, Offline DPO, and Online DPO, when applied to the top open-source LLMs, Qwen2 and LLaMA3.
+3. In the IFEval benchmark, AutoIF achieved Loose Instruction (Acc.) rates of up to 88.0% with Qwen2-72B and 90.4% with LLaMA3-70B, marking the first instance of surpassing 90% accuracy.
+
+### Analysis and Critique:
+- The paper presents a novel and promising approach to improving the instruction-following capabilities of LLMs.
+- The method's reliance on code verification for data quality validation is a significant strength, as it allows for the automatic generation of high-quality training data.
+- However, the method's effectiveness may be limited by the complexity of the instructions and the availability of suitable code for verification.
+- The paper does not provide a detailed comparison with other methods for improving instruction-following capabilities, which could be a valuable addition to the study.
+- The method's applicability to other LLMs and its generalizability to different types of instructions also require further investigation.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.13542v1](https://arxiv.org/abs/2406.13542v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.13542v1](https://browse.arxiv.org/html/2406.13542v1)       |
+| Truncated       | False       |
+| Word Count       | 4670       |

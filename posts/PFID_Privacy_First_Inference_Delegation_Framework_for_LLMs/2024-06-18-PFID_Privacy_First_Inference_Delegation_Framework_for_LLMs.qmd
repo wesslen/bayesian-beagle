@@ -1,0 +1,52 @@
+
+---
+title: "PFID: Privacy First Inference Delegation Framework for LLMs"
+id: "2406.12238v1"
+description: "PFID framework for LLMs enhances privacy by localizing user data, using model sharding, and singular value decomposition, while maintaining system performance."
+author: Haoyan Yang, Zhitao Li, Yong Zhang, Jianzong Wang, Ning Cheng, Ming Li, Jing Xiao
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12238v1/extracted/5674466/simple_graph.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12238v1/extracted/5674466/simple_graph.png)
+
+### Summary:
+
+The paper introduces a novel privacy-preservation framework named PFID for LLMs that addresses critical privacy concerns by localizing user data through model sharding and singular value decomposition. The framework proposes to place model shards on the client and the public server, sending compressed hidden states instead of prompts to and from servers. The main contributions of the research are:
+
+1. Introducing a novel inference framework for model sharding within LLMs that focuses on preserving privacy while distributing the computational workload of autoregressive tasks.
+2. Developing a mechanism termed 're-privatization' that enables normal auto-decoding process while protecting user privacy.
+3. Proposing the adoption of truncated singular value decomposition techniques to facilitate both communication efficiency and secure confinement of private information.
+
+### Major Findings:
+
+1. The PFID framework effectively protects user privacy by localizing user data through model sharding and singular value decomposition.
+2. The 're-privatization' mechanism enables normal auto-decoding process while protecting user privacy.
+3. Truncated singular value decomposition techniques facilitate both communication efficiency and secure confinement of private information.
+
+### Analysis and Critique:
+
+The PFID framework is a promising approach to addressing privacy concerns in LLMs. However, there are some potential limitations and areas for improvement:
+
+1. The framework has only been tested on machine translation tasks, and its applicability to other domains is not yet established.
+2. The framework assumes that the client has sufficient computational resources to run a part of the model locally, which may not always be the case.
+3. The framework does not address the issue of malicious clients who may attempt to reverse-engineer the model or steal sensitive information.
+4. The framework assumes that the server is honest-but-curious, and does not consider the possibility of a malicious server.
+5. The framework does not provide a mechanism for updating the model on the client side, which may be necessary to maintain accuracy over time.
+
+Overall, the PFID framework is a promising approach to addressing privacy concerns in LLMs, but further research is needed to address its limitations and improve its applicability to a wider range of tasks and scenarios.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12238v1](https://arxiv.org/abs/2406.12238v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12238v1](https://browse.arxiv.org/html/2406.12238v1)       |
+| Truncated       | False       |
+| Word Count       | 5069       |

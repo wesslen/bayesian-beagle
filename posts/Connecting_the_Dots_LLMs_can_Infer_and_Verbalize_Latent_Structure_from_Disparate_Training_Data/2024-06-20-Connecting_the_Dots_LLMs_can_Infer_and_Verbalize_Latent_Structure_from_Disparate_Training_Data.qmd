@@ -1,0 +1,40 @@
+
+---
+title: "Connecting the Dots: LLMs can Infer and Verbalize Latent Structure from Disparate Training Data"
+id: "2406.14546v1"
+description: "LLMs can infer censored knowledge by piecing together scattered hints, posing a challenge for safety and control."
+author: Johannes Treutlein, Dami Choi, Jan Betley, Cem Anil, Samuel Marks, Roger Baker Grosse, Owain Evans
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14546v1/x1.png"
+categories: ['production', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14546v1/x1.png)
+
+**Summary:**
+
+The paper explores the ability of large language models (LLMs) to infer and verbalize latent structure from disparate training data, a phenomenon known as inductive out-of-context reasoning (OOCR). The authors demonstrate that frontier LLMs can perform inductive OOCR, as evidenced by a suite of five tasks. In one experiment, an LLM was finetuned on a corpus consisting only of distances between an unknown city and other known cities. Remarkably, the LLM could verbalize that the unknown city is Paris and use this fact to answer downstream questions without in-context learning or Chain of Thought. Further experiments showed that LLMs trained only on individual coin flip outcomes could verbalize whether the coin is biased, and those trained only on pairs could articulate a definition of a function and compute inverses. However, OOCR was found to be unreliable, particularly for smaller LLMs learning complex structures. The ability of LLMs to "connect the dots" without explicit in-context learning poses a potential obstacle to monitoring and controlling the knowledge acquired by LLMs.
+
+**Major Findings:**
+
+1. Frontier LLMs can perform inductive OOCR, inferring latent information from evidence distributed across training documents and applying it to downstream tasks without in-context learning.
+2. LLMs can verbalize the identity of an unknown city (e.g., Paris) and use this information to answer downstream questions, even when the city's identity is not explicitly provided in the training data.
+3. LLMs can verbalize whether a coin is biased and articulate a definition of a function, even when trained only on individual coin flip outcomes or pairs of function inputs and outputs.
+
+**Analysis and Critique:**
+
+The paper presents an interesting exploration of the ability of LLMs to infer and verbalize latent structure from disparate training data. The authors' findings suggest that LLMs can perform inductive OOCR, a type of generalization that allows them to infer latent information from evidence distributed across training documents and apply it to downstream tasks without in-context learning. However, the authors note that OOCR is unreliable, particularly for smaller LLMs learning complex structures. This raises questions about the robustness and
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14546v1](https://arxiv.org/abs/2406.14546v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14546v1](https://browse.arxiv.org/html/2406.14546v1)       |
+| Truncated       | False       |
+| Word Count       | 20777       |

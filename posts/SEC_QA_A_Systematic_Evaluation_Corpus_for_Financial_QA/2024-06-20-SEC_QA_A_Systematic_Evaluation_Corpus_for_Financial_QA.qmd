@@ -1,0 +1,48 @@
+
+---
+title: "SEC-QA: A Systematic Evaluation Corpus for Financial QA"
+id: "2406.14394v1"
+description: "TL;DR: SEC-QA framework generates QA pairs for financial documents, improving complex QA accuracy."
+author: Viet Dac Lai, Michael Krumdick, Charles Lovering, Varshini Reddy, Craig Schmidt, Chris Tanner
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14394v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14394v1/x1.png)
+
+### Summary:
+
+The paper introduces SEC-QA, a framework for generating financial Multi Document Questions and Answers (MDQA). The framework aims to address the challenges faced by Large Language Models (LLMs) in handling multi-document long-context questions in the financial domain. The authors propose a system based on program-of-thought that improves complex information retrieval and quantitative reasoning pipelines, thereby increasing QA accuracy.
+
+### Major Findings:
+
+1. The SEC-QA framework allows for the customization of questions at the needed complexity for target applications, including multiple entities/financial periods, multi-hop reasoning, document structure, collection structure, and multiple outputs.
+2. The framework leverages Internet-accessible document collections and open tabular databases to create real-world complex quantitative questions in finance.
+3. The authors evaluate four RAG-based systems and show that RAG systems systematically fail on these carefully designed real-world questions.
+4. Recent LLMs can use code to effectively navigate the structure of the document collections, leading to drastically improved levels of performance.
+5. The framework can be used to dynamically refresh the benchmarks regularly to prevent training data leakage.
+
+### Analysis and Critique:
+
+1. The paper addresses the limitations of existing datasets, which are often constrained by size, context, or relevance to practical applications.
+2. The proposed framework allows for the generation of complex, practical questions grounded in the financial domain, which current RAG approaches consistently fail to answer.
+3. The authors propose a method based on program-of-thought and RAG designed to enhance retrieval and downstream performance compared to conventional RAG systems.
+4. The paper assumes the existence of a collectible set of documents, a tabular dataset of financial metrics, and a method to map these financial metrics to the documents. This assumption may not hold in the public sector, where reports often vary significantly due to inconsistencies in reporting standards.
+5. The paper does not recommend using the proposed systems as a replacement for traditional financial analysis tools and financial advice.
+6. The paper does not discuss the potential biases or ethical considerations that may arise from using the proposed framework.
+7. The paper does not provide a comprehensive comparison of the proposed framework with other existing methods for generating financial MDQ
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14394v1](https://arxiv.org/abs/2406.14394v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14394v1](https://browse.arxiv.org/html/2406.14394v1)       |
+| Truncated       | False       |
+| Word Count       | 6714       |

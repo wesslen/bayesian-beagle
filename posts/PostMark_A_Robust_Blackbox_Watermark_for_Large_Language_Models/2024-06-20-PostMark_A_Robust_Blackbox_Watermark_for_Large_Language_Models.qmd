@@ -1,0 +1,45 @@
+
+---
+title: "PostMark: A Robust Blackbox Watermark for Large Language Models"
+id: "2406.14517v1"
+description: "PostMark: A post-hoc watermarking method for LLM-generated text, robust to paraphrasing and third-party implementable."
+author: Yapei Chang, Kalpesh Krishna, Amir Houmansadr, John Wieting, Mohit Iyyer
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14517v1/extracted/5681653/figures/postmark-v5.png"
+categories: ['production', 'robustness', 'social-sciences', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14517v1/extracted/5681653/figures/postmark-v5.png)
+
+### Summary:
+
+The paper introduces PostMark, a novel post-hoc watermarking method for large language models (LLMs) that can be applied by third-party entities to outputs from an API provider. PostMark does not require access to the underlying model's logits, unlike most existing watermarking algorithms. The method is based on the intuition that a text's semantics should not drastically change after watermarking or paraphrasing. PostMark uses an embedding model, a secret word embedding table, and an insertion model implemented via an instruction-following LLM. The paper presents extensive experiments across eight baseline algorithms, five base LLMs, and three datasets, demonstrating that PostMark offers superior robustness to paraphrasing attacks compared to existing methods.
+
+### Major Findings:
+
+1. PostMark consistently achieves a high true positive rate (TPR) before paraphrasing and maintains a higher TPR after paraphrasing compared to other baselines, including Blackbox, the only other method that operates under the same logit-free condition.
+2. PostMark is more robust than the three baselines that also condition on input semantics: SemStamp, k-SemStamp, and SIR.
+3. Logit-based baselines perform worse on low-entropy models and tasks, while PostMark stays relatively unaffected.
+4. An open-weight combination of Llama-3-70B-Inst and nomic-embed can also achieve promising robustness to paraphrasing attacks, showcasing the modular design of PostMark.
+
+### Analysis and Critique:
+
+1. The paper does not address the potential for PostMark to be used maliciously, such as in the creation of deepfakes or other misleading content.
+2. The paper does not discuss the potential for PostMark to be bypassed or reverse-engineered by malicious actors.
+3. The paper does not provide a detailed comparison of the computational cost of PostMark compared to other watermarking methods.
+4. The paper does not discuss the potential for PostMark to be used in a way that infringes on the intellectual property rights of the creators of the underlying LLMs.
+5. The paper does not discuss the potential for PostMark to be
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14517v1](https://arxiv.org/abs/2406.14517v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14517v1](https://browse.arxiv.org/html/2406.14517v1)       |
+| Truncated       | False       |
+| Word Count       | 10409       |

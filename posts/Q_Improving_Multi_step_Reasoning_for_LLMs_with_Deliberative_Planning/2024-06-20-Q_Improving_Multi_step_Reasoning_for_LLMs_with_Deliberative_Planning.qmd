@@ -1,0 +1,44 @@
+
+---
+title: "Q*: Improving Multi-step Reasoning for LLMs with Deliberative Planning"
+id: "2406.14283v1"
+description: "Q* framework guides LLMs' decoding, improving multi-step reasoning without fine-tuning, reducing errors and inconsistencies."
+author: Chaojie Wang, Yanchen Deng, Zhiyi Lv, Shuicheng Yan, An Bo
+date: "2024-06-20"
+image: "https://browse.arxiv.org/html/2406.14283v1/extracted/5681026/fig/fig112.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.14283v1/extracted/5681026/fig/fig112.png)
+
+### Summary:
+
+The paper introduces Q*, a general, versatile, and agile framework for guiding the decoding process of Large Language Models (LLMs) with deliberative planning. Q* aims to alleviate the pathology of LLMs, which are prone to produce errors, hallucinations, and inconsistent statements when performing multi-step reasoning due to their auto-regressive nature. By learning a plug-and-play Q-value model as a heuristic function, Q* can effectively guide LLMs to select the most promising next step without fine-tuning LLMs for each task, avoiding significant computational overhead and potential performance degeneration on other tasks.
+
+### Major Findings:
+
+1. Q* formalizes the multi-step reasoning of LLMs as a Markov Decision Process (MDP), where the state is the input prompt and the reasoning steps generated so far, the action is the next step of reasoning, and the reward measures how well the task is solved.
+2. The paper presents several general approaches to estimate the optimal Q-value of state-action pairs, including offline reinforcement learning, best sequence from rollout, and completion with stronger LLMs. These methods only need the ground truth of training problems and can be easily applied to various reasoning tasks without modification.
+3. Q* casts solving multi-step reasoning tasks as a heuristic search problem, where the objective is to find the most proper reasoning trace with maximum utility. Built upon A* search, Q* leverages plug-and-play Q-value models as a heuristic function and guides LLMs to select the most promising next reasoning step in a best-first fashion.
+
+### Analysis and Critique:
+
+While Q* demonstrates promising results in improving the multi-step reasoning capability of LLMs, there are some potential limitations and areas for further research.
+
+1. The paper does not provide a comprehensive comparison with other existing methods for improving LLMs' multi-step reasoning, such as fine-tuning LLMs with massive task-specific corpus or training reward models to rank candidate responses.
+2. The paper does not discuss the potential impact of the quality and diversity of the training data on the performance of Q*. It would be interesting to investigate how Q* performs with different types and sizes of training data.
+3. The paper does
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.14283v1](https://arxiv.org/abs/2406.14283v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.14283v1](https://browse.arxiv.org/html/2406.14283v1)       |
+| Truncated       | False       |
+| Word Count       | 5312       |

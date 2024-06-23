@@ -1,0 +1,49 @@
+
+---
+title: "Hopping Too Late: Exploring the Limitations of Large Language Models on Multi-Hop Queries"
+id: "2406.12775v1"
+description: "LLMs solve multi-hop queries in later layers, but sometimes lack needed knowledge; back-patching analysis can improve accuracy."
+author: Eden Biran, Daniela Gottesman, Sohee Yang, Mor Geva, Amir Globerson
+date: "2024-06-18"
+image: "https://browse.arxiv.org/html/2406.12775v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.12775v1/x1.png)
+
+### Summary:
+
+This paper explores the limitations of large language models (LLMs) on multi-hop queries, focusing on understanding how LLMs answer complex questions that require multiple steps of information extraction. The authors analyze the internal computations of transformer-based LLMs and discover that the bridge entity, which connects the first and second hops, is resolved in the early layers of the model. The two-hop query is then solved in the later layers, but there could be cases where these layers no longer encode the necessary knowledge for correctly predicting the answer.
+
+To address this issue, the authors propose a novel "back-patching" analysis method, where a hidden representation from a later layer is patched back to an earlier layer. This method shows that in up to 57% of previously incorrect cases, there exists a back-patch that results in the correct generation of the answer, indicating that the later layers sometimes lack the needed functionality.
+
+### Major Findings:
+
+1. The bridge entity is resolved in the early layers of the LLM, and the two-hop query is solved in the later layers.
+2. In up to 57% of previously incorrect cases, the "back-patching" analysis method results in the correct generation of the answer.
+3. The later layers of the LLM sometimes lack the necessary functionality to correctly predict the answer.
+
+### Analysis and Critique:
+
+The paper provides valuable insights into the limitations of LLMs on multi-hop queries and proposes a novel method to address these issues. However, there are some potential problems and shortcomings that should be considered:
+
+1. The proposed "back-patching" method is not a practical inference method, as only a subset of back-patches generate the correct answer.
+2. The paper focuses on two-hop queries, and it is unclear if the findings and methods would hold for queries with three or more hops.
+3. The paper does not account for all possible parts of the discovered pathway, such as how the relations come into play.
+4. The experiments rely on mechanistic methods that decode hidden representations and residual updates, which can only be seen as an approximation.
+
+Despite these limitations, the paper's findings and methods open opportunities for understanding and improving latent reasoning in LLMs. Further research is needed to address
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-06-23       |
+| Abstract | [https://arxiv.org/abs/2406.12775v1](https://arxiv.org/abs/2406.12775v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.12775v1](https://browse.arxiv.org/html/2406.12775v1)       |
+| Truncated       | False       |
+| Word Count       | 8033       |

@@ -40,7 +40,8 @@ jobs:
         python -m pip install -r requirements-langchain.txt
     - name: Fetch File from Repo #2
       run: |
-        curl -f -O data/input.jsonl "https://raw.githubusercontent.com/wesslen/arxiv-frontpage/main/data/input.jsonl"
+        curl -f -O "https://raw.githubusercontent.com/wesslen/arxiv-frontpage/main/data/input.jsonl"
+        mv input.jsonl data/input.jsonl
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"
         git add data/input.jsonl

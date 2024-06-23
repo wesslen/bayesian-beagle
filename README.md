@@ -6,10 +6,10 @@ Our blog is built using [Quarto](https://quarto.org/), an open-source scientific
 
 ```mermaid
 graph LR
-    A["Download daily Arxiv articles"] --> B["Predict and Filter LLM topic"]
+    A["Download weekly Arxiv articles"] --> B["Predict and Filter LLM topic"]
     B --> C["Summarize short docs"]
     B --> D["Summarize by Map-Reduce long docs"]
-    C --> E["Update website with summaries daily"]
+    C --> E["Update website with summaries weekly"]
     D --> E
 ```
 

@@ -50,6 +50,7 @@ def remove_patterns(text):
     pattern = r"\\[^\\{}]*\{.*?\}"
     # Replace found patterns with an empty string
     cleaned_text = re.sub(pattern, "", text)
+    cleaned_text = cleaned_text.replace("\\pname", "")
     return cleaned_text
 
 

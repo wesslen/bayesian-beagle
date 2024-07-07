@@ -1,0 +1,44 @@
+
+---
+title: "WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models"
+id: "2406.18510v1"
+description: "New framework discovers 5.7K unique jailbreak tactics, creating a large-scale safety dataset for safer AI chatbots."
+author: Liwei Jiang, Kavel Rao, Seungju Han, Allyson Ettinger, Faeze Brahman, Sachin Kumar, Niloofar Mireshghallah, Ximing Lu, Maarten Sap, Yejin Choi, Nouha Dziri
+date: "2024-06-26"
+image: "https://browse.arxiv.org/html/2406.18510v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18510v1/x1.png)
+
+### Summary:
+
+The paper introduces \method, an automatic red-teaming framework that mines in-the-wild user-chatbot interactions to discover novel jailbreak tactics and composes selections of these tactics for systematic exploration of new and more challenging jailbreaks. Unlike previous work, \method investigates jailbreaks from chatbot users who were not specifically instructed to break the system. The framework reveals previously unidentified vulnerabilities of frontier language models, resulting in up to 4.6x more diverse and successful adversarial attacks compared to state-of-the-art jailbreaking methods.
+
+The authors also create WildJailbreak, a large-scale open-source synthetic safety dataset with 262K prompt-response pairs, using \method. This dataset provides two contrastive types of queries: harmful queries (both vanilla and adversarial) and benign queries that resemble harmful queries in form but contain no harmful intent. The dataset significantly upgrades the quality and scale of existing safety resources, enabling the examination of the scaling effects of data and the interplay of data properties and model capabilities during safety training.
+
+### Major Findings:
+
+1. \method is an effective automatic red-teaming framework that discovers novel jailbreak tactics from in-the-wild user-chatbot interactions and composes them to create diverse and challenging jailbreaks.
+2. WildJailbreak, a large-scale open-source synthetic safety dataset, is created using \method, providing a valuable resource for safety training and evaluation.
+3. The scaling effects of data and the interplay of data properties and model capabilities during safety training can be examined using WildJailbreak, leading to improved model safety behaviors.
+
+### Analysis and Critique:
+
+While the paper presents an innovative approach to red-teaming and safety training, there are some potential limitations and areas for improvement. The reliance on in-the-wild user-chatbot interactions may not capture the full spectrum of jailbreak tactics employed by real users, as the source data may not be exhaustive. Additionally, the synthetic nature of the adversarial prompts in WildJailbreak may not fully resemble in-the-wild user queries, potentially limiting their applicability in real-world scenarios.
+
+Moreover, the paper does not discuss the potential risks associated with publicly
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18510v1](https://arxiv.org/abs/2406.18510v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18510v1](https://browse.arxiv.org/html/2406.18510v1)       |
+| Truncated       | False       |
+| Word Count       | 9370       |

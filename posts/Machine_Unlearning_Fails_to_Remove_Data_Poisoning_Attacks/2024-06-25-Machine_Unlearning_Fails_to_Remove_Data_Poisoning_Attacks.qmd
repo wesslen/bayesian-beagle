@@ -1,0 +1,42 @@
+
+---
+title: "Machine Unlearning Fails to Remove Data Poisoning Attacks"
+id: "2406.17216v1"
+description: "Existing unlearning methods fail to remove data poisoning effects, suggesting a need for broader evaluation and improvement."
+author: Martin Pawelczyk, Jimmy Z. Di, Yiwei Lu, Gautam Kamath, Ayush Sekhari, Seth Neel
+date: "2024-06-25"
+image: "https://browse.arxiv.org/html/2406.17216v1/extracted/5688666/vis/first_image3.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17216v1/extracted/5688666/vis/first_image3.png)
+
+### Summary:
+
+The paper explores the efficacy of several practical methods for approximate machine unlearning in large-scale deep learning. The authors focus on the potential application of unlearning methods to remove the effects of training on poisoned data. They experimentally demonstrate that while existing unlearning methods have been effective in various evaluation settings, they fail to remove the effects of data poisoning across different types of poisoning attacks and models. The authors introduce new evaluation metrics for unlearning based on data poisoning and suggest that a broader perspective is needed to avoid a false sense of confidence in machine unlearning procedures for deep learning without provable guarantees.
+
+### Major Findings:
+
+1. Existing unlearning methods have been demonstrated to be effective in a number of evaluation settings, such as alleviating membership inference attacks. However, they fail to remove the effects of data poisoning.
+2. The failure of current state-of-the-art unlearning algorithms is evident across a variety of types of poisoning attacks (indiscriminate, targeted, and a newly-introduced Gaussian poisoning attack) and models (image classifiers and LLMs).
+3. The authors introduce new evaluation metrics for unlearning based on data poisoning to precisely characterize unlearning efficacy.
+4. The results suggest that a broader perspective, including a wider variety of evaluations, is required to avoid a false sense of confidence in machine unlearning procedures for deep learning without provable guarantees.
+5. While unlearning methods show some signs of being useful to efficiently remove poisoned datapoints without having to retrain, the authors suggest that these methods are not yet "ready for prime time" and currently provide limited benefit over retraining.
+
+### Analysis and Critique:
+
+The paper provides a valuable contribution to the field of machine unlearning by highlighting the limitations of existing unlearning methods in removing the effects of data poisoning. The authors' introduction of new evaluation metrics based on data poisoning is a significant step towards more accurately assessing the efficacy of unlearning methods. However, the paper could benefit from a more in-depth discussion of the potential reasons for the failure of current unlearning algorithms to remove the effects of data poisoning. Additionally, the authors could explore alternative approaches or modifications to existing methods that may improve their performance in handling data poisoning. Overall, the paper raises
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17216v1](https://arxiv.org/abs/2406.17216v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17216v1](https://browse.arxiv.org/html/2406.17216v1)       |
+| Truncated       | False       |
+| Word Count       | 15361       |

@@ -1,0 +1,44 @@
+
+---
+title: "Contrastive Policy Gradient: Aligning LLMs on sequence-level scores in a supervised-friendly fashion"
+id: "2406.19185v1"
+description: "CoPG: A new RL algorithm for off-policy policy gradient, optimizing LLMs with arbitrary rewards, and generalizing IPO and classic policy gradient."
+author: Yannis Flet-Berliac, Nathan Grinsztajn, Florian Strub, Eugene Choi, Chris Cremer, Arash Ahmadian, Yash Chandak, Mohammad Gheshlaghi Azar, Olivier Pietquin, Matthieu Geist
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19185v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19185v1/x1.png)
+
+### Summary:
+
+The paper introduces Contrastive Policy Gradient (CoPG), a new Reinforcement Learning (RL) algorithm designed for finetuning Large Language Models (LLMs). CoPG is a form of policy gradient that contrasts the reward with a specific baseline, allowing for a supervised-friendly objective function that does not rely on fresh generations from the model. This enables learning a policy in a pure offline setting without relying on importance sampling or clipping of log-probability ratios, and without requiring an additional value network.
+
+CoPG has been proven to optimize for the optimal KL-regularized policy and generalizes policy gradient, RLOO, and IPO. The paper demonstrates the convergence properties of CoPG in a controlled bandit experiment and shows that it can optimize a reward function in a fully offline and off-policy manner for LLMs, achieving higher rewards than direct alignment approaches.
+
+### Major Findings:
+
+1. CoPG is a new RL algorithm for finetuning LLMs that uses a supervised-friendly objective function, enabling learning in a pure offline setting without relying on importance sampling or clipping of log-probability ratios.
+2. CoPG has been proven to optimize for the optimal KL-regularized policy and generalizes policy gradient, RLOO, and IPO.
+3. CoPG has been demonstrated to optimize a reward function in a fully offline and off-policy manner for LLMs, achieving higher rewards than direct alignment approaches.
+
+### Analysis and Critique:
+
+While CoPG has been proven to optimize for the optimal KL-regularized policy and has been demonstrated to optimize a reward function in a fully offline and off-policy manner for LLMs, achieving higher rewards than direct alignment approaches, it has only been validated in a simple bandit problem and a larger scale LLM experiment. Further validation on more tasks and rewards in the context of LLMs is needed.
+
+CoPG works in a pure offline setting, which is a strength, but it would benefit from using fresh generations too, as well as from possibly heterogeneous sources of data. The proposed approach optimizes for a single reward model, and its extension to multiple rewards remains an interesting open question. Additionally, the approach assumes that the reward model is reliable, which is often
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19185v1](https://arxiv.org/abs/2406.19185v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19185v1](https://browse.arxiv.org/html/2406.19185v1)       |
+| Truncated       | False       |
+| Word Count       | 8271       |

@@ -1,0 +1,48 @@
+
+---
+title: "Preference Tuning For Toxicity Mitigation Generalizes Across Languages"
+id: "2406.16235v1"
+description: "Zero-shot preference tuning in English can significantly reduce toxicity in multilingual LLMs, as shown by DPO training results across 17 languages and various models."
+author: Xiaochen Li, Zheng-Xin Yong, Stephen H. Bach
+date: "2024-06-23"
+image: "https://browse.arxiv.org/html/2406.16235v1/x1.png"
+categories: ['social-sciences', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16235v1/x1.png)
+
+### Summary:
+
+- The study explores the zero-shot cross-lingual generalization of preference tuning for detoxifying multilingual Large Language Models (LLMs).
+- The research demonstrates that Direct Preference Optimization (DPO) training with only English data can significantly reduce toxicity in open-ended generations across 17 different languages.
+- The findings apply to multilingual LLMs of different sizes and with different pretraining composition, including mGPT, Llama3, and Aya-23.
+- The study also discovers the dual multilinguality property of MLP layers in LLMs, which explains the cross-lingual generalization of DPO.
+- Bilingual sentence retrieval is shown to be predictive of the cross-lingual transferability of DPO preference tuning.
+
+### Major Findings:
+
+1. Zero-shot cross-lingual generalization of preference tuning for detoxifying LLMs is demonstrated, with DPO training using only English data significantly reducing toxicity in open-ended generations across 17 different languages.
+2. The dual multilinguality property of MLP layers in LLMs is discovered, which explains the cross-lingual generalization of DPO.
+3. Bilingual sentence retrieval is shown to be predictive of the cross-lingual transferability of DPO preference tuning.
+
+### Analysis and Critique:
+
+- The study's findings are limited to high- and mid-resource languages due to the limitation of the multilingual toxicity evaluator used.
+- The research does not analyze the extent to which culture-specific toxicity is reduced.
+- The mechanistic interpretability experiments are primarily done on the mGPT-1.3B model, and the focus is on the DPO algorithm. Other preference tuning algorithms such as PPO, KTO, ORPO, and CPO are not explored.
+- The study acknowledges that safety vulnerabilities, such as toxic generations, may still be present for low-resource language users even after safety preference tuning.
+- The research could benefit from exploring other preference tuning algorithms and analyzing the reduction of culture-specific toxicity.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16235v1](https://arxiv.org/abs/2406.16235v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16235v1](https://browse.arxiv.org/html/2406.16235v1)       |
+| Truncated       | False       |
+| Word Count       | 8475       |

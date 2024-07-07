@@ -1,0 +1,40 @@
+
+---
+title: "Towards Fast Multilingual LLM Inference: Speculative Decoding and Specialized Drafters"
+id: "2406.16758v1"
+description: "Language-specific draft models speed up multilingual LLM inference time."
+author: Euiin Yi, Taehyeon Kim, Hongseok Jeung, Du-Seong Chang, Se-Young Yun
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16758v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16758v1/x1.png)
+
+### Summary:
+
+The paper explores a training recipe for an assistant model in speculative decoding, which drafts and then verifies its future tokens with the target LLM. The authors propose language-specific draft models optimized through a pretrain-and-finetune strategy, which significantly improves inference time compared to previous methods. The models are validated across various languages, out-of-domain speedup, and GPT-4o evaluation.
+
+### Major Findings:
+
+1. The pretrain-and-finetune strategy for training drafters significantly enhances the speedup ratio relative to standard autoregressive decoding in multilingual translation tasks.
+2. The speedup ratio increases as the number of tokens specific to the target task used in training increases, with the speedup being logarithmically proportional to the scale of token count in drafter training.
+3. In multilingual translation, input languages consistent with the training set result in notable speedup, whereas outputs aligned with the training domain do not necessarily lead to improved performance.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to improving the efficiency of LLM inference in multilingual settings. However, the proposed method requires separate drafters for each language, which may introduce complexities in deployment, especially in multilingual settings. Additionally, the study focuses on independent drafters, and examining systems that utilize interdependent models might offer insights into more interesting strategies. The findings are promising for translation tasks, but expanding this methodology to other multilingual applications is essential to understand its broader applicability and uncover additional constraints.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16758v1](https://arxiv.org/abs/2406.16758v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16758v1](https://browse.arxiv.org/html/2406.16758v1)       |
+| Truncated       | False       |
+| Word Count       | 6782       |

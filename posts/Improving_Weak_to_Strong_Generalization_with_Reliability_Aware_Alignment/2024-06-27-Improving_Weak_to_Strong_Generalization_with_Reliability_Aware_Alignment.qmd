@@ -1,0 +1,39 @@
+
+---
+title: "Improving Weak-to-Strong Generalization with Reliability-Aware Alignment"
+id: "2406.19032v1"
+description: "Approach improves weak-to-strong generalization in LLMs by estimating weak supervision reliability, reducing error propagation, and enhancing accuracy."
+author: Yue Guo, Yi Yang
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19032v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19032v1/x1.png)
+
+Summary:
+The paper addresses the challenge of aligning strong language models with weak supervision signals, focusing on the "super-alignment" problem of aligning super-human language models with human knowledge. The authors propose an unsupervised method to enhance weak-to-strong generalization through reliability-aware alignment. This involves generating prompt variations, assessing the reliability of responses using entropy-based uncertainty and probability-based reliability metrics, and applying reliability-aware techniques such as uncertainty filtering and reliability re-weighting during the alignment process. Experimental results on four datasets demonstrated that the proposed methods effectively identified high-quality weak labels and significantly improved alignment robustness compared to baseline approaches.
+
+Major Findings:
+1. The proposed unsupervised method for enhancing weak-to-strong generalization through reliability-aware alignment effectively identifies high-quality weak labels and significantly improves alignment robustness compared to baseline approaches.
+2. The method involves generating prompt variations, assessing the reliability of responses using entropy-based uncertainty and probability-based reliability metrics, and applying reliability-aware techniques such as uncertainty filtering and reliability re-weighting during the alignment process.
+3. Experimental results on four datasets demonstrated the effectiveness of the proposed methods in improving weak-to-strong generalization.
+
+Analysis and Critique:
+1. The proposed method introduces significant computational overhead due to querying the weak supervisor multiple times and performing additional computations for uncertainty filtering and reliability re-weighting. This could limit the scalability of the approach, especially when dealing with large-scale datasets or complex models.
+2. The overall performance of the method heavily relies on the quality of the weak supervisor. If the weak supervisor consistently provides highly unreliable or incorrect labels, the effectiveness of the reliability-aware methods may diminish.
+3. The inherent subjectivity and variability in human-generated labels could introduce challenges not fully addressed by the current reliability estimation techniques. Further research is needed to tailor the methods specifically for human-annotated data, considering factors like annotator bias and expertise.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19032v1](https://arxiv.org/abs/2406.19032v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19032v1](https://browse.arxiv.org/html/2406.19032v1)       |
+| Truncated       | False       |
+| Word Count       | 6944       |

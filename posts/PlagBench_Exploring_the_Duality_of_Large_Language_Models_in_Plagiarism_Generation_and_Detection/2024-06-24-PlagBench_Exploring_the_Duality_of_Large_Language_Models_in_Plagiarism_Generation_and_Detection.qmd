@@ -1,0 +1,44 @@
+
+---
+title: "PlagBench: Exploring the Duality of Large Language Models in Plagiarism Generation and Detection"
+id: "2406.16288v1"
+description: "LLMs can aid plagiarism, but also detect it. GPT-3.5 outperforms Llama2 and GPT-4 in paraphrasing and summarizing, and LLMs can surpass commercial plagiarism detectors."
+author: Jooyoung Lee, Toshini Agrawal, Adaku Uchendu, Thai Le, Jinghui Chen, Dongwon Lee
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16288v1/extracted/5686840/teaserD1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16288v1/extracted/5686840/teaserD1.png)
+
+### Summary:
+
+The paper introduces PlagBench, a comprehensive dataset consisting of 46.5K synthetic plagiarism cases generated using three instruction-tuned LLMs across three writing domains. The dataset is designed to address the potential risks to academic integrity associated with LLMs, which can memorize parts of training instances and reproduce them in the generated texts without proper attribution. The quality of PlagBench is ensured through fine-grained automatic evaluation for each type of plagiarism, complemented by human annotation. The proposed dataset is then leveraged to evaluate the plagiarism detection performance of five modern LLMs and three specialized plagiarism checkers. The findings reveal that GPT-3.5 tends to generate paraphrases and summaries of higher quality compared to Llama2 and GPT-4. Despite LLMs' weak performance in summary plagiarism identification, they can surpass current commercial plagiarism detectors. Overall, the results highlight the potential of LLMs to serve as robust plagiarism detection tools.
+
+### Major Findings:
+
+1. GPT-3.5 generates paraphrases and summaries of higher quality compared to Llama2 and GPT-4.
+2. LLMs, like Llama3 and GPT-4, with just prompting, can outperform existing plagiarism checkers that are specifically trained for the task.
+3. LLMs generally have difficulty distinguishing summary plagiarism.
+
+### Analysis and Critique:
+
+The paper presents a valuable contribution to the field of plagiarism detection by introducing a comprehensive dataset and evaluating the performance of LLMs and specialized plagiarism checkers. However, there are some limitations and potential areas for improvement:
+
+1. The paper focuses on three instruction-tuned LLMs, but there are many other LLMs available that could be evaluated for their plagiarism detection capabilities.
+2. The evaluation of LLMs' performance in detecting plagiarism is limited to five models, and it would be beneficial to include more models in future studies.
+3. The paper does not discuss the potential impact of the size of the LLMs on their performance in plagiarism detection. It would be interesting to investigate whether larger LLMs perform better in
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16288v1](https://arxiv.org/abs/2406.16288v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16288v1](https://browse.arxiv.org/html/2406.16288v1)       |
+| Truncated       | False       |
+| Word Count       | 8349       |

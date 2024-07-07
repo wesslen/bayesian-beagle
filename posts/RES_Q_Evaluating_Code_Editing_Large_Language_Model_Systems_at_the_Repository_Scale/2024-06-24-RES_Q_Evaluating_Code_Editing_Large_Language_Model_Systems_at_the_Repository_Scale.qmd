@@ -1,0 +1,44 @@
+
+---
+title: "RES-Q: Evaluating Code-Editing Large Language Model Systems at the Repository Scale"
+id: "2406.16801v1"
+description: "RES-Q benchmark evaluates LLMs' ability to edit code repositories, showing Claude Sonnet 3.5 outperforms GPT-4o."
+author: Beck LaBash, August Rosedale, Alex Reents, Colin Wiel
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16801v1/x1.png"
+categories: ['prompt-engineering', 'architectures', 'programming', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16801v1/x1.png)
+
+### Summary:
+
+The paper introduces RES-Q, a natural language instruction-based benchmark for evaluating Repository Editing Systems. The benchmark consists of 100 repository editing tasks derived from real GitHub commits. RES-Q evaluates an LLM system's ability to gather information and construct an edit that satisfies the criteria set by the instruction. The authors argue that evaluating LLMs in this way addresses issues with traditional benchmarks and provides a more holistic assessment of a model’s abilities. The paper evaluates various state-of-the-art LLMs as language agents in a repository-editing system built on Qurrent OS, their language agent development software.
+
+### Major Findings:
+
+1. Despite their 1% pass@1 performance difference on HumanEval, Claude Sonnet 3.5 outperforms GPT-4o by 12% pass@1 on RES-Q, indicating RES-Q’s capacity to differentiate model capability as traditional benchmarks approach saturation.
+2. The authors further investigate token efficiency, performance relationships with existing benchmarks, and interesting disparities between closed and open-source LLMs.
+3. The paper introduces RES-Q, an instruction-based dataset of codebase edits derived from actual GitHub commits, designed to evaluate the performance of LLM-based systems on real-world software development tasks.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed methodology for the evaluation of LLMs, making it difficult to assess the validity of the results.
+2. The paper does not discuss the potential limitations of RES-Q, such as its reliance on a specific set of GitHub commits and the potential for overfitting to these tasks.
+3. The paper does not provide a comparison of RES-Q with other existing benchmarks for evaluating LLMs, making it difficult to assess its relative performance.
+4. The paper does not discuss the potential for bias in the selection of GitHub commits used to create RES-Q, which could impact the generalizability of the results.
+5. The paper does not provide a detailed analysis of the performance of different LLMs on RES-Q, making it difficult to draw conclusions about the relative strengths and weaknesses of these models.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16801v1](https://arxiv.org/abs/2406.16801v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16801v1](https://browse.arxiv.org/html/2406.16801v1)       |
+| Truncated       | False       |
+| Word Count       | 3509       |

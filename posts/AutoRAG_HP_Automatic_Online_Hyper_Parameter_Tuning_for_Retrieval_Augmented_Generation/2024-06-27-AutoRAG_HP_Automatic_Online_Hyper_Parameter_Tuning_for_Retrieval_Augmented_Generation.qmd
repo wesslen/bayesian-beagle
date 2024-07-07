@@ -1,0 +1,42 @@
+
+---
+title: "AutoRAG-HP: Automatic Online Hyper-Parameter Tuning for Retrieval-Augmented Generation"
+id: "2406.19251v1"
+description: "AutoRAG-HP optimizes RAG hyper-parameters using a novel Hierarchical MAB method, reducing LLM API calls by 80% compared to Grid Search."
+author: Jia Fu, Xiaoting Qin, Fangkai Yang, Lu Wang, Jue Zhang, Qingwei Lin, Yubo Chen, Dongmei Zhang, Saravan Rajmohan, Qi Zhang
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19251v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19251v1/x1.png)
+
+### Summary:
+
+The paper introduces the AutoRAG-HP framework, which addresses the need for efficient and effortless hyper-parameter tuning within the Retrieval-Augmented Generation (RAG) system in the context of Large Language Models (LLMs). The authors formulate hyper-parameter selection in RAG as a multi-armed bandit problem and propose a novel two-level hierarchical Upper Confidence Bound (Hier-UCB) method for efficient parameter space exploration.
+
+### Major Findings:
+
+1. The proposed Hier-UCB approach outperforms other baselines in more challenging optimization scenarios, achieving Recall@5  for scenarios with prominent gradients in search space, using only  of the LLM API calls required by the Grid Search approach.
+2. The study demonstrates the effectiveness of multi-armed bandit-based online learning methods (Hier-UCB, UCB, and TS) in simultaneously tuning three hyper-parameters.
+3. The results motivate further exploration into automatic tuning of the RAG system to achieve the full vision of AutoRAG.
+
+### Analysis and Critique:
+
+1. The paper's limitations include the evaluation of AutoRAG-HP using only two LLMs as backbones and two public datasets in QA format. Further testing can be done across diverse tasks and datasets.
+2. The study only explores jointly tuning of up to three hyper-parameters, and further exploration can be extended to include tuning a greater number of hyper-parameters.
+3. The paper does not address potential risks associated with the underlying LLMs, such as unethical outputs, toxicity, and biases. It is recommended to integrate Responsible AI modules within the RAG pipeline and conduct a comprehensive evaluation of these potential issues prior to deployment in practice.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19251v1](https://arxiv.org/abs/2406.19251v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19251v1](https://browse.arxiv.org/html/2406.19251v1)       |
+| Truncated       | False       |
+| Word Count       | 7362       |

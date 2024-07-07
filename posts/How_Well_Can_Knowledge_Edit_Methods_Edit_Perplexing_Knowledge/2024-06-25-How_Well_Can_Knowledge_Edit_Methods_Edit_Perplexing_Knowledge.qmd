@@ -1,0 +1,44 @@
+
+---
+title: "How Well Can Knowledge Edit Methods Edit Perplexing Knowledge?"
+id: "2406.17253v1"
+description: "Perplexingness of new knowledge impacts editing efficacy in LLMs, with abstract concepts being more challenging to incorporate."
+author: Huaizhi Ge, Frank Rudzicz, Zining Zhu
+date: "2024-06-25"
+image: "https://browse.arxiv.org/html/2406.17253v1/extracted/5674420/gpt2xl_memit_cf.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17253v1/extracted/5674420/gpt2xl_memit_cf.png)
+
+### Summary:
+
+This study investigates the capability of knowledge editing methods to incorporate new knowledge with varying degrees of "perplexingness" in large language models (LLMs). The authors quantify the "perplexingness" of target knowledge using pre-edit conditional probabilities and assess the efficacy of edits through post-edit conditional probabilities. Utilizing the CounterFact dataset, they find significant negative correlations between the "perplexingness" of the new knowledge and the edit efficacy across all 12 scenarios.
+
+To further explore this phenomenon, the authors introduce a novel dataset, HierarchyData, consisting of 99 hyponym-hypernym pairs across diverse categories. Their analysis reveals that more abstract concepts (hypernyms) tend to be more perplexing than their specific counterparts (hyponyms). Additionally, they find that knowledge positioned at higher hierarchical levels is more challenging to modify in some scenarios.
+
+### Major Findings:
+
+1. Significant negative correlations exist between the "perplexingness" of new knowledge and the edit efficacy across all 12 scenarios in the CounterFact dataset.
+2. More abstract concepts (hypernyms) are more perplexing than their specific counterparts (hyponyms) in the HierarchyData dataset.
+3. Knowledge positioned at higher hierarchical levels is more challenging to modify in some scenarios.
+
+### Analysis and Critique:
+
+This study provides valuable insights into the challenges of updating LLMs and the variable efficacy of editing methods in handling perplexing knowledge. However, the research is limited in its focus on short hierarchy chains and the use of smaller models and datasets. Additionally, the authors acknowledge that their evaluation method, which involves asking language models specific questions to determine if the knowledge has been edited, is labor-intensive and was not implemented in this study.
+
+Future research should explore longer hierarchy chains, use larger models and datasets, and consider alternative evaluation methods to better understand the complexities of model editing and develop more sophisticated editing methodologies.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17253v1](https://arxiv.org/abs/2406.17253v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17253v1](https://browse.arxiv.org/html/2406.17253v1)       |
+| Truncated       | False       |
+| Word Count       | 6890       |

@@ -1,0 +1,44 @@
+
+---
+title: "Adversarial Contrastive Decoding: Boosting Safety Alignment of Large Language Models via Opposite Prompt Optimization"
+id: "2406.16743v1"
+description: "ACD: A lightweight, optimization-based method for safer LLM responses, improving safety without heavy training or sacrificing generation ability."
+author: Zhengyue Zhao, Xiaoyun Zhang, Kaidi Xu, Xing Hu, Rui Zhang, Zidong Du, Qi Guo, Yunji Chen
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16743v1/x2.png"
+categories: ['prompt-engineering', 'security', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16743v1/x2.png)
+
+### Summary:
+
+The paper introduces Adversarial Contrastive Decoding (ACD), a novel prompt-based contrastive decoding framework that optimizes two contrastive soft prompts, the Safeguarding Prompt and the Adversarial Prompt, to build a strong contrast during inference. ACD aims to improve the safety alignment of Large Language Models (LLMs) without heavy model training. The proposed method involves two stages: Opposite Prompt Optimization and Prompt-based Contrastive Decoding. The former optimizes two opposing soft prompts on a small, generated anchor dataset, while the latter applies these prompts during the inference phase of LLMs.
+
+### Major Findings:
+
+1. ACD significantly enhances safety across almost all models and benchmarks compared to regular base decoding methods, and it generally outperforms the baseline Instructive Decoding in most cases.
+2. For several weakly safety-aligned LLMs, ACD increases the Harmless Rate (HLR) by an average of over 25% without training the model parameters.
+3. ACD does not significantly impact the model's performance on general tasks, as demonstrated by evaluations on two general task datasets: AlpacaEval and TruthfulQA.
+
+### Analysis and Critique:
+
+While ACD achieves superior safety performance, it has some limitations. First, as a contrastive decoding-based method, ACD needs to process two inputs for a single inference, which increases the inference overhead. Second, there might still be edge cases or specific tasks where the trade-off between safety and performance becomes more pronounced. Lastly, the stability and long-term effectiveness of the optimized prompts under continuous model updates and potential drifts in language usage over time have not been fully explored.
+
+The paper does not provide a detailed comparison with other safety alignment methods, such as instruction fine-tuning and Reinforcement Learning from Human Feedback (RLHF). Additionally, the experiments are limited to a few models and benchmarks, which may not fully represent the diversity of LLMs and potential safety threats.
+
+Overall, ACD offers a promising approach to improving the safety alignment of LLMs without heavy model training. However, further research is needed to address its limitations and evaluate its performance in a broader range
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16743v1](https://arxiv.org/abs/2406.16743v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16743v1](https://browse.arxiv.org/html/2406.16743v1)       |
+| Truncated       | False       |
+| Word Count       | 6567       |

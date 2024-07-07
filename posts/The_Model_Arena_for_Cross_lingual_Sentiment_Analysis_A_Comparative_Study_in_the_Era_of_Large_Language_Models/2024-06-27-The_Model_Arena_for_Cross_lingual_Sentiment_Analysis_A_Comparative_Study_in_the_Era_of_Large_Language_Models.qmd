@@ -1,0 +1,40 @@
+
+---
+title: "The Model Arena for Cross-lingual Sentiment Analysis: A Comparative Study in the Era of Large Language Models"
+id: "2406.19358v1"
+description: "SMLMs outperform LLMs in zero-shot cross-lingual sentiment analysis, but LLMs improve in few-shot settings. Proprietary GPT models excel in zero-shot, but lag in few-shot scenarios."
+author: Xiliang Zhu, Shayna Gardiner, Tere Roldán, David Rossouw
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19358v1/x1.png"
+categories: ['hci', 'production', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19358v1/x1.png)
+
+### Summary:
+
+This study examines the cross-lingual transfer capability of pre-trained models in sentiment analysis tasks. The authors compare Small Multilingual Language Models (SMLMs) like XLM-R and mT5 with English-centric Large Language Models (LLMs) such as Llama-3 and Mistral. The research focuses on sentiment analysis in human speech transcripts from English to Spanish, French, and Chinese. The results show that SMLMs exhibit superior zero-shot cross-lingual transfer capability, even with fewer model parameters. However, public LLMs demonstrate rapid improvement in few-shot cross-lingual transfer scenarios and can surpass the performance of SMLMs when additional samples in the target language are provided.
+
+### Major Findings:
+
+1. SMLMs (XLM-R, mT5) outperform much larger public LLMs in zero-shot cross-lingual transfer.
+2. Larger LLMs surpass SMLMs and demonstrate stronger adaptation capability with few-shot fine-tuning in the target language.
+3. The best-performing SMLMs still show comparable performance to LLMs when more samples from the target language are provided.
+
+### Analysis and Critique:
+
+The study provides a comprehensive comparison of fine-tuning-based cross-lingual transfer capability across a spectrum of public pre-trained language models. However, the research is limited to sentiment analysis tasks on three human languages and does not explore other NLP tasks. Additionally, the study does not compare the performance of SMLMs and LLMs on low-resource languages with even less appearance during pre-training. Furthermore, due to the incomparable model sizes, the authors cannot draw any conclusions on whether model architecture difference (transformer encoder-only, decoder-only, and encoder-decoder) could play a role in cross-lingual sentiment analysis capabilities. Further research could be extended in these directions.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19358v1](https://arxiv.org/abs/2406.19358v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19358v1](https://browse.arxiv.org/html/2406.19358v1)       |
+| Truncated       | False       |
+| Word Count       | 5764       |

@@ -1,0 +1,47 @@
+
+---
+title: "Lottery Ticket Adaptation: Mitigating Destructive Interference in LLMs"
+id: "2406.16797v1"
+description: "LoTA, a sparse adaptation method, outperforms full fine-tuning and LoRA, avoiding catastrophic forgetting and enabling model merging over dissimilar tasks."
+author: Ashwinee Panda, Berivan Isik, Xiangyu Qi, Sanmi Koyejo, Tsachy Weissman, Prateek Mittal
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16797v1/x1.png"
+categories: ['production', 'architectures', 'education', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16797v1/x1.png)
+
+### Summary:
+
+The paper introduces Lottery Ticket Adaptation (LoTA), a sparse adaptation method for large language models (LLMs) that identifies and optimizes only a sparse subnetwork of the model. LoTA aims to mitigate destructive interference between tasks, a problem with existing fine-tuning methods like full fine-tuning and low-rank adaptation (LoRA). The authors evaluate LoTA on various tasks, including instruction following, reasoning, math, and summarization, and find that it outperforms full fine-tuning and LoRA, while maintaining good performance even after training on other tasks. LoTA also enables model merging over highly dissimilar tasks.
+
+### Major Findings:
+
+1. LoTA obtains better performance than full fine-tuning and LoRA across a range of tasks, such as reasoning, math, code generation, and instruction following.
+2. LoTA mitigates catastrophic forgetting of earlier tasks, enabling sequential adaptation to new tasks.
+3. LoTA allows for model merging across dramatically different tasks, achieving better performance than existing merging methods that rely on post hoc sparsification.
+
+### Analysis and Critique:
+
+While LoTA shows promising results, there are some potential limitations and areas for improvement:
+
+1. LoTA does not provide the compute efficiency of LoRA, which may be a disadvantage when the adapter needs to be compressed by more than 100x.
+2. The evaluation of LoTA is limited to specific tasks, such as instruction following, reasoning, math, SQL generation, and summarization. More tasks, like Python code generation, classification, or long-context question answering, could be considered for a more comprehensive evaluation.
+3. The paper compares LoTA to baselines like LoRA and TIES, but other parameter-efficient fine-tuning (PEFT) and merging methods exist. A broader comparison to these methods could provide a more complete picture of LoTA's performance.
+4. The authors acknowledge that a future revision of the paper will include comparisons to a broader range of PEFT and merging methods.
+
+In conclusion, LoTA is a promising sparse adaptation method for LLMs that addresses destructive interference and catastrophic forgetting in multi-task adaptation paradigms. However, further
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16797v1](https://arxiv.org/abs/2406.16797v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16797v1](https://browse.arxiv.org/html/2406.16797v1)       |
+| Truncated       | False       |
+| Word Count       | 9206       |

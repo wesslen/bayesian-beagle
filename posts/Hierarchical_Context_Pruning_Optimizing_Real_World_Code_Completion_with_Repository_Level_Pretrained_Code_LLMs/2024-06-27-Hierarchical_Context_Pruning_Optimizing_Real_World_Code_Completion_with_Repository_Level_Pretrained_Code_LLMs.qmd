@@ -1,0 +1,40 @@
+
+---
+title: "Hierarchical Context Pruning: Optimizing Real-World Code Completion with Repository-Level Pretrained Code LLMs"
+id: "2406.18294v2"
+description: "HCP strategy improves Code LLMs' accuracy by pruning irrelevant code, reducing input length."
+author: Lei Zhang, Yunshui Li, Jiaming Li, Xiaobo Xia, Jiaxi Yang, Run Luo, Minzheng Wang, Longze Chen, Junhao Liu, Min Yang
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.18294v2/x1.png"
+categories: ['programming', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18294v2/x1.png)
+
+### Summary:
+
+The study investigates the performance of six Repo-Code LLMs in real-world code completion tasks. The authors conducted extensive preliminary experiments and analyses, revealing that maintaining the topological dependencies of files and increasing the code file content in the completion prompts can enhance completion accuracy. Pruning the specific implementations of functions in all dependent files does not significantly reduce the accuracy of completions. Based on these findings, the authors proposed a strategy named Hierarchical Context Pruning (HCP) to construct high-quality completion prompts. The HCP models the code repository at the function level, maintaining the topological dependencies between code files while removing a large amount of irrelevant code content. The proposed method significantly reduces the input length for repository-level code completion and enhances completion accuracy.
+
+### Major Findings:
+
+1. Maintaining the topological dependencies of files and increasing the code file content in the completion prompts can enhance completion accuracy.
+2. Pruning the specific implementations of functions in all dependent files does not significantly reduce the accuracy of completions.
+3. The proposed Hierarchical Context Pruning (HCP) strategy effectively models the code repository at the function level, maintaining the topological dependencies between code files while eliminating a large amount of irrelevant code content.
+
+### Analysis and Critique:
+
+The study provides valuable insights into the performance of Repo-Code LLMs in real-world code completion tasks. The proposed Hierarchical Context Pruning (HCP) strategy is a promising approach to construct high-quality completion prompts, as it significantly reduces the input length and enhances completion accuracy. However, the study has some limitations. The evaluation method based on exact matches may not provide comprehensive results, and there may be a discrepancy between the evaluation outcomes and the actual capabilities of the model. Additionally, sampling functions and class methods based on relevance using a text embedding model may reduce the sampling rate and increase completion latency when the number of code files in the repository is excessive. Future research should address these limitations and explore more advanced methods for code completion tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18294v2](https://arxiv.org/abs/2406.18294v2)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18294v2](https://browse.arxiv.org/html/2406.18294v2)       |
+| Truncated       | False       |
+| Word Count       | 6374       |

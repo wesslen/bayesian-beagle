@@ -1,0 +1,43 @@
+
+---
+title: "Serial Position Effects of Large Language Models"
+id: "2406.15981v1"
+description: "LLMs excel in zero-shot learning but exhibit human-like biases, like primacy and recency effects, which vary in intensity and can be inconsistently mitigated."
+author: Xiaobo Guo, Soroush Vosoughi
+date: "2024-06-23"
+image: "https://browse.arxiv.org/html/2406.15981v1/x1.png"
+categories: ['prompt-engineering', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.15981v1/x1.png)
+
+### Summary:
+
+The study explores the presence of serial position effects (SPE) in large language models (LLMs), which are cognitive biases that affect human behavior. The research confirms the widespread occurrence of these effects in various tasks and models, although their intensity varies. The study also finds that carefully designed prompts can mitigate these biases, but their effectiveness is inconsistent. The findings highlight the significance of SPE during the inference process, particularly in scenarios without ground truth labels, and the need for greater focus on addressing these effects in LLM applications.
+
+### Major Findings:
+
+1. Serial position effects, such as primacy and recency biases, are prevalent in LLMs, with the primacy effect being the most common.
+2. The intensity of these effects varies depending on the task, indicating a complex interplay between task characteristics and inherent biases.
+3. Carefully crafted prompts, including Chain-of-Thought (CoT), have demonstrated potential in moderating primacy and recency effects, although the success rate varies.
+4. The pervasive influence of SPE and its challenging nature emphasize the need for more focused research, particularly in scenarios without ground truth labels.
+
+### Analysis and Critique:
+
+The study provides valuable insights into the prevalence and impact of serial position effects in LLMs. However, it has several limitations. First, the study primarily focuses on LLMs within the GPT and Llama2 families, neglecting earlier generative models with encoder-decoder architectures. Second, the analysis predominantly employs choice re-ranking methodologies, which restrict the analysis to single-label selections and fail to provide a comprehensive overview of model focus across complete inputs. Lastly, there is a lack of research into whether SPE can be effectively mitigated during inference through straightforward interventions, such as prompt engineering and CoT.
+
+The study could be improved by expanding the scope of SPE investigation to include traditional LLMs and earlier encoder-decoder models. Additionally, the study could move beyond multiple-choice tasks to include summarization tasks, allowing for an analysis of model focus via the BERTScore correlation between source articles and generated summaries. The study could also examine whether the CoT approach can guide models to thoroughly analyze all options before making decisions in multiple-choice settings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.15981v1](https://arxiv.org/abs/2406.15981v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.15981v1](https://browse.arxiv.org/html/2406.15981v1)       |
+| Truncated       | False       |
+| Word Count       | 10164       |

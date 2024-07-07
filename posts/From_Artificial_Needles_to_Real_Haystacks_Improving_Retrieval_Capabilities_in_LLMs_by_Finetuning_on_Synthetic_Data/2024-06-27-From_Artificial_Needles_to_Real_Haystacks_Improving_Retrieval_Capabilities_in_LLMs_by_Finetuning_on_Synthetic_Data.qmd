@@ -1,0 +1,42 @@
+
+---
+title: "From Artificial Needles to Real Haystacks: Improving Retrieval Capabilities in LLMs by Finetuning on Synthetic Data"
+id: "2406.19292v1"
+description: "Finetuning LLMs on synthetic data enhances their long-context information retrieval and reasoning skills, with minimal impact on general benchmark performance."
+author: Zheyang Xiong, Vasilis Papageorgiou, Kangwook Lee, Dimitris Papailiopoulos
+date: "2024-06-27"
+image: "../../../bayesian-beagle.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+**Summary:**
+
+The paper "From Artificial Needles to Real Haystacks: Improving Retrieval Capabilities in LLMs by Finetuning on Synthetic Data" by Zheyang Xiong, Vasilis Papageorgiou, Kangwook Lee, and Dimitris Papailiopoulos from the University of Wisconsin-Madison proposes a finetuning approach to address the limitations of Large Language Models (LLMs) in accurately retrieving information and maintaining reasoning capabilities when processing long-context inputs. The authors propose a finetuning approach utilizing a carefully designed synthetic dataset comprising numerical key-value retrieval tasks. The experiments conducted on models like GPT-3.5 Turbo and Mistral 7B demonstrate that finetuning LLMs on this dataset significantly improves LLMs’ information retrieval and reasoning capabilities in longer-context settings. The study highlights the potential of finetuning on synthetic data for improving the performance of LLMs on longer-context tasks.
+
+**Major Findings:**
+
+1. Finetuning LLMs on synthetic key-value retrieval tasks enhances their performance on practical retrieval tasks, demonstrating effective transfer of learned capabilities.
+2. Synthetic data is better than MDQA data even if the goal is to perform better in the MDQA task.
+3. Finetuning LLMs on synthetic key-value retrieval tasks improves LLMs’ long-context reasoning capabilities, even if explicit chain-of-thought reasoning is not allowed.
+4. LLMs finetuned on synthetic tasks with answer templates are better.
+5. Finetuning LLMs on synthetic key-value retrieval tasks does not hurt models’ general capabilities.
+
+**Analysis and Critique:**
+
+The paper presents an innovative approach to improving the performance of LLMs on longer-context tasks by finetuning on synthetic data. The authors provide a well-structured and coherent summary of their findings, highlighting the potential of their proposed method. However, the paper does not discuss the limitations of the proposed approach or potential biases that may have been introduced during the finetuning process. Additionally, the paper does not provide a comparison with other finetuning methods or discuss the generalizability of the proposed approach to other LLMs. Further research is needed to address these limitations and validate the proposed approach
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19292v1](https://arxiv.org/abs/2406.19292v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19292v1](https://browse.arxiv.org/html/2406.19292v1)       |
+| Truncated       | False       |
+| Word Count       | 11448       |

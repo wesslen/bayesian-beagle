@@ -1,0 +1,42 @@
+
+---
+title: "LLMs instead of Human Judges? A Large Scale Empirical Study across 20 NLP Evaluation Tasks"
+id: "2406.18403v1"
+description: "LLMs vary greatly in replicating human annotations, suggesting they're not yet reliable substitutes for human NLP evaluations."
+author: Anna Bavaresco, Raffaella Bernardi, Leonardo Bertolazzi, Desmond Elliott, Raquel Fernández, Albert Gatt, Esam Ghaleb, Mario Giulianelli, Michael Hanna, Alexander Koller, André F. T. Martins, Philipp Mondorf, Vera Neplenbroek, Sandro Pezzelle, Barbara Plank, David Schlangen, Alessandro Suglia, Aditya K Surikuchi, Ece Takmaz, Alberto Testoni
+date: "2024-06-26"
+image: "https://browse.arxiv.org/html/2406.18403v1/x1.png"
+categories: ['hci', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18403v1/x1.png)
+
+### Summary:
+
+The paper presents Judge-Bench, a comprehensive set of 20 datasets annotated by humans, for a range of quality dimensions. The study aims to assess the capacity of large language models (LLMs) to act as judges in evaluating NLP tasks. The datasets cover a wide span of properties, ranging from grammaticality and toxicity to coherence, factual consistency, and verbosity. The study focuses on English datasets or language pairs which include English as one of the languages. The paper evaluates 11 LLMs, including both open-weight and proprietary models, for their ability to replicate the annotations. The results show that each LLM exhibits a large variance across datasets in its correlation to human judgments, indicating that LLMs are not yet ready to systematically replace human judges in NLP.
+
+### Major Findings:
+
+1. The study finds that some LLMs correlate well with human judgments on some datasets, indicating that they could be used as valid surrogates. However, each tested LLM performs poorly on some others and exhibits significant variance across datasets.
+2. The decreasing gap between open and closed models is observed, with the overall best-performing LLM in the evaluation being GPT-4o, with Llama3-70B coming in a close second. This seems promising with respect to the reproducibility of future evaluation efforts.
+3. The study finds that current LLMs and/or their prompts need to be calibrated against actual human judgments on every new dataset to establish the validity of their evaluation scores.
+
+### Analysis and Critique:
+
+* The study highlights the limitations of using LLMs as judges of linguistic output, as they are not actual humans and may be prone to errors or systematic biases that differ from those of humans.
+* The study raises concerns over the reproducibility of evaluations conducted with proprietary models, as they may be retrained or retired at any time, rendering comparisons between this month’s and last month’s judgments invalid.
+* The study notes that most LLMs do not disclose their training data, which makes it impossible to check for definitive data leakage from existing benchmarks and undermines the ability to make broad, generalisable claims beyond the single specific dataset under analysis
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18403v1](https://arxiv.org/abs/2406.18403v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18403v1](https://browse.arxiv.org/html/2406.18403v1)       |
+| Truncated       | False       |
+| Word Count       | 5321       |

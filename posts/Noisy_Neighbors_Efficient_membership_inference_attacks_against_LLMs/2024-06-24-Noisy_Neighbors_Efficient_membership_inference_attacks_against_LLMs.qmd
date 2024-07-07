@@ -1,0 +1,46 @@
+
+---
+title: "Noisy Neighbors: Efficient membership inference attacks against LLMs"
+id: "2406.16565v1"
+description: "Efficient MIA method for LLMs using noisy neighbors in embedding space, matching shadow models' effectiveness in privacy auditing."
+author: Filippo Galli, Luca Melis, Tommaso Cucinotta
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16565v1/extracted/5687816/figures/replicated/noisy_neighbors_auc_good.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16565v1/extracted/5687816/figures/replicated/noisy_neighbors_auc_good.png)
+
+### Summary:
+
+The paper introduces an efficient methodology for generating noisy neighbors for a target sample by adding stochastic noise in the embedding space, requiring only the operation of the target model in inference mode. This approach closely matches the effectiveness of employing shadow models, demonstrating its usability in practical privacy auditing scenarios. The study aims to address privacy concerns in large language models (LLMs) due to their reliance on extensive datasets, possibly including sensitive information.
+
+### Major Findings:
+
+1. The proposed methodology generates noisy neighbors for a target sample by adding stochastic noise in the embedding space, requiring only the operation of the target model in inference mode.
+2. This approach closely matches the effectiveness of employing shadow models, showing its usability in practical privacy auditing scenarios.
+3. The study demonstrates the potential of this methodology in replacing other prevalent strategies for assessing LLMs' privacy risks.
+
+### Analysis and Critique:
+
+1. The paper provides a novel approach to membership inference attacks, which is computationally efficient and does not require training additional models.
+2. The study's findings are significant, as they address the privacy concerns in LLMs, which are increasingly being used in various text tasks.
+3. However, the effectiveness of the noisy neighbors method depends on assumptions that may not apply universally across models or datasets. Its success also relies on specific noise parameters, potentially limiting its generalizability.
+4. Despite being computationally more efficient than shadow model methods, the proposed method still requires significant computational resources.
+5. The study could benefit from further research to validate the proposed methodology's effectiveness across different models and datasets.
+6. The paper does not discuss the potential ethical implications of using this methodology, which could be a significant concern given the potential privacy risks.
+7. The study could also benefit from a more detailed discussion of the potential limitations and challenges of implementing this methodology in real-world scenarios.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16565v1](https://arxiv.org/abs/2406.16565v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16565v1](https://browse.arxiv.org/html/2406.16565v1)       |
+| Truncated       | False       |
+| Word Count       | 3223       |

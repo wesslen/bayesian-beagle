@@ -1,0 +1,46 @@
+
+---
+title: "Paraphrase and Aggregate with Large Language Models for Minimizing Intent Classification Errors"
+id: "2406.17163v1"
+description: "LLMs like LLaMa can excel in multi-class classification, but PAG-LLM reduces errors and hallucinated labels, improving performance by up to 22.7%."
+author: Vikas Yadav, Zheng Tang, Vijay Srinivasan
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.17163v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17163v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel approach called Paraphrase and AGgregate (PAG)-LLM to address critical issues in large language models (LLMs) such as LLaMa, which achieve high performance on large multi-class classification tasks but still make classification errors and generate out-of-vocabulary class labels. PAG-LLM generates multiple paraphrases of the input query, performs multi-class classification for the original query and each paraphrase, and aggregates all the classification labels based on their confidence scores. The approach is evaluated on two large multi-class classification datasets: CLINC and Banking, showing 22.7% and 15.1% error reduction, respectively. PAG-LLM is especially effective for hard examples where LLM is uncertain, reducing critical misclassification and hallucinated label generation errors.
+
+### Major Findings:
+
+1. PAG-LLM reduces error by 22.7% on CLINC and 15.1% on Banking intent classification datasets.
+2. PAG-LLM shows improvements in the out-of-domain intent classification setting with 3.2% and 1.5% absolute F1 score improvement in CLINC and Banking, respectively.
+3. PAG-LLM can be selectively applied to low-confidence classification cases to potentially lower the inference cost.
+
+### Analysis and Critique:
+
+* The paper presents a promising approach to address critical issues in LLMs, but it does not discuss the potential limitations or biases in the paraphrasing process.
+* The evaluation is limited to two datasets, and the approach's generalizability to other datasets or domains is not explored.
+* The paper does not discuss the potential impact of the paraphrasing process on the model's performance or the potential for introducing new errors.
+* The paper does not provide a comparison with other approaches to addressing LLM errors, such as self-consistency or chain-of-thought.
+* The paper does not discuss the potential impact of the paraphrasing process on the model's interpretability or explainability.
+* The paper does not discuss the potential impact of the paraphrasing process on the model's fairness or bias.
+* The paper does
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17163v1](https://arxiv.org/abs/2406.17163v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17163v1](https://browse.arxiv.org/html/2406.17163v1)       |
+| Truncated       | False       |
+| Word Count       | 4269       |

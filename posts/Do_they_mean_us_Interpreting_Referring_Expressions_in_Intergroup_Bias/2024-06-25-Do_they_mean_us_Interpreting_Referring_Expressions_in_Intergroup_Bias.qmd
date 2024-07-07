@@ -1,0 +1,40 @@
+
+---
+title: "Do they mean 'us'? Interpreting Referring Expressions in Intergroup Bias"
+id: "2406.17947v1"
+description: "LLMs detect intergroup bias in NFL comments, influenced by win probabilities."
+author: Venkata S Govindarajan, Matianyu Zang, Kyle Mahowald, David Beaver, Junyi Jessy Li
+date: "2024-06-25"
+image: "../../img/2406.17947v1/image_1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2406.17947v1/image_1.png)
+
+**Summary:**
+
+This paper presents a study on intergroup bias in language, focusing on the variations in language used by in-group and out-group members in online sports forums. The authors curate a unique dataset of over 6 million game-time comments from opposing perspectives in NFL team subreddits, each comment grounded in non-linguistic descriptions of the events that precipitated these comments. The study reveals that modeling the bias through tagging of implicit and explicit referring expressions requires a rich, contextual understanding of language and the world. The authors use LLMs for automated tagging and discover that some LLMs perform best when prompted with linguistic descriptions of the win probability at the time of the comment. Large-scale tagging of comments using LLMs uncovers linear variations in the form of referent across win probabilities that distinguish in-group and out-group utterances.
+
+**Major Findings:**
+
+1. The study introduces a new dataset of interpersonal language from game threads on online forums dedicated to fandoms for teams in the National Football League (NFL).
+2. The authors construct a parallel corpus of sports comments, with comments from fans of both teams in a game, aligned in time and grounded in win probabilities (WP).
+3. The study focuses on referring expressions and formulates investigating the intergroup bias as a tagging task: given a comment, the group affiliation of the writer, and the state-of-the-world, return a tagged comment with appropriate referring expressions tagged as [IN], [OUT] or [OTHER].
+4. Annotation and preliminary analysis reveal that the form of the referent that speakers use when referring may have systematic intergroup variations.
+5. The authors train Large Language Models (LLMs) to automate large-scale tagging of their dataset and examine their performance on their task.
+6. The authors find that few-shot performance on GPT-4o is boosted using linguistic descriptions of win probabilities, while fine-tuned Llama-3 models performed better, although incorporating WP had little effect.
+7. Using their best-performing model to tag 100,000 comments from their raw dataset, the authors discover two striking linguistic behaviors: (1) Higher the win probability for
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17947v1](https://arxiv.org/abs/2406.17947v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17947v1](https://browse.arxiv.org/html/2406.17947v1)       |
+| Truncated       | False       |
+| Word Count       | 14790       |

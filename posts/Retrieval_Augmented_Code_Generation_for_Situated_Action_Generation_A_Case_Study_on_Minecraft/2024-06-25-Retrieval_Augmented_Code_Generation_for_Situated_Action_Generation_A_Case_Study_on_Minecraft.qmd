@@ -1,0 +1,45 @@
+
+---
+title: "Retrieval-Augmented Code Generation for Situated Action Generation: A Case Study on Minecraft"
+id: "2406.17553v1"
+description: "LLMs predict Builder's actions in Minecraft Collaborative Building Task, using few-shot prompting for improved performance."
+author: Chalamalasetti Kranti, Sherzod Hakimov, David Schlangen
+date: "2024-06-25"
+image: "https://browse.arxiv.org/html/2406.17553v1/x1.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17553v1/x1.png)
+
+### Summary:
+
+- The research focuses on the Minecraft Collaborative Building Task, where an Architect (A) provides instructions to a Builder (B) to assemble a specified structure using 3D blocks.
+- The study investigates the use of large language models (LLMs) to predict the sequence of actions taken by the Builder, leveraging LLMs' in-context learning abilities and few-shot prompting techniques.
+- The research presents a detailed analysis of the gaps in performance for future work.
+
+### Major Findings:
+
+1. **LLMs for Action Prediction**: The study explores the application of LLMs to predict the sequence of actions taken by the Builder, modeling the action prediction task as a code-generation task.
+2. **Few-shot Prompting Techniques**: Few-shot prompting techniques are used to probe LLMs, allowing these models to generalize from a limited number of examples and making them well-suited for tasks requiring nuanced understanding and prediction of actions.
+3. **Performance Analysis**: The results are compared to the baseline Builder Action Prediction (BAP) model, with GPT-4 achieving the best result, closely followed by Llama-3-70b. The fine-tuned version of Llama-3-8b showed a 1.5% improvement over the vanilla version.
+
+### Analysis and Critique:
+
+- The study provides a detailed analysis of the performance of LLMs in predicting builder actions, highlighting the challenges in interpreting spatial prepositions, geometric shapes, and anaphora.
+- The research identifies two more factors complicating the interpretation of architect utterances, which may further impact action prediction: builder mistakes and underspecified instructions.
+- The study acknowledges the limitations of the proposed approach, including the need for more robustness to the usability of pre-trained large language models and the challenges in interpreting instructions involving agent's perspective and understanding abstractions in the dialogue.
+- The research also discusses the potential complexity of LLM-generated code, which can hinder end-user refinement and reuse, and the need to ensure LLM-generated responses are free from harmful code.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17553v1](https://arxiv.org/abs/2406.17553v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17553v1](https://browse.arxiv.org/html/2406.17553v1)       |
+| Truncated       | False       |
+| Word Count       | 4809       |

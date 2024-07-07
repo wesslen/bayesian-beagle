@@ -1,0 +1,40 @@
+
+---
+title: "Disentangling Knowledge-based and Visual Reasoning by Question Decomposition in KB-VQA"
+id: "2406.18839v1"
+description: "Decomposing complex questions into simpler ones improves visual question-answering performance, boosting accuracy by up to 2% on three datasets."
+author: Elham J. Barezi, Parisa Kordjamshidi
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.18839v1/extracted/5694501/imgs/data4.png"
+categories: ['hci', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18839v1/extracted/5694501/imgs/data4.png)
+
+### Summary:
+
+The article presents a study on the Knowledge-Based Visual Question Answering (KB-VQA) problem, where models need to ground a question into the visual modality to find the answer. The authors propose a question decomposer to find several simpler questions to guide the captioner and provide a richer textual representation of the given image. The proposed method involves using models such as PromptCap or InstructBlip for visual questions and GPT models for non-visual questions to extract extra knowledge required to answer the question. The results demonstrate the positive impact of using simple questions before retrieving visual or non-visual information, with up to 2% improvement in accuracy on three well-known VQA datasets.
+
+### Major Findings:
+
+1. Replacing a complex question with several simpler questions helps to extract more relevant information from the image and provide a stronger comprehension of it.
+2. Decomposing the questions helps to find non-visual parts of the question to retrieve the extra required information.
+3. Using a question decomposer to find several simpler questions to guide the captioner and provide a richer textual representation of the given image improves the final accuracy for the KB-VQA task.
+
+### Analysis and Critique:
+
+The proposed method addresses some weaknesses of current image-to-text captioners for KB-VQA problems, including question decomposition to extract more visual details required to address the given question. However, the method relies on the implicit knowledge of the LLMs and does not exploit explicit sources of knowledge to find the answer. Additionally, the method does not address the issue of noisy retrieval from external KBs, which can affect the final accuracy. The method also does not evaluate the performance of the proposed method on other VQA datasets or compare it to other state-of-the-art methods.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18839v1](https://arxiv.org/abs/2406.18839v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18839v1](https://browse.arxiv.org/html/2406.18839v1)       |
+| Truncated       | False       |
+| Word Count       | 4974       |

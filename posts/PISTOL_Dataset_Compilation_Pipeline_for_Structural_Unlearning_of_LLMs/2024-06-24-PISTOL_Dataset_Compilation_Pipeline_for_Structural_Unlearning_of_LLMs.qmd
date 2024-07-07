@@ -1,0 +1,41 @@
+
+---
+title: "PISTOL: Dataset Compilation Pipeline for Structural Unlearning of LLMs"
+id: "2406.16810v1"
+description: "PISTOL: A pipeline for benchmarking structural unlearning in LLMs, highlighting challenges and model impacts."
+author: Xinchi Qiu, William F. Shen, Yihong Chen, Nicola Cancedda, Pontus Stenetorp, Nicholas D. Lane
+date: "2024-06-24"
+image: "../../img/2406.16810v1/image_1.png"
+categories: ['architectures', 'robustness', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2406.16810v1/image_1.png)
+
+# Summary:
+
+The paper proposes a novel dataset compilation pipeline called PISTOL, which is designed to facilitate the development of structural unlearning methods for large language models (LLMs). The pipeline allows for the creation of multi-scenario datasets for benchmarking LLM unlearning, addressing the need for a clear definition of unlearning outcome and a consensus on the criteria for true forgetting. The paper also presents benchmark results using sample datasets synthesized with PISTOL, highlighting the challenges in effectively and robustly removing highly interconnected data, batched data, or data skewed towards a specific domain. The choice of pre-trained model is also shown to impact unlearning performance.
+
+# Major Findings:
+
+1. The degree of inter-connectivity of a data point positively correlates with the difficulty of unlearning, as demonstrated by the benchmark results.
+2. Unlearning data skewed towards a specific domain often leads to a more pronounced deterioration in the retained model’s performance on that same domain.
+3. The sensitivity to the size of the forget dataset and the learning rate indicates that current unlearning methods lack robustness and may struggle to handle unlearning requests effectively at scale.
+4. The choice of pre-trained model does influence unlearning performance, with the degree of impact varying based on task/method-related factors.
+
+# Analysis and Critique:
+
+The paper provides a valuable contribution to the field of LLM unlearning by proposing a novel dataset compilation pipeline and presenting benchmark results using sample datasets. However, the paper does not address the potential limitations and biases that may be present in the generated datasets, which could impact the generalizability of the findings. Additionally, the paper does not discuss the computational resources required for the proposed pipeline and benchmarking process, which could be a significant factor for researchers and practitioners looking to adopt these methods. Finally, the paper does not provide a clear roadmap for future research in this area, which could help guide the development of more effective and robust LLM unlearning methods.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16810v1](https://arxiv.org/abs/2406.16810v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16810v1](https://browse.arxiv.org/html/2406.16810v1)       |
+| Truncated       | False       |
+| Word Count       | 25194       |

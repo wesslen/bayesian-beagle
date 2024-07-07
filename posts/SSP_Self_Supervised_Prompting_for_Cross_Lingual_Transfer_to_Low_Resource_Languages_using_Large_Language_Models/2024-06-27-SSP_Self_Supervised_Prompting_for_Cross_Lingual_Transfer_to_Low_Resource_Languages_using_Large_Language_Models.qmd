@@ -1,0 +1,44 @@
+
+---
+title: "SSP: Self-Supervised Prompting for Cross-Lingual Transfer to Low-Resource Languages using Large Language Models"
+id: "2406.18880v1"
+description: "LLMs can excel in low-resource languages with Self-Supervised Prompting, a novel ICL approach for zero-label cross-lingual transfer."
+author: Vipul Rathore, Aniruddha Deb, Ankish Chandresh, Parag Singla, Mausam
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.18880v1/extracted/5694691/figs/Noise_analysis.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18880v1/extracted/5694691/figs/Noise_analysis.png)
+
+### Summary:
+
+The paper introduces Self-Supervised Prompting (SSP), a novel approach for zero-labelled cross-lingual transfer (0-CLT) to low-resource languages (LRLs) using large language models (LLMs). SSP is designed for the 0-CLT setting, where no labelled training data for the target language is available, but training data from one or more related medium-resource languages (MRLs) and the available unlabeled test data for the target language are utilized.
+
+SSP is based on the observation that LLMs output more accurate labels when in-context exemplars are from the target language, even if their labels are slightly noisy. Since target language training data is not available in 0-CLT, SSP operates in two stages. In Stage I, the target language's test data is noisily labeled using source MRL training data. In Stage II, these noisy test data points are used as exemplars in ICL for further improved labelling. SSP also uses a novel Integer Linear Programming (ILP)-based exemplar selection that balances similarity, prediction confidence (when available), and label coverage.
+
+Experiments on three tasks and eleven LRLs demonstrate that SSP strongly outperforms existing SOTA fine-tuned and prompting-based baselines in the 0-CLT setup.
+
+### Major Findings:
+
+1. SSP is a novel ICL approach tailored for the 0-CLT setting, which leverages the observation that LLMs output more accurate labels when in-context exemplars are from the target language, even if their labels are slightly noisy.
+2. SSP operates in two stages: Stage I noisily labels the target language's test data using source MRL training data, and Stage II uses these noisy test data points as exemplars in ICL for further improved labelling.
+3. SSP uses a novel ILP-based exemplar selection that balances similarity, prediction confidence (when available), and label coverage, which contributes to its strong performance in the 0-CLT setup.
+
+### Analysis and Critique:
+
+The paper presents a promising approach for 0-CLT to LRLs using LLMs. The use of noisy labelling
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18880v1](https://arxiv.org/abs/2406.18880v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18880v1](https://browse.arxiv.org/html/2406.18880v1)       |
+| Truncated       | False       |
+| Word Count       | 11013       |

@@ -1,0 +1,44 @@
+
+---
+title: "Task Oriented In-Domain Data Augmentation"
+id: "2406.16694v1"
+description: "TRAIT, a task-oriented framework, enhances LLMs in specialized domains like law and advertisement by augmenting in-domain data and generating synthetic task-oriented passages, improving performance by up to 8%."
+author: Xiao Liang, Xinyu Hu, Simiao Zuo, Yeyun Gong, Qiang Lou, Yi Liu, Shao-Lun Huang, Jian Jiao
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16694v1/extracted/5688218/images/ads_passage.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16694v1/extracted/5688218/images/ads_passage.png)
+
+### Summary:
+
+The paper introduces TRAIT, a task-oriented in-domain data augmentation framework for continual pre-training of large language models (LLMs). The framework consists of two parts: in-domain data selection and task-oriented synthetic passage generation. The data selection strategy identifies and selects a large amount of in-domain data from general corpora, enriching domain knowledge in the continual pre-training data. The synthetic passages contain guidance on how to use domain knowledge to answer questions about downstream tasks. By training on such passages, the model aligns with the need of downstream applications. The proposed framework is evaluated by adapting LLMs to the advertisement and math domains, showing improvements in the base LLM (without continual pre-training) by over 5% on both domains.
+
+### Major Findings:
+
+1. TRAIT improves LLM performance by 8% in the advertisement domain and 7.5% in the math domain on average.
+2. The data selection strategy significantly enriches in-domain data, with the amount of selected data being magnitudes larger than the in-domain dataset.
+3. The task-oriented synthetic passages enable the model to learn how to use domain knowledge to solve problems, better aligning with the need of downstream tasks.
+
+### Analysis and Critique:
+
+1. The paper does not discuss the potential limitations of the proposed framework, such as the quality of the selected in-domain data or the effectiveness of the synthetic passages in improving model performance.
+2. The paper does not provide a comparison with other data augmentation techniques or continual pre-training methods, making it difficult to evaluate the effectiveness of TRAIT.
+3. The paper does not discuss the potential biases in the selected in-domain data or the synthetic passages, which could impact the model's performance on downstream tasks.
+4. The paper does not provide a detailed analysis of the computational cost of the proposed framework, which is an important factor to consider when implementing the framework in practice.
+5. The paper does not discuss the potential impact of the proposed framework on the generalization of the model, which is an important consideration for the practical application of the framework.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16694v1](https://arxiv.org/abs/2406.16694v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16694v1](https://browse.arxiv.org/html/2406.16694v1)       |
+| Truncated       | False       |
+| Word Count       | 6953       |

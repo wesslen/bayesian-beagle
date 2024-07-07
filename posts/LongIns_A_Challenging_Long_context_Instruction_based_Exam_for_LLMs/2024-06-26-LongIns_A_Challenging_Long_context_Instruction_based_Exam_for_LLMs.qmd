@@ -1,0 +1,44 @@
+
+---
+title: "LongIns: A Challenging Long-context Instruction-based Exam for LLMs"
+id: "2406.17588v2"
+description: "LLMs struggle with long-context tasks; GPT-4 underperforms with 16k context. Multi-hop reasoning needs improvement in short context windows."
+author: Shawn Gavin, Tuney Zheng, Jiaheng Liu, Quehry Que, Noah Wang, Jian Yang, Chenchen Zhang, Wenhao Huang, Wenhu Chen, Ge Zhang
+date: "2024-06-26"
+image: "https://browse.arxiv.org/html/2406.17588v2/x2.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17588v2/x2.png)
+
+# Summary:
+
+The paper introduces LongIns, a benchmark dataset designed to evaluate the long-context understanding capabilities of large language models (LLMs). Unlike existing benchmarks that focus on retrieval tasks, LongIns emphasizes the actual comprehensible window length of the models. The dataset includes three evaluation settings: Global Instruction & Single Task (GIST), Local Instruction & Single Task (LIST), and Local Instruction & Multiple Tasks (LIMT). The authors evaluate 20 different LLMs using LongIns and observe that most models perform worse on tasks requiring understanding of complete long sequences compared to retrieval tasks of the same length.
+
+## Major Findings:
+
+1. The top-performing GPT-4 with 128k context length performs poorly on the evaluation context window of 16k in LongIns.
+2. Significant efforts are still needed for the multi-hop reasoning ability of many existing LLMs under short context windows (<4k).
+3. Most models fail to achieve high scores when the critical information length is only 8k, and even GPT-4 and GPT-4o score poorly at 16k length.
+
+## Analysis and Critique:
+
+* The paper provides a valuable contribution to the field by introducing a benchmark that focuses on the actual comprehensible window length of LLMs, which is often overlooked in existing benchmarks.
+* The authors evaluate a diverse set of LLMs, providing a comprehensive analysis of their long-context understanding capabilities.
+* However, the paper does not discuss the potential limitations of the proposed benchmark, such as the generalizability of the findings to other types of tasks or the potential biases in the dataset.
+* Additionally, the paper does not provide a detailed analysis of the methodology used to generate the dataset, which could impact the validity of the results.
+* Finally, the paper does not discuss the potential implications of the findings for the development of LLMs or the design of future benchmarks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17588v2](https://arxiv.org/abs/2406.17588v2)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17588v2](https://browse.arxiv.org/html/2406.17588v2)       |
+| Truncated       | False       |
+| Word Count       | 5491       |

@@ -1,0 +1,46 @@
+
+---
+title: "PrExMe! Large Scale Prompt Exploration of Open Source LLMs for Machine Translation and Summarization Evaluation"
+id: "2406.18528v1"
+description: "LLMs as evaluation metrics: Large-scale prompt exploration reveals stability and variability in MT and summarization tasks."
+author: Christoph Leiter, Steffen Eger
+date: "2024-06-26"
+image: "https://browse.arxiv.org/html/2406.18528v1/extracted/5693647/images/PrexMain.png"
+categories: ['prompt-engineering', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18528v1/extracted/5693647/images/PrexMain.png)
+
+# Summary:
+
+The paper "PrExMe: Large Scale Prompt Exploration of Open Source LLMs for Machine Translation and Summarization Evaluation" introduces a large-scale prompt exploration for metrics, evaluating over 720 prompt templates for open-source LLM-based metrics on machine translation and summarization datasets. The study aims to serve as a benchmark for the performance of recent open-source LLMs as metrics and explore the stability and variability of different prompting strategies.
+
+## Major Findings:
+
+1. **Stable Prompts**: The study discovers that in some scenarios, prompts are stable, with some LLMs showing idiosyncratic preferences for grading generated texts with textual labels, while others prefer to return numeric scores.
+
+2. **Susceptibility to Changes**: However, the stability of prompts and model rankings can be susceptible to seemingly innocuous changes. For instance, changing the requested output format from "0 to 100" to "-1 to +1" can strongly affect the rankings in the evaluation.
+
+3. **Understanding Prompting Approaches**: The study contributes to understanding the impact of different prompting approaches on LLM-based metrics for machine translation and summarization evaluation, highlighting the most stable prompting patterns and potential limitations.
+
+## Analysis and Critique:
+
+The paper provides a comprehensive exploration of prompting strategies for LLM-based metrics, offering valuable insights into the stability and variability of these strategies. However, the study's scope is limited to open-source LLMs, and the findings may not generalize to closed-source models. Additionally, the study does not explore the impact of different prompting strategies on other NLP tasks beyond machine translation and summarization.
+
+Furthermore, the study's reliance on a single dataset for evaluation may limit the generalizability of the findings. Future research could benefit from evaluating the proposed prompting strategies on a more diverse range of datasets and tasks.
+
+Lastly, the study does not discuss the potential ethical implications of using LLMs for evaluation, such as the risk of bias or the need for transparency in the evaluation process. Addressing these issues could enhance the credibility and applicability of the proposed prompting strategies.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18528v1](https://arxiv.org/abs/2406.18528v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18528v1](https://browse.arxiv.org/html/2406.18528v1)       |
+| Truncated       | False       |
+| Word Count       | 9672       |

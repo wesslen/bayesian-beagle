@@ -1,0 +1,44 @@
+
+---
+title: "Banishing LLM Hallucinations Requires Rethinking Generalization"
+id: "2406.17642v1"
+description: "LLMs hallucinate due to training loss, not just creativity-factuality balance. MoME and Lamini-1 models can mitigate this issue."
+author: Johnny Li, Saksham Consul, Eda Zhou, James Wong, Naila Farooqui, Yuxin Ye, Nithyashree Manohar, Zhuxiaona Wei, Tian Wu, Ben Echols, Sharon Zhou, Gregory Diamos
+date: "2024-06-25"
+image: "https://browse.arxiv.org/html/2406.17642v1/extracted/5687145/figs/random-test.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17642v1/extracted/5687145/figs/random-test.png)
+
+### Summary:
+
+The paper challenges the traditional view of LLM generalization by showing that it is incapable of distinguishing between different neural networks that have radically different hallucination performance. The authors demonstrate that pre-trained LLMs can fit random labels without increasing their generalization error, which challenges the conventional wisdom that hallucinations are a consequence of a balance between creativity and factuality. Instead, it suggests that LLMs have sufficient capacity to memorize large datasets of facts precisely, even when the training data is noisy or random.
+
+The authors also show that generalization error does not discriminate between models that hallucinate and those that don’t, and that training long enough to remove hallucinations is computationally intensive and may not be feasible on existing systems in 2024. The paper highlights the need for new metrics and approaches to evaluate the ability of LLMs to memorize and recall facts precisely, and suggests that LLMs have sufficient capacity to store large datasets of facts precisely, even when the training data is noisy or random.
+
+### Major Findings:
+
+1. Pre-trained LLMs can fit random labels without increasing their generalization error, challenging the conventional wisdom that hallucinations are a consequence of a balance between creativity and factuality.
+2. Generalization error does not discriminate between models that hallucinate and those that don’t, and training long enough to remove hallucinations is computationally intensive and may not be feasible on existing systems in 2024.
+3. LLMs have sufficient capacity to store large datasets of facts precisely, even when the training data is noisy or random.
+
+### Analysis and Critique:
+
+The paper presents a groundbreaking study that challenges the conventional wisdom on LLMs and their ability to generalize without hallucinations. The authors demonstrate that LLMs can easily memorize random labels without increasing their generalization error, contradicting the notion that hallucinations are a consequence of a balance between creativity and factuality. However, the study also highlights the need for new metrics and approaches to evaluate the ability of LLMs to memorize and recall facts precisely, and suggests that LLMs have sufficient capacity to store large datasets of facts precisely, even when the training data is noisy or random.
+
+One limitation of the study is that it does not provide a practical solution to the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17642v1](https://arxiv.org/abs/2406.17642v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17642v1](https://browse.arxiv.org/html/2406.17642v1)       |
+| Truncated       | False       |
+| Word Count       | 5811       |

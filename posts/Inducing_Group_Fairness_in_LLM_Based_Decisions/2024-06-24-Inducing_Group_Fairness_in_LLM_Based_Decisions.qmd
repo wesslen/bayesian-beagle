@@ -1,0 +1,44 @@
+
+---
+title: "Inducing Group Fairness in LLM-Based Decisions"
+id: "2406.16738v1"
+description: "LLM-based classifiers may lead to unfair decisions; remediation techniques are proposed to improve fairness."
+author: James Atwood, Preethi Lahoti, Ananth Balashankar, Flavien Prost, Ahmad Beirami
+date: "2024-06-24"
+image: "../../https://browse.arxiv.org/html/2406.16738v1/extracted/5688239/img/jewish_zero_shot_prompt_pareto.png"
+categories: ['prompt-engineering', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../https://browse.arxiv.org/html/2406.16738v1/extracted/5688239/img/jewish_zero_shot_prompt_pareto.png)
+
+### Summary:
+
+The paper titled "Inducing Group Fairness in LLM-Based Decisions" explores the fairness of Large Language Models (LLMs) in classification tasks, specifically focusing on zero-shot and few-shot classifiers. The authors find that these classifiers exhibit significant gaps in false positive rates (FPR) across multiple demographic groups, with Muslim and Jewish groups having higher FPRs compared to the Christian group in the Civil Comments toxicity detection benchmark. The paper introduces three remediation techniques: prompt-based, in-processing, and post-processing. The findings suggest that prompt-based methods are not effective for group fairness remediation, while in-processing remediation achieves better fairness-performance trade-offs than post-processing methods.
+
+### Major Findings:
+
+1. LLM-based classifiers, including zero-shot and few-shot classifiers, may exhibit group unfairness, with significant gaps in FPR across multiple demographic groups.
+2. Three remediation techniques are introduced: prompt-based, in-processing, and post-processing. Prompt-based methods are found to be less effective than in-processing and post-processing methods.
+3. In-processing remediation techniques consistently provide favorable fairness versus performance tradeoffs, making them a more robust approach for fine-tuned models.
+
+### Analysis and Critique:
+
+1. The paper focuses on equality of opportunity (group) fairness, and the findings may not generalize to other notions of fairness.
+2. The experiments are conducted using only one LLM (PaLM 2) and one dataset (Civil Comments Identity) in English, which may limit the generalizability of the findings.
+3. The paper does not compare against low-rank adaptation, prompt-tuning, and other parameter-efficient fine-tuning techniques for the in-processing method.
+4. The paper only experiments with a few handcrafted prompts for classification and does not compare against chain-of-thought, self-consistency, and automated prompt generation techniques.
+5. The high inference costs of LLM-based classifiers may not yet justify their deployment in real-world applications, despite the need for developing fairness remediation techniques.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16738v1](https://arxiv.org/abs/2406.16738v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16738v1](https://browse.arxiv.org/html/2406.16738v1)       |
+| Truncated       | False       |
+| Word Count       | 5964       |

@@ -1,0 +1,45 @@
+
+---
+title: "The Remarkable Robustness of LLMs: Stages of Inference?"
+id: "2406.19384v1"
+description: "TL;DR: Large Language Models remain accurate despite deleting or swapping layers, suggesting four universal inference stages."
+author: Vedang Lad, Wes Gurnee, Max Tegmark
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19384v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19384v1/x1.png)
+
+### Summary:
+
+This study investigates the remarkable robustness of Large Language Models (LLMs) by deleting and swapping adjacent layers. The results show that deleting and swapping interventions retain 72-95% of the original model’s prediction accuracy without fine-tuning, with more layers exhibiting more robustness. Based on these findings, the authors hypothesize the existence of four universal stages of inference across eight different models: detokenization, feature engineering, prediction ensembling, and residual sharpening.
+
+### Major Findings:
+
+1. **Detokenization**: The first stage integrates local information, lifting raw token representations into higher-level contextual representations.
+2. **Feature Engineering**: The second stage involves the iterative refinement of task and entity-specific features.
+3. **Prediction Ensembling**: The second half of the model begins with a phase transition, where hidden representations align more with the vocabulary space due to specialized model components.
+4. **Residual Sharpening**: The last layer sharpens the following token distribution by eliminating obsolete features that add noise to the prediction.
+
+### Analysis and Critique:
+
+* The study provides valuable insights into the robustness of LLMs and the existence of universal stages of inference. However, the methodology of deleting and swapping layers may not fully capture the complexity of the models' internal workings.
+* The authors acknowledge that the boundaries between stages are fuzzy and that the processing of specific token types may undergo more individualized dynamics. This suggests that the proposed stages may not be universally applicable to all types of tokens.
+* The study relies on aggregation over many tokens, which may average out effects that occur to specific token classes. This limitation could be addressed by analyzing the stages of inference for different token classes separately.
+* The authors do not conclusively identify the specific causes of differences between GPT and Pythia models. Future research could investigate the impact of factors such as dropout during training, structural variations in attention and MLP mechanisms, and the number of layers on the stages of inference.
+* The study does not explore the potential implications of the proposed stages of inference for model design and optimization. Future work could investigate how these stages can be leveraged to improve the performance and efficiency of LL
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19384v1](https://arxiv.org/abs/2406.19384v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19384v1](https://browse.arxiv.org/html/2406.19384v1)       |
+| Truncated       | False       |
+| Word Count       | 8310       |

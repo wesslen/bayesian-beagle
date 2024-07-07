@@ -1,0 +1,46 @@
+
+---
+title: "ReCaLL: Membership Inference via Relative Conditional Log-Likelihoods"
+id: "2406.15968v1"
+description: "ReCall is a new method for detecting pretraining data in large language models, outperforming existing methods and offering insights into model behavior."
+author: Roy Xie, Junlin Wang, Ruomin Huang, Minxing Zhang, Rong Ge, Jian Pei, Neil Zhenqiang Gong, Bhuwan Dhingra
+date: "2024-06-23"
+image: "https://browse.arxiv.org/html/2406.15968v1/extracted/5685574/latex/figures/fig_1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.15968v1/extracted/5685574/latex/figures/fig_1.png)
+
+### Summary:
+
+The paper introduces ReCall, a novel membership inference attack (MIA) that detects pretraining data in large language models (LLMs) by leveraging their conditional language modeling capabilities. ReCall examines the relative change in conditional log-likelihoods when prefixing target data points with non-member context. The empirical findings show that conditioning member data on non-member prefixes induces a larger decrease in log-likelihood compared to non-member data. ReCall achieves state-of-the-art performance on the WikiMIA dataset and can be further improved using an ensemble approach. The paper also provides insights into how LLMs leverage membership information for effective inference at both the sequence and token level.
+
+### Major Findings:
+
+1. ReCall, a novel MIA, effectively detects LLMs' pretraining data by examining the relative change in conditional log-likelihoods when prefixing target data points with non-member context.
+2. Conditioning member data on non-member prefixes induces a larger decrease in log-likelihood compared to non-member data.
+3. ReCall achieves state-of-the-art performance on the WikiMIA dataset, even with random and synthetic prefixes, and can be further improved using an ensemble approach.
+
+### Analysis and Critique:
+
+1. The paper provides a well-structured and coherent summary of the ReCall method, its empirical findings, and its performance on the WikiMIA dataset.
+2. The use of non-member prefixes to detect pretraining data in LLMs is a novel approach that addresses the challenge of detecting sensitive or unintended content in pretraining datasets.
+3. The paper's focus on the WikiMIA dataset may limit the generalizability of the findings to other datasets and domains.
+4. The paper does not provide a detailed analysis of the limitations and potential biases of the ReCall method, which could be addressed in future work.
+5. The paper does not discuss the potential implications of using ReCall for detecting pretraining data in LLMs, such as its impact on privacy and intellectual property concerns.
+
+Overall, the paper presents a novel and effective MIA for detecting pretraining data in LLMs, but further research is needed to evaluate
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.15968v1](https://arxiv.org/abs/2406.15968v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.15968v1](https://browse.arxiv.org/html/2406.15968v1)       |
+| Truncated       | False       |
+| Word Count       | 8640       |

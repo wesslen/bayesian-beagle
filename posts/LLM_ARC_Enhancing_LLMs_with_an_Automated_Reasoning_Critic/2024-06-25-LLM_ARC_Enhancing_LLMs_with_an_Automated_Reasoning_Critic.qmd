@@ -1,0 +1,40 @@
+
+---
+title: "LLM-ARC: Enhancing LLMs with an Automated Reasoning Critic"
+id: "2406.17663v1"
+description: "LLM-ARC improves LLMs' logical reasoning via an Actor-Critic method, achieving 88.32% accuracy on the FOLIO benchmark."
+author: Aditya Kalyanpur, Kailash Saravanakumar, Victor Barres, Jennifer Chu-Carroll, David Melville, David Ferrucci
+date: "2024-06-25"
+image: "https://browse.arxiv.org/html/2406.17663v1/extracted/5689587/LLM-ARC-Architecture.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17663v1/extracted/5689587/LLM-ARC-Architecture.png)
+
+### Summary:
+
+The paper introduces LLM-ARC, a neuro-symbolic framework designed to enhance the logical reasoning capabilities of Large Language Models (LLMs) by combining them with an Automated Reasoning Critic (ARC). The framework employs an Actor-Critic method where the LLM Actor generates declarative logic programs along with tests for semantic correctness, while the ARC evaluates the code, runs the tests, and provides feedback on test failures for iterative refinement. Implemented using Answer Set Programming (ASP), LLM-ARC achieves a new state-of-the-art accuracy of 88.32% on the FOLIO benchmark, which tests complex logical reasoning capabilities. The experiments demonstrate significant improvements over LLM-only baselines, highlighting the importance of logic test generation and iterative self-refinement.
+
+### Major Findings:
+
+1. LLM-ARC, a neuro-symbolic framework, combines LLMs with an ARC to enhance logical reasoning capabilities, achieving a new state-of-the-art accuracy of 88.32% on the FOLIO benchmark.
+2. The Actor-Critic method employed by LLM-ARC involves the LLM Actor generating declarative logic programs and tests for semantic correctness, while the ARC evaluates the code, runs the tests, and provides feedback on test failures for iterative refinement.
+3. Implemented using ASP, LLM-ARC demonstrates significant improvements over LLM-only baselines, emphasizing the importance of logic test generation and iterative self-refinement.
+
+### Analysis and Critique:
+
+While LLM-ARC shows promising results in enhancing the logical reasoning capabilities of LLMs, there are potential limitations and areas for improvement. The reliance on ASP as the underlying logic may limit the applicability of the framework to other domains or problem types. Additionally, the iterative refinement process may introduce computational overhead, which could impact the efficiency of the system. Furthermore, the evaluation of LLM-ARC on a single benchmark (FOLIO) may not fully capture its performance in other contexts. Future work should explore the application of LLM-ARC to a broader range of tasks and benchmarks,
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17663v1](https://arxiv.org/abs/2406.17663v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17663v1](https://browse.arxiv.org/html/2406.17663v1)       |
+| Truncated       | False       |
+| Word Count       | 9705       |

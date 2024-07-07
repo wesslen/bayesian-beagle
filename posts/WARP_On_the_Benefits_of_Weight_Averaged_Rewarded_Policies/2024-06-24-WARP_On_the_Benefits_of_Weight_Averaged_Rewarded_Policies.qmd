@@ -1,0 +1,41 @@
+
+---
+title: "WARP: On the Benefits of Weight Averaged Rewarded Policies"
+id: "2406.16768v1"
+description: "WARP strategy improves LLM alignment, balancing KL regularization and reward optimization."
+author: Alexandre Ramé, Johan Ferret, Nino Vieillard, Robert Dadashi, Léonard Hussenot, Pierre-Louis Cedoz, Pier Giuseppe Sessa, Sertan Girgin, Arthur Douillard, Olivier Bachem
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16768v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16768v1/x1.png)
+
+**Summary:**
+
+The paper introduces a novel alignment strategy called Weight Averaged Rewarded Policies (WARP) for Reinforcement Learning from Human Feeduring (RLHF) in large language models (LLMs). WARP aims to optimize the -reward Pareto front of solutions by merging policies in the weight space at three distinct stages: using the exponential moving average (EMA) of the policy as a dynamic anchor in regularization, applying spherical interpolation to merge independently fine-tuned policies, and linearly interpolating between the merged model and the initialization. The iterative application of WARP improves the -reward Pareto front, aligning the LLMs while protecting the knowledge from pre-training. The paper compares WARP with state-of-the-art baselines and shows that it outperforms them in terms of alignment and quality.
+
+**Major Findings:**
+
+1. WARP improves the quality and alignment of Gemma policies, outperforming other open-source LLMs.
+2. The use of EMA as a dynamic anchor in regularization allows for a gradual automatic annealing and relaxation of the regularization, leading to higher rewards.
+3. The application of spherical interpolation to merge independently fine-tuned policies improves generalization and reduces memorization.
+4. The linear interpolation towards the initialization enables the recovery of features from pre-training and improves the -reward Pareto front.
+
+**Analysis and Critique:**
+
+The paper presents a novel and promising approach to RLHF in LLMs. The use of model merging by weight averaging is a well-established technique in the literature, and the paper builds on this to propose a new alignment strategy. The experimental results show that WARP outperforms other RL alignment strategies in terms of -reward Pareto optimality. However, the paper does not discuss the computational cost of training WARP, which may be a limitation for some applications. Additionally, the paper does not provide a detailed comparison with other RLHF methods, such as Proximal Policy Optimization (PPO) or Deep Q-Networks (DQN), which could provide a more comprehensive evaluation of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16768v1](https://arxiv.org/abs/2406.16768v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16768v1](https://browse.arxiv.org/html/2406.16768v1)       |
+| Truncated       | False       |
+| Word Count       | 11719       |

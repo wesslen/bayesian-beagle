@@ -1,0 +1,40 @@
+
+---
+title: "A Teacher Is Worth A Million Instructions"
+id: "2406.19112v1"
+description: "Improved training method for smaller LLMs using larger models and domain-specific knowledge, outperforming larger models."
+author: Nikhil Kothari, Ravindra Nayak, Shreyas Shetty, Amey Patil, Nikesh Garera
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19112v1/extracted/5695630/figures/radar_plot.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19112v1/extracted/5695630/figures/radar_plot.png)
+
+### Summary:
+
+The paper presents a novel method for training smaller language models using knowledge distillation (KD) from larger models and a post-training domain alignment phase. The authors propose using a mixture of experts (8x7B) architectures to capture a wide range of variations from data alone, making them effective teachers for smaller models. The study also introduces a unique post-training domain alignment algorithm, Domain Alignment from Expert (DAE), which integrates domain-specific expert models into the training process to enhance the model's understanding of specialized domains while preserving its ability to generalize across broader contexts. The proposed method surpasses state-of-the-art language models with over 7B and 13B parameters, as evidenced by significant improvements in MT-Bench and AlpacaEval benchmarks.
+
+### Major Findings:
+
+1. Knowledge distillation from larger models can be an effective method for training smaller language models, challenging the belief that KD with a teacher model smaller than the student model does not work.
+2. The proposed Domain Alignment from Expert (DAE) algorithm allows for the imparting of domain-specific knowledge to the trained and aligned model while controlling its generalization capability.
+3. The study demonstrates that even with domain data just being 10% of the total training data, the model can effectively learn about the domain while still maintaining generalizability.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to training smaller language models using knowledge distillation from larger models and a post-training domain alignment phase. The proposed method challenges the commonly accepted beliefs about KD and demonstrates its effectiveness in improving the performance of smaller models. However, the study does not delve into the potential limitations or biases that may arise from using this method. Additionally, the authors do not discuss the computational resources required for implementing the proposed method, which could be a significant factor for researchers and practitioners considering its adoption. Further research is needed to explore these aspects and evaluate the method's applicability in various domains and use cases.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19112v1](https://arxiv.org/abs/2406.19112v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19112v1](https://browse.arxiv.org/html/2406.19112v1)       |
+| Truncated       | False       |
+| Word Count       | 5345       |

@@ -1,0 +1,44 @@
+
+---
+title: "Mental Modeling of Reinforcement Learning Agents by Language Models"
+id: "2406.18505v1"
+description: "LLMs currently can't fully mental model agents via inference alone, revealing their limitations."
+author: Wenhao Lu, Xufeng Zhao, Josua Spisak, Jae Hee Lee, Stefan Wermter
+date: "2024-06-26"
+image: "https://browse.arxiv.org/html/2406.18505v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18505v1/x1.png)
+
+### Summary:
+
+This study examines the ability of large language models (LLMs) to build a mental model of reinforcement learning (RL) agents, termed agent mental modeling. The research aims to unveil the potential of leveraging LLMs for elucidating RL agent behavior, addressing a key challenge in explainable reinforcement learning (XRL). The study proposes specific evaluation metrics and tests them on selected RL task datasets of varying complexity. The results disclose that LLMs are not yet capable of fully mental modeling agents through inference alone without further innovations.
+
+### Major Findings:
+
+1. LLMs can accurately predict agent behaviors, surpassing the random guess baseline, but performance declines with more challenging tasks like Acrobot and FetchPickAndPlace, which feature larger state and action spaces.
+2. Providing a longer history generally improves LLMs’ understanding of agent behaviors, but the benefits of including more history saturate and may even degrade, as seen with action prediction using Llama3-70b.
+3. LLMs perform better at predicting absolute action values than at predicting the bins into which the estimated action falls.
+4. LLMs’ dynamics understanding has the potential to be further improved, as inferring the dynamics in a simulated world for different tasks can be challenging in many aspects, such as reasoning on a high-dimension state, computing physics consequences, and so on.
+5. Understanding error occurs from various aspects, including task understanding, logic, history understanding, physical understanding, mathematical understanding, and missing information.
+
+### Analysis and Critique:
+
+This study provides valuable insights into the capabilities and limitations of modern LLMs in building a mental model of RL agents. However, it remains unclear whether LLMs can benefit from thousands of agent trajectories compared to the limited number of examples studied in this paper. The issue of hallucination may exist, and it is important to increase the robustness and reliability of using LLMs for explaining an agent’s behavior. The evaluation results underscore the need for developing methods to mitigate hallucinations.
+
+The study provides a macro-level analysis by examining the average model performance over multiple RL datasets of varying types. However, the capability of LLMs to build a mental model of agents may vary across different datasets. The experiments
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18505v1](https://arxiv.org/abs/2406.18505v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18505v1](https://browse.arxiv.org/html/2406.18505v1)       |
+| Truncated       | False       |
+| Word Count       | 9604       |

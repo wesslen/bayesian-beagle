@@ -1,0 +1,40 @@
+
+---
+title: "Fundamental Problems With Model Editing: How Should Rational Belief Revision Work in LLMs?"
+id: "2406.19354v1"
+description: "Model editing in language models critiqued, 12 open problems identified, semi-synthetic dataset proposed for evaluation."
+author: Peter Hase, Thomas Hofweber, Xiang Zhou, Elias Stengel-Eskin, Mohit Bansal
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19354v1/x1.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19354v1/x1.png)
+
+**Summary:**
+
+The paper critiques the predominant formulation of the model editing problem and proposes a semi-synthetic setting for evaluating model editing. The authors present 12 open challenges, summarized in three categories: (1) challenges with defining the model editing problem, (2) challenges with developing benchmarks, and (3) challenges with assuming LLMs have editable beliefs. The paper also introduces a semi-synthetic setting for evaluating model editing that precisely formalizes the problem, albeit with a simplified problem and models trained from scratch. The evaluation compares an LLM against a Bayesian model, reflecting that Bayesian epistemology is the gold standard in belief revision. The authors use facts from Wikidata to generate a corpus of noisy sentences, which they then train an autoregressive Transformer on. By fitting a Bayesian model to the same data, they obtain exact Bayesian posteriors that serve as the targets for evaluating language models. The experiments show that edits to language models generalize poorly with respect to other relevant beliefs, yielding inconsistent model beliefs.
+
+**Major Findings:**
+
+1. The model editing problem stands on shaky theoretical ground, as it has been framed as an instance of the belief revision problem in philosophy. This inheritance of longstanding challenges regarding how to rationally respond to new information about the world poses a significant issue for model editing.
+2. The paper presents 12 open challenges for model editing, organized into three categories: (1) challenges with defining the model editing problem, (2) challenges with developing benchmarks, and (3) challenges with assuming LLMs have editable beliefs.
+3. The authors introduce a semi-synthetic setting for evaluating model editing that precisely formalizes the problem, using a Bayesian model as the gold standard for belief revision.
+
+**Analysis and Critique:**
+
+The paper provides a comprehensive critique of the model editing problem and proposes a semi-synthetic setting for evaluating model editing. However, the proposed setting simplifies the problem and uses models trained from scratch, which may not fully capture the complexities of real-world LLMs. Additionally, the paper does not address potential solutions to the 12 open challenges it presents, leaving room for further research in this area. The experiments conducted in the paper
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19354v1](https://arxiv.org/abs/2406.19354v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19354v1](https://browse.arxiv.org/html/2406.19354v1)       |
+| Truncated       | False       |
+| Word Count       | 14906       |

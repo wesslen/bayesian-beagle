@@ -1,0 +1,44 @@
+
+---
+title: "Applying LLMs for Rescoring N-best ASR Hypotheses of Casual Conversations: Effects of Domain Adaptation and Context Carry-over"
+id: "2406.18972v1"
+description: "LLMs like Llama2 improve ASR in casual conversations, even without domain adaptation, and reduce computational cost with adaptation."
+author: Atsunori Ogawa, Naoyuki Kamo, Kohei Matsuura, Takanori Ashihara, Takafumi Moriya, Takatomo Kano, Naohiro Tawara, Marc Delcroix
+date: "2024-06-27"
+image: "../../../bayesian-beagle.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+- The study investigates the use of Large Language Models (LLMs) for rescoring N-best hypotheses of automatic speech recognition (ASR) in casual conversations.
+- The research focuses on Llama2, a Transformer-based LLM, and its performance on the CHiME-7 Distant ASR (DASR) task, which provides datasets of casual conversations between multiple participants.
+- The study examines the effects of domain adaptation and context carry-over on the performance of Llama2 in rescoring N-best hypotheses.
+- The experimental results show that Llama2 outperforms a standard-size domain-adapted Transformer-LM, especially when using a long context.
+- Domain adaptation shortens the context length needed with Llama2 to achieve its best performance, reducing the computational cost of the model.
+
+### Major Findings:
+1. **Llama2 outperforms a standard-size domain-adapted Transformer-LM**: Even without domain adaptation, Llama2 significantly improves the performance of rescoring N-best hypotheses in casual conversations.
+2. **Domain adaptation and context carry-over improve Llama2 performance**: Both domain adaptation and context carry-over contribute to the improved performance of Llama2 in rescoring N-best hypotheses.
+3. **Long context consideration with Llama2 achieves the lowest word error rate (WER)**: By considering a very long context (e.g., 1024 tokens), Llama2 captures the flow of a conversation and achieves the lowest WER, which is achieved with the domain-adapted Llama2.
+4. **Domain adaptation shortens the context length needed with Llama2**: Domain adaptation reduces the computational cost of Llama2 by shortening the context length needed to achieve the lowest WER.
+
+### Analysis and Critique:
+- The study provides valuable insights into the use of LLMs for rescoring N-best hypotheses in casual conversations.
+- The experimental results and findings are informative for researchers in this field, as they demonstrate the potential of LLMs, such as Llama2, in improving the performance of ASR systems.
+- However, the study does not address the limitations or potential bi
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18972v1](https://arxiv.org/abs/2406.18972v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18972v1](https://browse.arxiv.org/html/2406.18972v1)       |
+| Truncated       | False       |
+| Word Count       | 5457       |

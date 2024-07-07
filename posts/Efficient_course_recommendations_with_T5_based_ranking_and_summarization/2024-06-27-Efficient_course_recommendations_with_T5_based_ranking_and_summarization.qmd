@@ -1,0 +1,40 @@
+
+---
+title: "Efficient course recommendations with T5-based ranking and summarization"
+id: "2406.19018v1"
+description: "T5-based re-ranking and summarization improve course recommendation relevance, but speed and interpretability also matter in online evaluation."
+author: Thijmen Bijl, Niels van Weeren, Suzan Verberne
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19018v1/x1.png"
+categories: ['architectures', 'recommender', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19018v1/x1.png)
+
+### Summary:
+
+This paper presents a two-stage retrieval pipeline for a course recommender system that ranks courses for skill-occupation pairs. The in-production recommender system, BrightFit, provides course recommendations from multiple sources, but some course descriptions are long and noisy, while retrieval and ranking in an online system need to be highly efficient. The proposed pipeline uses RankT5 finetuned on MSMARCO as a re-ranker and compares two summarizers for course descriptions: a LongT5 model finetuned for the task and a generative LLM (Vicuna) with in-context learning. The paper also experiments with quantization to reduce the size of the ranking model and increase inference speed. The proposed two-stage ranking with automatic summarization achieves a substantial improvement over the in-production (BM25) ranker on two newly labeled datasets. However, the improved quality of the ranking was not confirmed by an A/B test, which showed a higher clickthrough rate for BM25-ranking than for the proposed two-stage retrieval.
+
+### Major Findings:
+
+1. The proposed two-stage retrieval pipeline with automatic summarization achieves a substantial improvement over the in-production (BM25) ranker on two newly labeled datasets.
+2. Quantization of RankT5 results in a 40% speed-up without compromising the quality of the recommendations.
+3. The improved quality of the ranking was confirmed by a questionnaire completed by 29 respondents, but not by an A/B test, which showed a higher clickthrough rate for BM25-ranking than for the proposed two-stage retrieval.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to course recommendation with a two-stage retrieval pipeline that leverages the power of transformer-based models while keeping the time to generate recommendations reasonable. The use of quantization to reduce the size of the ranking model and increase inference speed is also a valuable contribution. However, the paper does not discuss the potential limitations or biases of the proposed approach, nor does it address the issue of cold start, which is a common problem in recommender systems. Additionally, the fact that the improved quality of the ranking was not confirmed by an A/B test raises questions about the generalizability of the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19018v1](https://arxiv.org/abs/2406.19018v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19018v1](https://browse.arxiv.org/html/2406.19018v1)       |
+| Truncated       | False       |
+| Word Count       | 9587       |

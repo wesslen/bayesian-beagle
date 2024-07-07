@@ -1,0 +1,43 @@
+
+---
+title: "Suri: Multi-constraint Instruction Following for Long-form Text Generation"
+id: "2406.19371v1"
+description: "Suri-I-ORPO generates longer, coherent, and preferred long-form texts from complex instructions, outperforming base models."
+author: Chau Minh Pham, Simeng Sun, Mohit Iyyer
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19371v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19371v1/x1.png)
+
+### Summary:
+
+The paper introduces Suri, a dataset for long-form text generation with multi-constraint instructions. The dataset consists of 20K human-written texts paired with LLM-generated backtranslated instructions containing multiple complex constraints. The authors propose Instructional ORPO (I-ORPO), an alignment method based on the ORPO algorithm, to improve the instruction-following abilities of LLMs for long-form text generation. The study demonstrates that both SFT and I-ORPO models generate significantly longer texts (5K tokens) than base models without significant quality deterioration. Human evaluation shows that while both SFT and I-ORPO models satisfy most constraints, Suri-I-ORPO generations are generally preferred for their coherent and informative incorporation of the constraints.
+
+### Major Findings:
+
+1. The Suri dataset, consisting of 20K human-written texts paired with LLM-generated backtranslated instructions, is introduced for long-form text generation with multi-constraint instructions.
+2. The authors propose Instructional ORPO (I-ORPO), an alignment method based on the ORPO algorithm, to improve the instruction-following abilities of LLMs for long-form text generation.
+3. Both SFT and I-ORPO models generate significantly longer texts (5K tokens) than base models without significant quality deterioration.
+4. Human evaluation shows that while both SFT and I-ORPO models satisfy most constraints, Suri-I-ORPO generations are generally preferred for their coherent and informative incorporation of the constraints.
+
+### Analysis and Critique:
+
+The paper presents a valuable contribution to the field of long-form text generation with multi-constraint instructions. The introduction of the Suri dataset and the I-ORPO alignment method addresses a gap in the existing research, which has primarily focused on tasks with simple instructions and short responses. The study demonstrates the effectiveness of the proposed methods in generating high-quality, long-form responses while maintaining effectiveness at following constraints.
+
+However, there are some limitations and potential areas for improvement. The study focuses on fine-tuning Mistral-7b-Instruct-v0.2, and further experiments with other models on the dataset could provide additional insights. The impact of surface features on I-ORPO, such
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19371v1](https://arxiv.org/abs/2406.19371v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19371v1](https://browse.arxiv.org/html/2406.19371v1)       |
+| Truncated       | False       |
+| Word Count       | 8097       |

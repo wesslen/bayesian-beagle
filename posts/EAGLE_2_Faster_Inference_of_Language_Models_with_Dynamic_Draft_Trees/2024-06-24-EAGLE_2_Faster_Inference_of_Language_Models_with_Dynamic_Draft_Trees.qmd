@@ -1,0 +1,43 @@
+
+---
+title: "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees"
+id: "2406.16858v1"
+description: "EAGLE-2, an upgrade to EAGLE, offers 20%-40% faster speculative sampling for LLMs, preserving text distribution without loss."
+author: Yuhui Li, Fangyun Wei, Chao Zhang, Hongyang Zhang
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16858v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16858v1/x1.png)
+
+### Summary:
+
+The paper introduces EAGLE-2, a new technique for context-aware dynamic draft trees in drafting modeling. EAGLE-2 improves upon EAGLE by leveraging the well-calibrated draft model to approximate acceptance rates and dynamically adjust the draft tree structure. This results in a 20%-40% faster speedup ratio compared to EAGLE-1, with a speedup ratio of 3.05x-4.26x. EAGLE-2 ensures that the distribution of the generated text remains unchanged, making it a lossless acceleration algorithm.
+
+### Major Findings:
+
+1. EAGLE-2 achieves a 20%-40% faster speedup ratio compared to EAGLE-1, with a speedup ratio of 3.05x-4.26x.
+2. EAGLE-2 ensures that the distribution of the generated text remains unchanged, making it a lossless acceleration algorithm.
+3. EAGLE-2 leverages the well-calibrated draft model to approximate acceptance rates and dynamically adjust the draft tree structure.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison of EAGLE-2 with other state-of-the-art speculative sampling methods, which could help to better understand its performance.
+2. The paper does not discuss the potential limitations or shortcomings of EAGLE-2, such as its computational complexity or the impact of the draft model's accuracy on the performance of EAGLE-2.
+3. The paper does not provide a clear explanation of how the dynamic adjustment of the draft tree structure is performed, which could help to better understand the algorithm.
+4. The paper does not discuss the potential applications of EAGLE-2 in real-world scenarios, which could help to better understand its practical significance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16858v1](https://arxiv.org/abs/2406.16858v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16858v1](https://browse.arxiv.org/html/2406.16858v1)       |
+| Truncated       | False       |
+| Word Count       | 6645       |

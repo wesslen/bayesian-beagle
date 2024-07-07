@@ -1,0 +1,40 @@
+
+---
+title: "ELCoRec: Enhance Language Understanding with Co-Propagation of Numerical and Categorical Features for Recommendation"
+id: "2406.18825v1"
+description: "TL;DR: ELCoRec enhances language models for recommendation by co-propagating numerical and categorical features, improving preference understanding and recent interest capture."
+author: Jizheng Chen, Kounianhua Du, Jianghao Lin, Bo Chen, Ruiming Tang, Weinan Zhang
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.18825v1/x1.png"
+categories: ['recommender', 'hci', 'prompt-engineering', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18825v1/x1.png)
+
+### Summary:
+
+The paper introduces ELCoRec, a framework designed to enhance language understanding with co-propagation of numerical and categorical features for recommendation. The framework aims to address the challenges of numerical insensitivity and encoding overhead in large language models (LLMs) for accurate user behavior modeling. ELCoRec introduces a downstream graph attention network (GAT) as a unified expert network for feature encoding, which can better utilize heterogeneous nodes to encode features of different kinds compared to general CTR prediction models. The framework also proposes a Recent interaction Augmented Prompt (RAP) template to capture both the global information related to the target item and the recent information emphasizing the latest trends of user preferences.
+
+### Major Findings:
+
+1. ELCoRec addresses the numerical insensitivity problem by parallelly propagating numerical and categorical features using a GAT expert network, offering an informative user preference encoding that enhances LLM's understanding towards numerical features.
+2. The encoding overhead is alleviated by injecting the preference encoding into the LLM's semantic space via soft prompting at the cost of a single token embedding.
+3. The RAP template is proposed to better obtain user's recent interests and form the textual input of ELCoRec, which connects user history retrieved item sequence and recent item sequence along with the placeholder token for embedding injection.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to addressing the challenges of numerical insensitivity and encoding overhead in LLMs for recommendation tasks. The proposed ELCoRec framework and RAP template offer a promising solution to these issues by incorporating recent user interactions and leveraging a GAT expert network for feature encoding. However, the paper does not discuss potential limitations, unanswered questions, or conflicting evidence that may arise from the proposed method. Additionally, the paper does not provide a detailed comparison with other existing methods that address similar challenges in LLMs for recommendation tasks. Further research is needed to evaluate the performance of ELCoRec in comparison to other state-of-the-art methods and to identify any potential shortcomings or areas for improvement.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18825v1](https://arxiv.org/abs/2406.18825v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18825v1](https://browse.arxiv.org/html/2406.18825v1)       |
+| Truncated       | False       |
+| Word Count       | 9136       |

@@ -1,0 +1,44 @@
+
+---
+title: "PORT: Preference Optimization on Reasoning Traces"
+id: "2406.16061v1"
+description: "Preference optimization on reasoning steps enhances language model accuracy, as shown by up to 8.47% increase on GSM8K benchmark."
+author: Salem Lahlou, Abdalgader Abubaker, Hakim Hacid
+date: "2024-06-23"
+image: "https://browse.arxiv.org/html/2406.16061v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16061v1/x1.png)
+
+### Summary:
+
+This paper proposes using preference optimization methods, such as Direct Preference Optimization (DPO), on Chain-of-Thought (CoT) steps to improve the reasoning performances of language models. The authors introduce two complementary schemes for generating rejected answers: digit corruption and weak LLM prompting. The approach is tested on the GSM8K, AQuA-RAT, and ARC benchmarks using Falcon2-11B and Mistral-7B models, resulting in increased accuracy without additional annotations. The paper suggests that creating more datasets of reasoning traces could further boost LLM performances on informal reasoning tasks.
+
+### Major Findings:
+
+1. The proposed approach, which uses DPO on CoT steps, leads to increased accuracy on the GSM8K, AQuA-RAT, and ARC benchmarks for Falcon2-11B and Mistral-7B models.
+2. The digit corruption scheme for generating rejected answers can lead to up to a relative  increase in accuracy on the GSM8K benchmark without any extra annotations.
+3. The weak LLM prompting scheme for generating rejected answers can improve results on the ARC benchmark.
+
+### Analysis and Critique:
+
+1. The paper does not provide a comprehensive comparison of the proposed approach with other methods for improving reasoning performances in language models.
+2. The authors do not discuss potential limitations or biases in their approach, such as the reliance on specific types of datasets or the generalizability of the findings to other language models.
+3. The paper does not address the computational cost of implementing the proposed approach, which could be a significant factor in its adoption by researchers and practitioners.
+4. The authors do not explore the potential impact of their approach on other natural language tasks beyond reasoning, such as summarization or translation.
+5. The paper does not discuss the ethical implications of using preference optimization methods to improve language model performance, such as the potential for reinforcing biases present in the training data.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16061v1](https://arxiv.org/abs/2406.16061v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16061v1](https://browse.arxiv.org/html/2406.16061v1)       |
+| Truncated       | False       |
+| Word Count       | 8636       |

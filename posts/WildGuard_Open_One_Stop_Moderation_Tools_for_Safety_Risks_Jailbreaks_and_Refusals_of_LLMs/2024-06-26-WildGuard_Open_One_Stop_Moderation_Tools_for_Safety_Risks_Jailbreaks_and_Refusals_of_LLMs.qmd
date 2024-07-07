@@ -1,0 +1,40 @@
+
+---
+title: "WildGuard: Open One-Stop Moderation Tools for Safety Risks, Jailbreaks, and Refusals of LLMs"
+id: "2406.18495v1"
+description: "WildGuard is an open-source LLM safety tool that excels in identifying harmful prompts, detecting safety risks, and determining model refusal rates, outperforming existing models and matching GPT-4 performance."
+author: Seungju Han, Kavel Rao, Allyson Ettinger, Liwei Jiang, Bill Yuchen Lin, Nathan Lambert, Yejin Choi, Nouha Dziri
+date: "2024-06-26"
+image: "https://browse.arxiv.org/html/2406.18495v1/x2.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18495v1/x2.png)
+
+# Summary:
+
+The paper introduces WildGuard, an open-source, lightweight moderation tool for LLM safety that addresses three goals: identifying malicious intent in user prompts, detecting safety risks in model responses, and determining model refusal rates. WildGuard serves the increasing needs for automatic safety moderation and evaluation of LLM interactions, providing a one-stop tool with enhanced accuracy and broad coverage across 13 risk categories. The paper also presents WildGuardMix, a large-scale and carefully balanced multi-task safety moderation dataset with 92K labeled examples, and WildGuardTest, a high-quality human-annotated moderation test set with 5K labeled items covering broad risk scenarios.
+
+# Major Findings:
+
+1. Existing open tools are unreliable on adversarial prompts and far behind GPT-4 in detecting harm in vanilla prompts.
+2. Existing open tools struggle with measuring refusals in model responses.
+3. WildGuard outperforms the strongest existing open-source baselines on F1 scores across all three tasks (by up to 26.4% on refusal detection) and matches GPT-4 across tasks, surpassing it by up to 3.9% on adversarial prompt harmfulness.
+
+# Analysis and Critique:
+
+The paper presents a comprehensive evaluation of WildGuard against existing LLM safety moderation tools, demonstrating its superior performance across various benchmarks and tasks. However, the paper does not discuss potential limitations or biases in the WildGuardMix dataset, which could impact the generalizability of the results. Additionally, the paper does not provide a detailed comparison of WildGuard with other state-of-the-art LLM safety moderation tools, such as those based on reinforcement learning or adversarial training. Future work could address these limitations by conducting a more thorough comparison of WildGuard with other state-of-the-art tools and investigating potential biases in the WildGuardMix dataset.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18495v1](https://arxiv.org/abs/2406.18495v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18495v1](https://browse.arxiv.org/html/2406.18495v1)       |
+| Truncated       | False       |
+| Word Count       | 13217       |

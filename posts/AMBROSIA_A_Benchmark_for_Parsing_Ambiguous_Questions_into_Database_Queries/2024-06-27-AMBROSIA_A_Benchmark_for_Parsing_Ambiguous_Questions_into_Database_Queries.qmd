@@ -1,0 +1,41 @@
+
+---
+title: "AMBROSIA: A Benchmark for Parsing Ambiguous Questions into Database Queries"
+id: "2406.19073v1"
+description: "AMBROSIA benchmark tests LLMs on interpreting ambiguous text-to-SQL queries, revealing challenges for advanced models."
+author: Irina Saparina, Mirella Lapata
+date: "2024-06-27"
+image: "../../img/2406.19073v1/image_1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2406.19073v1/image_1.png)
+
+**Summary:**
+
+The paper introduces a new benchmark, , for text-to-SQL parsers capable of recognizing and interpreting ambiguous requests. The dataset contains questions showcasing three different types of ambiguity (scope ambiguity, attachment ambiguity, and vagueness), their interpretations, and corresponding SQL queries. The dataset includes 846 multi-table databases, ambiguous questions, unambiguous interpretations, and complex SQL queries (4,242 in total). The authors aim to mimic real-world semantic parsing scenarios with realistic and diverse databases, creating them automatically in three steps: specifying a domain of interest, generating key concepts and relations, and generating SQL statements to construct tables with the desired structure. The paper also presents the results of benchmarking multiple advanced large language models on , revealing that even the most advanced models struggle to identify and interpret ambiguity in questions.
+
+**Major Findings:**
+
+1. The  dataset covers 16 distinct domains, includes 846 multi-table databases, ambiguous questions, unambiguous interpretations, and complex SQL queries (4,242 in total).
+2. The dataset includes three types of ambiguity: scope ambiguity, attachment ambiguity, and vagueness, showcasing a diverse range of SQL queries.
+3. The authors use a novel approach to generate databases that support ambiguity, involving controlled generation of databases from scratch using a large language model.
+4. The benchmarking of multiple advanced large language models on  reveals that even the most advanced models struggle to identify and interpret ambiguity in questions.
+
+**Analysis and Critique:**
+
+The paper presents a novel benchmark for text-to-SQL parsers capable of recognizing and interpreting ambiguous requests. The dataset is diverse and covers a wide range of SQL queries, making it a valuable resource for researchers in the field. However, the paper does not provide a detailed analysis of the performance of the benchmarked models, making it difficult to assess the effectiveness of the proposed approach. Additionally, the paper does not discuss potential limitations or biases in the dataset, which could impact the generaliz
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19073v1](https://arxiv.org/abs/2406.19073v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19073v1](https://browse.arxiv.org/html/2406.19073v1)       |
+| Truncated       | False       |
+| Word Count       | 20704       |

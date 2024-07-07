@@ -1,0 +1,47 @@
+
+---
+title: "Fine-tuned network relies on generic representation to solve unseen cognitive task"
+id: "2406.18926v1"
+description: "Fine-tuned models rely on pretrained representations, while scratch-trained models develop task-specific mechanisms."
+author: Dongyan Lin
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.18926v1/extracted/5694287/figures/fig1_task.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18926v1/extracted/5694287/figures/fig1_task.png)
+
+### Summary:
+
+- The study investigates the ability of pretrained GPT-2 to solve a context-dependent decision-making problem based on numerical comparison through fine-tuning.
+- The task is adapted from neuroscience and cognitive science literature and is entirely novel to GPT models.
+- The results show that fine-tuned models depend heavily on pretrained representations, particularly in later layers, while models trained from scratch develop different, more task-specific mechanisms.
+- The findings highlight the advantages and limitations of pretraining for task generalization and underscore the need for further investigation into the mechanisms underpinning task-specific fine-tuning in LLMs.
+
+### Major Findings:
+
+1. Fine-tuned models rely more on pretrained representations to solve a novel decision-making task, while models optimized from scratch develop alternative mechanisms.
+2. Fine-tuned models show significant reliance on attention heads in later layers, which are likely crucial for generic language modeling, as these heads were developed during pretraining.
+3. Models trained from scratch develop task-specific solutions, with significant performance drops upon ablating heads in the first layer, suggesting that these heads are vital for extracting task-relevant numerical information.
+
+### Analysis and Critique:
+
+- The study provides valuable insights into the mechanisms underlying task-specific fine-tuning in LLMs.
+- The use of a novel task adapted from neuroscience and cognitive science literature is a strength of the study, as it allows for the exploration of the data with computational neuroscience methods and direct comparisons between representations in biological and artificial neural networks.
+- However, the study is limited by its focus on a single cognitive task, and further studies with more diverse cognitive tasks are required to understand how pretrained representations support task-specific fine-tuning.
+- Additionally, the study relies on qualitative observations, and the development of new quantitative metrics is needed to ensure scientific rigor in the results.
+- The field of mechanistic interpretability in LLMs, which is also largely qualitative at present, requires new quantitative methods to advance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18926v1](https://arxiv.org/abs/2406.18926v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18926v1](https://browse.arxiv.org/html/2406.18926v1)       |
+| Truncated       | False       |
+| Word Count       | 4648       |

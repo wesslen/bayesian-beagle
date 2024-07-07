@@ -1,0 +1,46 @@
+
+---
+title: "Jump Starting Bandits with LLM-Generated Prior Knowledge"
+id: "2406.19317v1"
+description: "LLMs improve contextual bandits in recommendation systems, reducing regret and data-gathering costs."
+author: Parand A. Alamdari, Yanshuai Cao, Kevin H. Wilson
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19317v1/extracted/5696345/figs/pre_train.png"
+categories: ['recommender', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19317v1/extracted/5696345/figs/pre_train.png)
+
+### Summary:
+
+The paper presents a novel approach to jump-start contextual multi-armed bandits using Large Language Models (LLMs) to simulate human preferences and reduce online learning regret. The proposed method, Contextual Bandits with LLM Initialization (CBLI), generates a pre-training dataset of approximate human preferences using LLMs, significantly reducing data-gathering costs and improving performance for the first users in a campaign. The authors empirically demonstrate the effectiveness of CBLI in two settings: a standard contextual bandit and a sleeping bandit setup, achieving 14-17% and 19-20% reduction in early regret, respectively.
+
+### Major Findings:
+
+1. LLMs can be used to generate synthetic reward distributions for pre-training contextual bandits, improving their performance and reducing online learning regret.
+2. CBLI achieves a significant reduction in early regret in both standard contextual bandit and sleeping bandit setups.
+3. Even when certain privacy-sensitive attributes are withheld, CBLI still achieves a substantial reduction in early regret.
+
+### Analysis and Critique:
+
+1. The paper does not address potential biases in LLM-generated responses, which could impact the performance of CBLI in real-world applications.
+2. The authors do not discuss the scalability of CBLI to a larger number of arms, which could be a limitation in some applications.
+3. The focus on total, accumulated regret may not be sufficient in contexts where other goals or constraints are present, such as adaptive treatment assignment.
+4. The paper does not explore the potential negative impacts of CBLI on certain subpopulations of interest, which should be considered in future work.
+5. The authors acknowledge that distributional misalignment between LLM-generated rewards and ground truth could lead to worse regret than cold-starting the CB, but do not provide a solution to this potential issue.
+
+Overall, the paper presents an innovative approach to jump-start contextual multi-armed bandits using LLMs, demonstrating its effectiveness in reducing early regret. However, further research is needed to address potential biases, scalability, and the impact on specific subpopulations. Additionally, robustness techniques should be incorporated to maximize the usefulness of CBLI in the future.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19317v1](https://arxiv.org/abs/2406.19317v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19317v1](https://browse.arxiv.org/html/2406.19317v1)       |
+| Truncated       | False       |
+| Word Count       | 8270       |

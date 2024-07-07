@@ -1,0 +1,40 @@
+
+---
+title: "ShadowLLM: Predictor-based Contextual Sparsity for Large Language Models"
+id: "2406.16635v1"
+description: "ShadowLLM improves end-to-end accuracy by 15%+, speeds up to 20% over DejaVu, validated on models up to 30B parameters."
+author: Yash Akhauri, Ahmed F AbouElhamayed, Jordan Dotzel, Zhiru Zhang, Alexander M Rush, Safeen Huda, Mohamed S Abdelfattah
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16635v1/x2.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16635v1/x2.png)
+
+### Summary:
+
+The paper introduces ShadowLLM, a novel predictor-based contextual sparsity approach for large language models (LLMs). This method aims to improve the accuracy-sparsity trade-off and reduce latency compared to previous methods. ShadowLLM uses more accurate pruning criteria and a simpler sparsity predictor, resulting in over 15% improvement in end-to-end accuracy without increasing latency. The method achieves up to a 20% speed-up over the state-of-the-art DejaVu framework and is validated on models with up to 30 billion parameters.
+
+### Major Findings:
+
+1. ShadowLLM uses more accurate pruning criteria, such as gradient-based sensitivity methods, to assess attention head and neuron importance in LLMs.
+2. The method employs a single predictor at the first layer of the LLM to model the entire LLM sparsity pattern, improving performance by 20.6% without affecting accuracy.
+3. ShadowLLM outperforms the DejaVu framework in terms of accuracy and performance, achieving up to a 20% speed-up and over 15% improvement in end-to-end accuracy without increasing latency.
+
+### Analysis and Critique:
+
+While the paper presents promising results, there are some potential limitations and areas for improvement. The method has only been validated on models with up to 30 billion parameters, and it is unclear how well it would perform on even larger models. Additionally, the paper does not discuss the potential impact of the method on the training process or the computational resources required for training. Further research is needed to address these limitations and validate the method on a wider range of models and tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16635v1](https://arxiv.org/abs/2406.16635v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16635v1](https://browse.arxiv.org/html/2406.16635v1)       |
+| Truncated       | False       |
+| Word Count       | 6242       |

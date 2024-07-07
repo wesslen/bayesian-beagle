@@ -1,0 +1,48 @@
+
+---
+title: "Large Language Models are Interpretable Learners"
+id: "2406.17224v1"
+description: "LSPs, combining LLMs and symbolic programs, offer interpretable, accurate, and transferable knowledge for decision-making."
+author: Ruochen Wang, Si Si, Felix Yu, Dorothea Wiesmann, Cho-Jui Hsieh, Inderjit Dhillon
+date: "2024-06-25"
+image: "https://browse.arxiv.org/html/2406.17224v1/extracted/5689113/Figures/pipeline/apex_inference.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17224v1/extracted/5689113/Figures/pipeline/apex_inference.png)
+
+# Summary:
+
+The paper presents a novel framework called LLM-Symbolic Programs (LSPs) that aims to bridge the gap between expressiveness and interpretability in machine learning models. LSPs leverage the power of pretrained Large Language Models (LLMs) to provide a massive set of interpretable modules that can transform raw input into natural language concepts. Symbolic programs then integrate these modules into an interpretable decision rule.
+
+The authors propose a divide-and-conquer approach to incrementally build the program from scratch, where the learning process of each step is guided by LLMs. To evaluate the effectiveness of LSPs, they introduce IL-Bench, a collection of diverse tasks, including both synthetic and real-world scenarios across different modalities.
+
+Empirical results demonstrate LSP's superior performance compared to traditional neurosymbolic programs and vanilla automatic prompt tuning methods. Moreover, the knowledge learned by LSP is a combination of natural language descriptions and symbolic rules, making it easily transferable to humans, other LLMs, and generalizing well to out-of-distribution samples.
+
+## Major Findings:
+
+1. LSPs effectively bridge the gap between expressiveness and interpretability in machine learning models by leveraging pretrained LLMs and symbolic programs.
+2. The proposed divide-and-conquer approach to incrementally build the program from scratch, guided by LLMs, demonstrates superior performance compared to traditional methods.
+3. The knowledge learned by LSPs is easily transferable to humans, other LLMs, and generalizes well to out-of-distribution samples.
+
+## Analysis and Critique:
+
+The paper presents an innovative approach to addressing the trade-off between expressiveness and interpretability in machine learning models. The use of pretrained LLMs and symbolic programs in LSPs offers a promising solution to this long-standing challenge.
+
+However, the paper does not discuss potential limitations or unanswered questions that may arise from the proposed method. For instance, the reliance on pretrained LLMs may introduce biases or limitations in the learned programs, as these models are trained on specific datasets and may not generalize well to all scenarios. Additionally, the paper does not address the computational cost of training LSPs, which may be a significant concern for large-scale applications.
+
+Fur
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17224v1](https://arxiv.org/abs/2406.17224v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17224v1](https://browse.arxiv.org/html/2406.17224v1)       |
+| Truncated       | False       |
+| Word Count       | 8763       |

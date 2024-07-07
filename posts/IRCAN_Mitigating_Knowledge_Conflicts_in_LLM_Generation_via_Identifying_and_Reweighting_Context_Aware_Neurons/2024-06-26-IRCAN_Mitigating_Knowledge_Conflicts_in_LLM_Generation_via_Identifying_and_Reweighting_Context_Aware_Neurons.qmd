@@ -1,0 +1,45 @@
+
+---
+title: "IRCAN: Mitigating Knowledge Conflicts in LLM Generation via Identifying and Reweighting Context-Aware Neurons"
+id: "2406.18406v1"
+description: "IRCAN framework improves LLMs' context-sensitive output, resolving knowledge conflicts."
+author: Dan Shi, Renren Jin, Tianhao Shen, Weilong Dong, Xinwei Wu, Deyi Xiong
+date: "2024-06-26"
+image: "https://browse.arxiv.org/html/2406.18406v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18406v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel framework, IRCAN (Identifying and Reweighting Context-Aware Neurons), to address knowledge conflicts in large language models (LLMs). The framework identifies neurons that significantly contribute to context processing using a context-aware attribution score derived from integrated gradients. These identified context-aware neurons are then strengthened via reweighting to steer LLMs towards generating context-sensitive outputs. The proposed method is evaluated across various models and tasks, demonstrating significant improvements in handling knowledge conflicts and offering a scalable, plug-and-play solution that can be integrated with existing models.
+
+### Major Findings:
+
+1. IRCAN effectively identifies neurons responsible for processing context within LLMs and improves their fidelity to contextual knowledge.
+2. By enhancing context-aware neurons, LLMs can be guided to remain more faithful to the information provided in the context when facing knowledge conflicts.
+3. IRCAN can serve as a plug-and-play module, easily integrated with existing approaches, and has achieved state-of-the-art performance in completion tasks.
+
+### Analysis and Critique:
+
+1. The paper pioneers the exploration of attribution methods to knowledge conflicts for LLMs, offering a novel approach to resolving knowledge conflicts.
+2. The proposed attribution method based on integrated gradients accurately reflects the importance of neurons and is invariant to implementation details.
+3. The paper conducts extensive experiments on a diverse array of models and tasks, demonstrating the effectiveness of the proposed approach in improving the performance of LLMs on tasks involving knowledge conflicts.
+4. The paper could benefit from further exploration of the method's applicability to other types of knowledge conflicts and its potential limitations.
+5. The paper could also provide more detailed analysis of the identified context-aware neurons and their role in processing contextual information.
+6. The paper could discuss potential ethical implications and considerations related to the proposed method, such as the potential for bias in the identified context-aware neurons.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18406v1](https://arxiv.org/abs/2406.18406v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18406v1](https://browse.arxiv.org/html/2406.18406v1)       |
+| Truncated       | False       |
+| Word Count       | 6376       |

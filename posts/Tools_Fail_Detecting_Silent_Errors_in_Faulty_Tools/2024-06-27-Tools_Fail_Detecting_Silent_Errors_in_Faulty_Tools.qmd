@@ -1,0 +1,50 @@
+
+---
+title: "Tools Fail: Detecting Silent Errors in Faulty Tools"
+id: "2406.19228v1"
+description: "LLMs can detect silent tool errors and plan better, improving their use as tools."
+author: Jimin Sun, So Yeon Min, Yingshan Chang, Yonatan Bisk
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19228v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19228v1/x1.png)
+
+### Summary:
+
+- The paper introduces a framework for tools that focuses on a model's ability to detect "silent" tool errors and plan accordingly, aligning with the increasing use of models as tools.
+- The authors provide an initial approach to failure recovery with promising results in a controlled calculator setting and embodied agent planning.
+- The paper categorizes sources of tool-related errors and recovery methods, focusing on the often overlooked case of "tool-based" failures.
+- The authors investigate tool errors in two distinct settings: a controlled environment with an LLM solving arithmetic problems using a broken calculator and a more natural "broken" tool setting involving a multimodal instruction-following agent.
+- The paper examines how much and what type of deviation is necessary to trigger the LLM's recognition of the tool error in each setting.
+
+### Major Findings:
+
+1. LLMs can detect incorrect tool outputs without explicit error signals, but they tend to overtrust tools, copying incorrect outputs rather than ignoring them.
+2. In-context intervention strategies, such as a simple disclaimer, prediction confidence scores, and a checklist of criteria to look out for, can help LLMs notice and correct mistakes.
+3. Smaller models are more sensitive to in-context information, while larger models have more consistent performance.
+4. CoT prompting and in-context examples can help models recover performance, nearly to the best no-tool scores.
+5. LLMs can identify incorrect outputs, even when they are not able to produce the correct answer, by detecting mistakes in the tool outputs.
+
+### Analysis and Critique:
+
+- The paper provides a comprehensive framework for understanding and addressing tool-related errors in LLMs, focusing on the often overlooked case of "tool-based" failures.
+- The authors' investigation of tool errors in two distinct settings offers valuable insights into the challenges and potential solutions for improving LLM performance in tool-use scenarios.
+- The paper's findings on the effectiveness of in-context intervention strategies and the impact of model size on performance are particularly noteworthy.
+- However, the paper could benefit from a more detailed analysis of the limitations and potential biases of the proposed approach, as well as a discussion of alternative methods for addressing tool-related errors in LLMs.
+- Additionally
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19228v1](https://arxiv.org/abs/2406.19228v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19228v1](https://browse.arxiv.org/html/2406.19228v1)       |
+| Truncated       | False       |
+| Word Count       | 8580       |

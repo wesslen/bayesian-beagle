@@ -1,0 +1,42 @@
+
+---
+title: "FastMem: Fast Memorization of Prompt Improves Context Awareness of Large Language Models"
+id: "2406.16069v1"
+description: "FastMem improves LLMs' context awareness, boosting accuracy in tasks like comprehension and summarization."
+author: Junyi Zhu, Shuochen Liu, Yu Yu, Bo Tang, Yibo Yan, Zhiyu Li, Feiyu Xiong, Tong Xu, Matthew B. Blaschko
+date: "2024-06-23"
+image: "https://browse.arxiv.org/html/2406.16069v1/extracted/5685990/Graphics/comparison.png"
+categories: ['prompt-engineering', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16069v1/extracted/5685990/Graphics/comparison.png)
+
+### Summary:
+
+The paper introduces FastMem, a novel method designed to enhance the context awareness of instruction fine-tuned large language models (LLMs) by maximizing the likelihood of the prompt before inference. FastMem optimizes only the last Feed-Forward Network (FFN) module, ensuring efficient optimization without overfitting. The method significantly improves the model's ability to comprehend and accurately follow the context, as demonstrated by substantial gains in reading comprehension, text summarization, and adherence to output structures.
+
+### Major Findings:
+
+1. FastMem improves the accuracy of Llama 3-8B-Inst on the NQ-SWAP dataset from 59.1% to 71.6%.
+2. FastMem reduces the output structure failure rate of Qwen 1.5-4B-Chat from 34.9% to 25.5%.
+3. FastMem can be completed within a few seconds and without an increase in peak memory usage.
+
+### Analysis and Critique:
+
+FastMem offers a promising solution to enhance the reliability and accuracy of LLMs in various applications. However, the method has some limitations. For instance, it does not explore the use of other parameter-efficient approaches, such as LoRA, to extend the optimization to more layers while maintaining high computational efficiency and enhancing performance. Additionally, FastMem assumes that the reference or contextual information is accurate and up-to-date, which may not always be the case. The method also assumes that the instructions given to FastMem for memorization are benign, and unexpected behavior may be elicited if they are harmful.
+
+Overall, FastMem is a valuable contribution to the field of LLMs, but further research is needed to address its limitations and explore its potential in other contexts.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16069v1](https://arxiv.org/abs/2406.16069v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16069v1](https://browse.arxiv.org/html/2406.16069v1)       |
+| Truncated       | False       |
+| Word Count       | 7001       |

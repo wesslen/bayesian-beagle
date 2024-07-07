@@ -1,0 +1,46 @@
+
+---
+title: "LICO: Large Language Models for In-Context Molecular Optimization"
+id: "2406.18851v1"
+description: "LICO enhances LLMs for black-box optimization, excelling in molecular property optimization via in-context prompting."
+author: Tung Nguyen, Aditya Grover
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.18851v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18851v1/x1.png)
+
+# Summary:
+
+The paper introduces LICO, a method that leverages pretrained Large Language Models (LLMs) for black-box optimization. LICO extends existing LLMs to non-language domains by using separate embedding and prediction layers. The model is trained on a diverse set of semi-synthetic functions for few-shot predictions, enabling efficient generalization to various optimization tasks. LICO achieves state-of-the-art performance on the Practical Molecular Optimization (PMO) benchmark, which includes over 20 objective functions. Ablation analyses highlight the importance of incorporating language instruction to guide in-context learning and semi-synthetic training for better generalization.
+
+# Major Findings:
+
+1. LICO achieves state-of-the-art performance on the PMO benchmark, outperforming existing methods in molecular optimization.
+2. Incorporating language instruction to guide in-context learning and semi-synthetic training improves the model's generalization capabilities.
+3. Larger LLMs with stronger pattern-matching capabilities obtained through extensive language pretraining perform better in black-box optimization tasks.
+
+# Analysis and Critique:
+
+The paper presents a novel approach to black-box optimization using pretrained LLMs, demonstrating its effectiveness on the PMO benchmark. However, the method assumes the availability of an accessible set of intrinsic functions, which may not be the case for all scientific domains. In such cases, a better synthetic data generation process incorporating domain knowledge is needed to aid generalization.
+
+The paper also highlights the importance of using a pretrained LLM, as a scratch model with the same number of parameters performs much worse. This emphasizes the value of the pattern-matching capabilities that LLMs acquire through extensive language pretraining.
+
+The authors provide a detailed description of the methodology, training details, and optimization hyperparameters, ensuring the reproducibility of their results. However, the paper does not discuss the limitations of the work performed by the authors, which could provide valuable insights for future research.
+
+In conclusion, the paper presents a promising approach to black-box optimization using pretrained LLMs, demonstrating its potential in molecular optimization. However, further research is needed to evaluate its applicability and generality in other domains and explore other
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18851v1](https://arxiv.org/abs/2406.18851v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18851v1](https://browse.arxiv.org/html/2406.18851v1)       |
+| Truncated       | False       |
+| Word Count       | 11485       |

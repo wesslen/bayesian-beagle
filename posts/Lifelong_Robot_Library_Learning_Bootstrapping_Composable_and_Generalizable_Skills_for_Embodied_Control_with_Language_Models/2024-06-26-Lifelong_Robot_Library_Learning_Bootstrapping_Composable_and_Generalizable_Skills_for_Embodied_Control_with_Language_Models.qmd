@@ -1,0 +1,44 @@
+
+---
+title: "Lifelong Robot Library Learning: Bootstrapping Composable and Generalizable Skills for Embodied Control with Language Models"
+id: "2406.18746v1"
+description: "LRLL: LLM-based agent grows robot skill library for complex tasks, outperforming end-to-end and vanilla LLM approaches."
+author: Georgios Tziafas, Hamidreza Kasaei
+date: "2024-06-26"
+image: "../../https://browse.arxiv.org/html/2406.18746v1/extracted/5694140/img/fig1.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../https://browse.arxiv.org/html/2406.18746v1/extracted/5694140/img/fig1.png)
+
+### Summary:
+
+The paper introduces LRLL, an LLM-based lifelong learning agent that continuously grows the robot skill library to tackle manipulation tasks of ever-growing complexity. LRLL achieves this with four novel contributions: 1) a soft memory module that allows dynamic storage and retrieval of past experiences to serve as context, 2) a self-guided exploration policy that proposes new tasks in simulation, 3) a skill abstractor that distills recent experiences into new library skills, and 4) a lifelong learning algorithm for enabling human users to bootstrap new skills with minimal online interaction. LRLL continuously transfers knowledge from the memory to the library, building composable, general, and interpretable policies, while bypassing gradient-based optimization, thus relieving the learner from catastrophic forgetting. Empirical evaluation in a simulated tabletop environment shows that LRLL outperforms end-to-end and vanilla LLM approaches in the lifelong setup while learning skills that are transferable to the real world.
+
+### Major Findings:
+
+1. LRLL, an LLM-based agent, can generate policy code, explore tasks in simulation, and expand its skillset over time.
+2. A formal recipe for enabling humans to bootstrap desired robot skills with minimal intervention.
+3. Extensive comparisons, ablation studies, and hardware demonstrations that evaluate the effectiveness of each proposed component, assess overall generalization capabilities, and test sim-to-real transferability.
+
+### Analysis and Critique:
+
+1. The paper does not discuss the potential limitations of using LLMs for robot control, such as the risk of overfitting to the training data or the inability to generalize to new tasks.
+2. The paper does not provide a detailed analysis of the computational cost of the proposed approach, which is an important factor for real-world applications.
+3. The paper does not discuss the potential ethical implications of using LLMs for robot control, such as the risk of creating autonomous systems that can harm humans or the environment.
+4. The paper does not provide a detailed comparison with other state-of-the-art methods for robot control, which would help to better understand the advantages and disadvantages of the proposed approach.
+5. The paper does not discuss
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18746v1](https://arxiv.org/abs/2406.18746v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18746v1](https://browse.arxiv.org/html/2406.18746v1)       |
+| Truncated       | False       |
+| Word Count       | 6688       |

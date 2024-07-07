@@ -1,0 +1,42 @@
+
+---
+title: "Revealing Fine-Grained Values and Opinions in Large Language Models"
+id: "2406.19238v1"
+description: "TL;DR: Analyzing 156k LLM responses to PCT reveals biases, disparities, and recurring text patterns influenced by prompts and demographic features."
+author: Dustin Wright, Arnav Arora, Nadav Borenstein, Srishti Yadav, Serge Belongie, Isabelle Augenstein
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19238v1/extracted/5696108/figures/fig1.png"
+categories: ['hci', 'prompt-engineering', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19238v1/extracted/5696108/figures/fig1.png)
+
+### Summary:
+
+The study aims to uncover latent values and opinions in large language models (LLMs) by analyzing their responses to the Political Compass Test (PCT). The authors generate a large dataset of 156k LLM responses to the 62 PCT propositions using 6 LLMs and 420 prompt variations. They perform coarse-grained analysis of the generated stances and fine-grained analysis of the plain text justifications for those stances. The fine-grained analysis involves identifying tropes, which are semantically similar phrases that are recurrent and consistent across different prompts. The study finds that demographic features added to prompts significantly affect outcomes on the PCT, reflecting bias, and that patterns in the plain text rationales via tropes show that similar justifications are repeatedly generated across models and prompts even with disparate stances.
+
+### Major Findings:
+
+1. Demographic features added to prompts significantly affect outcomes on the PCT, reflecting bias.
+2. Patterns in the plain text rationales via tropes show that similar justifications are repeatedly generated across models and prompts even with disparate stances.
+3. The study proposes a new method for analyzing bias in generated text through tropes, revealing the arguments which LLMs are likely to generate across prompts in different settings.
+
+### Analysis and Critique:
+
+The study provides a comprehensive analysis of LLM responses to the PCT, revealing the impact of demographic features on the generated stances and the recurrent patterns in the plain text justifications. However, the study has some limitations. First, the PCT is a limited tool for quantifying biases embedded in LLMs, as it focuses on narrow, Western-specific topics and is conducted in English. Second, the LLMs used in the experiments are brittle and do not always follow formatting instructions, resulting in a number of generations that cannot be analyzed. Third, due to compute constraints, the study could not experiment with models over 13B parameters, and 4-bit quantization was performed for each model. Finally, the trope extraction framework has limitations, as it is based on an unsupervised clustering algorithm that is difficult to evaluate quantitatively and sensitive to perturbations in its parameters and inputs.
+
+Overall, the study
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19238v1](https://arxiv.org/abs/2406.19238v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19238v1](https://browse.arxiv.org/html/2406.19238v1)       |
+| Truncated       | False       |
+| Word Count       | 8950       |

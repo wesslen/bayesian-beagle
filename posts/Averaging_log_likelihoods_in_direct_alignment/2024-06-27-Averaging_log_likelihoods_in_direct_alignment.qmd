@@ -1,0 +1,47 @@
+
+---
+title: "Averaging log-likelihoods in direct alignment"
+id: "2406.19188v1"
+description: "Direct alignment methods for LLMs are made length-invariant, improving alignment with human judgment."
+author: Nathan Grinsztajn, Yannis Flet-Berliac, Mohammad Gheshlaghi Azar, Florian Strub, Bill Wu, Eugene Choi, Chris Cremer, Arash Ahmadian, Yash Chandak, Olivier Pietquin, Matthieu Geist
+date: "2024-06-27"
+image: "https://browse.arxiv.org/html/2406.19188v1/x1.png"
+categories: ['architectures', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.19188v1/x1.png)
+
+### Summary:
+
+- The paper introduces a new approach for making direct alignment length-invariant in the context of Large Language Models (LLMs).
+- The proposed method involves introducing a new averaging operator for policies and composing it with the operator providing the optimal RL solution.
+- The authors empirically study the effect of such averaging, observing a trade-off between the length of generations and their scores.
+
+### Major Findings:
+
+1. The authors propose a principled approach for making direct alignment length-invariant by introducing a new averaging operator for policies and composing it with the operator providing the optimal RL solution.
+2. The proposed method is applied to direct alignment, which translates into replacing log-likelihoods by length-normalized log-likelihoods in the underlying loss function.
+3. The authors empirically study the effect of such averaging and observe a trade-off between the length of generations and their scores.
+
+### Analysis and Critique:
+
+- The paper presents a novel approach to address the issue of length-invariance in direct alignment methods for LLMs.
+- The proposed method is mathematically principled and provides a practical algorithm for direct alignment methods.
+- The authors empirically study the effect of such averaging and observe a trade-off between the length of generations and their scores. However, the paper does not provide a clear explanation for this trade-off or its implications for the performance of LLMs.
+- The paper does not discuss the potential limitations or drawbacks of the proposed method, such as its computational complexity or its impact on the convergence of the optimization process.
+- The paper does not compare the proposed method to other existing approaches for making direct alignment length-invariant, which could provide a more comprehensive evaluation of its performance.
+- The paper does not provide a clear motivation for the need for length-invariance in direct alignment methods, which could help to better understand the significance of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.19188v1](https://arxiv.org/abs/2406.19188v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.19188v1](https://browse.arxiv.org/html/2406.19188v1)       |
+| Truncated       | False       |
+| Word Count       | 5452       |

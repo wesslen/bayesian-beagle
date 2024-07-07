@@ -1,0 +1,41 @@
+
+---
+title: "BEEAR: Embedding-based Adversarial Removal of Safety Backdoors in Instruction-tuned Language Models"
+id: "2406.17092v1"
+description: "BEEAR mitigates safety backdoor attacks in LLMs, reducing success rates from >95% to <1% without compromising model utility."
+author: Yi Zeng, Weiyu Sun, Tran Ngoc Huynh, Dawn Song, Bo Li, Ruoxi Jia
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.17092v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17092v1/x1.png)
+
+### Summary:
+
+The paper presents BEEAR, a novel mitigation strategy for safety backdoors in instruction-tuned Large Language Models (LLMs). The approach leverages the insight that backdoor triggers induce a relatively uniform drift in the model's embedding space. BEEAR uses a bi-level optimization method to identify universal embedding perturbations that elicit unwanted behaviors and adjusts the model parameters to reinforce safe behaviors against these perturbations. The key contributions of the paper include a practical threat model, the embedding drift insight, a bi-level optimization framework, and the effectiveness of BEEAR in reducing the success rate of safety backdoor attacks.
+
+### Major Findings:
+
+1. Practical Threat Model: The paper formally defines a threat model for backdoor mitigation study in LLMs without any assumption on the backdoor trigger's format, location, or how it is inserted.
+2. Embedding Drift Insight: The paper uncovers a key observation revealing that backdoor triggers in the input space of compromised LLMs induce a uniform embedding drift, suggesting that this drift accounts for the changes in model behaviors.
+3. Bi-Level Optimization Framework: The paper introduces a bi-level optimization approach that identifies universal drifts in the embedding space accounting for unwanted behaviors and reinforces expected behaviors by adjusting model weights.
+4. Effective Mitigation: The paper's experiments over 8 settings of safety backdoors in LLMs show the effectiveness of BEEAR, reducing the success rate of safety backdoor attacks from over 95% to 1% for RLHF time attacks targeted at harmful behaviors and from 47% to 0% for Sleeper Agents, without compromising the model's helpfulness.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to mitigating safety backdoors in LLMs. The bi-level optimization framework and the embedding drift insight are innovative and well-explained. However, the paper does not discuss the potential limitations or shortcomings of the proposed method. For instance, it is unclear how BEEAR would perform in scenarios where the backdoor triggers do not induce a uniform embedding drift. Additionally, the paper does not provide a comparison with other existing mitigation strategies, which could help to better understand the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17092v1](https://arxiv.org/abs/2406.17092v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17092v1](https://browse.arxiv.org/html/2406.17092v1)       |
+| Truncated       | False       |
+| Word Count       | 11761       |

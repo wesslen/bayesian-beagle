@@ -1,0 +1,43 @@
+
+---
+title: "Dual-Space Knowledge Distillation for Large Language Models"
+id: "2406.17328v1"
+description: "DSKD unifies output spaces for KD, improving LLM compression and enabling KD between models with different vocabularies."
+author: Songming Zhang, Xue Zhang, Zengkui Sun, Yufeng Chen, Jinan Xu
+date: "2024-06-25"
+image: "https://browse.arxiv.org/html/2406.17328v1/extracted/5689712/kl/before2.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17328v1/extracted/5689712/kl/before2.png)
+
+### Summary:
+
+The paper proposes a new framework for white-box knowledge distillation (KD) called dual-space knowledge distillation (DSKD) to address the limitations of the current framework. The DSKD framework unifies the output spaces of the student and teacher models for KD, which leads to higher similarity between the two models on both representation and distribution levels. The framework also supports KD between any two large language models (LLMs) regardless of their vocabularies. The DSKD framework significantly outperforms the current white-box KD framework on various distance functions and surpasses existing KD methods for LLMs with different vocabularies.
+
+### Major Findings:
+
+1. The current white-box KD framework limits the similarity between the student and the teacher due to their different output spaces.
+2. The DSKD framework unifies the output spaces of the distributions from the teacher and the student for more effective KD.
+3. The DSKD framework supports KD between LLMs with different vocabularies through a cross-model attention mechanism.
+4. Experiments show that the DSKD framework significantly outperforms the current white-box KD framework on various distance functions and surpasses existing KD methods for LLMs with different vocabularies.
+
+### Analysis and Critique:
+
+The paper presents a novel framework for white-box KD that addresses the limitations of the current framework. The DSKD framework unifies the output spaces of the student and teacher models, which leads to higher similarity between the two models on both representation and distribution levels. The framework also supports KD between LLMs with different vocabularies through a cross-model attention mechanism. The experimental results demonstrate the effectiveness of the DSKD framework in improving the performance of KD.
+
+However, the paper does not discuss the computational complexity of the DSKD framework compared to the current white-box KD framework. It is important to consider the computational cost of the DSKD framework, especially when dealing with large-scale LLMs. Additionally, the paper does not provide a detailed comparison of the DSKD framework with other KD methods for LLMs with different vocabularies. It would be interesting to see how the DSKD framework compares with other methods in terms of performance
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17328v1](https://arxiv.org/abs/2406.17328v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17328v1](https://browse.arxiv.org/html/2406.17328v1)       |
+| Truncated       | False       |
+| Word Count       | 8166       |

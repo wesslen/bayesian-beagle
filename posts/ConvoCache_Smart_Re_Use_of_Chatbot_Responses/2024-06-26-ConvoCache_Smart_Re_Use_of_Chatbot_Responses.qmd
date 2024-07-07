@@ -1,0 +1,46 @@
+
+---
+title: "ConvoCache: Smart Re-Use of Chatbot Responses"
+id: "2406.18133v1"
+description: "ConvoCache speeds up chatbots by reusing past responses, reducing AI usage by up to 89% with 214ms latency. Prefetching offers limited benefits."
+author: Conor Atkins, Ian Wood, Mohamed Ali Kaafar, Hassan Asghar, Nardine Basta, Michal Kepkowski
+date: "2024-06-26"
+image: "https://browse.arxiv.org/html/2406.18133v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18133v1/x1.png)
+
+### Summary:
+
+The paper presents ConvoCache, a conversational caching system designed to address the problem of slow and expensive generative AI models in spoken chatbots. ConvoCache finds a semantically similar prompt in the past and reuses the response. The system was evaluated on the DailyDialog dataset and found to apply a UniEval coherence threshold of 90% and respond to 89% of prompts using the cache with an average latency of 214ms. Prefetching was tested to further reduce latency, but it was found to have limited usefulness. ConvoCache can be used with any chatbot to reduce costs by reducing usage of generative AI by up to 89%.
+
+### Major Findings:
+
+1. ConvoCache can apply a UniEval coherence threshold of 90% and respond to 89% of prompts using the cache with an average latency of 214ms.
+2. Prefetching with 80% of a request leads to a 63% hit rate, but also results in a drop in overall coherence.
+3. ConvoCache can be used with any chatbot to reduce costs by reducing usage of generative AI by up to 89%.
+
+### Analysis and Critique:
+
+* The paper does not provide a detailed comparison of ConvoCache with other caching systems or generative AI models.
+* The evaluation of ConvoCache is limited to the DailyDialog dataset, which may not be representative of all types of conversations.
+* The paper does not discuss the potential impact of ConvoCache on the quality of conversations, such as the ability to handle complex or nuanced topics.
+* The paper does not address the potential ethical implications of using a caching system, such as the risk of perpetuating biases or stereotypes in the cached responses.
+* The paper does not discuss the potential scalability of ConvoCache, such as the ability to handle a large number of concurrent users or a large cache size.
+* The paper does not discuss the potential impact of ConvoCache on the user experience, such as the perceived delay in response time or the impact on the naturalness of the conversation.
+* The paper does not discuss the potential impact of ConvoCache on the cost of deploying
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18133v1](https://arxiv.org/abs/2406.18133v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18133v1](https://browse.arxiv.org/html/2406.18133v1)       |
+| Truncated       | False       |
+| Word Count       | 4233       |

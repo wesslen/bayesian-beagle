@@ -1,0 +1,44 @@
+
+---
+title: "Ragnarök: A Reusable RAG Framework and Baselines for TREC 2024 Retrieval-Augmented Generation Track"
+id: "2406.16828v1"
+description: "TREC 2024 RAG Track proposed for evaluating RAG-based search systems, featuring Ragnarök framework and industrial baselines."
+author: Ronak Pradeep, Nandan Thakur, Sahel Sharifymoghaddam, Eric Zhang, Ryan Nguyen, Daniel Campos, Nick Craswell, Jimmy Lin
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16828v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16828v1/x1.png)
+
+### Summary:
+
+The paper introduces Ragnarök, a reusable framework for the TREC 2024 Retrieval Augmented Generation (RAG) Track. Ragnarök aims to foster innovation in evaluating RAG systems, which have recently emerged as a popular technique for augmenting large language model (LLM) generation for knowledge-intensive tasks. The framework includes a retrieval module that incorporates both retrieval and reranking stages, and an augmented generation module that produces RAG answers with sentence-level citations. The paper also describes the curation of the MS MARCO V2.1 collection and the release of development topics for the track. The Ragnarök framework is open-sourced and available on GitHub.
+
+### Major Findings:
+
+1. Ragnarök is a user-friendly, reusable, end-to-end RAG framework that offers code for customizable retrievers, rerankers, and generation models.
+2. The framework is deeply integrated with existing Python frameworks, such as Pyserini and rank\_llm, and can be easily installed via PyPI.
+3. Ragnarök supports a head-to-head RAG battle arena for answer evaluation, inspired by recent work such as the Chatbot Arena.
+4. The framework provides key industrial baselines, such as Cohere Command R+ and OpenAI GPT-4o, and evaluates both baselines using the retrieval setup involving BM25 and RankZephyr with human preferences.
+5. The paper identifies GPT-4o as providing more detailed answers over Command R+ on the development set of topics.
+
+### Analysis and Critique:
+
+The paper presents a comprehensive framework for evaluating RAG systems, which is a timely and important contribution given the recent advancements in this area. The framework is well-designed and offers a range of features that make it user-friendly and customizable. The use of existing Python frameworks and the availability of easy-to-use REST APIs and an integrated WebUI are particularly noteworthy.
+
+However, there are some limitations to the framework that should be acknowledged. For instance, the paper does not provide a detailed evaluation of the framework's performance, which would be useful for assess
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16828v1](https://arxiv.org/abs/2406.16828v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16828v1](https://browse.arxiv.org/html/2406.16828v1)       |
+| Truncated       | False       |
+| Word Count       | 6500       |

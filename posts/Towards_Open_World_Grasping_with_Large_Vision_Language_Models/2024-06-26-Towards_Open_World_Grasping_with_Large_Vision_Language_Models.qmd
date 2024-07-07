@@ -1,0 +1,44 @@
+
+---
+title: "Towards Open-World Grasping with Large Vision-Language Models"
+id: "2406.18722v1"
+description: "[TEXT] This study examines the impact of social media on body image and self-esteem in adolescents. Results indicate a significant negative correlation between social media use and self-esteem, with body image dissatisfaction as a mediating factor.
+
+[TL;DR] Excessive social media use linked to lower self-esteem in teens, due to body image issues."
+author: Georgios Tziafas, Hamidreza Kasaei
+date: "2024-06-26"
+image: "../../../bayesian-beagle.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary:
+
+The article presents a study on open-world grasping using large vision-language models (VLMs), specifically focusing on the GPT-4v model. The authors explore various techniques to improve the performance of VLMs in grounding, grasp planning, and grasp ranking tasks.
+
+## Major Findings:
+
+1. **Clarity of Visual Markers**: The authors find that the most common failure mode of visual marker prompting with GPT-4v is that it sometimes struggles to discriminate which ID corresponds to what segment, especially in cluttered scenes. Techniques such as overlaying numeric IDs with minimal overlap, coloring both the internal of each segment’s mask and its ID with the same unique color, and increasing the resolution of the marked image and the size layout of the markers can assist in making the markers more clear to the VLM.
+
+2. **Reference Image and Chain-of-Thoughts**: The authors propose techniques to ameliorate the issue of GPT-4v sometimes referring to regions with wrong IDs, especially in highly cluttered scenes. They suggest passing both the original (reference) and the marked image and constructing a text prompt that explains that the latter corresponds to annotated segments of the first. They also find that VLMs share similar properties with LLMs and prompting them to reason about their final answer before producing it can robustify the response quality.
+
+3. **Self-consistency and In-context Examples**: The authors observe that the outputs of GPT-4v are not always reproducible, even with exactly the same prompt. They propose using the self-consistency method developed for LLMs to reduce the effect of this phenomenon and robustify VLM outputs. They also find that in-context examples can improve the robustness of the grasp planning and contact reasoning stages.
+
+## Analysis and Critique:
+
+The article provides a comprehensive exploration of various techniques to improve the performance of VLMs in open-world grasping tasks. However, the study is limited to the GPT-4v model, and the results may not generalize to other VLMs. The authors also acknowledge that the actual model specifics of GPT-4v are unknown, which makes it difficult to fully understand the reasons behind its performance. Furthermore, the study does not provide
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.18722v1](https://arxiv.org/abs/2406.18722v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18722v1](https://browse.arxiv.org/html/2406.18722v1)       |
+| Truncated       | False       |
+| Word Count       | 3751       |

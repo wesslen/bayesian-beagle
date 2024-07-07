@@ -1,0 +1,43 @@
+
+---
+title: "Blending LLMs into Cascaded Speech Translation: KIT's Offline Speech Translation System for IWSLT 2024"
+id: "2406.16777v1"
+description: "LLM integration in ASR and MT systems improves WER and COMET scores, but not in noisy conditions."
+author: Sai Koneru, Thai-Binh Nguyen, Ngoc-Quan Pham, Danni Liu, Zhaolin Li, Alexander Waibel, Jan Niehues
+date: "2024-06-24"
+image: "https://browse.arxiv.org/html/2406.16777v1/extracted/5688458/figures/asr_pe.png"
+categories: ['architectures', 'robustness', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.16777v1/extracted/5688458/figures/asr_pe.png)
+
+# Summary:
+**Summary:**
+The paper presents KIT's offline speech translation system for IWSLT 2024, which incorporates recently proposed techniques to enhance the cascaded speech translation system. The system integrates Mistral-7B111mistralai/Mistral-7B-Instruct-v0.1 into the system to refine ASR outputs and improve MT outputs at the document level. The integration of LLM into the ASR and MT systems results in an absolute improvement of  in Word Error Rate and  in COMET for the tst2019 test set. However, in challenging test sets with overlapping speakers and background noise, integrating LLM is not beneficial due to poor ASR performance.
+
+**Major Findings:**
+1. LLMs can be tailored to enhance both ASR and MT systems, resulting in an absolute improvement of  in Word Error Rate and  in COMET, respectively, on the tst2019 test set.
+2. While significant enhancements are observed in in-domain scenarios, these techniques are not applicable in challenging scenarios due to poor ASR performance.
+3. Employing chunked long-form decoding significantly improves ASR performance in challenging scenarios, such as the case of the ITV dev set.
+
+**Analysis and Critique:**
+- The paper presents a novel approach to integrating LLMs into a cascaded speech translation system, which results in significant improvements in both ASR and MT outputs.
+- The use of chunked long-form decoding to improve context usage is an interesting approach to handling challenging scenarios with overlapping speakers and background noise.
+- However, the paper does not provide a detailed analysis of the limitations and potential biases of the proposed approach.
+- The paper also does not discuss the computational cost and time complexity of the proposed approach, which is an important consideration for practical applications.
+- The paper does not provide a comparison with other state-of-the-art speech translation systems, which would have helped to establish the superiority of the proposed approach.
+- The paper does not discuss the potential impact of the proposed approach on the field of speech translation and its implications for real-world applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.16777v1](https://arxiv.org/abs/2406.16777v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.16777v1](https://browse.arxiv.org/html/2406.16777v1)       |
+| Truncated       | False       |
+| Word Count       | 4916       |

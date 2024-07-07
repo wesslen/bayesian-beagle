@@ -1,0 +1,45 @@
+
+---
+title: "Improving Robustness of LLM-based Speech Synthesis by Learning Monotonic Alignment"
+id: "2406.17957v1"
+description: "LLM-based TTS models can have errors; proposed techniques improve alignment and robustness without adding new parameters."
+author: Paarth Neekhara, Shehzeen Hussain, Subhankar Ghosh, Jason Li, Rafael Valle, Rohan Badlani, Boris Ginsburg
+date: "2024-06-25"
+image: "https://browse.arxiv.org/html/2406.17957v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.17957v1/x1.png)
+
+### Summary:
+
+The paper discusses the challenges faced by Large Language Model (LLM) based Text-to-Speech (TTS) systems, such as repeating words, missing words, and misaligned speech, especially when the text contains multiple occurrences of the same token. The authors propose techniques utilizing CTC loss and attention priors to encourage monotonic cross-attention over the text tokens, improving the robustness of LLM-based TTS models. The proposed guided attention training technique does not introduce any new learnable parameters and significantly improves the robustness of LLM-based TTS models.
+
+### Major Findings:
+
+1. LLM-based TTS models suffer from attention errors resulting in misaligned speech, repeating and missing words, analogous to hallucinations exhibited by LLMs in the text domain.
+2. Attention layers of LLM-based TTS models learn an implicit alignment between text and speech tokens when trained using the next-token prediction objective.
+3. The proposed guided attention training technique encourages monotonic alignment in the attention layers of LLM-based TTS models, resulting in significantly more robust TTS models without modifying the architecture or introducing new parameters.
+
+### Analysis and Critique:
+
+* The paper provides a detailed analysis of the challenges faced by LLM-based TTS systems and proposes a solution to improve their robustness.
+* The proposed technique does not introduce any new learnable parameters, making it a practical solution for improving the performance of LLM-based TTS models.
+* The paper does not discuss the potential limitations or shortcomings of the proposed technique, such as its applicability to other types of TTS models or the impact of different hyperparameters on its performance.
+* The paper does not provide a comprehensive comparison of the proposed technique with other existing solutions for improving the robustness of LLM-based TTS models.
+* The paper does not discuss the potential impact of the proposed technique on the overall quality of the synthesized speech, such as its naturalness or expressiveness.
+* The paper does not provide a detailed analysis of the computational complexity of the proposed technique, which is an important factor to consider when deploying TTS models in real-world applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-07       |
+| Abstract | [https://arxiv.org/abs/2406.17957v1](https://arxiv.org/abs/2406.17957v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.17957v1](https://browse.arxiv.org/html/2406.17957v1)       |
+| Truncated       | False       |
+| Word Count       | 4644       |

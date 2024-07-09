@@ -1,0 +1,44 @@
+
+---
+title: "InverseCoder: Unleashing the Power of Instruction-Tuned Code LLMs with Inverse-Instruct"
+id: "2407.05700v1"
+description: "InverseCoder improves code LLMs by self-generating instructions, outperforming original models."
+author: Yutong Wu, Di Huang, Wenxuan Shi, Wei Wang, Lingzhe Gao, Shihao Liu, Ziyuan Nan, Kaizhao Yuan, Rui Zhang, Xishan Zhang, Zidong Du, Qi Guo, Yewen Pu, Dawei Yin, Xing Hu, Yunji Chen
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.05700v1/x1.png"
+categories: ['education', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05700v1/x1.png)
+
+### Summary:
+
+The paper introduces InverseCoder, a series of code LLMs that surpass the performance of the original code LLMs on a wide range of benchmarks. The key observation is the misalignment between the translation of formal and informal languages, where translating formal language (i.e., code) to informal language (i.e., natural language) is more straightforward than the reverse. Based on this observation, the authors propose inverse-instruct, which summarizes instructions from code snippets instead of the reverse. The approach involves fine-tuning a base LLM on the combination of the original corpus and the self-generated one, yielding a stronger instruction-tuned LLM.
+
+### Major Findings:
+
+1. InverseCoder series surpasses the base models by exploiting the base models’ own capability, achieving SOTA results on various benchmarks, including HumanEval (+), MBPP (+), MultiPL-E, and DS-1000.
+2. Inverse-instruct is a simple yet effective instruction tuning approach that exploits the mismatch of code-generation and instruction-generation.
+3. The self-consistency between the code generation and summarization is predictive of the effectiveness of inverse-instruct prior to training.
+
+### Analysis and Critique:
+
+1. The paper presents a novel approach to improving code LLMs by generating data from the models themselves rather than querying closed-source LLMs.
+2. The proposed inverse-instruct method effectively leverages the misalignment between formal and informal languages to generate high-quality instructions from code snippets.
+3. The authors provide a thorough analysis of inverse-instruct, including the component of generated dataset, the impact of data size, and the self-consistency between code generation and summarization.
+4. The paper could benefit from a more detailed discussion on the limitations and potential biases of the proposed approach, as well as addressing any methodological issues or conflicting evidence.
+5. The authors could also explore the potential applications of inverse-instruct in other domains beyond code generation.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05700v1](https://arxiv.org/abs/2407.05700v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05700v1](https://browse.arxiv.org/html/2407.05700v1)       |
+| Truncated       | False       |
+| Word Count       | 6732       |

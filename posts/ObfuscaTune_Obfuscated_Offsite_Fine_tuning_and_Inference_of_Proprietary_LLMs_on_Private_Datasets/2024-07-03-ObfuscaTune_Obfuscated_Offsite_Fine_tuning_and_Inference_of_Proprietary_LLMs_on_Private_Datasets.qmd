@@ -1,0 +1,46 @@
+
+---
+title: "ObfuscaTune: Obfuscated Offsite Fine-tuning and Inference of Proprietary LLMs on Private Datasets"
+id: "2407.02960v1"
+description: "ObfuscaTune: A method for private LLM finetuning on cloud, preserving utility and confidentiality."
+author: Ahmed Frikha, Nassim Walha, Ricardo Mendes, Krishna Kanth Nakka, Xue Jiang, Xuebing Zhou
+date: "2024-07-03"
+image: "../../../bayesian-beagle.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+- The paper addresses the problem of performing inference and fine-tuning of a proprietary LLM on confidential/private data while ensuring the confidentiality of both the model and the data.
+- The proposed solution, ObfuscaTune, combines a simple yet effective obfuscation technique with an efficient usage of confidential computing (only 1% of the model parameters are placed on TEE).
+- ObfuscaTune is empirically demonstrated to be effective by validating it on GPT-2 models with different sizes on four NLP benchmark datasets.
+- The necessity of using random matrices with low condition numbers in the obfuscation technique is highlighted by comparing it to a naive obfuscation method.
+
+### Major Findings:
+
+1. ObfuscaTune enables fine-tuning and inference of LLMs in a way that preserves the confidentiality of the model and the data with no utility loss and acceptable efficiency loss.
+2. The empirical evaluation of ObfuscaTune on GPT-2 models with different sizes on four NLP benchmark datasets demonstrates its effectiveness.
+3. The use of random matrices with low condition numbers in the obfuscation technique is crucial for reducing errors induced by the obfuscation.
+
+### Analysis and Critique:
+
+- The paper does not provide a detailed comparison of ObfuscaTune with other existing approaches that address the same problem.
+- The paper does not discuss the potential limitations of ObfuscaTune, such as its applicability to other types of models or the impact of the size of the TEE on its performance.
+- The paper does not provide a detailed analysis of the computational overhead of ObfuscaTune and its impact on the overall performance of the system.
+- The paper does not discuss the potential security risks associated with the use of TEEs and the need for additional security measures to protect against potential attacks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02960v1](https://arxiv.org/abs/2407.02960v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02960v1](https://browse.arxiv.org/html/2407.02960v1)       |
+| Truncated       | False       |
+| Word Count       | 4546       |

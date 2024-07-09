@@ -1,0 +1,40 @@
+
+---
+title: "Generation and De-Identification of Indian Clinical Discharge Summaries using LLMs"
+id: "2407.05887v1"
+description: "De-identification algorithms struggle in Indian healthcare; synthetic data can improve performance."
+author: Sanjeet Singh, Shreya Gupta, Niralee Gupta, Naimish Sharma, Lokesh Srivastava, Vibhu Agarwal, Ashutosh Modi
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.05887v1/x1.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05887v1/x1.png)
+
+### Summary:
+
+The paper discusses the importance of data de-identification in healthcare, particularly in India, where rapid digitization is taking place. The authors highlight the risks of revealing patient identity even from anonymized data and the need for a robust data de-identification pipeline. They evaluate the performance of existing de-identification methods, including NLP-based methods, on a dataset of 99 de-identified discharge summaries from an Indian hospital. The results show poor cross-institutional performance of these methods. To overcome the data scarcity, the authors explore generating synthetic clinical reports using LLMs and evaluate their use in creating high-performing de-identification systems with good generalization capabilities.
+
+### Major Findings:
+
+1. Existing de-identification methods, including NLP-based methods, perform poorly when evaluated on data from a different institution compared to the one that contributed the training data.
+2. The study introduces a new dataset (Indian Clinical Discharge Summaries) obtained from an Indian hospital and evaluates the performance of the PI-RoBERTa model on this dataset for the task of de-identification. The results show poor cross-institutional performance.
+3. To overcome data scarcity, the authors explore generating synthetic clinical reports using LLMs and evaluate their use in creating high-performing de-identification systems with good generalization capabilities.
+
+### Analysis and Critique:
+
+The paper provides a valuable contribution to the field of data de-identification in healthcare, particularly in the context of India. The authors highlight the importance of a robust data de-identification pipeline and the risks associated with revealing patient identity even from anonymized data. The evaluation of existing de-identification methods on a dataset of 99 de-identified discharge summaries from an Indian hospital is a significant contribution to the field. However, the study is limited by the small size of the dataset, which may not be representative of the broader population. The use of LLMs to generate synthetic clinical reports is a promising approach to overcome data scarcity, but the authors do not provide a detailed evaluation of the quality of the generated reports. Additionally, the study does not discuss the potential ethical implications of using LLMs to generate synthetic clinical reports. Overall, the paper provides a valuable contribution to the field of data de-identification in healthcare
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05887v1](https://arxiv.org/abs/2407.05887v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05887v1](https://browse.arxiv.org/html/2407.05887v1)       |
+| Truncated       | False       |
+| Word Count       | 9455       |

@@ -1,0 +1,47 @@
+
+---
+title: "LLM Internal States Reveal Hallucination Risk Faced With a Query"
+id: "2407.03282v1"
+description: "LLMs can estimate their own hallucination risk before response generation, achieving 84.32% accuracy."
+author: Ziwei Ji, Delong Chen, Etsuko Ishii, Samuel Cahyawijaya, Yejin Bang, Bryan Wilie, Pascale Fung
+date: "2024-07-03"
+image: "https://browse.arxiv.org/html/2407.03282v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.03282v1/x1.png)
+
+# Summary:
+
+The paper investigates whether Large Language Models (LLMs) can estimate their own hallucination risk before response generation, inspired by human self-awareness. The study analyzes LLM internal mechanisms in terms of training data sources and across 15 diverse Natural Language Generation (NLG) tasks, spanning over 700 datasets. The empirical analysis reveals that LLM internal states indicate whether they have seen the query in training data or not and whether they are likely to hallucinate or not regarding the query. The study explores specific neurons, activation layers, and tokens crucial in LLM perception of uncertainty and hallucination risk. By leveraging LLM self-assessment, an average hallucination estimation accuracy of 84.32% is achieved at run time.
+
+# Major Findings:
+
+1. LLM internal states indicate whether they have seen the query in training data or not.
+2. LLM internal states show they are likely to hallucinate or not regarding the query.
+3. Particular neurons, activation layers, and tokens play a crucial role in LLM perception of uncertainty and hallucination risk.
+4. An average hallucination estimation accuracy of 84.32% is achieved at run time by leveraging LLM self-assessment.
+
+# Analysis and Critique:
+
+The paper presents an interesting approach to addressing the hallucination problem in LLMs by leveraging their self-assessment capabilities. However, there are some potential limitations and areas for further research:
+
+1. The study focuses on a specific LLM, and the findings may not generalize to other models with different architectures or training data.
+2. The analysis of internal states and their correlation with hallucination risk may not capture all the complexities and nuances of the problem, as LLMs are known to exhibit emergent behaviors that are difficult to predict or explain.
+3. The paper does not discuss the potential implications of using LLM self-assessment for hallucination risk estimation in real-world applications, such as the trade-off between accuracy and computational cost or the impact on user trust and satisfaction.
+4. The study does not compare the proposed approach with other methods for hallucination detection or mitigation, such as data augmentation, ensemble learning, or post-processing techniques.
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.03282v1](https://arxiv.org/abs/2407.03282v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.03282v1](https://browse.arxiv.org/html/2407.03282v1)       |
+| Truncated       | False       |
+| Word Count       | 11970       |

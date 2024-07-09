@@ -1,0 +1,51 @@
+
+---
+title: "Hierarchical Context Pruning: Optimizing Real-World Code Completion with Repository-Level Pretrained Code LLMs"
+id: "2406.18294v1"
+description: "HCP strategy improves Code LLMs' completion accuracy by pruning irrelevant code content, reducing input length."
+author: Lei Zhang, Yunshui Li, Jiaming Li, Xiaobo Xia, Jiaxi Yang, Run Luo, Minzheng Wang, Longze Chen, Junhao Liu, Min Yang
+date: "2024-06-26"
+image: "https://browse.arxiv.org/html/2406.18294v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2406.18294v1/x1.png)
+
+### Summary:
+
+- The study focuses on optimizing real-world code completion with repository-level pretrained code large language models (Repo-Code LLMs).
+- The researchers conducted extensive preliminary experiments and analyses on six Repo-Code LLMs.
+- The results indicate that maintaining the topological dependencies of files and increasing the code file content in the completion prompts can improve completion accuracy.
+- Pruning the specific implementations of functions in all dependent files does not significantly reduce the accuracy of completions.
+- Based on these findings, the researchers proposed a strategy named Hierarchical Context Pruning (HCP) to construct completion prompts with high informational code content.
+- The HCP models the code repository at the function level, maintaining the topological dependencies between code files while removing a large amount of irrelevant code content.
+- The proposed method significantly reduces the input length for repository-level code completion and enhances completion accuracy.
+
+### Major Findings:
+
+1. Maintaining the topological dependencies of files and increasing the code file content in the completion prompts can improve completion accuracy.
+2. Pruning the specific implementations of functions in all dependent files does not significantly reduce the accuracy of completions.
+3. The proposed Hierarchical Context Pruning (HCP) strategy can significantly enhance completion accuracy while substantially reducing the length of input.
+
+### Analysis and Critique:
+
+- The study provides valuable insights into optimizing real-world code completion with Repo-Code LLMs.
+- The proposed HCP strategy effectively addresses the challenge of limited context window size in Repo-Code LLMs.
+- However, the study is limited to the Python language and the CrossCodeEval benchmark, which may not fully represent the diversity of real-world code completion scenarios.
+- The evaluation method based on exact matches may not provide comprehensive results, leading to a discrepancy between the evaluation outcomes and the actual capabilities of the model.
+- The use of a text embedding model for function-level sampling may reduce the sampling rate and increase completion latency when the number of code files in the repository is excessive.
+- Future research could explore the applicability of the proposed method to other programming languages and benchmarks, as well as investigate more efficient function-level sampling techniques.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2406.18294v1](https://arxiv.org/abs/2406.18294v1)        |
+| HTML     | [https://browse.arxiv.org/html/2406.18294v1](https://browse.arxiv.org/html/2406.18294v1)       |
+| Truncated       | False       |
+| Word Count       | 6374       |

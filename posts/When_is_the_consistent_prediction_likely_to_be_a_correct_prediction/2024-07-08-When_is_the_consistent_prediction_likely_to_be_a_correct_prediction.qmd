@@ -1,0 +1,46 @@
+
+---
+title: "When is the consistent prediction likely to be a correct prediction?"
+id: "2407.05778v1"
+description: "LLMs produce more accurate answers with longer, consistent reasoning, not just the most consistent answer. Longer responses are less likely, requiring length-based decoding strategies."
+author: Alex Nguyen, Dheeraj Mekala, Chengyu Dong, Jingbo Shang
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.05778v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05778v1/x1.png)
+
+### Summary:
+- The paper challenges the argument that the most consistent answer obtained through large language models (LLMs) is more likely to be correct.
+- The authors propose a nuanced correction, suggesting that consistent answers derived through more computation, i.e., longer reasoning texts, are more likely to be correct.
+- LLMs can autonomously produce chain-of-thought (CoT) style reasoning with no custom prompts, leading to consistent predictions that are more accurate.
+- The probability of LLMs generating a longer response is quite low, highlighting the need for decoding strategies conditioned on output length.
+
+### Major Findings:
+1. Consistent answers obtained through longer reasoning texts are more likely to be correct than any consistent answers.
+2. LLMs can generate CoTs independently, without any prefix prompts while generating longer responses.
+3. By simply sampling multiple answers from the LLM and considering responses exceeding a certain length threshold, and choosing the most consistent answer, a significant improvement in performance is observed.
+4. The spontaneous appearance of CoTs without any specific prompts is leveraged to achieve 86% of the zero-shot CoT self-consistency performance on two mathematical reasoning benchmarks.
+5. The model often blurts out the answer in the initial tokens, a tendency more pronounced in discriminative tasks than in generative ones.
+
+### Analysis and Critique:
+- The paper provides a valuable contribution to the understanding of LLMs and their ability to generate accurate and consistent predictions.
+- The findings highlight the importance of considering the length of reasoning texts and the presence of CoTs in improving the performance of LLMs.
+- However, the paper does not address the potential limitations of the proposed approach, such as the increased computational cost of generating longer responses and the need for decoding strategies that account for output length.
+- Additionally, the paper does not discuss the potential impact of the proposed approach on the interpretability and explainability of LLMs.
+- Further research is needed to explore the potential applications and limitations of the proposed approach in different domains and tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05778v1](https://arxiv.org/abs/2407.05778v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05778v1](https://browse.arxiv.org/html/2407.05778v1)       |
+| Truncated       | False       |
+| Word Count       | 4435       |

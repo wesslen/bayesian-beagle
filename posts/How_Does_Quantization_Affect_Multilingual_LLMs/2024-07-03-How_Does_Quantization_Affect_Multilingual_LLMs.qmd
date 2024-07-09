@@ -1,0 +1,45 @@
+
+---
+title: "How Does Quantization Affect Multilingual LLMs?"
+id: "2407.03211v1"
+description: "Quantization harms multilingual LLMs, especially non-Latin script languages and complex tasks, despite automatic metrics underestimating the impact."
+author: Kelly Marchisio, Saurabh Dash, Hongyu Chen, Dennis Aumiller, Ahmet Üstün, Sara Hooker, Sebastian Ruder
+date: "2024-07-03"
+image: "../../../bayesian-beagle.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+This study examines the impact of quantization on multilingual large language models (LLMs) and their performance across languages and at varying scales. The authors use automatic benchmarks, LLM-as-a-Judge methods, and human evaluation to analyze four state-of-the-art multilingual LLMs across 3 different sizes ranging from 8 to 103 billion parameters and covering up to 23 languages. The results show that:
+
+1. Automatic metrics severely underestimate damage from quantization.
+2. Quantization affects languages differently, with non-Latin script languages being more greatly harmed.
+3. Challenging tasks degrade fastest, including mathematical reasoning, performance on real-world challenging prompts judged by humans, and LLM-as-a-Judge results.
+4. Occasionally, quantization brings benefits, such as an average 1.3% boost across tasks for a 35B model quantized with W8A8.
+
+### Major Findings:
+
+1. Automatic metrics underestimate the detrimental effects of quantization, with a 1.7% average drop in Japanese across automatic tasks corresponding to a 16.0% drop reported by human evaluators on realistic prompts.
+2. Languages are disparately affected by quantization, with non-Latin script languages impacted worst.
+3. Challenging tasks such as mathematical reasoning degrade fastest.
+
+### Analysis and Critique:
+
+This study is the first to broadly study the impact of quantization on multilingual LLMs and is part of a wider body of literature that considers the impact of model design choices on downstream performance. The results urge attention to multilingual performance at all stages of system design. However, the study focuses on models from two families (Command R and Aya) and does not evaluate models that have been optimized differently or trained with a focus on specific tasks such as code or mathematical reasoning. Additionally, the study does not consider the impact of quantization on languages that are not or severely under-represented in the pre-training data. Further research is needed to understand the impact of quantization on these languages and to extend the findings to other models and tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.03211v1](https://arxiv.org/abs/2407.03211v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.03211v1](https://browse.arxiv.org/html/2407.03211v1)       |
+| Truncated       | False       |
+| Word Count       | 6954       |

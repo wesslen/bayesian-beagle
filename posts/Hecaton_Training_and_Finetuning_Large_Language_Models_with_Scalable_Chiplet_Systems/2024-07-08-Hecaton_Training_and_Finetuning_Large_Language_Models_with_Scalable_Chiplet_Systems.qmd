@@ -1,0 +1,44 @@
+
+---
+title: "Hecaton: Training and Finetuning Large Language Models with Scalable Chiplet Systems"
+id: "2407.05784v1"
+description: "Hecaton: A chiplet system for LLM training, reducing DRAM accesses and NoP overheads, offering 4.98× performance boost and 2.35× energy reduction."
+author: Zongle Huang, Shupei Fan, Chen Tang, Xinyuan Lin, Shuwen Deng, Yongpan Liu
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.05784v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05784v1/x1.png)
+
+### Summary:
+
+Hecaton is a scalable and cost-effective chiplet system designed for training and finetuning large language models (LLMs). It addresses the challenges of massive computation and memory requirements by utilizing on-package links with better signal integrity, higher bandwidth, and lower energy consumption. Hecaton provides a chiplet architecture with tailored scheduling to reduce DRAM accesses and an efficient distributed training method that decreases NoP communication complexity and alleviates constraints on SRAM capacity and layout. Theoretical analysis shows that the entire system achieves weak scaling, maintaining a constant computation-to-communication ratio as workload and hardware resources grow proportionally. Experiments with various workloads and hardware configurations demonstrate that Hecaton achieves 4.98× performance improvement and 2.35× energy reduction on Llama2-70B compared to tensor parallelism in Megatron.
+
+### Major Findings:
+
+1. Hecaton is a scalable and cost-effective chiplet architecture specifically designed for LLM training and finetuning, offering guaranteed performance regardless of the problem scale.
+2. The proposed distributed training method reduces asymptotic communication complexity and relieves constraints on SRAM capacity and layout compared to existing methods.
+3. Theoretical analysis proves that the entire system exhibits weak scaling, ensuring that Hecaton's performance is not affected by the model size.
+4. Evaluation of Hecaton's performance shows the predicted weak scaling, with 4.98× throughput and 2.35× energy efficiency improvements in Llama2-70B compared to the tensor parallelism used in Megatron.
+
+### Analysis and Critique:
+
+Hecaton presents a promising solution for training and finetuning large language models by addressing the challenges of massive computation and memory requirements. The proposed chiplet architecture and distributed training method effectively reduce DRAM accesses and NoP communication complexity, leading to improved performance and energy efficiency. However, potential limitations and areas for further research include:
+
+1. Scalability: While Hecaton demonstrates weak scaling, its performance may be affected by the number of dies and the complexity of the model. Further research is needed to explore the limits of scalability and optimize the system for extremely large models.
+2. Manufacturing and packaging: The use of
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05784v1](https://arxiv.org/abs/2407.05784v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05784v1](https://browse.arxiv.org/html/2407.05784v1)       |
+| Truncated       | False       |
+| Word Count       | 9383       |

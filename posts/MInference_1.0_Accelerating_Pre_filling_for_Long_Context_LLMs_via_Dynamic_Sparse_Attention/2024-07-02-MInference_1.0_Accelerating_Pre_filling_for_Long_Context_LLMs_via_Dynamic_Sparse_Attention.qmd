@@ -1,0 +1,40 @@
+
+---
+title: "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention"
+id: "2407.02490v1"
+description: "MInference speeds up LLM pre-filling by 10x, maintaining accuracy via sparse calculation methods for long-context attention matrices."
+author: Huiqiang Jiang, Yucheng Li, Chengruidong Zhang, Qianhui Wu, Xufang Luo, Surin Ahn, Zhenhua Han, Amir H. Abdi, Dongsheng Li, Chin-Yew Lin, Yuqing Yang, Lili Qiu
+date: "2024-07-02"
+image: "https://browse.arxiv.org/html/2407.02490v1/x3.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.02490v1/x3.png)
+
+### Summary:
+
+The paper introduces MInference, a sparse calculation method designed to accelerate pre-filling for long-context LLMs via dynamic sparse attention. The authors identify three unique patterns in long-context attention matrices—the A-shape, Vertical-Slash, and Block-Sparse—and leverage them for efficient sparse computation on GPUs. The proposed technique can be directly applied to existing LLMs without modifications to the pre-training setup or additional fine-tuning. The authors demonstrate that MInference effectively reduces inference latency by up to 10x for pre-filling on an A100, while maintaining accuracy.
+
+### Major Findings:
+
+1. The authors propose MInference, a technique that reduces 95% of FLOPs in the attention computation to significantly accelerate the pre-filling stage of long-context LLM inference via dynamic sparse attention.
+2. MInference is designed specifically for long-context scenarios with minimal overhead in estimation, unlike existing dynamic sparse attention methods that introduce large computational overhead.
+3. The authors conduct extensive analysis and identify three general patterns of sparse attention in long-context LLMs: A-shape pattern, Vertical-Slash pattern, and Block-Sparse pattern.
+4. The authors introduce a kernel-aware search method to assign the optimal attention pattern for each head and perform an efficient online approximation to build a dynamic sparse mask for each head according to their assigned pattern and particular inputs.
+5. The authors develop three optimized GPU kernels for the above three sparse patterns, which enable extremely efficient computation of dynamic sparse attention.
+6. Extensive experiments are conducted on various Long-context LLMs, including LLaMA-3-8B-1M, GLM-4-9B-1M, and Yi-9B-200K, across benchmarks with context lengths over 1M tokens, such as InfiniteBench, RULER, Needle In A Haystack, and PG-19.
+7. Results show that MInference speeds up the pre-filling stage by up to 10x for 1M contexts with LLaMA-3-8B on a single A100, reducing latency from 30 minutes to 
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02490v1](https://arxiv.org/abs/2407.02490v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02490v1](https://browse.arxiv.org/html/2407.02490v1)       |
+| Truncated       | False       |
+| Word Count       | 10854       |

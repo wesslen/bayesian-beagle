@@ -1,0 +1,46 @@
+
+---
+title: "Fine-Tuning with Divergent Chains of Thought Boosts Reasoning Through Self-Correction in Language Models"
+id: "2407.03181v1"
+description: "DCoT method improves LLM performance by comparing multiple reasoning chains, enabling self-correction."
+author: Haritz Puerto, Tilek Chubakov, Xiaodan Zhu, Harish Tayyar Madabushi, Iryna Gurevych
+date: "2024-07-03"
+image: "https://browse.arxiv.org/html/2407.03181v1/extracted/5708587/figures/intro.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.03181v1/extracted/5708587/figures/intro.png)
+
+### Summary:
+
+The paper presents a novel method called Divergent Chain of Thought (DCoT) that improves the performance of large language models (LLMs) by generating multiple reasoning chains in a single inference step. The authors demonstrate that instruction tuning on DCoT datasets boosts the performance of even smaller, more accessible LLMs. Through a rigorous set of experiments, they show that fine-tuning on DCoT consistently improves performance over the CoT baseline across model families and scales (1.3B to 70B). The performance gains stem from models generating multiple divergent reasoning chains, indicative of the enabling of self-correction in language models.
+
+### Major Findings:
+
+1. DCoT, a method that generates multiple reasoning chains and selects an answer in a single inference step, improves LLM performance over the CoT baseline.
+2. Fine-tuning using DCoTs improves LLM performance on a range of tasks requiring different types of reasoning across model families and sizes (1.3B to 70B).
+3. DCoT has the side-effect of learning to self-correct without external feedback or prompt optimization, which is the first work to do so.
+
+### Analysis and Critique:
+
+1. The paper does not provide a clear comparison between DCoT and other methods that generate multiple reasoning chains, such as self-consistency (Wang et al., 2023) and self-ensembling (Wei et al., 2022).
+2. The paper does not discuss the potential limitations of DCoT, such as the increased computational cost of generating multiple reasoning chains and the potential for hallucination in larger models.
+3. The paper does not provide a clear explanation of how DCoT enables self-correction in language models, which is a significant claim.
+4. The paper does not discuss the potential impact of DCoT on the interpretability of language models, as generating multiple reasoning chains may make it more difficult to understand the model's decision-making process.
+5. The paper does not provide a clear explanation of how DCoT can be applied to other types of prompting, such as code prompting or graph of thoughts.
+
+Overall, the paper presents an interesting and novel method for improving
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.03181v1](https://arxiv.org/abs/2407.03181v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.03181v1](https://browse.arxiv.org/html/2407.03181v1)       |
+| Truncated       | False       |
+| Word Count       | 8440       |

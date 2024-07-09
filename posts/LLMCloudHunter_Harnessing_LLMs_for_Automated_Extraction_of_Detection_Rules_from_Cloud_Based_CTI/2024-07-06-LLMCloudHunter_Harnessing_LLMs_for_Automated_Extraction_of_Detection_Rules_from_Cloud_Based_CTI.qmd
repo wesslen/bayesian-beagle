@@ -1,0 +1,51 @@
+
+---
+title: "LLMCloudHunter: Harnessing LLMs for Automated Extraction of Detection Rules from Cloud-Based CTI"
+id: "2407.05194v1"
+description: "LLMCloudHunter: Automated OSCTI analysis for cloud threats, using LLMs for high-precision rule generation."
+author: Yuval Schwartz, Lavi Benshimol, Dudu Mimran, Yuval Elovici, Asaf Shabtai
+date: "2024-07-06"
+image: "https://browse.arxiv.org/html/2407.05194v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05194v1/x1.png)
+
+# Summary:
+
+The paper presents LLMCloudHunter, a novel framework that leverages pretrained large language models (LLMs) to generate detection rule candidates from unstructured open-source cyber threat intelligence (OSCTI) automatically. The framework focuses on cloud environments and generates Sigma rule candidates from both textual and visual cyber threat information. The proposed methodology integrates various techniques to address the limitations of LLMs, such as unstructured output and hallucinations.
+
+The main contributions of the paper are:
+
+1. A novel LLM-based framework for the automatic generation of Sigma candidates from unstructured OSCTI, which integrates both textual and visual information.
+2. An annotated dataset consisting of 12 cloud-related OSCTI posts, complete with entities and their relationships, as well as Sigma rules.
+3. Insights on the application of LLMs for complex NLP tasks in the field of cybersecurity, pertaining to prompt engineering techniques and the effective use of models’ features and parameters.
+4. A comprehensive evaluation that assesses the accuracy and correctness of the Sigma candidates generated.
+5. The code and cloud CTI dataset are made available to the research community on GitHub.
+
+# Major Findings:
+
+1. The proposed framework achieved a precision of 92% and recall of 98% for the task of accurately extracting threat actors’ API calls, and a precision of 99% with a recall of 98% for IoCs.
+2. 99.18% of the generated Sigma candidates were successfully converted into Splunk queries.
+3. In terms of overall performance, i.e., including the extraction of API calls, IoCs, MITRE ATT&CK TTPs, and request parameters, the framework achieved 80% and 83% precision and recall, respectively.
+
+# Analysis and Critique:
+
+The paper presents a promising approach to automate the extraction and enrichment of information from OSCTI textual data, focusing on cloud environments. However, there are some limitations and potential areas for improvement:
+
+1. The framework relies on pretrained LLMs, which may not be as effective as fine-tuned models for specific tasks.
+2. The evaluation of the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05194v1](https://arxiv.org/abs/2407.05194v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05194v1](https://browse.arxiv.org/html/2407.05194v1)       |
+| Truncated       | False       |
+| Word Count       | 11552       |

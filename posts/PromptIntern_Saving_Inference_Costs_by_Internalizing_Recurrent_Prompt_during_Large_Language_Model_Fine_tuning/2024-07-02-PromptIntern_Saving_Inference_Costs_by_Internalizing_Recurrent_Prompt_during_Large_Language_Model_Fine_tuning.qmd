@@ -1,0 +1,44 @@
+
+---
+title: "PromptIntern: Saving Inference Costs by Internalizing Recurrent Prompt during Large Language Model Fine-tuning"
+id: "2407.02211v1"
+description: "PromptIntern: LLM method reduces inference tokens by 90%, speeds up inference 4.2x, and saves 88.3% monetary cost."
+author: Jiaru Zou, Mengyu Zhou, Tao Li, Shi Han, Dongmei Zhang
+date: "2024-07-02"
+image: "https://browse.arxiv.org/html/2407.02211v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.02211v1/x1.png)
+
+Summary:
+
+The paper introduces a novel method called PromptIntern for internalizing prompt knowledge into the parameters of large language models (LLMs) during fine-tuning. The approach aims to reduce inference costs by emulating the human learning process, where detailed templates and examples are gradually internalized and phased out as the model becomes accustomed to the task. PromptIntern consists of several key steps, including classifying input prompts into three components (template, examples, and query), setting a schedule to decrease both the template compression rate and the number of few-shot examples across training stages, and implementing template compression and example absorption to pre-process the input prompts.
+
+Major Findings:
+
+1. PromptIntern reduces inference tokens by over 90%, speeding up inference by 4.2 times, and saving 88.3% monetary cost.
+2. The method surpasses prompt compression methods and achieves comparable accuracy to direct fine-tuning under identical fine-tuning settings.
+3. PromptIntern successfully balances efficiency and effectiveness, making it suitable for optimizing LLM performance across various cost-saving scenarios.
+
+Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other prompt-based fine-tuning methods, such as prefix-tuning or adapter-based methods.
+2. The method's effectiveness on other tasks beyond NL2Code is not explored, limiting the generalizability of the findings.
+3. The paper does not discuss the potential impact of PromptIntern on the model's ability to generalize to unseen tasks or domains.
+4. The method's reliance on a predetermined schedule for template compression and example absorption may limit its flexibility and adaptability to different tasks or datasets.
+5. The paper does not address the potential risks or ethical considerations associated with internalizing prompt knowledge, such as the potential for overfitting or the unintended memorization of sensitive information.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02211v1](https://arxiv.org/abs/2407.02211v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02211v1](https://browse.arxiv.org/html/2407.02211v1)       |
+| Truncated       | False       |
+| Word Count       | 7224       |

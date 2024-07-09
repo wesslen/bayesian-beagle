@@ -1,0 +1,44 @@
+
+---
+title: "Enhancing Hallucination Detection through Perturbation-Based Synthetic Data Generation in System Responses"
+id: "2407.05474v1"
+description: "Automatic generation of faithful/hallucinated outputs improves LLM hallucination detection."
+author: Dongxu Zhang, Varun Gangal, Barrett Martin Lattimer, Yi Yang
+date: "2024-07-07"
+image: "https://browse.arxiv.org/html/2407.05474v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05474v1/x1.png)
+
+### Summary:
+
+This study introduces an approach for automatically generating both faithful and hallucinated outputs by rewriting system responses. The method involves prompting a rewriting LLM to transform a given system response from the target LLM into both faithful and hallucinated versions. The experimental findings demonstrate that a T5-base model, fine-tuned on the generated dataset, surpasses state-of-the-art zero-shot detectors and existing synthetic generation methods in both accuracy and latency.
+
+### Major Findings:
+
+1. The proposed approach for generating synthetic annotations to train hallucination detectors is simple yet effective, eliminating the need for manual annotation.
+2. The trained detector aligns more closely with the response distribution of the target LLM, facilitating seamless adaptation to new LLMs.
+3. The method allows for the creation of a broader spectrum of hallucination types, enhancing the coverage and diversity of generated hallucinations.
+
+### Analysis and Critique:
+
+1. The study does not provide a detailed comparison with other existing methods for generating synthetic annotations, which could have strengthened the argument for the proposed approach.
+2. The experimental evaluations are limited to two hallucination detection datasets, and the results may not generalize to other datasets or domains.
+3. The study does not discuss the potential limitations or biases of the proposed approach, such as the reliance on a specific rewriting LLM or the potential for introducing new types of hallucinations.
+4. The study does not provide a clear definition of what constitutes a "hallucination" or a "faithful" response, which could impact the reproducibility and validity of the results.
+5. The study does not discuss the potential ethical implications of generating synthetic hallucinations, such as the risk of spreading misinformation or the potential for malicious use.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05474v1](https://arxiv.org/abs/2407.05474v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05474v1](https://browse.arxiv.org/html/2407.05474v1)       |
+| Truncated       | False       |
+| Word Count       | 5380       |

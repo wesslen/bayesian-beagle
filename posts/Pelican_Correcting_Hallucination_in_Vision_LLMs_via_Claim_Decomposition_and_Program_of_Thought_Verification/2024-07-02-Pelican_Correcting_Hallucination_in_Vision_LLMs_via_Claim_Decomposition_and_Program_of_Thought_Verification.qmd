@@ -1,0 +1,48 @@
+
+---
+title: "Pelican: Correcting Hallucination in Vision-LLMs via Claim Decomposition and Program of Thought Verification"
+id: "2407.02352v1"
+description: "Pelican framework reduces LVLMs' hallucinations by 8-32% via claim verification, outperforming existing mitigation approaches."
+author: Pritish Sahu, Karan Sikka, Ajay Divakaran
+date: "2024-07-02"
+image: "https://browse.arxiv.org/html/2407.02352v1/extracted/5703308/images/pelican.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.02352v1/extracted/5703308/images/pelican.png)
+
+### Summary:
+
+The paper introduces [Uncaptioned image] Pelican, a novel framework designed to detect and mitigate hallucinations in Large Visual Language Models (LVLMs) through claim verification. Pelican decomposes visual claims into a chain of sub-claims based on first-order predicates, which are then represented as nodes in a computational graph. The framework uses Program-of-Thought prompting to generate Python code for answering questions, enabling flexible composition of external tools. Pelican improves upon prior work by introducing intermediate variables for precise grounding of object instances and shared computation for answering sub-questions, enabling adaptive corrections and inconsistency identification. The experiments reveal a significant drop in hallucination rate across various baseline LVLMs and benchmarks.
+
+### Major Findings:
+
+1. Pelican effectively decomposes visual claims into sub-claims, improving the detection and mitigation of hallucinations in LVLMs.
+2. The introduction of intermediate variables enables precise grounding of object instances, enhancing the framework's performance.
+3. Shared computation for answering sub-questions allows for adaptive corrections and inconsistency identification, further improving the framework's effectiveness.
+4. Pelican demonstrates a significant drop in hallucination rate across various baseline LVLMs and benchmarks, outperforming existing approaches for hallucination mitigation.
+
+### Analysis and Critique:
+
+While Pelican shows promising results in detecting and mitigating hallucinations in LVLMs, there are some potential limitations and areas for improvement:
+
+1. The reliance on external tools for claim verification may introduce additional errors or biases, impacting the overall performance of the framework.
+2. The use of first-order predicates for claim decomposition may not capture the full complexity of visual claims, potentially limiting the framework's ability to handle more nuanced or abstract concepts.
+3. The computational graph representation may not fully capture the dependencies between sub-claims, potentially leading to inaccuracies in the verification process.
+4. The evaluation of Pelican's performance is primarily based on benchmark datasets, which may not fully represent the diversity and complexity of real-world visual claims.
+
+Further research is needed to address these limitations and explore the potential of Pelican in handling more complex visual claims and real-
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02352v1](https://arxiv.org/abs/2407.02352v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02352v1](https://browse.arxiv.org/html/2407.02352v1)       |
+| Truncated       | False       |
+| Word Count       | 8633       |

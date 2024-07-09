@@ -1,0 +1,43 @@
+
+---
+title: "TheoremLlama: Transforming General-Purpose LLMs into Lean4 Experts"
+id: "2407.03203v1"
+description: "TheoremLlama: LLM framework for formal theorem proving outperforms GPT-4."
+author: Ruida Wang, Jipeng Zhang, Yizhen Jia, Rui Pan, Shizhe Diao, Renjie Pi, Tong Zhang
+date: "2024-07-03"
+image: "https://browse.arxiv.org/html/2407.03203v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.03203v1/x1.png)
+
+# Summary:
+
+TheoremLlama is a framework designed to transform a general-purpose Large Language Model (LLM) into a Lean4 expert. The framework addresses the challenges of formal theorem proving by providing a method for generating NL-FL aligned datasets, training approaches for the LLM formal theorem prover, and techniques for LLM Lean4 proof writing. The key innovation is the NL-FL bootstrapping method, which integrates natural language proofs into Lean4 code for training datasets, leveraging the LLM's NL reasoning ability for formal reasoning. The framework achieves cumulative accuracies of 36.48% and 33.61% on MiniF2F-Valid and Test datasets, respectively, surpassing the GPT-4 baseline.
+
+# Major Findings:
+
+1. TheoremLlama is an end-to-end framework that transforms a general-purpose LLM into a Lean4 expert, addressing the significant data scarcity problem by contributing to the Open Bootstrapped Theorems (OBT) dataset.
+2. The major innovation of TheoremLlama is the NL-FL bootstrapping method, which integrates informal proofs into Lean4 code, enhancing the LLM's abilities by using training data to transfer their informal reasoning capabilities to Lean4 proof writing.
+3. TheoremLlama achieves 36.48% and 33.61% accuracy rates on MiniF2F-Valid and Test, respectively, largely suppressing the GPT-4 baseline (25.41% and 22.95% separately).
+
+# Analysis and Critique:
+
+1. The paper presents a novel approach to formal theorem proving using LLMs, addressing the data scarcity problem and providing a method for generating NL-FL aligned datasets.
+2. The NL-FL bootstrapping method is a significant innovation, leveraging the LLM's NL reasoning ability for formal reasoning.
+3. The paper provides extensive experiments and ablation studies to validate the effectiveness of TheoremLlama, demonstrating its superior performance compared to the GPT-4 baseline.
+4. However, the paper does not discuss the potential limitations of the framework, such as the generalizability of the NL-FL bootstrapping method
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.03203v1](https://arxiv.org/abs/2407.03203v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.03203v1](https://browse.arxiv.org/html/2407.03203v1)       |
+| Truncated       | False       |
+| Word Count       | 8361       |

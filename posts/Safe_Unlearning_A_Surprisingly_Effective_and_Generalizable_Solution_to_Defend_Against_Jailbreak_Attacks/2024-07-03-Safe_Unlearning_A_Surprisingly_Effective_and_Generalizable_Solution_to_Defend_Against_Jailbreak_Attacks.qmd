@@ -1,0 +1,40 @@
+
+---
+title: "Safe Unlearning: A Surprisingly Effective and Generalizable Solution to Defend Against Jailbreak Attacks"
+id: "2407.02855v1"
+description: "TL;DR: Unlearning harmful knowledge in LLMs effectively defends against jailbreak attacks, outperforming traditional fine-tuning methods."
+author: Zhexin Zhang, Junxiao Yang, Pei Ke, Shiyao Cui, Chujie Zheng, Hongning Wang, Minlie Huang
+date: "2024-07-03"
+image: "../../img/2407.02855v1/image_1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.02855v1/image_1.png)
+
+**Summary:**
+
+The paper "Safe Unlearning: A Surprisingly Effective and Generalizable Solution to Defend Against Jailbreak Attacks" presents a novel approach to address the vulnerability of large language models (LLMs) to jailbreak attacks. The authors propose unlearning harmful knowledge in the LLM as a more effective way to defend against such attacks than mainstream supervised fine-tuning (SFT) approaches. The proposed method, called Safe Unlearning, involves training the LLM with a small set of raw harmful questions without incorporating any jailbreak prompts. The results show that Safe Unlearning significantly outperforms Llama2-7B-Chat, which is fine-tuned on a large number of safety alignment samples, in terms of Attack Success Rate (ASR) on out-of-distribution (OOD) harmful questions wrapped with various complex jailbreak prompts. The authors attribute the strong generalization ability of Safe Unlearning to the intrinsic relatedness among harmful responses across harmful questions.
+
+**Major Findings:**
+
+1. Unlearning harmful knowledge in the LLM is a more effective way to defend against jailbreak attacks than mainstream SFT approaches.
+2. Safe Unlearning, a method that trains the LLM with a small set of raw harmful questions without incorporating any jailbreak prompts, significantly outperforms Llama2-7B-Chat in terms of ASR on OOD harmful questions wrapped with various complex jailbreak prompts.
+3. The strong generalization ability of Safe Unlearning is attributed to the intrinsic relatedness among harmful responses across harmful questions.
+
+**Analysis and Critique:**
+
+The paper presents an interesting and novel approach to addressing the vulnerability of LLMs to jailbreak attacks. The proposed method, Safe Unlearning, shows promising results in terms of reducing the ASR on OOD harmful questions wrapped with various complex jailbreak prompts. However, the paper does not provide a detailed comparison of Safe Unlearning with other unlearning-based approaches, which could have strengthened the argument for the proposed method. Additionally, the paper does not discuss the potential limitations or shortcomings of Safe Unlearning, such as the impact of unlearning on the overall performance of the LLM or the potential for overfitting to the small set of raw harmful questions used in training. Overall, the paper provides a valuable
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02855v1](https://arxiv.org/abs/2407.02855v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02855v1](https://browse.arxiv.org/html/2407.02855v1)       |
+| Truncated       | False       |
+| Word Count       | 16311       |

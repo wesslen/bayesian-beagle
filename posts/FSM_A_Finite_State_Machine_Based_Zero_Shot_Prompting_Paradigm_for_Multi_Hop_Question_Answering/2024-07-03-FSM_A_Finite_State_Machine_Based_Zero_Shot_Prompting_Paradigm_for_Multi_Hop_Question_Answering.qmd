@@ -1,0 +1,49 @@
+
+---
+title: "FSM: A Finite State Machine Based Zero-Shot Prompting Paradigm for Multi-Hop Question Answering"
+id: "2407.02964v1"
+description: "FSM prompting enhances LLMs' reasoning, improving accuracy and trustworthiness in complex tasks, mitigating hallucination, and easing answer interpretation."
+author: Xiaochen Wang, Junqing He, Zhe yang, Yiru Wang, Xiangdi Meng, Kunhao Pan, Zhifang Sui
+date: "2024-07-03"
+image: "https://browse.arxiv.org/html/2407.02964v1/x1.png"
+categories: ['robustness', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.02964v1/x1.png)
+
+### Summary:
+
+- The article proposes a Finite State Machine (FSM) prompting method to enhance the reasoning capabilities of Large Language Models (LLMs) for complex tasks, such as Multi-hop Question Answering (MHQA).
+- FSM addresses MHQA by iteratively decomposing a question into multi-turn sub-questions and self-correcting in time, improving the accuracy of answers in each step.
+- Unlike Chain-of-Thought (COT) methods, FSM addresses one sub-question at a time and decides on the next step based on its current result and state, in an automaton-like format.
+- Experiments on benchmarks show the effectiveness of the FSM method, especially on challenging datasets like Musique.
+- FSM mitigates the hallucination phenomenon, wherein the correct final answer can be recovered despite errors in intermediate reasoning.
+- FSM improves LLMs’ ability to follow specified output format requirements, significantly reducing the difficulty of answer interpretation and the need for reformatting.
+
+### Major Findings:
+
+1. FSM is a zero-shot method that simplifies the MHQA task into four sub-tasks: decomposing questions, searching for answers in candidate paragraphs, revising the format, and judging whether to continue or summarizing with all key information.
+2. FSM addresses reasoning challenges in LLMs for MHQA tasks by iteratively decomposing complex questions and strengthening control over intermediate reasoning.
+3. FSM outperforms GPT and 72B LLM baselines, nearly doubling the F1 score on Musique.
+4. FSM reduces the frequency of producing outputs in unexpected formats and type errors that require additional processing to extract correct answers.
+
+### Analysis and Critique:
+
+- The article effectively addresses the limitations of existing MHQA methods, such as hallucination, error propagation, and limited context length.
+- The proposed FSM method shows promising results in improving the reasoning capabilities of LLMs for complex tasks.
+- The article could have provided more details on the implementation and evaluation of the FSM method, such as the specific datasets used, the evaluation metrics, and the comparison with other state-of-the-art methods.
+- The article could have discussed potential limitations and challenges of the F
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02964v1](https://arxiv.org/abs/2407.02964v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02964v1](https://browse.arxiv.org/html/2407.02964v1)       |
+| Truncated       | False       |
+| Word Count       | 4635       |

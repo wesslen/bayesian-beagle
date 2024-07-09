@@ -1,0 +1,43 @@
+
+---
+title: "iLLM-TSC: Integration reinforcement learning and large language model for traffic signal control policy improvement"
+id: "2407.06025v1"
+description: "LLM-RL Integration Improves TSC, Reducing Wait Time by 17.5% in Degraded Communication."
+author: Aoyu Pang, Maonan Wang, Man-On Pun, Chung Shue Chen, Xi Xiong
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.06025v1/x1.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.06025v1/x1.png)
+
+**Summary:**
+
+The paper introduces a novel integration framework, iLLM-TSC, which combines a large language model (LLM) with reinforcement learning (RL) to address the limitations of existing RL-based traffic signal control (TSC) systems. These limitations include imperfect observations caused by degraded communication and the absence of rare real-life events in the reward function, such as unconsidered emergency vehicles. The iLLM-TSC framework allows RL agents to make initial decisions based on observed data, leveraging their ability to learn from specific environments. Subsequently, the LLM model refines these decisions by incorporating additional real-time information not initially used by the RL agents. This integration approach can be seamlessly integrated with existing RL-based TSC systems without requiring modifications. Extensive testing confirms that the iLLM-TSC approach reduces the average waiting time by 17.5% in degraded communication conditions compared to traditional RL methods.
+
+**Major Findings:**
+
+1. The iLLM-TSC framework integrates RL with LLMs to enhance TSC, employing a dual-step decision-making process where RL agents initially make decisions based on direct observations, and then LLM agents evaluate these decisions considering the broader environmental context.
+2. The iLLM-TSC framework significantly reduces the average waiting time by 17.5% in degraded communication scenarios compared to traditional RL methods, highlighting the enhanced scene comprehension capabilities of LLMs tailored specifically for TSC applications.
+3. The iLLM-TSC framework can be seamlessly integrated with existing RL-based TSC systems without requiring modifications.
+
+**Analysis and Critique:**
+
+1. The paper effectively addresses the limitations of existing RL-based TSC systems by integrating LLMs to handle overlooked elements in the reward function and gaps in state information.
+2. The iLLM-TSC framework demonstrates promising results in reducing average waiting times in degraded communication scenarios, but further research is needed to evaluate its performance in other challenging traffic conditions.
+3. The paper does not discuss potential limitations or unanswered questions, such as the computational requirements of the iLLM-TSC framework or its scalability to larger traffic networks.
+4. The paper does not provide
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.06025v1](https://arxiv.org/abs/2407.06025v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.06025v1](https://browse.arxiv.org/html/2407.06025v1)       |
+| Truncated       | False       |
+| Word Count       | 8535       |

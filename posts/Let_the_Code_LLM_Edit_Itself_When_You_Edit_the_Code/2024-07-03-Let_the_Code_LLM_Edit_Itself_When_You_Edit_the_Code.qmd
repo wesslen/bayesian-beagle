@@ -1,0 +1,45 @@
+
+---
+title: "Let the Code LLM Edit Itself When You Edit the Code"
+id: "2407.03157v1"
+description: "PIE reduces 85% computational overhead in real-time code editing, maintaining model performance."
+author: Zhenyu He, Jun Zhang, Shengjie Luo, Jingjing Xu, Zhi Zhang, Di He
+date: "2024-07-03"
+image: "https://browse.arxiv.org/html/2407.03157v1/x2.png"
+categories: ['robustness', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.03157v1/x2.png)
+
+### Summary:
+
+This paper introduces Positional Integrity Encoding (PIE), a novel method designed to improve the efficiency of large language models (LLMs) in real-time editing scenarios. The study focuses on the scenario where users frequently edit the content and expect the LLM to generate correct responses based on the updated information. The authors propose PIE to address the temporal confusion problem that arises when encoding only the edited subsequence and directly integrating it into the original KV cache. PIE is built upon rotary positional encoding (RoPE) and ensures that positional relationships between tokens are correct, requiring only a single round of matrix multiplication.
+
+The authors validate the effectiveness of PIE through extensive experiments on the RepoBench-C-8k dataset, utilizing DeepSeek-Coder models with 1.3B, 6.7B, and 33B parameters. The evaluation includes three real-world coding tasks: code insertion, code deletion, and multi-place code editing. Results demonstrate that PIE reduces computational overhead by over 85% compared to the standard full recomputation approach across all model sizes and tasks while well approximating the model performance.
+
+### Major Findings:
+
+1. PIE effectively addresses the temporal confusion problem in real-time editing scenarios, ensuring that positional relationships between tokens are correct.
+2. PIE reduces computational overhead by over 85% compared to the standard full recomputation approach across all model sizes and tasks.
+3. PIE maintains model performance while significantly improving efficiency in real-time editing scenarios.
+
+### Analysis and Critique:
+
+The paper presents a well-structured and coherent summary of the proposed method, PIE, and its effectiveness in improving the efficiency of LLMs in real-time editing scenarios. The authors provide a clear problem statement, a detailed explanation of the proposed solution, and extensive experimental results to validate their claims.
+
+However, the paper could benefit from a more in-depth discussion of the limitations and potential biases of the proposed method. For instance, the authors could discuss the potential impact of PIE on the model's performance in handling long-range dependencies or complex code structures. Additionally, the paper could explore the potential integration of PIE with other optimization techniques and its application to a broader range of tasks beyond code generation.
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.03157v1](https://arxiv.org/abs/2407.03157v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.03157v1](https://browse.arxiv.org/html/2407.03157v1)       |
+| Truncated       | False       |
+| Word Count       | 6193       |

@@ -1,0 +1,46 @@
+
+---
+title: "Using Grammar Masking to Ensure Syntactic Validity in LLM-based Modeling Tasks"
+id: "2407.06146v1"
+description: "Grammar masking improves LLMs' modeling, reducing reliance on prompting and increasing correct syntax chances."
+author: Lukas Netz, Jan Reimar, Bernhard Rumpe
+date: "2024-07-08"
+image: "../../https://browse.arxiv.org/html/2407.06146v1/extracted/5717365/img/FSL.png"
+categories: ['architectures', 'prompt-engineering', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../https://browse.arxiv.org/html/2407.06146v1/extracted/5717365/img/FSL.png)
+
+### Summary:
+
+The paper presents a method called grammar masking, which is used to guide large language models (LLMs) toward producing syntactically correct models for a given context-free grammar. The authors evaluate this method by comparing it to previous successful modeling tasks for LLMs using only few-shot learning. The study focuses on the syntactic correctness of the models produced by the LLM and evaluates two approaches: one that only uses FSL and one that combines FSL with grammar masking. The results indicate that the constrained generation method significantly increases the percentage of syntactically correct outputs, but this improvement comes at the cost of increased generation time.
+
+### Major Findings:
+
+1. The constrained generation method significantly increases the percentage of syntactically correct outputs from 46.52% to 92.63% (Llama 3).
+2. This improvement comes at the cost of increased generation time, with constrained generation taking an average of 74.09 seconds compared to 5.71 seconds for unconstrained generation.
+3. Similar results are observed for other LLMs, with constrained generation producing a higher percentage of syntactically correct outputs than unconstrained generation.
+4. The study also shows that the constrained generation method is more effective for the Class Diagram DSL CD4A than for the Structured English DSL SEN.
+5. The results do not show the best possible modeling capabilities of the individual models, as the few-shot learning prompting was not optimized intensively.
+
+### Analysis and Critique:
+
+1. The study does not address the semantic accuracy of the generated models, which is an important aspect of model-driven software engineering.
+2. The study does not consider the impact of the increased generation time on the overall performance of the modeling process.
+3. The study does not discuss the potential limitations of the grammar masking method, such as the need for a well-defined grammar and the potential for overfitting to the training data.
+4. The study does not compare the performance of the grammar masking method to other methods for guiding LLMs, such as fine-tuning or prompt engineering.
+5. The study does not discuss the potential applications of the grammar masking method beyond model-driven software
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.06146v1](https://arxiv.org/abs/2407.06146v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.06146v1](https://browse.arxiv.org/html/2407.06146v1)       |
+| Truncated       | False       |
+| Word Count       | 6526       |

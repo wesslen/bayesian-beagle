@@ -1,0 +1,47 @@
+
+---
+title: "Exploring the Role of Transliteration in In-Context Learning for Low-resource Languages Written in Non-Latin Scripts"
+id: "2407.02320v1"
+description: "Transliteration can improve LLMs' performance for low-resource, non-Latin languages, especially in sequential labeling tasks."
+author: Chunlan Ma, Yihong Liu, Haotian Ye, Hinrich Schütze
+date: "2024-07-02"
+image: "https://browse.arxiv.org/html/2407.02320v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.02320v1/x1.png)
+
+### Summary:
+
+- The paper explores the effectiveness of transliteration in improving the performance of decoder-only large language models (LLMs) for low-resource languages written in non-Latin scripts.
+- Three prompt templates are proposed: (1) using the original script, (2) using Latin script, and (3) using a combination of both.
+- The proposed methods are applied to several LLMs of different sizes on various tasks, including text classification and sequential labeling.
+- The findings show that the effectiveness of transliteration varies by task type and model size. For instance, all models benefit from transliterations for sequential labeling (with increases of up to 25%).
+
+### Major Findings:
+
+1. **Transliteration benefits sequential labeling**: Across all models, either using Latin script or a combination of both the original and Latin scripts outperforms using the original script on NER. This demonstrates that models can make better predictions by leveraging the knowledge encoded in the Latin-script transliterations.
+2. **Impact of transliteration on text classification varies across models**: Using Latin script alone is not enough for the model to understand the sentence-level semantics. However, transliteration can be a good auxiliary input for good Latin-dominant models.
+3. **Model performance varies by different scripts**: For scripts covered in the pretraining data, using a combination of both the original and Latin scripts obtains the largest improvement. On the English-centric Mistral-7B, prompts containing transliteration (Latin script or a combination of both) beats using the original script on 5 out of 8 scripts.
+
+### Analysis and Critique:
+
+- The study is limited to models with up to 7 billion parameters due to constraints in computing resources.
+- The evaluation data is limited in terms of the types of tasks, mainly due to the limited availability of evaluation datasets containing a variety of scripts.
+- The paper does not discuss the potential impact of transliteration on the model's understanding of the semantics of the original script.
+- The study does not explore the potential of transliteration for languages written in scripts other than Latin.
+- The paper does not provide a comparison with other methods for improving the performance of LLMs for low-resource languages.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02320v1](https://arxiv.org/abs/2407.02320v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02320v1](https://browse.arxiv.org/html/2407.02320v1)       |
+| Truncated       | False       |
+| Word Count       | 3417       |

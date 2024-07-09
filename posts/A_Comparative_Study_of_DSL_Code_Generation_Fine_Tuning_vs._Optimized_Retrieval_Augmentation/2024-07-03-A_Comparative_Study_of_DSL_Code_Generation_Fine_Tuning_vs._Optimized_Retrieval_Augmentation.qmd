@@ -1,0 +1,51 @@
+
+---
+title: "A Comparative Study of DSL Code Generation: Fine-Tuning vs. Optimized Retrieval Augmentation"
+id: "2407.02742v1"
+description: "LLMs struggle with DSLs, but optimized RAG models can match fine-tuned models and handle new APIs better."
+author: Nastaran Bassamzadeh, Chhaya Methani
+date: "2024-07-03"
+image: "https://browse.arxiv.org/html/2407.02742v1/x1.png"
+categories: ['robustness', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.02742v1/x1.png)
+
+### Summary:
+
+- The paper presents a comparative study of DSL code generation using fine-tuning and optimized retrieval augmentation.
+- The study focuses on generating a DSL for automation tasks across 700 APIs in the public domain.
+- A Codex model was fine-tuned for this DSL, and the results showed that the fine-tuned model scored the best on the code similarity metric.
+- With RAG optimizations, parity was achieved for the similarity metric, but the compilation rate showed that both models still got the syntax wrong many times.
+- The hallucination rate for the RAG model lagged behind for API names and parameter keys.
+- The study concludes that an optimized RAG model can match the quality of fine-tuned models and offer advantages for new, unseen APIs.
+
+### Major Findings:
+
+1. The fine-tuned model scored the best on the code similarity metric.
+2. With RAG optimizations, parity was achieved for the similarity metric.
+3. Both the fine-tuned and RAG models had issues with syntax, with the RAG-based method being 2 points better.
+4. The hallucination rate for the RAG model lagged behind for API names and parameter keys.
+5. An optimized RAG model can match the quality of fine-tuned models and offer advantages for new, unseen APIs.
+
+### Analysis and Critique:
+
+- The study provides a valuable comparison of fine-tuning and RAG for DSL code generation.
+- The results show that both methods have their strengths and weaknesses, with fine-tuning performing better on the code similarity metric and RAG offering advantages for new, unseen APIs.
+- However, the study does not provide a detailed analysis of the limitations and potential biases of each method.
+- Additionally, the study does not discuss the potential impact of the size and diversity of the training dataset on the performance of the fine-tuned model.
+- Further research is needed to explore the potential of combining fine-tuning and RAG to improve the performance of DSL code generation.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02742v1](https://arxiv.org/abs/2407.02742v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02742v1](https://browse.arxiv.org/html/2407.02742v1)       |
+| Truncated       | False       |
+| Word Count       | 6386       |

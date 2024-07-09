@@ -1,0 +1,40 @@
+
+---
+title: "From Loops to Oops: Fallback Behaviors of Language Models Under Uncertainty"
+id: "2407.06071v1"
+description: "LLMs' fallback behaviors shift from repetitions to degenerate text to hallucinations with model advancement and increasing uncertainty. Common decoding techniques may reduce repetitions but increase hallucinations."
+author: Maor Ivgi, Ori Yoran, Jonathan Berant, Mor Geva
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.06071v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.06071v1/x1.png)
+
+**Summary:**
+
+The paper "From Loops to Oops: Fallback Behaviors of Language Models Under Uncertainty" investigates the undesirable behaviors of large language models (LLMs), such as hallucinations and sequence repetitions, and proposes to view these behaviors as fallbacks that models exhibit under uncertainty. The authors categorize fallback behaviors into sequence repetitions, degenerate text, and hallucinations, and extensively analyze them in models from the same family that differ by the amount of pretraining tokens, parameter count, or the inclusion of instruction-following training. The experiments reveal a clear and consistent ordering of fallback behaviors, with more advanced LLMs exhibiting more complex fallback behaviors. The same ordering is observed throughout a single generation, even for the best-performing models, as uncertainty increases. The paper also demonstrates that common decoding techniques, such as random sampling, might alleviate some unwanted behaviors like sequence repetitions but increase harder-to-detect hallucinations.
+
+**Major Findings:**
+
+1. LLMs exhibit a clear and consistent ordering of fallback behaviors, with more advanced models (trained on more tokens, having more parameters, or instruction-tuned) shifting from sequence repetitions to degenerate text and then to hallucinations.
+2. The same ordering of fallback behaviors is observed throughout a single generation, even for the best-performing models, as uncertainty increases.
+3. Common decoding techniques, such as random sampling, might alleviate some unwanted behaviors like sequence repetitions but increase harder-to-detect hallucinations.
+
+**Analysis and Critique:**
+
+The paper provides a comprehensive analysis of the fallback behaviors of LLMs under uncertainty, offering valuable insights into the relationship between model complexity, training, and the emergence of different fallback behaviors. The authors' categorization of fallback behaviors and their extensive experiments contribute to a better understanding of the limitations and challenges of LLMs. However, the paper does not discuss potential solutions to mitigate the identified issues or explore the implications of these findings for the development and deployment of LLMs in real-world applications. Additionally, the paper does not address the potential impact of different decoding strategies on the performance and reliability of LLMs. Further research is needed to investigate these aspects and develop more robust and reliable LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.06071v1](https://arxiv.org/abs/2407.06071v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.06071v1](https://browse.arxiv.org/html/2407.06071v1)       |
+| Truncated       | False       |
+| Word Count       | 17045       |

@@ -1,0 +1,45 @@
+
+---
+title: "S2D: Sorted Speculative Decoding For More Efficient Deployment of Nested Large Language Models"
+id: "2407.01955v1"
+description: "TL;DR: New method improves speculative decoding for multiple large language models, reducing costs."
+author: Parsa Kavehzadeh, Mohammadreza Pourreza, Mojtaba Valipour, Tinashu Zhu, Haoli Bai, Ali Ghodsi, Boxing Chen, Mehdi Rezagholizadeh
+date: "2024-07-02"
+image: "https://browse.arxiv.org/html/2407.01955v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.01955v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel multi-target scenario for deployment of draft models for faster inference and presents a more efficient sorted speculative decoding mechanism that outperforms regular baselines in multi-target settings. The proposed method, Sorted Speculative Decoding (S2D), trains multiple draft models in one model to serve more than one target model at a time, addressing the search problem and minimizing training requirements. The method was evaluated on Spec-Bench with base models such as Vicuna 7B, 13B, and LLama Chat 70B, and the results suggest that the draft models perform better than baselines for multiple target models simultaneously.
+
+### Major Findings:
+
+1. The paper introduces a novel multi-target scenario for deployment of draft models for faster inference.
+2. A more efficient sorted speculative decoding mechanism, S2D, is presented that outperforms regular baselines in multi-target settings.
+3. S2D trains multiple draft models in one model to serve more than one target model at a time, addressing the search problem and minimizing training requirements.
+4. The method was evaluated on Spec-Bench with base models such as Vicuna 7B, 13B, and LLama Chat 70B, and the results suggest that the draft models perform better than baselines for multiple target models simultaneously.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to address the challenges of deploying draft models for faster inference in multi-target scenarios. The proposed S2D method effectively trains multiple draft models in one model, reducing deployment complexity and costs. The evaluation of the method on Spec-Bench with various base models demonstrates its superior performance compared to regular baselines.
+
+However, the paper does not discuss the potential limitations or shortcomings of the proposed method. It would be beneficial to explore the method's performance in scenarios with a larger number of target models or with target models of varying sizes. Additionally, the paper does not provide a detailed comparison of the proposed method with other existing approaches for multi-target deployment of draft models.
+
+Overall, the paper presents a promising approach to address the challenges of deploying draft models for faster inference in multi-target scenarios. The proposed S2D method demonstrates superior performance compared to regular baselines,
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.01955v1](https://arxiv.org/abs/2407.01955v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.01955v1](https://browse.arxiv.org/html/2407.01955v1)       |
+| Truncated       | False       |
+| Word Count       | 6189       |

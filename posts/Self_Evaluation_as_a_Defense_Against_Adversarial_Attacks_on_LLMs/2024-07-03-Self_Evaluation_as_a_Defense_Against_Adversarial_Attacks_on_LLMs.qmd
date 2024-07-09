@@ -1,0 +1,48 @@
+
+---
+title: "Self-Evaluation as a Defense Against Adversarial Attacks on LLMs"
+id: "2407.03234v1"
+description: "Adding a space to prompts can bypass safety measures in language models, causing harmful outputs."
+author: Hannah Brown, Leon Lin, Kenji Kawaguchi, Michael Shieh
+date: "2024-07-03"
+image: "../../img/2407.03234v1/image_1.png"
+categories: ['robustness', 'prompt-engineering', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.03234v1/image_1.png)
+
+# Summary:
+
+- The paper introduces a defense against adversarial attacks on LLMs using self-evaluation, which requires no model fine-tuning and can significantly reduce the attack success rate.
+- The method involves using pre-trained models to evaluate the inputs and outputs of a generator model, significantly reducing the cost of implementation compared to other finetuning-based methods.
+- The method can reduce the attack success rate of attacks on both open and closed-source LLMs, beyond the reductions demonstrated by Llama-Guard2 and commonly used content moderation APIs.
+- The paper presents an analysis of the effectiveness of the method, including attempts to attack the evaluator in various settings, demonstrating that it is more resilient to attacks than existing methods.
+
+# Major Findings:
+
+1. The self-evaluation defense method can significantly reduce the attack success rate of adversarial attacks on LLMs, beyond the reductions demonstrated by Llama-Guard2 and commonly used content moderation APIs.
+2. The method requires no model fine-tuning, making it a practical and cost-effective defense method.
+3. The method can be implemented using pre-trained models, which can evaluate the inputs and outputs of a generator model with high accuracy.
+
+# Analysis and Critique:
+
+- The paper presents a promising defense method against adversarial attacks on LLMs, which can significantly reduce the attack success rate.
+- The method is practical and cost-effective, as it requires no model fine-tuning and can be implemented using pre-trained models.
+- The paper presents a thorough analysis of the effectiveness of the method, including attempts to attack the evaluator in various settings.
+- However, the paper does not discuss the potential limitations or shortcomings of the method, such as the possibility of the evaluator being attacked or the potential for false positives or false negatives.
+- Additionally, the paper does not discuss the potential impact of the method on the performance of the LLM, such as the potential for reduced accuracy or increased latency.
+- Overall, the paper presents a promising defense method against adversarial attacks on LLMs, but further research is needed to fully understand its limitations and potential impact on LLM performance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.03234v1](https://arxiv.org/abs/2407.03234v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.03234v1](https://browse.arxiv.org/html/2407.03234v1)       |
+| Truncated       | False       |
+| Word Count       | 18444       |

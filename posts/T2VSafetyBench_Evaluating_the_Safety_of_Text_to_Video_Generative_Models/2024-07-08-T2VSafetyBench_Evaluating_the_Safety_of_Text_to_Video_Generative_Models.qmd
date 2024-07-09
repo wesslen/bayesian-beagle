@@ -1,0 +1,47 @@
+
+---
+title: "T2VSafetyBench: Evaluating the Safety of Text-to-Video Generative Models"
+id: "2407.05965v1"
+description: "T2VSafetyBench: New benchmark for assessing text-to-video model safety risks, highlighting no single model excels in all aspects and a trade-off between usability and safety."
+author: Yibo Miao, Yifan Zhu, Yinpeng Dong, Lijia Yu, Jun Zhu, Xiao-Shan Gao
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.05965v1/x1.png"
+categories: ['architectures', 'robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05965v1/x1.png)
+
+### Summary:
+
+The paper introduces T2VSafetyBench, a new benchmark for evaluating the safety of text-to-video (T2V) models. The benchmark is designed to address the lack of comprehensive quantitative understanding of T2V safety, which poses a challenge to their reliability and practical deployment. T2VSafetyBench defines 12 critical aspects of video generation safety and constructs a malicious prompt dataset using LLMs and jailbreaking prompt attacks. The evaluation results reveal several important findings, including:
+
+1. No single model excels in all aspects, with different models showing various strengths.
+2. The correlation between GPT-4 assessments and manual reviews is generally high.
+3. There is a trade-off between the usability and safety of text-to-video generative models.
+
+The paper highlights the urgency of prioritizing video safety as the field of video generation rapidly advances.
+
+### Major Findings:
+
+1. Different models have distinct strengths in managing various safety aspects. For example, Stable Video Diffusion performs exceptionally well in mitigating sexual content, while Gen2 excels in handling gore and disturbing content. Pika shows remarkable defensive capability in political sensitivity and copyright-related areas.
+2. The correlation between GPT-4's assessments and manual reviews is generally high, with a correlation coefficient exceeding 0.8 in most dimensions. This finding supports the rationality of leveraging GPT-4 for large-scale evaluations in this context.
+3. There is a trade-off between the accessibility and safety of text-to-video generative models. Models with worse comprehension and generation capability may fail to meet minimal standards for understanding abstract and complex aspects of safety risks, such as borderline pornography, discrimination, and temporal risk, paradoxically enhancing safety. However, this also implies that as video generation evolves and model capability strengthens, the safety risks across various dimensions are likely to surge.
+
+### Analysis and Critique:
+
+1. The paper provides a comprehensive benchmark for evaluating the safety of T2V models, which is a significant contribution to the field. However, the benchmark focuses on 12 critical aspects, and there may be other safety aspects that have not been considered.
+2. The paper rel
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05965v1](https://arxiv.org/abs/2407.05965v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05965v1](https://browse.arxiv.org/html/2407.05965v1)       |
+| Truncated       | False       |
+| Word Count       | 8108       |

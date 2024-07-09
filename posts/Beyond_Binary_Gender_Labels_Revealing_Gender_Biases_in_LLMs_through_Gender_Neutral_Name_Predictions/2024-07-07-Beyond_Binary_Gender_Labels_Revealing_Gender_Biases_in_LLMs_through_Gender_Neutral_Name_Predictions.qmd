@@ -1,0 +1,44 @@
+
+---
+title: "Beyond Binary Gender Labels: Revealing Gender Biases in LLMs through Gender-Neutral Name Predictions"
+id: "2407.05271v1"
+description: "LLMs excel in binary gender prediction but struggle with gender-neutral names, especially non-English ones; birth year data doesn't improve accuracy."
+author: Zhiwen You, HaeJin Lee, Shubhanshu Mishra, Sullam Jeoung, Apratim Mishra, Jinseok Kim, Jana Diesner
+date: "2024-07-07"
+image: "https://browse.arxiv.org/html/2407.05271v1/extracted/5715083/pics/diagram.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05271v1/extracted/5715083/pics/diagram.png)
+
+# Summary
+
+## Summary:
+
+The study examines the performance of autoregressive LLMs and fine-tuned foundation language models in predicting gender categories (i.e., female, male, and neutral) given first names. It also investigates the impact of adding birth year on gender prediction accuracy. The research focuses on the limitations and biases of LLMs in predicting gender-neutral names and names with evolving gender associations over time.
+
+## Major Findings:
+
+1. Fine-tuned foundational language models predicted gender-neutral first names more accurately than LLMs under 0-shot prompting across all three datasets. BERT results in the highest average accuracy for the US and Canada dataset, while RoBERTa outperformed BERT on the France dataset.
+2. Most LLMs showed higher accuracy in gender prediction when provided with 5 labeled name-gender pairs through in-context learning compared to the 0-shot setting across all datasets.
+3. Incorporating birth years as an additional input feature improved the prediction accuracy of foundational language models compared to the first-name-only setting. However, most LLMs showed a decline in accuracy when birth years were added, particularly in predicting gender-neutral names.
+4. The accuracy of gender prediction using the US SSA dynamic gender label dataset has increased in recent years for most LLMs, including Llama3, Mixtral-8x7B, Claude 3 Haiku, and GPT-3.5.
+5. LLMs have worst performance on gender-neutral names, and the accuracy of gender prediction is higher for English-based first names in the US and Canada SSA datasets than in the France SSA.
+
+## Analysis and Critique:
+
+The study highlights the limitations and biases of LLMs in predicting gender-neutral names and names with evolving gender associations over time. The research underscores the need for more inclusive gender categories and the importance of considering temporal information in gender prediction tasks. However, the study is limited to specific countries, and the dataset preparation involved a subjective threshold to determine gender-neutral names. The prompt templates employed for interacting with LLMs were not optimized, which may lead to variations in results with different prompt formulations. The study also does not consider a broad spectrum of countries and cultures
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05271v1](https://arxiv.org/abs/2407.05271v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05271v1](https://browse.arxiv.org/html/2407.05271v1)       |
+| Truncated       | False       |
+| Word Count       | 6704       |

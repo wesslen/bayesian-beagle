@@ -1,0 +1,41 @@
+
+---
+title: "Breaking Bias, Building Bridges: Evaluation and Mitigation of Social Biases in LLMs via Contact Hypothesis"
+id: "2407.02030v1"
+description: "LLMs exhibit social biases, but a new debiasing technique, Social Contact Debiasing (SCD), can reduce these biases by up to 40% in one epoch of instruction tuning."
+author: Chahat Raj, Anjishnu Mukherjee, Aylin Caliskan, Antonios Anastasopoulos, Ziwei Zhu
+date: "2024-07-02"
+image: "https://browse.arxiv.org/html/2407.02030v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.02030v1/x1.png)
+
+### Summary:
+
+The paper explores the potential of the Contact Hypothesis, a concept from social psychology, for debiasing Large Language Models (LLMs). The authors simulate various forms of social contact through LLM prompting to measure their influence on the model’s biases. They create a dataset of 108,000 prompts following a principled approach and replicate social contact to measure biases in three LLMs (LLaMA 2, Tulu, and NousHermes) across 13 social bias dimensions. The authors propose a unique debiasing technique, Social Contact Debiasing (SCD), that instruction-tunes these models with unbiased responses to prompts. The research demonstrates that LLM responses exhibit social biases when subject to contact probing, but these biases can be significantly reduced by up to 40% in 1 epoch of instruction tuning LLaMA 2 following the SCD strategy.
+
+### Major Findings:
+
+1. LLM responses to contact probing demonstrate Social Bias, with LLaMA 2 and Nous Hermes models displaying moderate to notable bias levels, particularly in likelihood and frequency prompts. Biases vary across different dimensions uniquely for each LLM, with some areas more susceptible to biases based on physical attributes, political ideologies, and religion.
+2. LLM responses align with the Contact Hypothesis, as positive contact prompts lead to a decrease in bias levels, and negative contact prompts result in an increase in bias percentages.
+3. Social Contact Debiasing (SCD) effectively reduces biases in LLMs by simulating group interactions through instruction tuning. Performance on downstream tasks is not negatively affected by this mitigation strategy, indicating strong cross dataset generalization of the approach.
+
+### Analysis and Critique:
+
+1. The paper provides a novel approach to debiasing LLMs by applying the Contact Hypothesis, a well-established concept in social psychology. However, the authors do not discuss potential limitations or challenges in applying this concept to LLMs, such as the difficulty in accurately simulating social contact or the potential for unintended biases to be introduced during the debiasing process.
+2. The authors demonstrate the effectiveness of SCD in reducing biases in
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02030v1](https://arxiv.org/abs/2407.02030v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02030v1](https://browse.arxiv.org/html/2407.02030v1)       |
+| Truncated       | False       |
+| Word Count       | 7434       |

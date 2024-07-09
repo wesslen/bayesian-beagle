@@ -1,0 +1,42 @@
+
+---
+title: "KG-FPQ: Evaluating Factuality Hallucination in LLMs with Knowledge Graph-based False Premise Questions"
+id: "2407.05868v1"
+description: "LLMs can be misled by false premises, causing factuality hallucination. We introduce an automated pipeline to create a large-scale benchmark for this issue."
+author: Yanxu Zhu, Jinlin Xiao, Yuhang Wang, Jitao Sang
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.05868v1/extracted/5716829/example.png"
+categories: ['architectures', 'prompt-engineering', 'production', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05868v1/extracted/5716829/example.png)
+
+### Summary:
+
+The paper introduces an automated, scalable pipeline to create False Premise Questions (FPQs) based on knowledge graphs (KGs) to evaluate factuality hallucination in large language models (LLMs). The process involves modifying true triplets from KGs to create false premises and then utilizing GPTs to generate semantically rich FPQs. The proposed method is used to create a comprehensive benchmark, the Knowledge Graph-based False Premise Questions (KG-FPQ), which contains approximately 178k FPQs across three knowledge domains, at six levels of confusability, and in two task formats. The KG-FPQ dataset and code are available at <https://github.com/yanxuzhu/KG-FPQ>.
+
+### Major Findings:
+
+1. The proposed automated and scalable pipeline combines KGs and GPTs for constructing FPQ datasets, by editing true triplets into false triplets and utilizing GPTs to generate FPQs.
+2. Based on the proposed method, a comprehensive benchmark, KG-FPQ, is created, containing FPQs across three knowledge domains, at six levels of confusability, and in two task formats.
+3. An automated evaluator for generative hallucination evaluation, FPQ-Judge, is fine-tuned, achieving 93% accuracy on a manually annotated test set. Furthermore, an in-depth evaluation of factuality hallucination induced by FPQs is conducted on several representative LLMs, yielding valuable insights.
+
+### Analysis and Critique:
+
+The paper presents a valuable contribution to the evaluation of factuality hallucination in LLMs by introducing an automated and scalable pipeline for constructing FPQ datasets. The proposed method allows for the creation of a comprehensive benchmark, KG-FPQ, which covers various knowledge domains, confusability levels, and task formats. The evaluation of several representative LLMs on KG-FPQ provides valuable insights into the performance of these models in handling FPQs.
+
+However, the paper does not discuss potential limitations or shortcomings of the proposed method. For instance, the reliance on KGs for generating FPQs might
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05868v1](https://arxiv.org/abs/2407.05868v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05868v1](https://browse.arxiv.org/html/2407.05868v1)       |
+| Truncated       | False       |
+| Word Count       | 7115       |

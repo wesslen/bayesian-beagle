@@ -1,0 +1,42 @@
+
+---
+title: "Assessing the Code Clone Detection Capability of Large Language Models"
+id: "2407.02402v1"
+description: "GPT-4 outperforms GPT-3.5 in code clone detection, but both struggle with complex clones and human-generated code. Improvements are needed for LLM code clone recognition."
+author: Zixian Zhang, Takfarinas Saber
+date: "2024-07-02"
+image: "https://browse.arxiv.org/html/2407.02402v1/extracted/5706062/images/similar_distribution.png"
+categories: ['robustness', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.02402v1/extracted/5706062/images/similar_distribution.png)
+
+### Summary:
+
+This study aims to evaluate the performance of two advanced Large Language Models (LLMs), GPT-3.5 and GPT-4, in the task of code clone detection. The evaluation involves testing the models on a variety of code pairs of different clone types and levels of similarity, sourced from two datasets: BigCloneBench (human-made) and GPTCloneBench (LLM-generated).
+
+#### Major Findings:
+1. GPT-4 consistently surpasses GPT-3.5 across all clone types, with a correlation observed between the GPTs’ accuracy at identifying code clones and code similarity.
+2. Both GPT models exhibit low effectiveness in detecting the most complex Type-4 code clones.
+3. GPT models demonstrate a higher performance identifying code clones in LLM-generated code compared to humans-generated code.
+
+#### Analysis and Critique:
+- The study highlights the need for ongoing enhancements in LLM capabilities, particularly in the recognition of code clones and in mitigating their predisposition towards self-generated code clones.
+- The study is limited to the evaluation of GPT-3.5 and GPT-4, and does not explore other LLMs or traditional code clone detection tools.
+- The study does not provide a comprehensive analysis of LLM’s performance in code clone detection tasks, as it does not compare the performance of LLMs with other state-of-art code clone detection tools.
+- The study is constrained by budget limitations, which may have impacted the scale of the evaluation and the variety of programming languages used.
+- The study does not address the potential impact of LLM-generated code clones on software engineering practices, as more software engineers leverage LLM-enabled code generation and code refactoring tools.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02402v1](https://arxiv.org/abs/2407.02402v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02402v1](https://browse.arxiv.org/html/2407.02402v1)       |
+| Truncated       | False       |
+| Word Count       | 4970       |

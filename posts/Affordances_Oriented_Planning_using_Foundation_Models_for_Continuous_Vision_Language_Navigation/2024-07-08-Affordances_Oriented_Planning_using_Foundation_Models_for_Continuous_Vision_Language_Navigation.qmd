@@ -1,0 +1,41 @@
+
+---
+title: "Affordances-Oriented Planning using Foundation Models for Continuous Vision-Language Navigation"
+id: "2407.05890v1"
+description: "AO-Planner: LLM-based framework for zero-shot VLN tasks, improves SPL by 5.5% on R2R-CE benchmark."
+author: Jiaqi Chen, Bingqian Lin, Xinmin Liu, Xiaodan Liang, Kwan-Yee K. Wong
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.05890v1/x1.png"
+categories: ['architectures', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05890v1/x1.png)
+
+### Summary:
+
+The paper introduces AO-Planner, a novel affordances-oriented planning framework for continuous vision-language navigation (VLN) tasks. The framework integrates various foundation models to achieve affordances-oriented motion planning and action decision-making in a zero-shot manner. AO-Planner employs a visual affordances prompting (VAP) approach, where visible ground is segmented using SAM to provide navigational affordances. The LLM then selects potential next waypoints and generates low-level path planning towards selected waypoints. A high-level agent, PathAgent, is introduced to identify the most probable pixel-based path and convert it into 3D coordinates to fulfill low-level motion. Experimental results on the R2R-CE benchmark demonstrate that AO-Planner achieves state-of-the-art zero-shot performance, with a 5.5% improvement in SPL.
+
+### Major Findings:
+
+1. AO-Planner, a novel affordances-oriented planning framework, is proposed for continuous VLN tasks, integrating various foundation models for affordances-oriented motion planning and action decision-making in a zero-shot manner.
+2. The VAP approach is employed to segment visible ground and provide navigational affordances, enabling the LLM to select potential next waypoints and generate low-level path planning towards selected waypoints.
+3. A high-level agent, PathAgent, is introduced to identify the most probable pixel-based path and convert it into 3D coordinates to fulfill low-level motion.
+4. Experimental results on the R2R-CE benchmark demonstrate that AO-Planner achieves state-of-the-art zero-shot performance, with a 5.5% improvement in SPL.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to continuous VLN tasks by integrating various foundation models and introducing a novel VAP approach. The proposed framework, AO-Planner, demonstrates state-of-the-art zero-shot performance on the R2R-CE benchmark. However, the paper does not discuss potential limitations or unanswered questions, such as the generalizability of the framework to other VLN tasks or the impact of different foundation models on the performance of AO
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05890v1](https://arxiv.org/abs/2407.05890v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05890v1](https://browse.arxiv.org/html/2407.05890v1)       |
+| Truncated       | False       |
+| Word Count       | 7091       |

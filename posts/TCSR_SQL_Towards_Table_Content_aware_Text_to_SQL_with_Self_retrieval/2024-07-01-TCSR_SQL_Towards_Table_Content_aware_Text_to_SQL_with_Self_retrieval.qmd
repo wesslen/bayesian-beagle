@@ -1,0 +1,49 @@
+
+---
+title: "TCSR-SQL: Towards Table Content-aware Text-to-SQL with Self-retrieval"
+id: "2407.01183v1"
+description: "TL;DR: TCSR-SQL improves Text-to-SQL performance by 13.7% with self-retrieval and in-context learning."
+author: Wenbo Xu, Liang Yan, Peiyi Han, Haifeng Zhu, Chuanyi Liu, Shaoming Duan, Cuiyun Gao, Yingwei Liang
+date: "2024-07-01"
+image: "https://browse.arxiv.org/html/2407.01183v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.01183v1/x1.png)
+
+### Summary:
+
+- The paper introduces a novel approach called TCSR-SQL, which aims to generate SQL queries for table content-aware natural language questions in real-world scenarios.
+- TCSR-SQL leverages LLM's in-context learning capability to extract data content keywords and infer possible related database schema, which is used to generate Seed SQL for fuzzy search in databases.
+- The search results are then used to confirm the encoding knowledge, including column names and exact stored content values used in the SQL.
+- The encoding knowledge is sent to obtain the final Precise SQL following multiple rounds of generation-execution-revision process.
+- The proposed method is evaluated on a benchmark dataset containing 1,692 question-SQL pairs, demonstrating remarkable performance with an improvement of at least 13.7% in execution accuracy compared to other state-of-the-art methods.
+
+### Major Findings:
+
+1. TCSR-SQL utilizes self-retrieval techniques to generate SQL queries with both database exact stored content values and corresponding database schema column names, addressing the widespread problem encountered in real-world scenarios.
+2. The Keywords Extraction & Fuzzy Detection module infers possible related columns and relevant content values stored in the database corresponding to the question.
+3. The Knowledge Retrieval & Alignment module identifies the exact column names and content values stored in the database used in the SQL queries.
+4. The SQL Generation & Revision module generates the final SQL query according to multi-turn execution feedback of each SQL revision result.
+5. Extensive experimental results show the superior performance of TCSR-SQL compared to other SOTA LLM-based Text-to-SQL methods in terms of two metrics.
+
+### Analysis and Critique:
+
+- The paper presents a promising approach to address the problem of generating SQL queries for table content-aware natural language questions in real-world scenarios.
+- The use of self-retrieval techniques and the multi-round generation-execution-revision process allows TCSR-SQL to effectively obtain the database schema column names and exact stored content values.
+- The proposed method is evaluated on a benchmark dataset, demonstrating its effectiveness in improving the performance of SQL query generation.
+- However, the paper does not discuss
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.01183v1](https://arxiv.org/abs/2407.01183v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.01183v1](https://browse.arxiv.org/html/2407.01183v1)       |
+| Truncated       | False       |
+| Word Count       | 10323       |

@@ -1,0 +1,42 @@
+
+---
+title: "Exploring the Capabilities of LLMs for Code Change Related Tasks"
+id: "2407.02824v1"
+description: "LLMs struggle with code-change tasks, but improve with examples. Larger models aren't always better, but Llama 2 and Code Llama are top performers."
+author: Lishui Fan, Jiakun Liu, Zhongxin Liu, David Lo, Xin Xia, Shanping Li
+date: "2024-07-03"
+image: "https://browse.arxiv.org/html/2407.02824v1/x1.png"
+categories: ['education', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.02824v1/x1.png)
+
+### Summary:
+
+This paper explores the capabilities of large language models (LLMs) for code change-related tasks, such as code review generation, commit message generation, and just-in-time comment update. The study uses >1B parameters LLMs and employs in-context learning (ICL) and parameter-efficient fine-tuning (PEFT) techniques, including LoRA and prefix-tuning. The results show that LLMs perform poorly without examples but improve with them, although more examples do not always lead to better performance. LLMs tuned with LoRA have comparable performance to state-of-the-art small pre-trained models. Larger models are not always better, but Llama 2 and Code Llama families are always the best. The best LLMs outperform small pre-trained models on code changes that only modify comments and perform comparably on other code changes. The study suggests that future work should focus more on guiding LLMs to learn the knowledge specific to the changes related to code rather than comments for code-change-related tasks.
+
+### Major Findings:
+
+1. The performance of LLMs is poor without examples and generally improves with examples, but more examples do not always lead to better performance.
+2. LLMs tuned with LoRA have comparable performance to the state-of-the-art small pre-trained models.
+3. Larger models are not always better, but Llama 2 and Code Llama families are always the best.
+4. The best LLMs outperform small pre-trained models on the code changes that only modify comments and perform comparably on other code changes.
+5. Future work should focus more on guiding LLMs to learn the knowledge specific to the changes related to code rather than comments for code-change-related tasks.
+
+### Analysis and Critique:
+
+The study provides valuable insights into the capabilities of LLMs for code change-related tasks. However, it has some limitations and potential biases. The study only considers a limited number of LLMs and does not explore other LLMs that may have better performance. The study also does not consider other code change-related tasks, such as bug fixing and code refactoring. Additionally, the study does not provide a detailed analysis of the limitations and biases of the LLMs used in the study. Future
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.02824v1](https://arxiv.org/abs/2407.02824v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.02824v1](https://browse.arxiv.org/html/2407.02824v1)       |
+| Truncated       | False       |
+| Word Count       | 16271       |

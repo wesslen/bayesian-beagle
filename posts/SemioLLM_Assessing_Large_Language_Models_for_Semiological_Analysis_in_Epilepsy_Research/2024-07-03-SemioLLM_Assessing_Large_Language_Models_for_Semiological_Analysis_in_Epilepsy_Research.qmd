@@ -1,0 +1,43 @@
+
+---
+title: "SemioLLM: Assessing Large Language Models for Semiological Analysis in Epilepsy Research"
+id: "2407.03004v1"
+description: "LLMs show potential for epilepsy diagnosis, but pitfalls like overconfidence and hallucinations exist."
+author: Meghal Dani, Muthu Jeyanthi Prakash, Zeynep Akata, Stefanie Liebe
+date: "2024-07-03"
+image: "https://browse.arxiv.org/html/2407.03004v1/x1.png"
+categories: ['robustness', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.03004v1/x1.png)
+
+# Summary:
+
+The study titled "SemioLLM: Assessing Large Language Models for Semiological Analysis in Epilepsy Research" evaluates the performance of state-of-the-art LLMs (GPT-3.5, GPT-4, Mixtral 8x7B, and Qwen-72chat) in leveraging their internal knowledge and reasoning for epilepsy diagnosis. The models are tested on an annotated clinical database containing 1269 entries, with the goal of obtaining likelihood estimates linking unstructured text descriptions of seizures to seizure-generating brain regions.
+
+## Major Findings:
+1. Models achieve above-chance classification performance, with prompt engineering significantly improving their outcome. Some models achieve close-to-clinical performance and reasoning.
+2. GPT-4 emerges as the top-performing model across all evaluation metrics, while Mixtral8x7B, while competitive with GPT-4 in performance, exhibits tendencies to hallucinate in source citations and provides incomplete and partially incorrect reasoning.
+3. GPT-3.5 and Qwen-72B exhibit higher confidence levels in their outputs, albeit with reduced correctness.
+
+## Analysis and Critique:
+- The study provides the first extensive benchmark comparing current SOTA LLMs in the medical domain of epilepsy and highlights their ability to leverage unstructured texts from patients’ medical history to aid diagnostic processes in health care.
+- However, the analyses also reveal significant pitfalls with several models being overly confident while showing poor performance, as well as exhibiting citation errors and hallucinations.
+- The lack of systematic evaluation of LLMs’ understanding of specific clinical domains is a limitation, requiring large-scale annotated text-datasets, systematic investigation of prompt designs, and exploration of in-context learning strategies.
+- The study does not address the potential biases in the annotated clinical database, which could impact the performance of the LLMs.
+- The study does not provide a comparison with other machine learning or deep learning models, which could offer a more comprehensive understanding of the performance of LLMs in this domain.
+- The study does not discuss the potential ethical implications of using LLMs for epilepsy diagnosis, such as the risk of over
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.03004v1](https://arxiv.org/abs/2407.03004v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.03004v1](https://browse.arxiv.org/html/2407.03004v1)       |
+| Truncated       | False       |
+| Word Count       | 6699       |

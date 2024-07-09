@@ -1,0 +1,40 @@
+
+---
+title: "Empowering 1000 tokens/second on-device LLM prefilling with mllm-NPU"
+id: "2407.05858v1"
+description: "mllm-NPU: A system for fast, energy-efficient on-device LLM inference, achieving 22.4x faster prefill speed and 30.7x energy savings."
+author: Daliang Xu, Hao Zhang, Liming Yang, Ruiqi Liu, Gang Huang, Mengwei Xu, Xuanzhe Liu
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.05858v1/x1.png"
+categories: ['architectures', 'education', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05858v1/x1.png)
+
+### Summary:
+
+The paper presents mllm-NPU, the first-of-its-kind LLM inference system that efficiently leverages on-device Neural Processing Unit (NPU) offloading. The primary design goal of mllm-NPU is to reduce the prefill latency and energy consumption for mobile-sized LLMs. The key idea is to maximize prefill execution on mobile NPUs to accelerate integer computation while keeping essential float operations on the CPU/GPU to maintain accuracy. To overcome the challenges and enhance NPU offloading efficiency, mllm-NPU re-constructs the prompt and model at three levels: (1) At prompt level, mllm-NPU divides variable-length prompts into multiple fixed-sized chunks while maintaining data dependencies; (2) At tensor level, mllm-NPU identifies and extracts significant outliers to run on the CPU/GPU; (3) At block level, mllm-NPU schedules Transformer blocks to the CPU/GPU and NPU based on their hardware affinity and sensitivity to accuracy.
+
+### Major Findings:
+
+1. mllm-NPU achieves 22.4 faster prefill speed and 30.7 energy savings on average, and up to 32.8 speedup in an end-to-end real-world application compared to competitive baselines.
+2. For the first time, mllm-NPU achieves more than 1,000 tokens/sec prefilling for a billion-sized model (Qwen1.5-1.8B), paving the way towards practical on-device LLM.
+3. The novel techniques introduced in mllm-NPU, such as chunk-sharing graph, shadow outlier execution, and out-of-order subgraph execution, significantly improve the performance of on-device LLM inference.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to on-device LLM inference by leveraging NPU offloading. The proposed mllm-NPU system demonstrates significant improvements in prefill speed and energy savings compared to competitive baselines. The novel techniques introduced in mllm-NPU effectively address the challenges of on-device LLM inference and enhance N
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05858v1](https://arxiv.org/abs/2407.05858v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05858v1](https://browse.arxiv.org/html/2407.05858v1)       |
+| Truncated       | False       |
+| Word Count       | 11855       |

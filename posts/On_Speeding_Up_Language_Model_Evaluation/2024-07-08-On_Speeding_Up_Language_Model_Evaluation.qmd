@@ -1,0 +1,42 @@
+
+---
+title: "On Speeding Up Language Model Evaluation"
+id: "2407.06172v1"
+description: "TL;DR: Our approach reduces evaluation resources by 85-95% using multi-armed bandit algorithms and low-rank factorization."
+author: Jin Peng Zhou, Christian K. Belardi, Ruihan Wu, Travis Zhang, Carla P. Gomes, Wen Sun, Kilian Q. Weinberger
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.06172v1/extracted/5718286/figures/resource_savings_color.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.06172v1/extracted/5718286/figures/resource_savings_color.png)
+
+# Summary
+
+**Summary:**
+
+The paper addresses the challenge of identifying the best method within a limited budget for evaluating methods on test examples in the context of large language models (LLMs). The authors propose an approach that combines multi-armed bandit algorithms with low-rank factorization to significantly reduce the required resources. The proposed algorithms, UCB-E and UCB-E-LRF, can identify the top-performing method using only 5-15% of the typically needed resources, resulting in an 85-95% reduction in cost.
+
+## Major Findings:
+
+1. The proposed algorithms, UCB-E and UCB-E-LRF, can identify the top-performing method using only 5-15% of the typically needed resources, resulting in an 85-95% reduction in cost.
+2. The UCB-E algorithm enjoys a theoretical guarantee that the chance of selecting the best arm converges to 100% by an exponential decay of the number of evaluations.
+3. The UCB-E-LRF algorithm leverages the intrinsic low-rankness of the scoring matrices, which can be well-approximated by a low-rank matrix, to predict the remaining unobserved method-example pairs and prioritize evaluations of the pairs with large uncertainties in this prediction.
+
+## Analysis and Critique:
+
+The paper presents a novel approach to reducing the cost of evaluating methods on test examples in the context of LLMs. The proposed algorithms, UCB-E and UCB-E-LRF, offer significant improvements over traditional methods, reducing the required resources by up to 95%. However, the paper does not discuss the potential limitations or biases of the proposed approach, such as the impact of the choice of low-rank factorization or the potential for overfitting to the training data. Additionally, the paper does not provide a comparison with other state-of-the-art methods for reducing the cost of evaluating LLMs. Further research is needed to evaluate the proposed approach in a broader context and to address potential limitations and biases.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.06172v1](https://arxiv.org/abs/2407.06172v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.06172v1](https://browse.arxiv.org/html/2407.06172v1)       |
+| Truncated       | False       |
+| Word Count       | 9151       |

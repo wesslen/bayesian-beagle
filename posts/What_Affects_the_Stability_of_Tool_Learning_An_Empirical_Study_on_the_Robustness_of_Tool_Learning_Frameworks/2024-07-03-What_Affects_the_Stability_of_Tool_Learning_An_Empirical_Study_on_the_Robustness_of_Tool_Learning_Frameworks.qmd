@@ -1,0 +1,41 @@
+
+---
+title: "What Affects the Stability of Tool Learning? An Empirical Study on the Robustness of Tool Learning Frameworks"
+id: "2407.03007v1"
+description: "Tool learning in LLMs varies by factors like tasks, data, and algorithms. Exploring these impacts can improve LLM integration in real-world applications."
+author: Chengrui Huang, Zhengliang Shi, Yuntao Wen, Xiuying Chen, Peng Han, Shen Gao, Shuo Shang
+date: "2024-07-03"
+image: "https://browse.arxiv.org/html/2407.03007v1/x1.png"
+categories: ['robustness', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.03007v1/x1.png)
+
+### Summary:
+
+This paper explores the impact of both internal and external factors on the performance of tool learning frameworks. The authors conduct extensive experiments on two benchmark datasets and find several insightful conclusions for future work, including the observation that LLMs can benefit significantly from increased trial and exploration. The paper focuses on the stability of tool-use models, which is a crucial dimension to reflect the performance variation of LLMs under volatile scenarios. The authors categorize the diverse factors into two categories: internal and external factors. Internal factors indicate uncertainties during the development of tool-use models, while external factors primarily involve diverse prompt engineering when interacting with established tool-use models. The authors conduct extensive experiments on the most commonly used ToolBench dataset and employ several commonly used metrics to measure the performance from multiple perspectives.
+
+### Major Findings:
+
+1. Existing tool-use workflow exhibits obvious instability towards various internal and external factors. Even the state-of-the-art methods still exhibit instability with inessential perturbations.
+2. Among the internal factors, the proper hyper-parameter settings may boost the LLMs to generate diverse solutions. However, it also leads to instability.
+3. Among the external factors, the LLMs are sensitive to the change of candidate toolset (i.e., order or scale) and the system prompts.
+4. The advanced tool selection algorithms (i.e., tree-based search) can improve the accuracy, but they may suffer from accumulated hallucination with less stability, as well as substantial inference costs.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive empirical study on the stability of tool-use models across diverse scenarios. However, the paper does not provide a clear definition of stability, which makes it difficult to evaluate the results. Additionally, the paper only considers the impact of internal and external factors on the performance of tool learning frameworks, but does not consider other factors that may affect the performance, such as the quality of the training data or the complexity of the tasks. Furthermore, the paper only conducts experiments on two benchmark datasets, which may not be representative of all real-world scenarios. Finally, the paper does not provide a clear solution to improve the stability of tool-use models, which is a limitation of the study.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.03007v1](https://arxiv.org/abs/2407.03007v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.03007v1](https://browse.arxiv.org/html/2407.03007v1)       |
+| Truncated       | False       |
+| Word Count       | 2525       |

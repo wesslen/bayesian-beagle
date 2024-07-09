@@ -1,0 +1,44 @@
+
+---
+title: "Distilling System 2 into System 1"
+id: "2407.06023v1"
+description: "Distilling System 2 techniques into System 1 improves LLM performance with less inference cost."
+author: Ping Yu, Jing Xu, Jason Weston, Ilia Kulikov
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.06023v1/x1.png"
+categories: ['architectures', 'prompt-engineering', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.06023v1/x1.png)
+
+### Summary:
+
+This paper explores the concept of "System 2 distillation" in large language models (LLMs), which involves transferring higher quality outputs from System 2 techniques (methods that generate intermediate tokens for reasoning) back into LLM generations without intermediate reasoning token sequences. The authors propose a self-supervised method to "compile" (distill) System 2 techniques into System 1, resulting in improved results compared to the original System 1 performance and with less inference cost than System 2. The authors posit that System 2 distillation will be an important feature of future continually learning AI systems, enabling them to focus System 2 capabilities on reasoning tasks that they cannot yet do well.
+
+### Major Findings:
+
+1. The authors propose a self-supervised method to distill System 2 techniques into System 1, resulting in improved results compared to the original System 1 performance and with less inference cost than System 2.
+2. The authors show that several System 2 techniques can be successfully distilled, including Chain-of-Thought, Rephrase and Respond, System 2 Attention, and Branch-Solve-Merge.
+3. The authors posit that System 2 distillation will be an important feature of future continually learning AI systems, enabling them to focus System 2 capabilities on reasoning tasks that they cannot yet do well.
+
+### Analysis and Critique:
+
+1. The authors do not provide a comprehensive evaluation of the proposed method, and it is unclear how well it performs compared to other distillation methods.
+2. The authors do not discuss the limitations of their proposed method, such as the potential for overfitting or the need for large amounts of data.
+3. The authors do not provide a clear definition of what constitutes a "higher quality" output, and it is unclear how this is measured.
+4. The authors do not discuss the potential ethical implications of using System 2 distillation, such as the potential for bias or the need for transparency.
+5. The authors do not discuss the potential impact of System 2 distillation on the development of AI systems, such as the potential for increased automation or the need for new forms of human-AI collaboration.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.06023v1](https://arxiv.org/abs/2407.06023v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.06023v1](https://browse.arxiv.org/html/2407.06023v1)       |
+| Truncated       | False       |
+| Word Count       | 8154       |

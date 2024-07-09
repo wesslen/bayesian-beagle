@@ -1,0 +1,50 @@
+
+---
+title: "$R^2$-Guard: Robust Reasoning Enabled LLM Guardrail via Knowledge-Enhanced Logical Reasoning"
+id: "2407.05557v1"
+description: "R2-Guard: Robust LLM guardrail via knowledge-enhanced reasoning, outperforms LlamaGuard by 30.2% on ToxicChat and 59.5% against jailbreak attacks."
+author: Mintong Kang, Bo Li
+date: "2024-07-08"
+image: "https://browse.arxiv.org/html/2407.05557v1/x1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.05557v1/x1.png)
+
+# Summary:
+
+**-Guard: Robust Reasoning Enabled LLM Guardrail via Knowledge-Enhanced Logical Reasoning**
+
+## Summary:
+
+- The paper introduces -Guard, a robust reasoning enabled LLM guardrail that addresses the limitations of existing guardrail models.
+- -Guard consists of two main components: a data-driven category-specific learning component and a knowledge-enhanced reasoning component.
+- The category-specific learning component computes the probability that the prompt falls into different unsafe categories, while the reasoning component makes the final prediction of the overall probability that the prompt is unsafe based on logical inference.
+- -Guard employs probabilistic graphical models (PGMs) to implement the reasoning component, which allows for explicit logical inference based on given safety knowledge.
+
+## Major Findings:
+
+1. -Guard addresses the limitations of existing guardrail models, such as ineffectiveness due to inadequate training on long-tail data from correlated safety categories, susceptibility to jailbreaks, and inflexibility regarding new safety categories.
+2. -Guard consists of two main components: a data-driven category-specific learning component and a knowledge-enhanced reasoning component.
+3. -Guard employs probabilistic graphical models (PGMs) to implement the reasoning component, which allows for explicit logical inference based on given safety knowledge.
+
+## Analysis and Critique:
+
+- One limitation of -Guard is its requirement for explicit specification of safety knowledge rules in PGMs, which necessitates human effort to annotate detailed safety categories and their interconnections.
+- However, this explicit knowledge also enhances -Guard’s effectiveness and robustness compared to purely data-driven guardrail models.
+- -Guard has a broader impact in three key areas: motivating the guardrail community to transition from purely data-driven approaches to those enabled by logical reasoning, providing the symbolic reasoning community with a robust framework for encoding knowledge, performing logical inference, and knowledge weight learning with weak supervision, and safeguarding widespread LLM deployments in various systems.
+- The paper does not see any negative impact of their guardrail model.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-09       |
+| Abstract | [https://arxiv.org/abs/2407.05557v1](https://arxiv.org/abs/2407.05557v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.05557v1](https://browse.arxiv.org/html/2407.05557v1)       |
+| Truncated       | False       |
+| Word Count       | 7884       |

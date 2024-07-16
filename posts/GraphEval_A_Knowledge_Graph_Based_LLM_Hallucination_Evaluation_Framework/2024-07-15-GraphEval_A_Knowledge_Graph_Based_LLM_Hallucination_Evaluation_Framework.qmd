@@ -1,0 +1,44 @@
+
+---
+title: "GraphEval: A Knowledge-Graph Based LLM Hallucination Evaluation Framework"
+id: "2407.10793v1"
+description: "GraphEval: A KG-based framework for evaluating, detecting, and correcting LLM hallucinations, improving accuracy and providing explainable decisions."
+author: Hannah Sansford, Nicholas Richardson, Hermina Petric Maretic, Juba Nait Saada
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10793v1/extracted/5732436/grapheval_process.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10793v1/extracted/5732436/grapheval_process.png)
+
+### Summary:
+
+The paper presents GraphEval, a hallucination evaluation framework for Large Language Models (LLMs) based on representing information in Knowledge Graph (KG) structures. The method identifies specific triples in the KG that are prone to hallucinations, providing more insight into where in the response a hallucination has occurred. The framework improves balanced accuracy on various hallucination benchmarks when used with state-of-the-art natural language inference (NLI) models. Additionally, the authors explore the use of GraphEval for hallucination correction, named GraphCorrect, and demonstrate that the majority of hallucinations can be rectified.
+
+### Major Findings:
+
+1. GraphEval is a hallucination evaluation framework that uses KG structures to represent information, providing a higher level of insight into where in the output a hallucination has occurred than previous metrics.
+2. Using GraphEval in conjunction with state-of-the-art NLI models leads to an improvement in balanced accuracy on various hallucination benchmarks compared to using raw NLI models.
+3. The authors introduce GraphCorrect, a method for hallucination correction that leverages the structure of the KG, effectively rectifying a significant proportion of hallucinations present in LLM outputs.
+
+### Analysis and Critique:
+
+1. The paper does not provide a comprehensive comparison of GraphEval with other existing hallucination detection methods, making it difficult to assess its performance relative to other approaches.
+2. The authors do not discuss the potential limitations of using KGs for hallucination detection, such as the complexity of constructing accurate KGs or the potential for information loss during the KG construction process.
+3. The paper does not address the issue of open-domain hallucination detection, which may be an important consideration for real-world applications of LLMs.
+4. The evaluation of GraphCorrect is based on the use of hallucination evaluation frameworks, which may not accurately reflect the true performance of the method in correcting hallucinations. A manual evaluation of the corrected outputs would provide a more reliable assessment of the method's effectiveness.
+5. The paper does not discuss the potential for using GraphEval and GraphCorrect in conjunction with other LLM-based hallucination detection and correction methods, which could further
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10793v1](https://arxiv.org/abs/2407.10793v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10793v1](https://browse.arxiv.org/html/2407.10793v1)       |
+| Truncated       | False       |
+| Word Count       | 5868       |

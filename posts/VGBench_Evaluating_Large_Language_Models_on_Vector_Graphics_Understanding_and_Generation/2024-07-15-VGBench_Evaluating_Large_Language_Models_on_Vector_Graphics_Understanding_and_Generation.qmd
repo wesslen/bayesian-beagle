@@ -1,0 +1,41 @@
+
+---
+title: "VGBench: Evaluating Large Language Models on Vector Graphics Understanding and Generation"
+id: "2407.10972v1"
+description: "TL;DR: VGBench evaluates LLMs on vector graphics, showing strong performance in understanding and generation, but weaker in low-level formats like SVG."
+author: Bocheng Zou, Mu Cai, Jianrui Zhang, Yong Jae Lee
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10972v1/x1.png"
+categories: ['production', 'hci', 'architectures', 'prompt-engineering', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10972v1/x1.png)
+
+### Summary:
+
+The paper introduces VGBench, a comprehensive benchmark for evaluating Large Language Models (LLMs) on vector graphics understanding and generation. Unlike traditional vision models that use pixels to represent visual content, vector graphics offer a textual representation using geometry primitives, which can be more concise and powerful for content like cartoons or sketches. VGBench includes both visual understanding (VGQA) and generation (VGen) tasks, evaluates diverse vector graphics formats such as SVG, TikZ, and Graphviz, covers a set of taxonomies from low-level vision to high-level semantics, adopts a variety of prompting techniques, and evaluates diverse LLMs. The benchmark consists of 4279 multi-choice question-answer pairs and 5845 VG-caption pairs.
+
+### Major Findings:
+
+1. LLMs show much better vector graphic understanding capability in TikZ and Graphviz than SVGs. TikZ and Graphviz include more high-level semantics compared to SVG, which is composed of low-level geometry primitives.
+2. Advanced prompting techniques such as in-context learning or chain-of-thought prompting can bring significant performance boost for SVG, a low-level VG format.
+3. LLMs show strong vector graphics generation ability on TikZ and Graphviz format compared to SVG format.
+4. In both understanding and generation, GPT-4 shows the strongest performance, yet open-source models such as Llama-3-70b shows competitive performance in understanding tasks.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive evaluation of LLMs on vector graphics understanding and generation. However, the study is limited to a few LLMs and does not include recent models. The evaluation of closed-source models like GPT-4, GPT-3.5-Turbo, and GPT-4V is also challenging due to their black-box nature. The study could benefit from incorporating more recent prompting techniques such as Tree of Thoughts (ToT) and Everything of Thoughts (XoT). The paper also acknowledges the need for more evaluations on recent LLMs to provide more supporting experiments on LLMs’ behavior on vector
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10972v1](https://arxiv.org/abs/2407.10972v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10972v1](https://browse.arxiv.org/html/2407.10972v1)       |
+| Truncated       | False       |
+| Word Count       | 6106       |

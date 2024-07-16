@@ -1,0 +1,52 @@
+
+---
+title: "Q-Sparse: All Large Language Models can be Fully Sparsely-Activated"
+id: "2407.10969v1"
+description: "Q-Sparse trains sparse LLMs with top-K sparsification, offering efficiency gains in inference and comparable results to dense models."
+author: Hongyu Wang, Shuming Ma, Ruiping Wang, Furu Wei
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10969v1/x4.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10969v1/x4.png)
+
+# Summary:
+
+**Q-Sparse: All Large Language Models can be Fully Sparsely-Activated**
+
+The paper introduces Q-Sparse, a simple yet effective approach to training sparsely-activated large language models (LLMs). Q-Sparse enables full sparsity of activations in LLMs, which can bring significant efficiency gains in inference. This is achieved by applying top-k sparsification to the activations and the straight-through-estimator to the training. The key results from this work are:
+
+1. Q-Sparse can achieve results comparable to those of baseline LLMs while being much more efficient at inference time.
+2. An inference-optimal scaling law for sparsely-activated LLMs is presented.
+3. Q-Sparse is effective in different settings, including training-from-scratch, continue-training of off-the-shelf LLMs, and finetuning.
+4. Q-Sparse works for both full-precision and 1-bit LLMs (e.g., BitNet b1.58).
+
+# Major Findings:
+
+1. Q-Sparse enables full sparsity of activations in LLMs, which can bring significant efficiency gains in inference.
+2. Q-Sparse can achieve results comparable to those of baseline LLMs while being much more efficient at inference time.
+3. An inference-optimal scaling law for sparsely-activated LLMs is presented.
+4. Q-Sparse is effective in different settings, including training-from-scratch, continue-training of off-the-shelf LLMs, and finetuning.
+5. Q-Sparse works for both full-precision and 1-bit LLMs (e.g., BitNet b1.58).
+
+# Analysis and Critique:
+
+1. The paper does not provide a detailed comparison of Q-Sparse with other sparsity-inducing methods, such as pruning or distillation.
+2. The paper does not discuss the potential impact of sparsity on the generalization performance of LLMs.
+3. The paper does not provide a detailed analysis of the computational and memory overhead of Q-Sparse.
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10969v1](https://arxiv.org/abs/2407.10969v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10969v1](https://browse.arxiv.org/html/2407.10969v1)       |
+| Truncated       | False       |
+| Word Count       | 5530       |

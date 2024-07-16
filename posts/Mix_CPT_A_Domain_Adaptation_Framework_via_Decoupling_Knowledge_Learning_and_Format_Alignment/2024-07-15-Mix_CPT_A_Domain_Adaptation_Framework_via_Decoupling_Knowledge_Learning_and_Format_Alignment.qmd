@@ -1,0 +1,48 @@
+
+---
+title: "Mix-CPT: A Domain Adaptation Framework via Decoupling Knowledge Learning and Format Alignment"
+id: "2407.10804v1"
+description: "Mix-CPT: New framework for domain adaptation of LLMs, improving task-solving capabilities in target and general domains."
+author: Jinhao Jiang, Junyi Li, Wayne Xin Zhao, Yang Song, Tao Zhang, Ji-Rong Wen
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10804v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10804v1/x1.png)
+
+### Summary:
+
+- The paper proposes a new domain adaptation framework called Mix-CPT for large language models (LLMs) to address the challenges of varied data distributions in specialized domains.
+- Mix-CPT includes two main stages: domain knowledge learning and general format alignment.
+- The domain knowledge learning stage involves knowledge mixture continual pre-training, which focuses on both knowledge memorization and utilization, and incorporates a logit swap self-distillation constraint to avoid catastrophic forgetting.
+- The general format alignment stage leverages the knowledge and capabilities acquired during continual pre-training to efficiently perform instruction tuning and alignment with a few general training samples for format alignment.
+- Extensive experiments demonstrate that Mix-CPT can improve the task-solving capabilities of LLMs on both target and general domains compared to traditional adaptation methods.
+
+### Major Findings:
+
+1. Mix-CPT enables LLMs to learn domain-specific knowledge and solve domain tasks with learned knowledge by disentangling domain adaptation into knowledge memorization and capability elicitation.
+2. The use of token swap self-distillation in the knowledge mixture pre-training helps retain general knowledge and avoid catastrophic forgetting.
+3. Mix-CPT outperforms traditional methods in both domain and general capabilities, as demonstrated by extensive experiments on three benchmark datasets.
+
+### Analysis and Critique:
+
+- The paper presents a novel approach to domain adaptation for LLMs, addressing the limitations of traditional methods that may result in inefficient knowledge memorization and substantial demands on LLMs.
+- The proposed Mix-CPT framework effectively improves the task-solving capabilities of LLMs on both target and general domains, as demonstrated by the experimental results.
+- However, the paper does not discuss the potential limitations or challenges of implementing Mix-CPT, such as the computational resources required for continual pre-training or the availability of high-quality domain-specific data.
+- Additionally, the paper does not provide a comparison of Mix-CPT with other recent domain adaptation methods, which could further validate its effectiveness and efficiency.
+- Future research could explore the application of Mix-CPT to other domains and investigate its performance in comparison to other state-of-the-art domain adaptation methods.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10804v1](https://arxiv.org/abs/2407.10804v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10804v1](https://browse.arxiv.org/html/2407.10804v1)       |
+| Truncated       | False       |
+| Word Count       | 8459       |

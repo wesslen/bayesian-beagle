@@ -1,0 +1,44 @@
+
+---
+title: "FsPONER: Few-shot Prompt Optimization for Named Entity Recognition in Domain-specific Scenarios"
+id: "2407.08035v1"
+description: "LLM-based FsPONER outperforms fine-tuned models by 10% in F1 score for domain-specific NER tasks with data scarcity."
+author: Yongjian Tang, Rakebul Hasan, Thomas Runkler
+date: "2024-07-10"
+image: "https://browse.arxiv.org/html/2407.08035v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.08035v1/x1.png)
+
+### Summary:
+
+The paper introduces FsPONER, a novel approach for optimizing few-shot prompts in domain-specific Named Entity Recognition (NER) tasks. The authors evaluate FsPONER's performance on industrial manufacturing and maintenance datasets using multiple large language models (LLMs), including GPT-4-32K, GPT-3.5-Turbo, LLaMA 2-chat, and Vicuna. FsPONER consists of three few-shot selection methods based on random sampling, TF-IDF vectors, and a combination of both. The authors compare these methods with a general-purpose GPT-NER method and evaluate their optimal NER performance against fine-tuned BERT and LLaMA 2-chat. In scenarios with data scarcity, FsPONER with TF-IDF surpasses fine-tuned models by approximately 10% in F1 score.
+
+### Major Findings:
+
+1. FsPONER with TF-IDF consistently demonstrates the top-notch performance compared to a general-purpose GPT-NER method and all other FsPONER variants in the considered NER scenarios.
+2. As the quantity of few-shot examples in the prompt or the size of few-shot datasets increases, the performance of FsPONER continues to improve.
+3. In an industrial manufacturing scenario with data scarcity, FsPONER with TF-IDF outperforms the fine-tuned models by approximately 10% in F1 score.
+
+### Analysis and Critique:
+
+1. The paper does not discuss the computational cost and time required for training and inference using FsPONER, which could be a significant factor in real-world applications.
+2. The authors do not compare FsPONER with other state-of-the-art NER methods, which could provide a more comprehensive evaluation of its performance.
+3. The paper does not address the issue of hallucination, which could lead to the generation of incorrect or inconsistent entities.
+4. The authors do not explore the potential of using smaller, more specialized LLMs for domain-specific NER tasks, which could offer better performance and efficiency.
+5. The paper does not discuss
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08035v1](https://arxiv.org/abs/2407.08035v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08035v1](https://browse.arxiv.org/html/2407.08035v1)       |
+| Truncated       | False       |
+| Word Count       | 7052       |

@@ -1,0 +1,46 @@
+
+---
+title: "GLBench: A Comprehensive Benchmark for Graph with Large Language Models"
+id: "2407.07457v2"
+description: "TL;DR: GLBench evaluates GraphLLM methods, showing they outperform traditional baselines, but lack scaling laws and require both structure and semantics for zero-shot transfer."
+author: Yuhan Li, Peisong Wang, Xiao Zhu, Aochuan Chen, Haiyun Jiang, Deng Cai, Victor Wai Kin Chan, Jia Li
+date: "2024-07-11"
+image: "https://browse.arxiv.org/html/2407.07457v2/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.07457v2/x1.png)
+
+### Summary:
+
+The paper introduces GLBench, the first comprehensive benchmark for evaluating GraphLLM methods in both supervised and zero-shot scenarios. The benchmark provides a fair and thorough evaluation of different categories of GraphLLM methods, along with traditional baselines such as graph neural networks. Through extensive experiments on a collection of real-world datasets, the authors have uncovered several key findings. GraphLLM methods outperform traditional baselines in supervised settings, with LLM-as-enhancers showing the most robust performance. However, using LLMs as predictors is less effective and often leads to uncontrollable output issues. The authors also notice that no clear scaling laws exist for current GraphLLM methods. Both structures and semantics are crucial for effective zero-shot transfer, and the proposed simple baseline can even outperform several models tailored for zero-shot scenarios.
+
+### Major Findings:
+
+1. GraphLLM methods, especially LLM-as-enhancers, outperform traditional baselines in supervised settings.
+2. Using LLMs as predictors is less effective and often leads to uncontrollable output issues.
+3. No clear scaling laws exist for current GraphLLM methods.
+4. Both structures and semantics are crucial for effective zero-shot transfer.
+5. The proposed simple baseline can outperform several models tailored for zero-shot scenarios.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive evaluation of GraphLLM methods, which is a significant contribution to the field. However, there are some limitations and potential biases that should be considered. The benchmark only considers the node classification task, which may not be representative of all graph-related tasks. Additionally, the absence of non-text-attributed graphs is a concern, as many real-world graphs lack textual information. The authors should consider extending the benchmark to include more tasks and diverse datasets in the future.
+
+Another potential issue is the lack of a clear scaling law for GraphLLM methods. This could be due to the complexity of the methods or the limited number of experiments conducted. Further research is needed to explore the relationship between model size and performance in GraphLLM methods.
+
+Finally, the use of LLMs as predictors is a promising approach, but the current methods have limitations. The authors should explore ways to
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.07457v2](https://arxiv.org/abs/2407.07457v2)        |
+| HTML     | [https://browse.arxiv.org/html/2407.07457v2](https://browse.arxiv.org/html/2407.07457v2)       |
+| Truncated       | False       |
+| Word Count       | 9223       |

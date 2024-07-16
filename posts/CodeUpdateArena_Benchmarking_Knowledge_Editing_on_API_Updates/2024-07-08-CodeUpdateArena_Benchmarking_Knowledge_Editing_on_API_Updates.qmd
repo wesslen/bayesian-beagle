@@ -1,0 +1,47 @@
+
+---
+title: "CodeUpdateArena: Benchmarking Knowledge Editing on API Updates"
+id: "2407.06249v1"
+description: "TL;DR: CodeUpdateArena benchmark evaluates updating code LLMs with evolving API functions, highlighting challenges and room for improvement."
+author: Zeyu Leo Liu, Shrey Pandit, Xi Ye, Eunsol Choi, Greg Durrett
+date: "2024-07-08"
+image: "../../img/2407.06249v1/image_1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.06249v1/image_1.png)
+
+**Summary:**
+
+1. The paper presents CodeUpdateArena, a benchmark for knowledge editing in the code domain, focusing on updating Large Language Models (LLMs) to incorporate changes in API functions.
+2. The benchmark consists of synthetic API updates and corresponding program synthesis examples, with the goal of updating an LLM to solve the synthesis examples without providing documentation of the update at inference time.
+3. The benchmark covers updates to 54 functions from seven diverse Python packages, with a total of 670 program synthesis examples.
+4. The paper evaluates the performance of two open-source LLMs, CodeLlama and DeepSeek-Coder, on the CodeUpdateArena benchmark.
+5. The results show that both models fail to meaningfully inject the updates into the model, indicating the need for new knowledge updating methods for code LLMs.
+
+**Major Findings:**
+
+1. The CodeUpdateArena benchmark is a valuable resource for evaluating the ability of LLMs to incorporate API updates into their parametric knowledge.
+2. Existing knowledge updating techniques, such as continued pretraining and fine-tuning on synthesis examples, fail to meaningfully inject the updates into the model.
+3. There is significant room for future work to develop new knowledge updating methods for code LLMs to benchmark on this setting.
+
+**Analysis and Critique:**
+
+1. The paper presents a well-structured and coherent summary of the CodeUpdateArena benchmark and its evaluation on two open-source LLMs.
+2. The paper identifies a clear gap in the current knowledge updating methods for code LLMs and highlights the need for new methods to be developed.
+3. The paper could benefit from a more detailed analysis of the limitations of the current benchmark and the potential for future improvements.
+4. The paper could also benefit from a more detailed discussion of the potential impact of the benchmark on the development of new knowledge updating methods for code LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.06249v1](https://arxiv.org/abs/2407.06249v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.06249v1](https://browse.arxiv.org/html/2407.06249v1)       |
+| Truncated       | False       |
+| Word Count       | 24551       |

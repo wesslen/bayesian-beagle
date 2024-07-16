@@ -1,0 +1,45 @@
+
+---
+title: "RAG vs. Long Context: Examining Frontier Large Language Models for Environmental Review Document Comprehension"
+id: "2407.07321v1"
+description: "LLMs struggle with niche domains like NEPA; RAG models outperform long context models in answering accuracy."
+author: Hung Phan, Anurag Acharya, Sarthak Chaturvedi, Shivam Sharma, Mike Parker, Dan Nally, Ali Jannesari, Karl Pazdernik, Mahantesh Halappanavar, Sai Munikoti, Sameera Horawalavithana
+date: "2024-07-10"
+image: "https://browse.arxiv.org/html/2407.07321v1/extracted/5694643/images/diagrams/FlowDiagram.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.07321v1/extracted/5694643/images/diagrams/FlowDiagram.png)
+
+### Summary:
+
+This paper focuses on assessing the performance of Large Language Models (LLMs) in answering questions from Environmental Impact Statements (EIS) prepared by U.S. federal government agencies in accordance with the National Environmental Policy Act (NEPA). The authors introduce the NEPAQuAD1.0 benchmark to evaluate the performance of three frontier LLMs: Claude Sonnet, Gemini, and GPT-4. The study aims to measure the ability of LLMs to understand the nuances of legal, technical, and compliance-related information present in NEPA documents in different contextual scenarios.
+
+### Major Findings:
+
+1. The study reveals that RAG powered models significantly outperform long context models in answer accuracy, regardless of the choice of the frontier LLM.
+2. Many models perform better answering closed questions than divergent and problem-solving questions.
+3. The authors create the first-ever preliminary benchmark (NEPAQuAD1.0) to automatically evaluate the performance of LLMs in a question-answering task for EIS documents.
+
+### Analysis and Critique:
+
+1. The study provides valuable insights into the performance of LLMs in handling domain-specific questions, particularly in the context of NEPA documents.
+2. The use of the NEPAQuAD1.0 benchmark is a significant contribution, as it allows for the automatic evaluation of LLMs in this specific domain.
+3. The study highlights the limitations of current LLMs in handling long contexts and answering more complex questions, such as divergent and problem-solving questions.
+4. The authors acknowledge the potential bias in the answer correctness evaluation process due to the use of GPT-4 to assess the outputs of various models.
+5. The study could benefit from a more comprehensive analysis of the impact of token truncation for Full PDF context and the uncertainty of generated responses by LLMs.
+6. The authors could also involve more NEPA experts in a more systematic manner to expand the dataset with human judgment results and perform proper adjudication meetings between NEPA experts to reconcile conflicting results.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.07321v1](https://arxiv.org/abs/2407.07321v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.07321v1](https://browse.arxiv.org/html/2407.07321v1)       |
+| Truncated       | False       |
+| Word Count       | 8903       |

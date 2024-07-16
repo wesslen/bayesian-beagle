@@ -1,0 +1,40 @@
+
+---
+title: "Follow the Rules: Reasoning for Video Anomaly Detection with Large Language Models"
+id: "2407.10299v1"
+description: "AnomalyRuler: Rule-based Reasoning Framework for Video Anomaly Detection with LLMs."
+author: Yuchen Yang, Kwonjoon Lee, Behzad Dariush, Yinzhi Cao, Shao-Yuan Lo
+date: "2024-07-14"
+image: "https://browse.arxiv.org/html/2407.10299v1/x2.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10299v1/x2.png)
+
+### Summary:
+
+The paper introduces a novel rule-based reasoning framework called AnomalyRuler for Video Anomaly Detection (VAD) using Large Language Models (LLMs). The framework consists of two main stages: induction and deduction. In the induction stage, the LLM is fed with few-shot normal reference samples and then summarizes these normal patterns to induce a set of rules for detecting anomalies. The deduction stage follows the induced rules to spot anomalous frames in test videos. The paper also proposes rule aggregation, perception smoothing, and robust reasoning strategies to enhance AnomalyRuler's robustness.
+
+### Major Findings:
+
+1. AnomalyRuler is the first reasoning approach for the one-class VAD task, which requires only few-normal-shot prompting without the need for full-shot training, enabling fast adaption to various VAD scenarios.
+2. Comprehensive experiments across four VAD benchmarks demonstrate AnomalyRuler's state-of-the-art detection performance and reasoning ability.
+3. The paper highlights the limitations and potential negative social impact of the proposed method, such as the assumption of decent capabilities of employed LLM backbones and the risk of enabling malicious actors to more easily adapt VLMs/LLMs for illegal surveillance.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to VAD using LLMs, addressing the limitations of existing methods that provide little rationale behind detection. However, the proposed method relies on the assumption of decent capabilities of employed LLM backbones, which may not always hold true. Additionally, the paper acknowledges the potential negative social impact of the proposed method, such as enabling malicious actors to more easily adapt VLMs/LLMs for illegal surveillance. Further research is needed to address these limitations and explore the potential of AnomalyRuler in broader one-class problems and related tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10299v1](https://arxiv.org/abs/2407.10299v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10299v1](https://browse.arxiv.org/html/2407.10299v1)       |
+| Truncated       | False       |
+| Word Count       | 9790       |

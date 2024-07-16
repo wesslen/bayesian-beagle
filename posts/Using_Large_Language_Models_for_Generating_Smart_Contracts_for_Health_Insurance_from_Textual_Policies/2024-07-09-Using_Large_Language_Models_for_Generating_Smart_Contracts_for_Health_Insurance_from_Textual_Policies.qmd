@@ -1,0 +1,41 @@
+
+---
+title: "Using Large Language Models for Generating Smart Contracts for Health Insurance from Textual Policies"
+id: "2407.07019v1"
+description: "LLMs can generate smart contracts from health insurance policies, but human oversight is needed for complex scenarios."
+author: Inwon Kang, William Van Woensel, Oshani Seneviratne
+date: "2024-07-09"
+image: "../../../bayesian-beagle.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary:
+
+The paper explores the use of Large Language Models (LLMs) to generate application code that automates health insurance processes from text-based policies. The authors target blockchain-based smart contracts due to their immutability, verifiability, scalability, and trustless setting. The methodology generates outputs at increasing levels of technical detail: (1) textual summaries, (2) declarative decision logic, and (3) smart contract code with unit tests. The authors find that LLMs are good at task (1), and the structured output is useful to validate tasks (2) and (3). However, task (3) attempts to directly automate the process using smart contracts, which is challenging due to the complexity of healthcare policies. The authors evaluate the LLM output using three health insurance policies with increasing difficulty from Medicare’s official booklet. The evaluation uses GPT-3.5 Turbo, GPT-3.5 Turbo 16K, GPT-4, GPT-4 Turbo, and CodeLLaMA. The findings confirm that LLMs perform quite well in generating textual summaries. However, outputs from tasks (2)-(3) are useful starting points but require human oversight. In multiple cases, even “runnable” code will not yield sound results; the popularity of the target language affects the output quality; and more complex scenarios still seem a bridge too far. Nevertheless, the experiments demonstrate the promise of LLMs for translating textual process descriptions into smart contracts.
+
+# Major Findings:
+
+1. LLMs are good at generating textual summaries from health insurance policies.
+2. LLMs can be used to generate declarative decision logic and smart contract code, but these outputs require human oversight.
+3. The popularity of the target language affects the output quality of LLMs.
+4. More complex scenarios still pose a challenge for LLMs in generating accurate and sound smart contract code.
+
+# Analysis and Critique:
+
+The paper presents an interesting approach to automating health insurance processes using LLMs and smart contracts. The use of blockchain-based smart contracts provides a trustless setting and immutability, which are important considerations in healthcare. However, the paper acknowledges that generating accurate and sound smart contract code from complex healthcare policies is still a challenge. The authors also note that
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.07019v1](https://arxiv.org/abs/2407.07019v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.07019v1](https://browse.arxiv.org/html/2407.07019v1)       |
+| Truncated       | False       |
+| Word Count       | 11200       |

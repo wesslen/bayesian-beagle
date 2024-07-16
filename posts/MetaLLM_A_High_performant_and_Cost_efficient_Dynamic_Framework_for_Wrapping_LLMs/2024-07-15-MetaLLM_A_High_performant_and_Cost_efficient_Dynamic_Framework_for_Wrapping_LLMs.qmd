@@ -1,0 +1,42 @@
+
+---
+title: "MetaLLM: A High-performant and Cost-efficient Dynamic Framework for Wrapping LLMs"
+id: "2407.10834v1"
+description: "MetaLLM dynamically routes queries to optimal LLMs for classification tasks, improving accuracy and cost-effectiveness."
+author: Quang H. Nguyen, Duy C. Hoang, Juliette Decugis, Saurav Manchanda, Nitesh V. Chawla, Khoa D. Doan
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10834v1/extracted/5731237/figure/llmrouting-v2.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10834v1/extracted/5731237/figure/llmrouting-v2.png)
+
+### Summary:
+
+The paper introduces MetaLLM, a dynamic and intelligent framework that routes each query to the optimal large language model (LLM) for classification tasks. The framework aims to improve accuracy and cost-effectiveness by framing the selection problem as a multi-armed bandit. The experiments, conducted on popular LLM platforms such as OpenAI's GPT models, Amazon's Titan, Anthropic's Claude, and Meta's LLaMa, showcase MetaLLM's efficacy in real-world scenarios.
+
+### Major Findings:
+
+1. MetaLLM is a versatile wrapper around a suite of off-the-shelf LLMs, capable of intelligently choosing the target LLM for each query to achieve optimal performance and cost.
+2. The framework employs an algorithm based on multi-armed bandit to tackle the routing problem in MetaLLM, which is efficient as it makes routing decisions without needing to query any LLMs.
+3. Experimental results on benchmark datasets and popular API services, including OpenAI and Amazon’s Bedrock, demonstrate MetaLLM’s ability to identify the optimal LLM in terms of cost and performance. Specifically, MetaLLM improves the accuracy of the best model by around 10% while saving up to 50% and 70% of the total price on OpenAI and Bedrock APIs, respectively.
+
+### Analysis and Critique:
+
+1. The paper focuses on zero-shot classification problems, but the MetaLLM framework can be extended to arbitrary language tasks by modifying the reward function to incorporate suitable metrics assessing the quality of the responses. However, this extension is left for future work.
+2. The framework only trains a simple linear model, which may ignore more fine-grained features. Building a more complex reward model and utilizing other information from the query, such as the domain of the input and the demand of the user, may further facilitate better the needs of the applications and improve the performance of MetaLLM.
+3. The framework optimizes MetaLLM with two values in the reward function: the performance and the cost of querying the API. However, several aspects to evaluate the model in practice could be incorporated into the reward, such as the inference time, the robustness of the model, emergent abilities
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10834v1](https://arxiv.org/abs/2407.10834v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10834v1](https://browse.arxiv.org/html/2407.10834v1)       |
+| Truncated       | False       |
+| Word Count       | 5819       |

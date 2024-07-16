@@ -1,0 +1,40 @@
+
+---
+title: "MAVIS: Mathematical Visual Instruction Tuning"
+id: "2407.08739v1"
+description: "MAVIS: New Paradigm for MLLMs Improves Math Problem-Solving in Visual Contexts"
+author: Renrui Zhang, Xinyu Wei, Dongzhi Jiang, Yichi Zhang, Ziyu Guo, Chengzhuo Tong, Jiaming Liu, Aojun Zhou, Bin Wei, Shanghang Zhang, Peng Gao, Hongsheng Li
+date: "2024-07-11"
+image: "https://browse.arxiv.org/html/2407.08739v1/x1.png"
+categories: ['hci', 'education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.08739v1/x1.png)
+
+### Summary:
+
+The paper introduces MAVIS, a novel MAthematical VISual instruction tuning paradigm for Multi-modal Large Language Models (MLLMs). The authors identify three key areas within MLLMs that need improvement: visual encoding of math diagrams, diagram-language alignment, and mathematical reasoning skills. To address these issues, MAVIS involves a series of mathematical visual datasets and specialized MLLMs, with three progressive training stages from scratch.
+
+The first stage, MAVIS-Caption, consists of 558K diagram-caption pairs used to fine-tune a math-specific vision encoder (CLIP-Math) through contrastive learning. The second stage utilizes MAVIS-Caption to align the CLIP-Math with a large language model (LLM) by a projection layer, enhancing vision-language alignment in mathematical domains. The third stage introduces MAVIS-Instruct, including 900K meticulously collected and annotated visual math problems, which is adopted to finally instruct-tune the MLLM for robust mathematical reasoning skills.
+
+MAVIS-Instruct incorporates complete chain-of-thought (CoT) rationales for each problem and minimizes textual redundancy, focusing the model on visual elements. Both new datasets span a broad range of math subjects, including plane geometry, analytic geometry, and function. On various mathematical benchmarks, MAVIS-7B achieves leading performance among open-source MLLMs, surpassing other 7B models by +11.0% and the second-best LLaVA-NeXT (110B) by +3.0%.
+
+### Major Findings:
+
+1. MAVIS, the first MAthematical VISual instruction tuning paradigm for MLLMs, aims to improve visual encoding of math diagrams, diagram-language alignment, and mathematical reasoning skills.
+2. MAVIS involves three progressive training stages: MAVIS-Caption for fine-tuning a math-specific vision encoder, MAVIS-Caption for aligning the vision encoder with an LLM, and MAVIS-Instruct for instruct-tuning the MLLM with visual math problems.
+3. MAVIS-Instruct incorporates complete CoT rationales for each problem and minimizes
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08739v1](https://arxiv.org/abs/2407.08739v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08739v1](https://browse.arxiv.org/html/2407.08739v1)       |
+| Truncated       | False       |
+| Word Count       | 8660       |

@@ -1,0 +1,45 @@
+
+---
+title: "Multilingual Contrastive Decoding via Language-Agnostic Layers Skipping"
+id: "2407.10795v1"
+description: "SkipLayerCD improves LLM's reasoning in 11 languages by skipping bottom layers, addressing language mismatch in contrastive decoding."
+author: Wenhao Zhu, Sizhe Liu, Shujian Huang, Shuaijie She, Chris Wendler, Jiajun Chen
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10795v1/extracted/5732462/figures/case_study_zh.png"
+categories: ['social-sciences', 'prompt-engineering', 'robustness', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10795v1/extracted/5732462/figures/case_study_zh.png)
+
+### Summary:
+
+The paper presents a novel approach to improve the text generation quality of large language models (LLMs) by contrasting the prediction probabilities between an early exit output (amateur logits) and the final output (expert logits). However, the authors find that this approach, known as DoLa, does not work well on non-English tasks due to a language mismatch between early exit output and final output.
+
+To address this issue, the authors propose an improved contrastive decoding algorithm that obtains more helpful amateur logits by skipping a set of bottom, language-agnostic layers. The proposed method is effective for diverse languages beyond English and outperforms previous contrastive decoding baselines, substantially improving LLM's chain-of-thought reasoning accuracy across 11 languages.
+
+### Major Findings:
+
+1. The authors find that DoLa, a contrastive decoding approach that uses the expert model’s early exit output as amateur logits, does not work well on non-English tasks.
+2. The issue with DoLa arises from a language mismatch between amateur logits and expert logits, as the early exit logits accumulate on English tokens even during non-English generation.
+3. The authors propose an improved contrastive decoding algorithm by skipping a set of lower language-agnostic layers while preserving the computations in the upper transformer blocks.
+4. The proposed method significantly outperforms the previous contrastive decoding approach DoLa and improves the chain-of-thought reasoning accuracy of a group of open-source LLMs across 11 languages.
+
+### Analysis and Critique:
+
+The paper presents a well-structured and coherent summary of the proposed method and its major findings. The authors provide a clear explanation of the problem with DoLa and propose a novel solution to address this issue. The experimental results demonstrate the effectiveness of the proposed method in improving the text generation quality of LLMs for diverse languages beyond English.
+
+However, the paper does not discuss any potential limitations or shortcomings of the proposed method. It would be helpful to include a discussion of any methodological issues, conflicting evidence, or areas that require further research or clarification. Additionally, the paper does not provide any information on the computational cost of the proposed method, which is an important consideration for practical applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10795v1](https://arxiv.org/abs/2407.10795v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10795v1](https://browse.arxiv.org/html/2407.10795v1)       |
+| Truncated       | False       |
+| Word Count       | 3434       |

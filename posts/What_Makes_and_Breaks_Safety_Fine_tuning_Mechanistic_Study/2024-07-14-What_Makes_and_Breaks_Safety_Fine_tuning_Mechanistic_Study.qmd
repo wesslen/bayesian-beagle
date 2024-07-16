@@ -1,0 +1,34 @@
+
+---
+title: "What Makes and Breaks Safety Fine-tuning? Mechanistic Study"
+id: "2407.10264v1"
+description: "Safety fine-tuning minimally alters LLM weights, clustering inputs as safe or unsafe, potentially misclassifying adversarial inputs."
+author: Samyak Jain, Ekdeep Singh Lubana, Kemal Oksuz, Tom Joy, Philip H. S. Torr, Amartya Sanyal, Puneet K. Dokania
+date: "2024-07-14"
+image: "../../img/2407.10264v1/image_1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.10264v1/image_1.png)
+
+**Summary:**
+
+The paper "What Makes and Breaks Safety Fine-tuning? A Mechanistic Study" investigates the factors contributing to the safety of large language models (LLMs) through safety fine-tuning. The authors design a synthetic data generation framework to capture the interaction between the task and specific concepts. They examine three safety fine-tuning methods: supervised safety fine-tuning, direct preference optimization, and unlearning. The study reveals that these methods minimally transform MLP weights to align unsafe inputs into the null space of the weights, resulting in a clustering of inputs based on their safety. However, when an adversarial input is provided, its activations are closer to safer samples, causing the model to process it as if it were safe.
+
+**Major Findings:**
+
+1. Safety fine-tuning methods minimally transform MLP weights to align unsafe inputs into the null space of the weights, resulting in
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10264v1](https://arxiv.org/abs/2407.10264v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10264v1](https://browse.arxiv.org/html/2407.10264v1)       |
+| Truncated       | True       |
+| Word Count       | 62036       |

@@ -1,0 +1,46 @@
+
+---
+title: "Review-LLM: Harnessing Large Language Models for Personalized Review Generation"
+id: "2407.07487v1"
+description: "Review-LLM customizes LLMs for personalized review generation, improving performance by incorporating user behavior, ratings, and SFT."
+author: Qiyao Peng, Hongtao Liu, Hongyan Xu, Qing Yang, Minglai Shao, Wenjun Wang
+date: "2024-07-10"
+image: "https://browse.arxiv.org/html/2407.07487v1/x1.png"
+categories: ['recommender', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.07487v1/x1.png)
+
+### Summary:
+
+The paper proposes a framework called Review-LLM for generating personalized reviews using Large Language Models (LLMs) in recommender systems. The framework aggregates user historical behaviors, including item titles, reviews, and ratings, to construct a comprehensive input prompt. This prompt helps capture user preferences and review writing styles, mitigating the generation of overly polite reviews. The framework uses low-rank adaptation for parameter-efficient fine-tuning, enabling LLMs to generate reviews for candidate items through supervised fine-tuning. Experimental results show that Review-LLM outperforms GPT-3.5-Turbo and GPT-4o in review generation.
+
+### Major Findings:
+
+1. **Personalized Review Generation**: Review-LLM leverages user historical behaviors, including item titles, reviews, and ratings, to generate personalized reviews. This approach helps capture user preferences and review writing styles, improving the quality of generated reviews.
+
+2. **Mitigating Overly Polite Reviews**: By aggregating user historical behaviors, Review-LLM can mitigate the generation of overly polite reviews, which is a common issue with LLMs. This results in more accurate and relevant reviews for users.
+
+3. **Superior Performance**: Experimental results show that Review-LLM outperforms GPT-3.5-Turbo and GPT-4o in review generation. This demonstrates the effectiveness of the proposed framework in generating high-quality, personalized reviews.
+
+### Analysis and Critique:
+
+1. **Limited Diversity of Individual Preferences**: The framework may not fully capture the diversity of individual preferences, as different individuals may focus on different aspects of a product. Future work could explore ways to better capture the diversity of individual preferences.
+
+2. **Lack of Temporal Dynamics**: The framework primarily focuses on capturing user preferences from historical behaviors without considering the dynamics of user interactions over time. Incorporating temporal dynamics could potentially improve the accuracy and personalization of review generation.
+
+3. **Evaluation Metrics**: The paper uses ROUGE-1/L and BERT similarity score (BertScore) as evaluation metrics. While these metrics are commonly used, they may not fully capture the quality and relevance of the generated reviews. Future work could explore additional evaluation
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.07487v1](https://arxiv.org/abs/2407.07487v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.07487v1](https://browse.arxiv.org/html/2407.07487v1)       |
+| Truncated       | False       |
+| Word Count       | 3091       |

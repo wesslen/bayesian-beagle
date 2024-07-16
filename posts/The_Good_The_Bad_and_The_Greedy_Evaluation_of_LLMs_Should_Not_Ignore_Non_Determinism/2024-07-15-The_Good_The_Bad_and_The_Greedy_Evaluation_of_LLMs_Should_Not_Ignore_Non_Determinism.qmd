@@ -1,0 +1,47 @@
+
+---
+title: "The Good, The Bad, and The Greedy: Evaluation of LLMs Should Not Ignore Non-Determinism"
+id: "2407.10457v1"
+description: "Greedy decoding outperforms sampling in LLMs, with smaller models potentially matching larger ones. Non-determinism is crucial in LLM evaluations."
+author: Yifan Song, Guoyin Wang, Sujian Li, Bill Yuchen Lin
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10457v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10457v1/x1.png)
+
+### Summary:
+
+The study titled "The Good, The Bad, and The Greedy: Evaluation of LLMs Should Not Ignore Non-Determinism" explores the performance differences between greedy decoding and sampling in large language models (LLMs). The research aims to address the limitations of current LLM evaluations, which often overlook non-determinism and focus on a single output per example. Through extensive experiments, the authors observe that greedy decoding generally outperforms sampling methods for most evaluated tasks. They also find consistent performance across different LLM sizes and alignment methods, noting that alignment can reduce sampling variance. Furthermore, the best-of-N sampling approach demonstrates that smaller LLMs can match or surpass larger models such as GPT-4-Turbo, highlighting the untapped potential of smaller LLMs.
+
+### Major Findings:
+
+1. Greedy decoding outperforms sampling methods for most evaluated tasks, with consistent performance across different LLM sizes and alignment methods.
+2. Alignment methods, such as DPO, can significantly reduce the sampling variance for most benchmarks.
+3. Smaller LLMs can match or surpass larger models such as GPT-4-Turbo using the best-of-N sampling approach, highlighting the untapped potential of smaller LLMs.
+
+### Analysis and Critique:
+
+The study provides valuable insights into the performance differences between greedy decoding and sampling in LLMs. However, there are some limitations and areas for further research.
+
+1. The study focuses on a limited number of LLMs and benchmarks, which may not be representative of the broader landscape of LLMs and tasks.
+2. The research does not explore the impact of different decoding parameters, such as temperature and repetition penalty, on the performance of LLMs.
+3. The study does not address the potential biases and limitations of the benchmarks used, which could impact the generalizability of the findings.
+4. The research does not discuss the potential implications of the findings for real-world applications of LLMs, such as chatbots or content generation tools.
+
+In conclusion, the study provides a valuable contribution to the understanding of non-determinism in LLM evaluations. However, further research is needed to address the limitations and explore the broader implications of the findings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10457v1](https://arxiv.org/abs/2407.10457v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10457v1](https://browse.arxiv.org/html/2407.10457v1)       |
+| Truncated       | False       |
+| Word Count       | 5472       |

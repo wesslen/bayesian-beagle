@@ -1,0 +1,36 @@
+
+---
+title: "Foundational Autoraters: Taming Large Language Models for Better Automatic Evaluation"
+id: "2407.10817v1"
+description: "FLAMe, a family of LLM autoraters, outperforms proprietary models like GPT-4 and Claude-3, offering better generalization and less bias in evaluating LLM output."
+author: Tu Vu, Kalpesh Krishna, Salaheddin Alzubi, Chris Tar, Manaal Faruqui, Yun-Hsuan Sung
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10817v1/x1.png"
+categories: ['social-sciences', 'production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10817v1/x1.png)
+
+### Summary:
+
+The paper introduces FLAMe, a family of Foundational Large Autorater Models, trained on a large and diverse collection of 100 quality assessment tasks comprising 5M human judgments. FLAMe significantly improves generalization to a wide variety of held-out tasks, outperforming LLMs trained on proprietary data like GPT-4 and Claude-3 on many tasks. The paper demonstrates that FLAMe can serve as a powerful starting point for further downstream fine-tuning, using reward modeling evaluation as a case study (FLAMe-RM). Notably, on RewardBench, the FLAMe-RM-24B model is the top-performing generative model trained exclusively on permissively licensed data, outperforming both GPT-4-0125 and GPT-4o. Additionally, the paper explores a more computationally efficient approach using a novel tail-patch fine-tuning strategy to optimize the FLAMe multitask mixture for reward modeling evaluation (FLAMe-Opt-RM), offering competitive RewardBench performance while requiring approximately 25 less training datapoints. Overall, the FLAMe variants outperform all popular proprietary LLM-as-a-Judge models on 8 out of 12 autorater evaluation benchmarks, covering 53 quality assessment tasks, including RewardBench and LLM-AggreFact. Finally, the analysis reveals that FLAMe is significantly less biased than these LLM-as-a-Judge models on the CoBBLEr autorater bias benchmark, while effectively identifying high-quality responses for code generation.
+
+### Major Findings:
+
+1. FLAMe, a family of Foundational Large Autorater Models, is trained on a large and diverse collection of 100 quality assessment tasks comprising 5M human judgments, significantly improving generalization to a wide variety of held-out tasks.
+2. FLAMe can serve as a powerful starting point for further downstream fine-tuning, using reward modeling evaluation as a case study (FLAMe-RM), outperforming popular proprietary LLM-as-a-Judge models on 8 out of 12 autorater evaluation benchmarks.
+3. A
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10817v1](https://arxiv.org/abs/2407.10817v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10817v1](https://browse.arxiv.org/html/2407.10817v1)       |
+| Truncated       | False       |
+| Word Count       | 11875       |

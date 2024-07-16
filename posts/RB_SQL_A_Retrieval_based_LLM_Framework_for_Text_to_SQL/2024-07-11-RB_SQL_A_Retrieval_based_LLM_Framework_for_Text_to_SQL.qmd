@@ -1,0 +1,46 @@
+
+---
+title: "RB-SQL: A Retrieval-based LLM Framework for Text-to-SQL"
+id: "2407.08273v1"
+description: "RB-SQL improves text-to-SQL tasks with a retrieval-based framework for in-context prompt engineering, outperforming baselines on BIRD and Spider datasets."
+author: Zhenhe Wu, Zhongqiu Li, Jie Zhang, Mengxiang Li, Yu Zhao, Ruiyu Fang, Zhongjiang He, Xuelong Li, Zhoujun Li, Shuangyong Song
+date: "2024-07-11"
+image: "https://browse.arxiv.org/html/2407.08273v1/x1.png"
+categories: ['education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.08273v1/x1.png)
+
+### Summary:
+
+The paper proposes a novel retrieval-based framework, RB-SQL, for Large Language Models (LLMs) in text-to-SQL tasks. The framework consists of three independent RB-models: Table-Retriever, Column-Retriever, and SQL-Skeleton-Retriever. These models aim to refine SQL schema and select relevant examples for in-context learning. The Table-Retriever and Column-Retriever filter out irrelevant tables and columns, respectively, while the SQL-Skeleton-Retriever selects few-shot examples with similar SQL skeleton for questions. The paper also introduces SQL skeleton into the example organization, which enhances the in-context learning process of LLMs.
+
+### Major Findings:
+
+1. The RB-SQL framework outperforms several baselines on BIRD and Spider datasets, demonstrating its effectiveness in text-to-SQL tasks.
+2. The Table-Retriever and Column-Retriever modules significantly improve the performance of LLMs by reducing redundant information and minimizing the impact of excessive tables and columns.
+3. The SQL-Skeleton-Retriever module provides syntactic guidance to generate more syntactically correct SQL results.
+
+### Analysis and Critique:
+
+1. The paper does not discuss the potential limitations of the RB-SQL framework, such as its performance on larger and more complex databases.
+2. The paper does not provide a detailed comparison of the RB-SQL framework with other state-of-the-art text-to-SQL methods.
+3. The paper does not discuss the potential biases in the datasets used for evaluation, which could impact the generalizability of the results.
+4. The paper does not discuss the potential ethical implications of using LLMs for text-to-SQL tasks, such as the potential for bias in the generated SQL queries.
+5. The paper does not discuss the potential scalability issues of the RB-SQL framework, such as its performance on larger and more complex databases.
+6. The paper does not discuss the potential impact of the RB-SQL framework on the efficiency of SQL query generation, such as the time and computational resources required.
+7. The paper does not discuss the potential impact of the RB-
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08273v1](https://arxiv.org/abs/2407.08273v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08273v1](https://browse.arxiv.org/html/2407.08273v1)       |
+| Truncated       | False       |
+| Word Count       | 7686       |

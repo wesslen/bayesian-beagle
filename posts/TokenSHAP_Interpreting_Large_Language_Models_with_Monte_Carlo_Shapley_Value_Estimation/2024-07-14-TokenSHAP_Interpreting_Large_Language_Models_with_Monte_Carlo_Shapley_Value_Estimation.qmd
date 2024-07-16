@@ -1,0 +1,47 @@
+
+---
+title: "TokenSHAP: Interpreting Large Language Models with Monte Carlo Shapley Value Estimation"
+id: "2407.10114v1"
+description: "TokenSHAP interprets LLMs by attributing importance to individual tokens, enhancing model transparency and reliability."
+author: Roni Goldshmidt, Miriam Horovicz
+date: "2024-07-14"
+image: "https://browse.arxiv.org/html/2407.10114v1/extracted/5715372/boxplot_shap_injection_baseline_random.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10114v1/extracted/5715372/boxplot_shap_injection_baseline_random.png)
+
+### Summary:
+
+- TokenSHAP is a novel method for interpreting large language models (LLMs) by attributing importance to individual tokens or substrings within input prompts.
+- It adapts Shapley values from cooperative game theory to natural language processing, offering a rigorous framework for understanding how different parts of an input contribute to a model’s response.
+- TokenSHAP leverages Monte Carlo sampling for computational efficiency, providing interpretable, quantitative measures of token importance.
+- The method's ability to capture nuanced interactions between tokens provides valuable insights into LLM behavior, enhancing model transparency, improving prompt engineering, and aiding in the development of more reliable AI systems.
+
+### Major Findings:
+
+1. TokenSHAP extends Shapley values to variable-length text LLM inputs, providing a theoretical framework for understanding token importance.
+2. The method employs an efficient Monte Carlo sampling approach tailored for language models, ensuring computational feasibility.
+3. Comprehensive evaluations across various prompts and model types demonstrate TokenSHAP's versatility and effectiveness in revealing LLM decision-making processes.
+4. TokenSHAP offers the capability to effortlessly visualize insights, aiding in the interpretation of model behavior.
+
+### Analysis and Critique:
+
+- TokenSHAP's reliance on Monte Carlo sampling introduces variability in importance scores, which may slightly vary between runs, affecting reproducibility in sensitive applications.
+- The method assumes that contributions from individual tokens can be additively combined, which may not always be accurate in cases where complex interactions and non-linear dynamics dominate.
+- Despite these limitations, TokenSHAP represents a significant step towards the necessary interpretability for responsible AI deployment, contributing to the broader goal of creating more transparent, accountable, and trustworthy AI systems.
+- Future research should explore alternative value functions, investigate Shapley value stability, develop interactive tools, and extend the method to multi-turn conversations and bias analysis.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10114v1](https://arxiv.org/abs/2407.10114v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10114v1](https://browse.arxiv.org/html/2407.10114v1)       |
+| Truncated       | False       |
+| Word Count       | 3919       |

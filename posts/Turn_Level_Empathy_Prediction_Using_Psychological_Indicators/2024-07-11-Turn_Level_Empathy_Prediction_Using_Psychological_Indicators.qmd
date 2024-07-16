@@ -1,0 +1,47 @@
+
+---
+title: "Turn-Level Empathy Prediction Using Psychological Indicators"
+id: "2407.08607v1"
+description: "LLM-enhanced DeBERTA model improves empathy detection, ranking 7th in CONV-turn track."
+author: Shaz Furniturewala, Kokil Jaidka
+date: "2024-07-11"
+image: "../../../bayesian-beagle.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+- The study proposes a novel turn-level empathy detection method for the WASSA 2024 Empathy and Personality Prediction Shared Task.
+- The method decomposes empathy into six psychological indicators: Emotional Language, Perspective-Taking, Sympathy and Compassion, Extroversion, Openness, and Agreeableness.
+- A pipeline of text enrichment using a Large Language Model (LLM) followed by DeBERTA fine-tuning is used, demonstrating significant improvement in the Pearson Correlation Coefficient and F1 scores for empathy detection.
+- The system officially ranked 7th at the CONV-turn track.
+
+### Major Findings:
+
+1. Emotional Language and Sympathy and Compassion showed the highest positive correlation with empathy, underscoring their significance in conveying empathy.
+2. Perspective-Taking had a moderate positive correlation with empathy, suggesting that understanding another person’s point of view contributes to empathy.
+3. Extroversion had a negative correlation with empathy, implying that sociability may not align with empathetic responses in these conversations.
+4. The baseline DeBERTa model trained on utterances alone achieved a Pearson correlation of 0.65, an F1 score of 0.32, and an accuracy of 0.52. When augmented with the additional context from the six psychological indicators, the model’s performance improved, achieving a Pearson correlation of 0.68, an F1 score of 0.35, and an accuracy of 0.55.
+
+### Analysis and Critique:
+
+- The study effectively demonstrates the importance of considering psychological components in empathy detection.
+- The use of GPT-4o for both enriching the data and attempting to label it may lead to concept drift, where the interpretation of the labels relies heavily on prompt sensitivity and adherence, and ultimately digresses from the original definition.
+- The study acknowledges the need for further exploration of reasoning-based approaches to improve the performance of LLMs in empathy prediction.
+- The study is limited by the use of a single LLM for both enriching the data and attempting to label it,
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08607v1](https://arxiv.org/abs/2407.08607v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08607v1](https://browse.arxiv.org/html/2407.08607v1)       |
+| Truncated       | False       |
+| Word Count       | 3044       |

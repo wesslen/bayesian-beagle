@@ -1,0 +1,46 @@
+
+---
+title: "Fast Matrix Multiplications for Lookup Table-Quantized LLMs"
+id: "2407.10960v1"
+description: "FLUTE accelerates LUT-quantized LLMs inference, offering 2-4×\times× speedup over GEMM kernels and 1.5-2×\times× end-to-end throughput increase for LLaMA3 quantization."
+author: Han Guo, William Brandon, Radostin Cholakov, Jonathan Ragan-Kelley, Eric P. Xing, Yoon Kim
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10960v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10960v1/x1.png)
+
+### Summary:
+
+- The paper presents FLUTE, a flexible lookup table engine for deploying weight-quantized LLMs, focusing on low-bit and non-uniform quantization settings.
+- FLUTE addresses challenges such as packing sub-8-bit matrices, unpacking during dequantization, and structuring unpacked data to match GPU-native matmul formats.
+- FLUTE uses offline weight restructuring, a shared-memory lookup table for efficient dequantization, and Stream-K partitioning for optimized workload distribution.
+- FLUTE outperforms existing non-uniform quantization kernels and matches simpler uniform-quantization kernels in some cases.
+- As an application of FLUTE, the paper explores a simple extension to lookup table-based NormalFloat quantization and applies it to quantize LLaMA3 to various configurations, obtaining competitive quantization performance against strong baselines while obtaining an end-to-end throughput increase of 1.5 to 2 times.
+
+### Major Findings:
+
+1. FLUTE, a flexible lookup table engine, addresses challenges in deploying weight-quantized LLMs, such as packing sub-8-bit matrices, unpacking during dequantization, and structuring unpacked data to match GPU-native matmul formats.
+2. FLUTE uses offline weight restructuring, a shared-memory lookup table for efficient dequantization, and Stream-K partitioning for optimized workload distribution.
+3. FLUTE outperforms existing non-uniform quantization kernels and matches simpler uniform-quantization kernels in some cases.
+4. As an application of FLUTE, the paper explores a simple extension to lookup table-based NormalFloat quantization and applies it to quantize LLaMA3 to various configurations, obtaining competitive quantization performance against strong baselines while obtaining an end-to-end throughput increase of 1.5 to 2 times.
+
+### Analysis and Critique:
+
+- The paper presents a promising approach to addressing the challenges of deploying weight-quantized LLMs, particularly in low-bit and non-uniform quantization settings.
+- The use of offline weight restructuring, a shared-memory lookup table, and Stream-K partitioning are effective strategies for optimizing workload distribution and improving performance
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10960v1](https://arxiv.org/abs/2407.10960v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10960v1](https://browse.arxiv.org/html/2407.10960v1)       |
+| Truncated       | False       |
+| Word Count       | 7852       |

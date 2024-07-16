@@ -1,0 +1,40 @@
+
+---
+title: "LLM Circuit Analyses Are Consistent Across Training and Scale"
+id: "2407.10827v1"
+description: "Circuit analyses on small models can still apply after more pre-training and across model scale."
+author: Curt Tigges, Michael Hanna, Qinan Yu, Stella Biderman
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10827v1/x1.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10827v1/x1.png)
+
+### Summary:
+
+This study explores the development and evolution of model mechanisms, operationalized as circuits, in decoder-only large language models (LLMs) across 300 billion tokens of training. The research focuses on models ranging from 70 million to 2.8 billion parameters, aiming to understand how task abilities and functional components emerge consistently at similar token counts across scale. The findings suggest that even when individual components change, the overall algorithm remains consistent, and these algorithms can replicate across model scale. This indicates that circuit analyses conducted on small models at the end of pre-training can provide insights applicable to additional pre-training and over model scale.
+
+### Major Findings:
+
+1. Task abilities and functional components emerge consistently at similar token counts across scale, even when implemented by different attention heads over time.
+2. The overarching algorithm that the functional components implement remains consistent, despite changes in individual components.
+3. Both the algorithms and the types of components involved in them can replicate across model scale.
+
+### Analysis and Critique:
+
+While the study provides valuable insights into the consistency of circuit analyses across training and scale, there are some potential limitations and areas for further research. The research focuses on a limited set of tasks, which may not be representative of more complex tasks that require larger models. Additionally, the study only examines models from one model family, which may not generalize to other model architectures or training setups. Furthermore, the research does not explore the impact of fine-tuning on circuit mechanisms, which could lead to different changes in model behavior. Future work should address these limitations and explore more complex phenomena, such as self-repair and load-balancing mechanisms in LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10827v1](https://arxiv.org/abs/2407.10827v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10827v1](https://browse.arxiv.org/html/2407.10827v1)       |
+| Truncated       | False       |
+| Word Count       | 11482       |

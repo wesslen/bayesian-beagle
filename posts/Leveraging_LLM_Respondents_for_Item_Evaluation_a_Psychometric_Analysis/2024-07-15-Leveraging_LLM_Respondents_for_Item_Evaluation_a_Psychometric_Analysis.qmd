@@ -1,0 +1,45 @@
+
+---
+title: "Leveraging LLM-Respondents for Item Evaluation: a Psychometric Analysis"
+id: "2407.10899v1"
+description: "LLMs can resemble college students' ability in College Algebra, with ensemble LLMs better mimicking human respondents. LLM-calibrated item parameters correlate highly with human-calibrated counterparts. Resampling methods enhance correlation."
+author: Yunting Liu, Shreya Bhandari, Zachary A. Pardos
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10899v1/extracted/5732709/wrightmap.png"
+categories: ['education', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10899v1/extracted/5732709/wrightmap.png)
+
+### Summary:
+
+- The study explores the use of six different LLMs (GPT-3.5, GPT-4, Llama 2, Llama 3, Gemini-Pro, and Cohere Command R Plus) and various combinations of them using sampling methods to produce responses with psychometric properties similar to human answers.
+- Results show that some LLMs have comparable or higher proficiency in College Algebra than college students, but no single LLM mimics human respondents due to narrow proficiency distributions.
+- An ensemble of LLMs can better resemble college students’ ability distribution.
+- The item parameters calibrated by LLM-Respondents have high correlations (e.g. > 0.8 for GPT-3.5) compared to their human calibrated counterparts, and closely resemble the parameters of the human subset (e.g. 0.02 Spearman correlation difference).
+- Several augmentation strategies are evaluated for their relative performance, with resampling methods proving most effective, enhancing the Spearman correlation from 0.89 (human only) to 0.93 (augmented human).
+
+### Major Findings:
+
+1. Some LLMs have comparable or higher proficiency in College Algebra than college students, but no single LLM mimics human respondents due to narrow proficiency distributions.
+2. An ensemble of LLMs can better resemble college students’ ability distribution.
+3. The item parameters calibrated by LLM-Respondents have high correlations (e.g. > 0.8 for GPT-3.5) compared to their human calibrated counterparts, and closely resemble the parameters of the human subset (e.g. 0.02 Spearman correlation difference).
+
+### Analysis and Critique:
+
+- The study provides a novel application of Item Response Theory (IRT) to LLM abilities, revealing a first-of-its-kind distribution spread of abilities from multiple promptings.
+- The study holds much promise for the automatic curation of items for tutoring systems, as AI respondents could be used as an initial filtering phase to reliably narrow down a larger item pool, and then have human respondents further refine the selection using the more manageable subset
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10899v1](https://arxiv.org/abs/2407.10899v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10899v1](https://browse.arxiv.org/html/2407.10899v1)       |
+| Truncated       | False       |
+| Word Count       | 5642       |

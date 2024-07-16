@@ -1,0 +1,40 @@
+
+---
+title: "IDEAL: Leveraging Infinite and Dynamic Characterizations of Large Language Models for Query-focused Summarization"
+id: "2407.10486v1"
+description: "LLMs-based QFS models: Proposed modules for lengthy summarization and efficient query alignment, with promising results."
+author: Jie Cao, Dian Jiao, Qiang Yan, Wenqiao Zhang, Siliang Tang, Yueting Zhuang
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10486v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10486v1/x1.png)
+
+### Summary:
+
+The paper "IDEAL: Leveraging Infinite and Dynamic Characterizations of Large Language Models for Query-focused Summarization" explores the use of large language models (LLMs) for query-focused summarization (QFS). The authors propose two indispensable characteristics that LLMs-based QFS models should possess: Lengthy Document Summarization and Efficiently Fine-grained Query-LLM Alignment. To achieve these characteristics, the authors introduce two modules: Query-aware HyperExpert and Query-focused Infini-attention. The Query-aware HyperExpert module leverages parameter-efficient fine-tuning (PEFT) strategies to enable a model to perform new tasks with minimal parameter updates. The Query-focused Infini-attention module processes long documents under low memory resources for QFS tasks. The proposed approach, IDEAL, significantly outperforms other baselines in extensive and rigorous experiments across multiple QFS datasets.
+
+### Major Findings:
+
+1. The proposed IDEAL method tunes instance-level PEFT approaches according to query instructions, enhancing the model's fine-grained instruction-following capabilities.
+2. IDEAL incorporates a query-focused infini-attention module to process long text under low memory resources for QFS tasks. For example, IDEAL with the backbone model LLAMA2-7B can process datasets where the average length of input tokens is 13,000 on a single 24GB Nvidia GeForce RTX 3090.
+3. IDEAL significantly outperforms other baselines in extensive and rigorous experiments across multiple QFS datasets.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to QFS using LLMs and introduces two modules to address the challenges of lengthy document summarization and efficient query-LLM alignment. The proposed method, IDEAL, demonstrates significant improvements over other baselines in experiments across multiple QFS datasets. However, the paper does not discuss the limitations of the proposed approach or potential biases that may have been introduced during the training stage. Additionally, the paper does not provide a detailed analysis of the method's performance on different types of queries or the impact of the query length
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10486v1](https://arxiv.org/abs/2407.10486v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10486v1](https://browse.arxiv.org/html/2407.10486v1)       |
+| Truncated       | False       |
+| Word Count       | 6156       |

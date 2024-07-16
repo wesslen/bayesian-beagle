@@ -1,0 +1,44 @@
+
+---
+title: "Look Within, Why LLMs Hallucinate: A Causal Perspective"
+id: "2407.10153v1"
+description: "Disabling certain self-attention layers in LLMs can reduce hallucination issues, offering a new approach to understanding and mitigating this problem."
+author: He Li, Haoang Chi, Mingyu Liu, Wenjing Yang
+date: "2024-07-14"
+image: "https://browse.arxiv.org/html/2407.10153v1/extracted/5730229/fig1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10153v1/extracted/5730229/fig1.png)
+
+### Summary:
+
+The paper investigates the hallucination problem in large language models (LLMs) from a causal perspective. The authors propose a method to intervene in the self-attention layers of LLMs without altering their structure and size. They evaluate the method on several open-source LLMs and hallucination detection benchmarks, finding that disabling certain self-attention layers in the front or tail of the LLMs can alleviate hallucinations. The study contributes to understanding and mitigating LLMs' hallucinations.
+
+### Major Findings:
+
+1. The study proposes a novel method for intervening in the self-attention layers of LLMs, maintaining their architecture and size intact.
+2. The authors evaluate multiple open-source LLMs on hallucination detection benchmarks, observing that disabling specific self-attention layers in the front or tail of the LLMs can alleviate hallucinations.
+3. The results suggest that different self-attention layers of an LLM represent distinct hallucinative content, with front or tail layers being most prone to convey hallucinations and middle layers potentially containing factual knowledge.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to addressing the hallucination problem in LLMs by focusing on the self-attention mechanism. The proposed method for intervening in the self-attention layers is a significant contribution to the field, as it allows for the mitigation of hallucinations without altering the LLMs' structure and size.
+
+However, the study has some limitations. The evaluation is limited to a few open-source LLMs and hallucination detection benchmarks, which may not fully represent the diversity of LLMs and hallucination types. Additionally, the method's effectiveness in mitigating hallucinations may vary depending on the specific LLM and the nature of the hallucination.
+
+Further research is needed to explore the generalizability of the proposed method across different LLMs and hallucination types. It would also be beneficial to investigate the potential trade-offs between mitigating hallucinations and preserving the LLMs' performance on other tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10153v1](https://arxiv.org/abs/2407.10153v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10153v1](https://browse.arxiv.org/html/2407.10153v1)       |
+| Truncated       | False       |
+| Word Count       | 5521       |

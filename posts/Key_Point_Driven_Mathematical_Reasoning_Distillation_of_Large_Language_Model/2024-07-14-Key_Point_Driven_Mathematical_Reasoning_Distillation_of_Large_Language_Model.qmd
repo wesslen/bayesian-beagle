@@ -1,0 +1,41 @@
+
+---
+title: "Key-Point-Driven Mathematical Reasoning Distillation of Large Language Model"
+id: "2407.10167v1"
+description: "TL;DR: KPDD method improves SLMs' mathematical reasoning, reducing errors and enhancing deployment."
+author: Xunyu Zhu, Jian Li, Yong Liu, Can Ma, Weiping Wang
+date: "2024-07-14"
+image: "https://browse.arxiv.org/html/2407.10167v1/x1.png"
+categories: ['robustness', 'education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10167v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel mathematical reasoning distillation method called Key-Point-Driven Mathematical Reasoning Distillation (KPDD) to enhance the mathematical reasoning performance of Small Language Models (SLMs). KPDD breaks down the reasoning process into three stages: Core Question Extraction, Problem-Solving Information Extraction, and Step-by-Step Solution. This method is further divided into KPDD-CoT, which generates Chain-of-Thought rationales, and KPDD-PoT, which creates Program-of-Thought rationales. The experiment results show that KPDD-CoT significantly improves reasoning abilities, while KPDD-PoT achieves state-of-the-art performance in mathematical reasoning tasks.
+
+### Major Findings:
+
+1. KPDD-CoT significantly enhances SLMs’ reasoning abilities, with absolute improvements ranging from 5.01% to 15.51% across tasks.
+2. KPDD-PoT surpasses previous state-of-the-art fine-tuned SLMs at all scales, with absolute improvements between 32.18% and 54.63% across tasks.
+3. The efficacy of mathematical reasoning distillation in SLMs is highly dependent on model size; larger models assimilate more reasoning knowledge, leading to superior performance.
+4. KPDD exhibits strong transferability, performing well on various mathematical reasoning datasets, including GSM8K, ASDiv, SVAMP, and MultiArith.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to enhancing the mathematical reasoning abilities of SLMs. However, the study does not address the potential limitations and biases of the proposed method. For instance, the reliance on large-scale pre-trained models for distillation may introduce biases present in the original models. Additionally, the evaluation of the method is primarily focused on mathematical reasoning tasks, and its applicability to other types of reasoning tasks remains unexplored. Future research should address these limitations and investigate the generalizability of the proposed method to other reasoning tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10167v1](https://arxiv.org/abs/2407.10167v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10167v1](https://browse.arxiv.org/html/2407.10167v1)       |
+| Truncated       | False       |
+| Word Count       | 8199       |

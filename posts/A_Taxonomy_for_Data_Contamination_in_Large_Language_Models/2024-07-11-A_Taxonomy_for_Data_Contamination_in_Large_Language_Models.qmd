@@ -1,0 +1,46 @@
+
+---
+title: "A Taxonomy for Data Contamination in Large Language Models"
+id: "2407.08716v1"
+description: "Contamination in pretraining data can inflate language model performance; understanding its impact on tasks like summarization and question answering is crucial."
+author: Medha Palavalli, Amanda Bertsch, Matthew R. Gormley
+date: "2024-07-11"
+image: "../../../bayesian-beagle.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary
+
+The paper "A Taxonomy for Data Contamination in Large Language Models" by Medha Palavalli, Amanda Bertsch, and Matthew R. Gormley presents a taxonomy to categorize the various types of contamination encountered by LLMs during the pretraining phase. The authors identify which types of contamination pose the highest risk and analyze their impact on two key NLP tasks: summarization and question answering.
+
+## Major Findings
+
+1. The paper presents a taxonomy that categorizes the various types of contamination encountered by LLMs during the pretraining phase and identifies which types pose the highest risk.
+2. The authors analyze the impact of contamination on two key NLP tasks: summarization and question answering, revealing how different types of contamination influence task performance during evaluation.
+3. The findings reveal that for GPT-2 Large models, having in-domain data present during training is often as beneficial as having the test data present during training.
+4. Certain contamination types exhibit task-dependent effects on evaluation performance, further complicating decontamination best practices.
+5. The findings enable recommendations for identifying and mitigating problematic contamination during LLM development to ensure reliable evaluations.
+
+## Analysis and Critique
+
+The paper provides a comprehensive taxonomy for data contamination in LLMs and analyzes its impact on two key NLP tasks. However, the paper does not discuss the potential impact of contamination on other NLP tasks, such as named entity recognition or part-of-speech tagging. Additionally, the paper does not provide a detailed analysis of the impact of contamination on model fairness, bias, and robustness.
+
+Furthermore, the paper does not discuss the potential impact of contamination on model interpretability and explainability. As LLMs become more prevalent in real-world applications, it is essential to understand how contamination affects model behavior and decision-making processes.
+
+Overall, the paper provides valuable insights into the impact of data contamination on LLMs and highlights the need for further research in this area. However, the paper could benefit from a more comprehensive analysis of the impact of contamination on other NLP tasks and model fairness, bias, and robustness.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08716v1](https://arxiv.org/abs/2407.08716v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08716v1](https://browse.arxiv.org/html/2407.08716v1)       |
+| Truncated       | False       |
+| Word Count       | 15638       |

@@ -1,0 +1,43 @@
+
+---
+title: "SLIP: Securing LLMs IP Using Weights Decomposition"
+id: "2407.10886v1"
+description: "SLIP: A Hybrid Inference Algorithm Protecting LLMs on Edge Devices with Zero Accuracy Loss."
+author: Yehonathan Refael, Adam Hakim, Lev Greenberg, Tal Aviv, Satya Lokam, Ben Fishman, Shachar Seidman
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10886v1/extracted/5732621/slip-diagram.png"
+categories: ['security', 'production', 'robustness', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10886v1/extracted/5732621/slip-diagram.png)
+
+### Summary:
+
+The paper introduces a novel hybrid inference algorithm, named SLIP, designed to protect edge-deployed models from theft. SLIP is the first hybrid protocol that is both practical for real-world applications and provably secure, with zero accuracy degradation and minimal impact on latency. The protocol involves partitioning the model between two computing resources, one secure but expensive, and another cost-effective but vulnerable. This is achieved through matrix decomposition, ensuring that the secure resource retains a maximally sensitive portion of the model’s IP while performing a minimal amount of computations, and vice versa for the vulnerable resource. The protocol includes security guarantees that prevent attackers from exploiting the partition to infer the secured information.
+
+### Major Findings:
+
+1. SLIP is a novel hybrid inference algorithm that protects edge-deployed models from theft, with zero accuracy degradation and minimal impact on latency.
+2. The protocol involves partitioning the model between two computing resources, one secure but expensive, and another cost-effective but vulnerable, through matrix decomposition.
+3. The secure resource retains a maximally sensitive portion of the model’s IP while performing a minimal amount of computations, and vice versa for the vulnerable resource.
+4. The protocol includes security guarantees that prevent attackers from exploiting the partition to infer the secured information.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to securing the intellectual property of large language models (LLMs) deployed on edge devices. The proposed SLIP protocol offers a practical and provably secure solution to protect models from theft, with minimal impact on latency and no accuracy degradation. The use of matrix decomposition to partition the model between two computing resources is a novel approach that ensures the secure resource retains the most sensitive information while performing minimal computations.
+
+However, the paper does not provide a detailed comparison with existing methods for securing LLMs, which could help to better understand the advantages and limitations of the proposed approach. Additionally, the paper does not discuss the potential impact of the protocol on the overall performance of the model, such as the effect on inference time or the computational resources required for the secure and vulnerable resources. Further research is needed to evaluate the performance of the SLIP protocol in real-world scenarios and compare it with existing methods.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10886v1](https://arxiv.org/abs/2407.10886v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10886v1](https://browse.arxiv.org/html/2407.10886v1)       |
+| Truncated       | False       |
+| Word Count       | 8145       |

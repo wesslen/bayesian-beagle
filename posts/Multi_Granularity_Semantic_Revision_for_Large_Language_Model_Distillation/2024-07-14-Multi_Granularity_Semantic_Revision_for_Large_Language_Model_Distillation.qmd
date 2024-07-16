@@ -1,0 +1,44 @@
+
+---
+title: "Multi-Granularity Semantic Revision for Large Language Model Distillation"
+id: "2407.10068v1"
+description: "TL;DR: We propose a multi-granularity semantic revision method for LLM distillation, improving existing methods and reducing errors."
+author: Xiaoyu Liu, Yun Zhang, Wei Li, Simiao Li, Xudong Huang, Hanting Chen, Yehui Tang, Jie Hu, Zhiwei Xiong, Yunhe Wang
+date: "2024-07-14"
+image: "https://browse.arxiv.org/html/2407.10068v1/x1.png"
+categories: ['robustness', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10068v1/x1.png)
+
+### Summary:
+
+The paper proposes a multi-granularity semantic revision method for Large Language Model (LLM) distillation to address the issues of generation errors and misguided distillation processes in existing methods. The proposed method includes a sequence correction and re-generation (SCRG) strategy at the sequence level, a distribution adaptive clipping Kullback-Leibler (DAC-KL) loss as the distillation objective function at the token level, and the use of span priors to compute probability correlations within spans at the span level. The method aims to enhance the transfer of semantic information and improve the distillation process.
+
+### Major Findings:
+
+1. The SCRG strategy detects error tokens in student-generated sequences and re-generates the sequence from the position of the error token to reduce generation errors and enhance generation diversity.
+2. The DAC-KL loss function exploits a learnable sub-network to adaptively extract semantically dense areas from the teacher's output, avoiding the interference of redundant information in the distillation process.
+3. The use of span priors of a sequence to compute the probability correlations within spans and constrain the teacher and student's probability correlations to be consistent further enhances the transfer of semantic information.
+
+### Analysis and Critique:
+
+* The proposed method addresses the limitations of existing LLM distillation methods, which overly rely on student-generated outputs and struggle to align the most informative part due to the complex distribution of LLMs' outputs.
+* The paper provides a detailed explanation of the proposed method and its components, along with experimental results demonstrating its superiority over existing methods.
+* However, the paper does not discuss the potential limitations or shortcomings of the proposed method, such as the computational cost of the SCRG strategy or the impact of the DAC-KL loss function on the convergence of the distillation process.
+* Additionally, the paper does not provide a comparison with other distillation methods that address the same issues, such as those that use a different distillation objective function or a different approach to handling generation errors.
+* Further research is needed to evaluate the proposed method's performance in different scenarios and compare it with other distillation methods.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10068v1](https://arxiv.org/abs/2407.10068v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10068v1](https://browse.arxiv.org/html/2407.10068v1)       |
+| Truncated       | False       |
+| Word Count       | 7336       |

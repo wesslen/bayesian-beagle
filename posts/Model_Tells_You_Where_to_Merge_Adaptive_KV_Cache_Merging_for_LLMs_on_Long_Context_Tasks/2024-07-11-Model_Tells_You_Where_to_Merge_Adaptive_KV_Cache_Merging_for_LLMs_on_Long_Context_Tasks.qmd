@@ -1,0 +1,43 @@
+
+---
+title: "Model Tells You Where to Merge: Adaptive KV Cache Merging for LLMs on Long-Context Tasks"
+id: "2407.08454v1"
+description: "KVMerger: A novel KV cache merging approach for efficient LLM serving, reducing memory usage without significant performance loss."
+author: Zheng Wang, Boxiao Jin, Zhongzhi Yu, Minjia Zhang
+date: "2024-07-11"
+image: "https://browse.arxiv.org/html/2407.08454v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.08454v1/x1.png)
+
+### Summary:
+
+The paper proposes a novel KV cache merging approach, called KVMerger, to achieve adaptive KV cache compression for long-context tasks without significant performance degradation under constrained memory budgets. The approach is inspired by the observation that key states exhibit high similarity at the token level within a single sequence. The authors develop an effective yet straightforward merging set identification algorithm to identify suitable KV states for merging. They also propose a Gaussian kernel weighted merging algorithm to selectively merge all states within each merging set. The authors conduct extensive experiments to demonstrate the effectiveness of KVMerger for long-context tasks under constrained memory budgets, applying it to models including Llama2-7B-chat and Llama2-13B-chat. The results show that KVMerger achieves superior performance across tasks with both 1x and 2x KV cache budgets compared to other KV cache compression techniques, including H2O and CaM.
+
+### Major Findings:
+
+1. The authors propose a novel KV cache merging approach, called KVMerger, to achieve adaptive KV cache compression for long-context tasks without significant performance degradation under constrained memory budgets.
+2. The approach is inspired by the observation that key states exhibit high similarity at the token level within a single sequence.
+3. The authors develop an effective yet straightforward merging set identification algorithm to identify suitable KV states for merging.
+4. The authors propose a Gaussian kernel weighted merging algorithm to selectively merge all states within each merging set.
+5. The authors conduct extensive experiments to demonstrate the effectiveness of KVMerger for long-context tasks under constrained memory budgets, applying it to models including Llama2-7B-chat and Llama2-13B-chat.
+6. The results show that KVMerger achieves superior performance across tasks with both 1x and 2x KV cache budgets compared to other KV cache compression techniques, including H2O and CaM.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to KV cache merging, which is a critical problem in the field of large language models (LLMs). The authors propose a new method, called KVMer
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08454v1](https://arxiv.org/abs/2407.08454v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08454v1](https://browse.arxiv.org/html/2407.08454v1)       |
+| Truncated       | False       |
+| Word Count       | 8835       |

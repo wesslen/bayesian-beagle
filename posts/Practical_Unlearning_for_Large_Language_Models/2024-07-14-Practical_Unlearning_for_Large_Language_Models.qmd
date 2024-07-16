@@ -1,0 +1,43 @@
+
+---
+title: "Practical Unlearning for Large Language Models"
+id: "2407.10223v1"
+description: "TL;DR: O3 framework offers practical LLM unlearning, handling continuous requests with minimal utility loss, and no retained data, outperforming existing methods."
+author: Chongyang Gao, Lixu Wang, Chenkai Weng, Xiao Wang, Qi Zhu
+date: "2024-07-14"
+image: "https://browse.arxiv.org/html/2407.10223v1/x1.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10223v1/x1.png)
+
+# Summary
+
+## Summary:
+
+The paper proposes a novel framework called O3 for practical unlearning in large language models (LLMs). The O3 framework addresses the challenges of balancing unlearning effectiveness and model utility preservation in continuous scenarios without using any retained data. It includes an Out-Of-Distribution (OOD) detection module to assess the similarity between input data and unlearning data, and an Orthogonal Low-rank adapter (LoRA) for continuously unlearning requested data. The OOD detector is trained with a novel contrastive entropy loss and a local-global layer-aggregated scoring mechanism. The orthogonal LoRA achieves parameter disentanglement among continual unlearning requests. During inference, the O3 framework can smartly decide whether and to what extent to load the unlearning LoRA based on the OOD detector’s predictions. The O3 framework is computationally efficient and does not rely on any retained data.
+
+## Major Findings:
+
+1. The O3 framework consistently achieves the best trade-off between unlearning effectiveness and utility preservation, especially when facing continuous unlearning requests.
+2. The O3 framework does not require any retained data, making it more computationally efficient than existing LLM unlearning methods.
+3. The OOD detector in the O3 framework is trained with a novel contrastive entropy loss and a local-global layer-aggregated scoring mechanism, which allows it to achieve truly unsupervised OOD detection.
+4. The orthogonal LoRA in the O3 framework enables parameter disentanglement among continual unlearning requests, ensuring that the unlearning effectiveness of different requests does not interfere with each other.
+
+## Analysis and Critique:
+
+The O3 framework is a promising approach for practical unlearning in LLMs. It addresses the challenges of balancing unlearning effectiveness and model utility preservation in continuous scenarios without using any retained data. The OOD detector and orthogonal LoRA are novel components that enable the O3 framework to achieve superior performance compared to existing LLM unlearning methods. However, the O3 framework has not been tested on a wide range of tasks and datasets, and its performance may vary depending on the specific task and dataset. Additionally, the O3 framework assumes that the unlearning data is available during the unlearning operation, which may not
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10223v1](https://arxiv.org/abs/2407.10223v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10223v1](https://browse.arxiv.org/html/2407.10223v1)       |
+| Truncated       | False       |
+| Word Count       | 13558       |

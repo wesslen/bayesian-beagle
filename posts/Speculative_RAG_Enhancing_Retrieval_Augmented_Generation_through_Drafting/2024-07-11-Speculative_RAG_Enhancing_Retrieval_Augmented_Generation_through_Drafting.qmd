@@ -1,0 +1,45 @@
+
+---
+title: "Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting"
+id: "2407.08223v1"
+description: "Speculative RAG improves RAG performance by using a smaller LM for drafting and a larger LM for verification, reducing latency and enhancing accuracy."
+author: Zilong Wang, Zifeng Wang, Long Le, Huaixiu Steven Zheng, Swaroop Mishra, Vincent Perot, Yuwei Zhang, Anush Mattapalli, Ankur Taly, Jingbo Shang, Chen-Yu Lee, Tomas Pfister
+date: "2024-07-11"
+image: "https://browse.arxiv.org/html/2407.08223v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.08223v1/x1.png)
+
+### Summary:
+
+The paper introduces Speculative RAG, a novel framework for Retrieval Augmented Generation (RAG) that leverages a smaller, distilled specialist LM to generate multiple RAG drafts in parallel. These drafts are then verified by a larger generalist LM, enhancing comprehension and mitigating potential position bias over long context. The approach accelerates RAG by delegating drafting to the smaller specialist LM, with the larger generalist LM performing a single verification pass over the drafts. Extensive experiments demonstrate that Speculative RAG achieves state-of-the-art performance with reduced latency on TriviaQA, MuSiQue, PubHealth, and ARC-Challenge benchmarks.
+
+### Major Findings:
+
+1. Speculative RAG enhances accuracy by up to 12.97% while reducing latency by 51% compared to conventional RAG systems on PubHealth.
+2. The framework offloads computational burden to a smaller, specialist LM that serves as an efficient and robust RAG module for existing generalist LMs.
+3. Speculative RAG generates high-quality draft answers from distinct subsets of retrieved documents, offering diverse perspectives while reducing input token counts per draft.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other RAG methods that also aim to improve efficiency, such as those using sparse or mixed retrieval methods.
+2. The authors do not discuss the potential limitations of using a smaller, specialist LM for drafting, such as the risk of overfitting or reduced generalization capabilities.
+3. The paper does not explore the potential impact of using different types of specialist LMs or varying their size on the performance of Speculative RAG.
+4. The authors do not provide an in-depth analysis of the trade-off between accuracy and latency in Speculative RAG, which could be important for real-world applications.
+5. The paper does not discuss the potential implications of using Speculative RAG for tasks other than question answering, such as text summarization or translation.
+6. The authors do not provide a clear roadmap for future research, including potential improvements to the framework or applications in other domains.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08223v1](https://arxiv.org/abs/2407.08223v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08223v1](https://browse.arxiv.org/html/2407.08223v1)       |
+| Truncated       | False       |
+| Word Count       | 7800       |

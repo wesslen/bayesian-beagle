@@ -1,0 +1,40 @@
+
+---
+title: "Codebook LLMs: Adapting Political Science Codebooks for LLM Use and Adapting LLMs to Follow Codebooks"
+id: "2407.10747v1"
+description: "LLMs struggle with codebook constraints; rewriting codebooks and instruction-tuning improve performance."
+author: Andrew Halterman, Katherine A. Keith
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10747v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10747v1/x1.png)
+
+### Summary:
+
+This article discusses the use of large language models (LLMs) for labeling and analyzing text data in political science. The authors argue that political scientists should make a codebook-construct label assumption, which assumes that an LLM should follow the definition and exclusion criteria of a construct/label provided in a codebook. The authors conduct experiments using Mistral 7B Instruct as their LLM and find that restructuring the original codebooks gives modest gains in zero-shot performance, but the model still struggles to comply with the constraints of the codebooks. Instruction-tuning Mistral on one of their datasets gives significant gains over zero-shot inference. The authors hope their conceptualization of the codebook-specific task, assumptions, and instruction-tuning pipeline will help political scientists adapt to the LLM era.
+
+### Major Findings:
+
+1. Restructuring the original codebooks gives modest gains in zero-shot performance, but the model still struggles to comply with the constraints of the codebooks.
+2. Instruction-tuning Mistral on one of their datasets gives significant gains over zero-shot inference (0.76 versus 0.53 micro F1).
+3. The authors' conceptualization of the codebook-specific task, assumptions, and instruction-tuning pipeline will help political scientists adapt to the LLM era.
+
+### Analysis and Critique:
+
+The article provides a valuable contribution to the field of political science by addressing the challenges of using LLMs for labeling and analyzing text data. The authors' conceptualization of the codebook-specific task and their instruction-tuning pipeline are well-structured and coherent. However, the article does not provide a detailed analysis of the limitations and potential biases of using LLMs for this purpose. Additionally, the authors do not discuss the potential impact of their findings on the broader field of political science or the implications for other disciplines that use text data. Further research is needed to address these issues and to evaluate the generalizability of the authors' findings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10747v1](https://arxiv.org/abs/2407.10747v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10747v1](https://browse.arxiv.org/html/2407.10747v1)       |
+| Truncated       | False       |
+| Word Count       | 14142       |

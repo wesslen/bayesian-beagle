@@ -1,0 +1,46 @@
+
+---
+title: "Uncertainty Estimation of Large Language Models in Medical Question Answering"
+id: "2407.08662v1"
+description: "LLMs in healthcare risk hallucination; current uncertainty estimation methods perform poorly. Proposed Two-phase Verification method improves accuracy and reliability, especially with larger models."
+author: Jiaxin Wu, Yizhou Yu, Hong-Yu Zhou
+date: "2024-07-11"
+image: "https://browse.arxiv.org/html/2407.08662v1/extracted/5724155/images/cove.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.08662v1/extracted/5724155/images/cove.png)
+
+### Summary:
+- Large Language Models (LLMs) have the potential to assist in healthcare, but their tendency to hallucinate factually incorrect information poses a challenge.
+- Uncertainty estimation (UE) methods are crucial for detecting hallucinations in medical question-answering.
+- Current UE methods, such as entropy-based methods and fact-checking, have limitations in the medical domain.
+- The study benchmarks popular UE methods with different model sizes on medical question-answering datasets, revealing challenges in UE for medical applications.
+- Larger models tend to yield better UE results, suggesting a correlation between model size and UE reliability.
+- The study proposes Two-phase Verification, a probability-free UE approach that generates a step-by-step explanation alongside an initial answer and formulates verification questions to check factual claims.
+- The method achieves the best overall accuracy and stability across various datasets and model sizes, and its performance scales as the model size increases.
+
+### Major Findings:
+1. Current UE methods generally perform poorly in the medical domain, highlighting the challenge of UE for medical applications.
+2. Larger models tend to yield better UE results, suggesting a correlation between model size and UE reliability.
+3. Two-phase Verification, a probability-free UE approach, achieves the best overall accuracy and stability across various datasets and model sizes, and its performance scales as the model size increases.
+
+### Analysis and Critique:
+- The study provides a comprehensive analysis of UE methods in the medical domain, highlighting the challenges and limitations of current approaches.
+- The proposed Two-phase Verification method shows promising results, but it may still have limitations in handling complex medical knowledge and generating accurate verification questions.
+- The study could benefit from further investigation into the impact of domain-specific knowledge on UE performance and the development of more sophisticated verification question generation techniques.
+- The study's findings have implications for the deployment of LLMs in healthcare, emphasizing the need for reliable UE methods to ensure the accuracy and safety of medical question-answering systems.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08662v1](https://arxiv.org/abs/2407.08662v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08662v1](https://browse.arxiv.org/html/2407.08662v1)       |
+| Truncated       | False       |
+| Word Count       | 5161       |

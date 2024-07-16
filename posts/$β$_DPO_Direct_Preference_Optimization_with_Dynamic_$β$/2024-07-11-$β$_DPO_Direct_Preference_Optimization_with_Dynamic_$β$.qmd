@@ -1,0 +1,45 @@
+
+---
+title: "$β$-DPO: Direct Preference Optimization with Dynamic $β$"
+id: "2407.08639v1"
+description: "DPO for LLMs improves with dynamic $\beta$ calibration, enhancing performance and robustness."
+author: Junkang Wu, Yuexiang Xie, Zhengyi Yang, Jiancan Wu, Jinyang Gao, Bolin Ding, Xiang Wang, Xiangnan He
+date: "2024-07-11"
+image: "../../img/2407.08639v1/image_1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.08639v1/image_1.png)
+
+**Summary:**
+
+The paper introduces a novel framework called β-DPO, which aims to optimize DPO by dynamically adjusting the β parameter in response to the variability in the informativeness of pairwise data. The proposed method incorporates β-guided data filtering and batch-level dynamic β calibration, demonstrating significant improvements in DPO's performance across a range of models and datasets. The empirical evaluations indicate that β-DPO offers an adaptable training paradigm for LLMs with human feedback.
+
+**Major Findings:**
+
+1. β-DPO consistently outperforms DPO, DPO with dynamic β, and DPO with data filtering across all model sizes and sampling temperatures.
+2. The impact of data filtering is especially pronounced in the summarization task, likely due to the inherently greater noise present in the Reddit TL;DR summarization dataset.
+3. β-DPO exhibits a remarkable degree of robustness to variations in sampling temperature.
+
+**Analysis and Critique:**
+
+The paper presents a promising framework for LLM optimization, albeit with room for advancement. Future endeavors should explore:
+
+1. Adaptive β in Self-Play: Extending β-DPO to self-play scenarios where negative samples dynamically adapt, necessitating iterative β adjustments, to foster the evolution of superior model strategies.
+2. Enhanced Evaluation Standards: Development of sophisticated metrics and use of advanced evaluators beyond win rates, capitalizing on advancements like GPT-4+, to comprehensively gauge model performance.
+3. Scalability Investigation: Examining β-DPO’s scalability to ultra-large models surpassing 7B parameters, and its integration into diverse DPO-inspired architectures, is pivotal for practical impact.
+4. Automated Parameter Tuning: Pursuing automation in parameter tuning, alleviating manual intervention for β, to streamline the training pipeline and broaden accessibility.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08639v1](https://arxiv.org/abs/2407.08639v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08639v1](https://browse.arxiv.org/html/2407.08639v1)       |
+| Truncated       | False       |
+| Word Count       | 13055       |

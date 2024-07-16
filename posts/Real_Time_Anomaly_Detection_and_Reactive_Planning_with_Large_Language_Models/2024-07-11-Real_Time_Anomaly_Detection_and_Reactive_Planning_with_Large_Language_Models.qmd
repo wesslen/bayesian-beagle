@@ -1,0 +1,40 @@
+
+---
+title: "Real-Time Anomaly Detection and Reactive Planning with Large Language Models"
+id: "2407.08735v1"
+description: "This work presents a two-stage framework for fast anomaly detection and safe control in robotic systems using language models, improving trustworthiness under resource and time constraints."
+author: Rohan Sinha, Amine Elhafsi, Christopher Agia, Matthew Foutter, Edward Schmerling, Marco Pavone
+date: "2024-07-11"
+image: "https://browse.arxiv.org/html/2407.08735v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.08735v1/x1.png)
+
+**Summary:**
+
+This paper presents a two-stage reasoning framework for detecting and mitigating out-of-distribution failure modes in robotic systems using large language models (LLMs). The first stage is a fast binary anomaly classifier that analyzes observations in the LLM embedding space, which may trigger a slower fallback selection stage that utilizes the reasoning capabilities of generative LLMs. These stages correspond to branch points in a model predictive control strategy that maintains the joint feasibility of continuing along various fallback plans to account for the slow reasoner's latency as soon as an anomaly is detected, ensuring safety. The fast anomaly classifier outperforms autoregressive reasoning with state-of-the-art GPT models, even when instantiated with relatively small language models. This enables the runtime monitor to improve the trustworthiness of dynamic robotic systems, such as quadrotors or autonomous vehicles, under resource and time constraints.
+
+**Major Findings:**
+
+1. The fast anomaly classifier outperforms autoregressive reasoning with state-of-the-art GPT models, even when instantiated with relatively small language models.
+2. The two-stage reasoning framework enables the runtime monitor to improve the trustworthiness of dynamic robotic systems, such as quadrotors or autonomous vehicles, under resource and time constraints.
+3. The model predictive control strategy maintains the joint feasibility of continuing along various fallback plans to account for the slow reasoner's latency as soon as an anomaly is detected, ensuring safety.
+
+**Analysis and Critique:**
+
+The paper presents an innovative approach to detecting and mitigating out-of-distribution failure modes in robotic systems using large language models. The two-stage reasoning framework and the model predictive control strategy provide a promising solution to ensure safety in dynamic robotic systems. However, the paper does not provide a detailed analysis of the limitations and potential biases of the proposed approach. Additionally, the paper does not discuss the methodological issues, conflicting evidence, or areas that require further research or clarification. Further research is needed to evaluate the proposed approach in real-world scenarios and to address the potential limitations and biases of the approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.08735v1](https://arxiv.org/abs/2407.08735v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.08735v1](https://browse.arxiv.org/html/2407.08735v1)       |
+| Truncated       | False       |
+| Word Count       | 18740       |

@@ -1,0 +1,44 @@
+
+---
+title: "NoviCode: Generating Programs from Natural Language Utterances by Novices"
+id: "2407.10626v1"
+description: "TL;DR: NoviCode, a new task, challenges models to generate complex code from non-technical descriptions, outperforming end-to-end Text-to-Code approaches."
+author: Asaf Achi Mordechai, Yoav Goldberg, Reut Tsarfaty
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10626v1/extracted/5731995/media/person-icon.png"
+categories: ['programming', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10626v1/extracted/5731995/media/person-icon.png)
+
+### Summary:
+
+The paper introduces NoviCode, a novel task in the code synthesis domain that aims to generate complex executable programs from natural language descriptions provided by non-technical users. The task is challenging as it goes beyond the current Text-to-Code paradigm, which focuses on generating code-lines from technical descriptions produced by trained programmers. NoviCode takes as input an API and a natural language description by a novice non-programmer and provides an executable program as output. The paper presents a novel benchmark accompanied by test suites to assess the efficacy of models on this task, focusing on the functional execution of the generated code rather than its form.
+
+### Major Findings:
+
+1. NoviCode is a challenging task in the code synthesis domain, as generating complex code from non-technical instructions goes beyond the current Text-to-Code paradigm.
+2. A novel approach that aligns the NL utterances with the compositional hierarchical structure of the code significantly enhances the performance of LLMs on this task, compared with end-to-end Text-to-Code counterparts.
+3. The paper introduces a novel representation that explicitly reflects the hierarchical structure of code, which outperforms all baseline models in the evaluation tests.
+
+### Analysis and Critique:
+
+The paper presents a promising approach towards true natural language programming, where humans program in their native tongues. However, the task is still challenging, and the proposed benchmark and evaluation methodology have limitations. The creation of unit test suites for evaluating code generation models on this task is time-intensive and requires Python testing skills and familiarity with specific APIs. The paper acknowledges that due to limited resources, tests were only prepared for 150 out of the 1200 collected user utterances. Expanding the dataset for a more extensive evaluation is a key goal for future work.
+
+The paper also acknowledges the contribution of Tamar Gur for her invaluable assistance in this work and extends gratitude to Royi Lachmy, Avshalom Manevich, and Shira Kritchman for their helpful comments and discussions. The project received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation program.
+
+In
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10626v1](https://arxiv.org/abs/2407.10626v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10626v1](https://browse.arxiv.org/html/2407.10626v1)       |
+| Truncated       | False       |
+| Word Count       | 9676       |

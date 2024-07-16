@@ -1,0 +1,44 @@
+
+---
+title: "An Empirical Study of Validating Synthetic Data for Formula Generation"
+id: "2407.10657v1"
+description: "Validation of synthetic NL formulas boosts LLM performance, enabling models to tackle more complex problems."
+author: Usneek Singh, José Cambronero, Sumit Gulwani, Aditya Kanade, Anirudh Khatry, Vu Le, Mukul Singh, Gust Verbruggen
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10657v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10657v1/x1.png)
+
+### Summary:
+- The paper presents an empirical study on the impact of validating synthetic training examples with surrogate objectives that evaluate the accuracy of synthetic annotations for formula generation in spreadsheets.
+- The authors demonstrate that validation improves performance over raw data across four models (2 open and 2 closed weight).
+- Interestingly, validation tends to prune more challenging examples, but it increases the complexity of problems that models can solve after being fine-tuned on validated data.
+
+### Major Findings:
+1. The study introduces three surrogate objectives (output prediction, alternative code generation, and classification) to predict the accuracy of synthetic natural language in the NL-to-Formula task.
+2. Empirical analysis shows that fine-tuning models on validated subsets of synthetic data improves performance in predicting formulas compared to using raw data.
+3. Models fine-tuned on validated data perform better on more complex problems and show a reduction in training time.
+
+### Analysis and Critique:
+- The paper provides a novel approach to improving the performance of models in generating formulas for spreadsheets by validating synthetic data.
+- The use of surrogate objectives to predict the accuracy of synthetic natural language is a promising approach to improving the quality of synthetic data.
+- The study demonstrates the benefits of fine-tuning models on validated data, including improved performance and reduced training time.
+- However, the study does not address the potential limitations of using synthetic data, such as the risk of overfitting or the lack of diversity in the data.
+- Additionally, the study focuses on a specific task (NL-to-Formula) and does not explore the generalizability of the approach to other tasks.
+- Further research is needed to evaluate the effectiveness of this approach in other domains and to address potential limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10657v1](https://arxiv.org/abs/2407.10657v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10657v1](https://browse.arxiv.org/html/2407.10657v1)       |
+| Truncated       | False       |
+| Word Count       | 3668       |

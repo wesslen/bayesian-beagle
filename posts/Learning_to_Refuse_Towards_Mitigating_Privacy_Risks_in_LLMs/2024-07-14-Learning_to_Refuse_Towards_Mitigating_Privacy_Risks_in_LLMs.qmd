@@ -1,0 +1,46 @@
+
+---
+title: "Learning to Refuse: Towards Mitigating Privacy Risks in LLMs"
+id: "2407.10058v1"
+description: "RETURN dataset and NAUF framework help LLMs unlearn personal data, preserving privacy without retraining."
+author: Zhenhua Liu, Tong Zhu, Chuanyuan Tan, Wenliang Chen
+date: "2024-07-14"
+image: "https://browse.arxiv.org/html/2407.10058v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10058v1/x1.png)
+
+### Summary:
+
+- The study introduces a novel dataset, [Uncaptioned image] RETURN, for evaluating machine unlearning (MU) methods in protecting personal data in a real-world scenario.
+- The dataset consists of 2,492 individuals from Wikipedia with associated QA pairs, enabling the evaluation of MU methods for protecting personal privacy data in a practical context.
+- The Name-Aware Unlearning Framework (NAUF) is proposed to help the model protect the privacy of individuals in the forget set while maintaining the model’s performance on the retain set.
+- NAUF achieves a state-of-the-art average unlearning score, outperforming the best baseline method by 5.65 points.
+
+### Major Findings:
+
+1. The proposed [Uncaptioned image] RETURN dataset is the first dataset for evaluating MU methods for protecting personal data in a real-world scenario.
+2. The Name-Aware Unlearning Framework (NAUF) is a simple yet novel method for privacy protection, which helps the model protect the privacy of individuals in the forget set while maintaining the model’s performance on the retain set.
+3. Extensive experiments on [Uncaptioned image] RETURN demonstrate that NAUF achieves a state-of-the-art average unlearning score, outperforming the best baseline method by 5.65 points.
+
+### Analysis and Critique:
+
+- The study addresses a significant privacy concern in large language models (LLMs) by proposing a novel dataset and method for evaluating MU methods in protecting personal data.
+- The proposed NAUF method effectively protects the privacy of individuals in the forget set while maintaining the model’s performance on the retain set.
+- However, the study does not provide fine-grained protection of the target individual’s information, as it cannot distinguish between questions that can be answered and those that are too sensitive to answer.
+- Future work should explore how to align the model with human judgment, enabling it to discern which personal information can be publicly discussed and which information, potentially susceptible to malicious use, should be protected.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10058v1](https://arxiv.org/abs/2407.10058v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10058v1](https://browse.arxiv.org/html/2407.10058v1)       |
+| Truncated       | False       |
+| Word Count       | 5969       |

@@ -1,0 +1,40 @@
+
+---
+title: "ICLGuard: Controlling In-Context Learning Behavior for Applicability Authorization"
+id: "2407.06955v1"
+description: "ICLGuard controls ICL behavior in LLMs, allowing model owners to regulate ICL on specific data without affecting the model's overall functionality."
+author: Wai Man Si, Michael Backes, Yang Zhang
+date: "2024-07-09"
+image: "https://browse.arxiv.org/html/2407.06955v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.06955v1/x1.png)
+
+### Summary:
+
+In-context learning (ICL) is a recent advancement in the capabilities of large language models (LLMs) that allows users to perform a new task without updating the model. However, this capability also introduces potential issues, such as users using the model on any data without restriction, which might violate the model policy or conflict with the model owner’s interests. To address this concern, the authors introduce the concept of "applicability authorization" tailored for LLMs, particularly for ICL behavior, and propose a simple approach, ICLGuard. ICLGuard is a fine-tuning framework designed to allow the model owner to regulate ICL behavior on different data. It preserves the original LLM and fine-tunes only a minimal set of additional trainable parameters to "guard" the LLM. Empirical results show that the guarded LLM can deactivate its ICL ability on target data without affecting its ICL ability on other data and its general functionality across all data.
+
+### Major Findings:
+
+1. ICLGuard is a fine-tuning framework that allows the model owner to regulate ICL behavior on different data while preserving the original LLM.
+2. ICLGuard uses a minimal set of additional trainable parameters to "guard" the LLM, which can deactivate its ICL ability on target data without affecting its ICL ability on other data and its general functionality across all data.
+3. The concept of "applicability authorization" is introduced to address the potential issues of ICL, such as users using the model on any data without restriction, which might violate the model policy or conflict with the model owner’s interests.
+
+### Analysis and Critique:
+
+The authors present a novel approach to regulating ICL behavior in LLMs, which is a significant contribution to the field. The proposed ICLGuard framework is a promising solution to the potential issues of ICL, such as users using the model on any data without restriction. However, the paper does not provide a comprehensive evaluation of the proposed approach, and it is unclear how well ICLGuard performs in real-world scenarios. Additionally, the paper does not discuss the potential limitations and challenges of implementing ICLGuard in practice. Further research is needed to evaluate the effectiveness and limitations of ICLGuard in regulating ICL behavior in LLMs
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.06955v1](https://arxiv.org/abs/2407.06955v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.06955v1](https://browse.arxiv.org/html/2407.06955v1)       |
+| Truncated       | False       |
+| Word Count       | 12482       |

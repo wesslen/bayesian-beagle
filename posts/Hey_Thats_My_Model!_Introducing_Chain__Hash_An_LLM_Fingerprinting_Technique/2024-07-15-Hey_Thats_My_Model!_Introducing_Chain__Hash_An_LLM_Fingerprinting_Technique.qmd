@@ -1,0 +1,43 @@
+
+---
+title: "Hey, That's My Model! Introducing Chain & Hash, An LLM Fingerprinting Technique"
+id: "2407.10887v1"
+description: "Chain & Hash: A Cryptographic Approach for Fingerprinting LLMs, Ensuring Robustness and Unforgeability."
+author: Mark Russinovich, Ahmed Salem
+date: "2024-07-15"
+image: "https://browse.arxiv.org/html/2407.10887v1/extracted/5732801/figs/chainAndHashOverview.png"
+categories: ['security', 'production', 'robustness', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.10887v1/extracted/5732801/figs/chainAndHashOverview.png)
+
+### Summary:
+
+The paper introduces a new fingerprinting technique called Chain & Hash for Large Language Models (LLMs) to protect their intellectual property (IP) and prevent misuse or theft. The technique involves generating a set of questions and potential answers, which are then hashed together using a secure hashing technique to select the value for each question. This approach provides an unforgeability property, preventing adversaries from claiming false ownership. The authors evaluate Chain & Hash on multiple models and demonstrate its robustness against benign transformations and adversarial attempts to erase the fingerprint. The technique is efficient and maintains the performance of the fingerprinted models across different benchmarks.
+
+### Major Findings:
+
+1. Chain & Hash is a new, simple fingerprinting approach that implements a fingerprint with a cryptographic flavor, achieving all the desired properties of a successful fingerprint, including transparency, efficiency, persistence, robustness, and unforgeability.
+2. The technique involves generating a set of questions and potential answers, which are then hashed together using a secure hashing technique to select the value for each question, providing an unforgeability property.
+3. The authors evaluate Chain & Hash on multiple models and demonstrate its robustness against benign transformations, such as fine-tuning on different datasets, and adversarial attempts to erase the fingerprint.
+4. The technique is efficient and maintains the performance of the fingerprinted models, which achieve almost the same performance as non-fingerprinted ones across different benchmarks.
+
+### Analysis and Critique:
+
+The Chain & Hash technique presents a promising approach to fingerprinting LLMs and protecting their IP. The use of a cryptographic hashing technique to select the value for each question provides a strong unforgeability property, making it difficult for adversaries to claim false ownership. The evaluation of the technique on multiple models and its demonstrated robustness against benign transformations and adversarial attempts to erase the fingerprint further support its effectiveness.
+
+However, there are some potential limitations and areas for improvement. For instance, the technique's reliance on a secure hashing technique may introduce computational overhead, which could impact the efficiency of the fingerprinting process. Additionally, the evaluation of the technique on multiple models is limited to a specific set of benchmarks,
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.10887v1](https://arxiv.org/abs/2407.10887v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.10887v1](https://browse.arxiv.org/html/2407.10887v1)       |
+| Truncated       | False       |
+| Word Count       | 11915       |

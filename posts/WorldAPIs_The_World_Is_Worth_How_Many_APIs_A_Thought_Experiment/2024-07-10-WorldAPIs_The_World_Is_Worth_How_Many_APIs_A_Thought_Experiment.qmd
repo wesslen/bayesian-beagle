@@ -1,0 +1,43 @@
+
+---
+title: "WorldAPIs: The World Is Worth How Many APIs? A Thought Experiment"
+id: "2407.07778v1"
+description: "TL;DR: This paper proposes a framework to define APIs for versatile AI agents using wikiHow tutorials, inducing 300+ APIs for physical tasks."
+author: Jiefu Ou, Arda Uzunoglu, Benjamin Van Durme, Daniel Khashabi
+date: "2024-07-10"
+image: "https://browse.arxiv.org/html/2407.07778v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.07778v1/x1.png)
+
+### Summary:
+
+The paper "WorldAPIs: The World Is Worth How Many APIs? A Thought Experiment" explores the question of how many primitive actions (APIs) are needed for a versatile embodied agent and what they should look like. The authors propose a framework to iteratively induce new APIs by grounding wikiHow instruction to situated agent policies. They use few-shot prompting to steer GPT-4 to generate Pythonic programs as agent policies and bootstrap a universe of APIs. The focus of this thought experiment is on defining these APIs rather than their executability. The proposed pipeline was applied to instructions from wikiHow tutorials, inducing an action space of 300+ APIs necessary for capturing the rich variety of tasks in the physical world.
+
+### Major Findings:
+
+1. The proposed pipeline enables effective reuse and creation of APIs, as demonstrated by a detailed automatic and human analysis of the induction output.
+2. Existing simulators support only a small subset of the induced APIs (9 of the top 50 frequent APIs), motivating the development of action-rich embodied environments.
+3. The proposed pipeline was able to induce an action space of 300+ APIs necessary for capturing the rich variety of tasks in the physical world, providing an approximation of the lower bound of the primitive action space.
+
+### Analysis and Critique:
+
+* The paper presents an interesting thought experiment to explore the question of how many primitive actions are needed for a versatile embodied agent. However, the focus on defining APIs rather than their executability may limit the practical applicability of the proposed framework.
+* The proposed pipeline was able to induce a large number of APIs, but it is not clear how these APIs can be executed in a real-world setting. The authors acknowledge this limitation and suggest that future work should focus on the executability of the proposed APIs.
+* The paper does not provide a detailed comparison with existing work on embodied agents, which makes it difficult to evaluate the novelty and significance of the proposed framework.
+* The paper does not discuss the potential limitations and biases of the proposed framework, such as the reliance on wikiHow tutorials as a source of instructions and the use of GPT-4 for generating agent policies
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.07778v1](https://arxiv.org/abs/2407.07778v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.07778v1](https://browse.arxiv.org/html/2407.07778v1)       |
+| Truncated       | False       |
+| Word Count       | 6679       |

@@ -1,0 +1,47 @@
+
+---
+title: "Prompting Techniques for Secure Code Generation: A Systematic Investigation"
+id: "2407.07064v1"
+description: "TL;DR: Study explores prompting techniques for secure code generation in LLMs, finding improvements with Recursive Criticism and Improvement (RCI)."
+author: Catherine Tony, Nicolás E. Díaz Ferreyra, Markus Mutas, Salem Dhiff, Riccardo Scandariato
+date: "2024-07-09"
+image: "https://browse.arxiv.org/html/2407.07064v1/extracted/5715860/figures/slr.png"
+categories: ['security', 'programming', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.07064v1/extracted/5715860/figures/slr.png)
+
+### Summary:
+
+The study investigates the impact of different prompting techniques on the security of code generated from natural language (NL) instructions by large language models (LLMs). The authors conducted a systematic literature review to identify potential prompting techniques for code generation and evaluated a subset of these techniques on GPT-3, GPT-3.5, and GPT-4 models using an existing dataset of 150 NL security-relevant code-generation prompts. The results show a reduction in security weaknesses across the tested LLMs, particularly after using the Recursive Criticism and Improvement (RCI) technique.
+
+### Major Findings:
+
+1. The study presents a systematic inventory of prompting techniques suitable for code generation, highlighting the need for further exploration of these techniques in the field.
+2. The authors provide actionable templates for a subset of the identified techniques, simplifying their use and adaptation for secure code generation.
+3. The study offers insights and rankings on the prompting techniques that are more promising for secure code generation, with the most promising technique not being used in related work for secure code generation.
+
+### Analysis and Critique:
+
+The study provides a valuable contribution to the field of secure code generation using LLMs by systematically investigating the impact of different prompting techniques on the security of generated code. However, there are some limitations and potential areas for improvement:
+
+1. The study focuses on a limited number of LLMs (GPT-3, GPT-3.5, and GPT-4) and does not explore the applicability of the findings to other LLMs or programming languages.
+2. The evaluation is based on a single dataset of 150 NL prompts, which may not be representative of the full range of security-relevant code-generation tasks.
+3. The study does not address the potential impact of prompt engineering on the functional correctness and performance of the generated code.
+4. The authors acknowledge the limitations of static analysis tools like Bandit, which may produce false positives or negatives, and perform a manual validation of Bandit output over a small sample of GPT-3-generated code snippets. However, this validation is limited in scope and may not fully address the potential biases introduced by the tool.
+
+Overall, the study provides a valuable starting point
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-16       |
+| Abstract | [https://arxiv.org/abs/2407.07064v1](https://arxiv.org/abs/2407.07064v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.07064v1](https://browse.arxiv.org/html/2407.07064v1)       |
+| Truncated       | False       |
+| Word Count       | 20445       |

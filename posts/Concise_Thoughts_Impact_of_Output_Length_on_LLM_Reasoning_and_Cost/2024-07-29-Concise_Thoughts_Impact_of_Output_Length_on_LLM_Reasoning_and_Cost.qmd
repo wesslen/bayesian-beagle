@@ -1,0 +1,45 @@
+
+---
+title: "Concise Thoughts: Impact of Output Length on LLM Reasoning and Cost"
+id: "2407.19825v1"
+description: "[TEXT] Abstract: This paper examines the role of social media in shaping public opinion during the 2016 U.S. Presidential Election. We find that social media platforms, particularly Facebook and Twitter, played a significant role in disseminating news and influencing voter behavior. Our results suggest that the use of social media for political purposes is likely to continue in future elections.
+
+[TL;DR] Social media significantly influenced 2016 U.S. election public opinion."
+author: Sania Nayab, Giulio Rossolini, Giorgio Buttazzo, Nicolamaria Manes, Fabrizio Giacomelli
+date: "2024-07-29"
+image: "../../../bayesian-beagle.png"
+categories: ['programming', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+This study investigates the effectiveness of the Chain-of-thought (CoT) approach in controlling the output length of language models. The authors test the CoT approach by using the phrase "Limit the length of the reasoning to LEN words" and observe that the accuracy with the vicuna-13b-v1.5 model improves with all ranges of LEN. However, the inference time and the output length distribution are not efficient. The authors also test the CoT approach with the phrase "Limit the length of the answer to LEN words" and observe that the accuracy decreases as compared to the base results. The study concludes that the CoT is specifically for testing the reasoning capabilities of the LLMs and that the CCoT approach is a promising direction for further research.
+
+### Major Findings:
+
+1. The accuracy with the vicuna-13b-v1.5 model improves with all ranges of LEN when using the CoT approach with the phrase "Limit the length of the reasoning to LEN words."
+2. The accuracy decreases when using the CoT approach with the phrase "Limit the length of the answer to LEN words" as compared to the base results.
+3. The CoT approach is specifically for testing the reasoning capabilities of the LLMs.
+4. The CCoT approach is a promising direction for further research.
+
+### Analysis and Critique:
+
+The study provides a novel approach to controlling the output length of language models using the CoT and CCoT approaches. However, the study has some limitations. First, the study only tests the CoT and CCoT approaches with the vicuna-13b-v1.5 model, and it is unclear if the results would generalize to other models. Second, the study only tests the CoT and CCoT approaches with a limited range of LEN values, and it is unclear if the results would hold for other LEN values. Third, the study does not provide a clear explanation of why the accuracy decreases when using the CoT approach with the phrase "Limit the length of the answer to LEN words." Finally, the study does not provide any comparison with other approaches to controlling the output length of language models.
+
+Overall, the study provides a promising direction for further research on controlling the output length of language
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.19825v1](https://arxiv.org/abs/2407.19825v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.19825v1](https://browse.arxiv.org/html/2407.19825v1)       |
+| Truncated       | False       |
+| Word Count       | 9488       |

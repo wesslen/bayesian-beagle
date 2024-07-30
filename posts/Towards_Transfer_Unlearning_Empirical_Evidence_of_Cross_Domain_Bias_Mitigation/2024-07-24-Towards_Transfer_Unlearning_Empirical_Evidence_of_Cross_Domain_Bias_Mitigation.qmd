@@ -1,0 +1,44 @@
+
+---
+title: "Towards Transfer Unlearning: Empirical Evidence of Cross-Domain Bias Mitigation"
+id: "2407.16951v1"
+description: "Unlearning approach to debiasing in LLMs by minimizing hate speech, showing cross-domain transfer unlearning benefits."
+author: Huimin Lu, Masaru Isonuma, Junichiro Mori, Ichiro Sakata
+date: "2024-07-24"
+image: "../../../bayesian-beagle.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+The paper explores an unlearning-based approach to debiasing in Large Language Models (LLMs) by performing gradient ascent on hate speech against minority groups. The proposed Mask Language Modeling (MLM) unlearning technique selectively unlearns harmful content within the text by forgetting only toxic or biased tokens. This method enables LLMs to selectively forget and disassociate from biased and harmful content. Experimental results demonstrate the effectiveness of the approach in diminishing bias while maintaining the language modeling abilities. Surprisingly, the results also unveil an unexpected potential for cross-domain transfer unlearning: debiasing in one bias form (e.g. gender) may contribute to mitigating others (e.g. race and religion).
+
+### Major Findings:
+
+1. The proposed MLM unlearning technique effectively reduces gender bias without significantly deteriorating language modeling performance.
+2. Experimental results demonstrated that unlearning gender-biased text also contributes to mitigating other types of bias, such as race and religion.
+3. The study presents a promising direction for comprehensive and universal debiasing solutions through the empirical validation of cross-domain generalizability.
+
+### Analysis and Critique:
+
+1. The study's reliance on GPT-4 to identify and mask bias-related keywords raises concerns about reproducibility and the sensitivity of experimental results to the specific words chosen for masking.
+2. The approach of masked language unlearning settings in the study ignores any words following the masked token, which presents a major challenge that needs to be addressed in future research.
+3. The study does not independently re-implement existing debiasing methods, which may lead to variations in the baseline performances of the original GPT-2 model across different studies.
+4. The study does not provide a clear explanation for the potential transfer unlearning phenomenon, which suggests that debiasing in one area may inadvertently benefit others.
+5. The study does not discuss the potential limitations of the proposed approach, such as the risk of erasing or misrepresenting minority groups, as seen in other debiasing techniques.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16951v1](https://arxiv.org/abs/2407.16951v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16951v1](https://browse.arxiv.org/html/2407.16951v1)       |
+| Truncated       | False       |
+| Word Count       | 3584       |

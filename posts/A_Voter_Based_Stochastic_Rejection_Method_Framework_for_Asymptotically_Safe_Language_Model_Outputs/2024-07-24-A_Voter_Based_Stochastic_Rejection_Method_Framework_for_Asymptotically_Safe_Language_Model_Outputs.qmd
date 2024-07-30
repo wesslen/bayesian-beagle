@@ -1,0 +1,48 @@
+
+---
+title: "A Voter-Based Stochastic Rejection-Method Framework for Asymptotically Safe Language Model Outputs"
+id: "2407.16994v1"
+description: "TL;DR: New method uses LLM checkers to vote and regenerate outputs, optimizing cost and failure rate."
+author: Jake R. Watts, Joel Sokol
+date: "2024-07-24"
+image: "../../img/2407.16994v1/image_1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.16994v1/image_1.png)
+
+### Summary:
+
+- The paper proposes a new method for preventing unsafe or low-quality outputs from large language models (LLMs) by leveraging their stochasticity.
+- The system involves LLM checkers voting on the acceptability of a generated output, regenerating it if a threshold of disapproval is reached, until sufficient checkers approve.
+- The paper proposes estimators for cost and failure rate, and an algorithm that achieves a desired failure rate at the least possible cost.
+- The models demonstrate that failure rate decreases exponentially as a function of cost when voter count and threshold are chosen according to the algorithm.
+- The models reasonably estimate the actual performance of such a system in action, even with limited data.
+
+### Major Findings:
+
+1. The proposed method of using LLMs to preemptively catch their own mistakes provides a cost-efficient and effective alternative or supplementary approach to improving output and preventing dangerous errors or misalignment.
+2. The system minimizes the possibility of "group think" or other compounding errors that can occur in human multi-agent systems, while still taking advantage of the best outputs from the distribution of random outputs LLMs are capable of generating.
+3. The paper demonstrates a successful proof of concept and addresses the question of optimal choice of voter count and threshold under the tradeoff between cost and failure rate.
+4. The paper demonstrates two empirical estimates used to determine this choice and evaluates the model’s cost-scaling; one systemically underestimates cost and failure rate but requires less data to estimate, and another more unbiased estimator that requires more testing.
+
+### Analysis and Critique:
+
+- The paper provides a novel approach to improving the safety and quality of LLM outputs, but it relies heavily on the assumption that LLMs can effectively evaluate the outputs of other LLMs.
+- The paper does not address the potential for LLMs to make errors in their evaluations, which could lead to a decrease in the overall quality of the outputs.
+- The paper also does not address the potential for LLMs to be biased in their evaluations, which could lead to a decrease in the fairness of the outputs.
+- The paper does not provide a comprehensive evaluation of the proposed method, and it is unclear how well the method would perform in real-
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16994v1](https://arxiv.org/abs/2407.16994v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16994v1](https://browse.arxiv.org/html/2407.16994v1)       |
+| Truncated       | False       |
+| Word Count       | 5147       |

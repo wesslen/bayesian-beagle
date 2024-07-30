@@ -1,0 +1,44 @@
+
+---
+title: "Evolutionary Prompt Design for LLM-Based Post-ASR Error Correction"
+id: "2407.16370v1"
+description: "Evolutionary prompt optimization improves post-ASR error correction in LLMs, as shown in CHiME-4 subset of SLT 2024 GenSEC challenge."
+author: Rithik Sachdev, Zhong-Qiu Wang, Chao-Han Huck Yang
+date: "2024-07-23"
+image: "https://browse.arxiv.org/html/2407.16370v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.16370v1/x1.png)
+
+### Summary:
+
+This paper explores alternative prompts for post-ASR error correction and proposes an evolutionary prompt optimization algorithm, EvoPrompt, to refine the initial prompts. The proposed algorithms are evaluated on the CHiME-4 subset of the Task of the SLT GenSEC challenge, and the results show the effectiveness of the proposed algorithms.
+
+### Major Findings:
+
+1. The proposed alternative prompts for post-ASR error correction show better performance than the baseline prompt.
+2. EvoPrompt, an evolutionary prompt optimization algorithm, is effective in refining the initial prompts and improving the performance of post-ASR error correction.
+3. The optimized prompts obtained by applying EvoPrompt to the initial prompts provide clearer instructions, are more appropriate to the context, and include one demonstration example, which significantly helps the LLM understand the desired output style and how to correct errors.
+
+### Analysis and Critique:
+
+The proposed algorithms show promising results in improving the performance of post-ASR error correction. However, the generalizability of the optimized prompts to unseen domains is not fully explored. The best performing mutated prompt from the CHiME experiment shows a deterioration in performance on both test sets, with a higher WER compared to the baseline. This implies that the mutations implemented in Prompt #1 are not beneficial for the process of generalization.
+
+Further research is needed to explore the specific words and characteristics of the prompt that contribute to its generalizability. Additionally, the cost of the proposed algorithms is relatively high, which may limit their practical application.
+
+Overall, the proposed algorithms are a promising research direction for post-ASR error correction, and further research is needed to improve their generalizability and reduce their cost.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16370v1](https://arxiv.org/abs/2407.16370v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16370v1](https://browse.arxiv.org/html/2407.16370v1)       |
+| Truncated       | False       |
+| Word Count       | 3509       |

@@ -1,0 +1,38 @@
+
+---
+title: "Educating LLMs like Human Students: Structure-aware Injection of Domain Knowledge"
+id: "2407.16724v1"
+description: "StructTuning: New method efficiently transforms LLMs into domain specialists using 0.3% of traditional training data, achieving 50% performance."
+author: Kai Liu, Ze Chen, Zhihang Fu, Rongxin Jiang, Fan Zhou, Yaowu Chen, Yue Wu, Jieping Ye
+date: "2024-07-23"
+image: "https://browse.arxiv.org/html/2407.16724v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.16724v1/x1.png)
+
+### Summary:
+
+The paper presents a novel methodology, StructTuning, to efficiently transform foundation Large Language Models (LLMs) into domain specialists. This method significantly reduces the training corpus requirement to a mere 0.3% while achieving an impressive 50% of traditional knowledge injection performance. The method is inspired by the educational processes for human students, particularly how structured domain knowledge from textbooks is absorbed and then applied to tackle real-world challenges through specific exercises. The proposed two-stage knowledge injection strategy includes Structure-aware Continual Pre-Training (SCPT) and Structure-aware Supervised Fine-Tuning (SSFT). In the SCPT phase, the training data is organized into an auto-generated taxonomy of domain knowledge, enabling LLMs to effectively memorize textual segments linked to specific expertise within the taxonomy’s architecture. In the SSFT phase, models are explicitly prompted to reveal the underlying knowledge structure in their outputs, leveraging this structured domain insight to address practical problems adeptly. The method has been extensively evaluated across model architectures and scales, using closed-book question-answering tasks on LongBench and MMedBench datasets.
+
+### Major Findings:
+1. The proposed StructTuning method matches 50% of the improvement displayed by the state-of-the-art MMedLM2 on MMedBench, but with only 0.3% quantity of the training corpus.
+2. The method significantly minimizes the training corpus requirement while achieving an impressive performance in knowledge injection.
+3. The two-stage knowledge injection strategy, including SCPT and SSFT, effectively transforms LLMs into domain specialists.
+
+### Analysis and Critique:
+The paper presents a promising approach to efficiently transform LLMs into domain specialists. However, the method's reliance on a pre-generated taxonomy of domain knowledge may limit its applicability to domains where such a taxonomy is not readily available. Additionally, the method's performance may be affected by the quality and comprehensiveness of the training data used to generate the taxonomy. The paper does not discuss potential strategies to address these limitations, such as using unsupervised or semi-supervised methods to generate the taxonomy or incorporating active learning to improve the quality and comprehensiveness of the training data. Furthermore, the paper does not provide
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16724v1](https://arxiv.org/abs/2407.16724v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16724v1](https://browse.arxiv.org/html/2407.16724v1)       |
+| Truncated       | False       |
+| Word Count       | 7569       |

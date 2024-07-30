@@ -1,0 +1,44 @@
+
+---
+title: "Behavioral Testing: Can Large Language Models Implicitly Resolve Ambiguous Entities?"
+id: "2407.17125v2"
+description: "LLMs struggle with entity type ambiguity, often failing to consistently apply their factual knowledge, leading to self-inconsistency and biases."
+author: Anastasiia Sedova, Robert Litschko, Diego Frassinelli, Benjamin Roth, Barbara Plank
+date: "2024-07-25"
+image: "https://browse.arxiv.org/html/2407.17125v2/extracted/5754246/images/main_figure.png"
+categories: ['prompt-engineering', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.17125v2/extracted/5754246/images/main_figure.png)
+
+### Summary:
+
+This paper examines the self-consistency of state-of-the-art large language models (LLMs) in handling entity type ambiguity. The authors propose an evaluation protocol to disentangle knowing from applying knowledge and test LLMs on 49 entities. The results reveal that LLMs perform poorly with ambiguous prompts, achieving only 80% accuracy. The study highlights systematic discrepancies in LLM behavior, failure to consistently apply information, significant biases for preferred readings, and self-inconsistencies.
+
+### Major Findings:
+
+1. LLMs perform poorly with ambiguous prompts, achieving only 80% accuracy.
+2. LLMs exhibit systematic discrepancies in behavior and failure to consistently apply information.
+3. LLMs show significant biases for preferred readings and self-inconsistencies.
+
+### Analysis and Critique:
+
+The study provides valuable insights into the limitations of current LLMs in handling entity type ambiguity. However, it adopts a very generic definition of ambiguity, distinguishing between company-related and non-company-related readings across different entity types. A more thorough investigation into the degrees of polysemy associated with different entity types should be included in a follow-up study. Moreover, the properties of the entities might also contain a certain level of ambiguity that the study does not thoroughly address.
+
+The study's focus on a specific aspect of LLM performance is both a strength and a limitation. While it provides a detailed analysis of entity type ambiguity, it does not consider other factors that may impact LLM performance, such as context, domain-specific knowledge, or the complexity of the task. Additionally, the study's reliance on manual annotation for evaluation may introduce subjectivity and limit the scalability of the approach.
+
+Overall, the study highlights the importance of addressing entity type ambiguity in future research to develop more trustworthy LLMs. However, further investigation is needed to understand the full extent of LLM limitations and develop more comprehensive evaluation protocols.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.17125v2](https://arxiv.org/abs/2407.17125v2)        |
+| HTML     | [https://browse.arxiv.org/html/2407.17125v2](https://browse.arxiv.org/html/2407.17125v2)       |
+| Truncated       | False       |
+| Word Count       | 7094       |

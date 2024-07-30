@@ -1,0 +1,46 @@
+
+---
+title: "Generating Unseen Code Tests In Infinitum"
+id: "2407.19772v1"
+description: "New method generates benchmark variations for LLMs, mitigating leaking into training data, with auto-regression for Python text-to-code generation."
+author: Marcel Zalmanovici, Orna Raz, Eitan Farchi, Iftach Freund
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.19772v1/extracted/5760690/figures/process.3.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.19772v1/extracted/5760690/figures/process.3.png)
+
+### Summary:
+
+The paper introduces an AST-based methodology for automatically generating benchmarks for LLM code-related tasks. The authors utilize this approach to generate the auto-regression benchmark, a low-level instructions text to Python code benchmark. Relying on ASTs also allows for the inclusion of a dictionary of Python constructs to ease the debugging task. The results provide an anecdotal indication for the usefulness of the approach and benchmark in overcoming two well-acknowledged challenges related to benchmarks – data leakage and debugging.
+
+### Major Findings:
+
+1. The paper presents an AST-based methodology for automatically generating benchmarks for LLM code-related tasks.
+2. The authors utilize this approach to generate the auto-regression benchmark, a low-level instructions text to Python code benchmark.
+3. Relying on ASTs allows for the inclusion of a dictionary of Python constructs to ease the debugging task.
+4. The results provide an anecdotal indication for the usefulness of the approach and benchmark in overcoming data leakage and debugging challenges.
+
+### Analysis and Critique:
+
+* The paper presents a novel approach to generating benchmarks for LLM code-related tasks, but it is limited to a single task and programming language.
+* The ability to create a debugging dictionary may depend on the task and LLMs tested, as well as the level of details provided in the prompts.
+* The paper relies solely on dynamic code execution metrics, which may be too strong a requirement, and it would be good to add static metrics.
+* The paper does not provide a comprehensive evaluation of the proposed methodology, and it is unclear how well it generalizes to other tasks and programming languages.
+* The paper does not discuss the potential limitations and biases of the proposed approach, such as the reliance on ASTs and the use of a single programming language.
+* The paper does not provide a clear comparison with existing benchmarks and evaluation methods, making it difficult to assess the advantages and disadvantages of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.19772v1](https://arxiv.org/abs/2407.19772v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.19772v1](https://browse.arxiv.org/html/2407.19772v1)       |
+| Truncated       | False       |
+| Word Count       | 4413       |

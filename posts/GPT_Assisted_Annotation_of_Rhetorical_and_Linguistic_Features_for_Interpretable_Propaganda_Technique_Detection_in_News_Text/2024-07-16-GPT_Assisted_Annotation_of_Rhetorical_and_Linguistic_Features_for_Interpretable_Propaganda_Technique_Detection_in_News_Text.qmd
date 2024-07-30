@@ -1,0 +1,43 @@
+
+---
+title: "GPT Assisted Annotation of Rhetorical and Linguistic Features for Interpretable Propaganda Technique Detection in News Text"
+id: "2407.11827v1"
+description: "Study combines human annotation with GPT-3.5 for cost-effective, interpretable propaganda detection, introducing a new feature set and tool, RhetAnn."
+author: Kyle Hamilton, Luca Longo, Bojan Bozic
+date: "2024-07-16"
+image: "https://browse.arxiv.org/html/2407.11827v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.11827v1/x1.png)
+
+### Summary:
+
+This study focuses on the annotation of an existing data set labeled with propaganda techniques using 22 rhetorical and linguistic features identified in literature related to the language of persuasion. The authors propose a cost-effective annotation strategy that utilizes GPT-4's explanations to aid human annotators in the initial phase and iterative prompt engineering to annotate the remaining data using GPT-3.5. The study demonstrates that even noisy human-labeled data can be utilized to fine-tune GPT-3.5 to achieve the performance of its state-of-the-art but 10x more expensive counterpart, GPT-4.
+
+### Major Findings:
+
+1. The study proposes a set of 22 rhetorical and linguistic features, their properties, definitions, and examples in a machine-readable format, along with the code for RhetAnn and the GPT prompts and fine-tuning procedures for advancing state-of-the-art interpretable propaganda technique detection.
+2. The authors demonstrate that combining a small number of human annotated examples with GPT can be an effective strategy for scaling the annotation process at a fraction of the cost of traditional annotation relying solely on human experts.
+3. The results of the study are on par with the best performing model at the time of writing, namely GPT-4, at 10x less the cost.
+
+### Analysis and Critique:
+
+1. The study's focus on interpretable propaganda technique detection is a significant contribution to the field, as most approaches focus on "black-box" solutions with opaque inner workings.
+2. The proposed annotation strategy is cost-effective and can be a valuable tool for researchers with limited budgets.
+3. The study's reliance on GPT-4's explanations to aid human annotators in the initial phase may introduce biases or errors, as GPT-4 is not infallible and may generate incorrect or misleading explanations.
+4. The study's use of a small subset of the data for fine-tuning GPT-3.5 may limit the model's ability to generalize to the entire data set, as the fine-tuned model may overfit to the small subset
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.11827v1](https://arxiv.org/abs/2407.11827v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.11827v1](https://browse.arxiv.org/html/2407.11827v1)       |
+| Truncated       | False       |
+| Word Count       | 7256       |

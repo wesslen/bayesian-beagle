@@ -1,0 +1,42 @@
+
+---
+title: "Keep the Cost Down: A Review on Methods to Optimize LLM' s KV-Cache Consumption"
+id: "2407.18003v1"
+description: "KV-Cache optimizes LLMs like ChatGPT for long-text handling, improving efficiency from quadratic to linear time complexity, but with increased GPU memory overhead."
+author: Shi Luohe, Zhang Hongyi, Yao Yao, Li Zuchao, Zhao Hai
+date: "2024-07-25"
+image: "https://browse.arxiv.org/html/2407.18003v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.18003v1/x1.png)
+
+### Summary:
+
+This review focuses on the optimization of KV-Cache in Large Language Models (LLMs), which is crucial for improving their efficiency and long-text capabilities. The authors discuss various methods for optimizing KV-Cache, including those used during the training, deployment, and post-training phases. They also introduce metrics for evaluating the performance of LLMs on long texts, considering both efficiency and capability aspects.
+
+### Major Findings:
+
+1. **Training Stage Optimization**: The most effective KV-Cache compression methods emerge during the pre-training phase, as the model possesses the greatest plasticity. These methods primarily adjust the model architecture, reducing the size of generated Keys and Values vectors while retaining the excellent properties of Attention.
+
+2. **Deployment Stage Optimization**: An excellent inference system, specifically designed for the high-frequency and multiple small growth properties of KV-Cache, is an important way to improve the efficiency of KV-Cache. Methods like Paged Attention mechanism and vLLM framework, DistAttention, and ChunkAttention have been introduced to optimize the use of KV-Cache during inference.
+
+3. **Post-Training Optimizations**: These optimizations include Eviction and Quantization methods. Eviction methods are about the policies to discard unnecessary tokens, while Quantization methods effectively compress data by mapping tensor values to discrete levels and storing them at a reduced precision.
+
+### Analysis and Critique:
+
+The review provides a comprehensive overview of the various methods used to optimize KV-Cache in LLMs. However, it does not delve into the potential limitations or shortcomings of these methods. For instance, while the use of MQA and GQA can save a substantial number of parameters within the Attention module, it may also lead to a loss in performance. Additionally, the use of different frameworks to optimize the use of KV-Cache may not be suitable for all scenarios, especially those with low computational power. Furthermore, the review does not discuss the potential for combining different methods to achieve even better results. Future research could explore these areas to further enhance the efficiency and long-text capabilities of LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.18003v1](https://arxiv.org/abs/2407.18003v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.18003v1](https://browse.arxiv.org/html/2407.18003v1)       |
+| Truncated       | False       |
+| Word Count       | 7020       |

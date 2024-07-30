@@ -1,0 +1,42 @@
+
+---
+title: "AutoScale: Automatic Prediction of Compute-optimal Data Composition for Training LLMs"
+id: "2407.20177v1"
+description: "AutoScale optimizes data composition for LLM pretraining, improving performance and reducing training time."
+author: Feiyang Kang, Yifan Sun, Bingbing Wen, Si Chen, Dawn Song, Rafid Mahmood, Ruoxi Jia
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.20177v1/extracted/5762071/figs/main_fig_crop.png"
+categories: ['architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.20177v1/extracted/5762071/figs/main_fig_crop.png)
+
+### Summary:
+
+The paper proposes AutoScale, an automated tool that finds a compute-optimal data composition for training at any desired target scale. The authors demonstrate that the optimal data composition for a fixed compute budget varies depending on the scale of the training data, and the common practice of empirically determining an optimal composition using small-scale experiments will not yield the optimal data mixtures when scaling up to the final model. AutoScale first determines the optimal composition at a small scale using a novel bi-level optimization framework, Direct Data Optimization (DDO), and then fits a predictor to estimate the optimal composition at larger scales. The predictor's design is inspired by the theoretical analysis of scaling laws related to data composition. In empirical studies with pre-training 774M Decoder-only LMs (GPT-2 Large) on RedPajama dataset, AutoScale decreases validation perplexity at least 25% faster than any baseline with up to 38% speed up compared to without reweighting, achieving the best overall performance across downstream tasks.
+
+### Major Findings:
+
+1. The optimal data composition for a fixed compute budget varies depending on the scale of the training data.
+2. AutoScale, an automated tool, finds a compute-optimal data composition for training at any desired target scale.
+3. AutoScale first determines the optimal composition at a small scale using a novel bi-level optimization framework, Direct Data Optimization (DDO).
+4. AutoScale then fits a predictor to estimate the optimal composition at larger scales, inspired by the theoretical analysis of scaling laws related to data composition.
+5. In empirical studies, AutoScale decreases validation perplexity at least 25% faster than any baseline with up to 38% speed up compared to without reweighting, achieving the best overall performance across downstream tasks.
+
+### Analysis and Critique:
+
+The paper presents an interesting approach to finding a compute-optimal data composition for training large language models (LLMs) at any desired target scale. The authors demonstrate that the optimal data composition for a fixed compute budget varies depending on the scale of the training data, which is a significant finding. The proposed AutoScale tool, which uses a novel bi-level optimization framework, Direct Data Optimization (DDO), and a predictor to estimate the optimal
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.20177v1](https://arxiv.org/abs/2407.20177v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20177v1](https://browse.arxiv.org/html/2407.20177v1)       |
+| Truncated       | False       |
+| Word Count       | 11502       |

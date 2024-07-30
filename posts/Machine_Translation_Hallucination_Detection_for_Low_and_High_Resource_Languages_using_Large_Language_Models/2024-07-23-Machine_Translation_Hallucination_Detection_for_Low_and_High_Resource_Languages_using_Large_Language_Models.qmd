@@ -1,0 +1,43 @@
+
+---
+title: "Machine Translation Hallucination Detection for Low and High Resource Languages using Large Language Models"
+id: "2407.16470v1"
+description: "LLMs, like Llama3-70B and Claude Sonnet, improve hallucination detection in MT, but performance varies between HRLs and LRLs."
+author: Kenza Benkirane, Laura Gongas, Shahar Pelles, Naomi Fuchs, Joshua Darmon, Pontus Stenetorp, David Ifeoluwa Adelani, Eduardo Sanchez
+date: "2024-07-23"
+image: "https://browse.arxiv.org/html/2407.16470v1/extracted/5747081/figures/emb_vs_llms.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.16470v1/extracted/5747081/figures/emb_vs_llms.png)
+
+### Summary:
+
+This paper evaluates the performance of Large Language Models (LLMs) and embedding-based methods for hallucination detection in machine translation (MT). The study covers 16 language directions, including High-Resource Languages (HRLs) and Low-Resource Languages (LRLs), using the HalOmi benchmark dataset. The authors find that LLMs are highly effective for hallucination detection across both high and low resource languages, although the optimal model selection depends on specific contexts. For HRLs, Llama3-70B significantly surpasses the previous state-of-the-art method, BLASER-QE, by 16 points. However, for LRLs, Claude Sonnet is the best performing model, improving previous methods by a smaller difference. The study establishes a new state-of-the-art for 13 of the 16 languages evaluated, including high and low resource languages, surpassing the previous state-of-the-art by 2 MCC points on average.
+
+### Major Findings:
+
+1. LLMs are highly effective for hallucination detection across both high and low resource languages, although the optimal model selection depends on specific contexts.
+2. For HRLs, Llama3-70B significantly outperforms the previous state-of-the-art method, BLASER-QE, by 16 points.
+3. For LRLs, Claude Sonnet is the best performing model, improving previous methods by a smaller difference.
+4. The study establishes a new state-of-the-art for 13 of the 16 languages evaluated, including high and low resource languages, surpassing the previous state-of-the-art by 2 MCC points on average.
+
+### Analysis and Critique:
+
+1. The study highlights the effectiveness of LLMs for hallucination detection in machine translation, but the optimal model selection depends on specific contexts, such as resource level, script, and translation direction.
+2. The study focuses on binary hallucination detection, which may not capture the nuances in the extent and impact of hallucinations on the translated output.
+3. The study uses the HalOmi benchmark dataset, which has a significant class imbalance
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16470v1](https://arxiv.org/abs/2407.16470v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16470v1](https://browse.arxiv.org/html/2407.16470v1)       |
+| Truncated       | False       |
+| Word Count       | 6122       |

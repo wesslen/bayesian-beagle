@@ -1,0 +1,45 @@
+
+---
+title: "AdaCoder: Adaptive Prompt Compression for Programmatic Visual Question Answering"
+id: "2407.19410v1"
+description: "AdaCoder: Adaptive prompt compression for visual programmatic models, reducing token length by 71.1% without compromising performance."
+author: Mahiro Ukai, Shuhei Kurita, Atsushi Hashimoto, Yoshitaka Ushiku, Nakamasa Inoue
+date: "2024-07-28"
+image: "https://browse.arxiv.org/html/2407.19410v1/x2.png"
+categories: ['programming', 'education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.19410v1/x2.png)
+
+### Summary:
+
+The paper introduces AdaCoder, a novel prompt compression framework for Visual Programmatic Models (VPMs). AdaCoder operates in two phases: a compression phase and an inference phase. In the compression phase, a set of compressed preprompts is generated, each depending on a specific question type. In the inference phase, given an input question, AdaCoder predicts the question type and chooses the appropriate compressed preprompt to generate code to answer the question. AdaCoder employs a single frozen LLM and pre-defined prompts, negating the necessity of additional training and maintaining adaptability across different powerful black-box LLMs such as GPT and Claude. In experiments, AdaCoder is applied to ViperGPT and demonstrates that it reduces token length by 71.1%, while maintaining or even improving the performance of visual question answering.
+
+### Major Findings:
+
+1. AdaCoder is a novel prompt compression framework for VPMs that adaptively selects a short instruction for code generation based on question type.
+2. AdaCoder defines and formulates all procedures with a single frozen LLM, avoiding additional training and enabling implementation with black-box LLMs.
+3. AdaCoder demonstrates effectiveness over the state-of-the-art ViperGPT model on three VQA datasets with GPT and Claude, reducing the token length of input prompts by 71.1% while maintaining or even improving question answering performance.
+
+### Analysis and Critique:
+
+1. The paper presents a promising approach to reducing computational costs in VPMs by adaptively compressing prompts based on question type.
+2. The use of a single frozen LLM for all procedures is an innovative approach that allows for implementation with black-box LLMs.
+3. The experimental results demonstrate the effectiveness of AdaCoder in reducing token length and improving question answering performance.
+4. However, the paper does not provide a detailed analysis of the limitations and potential biases of the proposed method.
+5. The paper also does not discuss the potential impact of the proposed method on the generalizability and interpretability of VPMs.
+6. Further research is needed to evaluate the performance of AdaCoder on a wider range of VQA
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.19410v1](https://arxiv.org/abs/2407.19410v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.19410v1](https://browse.arxiv.org/html/2407.19410v1)       |
+| Truncated       | False       |
+| Word Count       | 6971       |

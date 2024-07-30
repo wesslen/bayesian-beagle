@@ -1,0 +1,43 @@
+
+---
+title: "Patched RTC: evaluating LLMs for diverse software development tasks"
+id: "2407.16557v1"
+description: "Patched RTC: A self-evaluating framework for LLMs in software tasks, correlating with task accuracy and distinguishing model performance."
+author: Asankhaya Sharma
+date: "2024-07-23"
+image: "../../img/2407.16557v1/image_1.png"
+categories: ['programming', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.16557v1/image_1.png)
+
+### Summary:
+
+The paper introduces Patched Round-Trip Correctness (Patched RTC), a novel evaluation technique for Large Language Models (LLMs) applied to diverse software development tasks. Patched RTC extends the original Round-Trip Correctness method to work with any LLM and downstream task, offering a self-evaluating framework that measures consistency and robustness of model responses without human intervention. The study demonstrates a correlation between Patched RTC scores and task-specific accuracy metrics, presenting it as an alternative to the LLM-as-Judge paradigm for open-domain task evaluation. The paper also explores the impact of consistency prompts on improving model accuracy, suggesting that Patched RTC can guide prompt refinement and model selection for complex software development workflows.
+
+### Major Findings:
+
+1. Patched RTC is a generic evaluation technique that works with all LLMs and can be applied transparently during inference to self-evaluate the responses by the model without requiring any code changes.
+2. Patched RTC can be applied to a wide domain of tasks and applications where the evaluation of correctness is difficult due to a lack of human annotations.
+3. Patched RTC works extremely well for outer-loop software development tasks (like bug fixing, pull request reviews, and documentation updates) where we are working with patches (or commits) instead of code.
+4. Patched RTC can be used as an evaluation mechanism instead of LLM-as-Judge for generic and diverse tasks, with a correlation (with pearson coefficient of 0.81) when compared to the numbers in Arena-Hard-Auto.
+5. Patched RTC can be used to compare model performance across diverse tasks, with gpt-4o performing better than gpt-3.5-turbo across all the tasks but for some of the more complex patchflows like AutoFix and PRReview the difference between the two models is more pronounced.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed explanation of how the Patched RTC scores are calculated, making it difficult to understand the exact methodology used to evaluate the model responses.
+2. The paper does not provide a detailed analysis of the limitations of Patched RTC, such as the potential for over
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16557v1](https://arxiv.org/abs/2407.16557v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16557v1](https://browse.arxiv.org/html/2407.16557v1)       |
+| Truncated       | False       |
+| Word Count       | 4337       |

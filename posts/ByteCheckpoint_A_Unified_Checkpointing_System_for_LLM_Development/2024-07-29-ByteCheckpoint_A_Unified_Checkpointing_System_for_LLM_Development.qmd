@@ -1,0 +1,41 @@
+
+---
+title: "ByteCheckpoint: A Unified Checkpointing System for LLM Development"
+id: "2407.20143v1"
+description: "ByteCheckpoint system speeds up LLM checkpointing, reducing saving (up to 529x) and loading (up to 3.51x) times, with automatic online resharding support."
+author: Borui Wan, Mingji Han, Yiyao Sheng, Zhichao Lai, Mofan Zhang, Junda Zhang, Yanghua Peng, Haibin Lin, Xin Liu, Chuan Wu
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.20143v1/x1.png"
+categories: ['architectures', 'robustness', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.20143v1/x1.png)
+
+### Summary:
+
+ByteCheckpoint is a PyTorch-native multi-framework LLM checkpointing system that supports automatic online checkpoint resharding. It employs a data/metadata disaggregated storage architecture, decoupling checkpoint storage from parallelism strategies and training frameworks. The system introduces an efficient asynchronous tensor merging technique to address irregular tensor sharding and several I/O performance optimizations to enhance checkpoint saving and loading efficiency. Experimental results demonstrate substantial advantages in reducing checkpoint saving and loading costs compared to baseline methods.
+
+### Major Findings:
+
+1. ByteCheckpoint employs a data/metadata disaggregated storage architecture, which decouples checkpoint storage from parallelism strategies and training frameworks.
+2. The system introduces an efficient asynchronous tensor merging technique to address the irregular tensor sharding problem.
+3. ByteCheckpoint proposes several I/O performance optimizations, including a fine-grained fully asynchronous save pipeline, a Ping-Pong pinned memory pool, and a workload-balanced deduplication mechanism.
+4. Experimental results demonstrate that ByteCheckpoint significantly reduces checkpoint saving and loading costs compared to baseline methods.
+
+### Analysis and Critique:
+
+ByteCheckpoint presents a promising solution for efficient checkpointing in LLM development. Its data/metadata disaggregated storage architecture and asynchronous tensor merging technique effectively address the challenges of checkpoint resharding and irregular tensor sharding. The proposed I/O performance optimizations further enhance the system's efficiency. However, the system's scalability and performance in handling extremely large-scale LLMs remain to be evaluated. Additionally, the system's compatibility with other deep learning frameworks beyond PyTorch needs to be explored.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.20143v1](https://arxiv.org/abs/2407.20143v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20143v1](https://browse.arxiv.org/html/2407.20143v1)       |
+| Truncated       | False       |
+| Word Count       | 10038       |

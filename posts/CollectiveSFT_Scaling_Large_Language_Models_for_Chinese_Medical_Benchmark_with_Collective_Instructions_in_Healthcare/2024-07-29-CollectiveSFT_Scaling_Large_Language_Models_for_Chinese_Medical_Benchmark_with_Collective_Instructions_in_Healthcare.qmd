@@ -1,0 +1,45 @@
+
+---
+title: "CollectiveSFT: Scaling Large Language Models for Chinese Medical Benchmark with Collective Instructions in Healthcare"
+id: "2407.19705v1"
+description: "Smaller models can perform well with diverse, high-quality datasets, improving medical LLM performance."
+author: Jingwei Zhu, Minghuan Tan, Min Yang, Ruixue Li, Hamid Alinejad-Rokny
+date: "2024-07-29"
+image: "../../../bayesian-beagle.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+- The study focuses on the Comprehensive Medical Benchmark in Chinese (CMB) and showcases how dataset diversity and distribution in supervised fine-tuning (SFT) can enhance LLM performance.
+- The authors successfully trained a smaller base model to achieve scores comparable to larger models, indicating that a diverse and well-distributed dataset can optimize performance regardless of model size.
+- The study suggests that even smaller models may reach high performance levels with carefully curated and varied datasets.
+- The authors integrated a wide range of instructional content, addressing potential issues such as data quality inconsistencies.
+- The results imply that a broader spectrum of training data may enhance a model’s ability to generalize and perform effectively across different medical scenarios, highlighting the importance of dataset quality and diversity in fine-tuning processes.
+
+### Major Findings:
+1. A smaller base model was successfully trained to achieve scores comparable to larger models, demonstrating that a diverse and well-distributed dataset can optimize performance regardless of model size.
+2. The study highlights the importance of dataset quality and diversity in fine-tuning processes, as a broader spectrum of training data may enhance a model’s ability to generalize and perform effectively across different medical scenarios.
+3. The authors integrated a wide range of instructional content, addressing potential issues such as data quality inconsistencies.
+
+### Analysis and Critique:
+- The study effectively demonstrates the potential of using diverse datasets to improve model performance using SFT.
+- The authors acknowledge that while the fine-tuned smaller models excel at answering multiple-choice questions accurately and effectively, they may lose some of their conversational abilities.
+- The study also highlights common problems associated with smaller models, such as hallucination, which can undermine the reliability of the model’s responses and pose a significant challenge for its deployment in sensitive domains like healthcare.
+- Future work should focus on developing strategies to preserve the conversational capabilities of fine-tuned models and reduce instances of hallucination.
+- Overall, the method shows great potential for improving the efficiency and effectiveness of LLMs, but it requires careful consideration and further innovation to fully realize its benefits.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.19705v1](https://arxiv.org/abs/2407.19705v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.19705v1](https://browse.arxiv.org/html/2407.19705v1)       |
+| Truncated       | False       |
+| Word Count       | 2837       |

@@ -1,0 +1,42 @@
+
+---
+title: "Can Watermarking Large Language Models Prevent Copyrighted Text Generation and Hide Training Data?"
+id: "2407.17417v1"
+description: "Watermarking LLMs reduces copyrighted content generation but complicates detecting copyrighted text in pretraining datasets."
+author: Michael-Andrei Panaitescu-Liess, Zora Che, Bang An, Yuancheng Xu, Pankayaraj Pathmanathan, Souradip Chakraborty, Sicheng Zhu, Tom Goldstein, Furong Huang
+date: "2024-07-24"
+image: "https://browse.arxiv.org/html/2407.17417v1/extracted/5753090/figs/intro_fig.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.17417v1/extracted/5753090/figs/intro_fig.png)
+
+### Summary:
+
+This paper investigates the effectiveness of watermarking Large Language Models (LLMs) as a deterrent against the generation of copyrighted texts and its impact on Membership Inference Attacks (MIAs). The authors demonstrate that incorporating watermarks into LLMs significantly reduces the likelihood of generating copyrighted content, addressing a critical concern in LLM deployment. However, they also find that watermarking adversely affects the success rate of MIAs, complicating the task of detecting copyrighted text in the pretraining dataset. The authors propose an adaptive technique to improve the success rate of a recent MIA under watermarking.
+
+### Major Findings:
+
+1. Watermarking LLMs can significantly reduce the probability of generating copyrighted content by tens of orders of magnitude.
+2. Watermarking techniques can decrease the success rate of MIAs, which aim to detect whether a piece of copyrighted text was part of the training dataset.
+3. The authors propose an adaptive method to enhance the success rate of a recent MIA in detecting copyright violations under watermarking.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive empirical study, including 5 recent MIAs and 5 LLMs, showing that the AUC of detection methods can be reduced by up to  in the presence of watermarks. However, the authors acknowledge that their proposed method for improving MIAs' success rate on watermarked models makes strong assumptions on the watermarking scheme, which may not always be satisfied despite empirical improvements in their experiments. Additionally, the paper focuses only on decoding time watermarking techniques, and future work may benefit from studying other types of watermarking methods. The authors also suggest that for copyright violation auditing, an unwatermarked model or the watermarking scheme may be needed.
+
+Overall, the paper contributes to the ongoing discussion around watermarking and copyright issues for LLMs, highlighting the unintended consequences of watermarking on methods towards copyright protection. The authors encourage the community to further refine adaptive methods to ensure robust copyright protection and data privacy, and consider the interactions of different methods on downstream legal concerns.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.17417v1](https://arxiv.org/abs/2407.17417v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.17417v1](https://browse.arxiv.org/html/2407.17417v1)       |
+| Truncated       | False       |
+| Word Count       | 7878       |

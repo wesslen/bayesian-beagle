@@ -1,0 +1,44 @@
+
+---
+title: "Do LLMs Know When to NOT Answer? Investigating Abstention Abilities of Large Language Models"
+id: "2407.16221v1"
+description: "Strategic prompting, like Chain-of-Thought, enhances abstention ability in LLMs, improving overall QA task performance."
+author: Nishanth Madhusudhan, Sathwik Tejaswi Madhusudhan, Vikas Yadav, Masoud Hashemi
+date: "2024-07-23"
+image: "https://browse.arxiv.org/html/2407.16221v1/extracted/5738055/FigureCM_1.png"
+categories: ['prompt-engineering', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.16221v1/extracted/5738055/FigureCM_1.png)
+
+### Summary:
+- The paper focuses on the Abstention Ability (AA) of Large Language Models (LLMs), which is the ability to refrain from answering questions when uncertain or when a definitive answer is not possible.
+- The authors propose a black-box evaluation methodology to examine and understand the AA of LLMs across a variety of multiple-choice QA tasks.
+- They measure AA by rewarding models for abstaining from answering when their predictions are incorrect or when the questions are inherently unanswerable.
+- The authors investigate three strategies, Strict Prompting, Verbal Confidence Thresholding, and Chain-of-Thought (CoT), to understand their impact on abstention across different LLMs.
+
+### Major Findings:
+1. Even state-of-the-art LLMs like GPT-4 struggle with abstention, but strategic prompting, such as CoT, can significantly enhance this ability.
+2. Improving AA also leads to better overall QA task performance, underscoring the importance of evaluating AA in LLMs.
+3. The study reveals that state-of-the-art LLMs show poor AA, raising concerns about their use in sensitive domains like legal, medical, and so on.
+
+### Analysis and Critique:
+- The paper provides a comprehensive evaluation methodology for assessing the AA of LLMs, which is a critical yet underexplored aspect of their reliability.
+- The proposed methodology and the introduction of the Abstain-QA dataset are significant contributions to the field.
+- However, the paper does not discuss the potential limitations of the proposed methodology or the Abstain-QA dataset.
+- The authors also do not address the potential biases in the evaluation process or the generalizability of the findings to other types of LLMs or QA tasks.
+- Further research is needed to validate the proposed methodology and the findings in different contexts and with different types of LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16221v1](https://arxiv.org/abs/2407.16221v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16221v1](https://browse.arxiv.org/html/2407.16221v1)       |
+| Truncated       | False       |
+| Word Count       | 4731       |

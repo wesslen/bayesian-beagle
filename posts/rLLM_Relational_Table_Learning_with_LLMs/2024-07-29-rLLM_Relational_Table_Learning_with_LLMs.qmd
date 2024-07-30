@@ -1,0 +1,40 @@
+
+---
+title: "rLLM: Relational Table Learning with LLMs"
+id: "2407.20157v1"
+description: "rLLM: A PyTorch library for Relational Table Learning with LLMs."
+author: Weichen Li, Xiaotong Huang, Jianwu Zheng, Zheng Wang, Chaokun Wang, Li Pan, Jianhua Li
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.20157v1/x3.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.20157v1/x3.png)
+
+### Summary:
+
+The paper introduces rLLM (relationLLM), a PyTorch library designed for Relational Table Learning (RTL) with Large Language Models (LLMs). The core idea is to decompose state-of-the-art Graph Neural Networks, LLMs, and Table Neural Networks into standardized modules, enabling the fast construction of novel RTL-type models in a simple "combine, align, and co-train" manner. The authors present a simple RTL method named BRIDGE and introduce three novel relational tabular datasets (TML1M, TLF2K, and TACM12K) by enhancing classic datasets. The rLLM library aims to serve as a useful and easy-to-use development framework for RTL-related tasks.
+
+### Major Findings:
+
+1. **rLLM Library**: The paper introduces a PyTorch library, rLLM, designed for Relational Table Learning (RTL) with Large Language Models (LLMs). The library decomposes state-of-the-art Graph Neural Networks, LLMs, and Table Neural Networks into standardized modules, enabling the fast construction of novel RTL-type models.
+2. **BRIDGE Method**: The authors present a simple RTL method named BRIDGE, which utilizes TNNs to process table data and leverages the "foreign keys" in relational tables to construct relationships between table samples, analyzed using GNNs. This approach takes into account multiple tables and the relationships between them.
+3. **Novel Datasets**: The paper introduces three novel relational tabular datasets (TML1M, TLF2K, and TACM12K) by enhancing classic datasets. Each dataset is obtained by enhancing existing classical datasets and is accompanied by a standard classification task. These datasets are well-organized and easy-to-use, making them suitable for designing novel RTL-type methods.
+
+### Analysis and Critique:
+
+1. **Limited Evaluation**: The paper does not provide a comprehensive evaluation of the rLLM library or the BRIDGE method. The experimental results are limited to the TML1M dataset, and the comparison is only made with TNN-type methods. A more extensive evaluation,
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.20157v1](https://arxiv.org/abs/2407.20157v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20157v1](https://browse.arxiv.org/html/2407.20157v1)       |
+| Truncated       | False       |
+| Word Count       | 5065       |

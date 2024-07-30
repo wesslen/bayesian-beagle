@@ -1,0 +1,42 @@
+
+---
+title: "Smart Language Agents in Real-World Planning"
+id: "2407.19667v1"
+description: "TL;DR: Human-in-the-loop prompt refinement boosts LLM travel planning by 139%."
+author: Annabelle Miin, Timothy Wei
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.19667v1/extracted/5758212/final_framework.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.19667v1/extracted/5758212/final_framework.png)
+
+### Summary:
+
+The paper titled "Smart Language Agents in Real-World Planning" focuses on improving the travel-planning capability of large language models (LLMs) by extending the work of the previous paper TravelPlanner (Xie et al., (1)). The authors propose a semi-automated prompt generation framework that combines the LLM-automated prompt and "human-in-the-loop" to iteratively refine the prompt and improve the LLM performance. The results show that LLM automated prompt has its limitations, and "human-in-the-loop" greatly improves the performance by 139% with one single iteration.
+
+### Major Findings:
+
+1. The authors propose a general framework for creating an effective prompt for LLMs and apply it to the travel planning use case. The framework consists of two main steps: creating an initial prompt by LLMs through its automatic summarization of external resources and further improving the prompt through prompt-tuning with human-in-the-loop.
+2. The initial automated prompt mainly covers the extracted rule, and the improved prompts focus on picking up the tricky failure cases. However, it is still an open question whether just simply concatenating them is the right way to make LLM yield better results.
+3. The results show that the initial GPT-4o automatically generated prompt produces unsatisfactory results, lower than the GPT-4 Turbo Baseline. However, with one iteration of "human-in-the-loop" to augment the automated prompt, the success rate of the GPT-4o generated prompt significantly improves, with the final pass rate increasing from 2.78 to 6.67 (139% improvement).
+
+### Analysis and Critique:
+
+1. The paper's proposed framework relies mostly on automation to generate prompts and evaluate the results. However, it uses human-in-the-loop as the feedback mechanism, which is inherently not scalable due to the manual nature of the analysis.
+2. The reference data used in the paper is limited in terms of the selection of travel information, accommodations, restaurants, and attractions. The authors did not have sufficient time to include a more diverse set of reference data for the agent to use.
+3. The paper's proposed framework has not been tested with
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.19667v1](https://arxiv.org/abs/2407.19667v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.19667v1](https://browse.arxiv.org/html/2407.19667v1)       |
+| Truncated       | False       |
+| Word Count       | 2888       |

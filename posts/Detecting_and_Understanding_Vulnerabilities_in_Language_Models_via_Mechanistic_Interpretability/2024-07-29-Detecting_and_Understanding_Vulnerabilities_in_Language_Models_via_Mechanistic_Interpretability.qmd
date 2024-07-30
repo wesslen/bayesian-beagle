@@ -1,0 +1,44 @@
+
+---
+title: "Detecting and Understanding Vulnerabilities in Language Models via Mechanistic Interpretability"
+id: "2407.19842v1"
+description: "TL;DR: We propose a method using Mechanistic Interpretability to locate and understand vulnerabilities in LLMs like GPT-2, improving their robustness against adversarial attacks."
+author: Jorge García-Carrasco, Alejandro Maté, Juan Trujillo
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.19842v1/x1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.19842v1/x1.png)
+
+### Summary:
+
+The paper explores the use of Mechanistic Interpretability (MI) techniques to detect and understand vulnerabilities in Large Language Models (LLMs). The authors propose a method that involves identifying the subset of the model responsible for a specific task, generating adversarial samples for that task, and using MI techniques to discover and understand the possible vulnerabilities. The method is showcased on a pretrained GPT-2 Small model performing the task of predicting 3-letter acronyms.
+
+### Major Findings:
+
+1. The paper proposes a new method to detect and understand vulnerabilities in language models by systematically identifying and understanding the circuit associated with a given task and automatically generating adversarial samples related to the task.
+2. The proposed method is showcased on a case study to locate and understand vulnerabilities on the task of 3-letter acronym prediction using GPT-2 Small.
+3. The authors claim that this is the first work that analyzes vulnerabilities of models from the MI perspective, which can provide valuable insights to detect, understand, and potentially mitigate or solve these vulnerabilities without requiring extra adversarial training or risking inadvertently causing collateral effects.
+
+### Analysis and Critique:
+
+1. The paper provides a novel approach to detect and understand vulnerabilities in LLMs, which can be useful for improving the robustness and reliability of these models.
+2. The proposed method is showcased on a specific task and model, and its generalizability to other tasks and models needs to be further investigated.
+3. The paper does not discuss any potential limitations or shortcomings of the proposed method, such as its computational complexity or the need for large amounts of data to generate adversarial samples.
+4. The paper does not provide a comparison with other existing methods for detecting and understanding vulnerabilities in LLMs, which could help to better evaluate the effectiveness and efficiency of the proposed method.
+5. The paper does not discuss any potential ethical or societal implications of the proposed method, such as the potential misuse of adversarial samples to attack LLMs in real-world applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.19842v1](https://arxiv.org/abs/2407.19842v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.19842v1](https://browse.arxiv.org/html/2407.19842v1)       |
+| Truncated       | False       |
+| Word Count       | 6824       |

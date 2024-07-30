@@ -1,0 +1,44 @@
+
+---
+title: "PEFT-U: Parameter-Efficient Fine-Tuning for User Personalization"
+id: "2407.18078v1"
+description: "TL;DR: Introducing PEFT-U Benchmark for personalizing LLMs, addressing the need for user-specific preferences in diverse tasks."
+author: Christopher Clarke, Yuzhao Heng, Lingjia Tang, Jason Mars
+date: "2024-07-25"
+image: "../../../bayesian-beagle.png"
+categories: ['social-sciences', 'hci', 'recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary
+
+The paper introduces the PEFT-U Benchmark, a new dataset for building and evaluating NLP models for user personalization. The benchmark consists of a series of user-centered tasks containing diverse and individualized expressions where the preferences of users can potentially differ for the same input. The authors explore the challenge of efficiently personalizing LLMs to accommodate user-specific preferences in the context of diverse user-centered tasks.
+
+## Major Findings
+
+1. The PEFT-U Benchmark is the first of its kind to focus on modeling user preferences in NLP with an emphasis on identical inputs that require different model outputs depending upon the user.
+2. The benchmark consists of over 13+ personalized tasks and 15k+ users across domains such as Hate Speech, Sentiment/Emotion, and Humor.
+3. The authors implement and empirically analyze a series of personalized prompting approaches (non-parametric) vs tuning and compartmentalizing user-level knowledge (parametric) for personalized tasks.
+
+## Analysis and Critique
+
+1. The paper does not provide a detailed comparison of the proposed approach with existing personalization methods in NLP.
+2. The authors do not discuss the limitations of their approach, such as the potential for overfitting to specific users or the scalability of the proposed methods.
+3. The paper does not provide a clear definition of what constitutes a "personalized" task, which may limit the generalizability of the proposed benchmark.
+4. The authors do not discuss the potential ethical implications of personalizing LLMs, such as the risk of reinforcing existing biases or stereotypes.
+5. The paper does not provide a detailed analysis of the performance of the proposed methods on each of the 13+ personalized tasks, which may limit the usefulness of the benchmark for evaluating the effectiveness of personalization methods.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.18078v1](https://arxiv.org/abs/2407.18078v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.18078v1](https://browse.arxiv.org/html/2407.18078v1)       |
+| Truncated       | False       |
+| Word Count       | 7032       |

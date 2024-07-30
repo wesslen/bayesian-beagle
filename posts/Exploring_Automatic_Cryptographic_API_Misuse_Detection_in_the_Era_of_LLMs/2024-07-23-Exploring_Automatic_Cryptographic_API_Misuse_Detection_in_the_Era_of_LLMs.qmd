@@ -1,0 +1,41 @@
+
+---
+title: "Exploring Automatic Cryptographic API Misuse Detection in the Era of LLMs"
+id: "2407.16576v1"
+description: "LLMs can detect cryptographic misuses, but struggle with false positives. Constrained scope and self-correction improve reliability, leading to a 90% detection rate and discovery of real-world misuses."
+author: Yifan Xia, Zichen Xie, Peiyu Liu, Kangjie Lu, Yan Liu, Wenhai Wang, Shouling Ji
+date: "2024-07-23"
+image: "https://browse.arxiv.org/html/2407.16576v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.16576v1/x1.png)
+
+**Summary:**
+
+This paper explores the use of Large Language Models (LLMs) for detecting cryptographic misuses, a task that has traditionally been performed by pattern-based static analysis tools (SATs). The authors introduce a systematic evaluation framework to assess LLMs in this context, using a comprehensive dataset that includes both manually-crafted samples and real-world projects. The study reveals that LLMs can exhibit inherent instabilities, with over half of the reports being false positives. However, the authors demonstrate that a constrained problem scope and LLMs' self-correction capability can significantly enhance the reliability of the detection. The optimized approach achieves a remarkable detection rate of nearly 90%, surpassing traditional methods and uncovering previously unknown misuses in established benchmarks. The study also identifies failure patterns that hinder LLMs' reliability, including cryptographic knowledge deficiency and code semantics misinterpretation. The authors then develop an LLM-based workflow to examine open-source repositories, leading to the discovery of 63 real-world cryptographic misuses, of which 46 have been acknowledged by the development community.
+
+**Major Findings:**
+
+1. LLMs can exhibit inherent instabilities when applied to crypto-related code analysis, with false positive rates exceeding 50% even for renowned models like GPT-4.
+2. By integrating task-aware problem scoping and code & analysis validation mechanisms, the self-correction capabilities of LLMs can be significantly invoked, enabling them to achieve a remarkable detection rate of nearly 90%, surpassing state-of-the-art (SOTA) SATs.
+3. Existing benchmarks designed for traditional pattern-based detectors exhibit pronounced weaknesses, including incomplete misuse recording and misleading code contexts, which can lead to unfair assessments of LLMs' capabilities.
+4. Despite LLMs' context-aware analysis for detecting cryptographic misuses, failure patterns like cryptographic knowledge deficiency and code semantics misinterpretation persist, underscoring significant reliability gaps in some models.
+
+**Analysis and Critique:**
+
+The paper presents a comprehensive evaluation of LLMs for cryptographic misuse detection, highlighting their potential and limitations. The authors' systematic approach to evalu
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16576v1](https://arxiv.org/abs/2407.16576v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16576v1](https://browse.arxiv.org/html/2407.16576v1)       |
+| Truncated       | False       |
+| Word Count       | 14418       |

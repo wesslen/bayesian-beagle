@@ -1,0 +1,47 @@
+
+---
+title: "Do Large Language Models Have Compositional Ability? An Investigation into Limitations and Scalability"
+id: "2407.15720v1"
+description: "LLMs struggle with complex composite tasks, despite decent performance on simpler ones. Model scaling doesn't always improve performance."
+author: Zhuoyan Xu, Zhenmei Shi, Yingyu Liang
+date: "2024-07-22"
+image: "https://browse.arxiv.org/html/2407.15720v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.15720v1/x1.png)
+
+### Summary:
+
+This study investigates the in-context learning (ICL) capabilities of large language models (LLMs) on composite tasks, which combine two or more simple tasks. The authors develop a test suite of composite tasks, including linguistic and logical challenges, and perform empirical studies across different LLM families. The results show that models exhibit divergent behaviors: (1) For simpler composite tasks that apply distinct mapping mechanisms to different input segments, the models demonstrate decent compositional ability, while scaling up the model enhances this ability; (2) for more complex composite tasks that involve reasoning multiple steps, where each step represents one task, models typically underperform, and scaling up generally provides no improvements. The authors offer theoretical analysis in a simplified setting, explaining that models exhibit compositional capability when the task handles different input parts separately. The dataset and code are available at <https://github.com/OliverXUZY/LLM_Compose>.
+
+### Major Findings:
+
+1. LLMs demonstrate decent compositional ability for simpler composite tasks that apply distinct mapping mechanisms to different input segments, while scaling up the model enhances this ability.
+2. For more complex composite tasks that involve reasoning multiple steps, where each step represents one task, models typically underperform, and scaling up generally provides no improvements.
+3. Theoretical analysis shows that models exhibit compositional capability when the task handles different input parts separately.
+
+### Analysis and Critique:
+
+The study provides valuable insights into the ICL capabilities of LLMs on composite tasks. However, there are some limitations and potential areas for further research:
+
+1. The study focuses on a limited number of LLM families, and the results may not generalize to other models or architectures.
+2. The theoretical analysis is conducted in a simplified setting, which may not fully capture the complexities of real-world composite tasks.
+3. The study does not explore the impact of different pretraining strategies or fine-tuning techniques on the ICL capabilities of LLMs for composite tasks.
+4. The authors do not discuss the potential implications of their findings for the development of more advanced LLMs or the design of composite tasks for evaluating LLMs.
+
+Overall, this study contributes to our understanding of the ICL capabilities of LLMs on composite tasks and highlights the need for further research in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.15720v1](https://arxiv.org/abs/2407.15720v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.15720v1](https://browse.arxiv.org/html/2407.15720v1)       |
+| Truncated       | False       |
+| Word Count       | 12338       |

@@ -1,0 +1,49 @@
+
+---
+title: "DDK: Distilling Domain Knowledge for Efficient Large Language Models"
+id: "2407.16154v1"
+description: "DDK framework dynamically adjusts distillation dataset, improving student LLM performance, outperforming existing methods."
+author: Jiaheng Liu, Chenchen Zhang, Jinyang Guo, Yuanxing Zhang, Haoran Que, Ken Deng, Zhiqi Bai, Jie Liu, Ge Zhang, Jiakai Wang, Yanan Wu, Congnan Liu, Wenbo Su, Jiamang Wang, Lin Qu, Bo Zheng
+date: "2024-07-23"
+image: "https://browse.arxiv.org/html/2407.16154v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.16154v1/x1.png)
+
+### Summary:
+
+- The paper introduces a novel methodology called Distill Domain Knowledge for LLMs (DDK) to optimize domain-specific mixtures and address the performance discrepancy between teacher and student models across different domains.
+- DDK quantifies the performance deviations between the teacher and student LLMs using an offline-collected validation dataset across various domains.
+- It periodically re-calculates the domain discrepancy factor based on the performance gap between the teacher and student models.
+- DDK employs a domain knowledge-guided sampling strategy to sample data from different domains with varying probabilities based on the calculated domain discrepancy factor.
+- The paper proposes a factor smooth updating mechanism to augment the stability and robustness of the DDK approach.
+- The supervision loss is minimized by reducing the differences in the output logits between the teacher and student models.
+- The paper demonstrates that DDK significantly improves the performance of student models, outperforming both continuously pretrained baselines and existing knowledge distillation methods.
+
+### Major Findings:
+
+1. DDK is the first to study the influence of domain-specific data mixtures for distilling LLMs and efficiently transfer the domain knowledge of the teacher network upon the domain weights.
+2. DDK proposes a factor smooth updating strategy to strategically enhance the appropriate focus of the distillation process on targeted domains, which effectively stabilizes the domain knowledge-guided sampling process for smoother distillation.
+3. Extensive experiments on multiple benchmark datasets demonstrate the effectiveness and generalization ability of the proposed DDK.
+
+### Analysis and Critique:
+
+- The paper does not provide a detailed comparison of DDK with other knowledge distillation methods, which could help in understanding the advantages and limitations of DDK.
+- The paper does not discuss the potential limitations or shortcomings of DDK, such as the computational cost of calculating the domain discrepancy factor and the impact of the factor smooth updating mechanism on the distillation process.
+- The paper does not provide a detailed analysis of the impact of the distillation interval and temperature on the performance of DDK.
+- The paper does not discuss the potential applications of DDK in real-world scenarios
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16154v1](https://arxiv.org/abs/2407.16154v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16154v1](https://browse.arxiv.org/html/2407.16154v1)       |
+| Truncated       | False       |
+| Word Count       | 3334       |

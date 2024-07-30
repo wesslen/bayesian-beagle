@@ -1,0 +1,44 @@
+
+---
+title: "CovScore: Evaluation of Multi-Document Abstractive Title Set Generation"
+id: "2407.17390v1"
+description: "CovScore: Automatic method for evaluating title sets, tested on Holocaust testimonies, simplifies and expedites manual evaluation."
+author: Itamar Trainin, Omri Abend
+date: "2024-07-24"
+image: "https://browse.arxiv.org/html/2407.17390v1/extracted/5747381/Eval_Diagram_Hori.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.17390v1/extracted/5747381/Eval_Diagram_Hori.png)
+
+# Summary:
+
+The paper introduces CovScore, a novel reference-less methodology for evaluating thematic title sets extracted from a corpus of documents. The methodology decomposes quality into five main metrics along different aspects of evaluation, simplifying and expediting the manual evaluation process and enabling automatic and independent LLM-based evaluation. The authors apply their approach to a corpus of Holocaust survivor testimonies, motivated by its relevance to title set extraction and moral significance.
+
+## Major Findings:
+
+1. **CovScore Methodology**: The authors present a novel methodology for reference-less evaluation of title sets, which can be deployed manually or automatically. The methodology reports separate scores for each aspect, alongside an aggregate score, addressing the drawbacks of using aggregate metrics.
+2. **Case Study on Holocaust Survivor Testimonies**: The authors conduct a case study on a dataset of Holocaust survivor testimonies, demonstrating the importance of studying these testimonies for Holocaust research and the unique test case they provide due to the recounted common yet unique experiences.
+3. **Effectiveness of the Methodology**: The authors demonstrate the effectiveness of their methodology by experimenting with both naturalistic and synthetic title set generation systems and comparing their performance by studying the intricate trade-offs existing between the different sets.
+
+## Analysis and Critique:
+
+1. **Limited Dataset**: The methodology is tested on a single type of dataset (Holocaust survivor testimonies), which may limit its generalizability to other types of datasets.
+2. **Sample Size**: The annotation process is based on a small sample (10 documents) from each domain, which may not sufficiently cover the entirety of the domain and could bias the annotation process.
+3. **Segmentation of Testimonies**: The prior ontology labeling of the segments was done on segments of constant 1-minute length, which could cause unrelated information to be included in the segment and misplace small but crucial segments.
+4. **Use of LLMs**: The use of LLMs as judge models for measurement annotation may be limited by their black-box nature, high cost, and lack of replicability.
+5. **Ethical Considerations**: The use of Holocaust testimonies
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.17390v1](https://arxiv.org/abs/2407.17390v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.17390v1](https://browse.arxiv.org/html/2407.17390v1)       |
+| Truncated       | False       |
+| Word Count       | 9655       |

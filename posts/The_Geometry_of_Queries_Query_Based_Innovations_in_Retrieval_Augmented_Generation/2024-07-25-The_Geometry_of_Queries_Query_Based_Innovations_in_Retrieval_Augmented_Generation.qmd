@@ -1,0 +1,44 @@
+
+---
+title: "The Geometry of Queries: Query-Based Innovations in Retrieval-Augmented Generation"
+id: "2407.18044v1"
+description: "QB-RAG improves healthcare chatbot accuracy by pre-computing queries, enhancing retrieval, and aligning user questions with reliable content."
+author: Eric Yang, Jonathan Amar, Jong Ha Lee, Bhawesh Kumar, Yugang Jia
+date: "2024-07-25"
+image: "https://browse.arxiv.org/html/2407.18044v1/extracted/5754034/images/cc-summary.png"
+categories: ['social-sciences', 'hci', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.18044v1/extracted/5754034/images/cc-summary.png)
+
+### Summary:
+
+The paper introduces a novel approach called Query-Based Retrieval Augmented Generation (QB-RAG) for improving the retrieval phase of RAG systems. QB-RAG addresses the semantic misalignment between user queries and knowledge bases by pre-generating a comprehensive set of potential questions from the content. This approach leverages efficient vector search to map incoming online queries to pre-computed questions, enabling more accurate and aligned retrieval.
+
+QB-RAG requires significant offline computational investment for question generation but offers advantages such as minimizing latency in real-time applications and benefiting from optimized retrieval algorithms. The paper provides theoretical motivations for QB-RAG and suggests potential improvements, such as expanding the question set for greater coverage or using matrix completion techniques.
+
+Empirical evaluation of QB-RAG demonstrates its superior performance compared to benchmark methods across two distinct test sets: the Rephrase set and the Out-of-Distribution set. QB-RAG significantly improves exact recovery and relevance of retrieved documents, leading to higher-quality downstream answer generation. The generated answers are more frequently grounded on trusted sources of content, which is crucial for delivering reliable and up-to-date information to patient queries.
+
+The paper acknowledges limitations, such as the need to evaluate QB-RAG on larger and more diverse datasets and the reliance on LLM-based evaluation metrics. Expert review is essential for real-world deployment in healthcare settings to ensure the accuracy, safety, and reliability of generated information. Additionally, the paper highlights the importance of maintaining and updating the knowledge base to reflect the latest advancements in fast-changing domains like healthcare.
+
+### Major Findings:
+
+1. QB-RAG addresses the semantic misalignment between user queries and knowledge bases by pre-generating a comprehensive set of potential questions from the content.
+2. QB-RAG offers advantages such as minimizing latency in real-time applications and benefiting from optimized retrieval algorithms, despite requiring significant offline computational investment.
+3. Empirical evaluation demonstrates QB-RAG's superior performance compared to benchmark methods in terms of exact recovery and relevance of retrieved documents, leading to higher-quality downstream answer generation.
+
+### Analysis
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.18044v1](https://arxiv.org/abs/2407.18044v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.18044v1](https://browse.arxiv.org/html/2407.18044v1)       |
+| Truncated       | False       |
+| Word Count       | 12034       |

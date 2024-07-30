@@ -1,0 +1,44 @@
+
+---
+title: "PrimeGuard: Safe and Helpful LLMs through Tuning-Free Routing"
+id: "2407.16318v1"
+description: "PrimeGuard improves LM safety without compromising helpfulness, outperforming baselines and reducing attack success rate."
+author: Blazej Manczak, Eliott Zemour, Eric Lin, Vaikkunth Mugunthan
+date: "2024-07-23"
+image: "../../img/2407.16318v1/image_1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.16318v1/image_1.png)
+
+# Summary
+
+The paper "PrimeGuard: Safe and Helpful LLMs through Tuning-Free Routing" by Blazej Manczak, Eliott Zemour, Eric Lin, and Vaikkunth Mugunthan introduces a novel Inference-Time Guardrailing (ITG) method called PrimeGuard. This method aims to increase both safety and helpfulness by routing queries through a second instantiation of a model aligned with tuning-free In-Context Learning (ICL). The proposed method significantly outperforms all baselines on benchmarks with multiple models, reducing adversarial jailbreakability from 100% success rate to 8% and increasing safe responses to 97%+ unsafe queries while maintaining or even increasing helpfulness.
+
+## Major Findings
+
+1. PrimeGuard, a novel ITG method, utilizes structured control flow and exception handling to overcome the guardrail tax, a trade-off between safety and helpfulness.
+2. The method employs two language models, LLMMain and LLMGuard, with LLMGuard evaluating the risk of answering a user query based on system guidelines.
+3. PrimeGuard achieves high levels of both safety and helpfulness by routing queries posing higher risks to refusals or re-evaluation against restrictive system instructions, while low-risk queries are encouraged to adhere to directive instructions.
+4. The method is evaluated across multiple relevant defense directions, including the safe-eval dataset, XSTest, and TAP, a state-of-the-art automated method for red-teaming.
+5. PrimeGuard significantly outperforms the present-day Pareto frontier by achieving high safety and usefulness across different model sizes.
+
+## Analysis and Critique
+
+The paper presents a promising approach to addressing the guardrail tax, a significant challenge in deploying language models. The proposed method, PrimeGuard, demonstrates impressive results in maintaining helpfulness while maximizing adherence to custom safety guidelines. The use of structured control flow and exception handling to dynamically overcome the guardrail tax is a novel and effective approach.
+
+However, the paper does not discuss potential limitations or shortcomings of the proposed method. For instance, the reliance on two language models, LLMMain and LLMGuard, may introduce additional
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16318v1](https://arxiv.org/abs/2407.16318v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16318v1](https://browse.arxiv.org/html/2407.16318v1)       |
+| Truncated       | False       |
+| Word Count       | 17231       |

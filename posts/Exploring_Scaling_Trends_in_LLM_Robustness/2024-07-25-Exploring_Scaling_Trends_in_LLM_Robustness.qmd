@@ -1,0 +1,47 @@
+
+---
+title: "Exploring Scaling Trends in LLM Robustness"
+id: "2407.18213v1"
+description: "Larger language models improve with adversarial training, but not without explicit defenses."
+author: Nikolhaus Howe, Michał Zajac, Ian McKenzie, Oskar Hollinsworth, Tom Tseng, Pierre-Luc Bacon, Adam Gleave
+date: "2024-07-25"
+image: "https://browse.arxiv.org/html/2407.18213v1/x1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.18213v1/x1.png)
+
+### Summary:
+
+This study explores the scaling trends in the robustness of language models, focusing on the Pythia model family. The authors investigate the models' performance in binary classification tasks, measuring robustness by the attack success rate. They find that larger models are generally more resistant to attacks, but this effect is weak and noisy. However, a clearer scaling trend emerges when models are adversarially trained against examples of attacks. Larger models are more sample efficient, becoming more robust with fewer examples, and converge to be more robust given a sufficient number of examples.
+
+### Major Findings:
+
+1. Larger models are more resistant to adversarial attacks, but the effect is weak and noisy when fine-tuned only on clean data.
+2. A clearer scaling trend emerges for models adversarially trained against examples of attacks. Larger models are more sample efficient and converge to be more robust given a sufficient number of examples.
+3. Adversarial training against one attack transfers protection to similar attacks, with the transfer being stronger for larger models.
+
+### Analysis and Critique:
+
+1. The study focuses on the Pythia model family, and the results may not generalize to other model families or architectures.
+2. The study only considers binary classification tasks, and the results may not generalize to other types of tasks, such as generative tasks or tasks with more complex structures.
+3. The study does not consider the impact of task complexity on robustness, which could be an important factor in determining the robustness of a model.
+4. The study does not consider the impact of different types of attacks on model robustness, which could be an important factor in determining the effectiveness of adversarial training.
+5. The study does not consider the impact of different types of defenses on model robustness, which could be an important factor in determining the effectiveness of adversarial training.
+6. The study does not consider the impact of different types of data on model robustness, which could be an important factor in determining the effectiveness of adversarial training.
+7. The study does not consider the impact of different types of training procedures on model robustness, which could be an important factor in determining the effectiveness of adversarial training.
+8. The study does not consider the impact of
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.18213v1](https://arxiv.org/abs/2407.18213v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.18213v1](https://browse.arxiv.org/html/2407.18213v1)       |
+| Truncated       | False       |
+| Word Count       | 7444       |

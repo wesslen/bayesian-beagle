@@ -1,0 +1,43 @@
+
+---
+title: "Odyssey: Empowering Agents with Open-World Skills"
+id: "2407.15325v1"
+description: "ODYSSEY framework empowers LLM-based agents with open-world skills for Minecraft exploration, offering a new benchmark for evaluating agent planning and exploration capabilities."
+author: Shunyu Liu, Yaoru Li, Kongcheng Zhang, Zhenyu Cui, Wenkai Fang, Yuxuan Zheng, Tongya Zheng, Mingli Song
+date: "2024-07-22"
+image: "../../img/2407.15325v1/image_1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.15325v1/image_1.png)
+
+Summary:
+
+The paper introduces ODYSSEY, a new framework that empowers Large Language Model (LLM)-based agents with open-world skills to explore the vast Minecraft world. ODYSSEY comprises three key parts: (1) An interactive agent with an open-world skill library that consists of 40 primitive skills and 183 compositional skills. (2) A fine-tuned LLaMA-3 model trained on a large question-answering dataset with 390k+ instruction entries derived from the Minecraft Wiki. (3) A new open-world benchmark includes thousands of long-term planning tasks, tens of dynamic-immediate planning tasks, and one autonomous exploration task.
+
+Major Findings:
+
+1. The proposed ODYSSEY framework can effectively evaluate the planning and exploration capabilities of agents.
+2. The open-world skill library improves the efficiency of agents in Minecraft, surpassing previous studies in terms of success rate and time efficiency.
+3. The fine-tuned LLaMA-3 model outperforms the original LLaMA-3 model in terms of success rate and time efficiency, albeit at the cost of more LLM iterations.
+4. The multi-round planning strategy significantly improves the time efficiency of the agent, enabling it to iteratively optimize its plan based on the outcomes of previous battles.
+
+Analysis and Critique:
+
+The paper presents a comprehensive framework for developing and evaluating autonomous embodied agents in open-world environments. The use of LLMs in Minecraft has been explored in previous works, but the proposed ODYSSEY framework provides a more stable and efficient method for generating complex policies for broader exploration and more complex tasks. However, the use of open-source LLMs is prone to generating hallucinations, which can decrease agent performance. The authors plan to address this issue by employing retrieval-augmented generation to improve LLMs in Minecraft. Additionally, the skill library is still text-based, which limits its functionality in tasks requiring visual information. The authors plan to integrate visual processing capabilities into the skill library to expand its capabilities.
+
+The paper also introduces a new open-world benchmark that encompasses tasks requiring long-term planning, dynamic-
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.15325v1](https://arxiv.org/abs/2407.15325v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.15325v1](https://browse.arxiv.org/html/2407.15325v1)       |
+| Truncated       | False       |
+| Word Count       | 24246       |

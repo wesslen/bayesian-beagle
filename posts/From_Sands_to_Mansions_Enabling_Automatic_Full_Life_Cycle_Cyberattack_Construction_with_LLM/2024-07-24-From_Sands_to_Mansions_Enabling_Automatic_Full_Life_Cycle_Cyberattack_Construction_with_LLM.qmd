@@ -1,0 +1,42 @@
+
+---
+title: "From Sands to Mansions: Enabling Automatic Full-Life-Cycle Cyberattack Construction with LLM"
+id: "2407.16928v1"
+description: "Aurora: Automatic Framework for Efficient, Full-Life-Cycle Cyberattack Emulation"
+author: Lingzhi Wang, Jiahui Wang, Kyle Jung, Kedar Thiagarajan, Emily Wei, Xiangmin Shen, Yan Chen, Zhenyuan Li
+date: "2024-07-24"
+image: "https://browse.arxiv.org/html/2407.16928v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.16928v1/x1.png)
+
+### Summary:
+
+The paper introduces Aurora, an end-to-end automated attack construction and emulation system. Aurora leverages Cyber Threat Intelligence (CTI) reports as inputs to outline the attack techniques for construction. It utilizes a knowledge graph of attack procedures to generate a detailed attack plan and employs LLMs to analyze CTI reports and existing attack libraries. Aurora also uses LLMs in conjunction with Infrastructure as Code (IaC) tools to automate the configuration of infrastructures. The system addresses the challenges in attack construction and the potential of LLMs by implementing the Chain-of-Thought (CoT) approach and strategically using LLMs to analyze validated materials.
+
+### Major Findings:
+
+1. Aurora is the first end-to-end automated attack construction system that takes CTI reports as input and constructs attack emulation infrastructures and attack execution playbooks.
+2. The system utilizes LLM to address challenges in expanding the attack TTP knowledge base, generating full-life-cycle attacks, and automatically building infrastructures.
+3. Aurora integrates LLM into attack construction and addresses the challenges in applying LLM, such as short-term memory issues and hallucination and ethical restriction issues.
+4. The system constructs a multi-source attack procedure knowledge graph containing over 1000 attack procedures and more than 50 different full-life-cycle attacks and the corresponding emulation infrastructures.
+5. Aurora has been evaluated by manually verifying over 20 generated attacks, including basic functionality, TTP coverage, and an ablation study, highlighting its superiority over existing work.
+
+### Analysis and Critique:
+
+While Aurora offers a promising approach to automated attack construction and emulation, there are still some limitations and potential areas for improvement. One concern is the reliance on LLMs, which may not always provide accurate or ethically compliant outputs. Additionally, the system's effectiveness may be limited by the quality and diversity of the available CTI reports and attack libraries. Future research could explore ways to improve the accuracy and reliability of LLM outputs and expand the system's capabilities to handle a wider range of attack scenarios.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16928v1](https://arxiv.org/abs/2407.16928v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16928v1](https://browse.arxiv.org/html/2407.16928v1)       |
+| Truncated       | False       |
+| Word Count       | 12045       |

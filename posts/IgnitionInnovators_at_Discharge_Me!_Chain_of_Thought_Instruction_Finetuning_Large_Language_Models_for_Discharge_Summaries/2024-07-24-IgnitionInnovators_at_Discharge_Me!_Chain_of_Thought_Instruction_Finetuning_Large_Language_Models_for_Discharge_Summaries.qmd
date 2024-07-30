@@ -1,0 +1,49 @@
+
+---
+title: "IgnitionInnovators at Discharge Me!: Chain-of-Thought Instruction Finetuning Large Language Models for Discharge Summaries"
+id: "2407.17636v1"
+description: "This paper proposes an LLM-based framework for generating discharge summary sections, improving clinical information accuracy with structured prompts and CoT questions."
+author: An Quang Tang, Xiuzhen Zhang, Minh Ngoc Dinh
+date: "2024-07-24"
+image: "https://browse.arxiv.org/html/2407.17636v1/x1.png"
+categories: ['prompt-engineering', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.17636v1/x1.png)
+
+### Summary:
+
+- The paper presents a novel LLM-based framework, Discharge-LLM, for the Discharge Summary Documentation (DSD) task.
+- Discharge-LLM employs modern prompting strategies, such as Chain-of-Thought (CoT), into instruction-finetuning a Mistral Large Language Model (LLM).
+- The framework enhances structural correctness and faithfulness of clinical information in generating the Brief Hospital Course and Discharge Instructions sections of discharge summaries.
+- The paper also introduces three baselines for instruction-finetuning LLMs, corresponding to three prompt variants.
+- The experimental results show that providing well-described context of the generation task and infusing CoT questions into the instructions effectively improve the model's performance.
+
+### Major Findings:
+
+1. The Discharge-LLM framework, which adapts LLM to the DSD task, effectively generates the Brief Hospital Course and Discharge Instructions sections of discharge summaries.
+2. The framework employs three steps: Section Extraction, Radiology Report Selection, and Target Section Generation.
+3. The framework uses heuristics to selectively extract clinical notes information from relevant sections of the discharge summaries.
+4. The framework uses radiology reports as a substitute for the Pertinent Results section, which is often cluttered with excessive laboratory and imaging data.
+5. The framework performs instruction-finetuning on LLM to adapt the model to DSD, using Low-Rank Adaptation (LoRA) for computational feasibility.
+6. The experimental results show that providing well-described context of the generation task and infusing CoT questions into the instructions effectively improve the model's performance.
+
+### Analysis and Critique:
+
+- The paper presents a novel and effective framework for the DSD task, which enhances structural correctness and faithfulness of clinical information in generating the Brief Hospital Course and Discharge Instructions sections of discharge summaries.
+- The framework employs modern prompting strategies, such as Chain-of-Thought (CoT), into instruction-finetuning a Mistral Large Language Model (LLM), which is a significant contribution to the field.
+- The experimental
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.17636v1](https://arxiv.org/abs/2407.17636v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.17636v1](https://browse.arxiv.org/html/2407.17636v1)       |
+| Truncated       | False       |
+| Word Count       | 3701       |

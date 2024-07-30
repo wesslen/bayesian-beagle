@@ -1,0 +1,40 @@
+
+---
+title: "Demystifying Verbatim Memorization in Large Language Models"
+id: "2407.17817v1"
+description: "LLMs memorize verbatim with legal/privacy implications; controlled study shows repetition, later checkpoints, and distributed model states aid memorization. Unlearning methods often fail to remove memorized info while degrading LM quality."
+author: Jing Huang, Diyi Yang, Christopher Potts
+date: "2024-07-25"
+image: "https://browse.arxiv.org/html/2407.17817v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.17817v1/x1.png)
+
+### Summary:
+
+This paper investigates the phenomenon of verbatim memorization in large language models (LLMs), where the models output long sequences of text that are exact matches of their training examples. The authors develop a framework to study this in a controlled setting by continuing pre-training from Pythia checkpoints with injected sequences. They find that non-trivial amounts of repetition are necessary for verbatim memorization, later checkpoints are more likely to verbatim memorize sequences, and the generation of memorized sequences is triggered by distributed model states that encode high-level features. The authors also develop stress tests to evaluate unlearning methods and find that they often fail to remove verbatim memorized information while also degrading the LM. These findings challenge the hypothesis that verbatim memorization stems from specific model weights or mechanisms and suggest that it is intertwined with the LM's general capabilities, making it difficult to isolate and suppress without degrading model quality.
+
+### Major Findings:
+
+1. Non-trivial amounts of repetition are necessary for verbatim memorization to occur in LLMs.
+2. Later (and presumably better) checkpoints are more likely to verbatim memorize sequences, even for out-of-distribution sequences.
+3. The generation of memorized sequences is triggered by distributed model states that encode high-level features and make important use of general language modeling capabilities.
+
+### Analysis and Critique:
+
+The paper provides a valuable contribution to the understanding of verbatim memorization in LLMs, offering a controlled framework for studying this phenomenon. The findings challenge the existing hypothesis that verbatim memorization is due to specific model weights or mechanisms, and instead suggest that it is intertwined with the LM's general capabilities. However, the paper does not address potential solutions to mitigate the negative impacts of verbatim memorization, such as privacy and copyright concerns. Additionally, the study is limited to the Pythia family of models, and further research is needed to determine if these findings generalize to other LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.17817v1](https://arxiv.org/abs/2407.17817v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.17817v1](https://browse.arxiv.org/html/2407.17817v1)       |
+| Truncated       | False       |
+| Word Count       | 14802       |

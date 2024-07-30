@@ -1,0 +1,44 @@
+
+---
+title: "Do LLMs Really Adapt to Domains? An Ontology Learning Perspective"
+id: "2407.19998v1"
+description: "LLMs struggle with domain-specific reasoning but improve with fine-tuning for lexical semantic tasks."
+author: Huu Tan Mai, Cuong Xuan Chu, Heiko Paulheim
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.19998v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.19998v1/x1.png)
+
+### Summary:
+
+This paper investigates the question of whether Large Language Models (LLMs) can adapt to domains and remain consistent in the extraction of structured knowledge, or if they only learn lexical senses instead of reasoning. The authors devise a controlled experiment setup that uses WordNet to synthesize parallel corpora, with English and gibberish terms. They examine the differences in the outputs of LLMs for each corpus in two OL tasks: relation extraction and taxonomy discovery. Empirical results show that off-the-shelf LLMs do not consistently reason over semantic relationships between concepts, and instead leverage senses and their frame. However, fine-tuning improves the performance of LLMs on lexical semantic tasks even when the domain-specific terms are arbitrary and unseen during pre-training, hinting at the applicability of pre-trained LLMs for OL.
+
+### Major Findings:
+
+1. Off-the-shelf LLMs do not consistently reason over semantic relationships between concepts, and instead leverage senses and their frame.
+2. Fine-tuning improves the performance of LLMs on lexical semantic tasks even when the domain-specific terms are arbitrary and unseen during pre-training.
+3. The applicability of pre-trained LLMs for OL is hinted at by the empirical results.
+
+### Analysis and Critique:
+
+1. The study focuses on a limited number of LLMs, and a more comprehensive evaluation of various models would provide a more robust understanding of their capabilities.
+2. The use of gibberish terms may not fully capture the complexity of domain-specific language, and further research is needed to explore the performance of LLMs in real-world domain-specific scenarios.
+3. The study does not address the potential impact of the size of the LLMs on their ability to adapt to domains and reason over semantic relationships.
+4. The authors do not discuss the potential implications of their findings for the development and application of LLMs in various domains.
+5. The study does not explore the potential of other techniques, such as transfer learning or multi-task learning, to improve the performance of LLMs in domain-specific tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.19998v1](https://arxiv.org/abs/2407.19998v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.19998v1](https://browse.arxiv.org/html/2407.19998v1)       |
+| Truncated       | False       |
+| Word Count       | 7696       |

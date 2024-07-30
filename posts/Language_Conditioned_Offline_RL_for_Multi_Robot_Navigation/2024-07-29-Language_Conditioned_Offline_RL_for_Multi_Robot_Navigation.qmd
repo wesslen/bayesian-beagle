@@ -1,0 +1,46 @@
+
+---
+title: "Language-Conditioned Offline RL for Multi-Robot Navigation"
+id: "2407.20164v1"
+description: "This method trains multi-robot navigation policies using LLMs and offline reinforcement learning, requiring minimal data and no simulators, with successful real-world testing."
+author: Steven Morad, Ajay Shankar, Jan Blumenkamp, Amanda Prorok
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.20164v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.20164v1/x1.png)
+
+### Summary:
+
+The paper presents a method for developing navigation policies for multi-robot teams that interpret and follow natural language instructions. The policies are conditioned on embeddings from pretrained Large Language Models (LLMs) and trained via offline reinforcement learning with as little as 20 minutes of randomly-collected data. The experiments on a team of five real robots show that these policies generalize well to unseen commands, indicating an understanding of the LLM latent space. The method requires no simulators or environment models and produces low-latency control policies that can be deployed directly to real robots without finetuning.
+
+### Major Findings:
+
+1. The method enables low-latency multi-agent control through natural language.
+2. A method to generate large amounts of multi-agent training data from a single robot is proposed.
+3. A one-line change to Q-learning improves offline training stability.
+4. The policies can generalize to unseen commands, solely through value estimation.
+5. The first demonstration of offline multi-agent RL on robots in the real-world is presented.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other methods for multi-robot navigation.
+2. The method relies on pretrained LLMs, which may not be available for all languages or domains.
+3. The experiments are limited to a team of five robots, and it is unclear how the method scales to larger teams.
+4. The paper does not discuss the limitations of the offline reinforcement learning approach, such as the need for a large amount of data and the potential for overfitting.
+5. The paper does not provide a detailed analysis of the computational requirements of the method, which is important for real-world deployment.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.20164v1](https://arxiv.org/abs/2407.20164v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20164v1](https://browse.arxiv.org/html/2407.20164v1)       |
+| Truncated       | False       |
+| Word Count       | 8102       |

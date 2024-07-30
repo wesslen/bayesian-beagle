@@ -1,0 +1,47 @@
+
+---
+title: "I Could've Asked That: Reformulating Unanswerable Questions"
+id: "2407.17469v1"
+description: "LLMs struggle to reformulate unanswerable questions; benchmark shows GPT-4 and Llama2-7B succeed only 26% and 12% of the time, respectively."
+author: Wenting Zhao, Ge Gao, Claire Cardie, Alexander M. Rush
+date: "2024-07-24"
+image: "https://browse.arxiv.org/html/2407.17469v1/x1.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.17469v1/x1.png)
+
+### Summary:
+- The article discusses the limitations of existing large language models (LLMs) in reformulating unanswerable questions, which reduces their overall utility for users seeking information from unfamiliar documents.
+- The authors introduce CouldAsk, an evaluation benchmark for document-grounded question answering, designed to study the reformulation of unanswerable questions.
+- The benchmark includes a combination of existing and new datasets, covering a wide range of domains to address different types of presuppositions.
+- The authors evaluate state-of-the-art open-source and proprietary LLMs on CouldAsk, revealing that GPT-4 and Llama2-7B successfully reformulate questions only 26% and 12% of the time, respectively.
+- Error analysis shows that 62% of unsuccessful reformulations stem from the models merely rephrasing the questions or even generating identical questions.
+- The authors release the benchmark and code to reproduce the experiments.
+
+### Major Findings:
+1. Existing LLMs have limited capabilities in reformulating unanswerable questions, with success rates ranging from 7.13% to 26.21%.
+2. GPT-4 and Llama2-7B, two state-of-the-art models, successfully reformulate questions only 26% and 12% of the time, respectively.
+3. Most unsuccessful reformulations result from models rephrasing or repeating the original questions.
+4. LLMs are worse at reformulating questions requiring global edits compared to those solely needing local edits.
+
+### Analysis and Critique:
+- The study highlights the need for improved LLMs that can effectively reformulate unanswerable questions, as current models have limited success rates.
+- The authors' focus on a user-centered approach, emphasizing the generation of relevant questions rather than summaries, is a valuable contribution to the field.
+- The release of the CouldAsk benchmark and code for reproducing the experiments is a significant step towards fostering further research in this area.
+- However, the study could benefit from a more in-depth analysis of the factors contributing to the models' limited success in reformulating questions, such as the impact of the models' architecture, training data, and prompting methods.
+- Additionally
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.17469v1](https://arxiv.org/abs/2407.17469v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.17469v1](https://browse.arxiv.org/html/2407.17469v1)       |
+| Truncated       | False       |
+| Word Count       | 1972       |

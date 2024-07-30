@@ -1,0 +1,46 @@
+
+---
+title: "Revisiting Who's Harry Potter: Towards Targeted Unlearning from a Causal Intervention Perspective"
+id: "2407.16997v1"
+description: "TL;DR: This paper improves the Who's Harry Potter method for targeted unlearning in language models, achieving competitive performance."
+author: Yujian Liu, Yang Zhang, Tommi Jaakkola, Shiyu Chang
+date: "2024-07-24"
+image: "https://browse.arxiv.org/html/2407.16997v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.16997v1/x1.png)
+
+### Summary:
+
+The paper "Revisiting Who’s Harry Potter: Towards Targeted Unlearning from a Causal Intervention Perspective" explores the task of targeted unlearning in large language models (LLMs). The authors introduce a new task where the goal is to unlearn only the information about a specific target, rather than everything in the unlearning documents. They argue that a successful unlearning should not output gibberish, fabricate facts about the unlearning target, or release factual information under jailbreak attacks.
+
+The authors propose a causal intervention framework for targeted unlearning, where the knowledge of the unlearning target is modeled as a confounder between LLM input and output, and the unlearning process as a deconfounding process. This framework justifies and extends the Who’s Harry Potter (WHP) method, deriving a simple unlearning algorithm that includes WHP as a special case.
+
+Experiments on existing and new datasets show that the proposed approach achieves competitive performance in all criteria without explicitly optimizing for them. The code is available at <https://github.com/UCSB-NLP-Chang/causal_unlearn.git>.
+
+### Major Findings:
+
+1. The paper introduces a new task of targeted unlearning in LLMs, where the goal is to unlearn only the information about a specific target.
+2. The authors propose a causal intervention framework for targeted unlearning, which justifies and extends the WHP method.
+3. The proposed approach achieves competitive performance in all criteria without explicitly optimizing for them.
+
+### Analysis and Critique:
+
+The paper presents an interesting and important task of targeted unlearning in LLMs. The proposed causal intervention framework provides a principled way to unlearn specific information while retaining other knowledge. The experiments demonstrate the effectiveness of the proposed approach on both existing and new datasets.
+
+However, there are some limitations and potential issues with the proposed approach. First, the paper does not provide a theoretical guarantee of unlearning of the target knowledge. Instead, it measures the performance of all methods under adversarial attacks to empirically evaluate the worst-case unlearning performance. Therefore, the conclusions drawn in this paper pertain specifically to the two jailbreak attacks being considered. Second, the proposed approach may still result
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.16997v1](https://arxiv.org/abs/2407.16997v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.16997v1](https://browse.arxiv.org/html/2407.16997v1)       |
+| Truncated       | False       |
+| Word Count       | 11131       |

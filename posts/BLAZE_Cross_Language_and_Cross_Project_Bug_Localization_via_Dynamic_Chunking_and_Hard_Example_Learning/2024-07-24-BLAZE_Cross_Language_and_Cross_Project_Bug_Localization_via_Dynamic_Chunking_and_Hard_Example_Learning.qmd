@@ -1,0 +1,42 @@
+
+---
+title: "BLAZE: Cross-Language and Cross-Project Bug Localization via Dynamic Chunking and Hard Example Learning"
+id: "2407.17631v1"
+description: "BLAZE, a GPT-based approach, improves bug localization with dynamic chunking and hard example learning, outperforming six baselines on three benchmark datasets."
+author: Partha Chakraborty, Mahmoud Alfadel, Meiyappan Nagappan
+date: "2024-07-24"
+image: "https://browse.arxiv.org/html/2407.17631v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.17631v1/x1.png)
+
+### Summary:
+BLAZE is a novel approach for cross-language and cross-project bug localization that employs dynamic chunking and hard example learning. It addresses the limitations of existing bug localization tools, which often rely on deep learning techniques and face challenges in cross-project applicability and effectiveness in multi-language environments. BLAZE dynamically segments source code to minimize continuity loss and fine-tunes a GPT-based model using challenging bug cases to enhance cross-project and cross-language bug localization. The BeetleBox dataset, created to support BLAZE, comprises 26,321 bugs from 29 large and thriving open-source projects across five different programming languages. Evaluations of BLAZE on three benchmark datasets demonstrate substantial improvements compared to six state-of-the-art baselines.
+
+### Major Findings:
+1. BLAZE achieves up to a 120% increase in Top 1 accuracy, 144% in Mean Average Precision (MAP), and 100% in Mean Reciprocal Rank (MRR) compared to six state-of-the-art baselines.
+2. The dynamic chunking technique in BLAZE overcomes the limitation of transformer-based approaches, which have a limited context window.
+3. BLAZE's fine-tuning by learning from hard examples enhances model performance in cross-language, cross-project settings.
+4. The BeetleBox dataset is the largest to-date cross-language and cross-project bug localization dataset, supporting the evaluation of BLAZE.
+
+### Analysis and Critique:
+BLAZE presents a promising approach for cross-language and cross-project bug localization, addressing the limitations of existing tools and demonstrating significant improvements in performance. However, there are potential areas for further research and improvement:
+
+1. The evaluation of BLAZE is primarily focused on open-source projects, and its performance in industrial or proprietary software projects remains to be explored.
+2. The BeetleBox dataset, while extensive, may not cover all possible programming languages and project types, potentially limiting the generalizability of BLAZE's performance.
+3. The dynamic chunking technique in BLAZE may not always capture the most relevant context for bug localization, as
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.17631v1](https://arxiv.org/abs/2407.17631v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.17631v1](https://browse.arxiv.org/html/2407.17631v1)       |
+| Truncated       | False       |
+| Word Count       | 9812       |

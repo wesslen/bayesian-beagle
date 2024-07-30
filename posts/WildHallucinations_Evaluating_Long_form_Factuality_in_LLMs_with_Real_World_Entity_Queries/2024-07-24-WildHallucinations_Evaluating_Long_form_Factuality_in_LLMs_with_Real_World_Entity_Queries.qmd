@@ -1,0 +1,40 @@
+
+---
+title: "WildHallucinations: Evaluating Long-form Factuality in LLMs with Real-World Entity Queries"
+id: "2407.17468v1"
+description: "LLMs hallucinate more on entities without Wikipedia pages and vary by domain; retrieval component slightly reduces hallucinations."
+author: Wenting Zhao, Tanya Goyal, Yu Ying Chiu, Liwei Jiang, Benjamin Newman, Abhilasha Ravichander, Khyathi Chandu, Ronan Le Bras, Claire Cardie, Yuntian Deng, Yejin Choi
+date: "2024-07-24"
+image: "https://browse.arxiv.org/html/2407.17468v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.17468v1/x1.png)
+
+### Summary:
+
+The paper introduces WildHallucinations, a benchmark for evaluating the factuality of large language models (LLMs) using entities from diverse domains such as computing, culture, finance, and more, collected from real-world user-chatbot interactions. The benchmark is designed to address the gap in existing evaluation benchmarks that do not cover the diverse domains of knowledge that real-world users seek information about. The benchmark is constructed by extracting entities from the WildChat dataset, which comprises one million user-chatbot interactions in the wild. Notably, 52% of the extracted entities do not have corresponding Wikipedia pages. The benchmark evaluates LLMs by prompting them to generate descriptive texts about each entity and identifying hallucinations in these generated descriptions using FActScore, an automatic fact-checking method for free-text generations. The benchmark is evaluated on 118,785 generations from 15 LLMs on 7,919 entities. The findings reveal that LLMs exhibit varying hallucination rates across different domains, with higher rates in the people and finance domains, and lower rates in geographic and computing-related domains. LLMs consistently hallucinate more on entities without Wikipedia pages compared to those with them. Retrieval helps LLMs reduce hallucinations to some extent, but it is not sufficient to eliminate them entirely.
+
+### Major Findings:
+
+1. LLMs exhibit varying hallucination rates across different domains, with higher rates in the people and finance domains, and lower rates in geographic and computing-related domains.
+2. LLMs consistently hallucinate more on entities without Wikipedia pages compared to those with them.
+3. Retrieval helps LLMs reduce hallucinations to some extent, but it is not sufficient to eliminate them entirely.
+
+### Analysis and Critique:
+
+The paper presents a novel benchmark for evaluating the factuality of LLMs using entities from diverse domains collected from real-world user-chatbot interactions. The benchmark addresses the gap in existing evaluation benchmarks that do not cover the diverse domains of knowledge that real-world users seek information about. The benchmark is evaluated on a diverse set of state-of-the-art LLMs, including standard LLMs and retrieval-augmented generation (RAG) models. The
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.17468v1](https://arxiv.org/abs/2407.17468v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.17468v1](https://browse.arxiv.org/html/2407.17468v1)       |
+| Truncated       | False       |
+| Word Count       | 6178       |

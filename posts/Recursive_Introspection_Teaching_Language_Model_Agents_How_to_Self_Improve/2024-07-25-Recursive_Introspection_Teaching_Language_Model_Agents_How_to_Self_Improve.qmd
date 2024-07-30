@@ -1,0 +1,40 @@
+
+---
+title: "Recursive Introspection: Teaching Language Model Agents How to Self-Improve"
+id: "2407.18219v1"
+description: "RISE enables LLMs to improve math reasoning with more turns, outperforming single-turn strategies and scaling well with model capability."
+author: Yuxiao Qu, Tianjun Zhang, Naman Garg, Aviral Kumar
+date: "2024-07-25"
+image: "https://browse.arxiv.org/html/2407.18219v1/extracted/5751343/overview.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.18219v1/extracted/5751343/overview.png)
+
+**Summary:**
+
+The paper introduces RISE (Recursive Introspection), a novel approach for fine-tuning large language models (LLMs) to enable them to improve their responses over multiple turns. RISE is designed to address the challenge of test-time self-improvement, which is not exhibited by even the strongest proprietary LLMs. The approach involves an iterative fine-tuning procedure that teaches the model to alter its response after unsuccessful attempts to solve a hard test-time problem, with optional additional environment feedback. RISE poses fine-tuning for a single-turn prompt as solving a multi-turn Markov decision process (MDP), where the initial state is the prompt. The paper draws inspiration from principles in online imitation learning and reinforcement learning to propose strategies for multi-turn data collection and training. The experiments demonstrate that RISE enables Llama2, Llama3, and Mistral models to improve themselves with more turns on math reasoning tasks, outperforming several single-turn strategies given an equal amount of inference-time computation. RISE also scales well, often attaining larger benefits with more capable models. The analysis shows that RISE makes meaningful improvements to responses without disrupting one-turn abilities.
+
+**Major Findings:**
+
+1. RISE enables Llama2, Llama3, and Mistral models to improve themselves with more turns on math reasoning tasks, outperforming several single-turn strategies given an equal amount of inference-time computation.
+2. RISE scales well, often attaining larger benefits with more capable models.
+3. The analysis shows that RISE makes meaningful improvements to responses without disrupting one-turn abilities.
+
+**Analysis and Critique:**
+
+The paper presents a promising approach to enable test-time self-improvement in LLMs. The experiments demonstrate the effectiveness of RISE in improving the performance of LLMs on math reasoning tasks. However, the paper does not discuss the potential limitations or shortcomings of the approach. For instance, it is unclear how RISE would perform on other types of tasks beyond math reasoning. Additionally, the paper does not provide a detailed comparison with other fine-tuning methods, which could help to better understand the advantages and disadvantages of RISE. Furthermore,
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.18219v1](https://arxiv.org/abs/2407.18219v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.18219v1](https://browse.arxiv.org/html/2407.18219v1)       |
+| Truncated       | False       |
+| Word Count       | 14314       |

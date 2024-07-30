@@ -1,0 +1,46 @@
+
+---
+title: "When to Stop? Towards Efficient Code Generation in LLMs with Excess Token Prevention"
+id: "2407.20042v1"
+description: "CodeFast accelerates Code LLMs in code generation, improving speed up to 452% without compromising quality."
+author: Lianghong Guo, Yanlin Wang, Ensheng Shi, Wanjun Zhong, Hongyu Zhang, Jiachi Chen, Ruikai Zhang, Yuchi Ma, Zibin Zheng
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.20042v1/x1.png"
+categories: ['programming', 'robustness', 'architectures', 'production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.20042v1/x1.png)
+
+### Summary:
+
+The paper "When to Stop? Towards Efficient Code Generation in LLMs with Excess Token Prevention" addresses the issue of inefficient code generation in large language models (LLMs) due to the continual generation of excess tokens. This problem not only wastes computational resources but also leads to significant energy consumption and harms developer productivity. The authors propose a solution called CodeFast, an inference acceleration approach for Code LLMs that terminates the inference process when unnecessary excess tokens are detected.
+
+CodeFast consists of three main components: an automatic data construction framework to obtain training data, a unified lightweight model called GenGuard to predict whether to terminate inference at the current step, and the enhancement of Code LLM with GenGuard to accelerate its inference in code generation tasks. The authors conducted extensive experiments with CodeFast on five representative Code LLMs across four widely used code generation datasets, demonstrating significant improvements in inference speed without compromising the quality of generated code.
+
+### Major Findings:
+
+1. CodeFast can significantly improve the inference speed of various Code LLMs in code generation, ranging from 34% to 452%.
+2. CodeFast is stable across different parameter settings and can generalize to untrained datasets.
+3. The proposed approach is effective in addressing the excess token generation issue, which is a significant bottleneck in the inference speed of Code LLMs for code generation tasks.
+
+### Analysis and Critique:
+
+The paper presents a well-structured and comprehensive study on the excess token generation issue in Code LLMs and proposes a novel solution to address this problem. The authors provide a detailed description of their approach, along with extensive experiments and results to support their claims. However, there are a few potential limitations and areas for improvement:
+
+1. The paper focuses on the excess token generation issue in the context of code generation tasks. It would be interesting to explore whether this issue also affects other tasks, such as text summarization or translation, and if the proposed solution can be adapted to address these problems.
+2. The authors mention that their approach is stable across different parameter settings, but they do not provide a detailed analysis of the impact of varying these parameters on the performance of CodeFast. A more comprehensive analysis of the sensitivity of CodeFast to different parameter settings would be beneficial.
+3.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.20042v1](https://arxiv.org/abs/2407.20042v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20042v1](https://browse.arxiv.org/html/2407.20042v1)       |
+| Truncated       | False       |
+| Word Count       | 12130       |

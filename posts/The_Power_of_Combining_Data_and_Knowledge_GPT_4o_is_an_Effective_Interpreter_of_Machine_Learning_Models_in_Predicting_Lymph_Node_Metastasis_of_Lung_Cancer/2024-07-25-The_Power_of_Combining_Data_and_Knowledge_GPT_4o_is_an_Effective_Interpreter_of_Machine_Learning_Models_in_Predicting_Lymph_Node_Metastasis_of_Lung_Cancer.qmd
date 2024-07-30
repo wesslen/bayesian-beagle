@@ -1,0 +1,40 @@
+
+---
+title: "The Power of Combining Data and Knowledge: GPT-4o is an Effective Interpreter of Machine Learning Models in Predicting Lymph Node Metastasis of Lung Cancer"
+id: "2407.17900v1"
+description: "ChatGPT can extract info from radiology reports, rivaling traditional systems; prior medical knowledge can enhance some extraction tasks but may worsen others."
+author: Danqing Hu, Bing Liu, Xiaofeng Zhu, Nan Wu
+date: "2024-07-25"
+image: "../../../bayesian-beagle.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+The study explores the use of the large language model, ChatGPT, for zero-shot information extraction from radiological reports. The authors design a prompt template and generate prompts by combining the template with CT reports to obtain responses from ChatGPT. A post-processing module is developed to transform the responses into structured extraction results. The study aims to investigate whether ChatGPT can extract information from the radiological reports and improve performance by adding prior medical knowledge to the prompt template.
+
+### Major Findings:
+
+1. ChatGPT can achieve competitive performances for some extraction tasks like tumor location, tumor long and short diameters compared with the baseline information extraction system.
+2. By adding some prior medical knowledge to the prompt template, extraction tasks about tumor spiculations and lobulations obtain significant improvements. However, tasks about tumor density and lymph node status do not achieve better performances.
+3. The experimental results indicate that ChatGPT can achieve competitive information extraction for radiological reports in a zero-shot manner. Adding prior medical knowledge as instructions can further improve performances for some extraction tasks but may lead to worse performances for some complex extraction tasks.
+
+### Analysis and Critique:
+
+The study provides a novel approach to extract information from radiological reports using ChatGPT. The use of a large language model for zero-shot information extraction is a promising approach, as it does not require any corpus annotation and model fine-tuning. However, the study has some limitations. The IE performance of ChatGPT is heavily dependent on its understanding and reasoning ability, and it may experience serious challenges for more difficult questions such as tumor density and lymph node status. Additionally, the consistency of ChatGPT's outputs is critical for the IE, and the study does not address the issue of protecting the privacy of medical data. The study also does not provide a comparison with other large language models or traditional IE approaches. Further research is needed to address these limitations and explore the potential of using large language models for information extraction from radiological reports.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-07-30       |
+| Abstract | [https://arxiv.org/abs/2407.17900v1](https://arxiv.org/abs/2407.17900v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.17900v1](https://browse.arxiv.org/html/2407.17900v1)       |
+| Truncated       | False       |
+| Word Count       | 4823       |

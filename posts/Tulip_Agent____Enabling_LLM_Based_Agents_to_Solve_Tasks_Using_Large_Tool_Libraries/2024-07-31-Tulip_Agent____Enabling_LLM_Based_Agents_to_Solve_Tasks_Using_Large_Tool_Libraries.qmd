@@ -1,0 +1,48 @@
+
+---
+title: "Tulip Agent -- Enabling LLM-Based Agents to Solve Tasks Using Large Tool Libraries"
+id: "2407.21778v1"
+description: "Tulip Agent: A new architecture for autonomous agents with a large tool library, reducing inference costs and enabling tool adaptation."
+author: Felix Ocker, Daniel Tanneberg, Julian Eggert, Michael Gienger
+date: "2024-07-31"
+image: "../../img/2407.21778v1/image_1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.21778v1/image_1.png)
+
+**Summary:**
+
+The Tulip Agent is an architecture for autonomous LLM-based agents that can access a large number of tools in a tool library. Unlike state-of-the-art implementations, the Tulip Agent does not encode the descriptions of all available tools in the system prompt, which counts against the model’s context window, or embed the entire prompt for retrieving suitable tools. Instead, the Tulip Agent can recursively search for suitable tools in its extensible tool library, implemented as a vector store. This architecture significantly reduces inference costs, allows using even large tool libraries, and enables the agent to adapt and extend its set of tools. The architecture is evaluated with several ablation studies in a mathematics context and demonstrated to be generalizable with an application to robotics.
+
+**Major Findings:**
+
+1. The Tulip Agent architecture significantly reduces inference costs, allowing the use of even large tool libraries and enabling the agent to adapt and extend its set of tools.
+2. The Tulip Agent architecture is demonstrated to be generalizable with an application to robotics.
+3. The Tulip Agent architecture is evaluated with several ablation studies in a mathematics context.
+
+**Analysis and Critique:**
+
+The Tulip Agent architecture presents a promising approach for enabling LLM-based agents to access and use large tool libraries. However, there are several potential limitations and areas for further research.
+
+First, the Tulip Agent architecture relies on the ability of the LLM to search for and retrieve suitable tools from the tool library. This may be challenging for LLMs with limited context windows or limited ability to reason about the relationships between tools and tasks.
+
+Second, the Tulip Agent architecture assumes that the tool library is well-structured and that the tools are well-documented. In practice, tool libraries may be incomplete, inconsistent, or otherwise imperfect, which could impact the performance of the Tulip Agent.
+
+Third, the Tulip Agent architecture does not address the problem of tool selection, which is a critical aspect of tool use. In practice, an agent may need to select from a large number of potentially relevant tools, and the Tulip Agent architecture does not provide a mechanism for doing so.
+
+Finally, the Tulip Agent architecture is evaluated in a limited set of
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.21778v1](https://arxiv.org/abs/2407.21778v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.21778v1](https://browse.arxiv.org/html/2407.21778v1)       |
+| Truncated       | False       |
+| Word Count       | 17475       |

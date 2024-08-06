@@ -1,0 +1,39 @@
+
+---
+title: "ThinkRepair: Self-Directed Automated Program Repair"
+id: "2407.20898v1"
+description: "ThinkRepair, a self-directed LLM-based APR, outperforms SOTA APRs in fixing bugs, improving baselines by 27%-344.4% on Defects4J V1.2 and fixing 12-65 more bugs on Defects4J V2.0."
+author: Xin Yin, Chao Ni, Shaohua Wang, Zhenhao Li, Limin Zeng, Xiaohu Yang
+date: "2024-07-30"
+image: "https://browse.arxiv.org/html/2407.20898v1/x1.png"
+categories: ['robustness', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.20898v1/x1.png)
+
+### Summary:
+
+The paper introduces ThinkRepair, a novel self-directed large language model (LLM)-based automated program repair (APR) approach. Unlike traditional APR techniques, ThinkRepair leverages the powerful reasoning capabilities of LLMs to fix bugs without relying on historical bug fixes. The approach consists of two main phases: the collection phase and the fixing phase. In the collection phase, ThinkRepair constructs chains of thoughts that constitute pre-fixed knowledge, while in the fixing phase, it fixes a bug using CoT-based prompting and few-shot learning. The paper presents the experimental design, including studied datasets, baselines, evaluation metrics, and experiment settings. The results indicate the priority of ThinkRepair over baselines, with the approach fixing 98 bugs and improving baselines by 27%-344.4% on Defects4J V1.2 and exclusively fixing 32 bugs that the SOTAs cannot fix.
+
+### Major Findings:
+1. ThinkRepair is a novel self-directed LLM-based APR approach that advances LLM-based APR for program bugs, achieving comparable and complementary results as other APR directions.
+2. The approach enhances analyzing and reasoning capabilities for understanding the semantics of functions through few-shot CoT and a framework with automated chains of thoughts collection, few-shot selection, and interaction feedback.
+3. Extensive evaluations of ThinkRepair against current state-of-the-art NMT-based and LLM-based tools on widely studied datasets (Defects4J and QuixBugs) and a further study on data leakage in ThinkRepair by collecting new datasets from real-world projects demonstrate its effectiveness.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to automated program repair using LLMs. The use of few-shot CoT and a self-directed framework for automated chains of thoughts collection, few-shot selection, and interaction feedback is a novel contribution to the field. The experimental results demonstrate the effectiveness of ThinkRepair in fixing bugs and improving upon existing APR approaches. However, the paper does not discuss the limitations or potential biases of the approach, nor does it address any methodological issues or conflicting evidence. Additionally, the paper does not provide any information on
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.20898v1](https://arxiv.org/abs/2407.20898v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20898v1](https://browse.arxiv.org/html/2407.20898v1)       |
+| Truncated       | False       |
+| Word Count       | 13579       |

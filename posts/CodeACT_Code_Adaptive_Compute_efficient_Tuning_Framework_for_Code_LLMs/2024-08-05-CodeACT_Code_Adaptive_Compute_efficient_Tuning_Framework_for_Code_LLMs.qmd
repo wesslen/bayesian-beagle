@@ -1,0 +1,40 @@
+
+---
+title: "CodeACT: Code Adaptive Compute-efficient Tuning Framework for Code LLMs"
+id: "2408.02193v1"
+description: "CodeACT improves open-source LLMs' performance and efficiency by optimizing data selection and training, reducing computational requirements."
+author: Weijie Lv, Xuan Xia, Sheng-Jun Huang
+date: "2024-08-05"
+image: "https://browse.arxiv.org/html/2408.02193v1/extracted/5773924/figs/CDAS.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02193v1/extracted/5773924/figs/CDAS.png)
+
+### Summary:
+
+The Code Adaptive Compute-efficient Tuning (CodeACT) framework is proposed to bridge the performance gap between open-source and closed-source models in code-related tasks. The framework introduces the Complexity and Diversity Aware Sampling (CDAS) method for selecting high-quality training data and the Dynamic Pack padding strategy to reduce computational resource usage. Experimental results show that CodeACT-DeepSeek-Coder-6.7B, fine-tuned on only 40% of the EVOL-Instruct data, achieves an 8.6% performance increase on HumanEval, reduces training time by 78%, and decreases peak GPU memory usage by 27%.
+
+### Major Findings:
+
+1. The CodeACT framework significantly improves the performance and efficiency of open-source models in code-related tasks.
+2. The CDAS method effectively selects high-quality training data by considering both complexity and diversity.
+3. The Dynamic Pack padding strategy reduces computational resource usage by minimizing padding tokens during training.
+
+### Analysis and Critique:
+
+The CodeACT framework presents a promising approach to improving the performance and efficiency of open-source models in code-related tasks. However, the framework's reliance on the CDAS method for data selection raises concerns about the potential for bias in the selected data. The CDAS method's use of the base LLM for data selection may inadvertently perpetuate any biases present in the base model. Additionally, the framework's focus on code-related tasks may limit its applicability to other domains. Further research is needed to evaluate the framework's performance in other domains and to address potential biases in the data selection process.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02193v1](https://arxiv.org/abs/2408.02193v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02193v1](https://browse.arxiv.org/html/2408.02193v1)       |
+| Truncated       | False       |
+| Word Count       | 8346       |

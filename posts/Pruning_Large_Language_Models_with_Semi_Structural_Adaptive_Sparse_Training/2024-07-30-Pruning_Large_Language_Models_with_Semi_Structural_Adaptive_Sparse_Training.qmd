@@ -1,0 +1,43 @@
+
+---
+title: "Pruning Large Language Models with Semi-Structural Adaptive Sparse Training"
+id: "2407.20584v1"
+description: "AST, a novel training pipeline, narrows the performance gap between dense and sparse models, compressing language models up to 16x with minimal loss."
+author: Weiyu Huang, Guohao Jian, Yuezhou Hu, Jun Zhu, Jianfei Chen
+date: "2024-07-30"
+image: "https://browse.arxiv.org/html/2407.20584v1/extracted/5756562/4.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.20584v1/extracted/5756562/4.png)
+
+### Summary:
+
+The paper introduces a novel training pipeline called Adaptive Sparse Trainer (AST) for semi-structured sparse models. AST distills knowledge from pruned model weights to prevent overfitting and ensure a stable training process. It also allows the model to adaptively select better lottery tickets (masks) during training. The method significantly narrows the performance gap between dense and semi-structured sparse models while maintaining limited computational cost. When combined with existing quantization methods, AST can compress language models by up to 16x compared to dense FP32 precision models with minimal performance loss.
+
+### Major Findings:
+
+1. AST outperforms previous state-of-the-art methods by reducing the zero-shot accuracy gap between dense and semi-structured sparse models to 1.12% across multiple zero-shot tasks on Llama2-7B, using less than 0.4% of the pretraining tokens.
+2. AST allows the model to transition smoothly from a dense to a sparse state, benefiting the training process while finding the most suitable global connectivity pattern.
+3. Adding extra well-initialized parameters can further enhance model performance with only a small increase in memory footprint.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other state-of-the-art methods, making it difficult to assess the true performance of AST.
+2. The paper does not discuss the potential limitations or shortcomings of the proposed method, such as the computational cost of training or the generalizability of the results to other tasks or datasets.
+3. The paper does not provide a clear explanation of how the method can be applied to other types of models or tasks, limiting its potential impact.
+4. The paper does not discuss the potential ethical implications of the proposed method, such as the potential for misuse or the need for responsible AI practices.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.20584v1](https://arxiv.org/abs/2407.20584v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20584v1](https://browse.arxiv.org/html/2407.20584v1)       |
+| Truncated       | False       |
+| Word Count       | 6878       |

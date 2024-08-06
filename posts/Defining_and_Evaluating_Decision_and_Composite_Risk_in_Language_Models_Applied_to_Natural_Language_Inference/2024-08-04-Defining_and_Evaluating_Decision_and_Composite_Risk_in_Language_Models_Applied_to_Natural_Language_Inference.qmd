@@ -1,0 +1,44 @@
+
+---
+title: "Defining and Evaluating Decision and Composite Risk in Language Models Applied to Natural Language Inference"
+id: "2408.01935v1"
+description: "This paper proposes a framework to measure and mitigate risks in LLMs like ChatGPT, arising from misplaced confidence, improving their performance."
+author: Ke Shen, Mayank Kejriwal
+date: "2024-08-04"
+image: "https://browse.arxiv.org/html/2408.01935v1/extracted/5772970/risk-coverage.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.01935v1/extracted/5772970/risk-coverage.png)
+
+### Summary:
+
+This paper addresses the asymmetry in understanding the comprehensive risk of large language models (LLMs) by defining two types of risk: decision and composite risk. The authors propose an experimental framework consisting of a two-level inference architecture and appropriate metrics for measuring such risks in both discriminative and generative LLMs. The first level relies on a decision rule that determines whether the underlying language model should abstain from inference. The second level (which applies if the model does not abstain) is the model’s inference. Detailed experiments on four natural language commonsense reasoning datasets using both an open-source ensemble-based RoBERTa model and ChatGPT demonstrate the practical utility of the evaluation framework.
+
+### Major Findings:
+
+1. The proposed framework can get an LLM to confidently respond to an extra 20.1% of low-risk inference tasks that other methods might misclassify as high-risk.
+2. The framework can help an LLM skip 19.8% of high-risk tasks, which would have been answered incorrectly.
+3. The study highlights the importance of considering both under-confidence and over-confidence in LLMs, as less well-performing confidence calibration can lead to problems of both.
+
+### Analysis and Critique:
+
+The paper presents a novel risk-centric evaluation framework for LLMs, which is a significant contribution to the field. The proposed framework effectively addresses the asymmetry in understanding the comprehensive risk of LLMs by defining and measuring decision and composite risk. The experimental results demonstrate the practical utility of the framework in improving the performance of LLMs on natural language inference tasks.
+
+However, the paper could benefit from a more in-depth discussion of the limitations and potential biases of the proposed framework. Additionally, the authors could explore the application of the framework to other types of LLMs and tasks beyond natural language inference.
+
+Overall, the paper is well-structured, coherent, and effectively communicates the essential information from the academic article. The major findings are clearly highlighted, and the analysis and critique provide valuable insights into the strengths and potential areas for improvement in the proposed framework.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.01935v1](https://arxiv.org/abs/2408.01935v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.01935v1](https://browse.arxiv.org/html/2408.01935v1)       |
+| Truncated       | False       |
+| Word Count       | 9495       |

@@ -1,0 +1,44 @@
+
+---
+title: "Improving Faithfulness of Large Language Models in Summarization via Sliding Generation and Self-Consistency"
+id: "2407.21443v1"
+description: "SliSum improves LLM summarization faithfulness via sliding windows and self-consistency, without fine-tuning or extra resources."
+author: Taiji Li, Zhi Li, Yin Zhang
+date: "2024-07-31"
+image: "https://browse.arxiv.org/html/2407.21443v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.21443v1/x1.png)
+
+### Summary:
+
+The paper proposes a novel summary generation strategy called SliSum, which aims to improve the faithfulness of large language models (LLMs) in both short and long text summarization. SliSum utilizes the ideas of sliding windows and self-consistency to generate local summaries for overlapping windows in the source article. The statements generated more times by LLMs are considered more faithful and important to the source article. SliSum then aggregates all local summaries using clustering and majority voting algorithms to produce a more faithful summary of the entire article.
+
+### Major Findings:
+
+1. SliSum significantly improves the faithfulness of diverse LLMs, including LLaMA-2, Claude-2, and GPT-3.5, in both short and long text summarization.
+2. SliSum maintains the fluency and informativeness of LLMs without additional fine-tuning and resources.
+3. SliSum brings three major benefits: (1) sliding window provides LLMs with more diverse and adequate information, (2) the filtration and aggregation based on self-consistency ingeniously mitigate the self-contradiction problem, and (3) the combination of sliding windows and self-consistency impels LLMs to process the entire article more fairly and faithfully.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to improving the faithfulness of LLMs in summarization tasks. The use of sliding windows and self-consistency is a novel idea that addresses the issue of position bias and performance degradation in long context scenarios. The extensive experiments conducted in the paper demonstrate the effectiveness of SliSum in improving the faithfulness of LLMs while maintaining their fluency and informativeness.
+
+However, the paper does not discuss the potential limitations or shortcomings of SliSum. For instance, the paper does not mention the computational cost of SliSum or its impact on the inference time of LLMs. Additionally, the paper does not provide a comparison of SliSum with other post-processing models or the CoT technique. It would be interesting to see how SliSum compares with these methods in terms of performance and computational cost.
+
+Furthermore, the paper does not discuss the potential impact of the hyperparameters in SliSum
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.21443v1](https://arxiv.org/abs/2407.21443v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.21443v1](https://browse.arxiv.org/html/2407.21443v1)       |
+| Truncated       | False       |
+| Word Count       | 7621       |

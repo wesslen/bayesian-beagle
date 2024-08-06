@@ -1,0 +1,44 @@
+
+---
+title: "Cost-Effective Hallucination Detection for LLMs"
+id: "2407.21424v1"
+description: "LLMs can hallucinate. This work proposes a calibrated multi-scoring framework for hallucination detection, achieving top performance across various tasks and models."
+author: Simon Valentin, Jinmiao Fu, Gianluca Detommaso, Shaoyuan Xu, Giovanni Zappella, Bryan Wang
+date: "2024-07-31"
+image: "https://browse.arxiv.org/html/2407.21424v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.21424v1/x1.png)
+
+### Summary:
+
+This paper presents a framework for detecting hallucinations in the outputs of any large language model (LLM) in a model-agnostic manner. The authors propose a scoring function to model the probability that a given output text contains a hallucination, conditioned on the input. They evaluate a variety of scores proposed in the literature for hallucination detection on several metrics, across multiple datasets encompassing question answering, fact checking, and summarization tasks. The authors introduce multi-scoring, a novel approach that aggregates multiple complementary scores and outperforms individual scores. Furthermore, they propose cost-effective multi-scoring, which finds the subset of best-performing scores for any fixed cost budget, and combines them in a multi-scoring fashion. The empirical demonstrations reveal that cost-effective multi-scoring not only matches but often surpasses the performance of individual scores that incur significantly higher costs.
+
+### Major Findings:
+
+1. The authors benchmark a variety of hallucination detection methods across the literature on several metrics, over different datasets and LLMs.
+2. They introduce multi-scoring, a novel approach that aggregates multiple complementary scores and outperforms individual scores.
+3. They further propose cost-effective multi-scoring, which optimally balances detection performance and computational constraints.
+
+### Analysis and Critique:
+
+1. The paper provides a comprehensive evaluation of various hallucination detection methods, which can be useful for practitioners and researchers in the field.
+2. The proposed multi-scoring and cost-effective multi-scoring approaches are promising, as they can improve the performance of hallucination detection while maintaining a lower cost footprint.
+3. However, the paper does not discuss the limitations of the proposed methods, such as the potential for overfitting to specific datasets or the generalizability of the results to other types of LLMs.
+4. Additionally, the paper does not provide a detailed comparison with other state-of-the-art hallucination detection methods, which could help to better understand the strengths and weaknesses of the proposed approaches.
+5. The paper could also benefit from a more in-depth discussion of the implications of hallucinations in LLMs, such as their impact on downstream tasks and the potential risks associated with deploying LLMs in real-
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.21424v1](https://arxiv.org/abs/2407.21424v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.21424v1](https://browse.arxiv.org/html/2407.21424v1)       |
+| Truncated       | False       |
+| Word Count       | 8476       |

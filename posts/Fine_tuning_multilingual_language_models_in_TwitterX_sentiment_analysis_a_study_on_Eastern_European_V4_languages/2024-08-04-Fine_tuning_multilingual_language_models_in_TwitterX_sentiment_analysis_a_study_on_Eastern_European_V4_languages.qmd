@@ -1,0 +1,45 @@
+
+---
+title: "Fine-tuning multilingual language models in Twitter/X sentiment analysis: a study on Eastern-European V4 languages"
+id: "2408.02044v1"
+description: "LLMs fine-tuned for ABSA in underrepresented languages can outperform universal models, offering cost-effective solutions. Fine-tuned LLMs (BERT, BERTweet, Llama2, Llama3, Mistral) excel in sentiment classification for Russia/Ukraine conflict, showcasing multilingual adaptability and achieving SOTA with small training sets."
+author: Tomáš Filip, Martin Pavlíček, Petr Sosík
+date: "2024-08-04"
+image: "https://browse.arxiv.org/html/2408.02044v1/extracted/5773404/graph/zrec-paper-tweets-scheme.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02044v1/extracted/5773404/graph/zrec-paper-tweets-scheme.png)
+
+### Summary:
+
+This study focuses on the aspect-based sentiment analysis (ABSA) of Twitter/X data in underrepresented languages, specifically the V4 languages (Czech Republic, Slovakia, Poland, Hungary). The authors fine-tune several large language models (LLMs) for sentiment classification towards Russia and Ukraine in the context of the ongoing military conflict. The training/testing dataset was obtained from Twitter/X during 2023. The authors measure the performance of these models under various settings, including translations, sentiment targets, in-context learning, and more, using GPT4 as a reference model. The study documents several interesting phenomena, such as the fine-tunability of some models on multilingual Twitter tasks and their ability to reach state-of-the-art (SOTA) levels with small training sets.
+
+### Major Findings:
+
+1. Fine-tuning with as few as 6K multilingual tweets provided significantly better (SOTA level) results than in-context learning.
+2. The performance of the tested models on the Twitter/X corpus was often uncorrelated with their results in general benchmarks.
+3. A good translation to English provided an advantage over the use of the original languages, even for multilingual pre-trained models.
+4. Some models showed unexpected language- and culture-specific differences arising from a wider context.
+
+### Analysis and Critique:
+
+* The study's focus on underrepresented languages and the use of small, fine-tuned models is a valuable contribution to the field of ABSA.
+* The use of GPT4 as a reference model provides a useful comparison for the performance of the fine-tuned models.
+* The study's findings on the fine-tunability of some models and their ability to reach SOTA levels with small training sets are significant and could have implications for future research in ABSA.
+* However, the study does not provide a detailed analysis of the specific language- and culture-specific differences observed in some models, which could be a valuable area for future research.
+* Additionally, the study does not discuss the potential limitations or biases of the fine-tuned models, which could be an important consideration for their use in practical applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02044v1](https://arxiv.org/abs/2408.02044v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02044v1](https://browse.arxiv.org/html/2408.02044v1)       |
+| Truncated       | False       |
+| Word Count       | 5758       |

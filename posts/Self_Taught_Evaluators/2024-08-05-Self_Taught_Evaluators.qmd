@@ -1,0 +1,44 @@
+
+---
+title: "Self-Taught Evaluators"
+id: "2408.02666v1"
+description: "Self-Taught Evaluator improves LLM performance without human annotations, outperforming GPT-4 and matching top reward models."
+author: Tianlu Wang, Ilia Kulikov, Olga Golovneva, Ping Yu, Weizhe Yuan, Jane Dwivedi-Yu, Richard Yuanzhe Pang, Maryam Fazel-Zarandi, Jason Weston, Xian Li
+date: "2024-08-05"
+image: "https://browse.arxiv.org/html/2408.02666v1/x1.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02666v1/x1.png)
+
+# Summary:
+
+The paper presents a novel approach to improve evaluators for large language models (LLMs) without relying on human annotations. The proposed method, called Self-Taught Evaluator, uses synthetic training data and an iterative self-improvement scheme to generate contrasting model outputs and train an LLM-as-a-Judge to produce reasoning traces and final judgments. The approach is demonstrated to improve a strong LLM (Llama3-70B-Instruct) from 75.4 to 88.3 (88.7 with majority vote) on RewardBench, outperforming commonly used LLM judges such as GPT-4 and matching the performance of top-performing reward models trained with labeled examples.
+
+# Major Findings:
+
+1. The Self-Taught Evaluator method significantly improves the performance of a strong LLM (Llama3-70B-Instruct) on RewardBench, from 75.4 to 88.3 (88.7 with majority vote), without using any labeled preference data.
+2. The proposed approach outperforms commonly used LLM judges such as GPT-4 and matches the performance of the top-performing reward models trained with labeled examples.
+3. The iterative training scheme used in the Self-Taught Evaluator method allows for continuous improvement of the LLM-as-a-Judge model, as it is trained on its own predictions and the generated synthetic data.
+
+# Analysis and Critique:
+
+1. The paper presents an innovative approach to improving evaluators for LLMs, addressing the limitations of relying on human annotations and the cost and time associated with collecting them.
+2. The proposed method demonstrates promising results, outperforming commonly used LLM judges and matching the performance of top-performing reward models trained with labeled examples.
+3. However, the paper does not provide a detailed comparison of the proposed approach with other methods that use synthetic data or unsupervised learning for improving evaluators.
+4. The paper also does not discuss the potential limitations or biases introduced by using synthetic data and the iterative self-improvement scheme, which could be a topic for future research.
+5. The proposed method is demonstrated to work well for a specific LLM
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02666v1](https://arxiv.org/abs/2408.02666v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02666v1](https://browse.arxiv.org/html/2408.02666v1)       |
+| Truncated       | False       |
+| Word Count       | 5749       |

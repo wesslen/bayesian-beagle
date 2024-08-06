@@ -1,0 +1,48 @@
+
+---
+title: "ARVO: Atlas of Reproducible Vulnerabilities for Open Source Software"
+id: "2408.02153v1"
+description: "ARVO: A dataset of 5,000+ reproduced memory vulnerabilities in open-source software, automatically updatable, and valuable for security research."
+author: Xiang Mei, Pulkit Singh Singaria, Jordi Del Castillo, Haoran Xi, Abdelouahab, Benchikh, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doupé, Hammond Pearce, Brendan Dolan-Gavitt
+date: "2024-08-04"
+image: "https://browse.arxiv.org/html/2408.02153v1/x1.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02153v1/x1.png)
+
+**Summary:**
+
+- The paper introduces ARVO, an Atlas of Reproducible Vulnerabilities in Open-source software, which aims to address the shortage of research vulnerability datasets.
+- ARVO is a framework that automatically identifies the correct patch commit from OSS-Fuzz projects and automatically builds a reproducible environment for the vulnerable software system.
+- The ARVO dataset contains over 5,000 real-world vulnerabilities in open source C/C++ projects, which can be automatically updated with new vulnerabilities with minimal manual effort.
+- The paper highlights the key challenges in improving reproducibility for research vulnerability datasets and describes the methods used in ARVO to address these issues.
+- The paper also presents the ARVO dataset and demonstrates that it achieves the goals of reproducibility, scalability, quality and diversity, and ease of use.
+
+**Major Findings:**
+
+1. ARVO successfully reproduced 5,651 out of 8,934 vulnerabilities sourced from OSS-Fuzz (63.3%), and identified the precise fix for 5,001 (88.5%) of the reproduced cases.
+2. The ARVO dataset is the only dataset to achieve reproducibility on a large scale, with a success rate of over 80% in locating patches.
+3. The ARVO dataset is unique in its combination of size and bug reproducibility, with complete support for project recompilation for all bug cases at the scale provided.
+
+**Analysis and Critique:**
+
+- The paper provides a thorough characterization of the ARVO dataset and demonstrates its value for future research through two case studies.
+- The paper highlights the limitations of ARVO, including its reliance on bisection for identifying vulnerability fixes, which may not always accurately pinpoint the exact fix.
+- The paper also notes that the ARVO dataset can include duplicated bugs from OSS-Fuzz, where OSS-Fuzz has reported two (or more) vulnerabilities that share a single underlying root cause.
+- The paper acknowledges that building and reproducing historical vulnerabilities can be challenging due to the "bit rot" of their associated dependencies, resources, and toolchains.
+- The paper concludes
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02153v1](https://arxiv.org/abs/2408.02153v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02153v1](https://browse.arxiv.org/html/2408.02153v1)       |
+| Truncated       | False       |
+| Word Count       | 13734       |

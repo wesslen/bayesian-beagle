@@ -1,0 +1,42 @@
+
+---
+title: "Why Are My Prompts Leaked? Unraveling Prompt Extraction Threats in Customized Large Language Models"
+id: "2408.02416v1"
+description: "Prompt leakage in LLMs analyzed; defense strategies proposed, reducing extraction rates."
+author: Zi Liang, Haibo Hu, Qingqing Ye, Yaxin Xiao, Haoyang Li
+date: "2024-08-05"
+image: "https://browse.arxiv.org/html/2408.02416v1/x2.png"
+categories: ['security', 'architectures', 'robustness', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02416v1/x2.png)
+
+# Summary:
+
+The paper "Why Are My Prompts Leaked? Unraveling Prompt Extraction Threats in Customized Large Language Models" explores the issue of prompt leakage in customized large language models (LLMs). The authors investigate the factors that influence prompt leakage, including model sizes, prompt lengths, and types of prompts. They propose two hypotheses to explain how LLMs expose their prompts: perplexity (familiarity of LLMs to texts) and straightforward token translation paths in attention matrices. The authors also evaluate the effectiveness of alignments in defending against prompt extraction attacks (PEA) and propose several defense strategies.
+
+## Major Findings:
+
+1. **Scaling Laws in Prompt Extraction**: The authors analyze the scaling laws in prompt extraction and find that larger LLMs exhibit similar extraction rates to smaller LLMs under explicit intent-based attacks. However, larger LLMs are more vulnerable to implicit attacks.
+2. **Prompt Memorization**: The authors observe that LLMs can memorize and transcribe some long prompts accurately and verbatim, a phenomenon they refer to as prompt memorization. This occurs due to the perplexity of prompts and the parallel translation of prompts in attention matrices.
+3. **Defense Strategies**: The authors propose several defense strategies against PEA, including alignments and prompt engineering-based methods. They find that these methods can significantly reduce the prompt extraction rate for Llama2-7B and GPT-3.5.
+
+## Analysis and Critique:
+
+The paper provides a comprehensive analysis of prompt extraction threats in customized LLMs and proposes several defense strategies. However, the paper does not discuss the potential impact of prompt leakage on the performance of LLMs or the potential risks associated with using leaked prompts. Additionally, the paper does not provide a detailed comparison of the proposed defense strategies with existing methods.
+
+Further research is needed to evaluate the effectiveness of the proposed defense strategies in real-world scenarios and to explore the potential risks associated with prompt leakage. Additionally, future work could focus on developing more robust defense strategies that can effectively prevent prompt leakage in customized LLMs.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02416v1](https://arxiv.org/abs/2408.02416v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02416v1](https://browse.arxiv.org/html/2408.02416v1)       |
+| Truncated       | False       |
+| Word Count       | 10615       |

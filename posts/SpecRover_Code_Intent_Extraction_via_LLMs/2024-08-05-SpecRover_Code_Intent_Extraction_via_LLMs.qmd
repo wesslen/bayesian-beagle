@@ -1,0 +1,43 @@
+
+---
+title: "SpecRover: Code Intent Extraction via LLMs"
+id: "2408.02232v1"
+description: "SpecRover improves AutoCodeRover's efficacy by 50% in resolving GitHub issues, emphasizing specification inference in automated program repair."
+author: Haifeng Ruan, Yuntong Zhang, Abhik Roychoudhury
+date: "2024-08-05"
+image: "https://browse.arxiv.org/html/2408.02232v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02232v1/x1.png)
+
+### Summary:
+
+The paper presents SpecRover, an LLM-guided autonomous software engineering workflow that focuses on the role of program specifications in iterative specification inference. The goal is to automatically derive a patch for a software codebase based on a natural language problem description. SpecRover conducts code search guided by program structure and calculates specifications of the classes/methods to capture intended program behavior. The specifications are then deposited along with generated tests to a reviewer agent, which studies the specifications, generated tests, and natural language requirements to guide the patching. The reviewer agent also produces evidence of confidence in the reported patch.
+
+### Major Findings:
+
+1. SpecRover shows more than 50% improvement in efficacy over AutoCodeRover in resolving GitHub issues in the full SWE-Bench.
+2. SpecRover demonstrates modest cost ($0.65 per issue) in resolving an average GitHub issue in SWE-Bench lite compared to open-source agents available.
+3. The production of explanation by SpecRover allows for a better "signal" to be given to the developer, on when the suggested patches can be accepted with confidence.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison of SpecRover with other state-of-the-art systems that target the repository-level issue solving task.
+2. The paper does not discuss the limitations and potential biases of the proposed approach, such as the reliance on the quality of the input issue statement and the potential for overfitting to the specific codebase.
+3. The paper does not provide a clear evaluation of the scalability and generalizability of SpecRover to other programming languages and domains.
+4. The paper does not discuss the potential ethical implications of using LLMs for automated program repair, such as the potential for introducing new vulnerabilities or perpetuating existing biases in the codebase.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02232v1](https://arxiv.org/abs/2408.02232v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02232v1](https://browse.arxiv.org/html/2408.02232v1)       |
+| Truncated       | False       |
+| Word Count       | 10030       |

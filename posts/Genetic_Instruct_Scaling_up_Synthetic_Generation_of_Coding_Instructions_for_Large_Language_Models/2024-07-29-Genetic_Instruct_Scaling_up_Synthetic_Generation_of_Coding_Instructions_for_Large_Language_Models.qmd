@@ -1,0 +1,44 @@
+
+---
+title: "Genetic Instruct: Scaling up Synthetic Generation of Coding Instructions for Large Language Models"
+id: "2407.21077v1"
+description: "TL;DR: Genetic-Instruct improves code generation accuracy by synthesizing instruction samples for LLMs."
+author: Somshubra Majumdar, Vahid Noroozi, Sean Narenthiran, Aleksander Ficek, Jagadeesh Balam, Boris Ginsburg
+date: "2024-07-29"
+image: "https://browse.arxiv.org/html/2407.21077v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.21077v1/x1.png)
+
+### Summary:
+
+The paper introduces a scalable algorithm called Genetic-Instruct, inspired by evolutionary algorithms, to generate synthetic instructions for coding problems. The algorithm begins with a small set of high-quality initial instruction samples and employs some LLMs to generate instructions and their corresponding code outputs through two evolutionary operations: crossover and mutation. The crossover operation is adapted from self-instruct, which prompts an LLM to generate new examples based on the context of a few-shot examples. The LLM generates new samples using seed instructions as a foundation, akin to a crossover operation. In the mutation operation, an LLM is given an instruction and asked to evolve it into another instruction based on predefined rules. Subsequently, another LLM proficient in coding generates the output or solution to the instruction, typically comprising coding solutions.
+
+The algorithm also introduces a fitness function that employs an LLM to assess the correctness and quality of the generated instruction and its solution. Samples that pass these evaluations and checks are added to the population pool, and the evolutionary process continues until the target population size is reached. The entire pipeline is designed for efficient parallel execution with multiple colonies of populations.
+
+The paper demonstrates the effectiveness of this dataset by training multiple open-source software (OSS) LLMs. The coding models trained with the synthetic dataset were evaluated across a range of coding benchmarks, showcasing the superior performance of the approach compared to other algorithms designed for generating synthetic coding instructions.
+
+### Major Findings:
+1. The Genetic-Instruct algorithm, inspired by evolutionary algorithms, generates synthetic instructions for coding problems using crossover and mutation operations.
+2. The algorithm employs a fitness function to assess the correctness and quality of the generated instruction and its solution.
+3. The approach demonstrates superior performance compared to other algorithms designed for generating synthetic coding instructions.
+
+### Analysis and Critique:
+- The paper provides a novel approach to generating synthetic instructions for coding problems, which can be a cost-effective alternative to collecting data from human interactions with LLM systems.
+- The use of evolutionary algorithms, such as crossover and mutation, allows for the generation of diverse and complex instructions.
+- The paper demonstrates the effectiveness of the approach by training
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.21077v1](https://arxiv.org/abs/2407.21077v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.21077v1](https://browse.arxiv.org/html/2407.21077v1)       |
+| Truncated       | False       |
+| Word Count       | 5982       |

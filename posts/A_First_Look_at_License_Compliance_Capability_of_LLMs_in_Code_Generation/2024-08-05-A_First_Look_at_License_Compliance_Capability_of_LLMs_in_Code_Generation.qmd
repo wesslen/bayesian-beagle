@@ -1,0 +1,40 @@
+
+---
+title: "A First Look at License Compliance Capability of LLMs in Code Generation"
+id: "2408.02487v1"
+description: "LLMs can generate licensed code without proper attribution, risking IP violations. This study proposes a benchmark to evaluate LLMs' license compliance, finding most struggle to provide accurate license info, especially for copyleft licenses."
+author: Weiwei Xu, Kai Gao, Hao He, Minghui Zhou
+date: "2024-08-05"
+image: "https://browse.arxiv.org/html/2408.02487v1/x1.png"
+categories: ['security', 'architectures', 'robustness', 'production', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02487v1/x1.png)
+
+### Summary:
+
+This paper addresses the issue of license compliance in LLM-generated code by establishing a benchmark to evaluate the ability of LLMs to provide accurate license information for their generated code. The authors conduct an empirical study to identify a reasonable standard for "striking similarity" that excludes the possibility of independent creation, indicating a copy relationship between the LLM output and certain open-source code. Based on this standard, they propose an evaluation benchmark, LiCoEval, to evaluate the license compliance capabilities of LLMs. Using LiCoEval, the authors evaluate 14 popular LLMs and find that even top-performing LLMs produce a non-negligible proportion (0.88% to 2.01%) of code strikingly similar to existing open-source implementations. Most models fail to provide accurate license information, particularly for code under copyleft licenses. These findings underscore the urgent need to enhance LLM compliance capabilities in code generation tasks.
+
+### Major Findings:
+
+1. The authors establish a benchmark, LiCoEval, to evaluate the license compliance capabilities of LLMs in code generation.
+2. The authors find that even top-performing LLMs produce a non-negligible proportion (0.88% to 2.01%) of code strikingly similar to existing open-source implementations.
+3. Most LLMs fail to provide accurate license information, particularly for code under copyleft licenses.
+
+### Analysis and Critique:
+
+The authors' work is a significant contribution to the field of LLM-generated code and its compliance with open-source licenses. The establishment of a benchmark for evaluating LLMs' license compliance capabilities is a crucial step towards ensuring the ethical and legal use of LLMs in code generation. However, the authors acknowledge that their striking similarity standard focuses on precision, potentially overlooking cases where LLMs generate code derived from open-source code but fall below their threshold. Additionally, the authors note that their evaluation is limited to Python code and function-level code completion, which may not fully represent the vast diversity of real-world code and potentially more severe compliance issues at class or project levels. Despite these limitations, the authors' work provides valuable insights for improving license compliance in AI-assisted software development and protecting open-source developers' IP rights.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02487v1](https://arxiv.org/abs/2408.02487v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02487v1](https://browse.arxiv.org/html/2408.02487v1)       |
+| Truncated       | False       |
+| Word Count       | 9790       |

@@ -1,0 +1,42 @@
+
+---
+title: "An LLM-based Readability Measurement for Unit Tests' Context-aware Inputs"
+id: "2407.21369v1"
+description: "Automated tests score higher in readability than manual tests under C3 measurement, a new tool that checks test inputs' consistency with source code contexts."
+author: Zhichao Zhou, Yutian Tang, Yun Lin, Jingzhu He
+date: "2024-07-31"
+image: "https://browse.arxiv.org/html/2407.21369v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.21369v1/x1.png)
+
+**Summary:**
+
+The paper introduces a novel concept called readability context, which refers to the requirements for test readability described in the source code. The authors propose the Context Consistency Criterion (C3), a tool that mines the readability contexts and measures the consistency of the tests' inputs with these contexts. C3 is evaluated on JAVA projects, and its performance is compared with manual tests, traditional test generation tools, and an LLM-based tool. The results show that C3 detects readability contexts with high precision, recall, and F1-Score. The proposed EvoSuiteC3, a variant of EvoSuite, leverages the readability contexts mined by C3 to generate test inputs with improved readability. The evaluation reveals that EvoSuiteC3 and ChatUniTest perform closely to manual tests in input readability, while EvoSuite and Randoop largely fail to generate readable string-type inputs.
+
+**Major Findings:**
+
+1. The Precision, Recall, and F1-Score of C3's mined readability contexts are 0.84, 0.81, and 0.82, respectively.
+2. Under C3's measurement, the string-type input readability scores of EvoSuiteC3, ChatUniTest, manual tests, EvoSuite, and Randoop are 0.83, 0.82, 0.81, 0.12, and 0.11, respectively.
+3. A survey conducted with 30 programmers shows that when C3 identifies readable differences between tests, programmers tend to give similar opinions of the test's readability as C3.
+
+**Analysis and Critique:**
+
+The paper presents an innovative approach to measuring the readability of test inputs by introducing the concept of readability context and the Context Consistency Criterion (C3). The evaluation of C3 on JAVA projects demonstrates its effectiveness in detecting readability contexts with high precision, recall, and F1-Score. The proposed EvoSuiteC3, which leverages the readability contexts mined by C3, shows promising results in generating test inputs with improved readability.
+
+However, the paper has some limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.21369v1](https://arxiv.org/abs/2407.21369v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.21369v1](https://browse.arxiv.org/html/2407.21369v1)       |
+| Truncated       | False       |
+| Word Count       | 11321       |

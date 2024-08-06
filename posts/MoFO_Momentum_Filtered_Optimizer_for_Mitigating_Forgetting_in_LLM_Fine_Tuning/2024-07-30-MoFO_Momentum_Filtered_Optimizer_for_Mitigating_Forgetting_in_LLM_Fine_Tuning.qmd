@@ -1,0 +1,44 @@
+
+---
+title: "MoFO: Momentum-Filtered Optimizer for Mitigating Forgetting in LLM Fine-Tuning"
+id: "2407.20999v1"
+description: "TL;DR: MoFO fine-tunes LLMs without forgetting pre-training knowledge, no pre-training data needed."
+author: Yupeng Chen, Senmiao Wang, Zhihang Lin, Zeyu Qin, Yushun Zhang, Tian Ding, Ruoyu Sun
+date: "2024-07-30"
+image: "../../../bayesian-beagle.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+The paper proposes a new fine-tuning algorithm called Momentum-Filtered Optimizer (MoFO) to mitigate the issue of knowledge forgetting in large language models (LLMs) during the fine-tuning process. MoFO selectively updates the parameters with the largest momentum magnitudes in each parameter block, converging to a point closer to the pre-trained model compared to full-parameter fine-tuning. This approach effectively preserves pre-trained knowledge while significantly alleviating catastrophic forgetting and surpassing the performance of traditional fine-tuning methods.
+
+### Major Findings:
+
+1. MoFO achieves similar fine-tuning performance as full-parameter training while keeping parameters closer to the pre-trained model, thereby mitigating knowledge forgetting.
+2. Unlike most existing methods for forgetting mitigation, MoFO does not require access to pre-training data and does not alter the original loss function, which could avoid impairing the model performance on the fine-tuning tasks.
+3. MoFO is validated through rigorous convergence analysis and extensive experiments, demonstrating its superiority over existing methods in mitigating forgetting and enhancing fine-tuning performance.
+
+### Analysis and Critique:
+
+1. The paper provides a well-structured and coherent summary of the proposed MoFO algorithm, highlighting its advantages over existing methods.
+2. The paper presents a clear and concise summary of the experimental results, demonstrating the effectiveness of MoFO in mitigating forgetting and enhancing fine-tuning performance.
+3. The paper does not discuss any potential limitations or shortcomings of the proposed method, which could be addressed in future work.
+4. The paper does not provide a detailed comparison of MoFO with other state-of-the-art methods for forgetting mitigation, which could be useful for evaluating its performance.
+5. The paper does not discuss the potential impact of the choice of hyperparameters on the performance of MoFO, which could be an important consideration for practical applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.20999v1](https://arxiv.org/abs/2407.20999v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20999v1](https://browse.arxiv.org/html/2407.20999v1)       |
+| Truncated       | False       |
+| Word Count       | 7266       |

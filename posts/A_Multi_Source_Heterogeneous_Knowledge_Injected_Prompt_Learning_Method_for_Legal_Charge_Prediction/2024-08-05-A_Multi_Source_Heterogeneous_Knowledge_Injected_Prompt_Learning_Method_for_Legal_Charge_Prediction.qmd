@@ -1,0 +1,40 @@
+
+---
+title: "A Multi-Source Heterogeneous Knowledge Injected Prompt Learning Method for Legal Charge Prediction"
+id: "2408.02233v1"
+description: "This method uses prompt learning with multi-source knowledge for legal charge prediction, achieving state-of-the-art results and strong interpretability."
+author: Jingyun Sun, Chi Wei, Yang Li
+date: "2024-08-05"
+image: "../../img/2408.02233v1/image_1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2408.02233v1/image_1.png)
+
+**Summary:**
+
+The paper presents a prompt learning framework-based method for legal charge prediction that leverages multi-source heterogeneous external knowledge from a legal knowledge base, a conversational LLM, and related legal articles. The method matches knowledge snippets in case descriptions via the legal knowledge base and encapsulates them into the input through a hard prompt template. It also retrieves legal articles related to a given case description through contrastive learning and obtains factual elements within the case description through a conversational LLM. The method fuses the embedding vectors of soft prompt tokens with the encoding vector of factual elements to achieve knowledge-enhanced model forward inference. The proposed method achieved state-of-the-art results on CAIL-2018, the largest legal charge prediction dataset, and has lower data dependency.
+
+**Major Findings:**
+
+1. The proposed method achieved state-of-the-art results on CAIL-2018, the largest legal charge prediction dataset, with a macro F1 score of 0.84.
+2. The method has lower data dependency, as its performance remains high even with a reduced training data size.
+3. The method demonstrates strong interpretability, as shown in case studies.
+
+**Analysis and Critique:**
+
+The paper presents a novel approach to legal charge prediction that leverages multi-source heterogeneous external knowledge. The method's ability to achieve state-of-the-art results on the largest legal charge prediction dataset and its lower data dependency are significant contributions. However, the paper does not explore situations where a single case description may correspond to multiple legal charges, which could be a limitation. Additionally, the paper does not provide a detailed comparison with other methods that also use external knowledge, such as knowledge graphs or ontologies. The paper could also benefit from a more in-depth analysis of the interpretability of the method, as this is a crucial aspect in the legal domain.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02233v1](https://arxiv.org/abs/2408.02233v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02233v1](https://browse.arxiv.org/html/2408.02233v1)       |
+| Truncated       | False       |
+| Word Count       | 15870       |

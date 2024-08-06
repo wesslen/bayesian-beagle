@@ -1,0 +1,45 @@
+
+---
+title: "Towards interfacing large language models with ASR systems using confidence measures and prompting"
+id: "2407.21414v1"
+description: "LLMs can enhance ASR systems by post-hoc correction, improving less competitive ASR systems with confidence-based filtering."
+author: Maryam Naderi, Enno Hermann, Alexandre Nanchen, Sevada Hovsepyan, Mathew Magimai. -Doss
+date: "2024-07-31"
+image: "https://browse.arxiv.org/html/2407.21414v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.21414v1/x1.png)
+
+### Summary:
+
+This paper explores the use of large language models (LLMs) for post-hoc correction of automatic speech recognition (ASR) transcripts. The authors propose a range of confidence-based filtering methods to avoid introducing errors into likely accurate transcripts. The results indicate that LLMs can improve the performance of less competitive ASR systems.
+
+### Major Findings:
+
+1. LLMs can be used to correct errors in ASR transcripts, particularly for less competitive acoustic models where there is more room for improvement.
+2. Confidence-based filtering methods, such as sentence-level and lowest-word confidence, can be used to reduce the chance of LLMs introducing new errors into the transcript.
+3. LLMs can struggle to correct transcripts that already contain too many errors, and reconstructing proper nouns without acoustic context can be challenging.
+
+### Analysis and Critique:
+
+* The paper provides a clear and concise summary of the proposed approach and its results.
+* The use of LLMs for ASR error correction is a novel and promising approach, and the authors' confidence-based filtering methods are a useful contribution to the field.
+* However, the paper does not provide a detailed analysis of the types of errors that LLMs are most likely to correct or introduce, which could be a valuable area for future research.
+* Additionally, the paper only evaluates the proposed approach on the English LibriSpeech corpus, and it would be interesting to see how the approach performs on other languages and datasets.
+* The paper also notes that LLMs can sometimes decrease WER while increasing CER, which is an important consideration for evaluating the effectiveness of the proposed approach.
+* Overall, the paper provides a valuable contribution to the field of ASR error correction and highlights the potential of LLMs for improving ASR performance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.21414v1](https://arxiv.org/abs/2407.21414v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.21414v1](https://browse.arxiv.org/html/2407.21414v1)       |
+| Truncated       | False       |
+| Word Count       | 4127       |

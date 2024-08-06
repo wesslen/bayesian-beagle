@@ -1,0 +1,48 @@
+
+---
+title: "Can Reinforcement Learning Unlock the Hidden Dangers in Aligned Large Language Models?"
+id: "2408.02651v1"
+description: "New method jailbreaks LLMs using reinforcement learning, improving adversarial trigger transferability with limited model access."
+author: Mohammad Bahrami Karkevandi, Nishant Vishwamitra, Peyman Najafirad
+date: "2024-08-05"
+image: "https://browse.arxiv.org/html/2408.02651v1/x1.png"
+categories: ['security', 'architectures', 'production', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02651v1/x1.png)
+
+### Summary:
+
+- The paper explores the concept of jailbreaking LLMs, which involves reversing their alignment through adversarial triggers.
+- Previous methods, such as soft embedding prompts, manually crafted prompts, and gradient-based automatic prompts, have had limited success on black-box models due to their requirements for model access and for producing a low variety of manually crafted prompts.
+- The paper introduces a novel approach using reinforcement learning to optimize adversarial triggers, requiring only inference API access to the target model and a small surrogate model.
+- The method leverages a BERTScore-based reward function to enhance the transferability and effectiveness of adversarial triggers on new black-box models.
+- The paper demonstrates that this approach improves the performance of adversarial triggers on a previously untested language model.
+
+### Major Findings:
+
+1. The paper introduces a novel approach to optimize adversarial triggers using reinforcement learning, which only requires inference API access to the target language model and a small surrogate model.
+2. The method leverages a BERTScore-based reward function utilizing the target model’s text output generations.
+3. The paper demonstrates that this approach can enhance the performance of a set of adversarial triggers on a previously untested language model.
+
+### Analysis and Critique:
+
+- The paper provides a promising approach to optimize adversarial triggers using reinforcement learning, which could potentially address the limitations of existing techniques.
+- However, the paper does not provide a comprehensive evaluation of the proposed method, and it is unclear how well it performs compared to other methods.
+- The paper also does not discuss potential limitations or shortcomings of the proposed method, such as the need for a large amount of data to train the surrogate model or the potential for overfitting.
+- Additionally, the paper does not discuss the ethical implications of jailbreaking LLMs, which could have significant consequences for the safety and security of these models.
+- Future work should address these limitations and provide a more comprehensive evaluation of the proposed method.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02651v1](https://arxiv.org/abs/2408.02651v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02651v1](https://browse.arxiv.org/html/2408.02651v1)       |
+| Truncated       | False       |
+| Word Count       | 5420       |

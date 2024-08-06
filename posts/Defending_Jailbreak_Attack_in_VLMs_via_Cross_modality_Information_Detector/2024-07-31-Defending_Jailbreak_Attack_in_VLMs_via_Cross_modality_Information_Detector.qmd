@@ -1,0 +1,46 @@
+
+---
+title: "Defending Jailbreak Attack in VLMs via Cross-modality Information Detector"
+id: "2407.21659v1"
+description: "CIDER: A plug-and-play jailbreaking detector for VLMs, using cross-modal similarity to identify malicious image inputs, with high effectiveness and efficiency."
+author: Yue Xu, Xiuyuan Qi, Zhan Qin, Wenjie Wang
+date: "2024-07-31"
+image: "https://browse.arxiv.org/html/2407.21659v1/x1.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.21659v1/x1.png)
+
+# Summary:
+
+The paper introduces a novel jailbreaking detector called Cross-modality Information DEtectoR (CIDER) designed to identify maliciously perturbed image inputs in Vision Language Models (VLMs). CIDER is a plug-and-play solution that is independent of the target VLMs and requires less computation cost. The detector utilizes the cross-modal similarity between harmful queries and adversarial images to enhance the security of VLMs against jailbreak attacks.
+
+## Major Findings:
+
+1. CIDER is a simple yet effective cross-modality information detector that is independent of the target VLMs and requires less computation cost.
+2. Extensive experimental results demonstrate the effectiveness and efficiency of CIDER, as well as its transferability to both white-box and black-box VLMs.
+3. CIDER is a plug-and-play jailbreaking detector that can effectively safeguard VLMs while incurring almost no additional computational overhead.
+
+## Analysis and Critique:
+
+The paper presents a promising approach to enhancing the security of VLMs against jailbreak attacks. However, the following limitations and potential areas for improvement should be considered:
+
+1. The effectiveness of CIDER heavily relies on the quality of the cross-modal embeddings used to represent the image and text inputs. The performance of CIDER may be affected by the choice of the embedding method and the quality of the pre-trained models used to generate the embeddings.
+2. The paper does not provide a detailed analysis of the robustness of CIDER against different types of adversarial attacks. It would be interesting to evaluate the performance of CIDER against a wider range of adversarial attacks, including those that target the image and text modalities separately.
+3. The paper does not discuss the potential impact of CIDER on the performance of VLMs in downstream tasks. It would be important to evaluate the trade-off between the security benefits of using CIDER and the potential impact on the performance of VLMs in real-world applications.
+
+Overall, the paper presents a promising approach to enhancing the security of VLMs against jailbreak attacks. However, further research is needed to address the limitations and potential areas for improvement identified in this analysis.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.21659v1](https://arxiv.org/abs/2407.21659v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.21659v1](https://browse.arxiv.org/html/2407.21659v1)       |
+| Truncated       | False       |
+| Word Count       | 6517       |

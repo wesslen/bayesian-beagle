@@ -1,0 +1,45 @@
+
+---
+title: "Learn by Selling: Equipping Large Language Models with Product Knowledge for Context-Driven Recommendations"
+id: "2407.20856v1"
+description: "LLMs trained on synthetic queries can enhance product recommendations, but understanding inventory is crucial."
+author: Sarthak Anand, Yutong Jiang, Giorgi Kokaia
+date: "2024-07-30"
+image: "https://browse.arxiv.org/html/2407.20856v1/extracted/5763845/images/Frame.png"
+categories: ['hci', 'recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.20856v1/extracted/5763845/images/Frame.png)
+
+### Summary:
+- The paper presents a novel approach to equipping large language models (LLMs) with product knowledge by training them to respond contextually to synthetic search queries containing product IDs.
+- The authors evaluate the effectiveness of this method, discussing its advantages and limitations, and explore the potential of LLMs in transforming the landscape of product recommendation systems.
+- The study uses a dataset of approximately 10,000 synthetic search queries generated for 2,000 products from 25 distinct categories within the IKEA inventory.
+- The authors perform supervised fine-tuning of LLMs using full fine-tuning approaches on the dataset, expanding the vocabulary of the LLM to represent each product with a unique token.
+- The evaluation of the product recommendation system includes both quantitative and qualitative measures, such as top-1 and top-5 matches, top-1 and top-5 category matches, and factual accuracy of the generated sales response.
+
+### Major Findings:
+1. The model that was trained without extra tokens performed well relative to the model that included additional product ID tokens. However, the model with product ID tokens excelled in all evaluation metrics.
+2. In 3.3% of recommendations, the model lacking product ID tokens generated the product IDs on its own, while the model with product ID tokens did not exhibit such hallucinations.
+3. The model demonstrated a strong understanding of the purpose of the products, with a high Relevancy score of 91.78%. However, it frequently added new information that was not present in the original product descriptions, with a score of 93.9%.
+4. The model struggled with factual accuracy, particularly in relation to the series name and price of the products, with scores of 44.4% and 43.6%, respectively.
+
+### Analysis and Critique:
+- The study demonstrates the potential of fine-tuning large language models (LLMs) for product recommendations, with Product IDs incorporated into the vocabulary.
+- The model shows promising results in understanding the purpose of the products and generating contextualized recommendations.
+- However, there are significant areas for improvement, such as the model's struggle with factual accuracy, particularly in relation to the series name and price of the products.
+- The model's tendency
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.20856v1](https://arxiv.org/abs/2407.20856v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20856v1](https://browse.arxiv.org/html/2407.20856v1)       |
+| Truncated       | False       |
+| Word Count       | 2803       |

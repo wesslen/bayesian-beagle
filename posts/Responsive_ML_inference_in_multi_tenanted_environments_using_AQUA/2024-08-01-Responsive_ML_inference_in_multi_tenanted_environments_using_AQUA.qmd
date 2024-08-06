@@ -1,0 +1,44 @@
+
+---
+title: "Responsive ML inference in multi-tenanted environments using AQUA"
+id: "2407.21255v2"
+description: "TL;DR: Aqua improves LLM inference responsiveness by 4X and throughput by 6X, by offloading inference context between GPUs, reducing PCIe bandwidth limitations."
+author: Abhishek Vijaya Kumar, Gianni Antichi, Rachee Singh
+date: "2024-08-01"
+image: "https://browse.arxiv.org/html/2407.21255v2/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2407.21255v2/x1.png)
+
+### Summary:
+
+The paper presents a novel approach to responsive inference in multi-tenanted environments using a framework called Aqua. The authors propose that fair scheduling prompts for inference by time-sharing GPU cycles, instead of batch processing them, is key to preventing prompt starvation and achieving responsive inference. However, time-shared prompt scheduling incurs the overhead of frequently paging dynamic context needed to infer a prompt back into GPU memory. To overcome this challenge, Aqua offloads inference context from a GPU to the memory of another GPU on the same server, connected via inter-GPU interconnects that support magnitudes higher bandwidth than PCIe.
+
+### Major Findings:
+
+1. Aqua improves the responsiveness of LLM inference, measured using time-to-first-token, by 4X compared to the state-of-the-art.
+2. Aqua improves the inference throughput over a single long prompt by 6X.
+3. Aqua's code is available at <https://github.com/aquaml>.
+
+### Analysis and Critique:
+
+The paper presents an innovative solution to the problem of prompt starvation and unresponsive inference in multi-tenanted environments. The use of Aqua to offload inference context to the memory of another GPU on the same server, connected via inter-GPU interconnects, is a promising approach to reducing the overhead of paging dynamic context back into GPU memory. The results of the evaluation are impressive, with Aqua improving the responsiveness of LLM inference by 4X and the inference throughput over a single long prompt by 6X.
+
+However, there are some potential limitations and areas for further research. The paper does not provide a detailed analysis of the overhead of offloading inference context to another GPU, which could impact the overall performance of the system. Additionally, the evaluation is limited to a single server with 8 GPUs, and it is unclear how well Aqua would scale to larger multi-tenanted environments. Finally, the paper does not discuss the potential impact of Aqua on the energy consumption and cooling requirements of the system.
+
+Overall, the paper presents a promising approach to responsive inference in multi-tenanted environments, and the results of the evaluation are encouraging. However,
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.21255v2](https://arxiv.org/abs/2407.21255v2)        |
+| HTML     | [https://browse.arxiv.org/html/2407.21255v2](https://browse.arxiv.org/html/2407.21255v2)       |
+| Truncated       | False       |
+| Word Count       | 16848       |

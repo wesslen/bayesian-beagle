@@ -1,0 +1,40 @@
+
+---
+title: "MetaOpenFOAM: an LLM-based multi-agent framework for CFD"
+id: "2407.21320v1"
+description: "MetaOpenFOAM automates CFD simulations via natural language, using multi-agent collaboration and RAG technology, achieving high pass rates at low costs."
+author: Yuxuan Chena, Xu Zhua, Hua Zhoua, Zhuyin Rena
+date: "2024-07-31"
+image: "../../img/2407.21320v1/image_1.png"
+categories: ['hci', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2407.21320v1/image_1.png)
+
+**Summary:**
+
+The paper introduces MetaOpenFOAM, a novel multi-agent framework for CFD simulations that aims to complete tasks using only natural language as input. The framework leverages the MetaGPT assembly line paradigm and Langchain's Retrieval-Augmented Generation (RAG) technology. MetaOpenFOAM achieved a high pass rate (85%) on a benchmark for natural language-based CFD solvers, with each test case costing only $0.22 on average. The paper also presents an ablation study and parameter sensitivity analysis to validate the necessity of each component in the multi-agent system and the RAG technology.
+
+**Major Findings:**
+
+1. MetaOpenFOAM, a multi-agent framework for CFD simulations, achieved a high pass rate (85%) on a benchmark for natural language-based CFD solvers, with each test case costing only $0.22 on average.
+2. The ablation study and parameter sensitivity analysis validated the necessity of each component in the multi-agent system and the RAG technology.
+3. The LLM-based on low temperature (0.01) has a higher pass@1 rate (85%) on average compared to middle/high temperature (0.5/0.99), suggesting that conservative and coherent generated text leads to more stable and accurate results.
+
+**Analysis and Critique:**
+
+The paper presents an innovative approach to CFD simulations using a multi-agent framework and natural language input. The results are promising, with a high pass rate and low cost per test case. However, the paper does not discuss the limitations or potential biases of the approach. Additionally, the benchmark used for evaluation is not publicly available, making it difficult to compare the results with other methods. The paper could benefit from a more comprehensive evaluation and comparison with existing CFD solvers.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.21320v1](https://arxiv.org/abs/2407.21320v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.21320v1](https://browse.arxiv.org/html/2407.21320v1)       |
+| Truncated       | False       |
+| Word Count       | 14305       |

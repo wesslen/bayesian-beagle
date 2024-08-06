@@ -1,0 +1,48 @@
+
+---
+title: "Evaluating the Performance of Large Language Models for SDG Mapping (Technical Report)"
+id: "2408.02201v1"
+description: "TL;DR: Open-source LLMs' performance compared for SDG mapping task; LLaMA 2 and Gemma have room for improvement."
+author: Hui Yin, Amir Aryani, Nakul Nambiar
+date: "2024-08-05"
+image: "https://browse.arxiv.org/html/2408.02201v1/extracted/5773939/F1_Score_visualization.png"
+categories: ['programming', 'social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02201v1/extracted/5773939/F1_Score_visualization.png)
+
+### Summary:
+
+- The study compares the performance of various language models on the Sustainable Development Goal (SDG) mapping task, using the output of GPT-4o as the baseline.
+- The selected open-source models for comparison include Mixtral, LLaMA 2, LLaMA 3, Gemma, and Qwen2, as well as GPT-4o-mini, a more specialized version of GPT-4o.
+- The multi-label nature of the SDG mapping task requires metrics such as F1 score, precision, and recall with micro-averaging to evaluate different aspects of the models’ performance.
+- The results of the experiment show that LLaMA 2 and Gemma still have significant room for improvement, while the other four models do not exhibit particularly large differences in performance.
+
+### Major Findings:
+
+1. The top-performing models across most thresholds are GPT-4o-mini, LLaMA 3, and Qwen2, maintaining higher F1 scores consistently.
+2. Gemma 2 and LLaMA 2 consistently show the lowest F1 scores among the models, suggesting they are ineffective at any threshold value tested.
+3. Mixtral and LLaMA 3 show the highest precision scores across most threshold values, indicating they are better at minimizing false positives than other models.
+4. GPT-4o-mini and Qwen2 are the best performers in terms of recall, making them suitable for applications where missing true positives is costly.
+
+### Analysis and Critique:
+
+- The study provides a comprehensive comparison of various language models for the SDG mapping task, but it lacks ground truth labels, which could impact the accuracy of the results.
+- The use of GPT-4o as the baseline for comparison may introduce bias, as it is not an open-source model.
+- The study does not discuss the potential impact of different model sizes and architectures on the performance of the models.
+- The study does not provide a detailed analysis of the limitations and potential biases of each model, which could be important for researchers and practitioners.
+- The study does not discuss the potential applications and implications of the results for real-world SDG mapping tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2408.02201v1](https://arxiv.org/abs/2408.02201v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02201v1](https://browse.arxiv.org/html/2408.02201v1)       |
+| Truncated       | False       |
+| Word Count       | 3184       |

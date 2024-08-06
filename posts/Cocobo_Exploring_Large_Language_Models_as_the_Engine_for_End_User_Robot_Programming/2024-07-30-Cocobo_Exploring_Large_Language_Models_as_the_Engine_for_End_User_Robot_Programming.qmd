@@ -1,0 +1,49 @@
+
+---
+title: "Cocobo: Exploring Large Language Models as the Engine for End-User Robot Programming"
+id: "2407.20712v1"
+description: "Cocobo: A natural language programming system for robots, powered by LLMs, accessible even to non-coders."
+author: Yate Ge, Yi Dai, Run Shan, Kechun Li, Yuanda Hu, Xiaohua Sun
+date: "2024-07-30"
+image: "../../../bayesian-beagle.png"
+categories: ['hci', 'programming', 'education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary:
+
+- **Cocobo** is a natural language programming system that utilizes large language models (LLMs) to facilitate end-user programming for service robot task customization.
+- The system features a conversational view for natural language interaction and a flowchart view for visual programming, enabling users to create and modify robot programs.
+- Cocobo's LLM-powered functions include authoring programs via conversation, modifying programs via conversation, modifying programs via flowchart editor, and modifying programs via MagicDebug.
+- The system employs a chain-of-thought approach to structure prompt words and decompose tasks, enabling LLMs to determine user input intent and execute corresponding actions.
+- Cocobo's LLM pipeline converts between code and flowcharts using JSON and Mermaid formats for front-end flowchart rendering and interactions.
+- The system is implemented using Node.js, OpenAI's GPT-4 API, and AntV X6 for flowchart rendering and interactions.
+
+## Major Findings:
+
+1. Cocobo has a low learning curve, enabling even users with zero coding experience to customize robot programs successfully.
+2. The system's conversational interface is perceived as natural and intelligent, enhancing the programming experience by making it seem like collaborative coding with the system.
+3. The flowchart interface is found to be intuitive for representing code, helping users quickly understand the main steps and key information without extensive reading.
+
+## Analysis and Critique:
+
+- The study only integrated basic robotic commands and did not extend to more complex IoT and network services, which may limit scalability.
+- LLM-powered functions in Cocobo experienced issues with unstable outputs and prolonged response times due to excessively lengthy outputs.
+- The current design does not account for varying levels of programming skills among users, which may limit its effectiveness in practical scenarios.
+- The system lacks an in-depth comparison and analysis of the various representations within the Cocobo system.
+- Future work should focus on enhancing the performance of Cocobo's LLM-powered functions, expanding the system to support additional APIs for robots and IoT devices, and conducting 'in-the-wild' experiments to assess the practical benefits and potential improvements
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-06       |
+| Abstract | [https://arxiv.org/abs/2407.20712v1](https://arxiv.org/abs/2407.20712v1)        |
+| HTML     | [https://browse.arxiv.org/html/2407.20712v1](https://browse.arxiv.org/html/2407.20712v1)       |
+| Truncated       | False       |
+| Word Count       | 4048       |

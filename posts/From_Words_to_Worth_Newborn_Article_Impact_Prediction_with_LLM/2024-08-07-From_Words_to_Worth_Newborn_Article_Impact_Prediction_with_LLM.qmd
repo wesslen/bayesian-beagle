@@ -1,0 +1,50 @@
+
+---
+title: "From Words to Worth: Newborn Article Impact Prediction with LLM"
+id: "2408.03934v1"
+description: "[ABSTRACT] This study examines the relationship between social media use and well-being, finding that passive use is negatively associated with well-being, while active use is positively associated with well-being. The findings suggest that the way individuals use social media may impact their overall well-being.
+
+[INST] Social media use impacts well-being: passive use negatively, active use positively."
+author: Penghai Zhao, Qinghua Xing, Kairan Dou, Jinyu Tian, Ying Tai, Jian Yang, Ming-Ming Cheng, Xiang Li
+date: "2024-08-07"
+image: "../../../bayesian-beagle.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+- The paper presents a method for predicting article impact using large language models (LLMs) and fine-tuning techniques.
+- The authors partition the NAID dataset into training, validation, and test sets in an 8:1:1 ratio.
+- They conduct a grid search to identify optimal hyperparameters and employ 8-bit model quantization techniques to reduce memory consumption.
+- The authors compare their method with previous SOTA methods, replicating them while excluding external features and normalizing inputs for MLP-based methods.
+- They explore the impact of additional information on prediction performance, such as open-source code availability, SOTA performance, new dataset contribution, and reference quality.
+- The authors also investigate the impact of different training methods on predictive performance, experimenting with various fine-tuning approaches.
+- The paper acknowledges potential ethical concerns, such as manipulation through excessive optimization of titles and abstracts, and emphasizes that the method should not replace the peer-review process.
+
+### Major Findings:
+1. The proposed method demonstrates superiority over previous SOTA methods in predicting article impact.
+2. Additional information, such as open-source code availability and reference quality, can improve prediction performance.
+3. Different fine-tuning approaches, such as LoRA, PiSSA, OLoRA, rsLoRA, and DoRA, have varying impacts on predictive performance.
+
+### Analysis and Critique:
+- The paper provides a detailed explanation of the methodology and experimental setup, making it reproducible.
+- The authors acknowledge potential limitations, such as the inability to replicate some methods due to the unavailability of open-source code or high database access costs.
+- The paper raises ethical concerns regarding the potential manipulation of titles and abstracts to influence predicted impact values.
+- The authors emphasize that the method should not replace the peer-review process, which is essential for maintaining academic integrity and rigor.
+- The paper could benefit from further discussion on the generalizability of the proposed method to other datasets and domains.
+- The authors could also explore the potential biases introduced by the LLMs and fine-tuning techniques used in the method.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.03934v1](https://arxiv.org/abs/2408.03934v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.03934v1](https://browse.arxiv.org/html/2408.03934v1)       |
+| Truncated       | False       |
+| Word Count       | 1442       |

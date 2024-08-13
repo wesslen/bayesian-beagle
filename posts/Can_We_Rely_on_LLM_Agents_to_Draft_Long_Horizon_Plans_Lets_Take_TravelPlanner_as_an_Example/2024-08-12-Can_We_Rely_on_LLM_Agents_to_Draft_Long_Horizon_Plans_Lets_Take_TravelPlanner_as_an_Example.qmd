@@ -1,0 +1,42 @@
+
+---
+title: "Can We Rely on LLM Agents to Draft Long-Horizon Plans? Let's Take TravelPlanner as an Example"
+id: "2408.06318v1"
+description: "LLMs struggle with long contexts, refinement, and feedback, but Feedback-Aware Fine-Tuning (FAFT) improves performance."
+author: Yanan Chen, Ali Pesaranghader, Tanmana Sadhu, Dong Hoon Yi
+date: "2024-08-12"
+image: "../../../bayesian-beagle.png"
+categories: ['education', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+# Summary:
+
+The paper "Can We Rely on LLM Agents to Draft Long-Horizon Plans? Let’s Take TravelPlanner as an Example" investigates the performance of LLM-based agents in complex, long-horizon planning tasks using the TravelPlanner benchmark. The study addresses four key research questions: (1) the robustness of LLM agents to lengthy and noisy contexts, (2) the impact of few-shot prompting on performance, (3) the effectiveness of refinement in improving plans, and (4) the potential of feedback-aware fine-tuning (FAFT) for further improvement.
+
+## Major Findings:
+
+1. LLMs often fail to attend to crucial parts of a long context, despite their ability to handle extensive reference information and few-shot examples.
+2. LLMs still struggle with analyzing long plans and cannot provide accurate feedback for refinement.
+3. Feedback-Aware Fine-Tuning (FAFT), which leverages both positive and negative feedback, results in substantial gains over Supervised Fine-Tuning (SFT).
+
+## Analysis and Critique:
+
+The paper provides valuable insights into the limitations of LLM-based agents in complex planning tasks. However, the study is limited by the use of only GPT-3.5-Turbo as the Planner agent for RQ1 and RQ2 due to budget constraints. Further investigations are needed to explore the relationship between the magnitude of gains and the size of the FAFT training set, as well as the impact of the ratio of positive to negative samples on the final performance. Additionally, enhancing the feedback expressions could further improve the performance of FAFT. It would also be interesting to investigate RLHF techniques, such as DPO and PRO, to better utilize feedback.
+
+The paper adheres to the original work's specifications, utilizing their data, evaluation scripts, and definitions of commonsense. The authors strictly adhere to TravelPlanner's guidelines, ensuring the integrity of the evaluation process by prohibiting any form of cheating in the validation and test sets. However, the extensive experiments required for this study have a significant environmental cost. Future endeavors can leverage these insights, potentially reducing the need for numerous large-scale comparisons. Models intended for production could undergo
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.06318v1](https://arxiv.org/abs/2408.06318v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.06318v1](https://browse.arxiv.org/html/2408.06318v1)       |
+| Truncated       | False       |
+| Word Count       | 6085       |

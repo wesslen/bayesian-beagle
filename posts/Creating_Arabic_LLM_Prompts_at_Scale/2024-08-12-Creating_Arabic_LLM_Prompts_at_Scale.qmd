@@ -1,0 +1,44 @@
+
+---
+title: "Creating Arabic LLM Prompts at Scale"
+id: "2408.05882v1"
+description: "Two methods create 67.4M Arabic prompts, enabling a 7B LLM to outperform a 70B model."
+author: Abdelrahman El-Sheikh, Ahmed Elmogtaba, Kareem Darwish, Muhammad Elmallah, Ashraf Elneima, Hassan Sawaf
+date: "2024-08-12"
+image: "https://browse.arxiv.org/html/2408.05882v1/extracted/5786068/ArabicTemplatesExamples.png"
+categories: ['education', 'hci', 'programming', 'architectures', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.05882v1/extracted/5786068/ArabicTemplatesExamples.png)
+
+### Summary:
+
+The paper introduces two methods for creating Arabic prompts for Large Language Models (LLMs) at scale. The first method involves automatically translating existing English prompt datasets, such as PromptSource and Super-NaturalInstructions, and using machine translation quality estimation to retain high-quality translations. The second method entails creating natural language prompts on top of existing Arabic NLP datasets. Using these methods, the authors were able to create more than 67.4 million Arabic prompts covering various tasks, including summarization, headline generation, grammar checking, open/closed question answering, and creative writing. The paper also demonstrates that fine-tuning an open 7 billion parameter large language model, Qwen2 7B, enables it to outperform a state-of-the-art 70 billion parameter instruction-tuned model, Llama3 70B, in handling Arabic prompts.
+
+### Major Findings:
+
+1. The authors created more than 67.4 million Arabic prompts using two methods: translation of existing English prompt datasets and creating prompts on top of existing Arabic NLP datasets.
+2. The paper shows that fine-tuning an LLM using the new data significantly improves LLM performance on a variety of tasks.
+3. The authors demonstrate that fine-tuning the Qwen2 7B model using their newly created dataset of 800k samples led to statistically significant improvement over the Qwen2-Instruct 7B model.
+
+### Analysis and Critique:
+
+1. The paper provides a valuable contribution to the field of LLM prompt engineering, particularly for Arabic language models.
+2. The methods presented in the paper can be applied to other languages, making it a versatile approach to prompt creation.
+3. The paper does not discuss the potential limitations or biases in the created prompts, which could be an area for further research.
+4. The paper focuses on the ability of LLMs to follow instructions in performing a variety of tasks, but it does not measure their knowledge, which could be a potential area for future work.
+5. The paper does not discuss the potential impact of the created prompts on the performance of LLMs in real-world applications.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.05882v1](https://arxiv.org/abs/2408.05882v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.05882v1](https://browse.arxiv.org/html/2408.05882v1)       |
+| Truncated       | False       |
+| Word Count       | 3273       |

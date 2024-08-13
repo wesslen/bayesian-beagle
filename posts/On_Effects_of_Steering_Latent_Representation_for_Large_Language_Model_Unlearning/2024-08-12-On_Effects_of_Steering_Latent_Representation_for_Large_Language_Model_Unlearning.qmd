@@ -1,0 +1,40 @@
+
+---
+title: "On Effects of Steering Latent Representation for Large Language Model Unlearning"
+id: "2408.06223v1"
+description: "RMU unlearning method for LLMs reduces token confidence, causing wrong/nonsense responses. Adaptive RMU improves unlearning performance without extra cost."
+author: Dang Huu-Tien, Trung-Tin Pham, Hoang Thanh-Tung, Naoya Inoue
+date: "2024-08-12"
+image: "https://browse.arxiv.org/html/2408.06223v1/extracted/5787475/images/noise_sensitivity.png"
+categories: ['production', 'architectures', 'robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.06223v1/extracted/5787475/images/noise_sensitivity.png)
+
+**Summary:**
+
+This paper explores the effectiveness of Representation Misdirection for Unlearning (RMU) in large language models (LLMs). RMU steers the model's representation in the intermediate layer to a target random representation, which reduces token confidence and causes LLMs to generate incorrect or nonsensical responses. The authors investigate the influence of the coefficient on the alignment of forget-sample representations with the random direction and suggest optimal coefficient values for effective unlearning across different network layers. They also demonstrate that RMU unlearned models are robust against adversarial jailbreak attacks. However, RMU is less effective when applied to the middle and later layers in LLMs. To address this limitation, the authors propose Adaptive RMU, a simple yet effective alternative method that makes unlearning effective with most layers.
+
+**Major Findings:**
+
+1. RMU effectively degrades models' accuracy on forget-tasks while only slightly affecting the performance on retain-tasks and demonstrates stronger robustness against adversarial jailbreak attacks.
+2. The coefficient influences the alignment of forget-sample representations with the random direction, and the authors hint at the optimal coefficient values for effective unlearning across different network layers.
+3. RMU is less effective when applied to the middle and later layers in LLMs, but Adaptive RMU, a variant that adaptively adjusts the coefficient value based on the norm of the forget representation, achieves higher drop-in-accuracy for forget knowledge, maintains high performance on general knowledge, and enables effective unlearning for most layers without incurring additional computational overhead.
+
+**Analysis and Critique:**
+
+The paper provides a comprehensive analysis of RMU and its effectiveness in LLM unlearning. The authors' theoretical and empirical findings contribute to a better understanding of the underlying causes and explanations for RMU's performance. However, the paper does not discuss potential limitations or unanswered questions, such as the generalizability of the findings to other types of LLMs or the impact of different types of forget-tasks on the unlearning process. Additionally, the paper does not address potential biases or conflicting evidence that may arise in the unlearning process. Further research is needed to address these issues and provide a more complete picture of RMU's effectiveness in LLM unlearning.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.06223v1](https://arxiv.org/abs/2408.06223v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.06223v1](https://browse.arxiv.org/html/2408.06223v1)       |
+| Truncated       | False       |
+| Word Count       | 7618       |

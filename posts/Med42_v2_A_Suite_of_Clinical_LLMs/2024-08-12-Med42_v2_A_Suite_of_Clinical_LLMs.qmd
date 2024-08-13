@@ -1,0 +1,43 @@
+
+---
+title: "Med42-v2: A Suite of Clinical LLMs"
+id: "2408.06142v1"
+description: "Med42-v2: Clinical LLMs outperform generic models, now available on Hugging Face."
+author: Clément Christophe, Praveen K Kanithi, Tathagata Raha, Shadab Khan, Marco AF Pimentel
+date: "2024-08-12"
+image: "../../../bayesian-beagle.png"
+categories: ['production', 'education', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+Med42-v2 is a suite of clinical large language models (LLMs) designed to overcome the limitations of generic models in healthcare settings. Built on the Llama3 architecture and fine-tuned with specialized clinical data, Med42-v2 models undergo multi-stage preference alignment to effectively respond to natural prompts. Unlike generic models, which are often preference-aligned to avoid answering clinical queries, Med42-v2 is specifically trained to engage with clinical queries. Med42-v2 demonstrates superior performance compared to the original Llama3 models in both 8B and 70B parameter configurations across various medical benchmarks.
+
+### Major Findings:
+
+1. **Med42-v2 is a suite of clinical LLMs built on Llama3 architecture, fine-tuned with specialized medical instruction data.**
+2. **Med42-v2 undergoes a multi-stage preference alignment process to enhance its ability to meet user expectations in healthcare settings.**
+3. **Empirical evidence demonstrates Med42-v2’s superior performance over original Llama3 models in both 8B and 70B parameter configurations across various medical benchmarks.**
+
+### Analysis and Critique:
+
+- Despite improvements, Med42-v2 may not entirely be free from issues like hallucinations, biases, and ethical concerns, which are particularly critical in the medical field.
+- The reliance on high-quality, domain-specific data means that any gaps or biases in the training data could impact the model’s effectiveness.
+- The future work involves developing a new evaluation framework to assess the clinical utility of LLMs by testing them on real-world use cases. This framework will focus on evaluating clinical data understanding, safety, and reasoning capabilities, providing a more comprehensive understanding of how these models perform in practical, high-stakes environments.
+- By rigorously testing LLMs in real-world scenarios, potential risks can be identified and mitigated, ensuring that models like Med42-v2 can be safely and effectively integrated into healthcare settings.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.06142v1](https://arxiv.org/abs/2408.06142v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.06142v1](https://browse.arxiv.org/html/2408.06142v1)       |
+| Truncated       | False       |
+| Word Count       | 2686       |

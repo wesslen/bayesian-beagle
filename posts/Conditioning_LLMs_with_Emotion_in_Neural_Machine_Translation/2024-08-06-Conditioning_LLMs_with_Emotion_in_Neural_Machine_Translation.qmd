@@ -1,0 +1,44 @@
+
+---
+title: "Conditioning LLMs with Emotion in Neural Machine Translation"
+id: "2408.03150v1"
+description: "Emotion-infused prompts enhance translation quality in LLMs, especially with arousal emotion."
+author: Charles Brazier, Jean-Luc Rouas
+date: "2024-08-06"
+image: "../../../bayesian-beagle.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+The article presents a novel Machine Translation (MT) pipeline that integrates emotion information extracted from a Speech Emotion Recognition (SER) model into Large Language Models (LLMs) to enhance translation quality. The authors fine-tune five existing LLMs on the Libri-trans dataset and select the most performant model. They then augment LLM prompts with different dimensional emotions and train the selected LLM under these different configurations. The experiments reveal that integrating emotion information, especially arousal, into LLM prompts leads to notable improvements in translation quality.
+
+### Major Findings:
+
+1. The integration of emotion information, particularly arousal, into LLM prompts significantly improves translation quality.
+2. The best-performing LLMs for the MT task are Mistral-7B-v0.1, Mistral-7B-Instruct-v0.2, and TowerBase-7B-v0.1, which attain high BLEU and COMET scores.
+3. The TowerBase-7B-v0.1 model, when retrained with arousal information added to the prompt, shows the highest COMET scores, indicating better translation quality.
+
+### Analysis and Critique:
+
+The article presents an innovative approach to improving MT quality by integrating emotion information into LLMs. The use of arousal information, in particular, has been shown to significantly enhance translation performance. However, the study is limited to the Libri-trans dataset, which consists of literary text read by speakers. The authors acknowledge this limitation and plan to apply their method to other multilingual datasets, such as Must-C, which includes various speech types and can offer more emotional variability.
+
+The study also highlights the importance of selecting the right LLM for the MT task. The authors restrict their LLM selection to models that are open-source, promising, and contain 7 billion parameters. However, the performance of these models can vary depending on the languages included in their pre-training data. For instance, the ALMA-7B-R model, which was not pre-trained on French data, showed poor performance in MT when fine-tuned on Libri-trans.
+
+In conclusion, the article presents a promising approach to improving MT quality by integrating emotion information into LLMs
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.03150v1](https://arxiv.org/abs/2408.03150v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.03150v1](https://browse.arxiv.org/html/2408.03150v1)       |
+| Truncated       | False       |
+| Word Count       | 3638       |

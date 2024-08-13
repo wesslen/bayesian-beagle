@@ -1,0 +1,44 @@
+
+---
+title: "Utilizing Large Language Models to Optimize the Detection and Explainability of Phishing Websites"
+id: "2408.05667v1"
+description: "PhishLang: Open-source LLM for phishing detection, faster & less resource-intensive than deep learning, offers explainable blocklisting, and integrates with GPT-3.5 Turbo."
+author: Sayak Saha Roy, Shirin Nilizadeh
+date: "2024-08-11"
+image: "https://browse.arxiv.org/html/2408.05667v1/x1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.05667v1/x1.png)
+
+### Summary:
+
+PhishLang is an open-source, lightweight Large Language Model (LLM) designed for phishing website detection through contextual analysis of the website. Unlike traditional heuristic or machine learning models, PhishLang utilizes the advanced language processing capabilities of LLMs to learn granular features characteristic of phishing attacks. Over a 3.5-month testing period, PhishLang successfully identified approximately 26K phishing URLs, many of which were undetected by popular antiphishing blocklists. The model also demonstrated robustness against several realistic adversarial attacks. PhishLang was integrated with GPT-3.5 Turbo to create explainable blocklisting, providing users with contextual information on why a website was marked as phishing.
+
+### Major Findings:
+
+1. PhishLang outperforms several popular machine learning-based models and provides a better trade-off between inference speed, space complexity, and performance, making it more viable for real-world implementations.
+2. Over a 3.5-month testing period, PhishLang identified 25,796 unique phishing websites, with lower coverage by both blocklist and URL hosting providers, especially for evasive attacks.
+3. PhishLang provides six countermeasures (patches) that make it very robust against highly effective and realistic adversarial attacks that make perturbations in the problem space without modifying the layout of the website.
+4. PhishLang builds a system, "Explainable blocklisting," which utilizes GPT 3.5T on PhishLang's predictions to provide users with context-aware information on the features that made a website be detected as phishing.
+5. PhishLang is open-sourced and made available as a browser extension and a URL scanning website.
+
+### Analysis and Critique:
+
+PhishLang's innovative approach to phishing detection using LLMs offers several advantages over traditional methods. The model's ability to learn granular features characteristic of phishing attacks and its resilience against adversarial attacks make it a promising tool for real-world implementations. However, there are potential limitations and areas for improvement:
+
+1. The model's reliance on LLMs may introduce biases or limitations inherent in the language models used
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.05667v1](https://arxiv.org/abs/2408.05667v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.05667v1](https://browse.arxiv.org/html/2408.05667v1)       |
+| Truncated       | False       |
+| Word Count       | 16293       |

@@ -1,0 +1,40 @@
+
+---
+title: "Human Speech Perception in Noise: Can Large Language Models Paraphrase to Improve It?"
+id: "2408.04029v1"
+description: "LLMs struggle with acoustic intelligibility; a prompt-and-select approach improves speech perception in noise by 40%."
+author: Anupama Chingacham, Miaoran Zhang, Vera Demberg, Dietrich Klakow
+date: "2024-08-07"
+image: "https://browse.arxiv.org/html/2408.04029v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.04029v1/x1.png)
+
+### Summary:
+
+This study explores the potential of Large Language Models (LLMs) in generating acoustically intelligible paraphrases for better human speech perception in noise. The authors propose a novel task called Paraphrase to Improve Speech Perception in Noise (PI-SPiN) and evaluate LLMs' inherent capability to generate such paraphrases without any model fine-tuning. The results demonstrate that LLMs struggle to control the non-textual attribute, i.e., acoustic intelligibility, while efficiently capturing the desired textual attributes like semantic equivalence. To remedy this issue, the authors propose a simple prompting approach, prompt-and-select, which generates paraphrases by decoupling the desired textual and non-textual attributes in the text generation pipeline. This approach resulted in a relative improvement in human speech perception, by paraphrasing utterances that are highly distorted in a listening condition with babble noise at signal-to-noise ratio (SNR) dB.
+
+### Major Findings:
+
+1. LLMs struggle to control the non-textual attribute, i.e., acoustic intelligibility, while efficiently capturing the desired textual attributes like semantic equivalence.
+2. The proposed prompt-and-select approach generates paraphrases by decoupling the desired textual and non-textual attributes in the text generation pipeline.
+3. The prompt-and-select approach resulted in a relative improvement in human speech perception, by paraphrasing utterances that are highly distorted in a listening condition with babble noise at signal-to-noise ratio (SNR) dB.
+
+### Analysis and Critique:
+
+The study reveals the limitation of LLMs in capturing non-textual attributes, and the proposed method showcases the potential of using LLMs for better human speech perception in noise. However, the proposed approach relies on the efficacy of STOI scores to identify the best candidate which is more likely to be perceived correctly in noise. This could be a limitation for problems that require human annotations for candidate selection. Additionally, the current approach introduces an overhead in computation and inference time, due to multiple generations and STOI calculation that involves speech synthesis and noise-mixing procedure. Further investigations are required
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.04029v1](https://arxiv.org/abs/2408.04029v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.04029v1](https://browse.arxiv.org/html/2408.04029v1)       |
+| Truncated       | False       |
+| Word Count       | 7832       |

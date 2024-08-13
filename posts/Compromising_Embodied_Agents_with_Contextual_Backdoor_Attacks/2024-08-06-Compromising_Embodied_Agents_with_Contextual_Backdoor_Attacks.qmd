@@ -1,0 +1,42 @@
+
+---
+title: "Compromising Embodied Agents with Contextual Backdoor Attacks"
+id: "2408.02882v1"
+description: "Contextual Backdoor Attack exploits LLMs, causing embodied agents to execute flawed programs when triggered, posing serious security risks."
+author: Aishan Liu, Yuguang Zhou, Xianglong Liu, Tianyuan Zhang, Siyuan Liang, Jiakai Wang, Yanjun Pu, Tianlin Li, Junqi Zhang, Wenbo Zhou, Qing Guo, Dacheng Tao
+date: "2024-08-06"
+image: "https://browse.arxiv.org/html/2408.02882v1/x1.png"
+categories: ['social-sciences', 'robustness', 'hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02882v1/x1.png)
+
+# Summary:
+
+The paper introduces a novel method called Contextual Backdoor Attack, which compromises the contextual environment of a black-box LLM by poisoning a few contextual demonstrations. This attack prompts the LLM to generate programs with context-dependent defects that appear logically sound but contain defects that can be activated and induce unintended behaviors when the operational agent encounters specific triggers in its interactive environment. The attack is demonstrated to be effective across various tasks, including robot planning, robot manipulation, and compositional visual reasoning, and even in real-world autonomous driving systems. The paper aims to raise awareness of this critical threat, as most publicly available LLMs are third-party-provided.
+
+# Major Findings:
+
+1. The paper introduces the concept of Contextual Backdoor Attack, which induces LLMs to generate programs with backdoor defects by showing a few shots of poisoned demonstrations. These programs can compromise the reliability of downstream embodied agents when specific triggers appear in the environment.
+2. The paper demonstrates the effectiveness of the proposed attack through extensive experiments on multiple code-driven embodied intelligence tasks, including robot planning, robot manipulation, and compositional visual reasoning, using several target LLMs. The results show that the attack can even be successful in the autonomous driving scenario on real-world vehicles.
+3. The paper highlights the potential risks of the contextual backdoor threat introduced in this study, which poses serious risks for millions of downstream embodied agents, given that most publicly available LLMs are third-party-provided.
+
+# Analysis and Critique:
+
+The paper presents a novel and significant contribution to the field of LLM security by introducing the concept of Contextual Backdoor Attack. The proposed attack is demonstrated to be effective in compromising the contextual environment of a black-box LLM and generating programs with context-dependent defects. The paper also highlights the potential risks of this attack, which can have serious consequences for millions of downstream embodied agents.
+
+However, the paper does not provide a detailed analysis of the limitations and potential biases of the proposed attack. It is unclear how the attack would perform in different scenarios and under different conditions. Additionally, the paper does not discuss the potential countermeasures that could be taken to mitigate the risks
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.02882v1](https://arxiv.org/abs/2408.02882v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02882v1](https://browse.arxiv.org/html/2408.02882v1)       |
+| Truncated       | False       |
+| Word Count       | 14516       |

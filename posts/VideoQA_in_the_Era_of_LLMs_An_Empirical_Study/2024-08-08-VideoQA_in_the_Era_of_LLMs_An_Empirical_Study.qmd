@@ -1,0 +1,38 @@
+
+---
+title: "VideoQA in the Era of LLMs: An Empirical Study"
+id: "2408.04223v1"
+description: "Video-LLMs excel in VideoQA but struggle with video temporality, robustness, and interpretability."
+author: Junbin Xiao, Nanxin Huang, Hangyu Qin, Dongyang Li, Yicong Li, Fengbin Zhu, Zhulin Tao, Jianxing Yu, Liang Lin, Tat-Seng Chua, Angela Yao
+date: "2024-08-08"
+image: "https://browse.arxiv.org/html/2408.04223v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.04223v1/x1.png)
+
+### Summary:
+
+This paper conducts a comprehensive study of Video-LLMs' behavior in VideoQA, aiming to elucidate their success and failure modes and provide insights towards more human-like video understanding and question answering. The analyses demonstrate that while Video-LLMs excel in VideoQA, they struggle with handling video temporality, both in reasoning about temporal content ordering and grounding QA-relevant temporal moments. The models behave unintuitively, being unresponsive to adversarial video perturbations while being sensitive to simple variations of candidate answers and questions. They do not necessarily generalize better, and their QA capability in standard conditions is highlighted, yet their severe deficiency in robustness and interpretability is also demonstrated.
+
+### Major Findings:
+
+1. Temporal Understanding: Most Video-LLMs answer temporal questions with high accuracy, but they can hardly reason the order of the video content and are even inferior to non-LLM methods in this regard. Notably, GPT-4o shows strong temporal reasoning capabilities.
+2. Visual Grounding: Video-LLMs significantly outperform non-LLM methods in answering video questions, but they win marginally in answer grounding. This indicates that their much better performances are largely due to their strength in capturing language priors and spurious vision-text correlations.
+3. Multimodal VQA Reasoning: Compared with non-LLM methods, Video-LLMs are better at exploiting the short-cuts in candidate answers (especially video-answer short-cuts) for multi-choice QA, reflecting their deficiency in faithful reasoning from video-question to the correct answers.
+4. Robustness: Video-LLMs are "overly robust" and unresponsive to data perturbation on videos (e.g., shuffling video frames) while being unexpectedly sensitive to language variations (e.g., rephrasing questions), especially for open-ended QA.
+5. Generalization: Fine-tuned Video-LLMs still favor the answers of high frequency as predictions in OEQA. While they generalize better across question types and datasets, this is not guaranteed for each specific model. Additionally, according to our observation on NExT-OOD, out-of-distribution (OOD)
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.04223v1](https://arxiv.org/abs/2408.04223v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.04223v1](https://browse.arxiv.org/html/2408.04223v1)       |
+| Truncated       | False       |
+| Word Count       | 14969       |

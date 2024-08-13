@@ -1,0 +1,49 @@
+
+---
+title: "LUT Tensor Core: Lookup Table Enables Efficient Low-Bit LLM Inference Acceleration"
+id: "2408.06003v1"
+description: "TL;DR: LUT Tensor Core improves low-bit LLM inference efficiency by optimizing mpGEMM with software-hardware co-design."
+author: Zhiwen Mo, Lei Wang, Jianyu Wei, Zhichen Zeng, Shijie Cao, Lingxiao Ma, Naifeng Jing, Ting Cao, Jilong Xue, Fan Yang, Mao Yang
+date: "2024-08-12"
+image: "https://browse.arxiv.org/html/2408.06003v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.06003v1/x1.png)
+
+# Summary
+
+The paper introduces LUT Tensor Core, a software-hardware co-design optimized for low-bit LLM inference. The design aims to address the mpGEMM requirements in low-bit LLMs, which involve multiplying lower-precision weights with higher-precision activations. Current hardware does not natively support mpGEMM, leading to indirect and inefficient dequantization-based implementations.
+
+LUT Tensor Core utilizes a lookup table (LUT)-based approach for mpGEMM, with software-based operator fusion and table symmetrization techniques to optimize table precompute and table storage, respectively. The hardware design features an elongated tiling shape to enhance table reuse and a bit-serial design to support various precision combinations in mpGEMM. Additionally, an end-to-end compilation stack with new instructions for LUT-based mpGEMM is proposed to enable efficient LLM compilation and optimizations.
+
+Evaluation on low-bit LLMs (e.g., BitNet, LLAMA) shows that LUT Tensor Core achieves more than a magnitude of improvements on both compute density and energy efficiency.
+
+## Major Findings
+
+1. LUT Tensor Core is a software-hardware co-design optimized for low-bit LLM inference, addressing the mpGEMM requirements.
+2. The design utilizes a lookup table (LUT)-based approach for mpGEMM, with software-based operator fusion and table symmetrization techniques.
+3. The hardware design features an elongated tiling shape and a bit-serial design to support various precision combinations in mpGEMM.
+4. An end-to-end compilation stack with new instructions for LUT-based mpGEMM is proposed for efficient LLM compilation and optimizations.
+5. LUT Tensor Core achieves significant improvements in compute density and energy efficiency on low-bit LLMs.
+
+## Analysis and Critique
+
+While the paper presents a promising approach to address the mpGEMM requirements in low-bit LLMs, there are some potential limitations and areas for further research:
+
+1. The paper does not discuss the potential impact of the proposed design on model accuracy, which is a crucial aspect of LLM inference.
+2. The evaluation is limited to a few low-bit LLMs, and it would be
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.06003v1](https://arxiv.org/abs/2408.06003v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.06003v1](https://browse.arxiv.org/html/2408.06003v1)       |
+| Truncated       | False       |
+| Word Count       | 10345       |

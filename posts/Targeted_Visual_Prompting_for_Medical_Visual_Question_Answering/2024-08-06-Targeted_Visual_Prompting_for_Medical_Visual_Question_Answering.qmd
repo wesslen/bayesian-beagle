@@ -1,0 +1,48 @@
+
+---
+title: "Targeted Visual Prompting for Medical Visual Question Answering"
+id: "2408.03043v1"
+description: "Targeted visual prompting improves MLLMs' region-based visual understanding in Med-VQA."
+author: Sergio Tascon-Morales, Pablo Márquez-Neila, Raphael Sznitman
+date: "2024-08-06"
+image: "https://browse.arxiv.org/html/2408.03043v1/extracted/5776675/images/examples_gpt_4v.png"
+categories: ['education', 'hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.03043v1/extracted/5776675/images/examples_gpt_4v.png)
+
+# Summary:
+
+The paper introduces a novel approach called Targeted Visual Prompting to enhance the visual understanding capabilities of multimodal large language models (MLLMs) in medical visual question answering (Med-VQA). The method involves presenting the model with both the isolated region and the region in its context in a customized visual prompt. The authors demonstrate the effectiveness of their method across multiple datasets and compare it to several baseline models.
+
+## Major Findings:
+
+1. The paper addresses the issue of simple visual errors in MLLMs, which cast doubt on their actual visual understanding abilities.
+2. The authors propose a novel approach using the formulation of localized questions to detect visual understanding failures and enhance explainability in the visual component of Med-VQA.
+3. The proposed Targeted Visual Prompting method allows the full advantage of the MLLM to enhance the performance of the VQA model by providing both global and local visual tokens relative to the region of interest defined by the user.
+4. The method is validated through exhaustive experiments across multiple datasets, demonstrating clear performance benefits compared to previously proposed methods without introducing additional parameters to the model.
+
+## Analysis and Critique:
+
+1. The paper effectively addresses the limitations of traditional Med-VQA methods, which fail to benefit MLLMs due to their design focused on traditional architectures.
+2. The proposed method enables localized questions in MLLMs in Med-VQA, allowing for fine-grained probing of images by focusing on user-defined regions rather than the entire image.
+3. The method allows for a compositional evaluation, facilitating the interpretation of the model's visual understanding capabilities.
+4. The paper provides a comprehensive evaluation of the proposed method across multiple datasets, demonstrating its effectiveness in enhancing the performance of MLLMs in Med-VQA.
+5. However, the paper does not discuss the potential limitations or shortcomings of the proposed method, such as the reliance on the quality of the visual tokens or the potential for overfitting to specific datasets.
+6. Additionally, the paper does not explore the potential for the method to be extended to other domains or applications beyond Med-VQA.
+
+Overall, the paper presents a novel and effective approach to enhancing the visual understanding capabilities of MLLMs in Med
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.03043v1](https://arxiv.org/abs/2408.03043v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.03043v1](https://browse.arxiv.org/html/2408.03043v1)       |
+| Truncated       | False       |
+| Word Count       | 3173       |

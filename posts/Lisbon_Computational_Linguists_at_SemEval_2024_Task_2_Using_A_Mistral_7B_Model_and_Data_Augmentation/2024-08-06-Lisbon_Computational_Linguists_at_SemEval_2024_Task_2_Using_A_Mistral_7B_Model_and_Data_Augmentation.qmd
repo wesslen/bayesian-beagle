@@ -1,0 +1,49 @@
+
+---
+title: "Lisbon Computational Linguists at SemEval-2024 Task 2: Using A Mistral 7B Model and Data Augmentation"
+id: "2408.03127v1"
+description: "TL;DR: Mistral-7B model fine-tuned for NLI4CT task shows notable macro F1-score, but has faithfulness and consistency limitations."
+author: Artur Guimarães, Bruno Martins, João Magalhães
+date: "2024-08-06"
+image: "../../../bayesian-beagle.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+- The paper describes the approach of Lisbon Computational Linguists to the SemEval-2024 safe biomedical Natural Language Inference for Clinical Trials (NLI4CT) task.
+- The team explored the capabilities of Mistral-7B, a generalist open-source Large Language Model (LLM), and developed a prompt for the NLI4CT task.
+- They fine-tuned a quantized version of the model using an augmented version of the training dataset.
+- The experimental results show that this approach can produce notable results in terms of the macro F1-score, while having limitations in terms of faithfulness and consistency.
+- All the developed code is publicly available on a GitHub repository.
+
+### Major Findings:
+
+1. The team achieved a macro F1-score of 0.80 (1st place on the leaderboard) using the Mistral-7B model and data augmentation.
+2. The model excels in classification accuracy but fails at being robust to perturbations on the statements.
+3. The team used open-source LLMs with good results in general purpose benchmarks and capable of following task instructions.
+4. The team used Mistral-7B-Instruct-v0.2, quantizing the model to 4-bits and simultaneously using Low-Rank Adaptation (LoRA) to fine-tune the model to the NLI4CT task.
+
+### Analysis and Critique:
+
+- The paper does not provide a detailed analysis of the limitations of the model in terms of faithfulness and consistency.
+- The paper does not discuss the potential biases or shortcomings of the model.
+- The paper does not provide a comparison of the results with other models or approaches.
+- The paper does not discuss the potential applications or implications of the model in the medical field.
+- The paper does not provide a discussion of the ethical considerations of using LLMs in the medical field.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.03127v1](https://arxiv.org/abs/2408.03127v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.03127v1](https://browse.arxiv.org/html/2408.03127v1)       |
+| Truncated       | False       |
+| Word Count       | 6009       |

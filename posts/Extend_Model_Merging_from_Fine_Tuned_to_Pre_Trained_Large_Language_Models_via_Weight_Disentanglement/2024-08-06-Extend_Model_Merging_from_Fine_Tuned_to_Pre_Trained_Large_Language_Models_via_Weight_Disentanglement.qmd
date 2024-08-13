@@ -1,0 +1,45 @@
+
+---
+title: "Extend Model Merging from Fine-Tuned to Pre-Trained Large Language Models via Weight Disentanglement"
+id: "2408.03092v1"
+description: "WIDEN method merges FT and PT LLMs, preserving diverse abilities, unlike existing methods."
+author: Le Yu, Bowen Yu, Haiyang Yu, Fei Huang, Yongbin Li
+date: "2024-08-06"
+image: "../../../bayesian-beagle.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+The paper presents a novel approach to extend the applicability of merging techniques from Fine-Tuned (FT) to Pre-Trained (PT) Large Language Models (LLMs) via Weight Disentanglement (WIDEN). The authors initially examine the efficacy of current methods in merging FT and PT LLMs and discover that they struggle to deal with PT LLMs. The proposed WIDEN approach disentangles model weights into magnitude and direction components and performs adaptive fusion by considering their respective contributions. The experiments conducted on merging Qwen1.5-Chat and Sailor across 7B and 14B model scales reveal that WIDEN successfully injects the multilingual abilities of Sailor into Qwen1.5-Chat and enhances the fundamental capabilities.
+
+### Major Findings:
+
+1. Existing solutions usually fail when merging Sailor, either losing both abilities or only retaining instruction-following skills.
+2. WIDEN successfully injects the multilingual abilities of Sailor into Qwen1.5-Chat and makes it proficient in Southeast Asian languages, achieving enhancements in the fundamental capabilities.
+3. In light of previous research, WIDEN achieves a balanced amalgamation of instruction following, mathematical reasoning, and code generation skills when merging multiple 13B FT LLMs.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to extend the applicability of merging techniques from FT to PT LLMs. However, there are some potential limitations and areas for further research:
+
+1. The paper only evaluates the proposed method on a limited number of LLMs (Qwen1.5-Chat and Sailor). It would be beneficial to test the method on a more diverse set of LLMs to ensure its generalizability.
+2. The paper does not discuss the computational cost of the proposed method. It is important to consider the trade-off between the performance gains and the computational resources required.
+3. The paper does not provide a detailed comparison with other weight disentanglement methods. It would be helpful to compare the proposed method with other state-of-the-art weight disentanglement techniques to better understand its strengths and weaknesses.
+4. The paper does not discuss the potential applications of
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.03092v1](https://arxiv.org/abs/2408.03092v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.03092v1](https://browse.arxiv.org/html/2408.03092v1)       |
+| Truncated       | False       |
+| Word Count       | 8191       |

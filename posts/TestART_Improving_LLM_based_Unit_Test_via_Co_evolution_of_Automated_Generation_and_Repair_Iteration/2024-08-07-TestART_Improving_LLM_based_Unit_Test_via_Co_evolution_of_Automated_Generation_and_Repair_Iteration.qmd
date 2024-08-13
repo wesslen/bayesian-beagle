@@ -1,0 +1,42 @@
+
+---
+title: "TestART: Improving LLM-based Unit Test via Co-evolution of Automated Generation and Repair Iteration"
+id: "2408.03095v2"
+description: "TestART improves LLM-based unit test generation via co-evolution of automated generation and repair, achieving 78.55% pass rate and 90.96% line coverage."
+author: Siqi Gu, Chunrong Fang, Quanjun Zhang, Fangyuan Tian, Zhenyu Chen
+date: "2024-08-07"
+image: "../../../bayesian-beagle.png"
+categories: ['robustness', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+**Summary:**
+
+TestART is a novel unit test generation method that leverages the strengths of large language models (LLMs) while overcoming their limitations. It improves LLM-based unit test generation through the co-evolution of automated generation and repair iteration. TestART uses a template-based repair technique to fix bugs in LLM-generated test cases, employing prompt injection to guide the next-step automated generation and avoid repetition suppression. It also extracts coverage information from passed test cases and utilizes it as testing feedback to enhance the sufficiency of the final test case. This synergy between generation and repair significantly improves the quality, effectiveness, and readability of the produced test cases. In comparative experiments, TestART-generated test cases have a pass rate of 78.55%, which is approximately 18% higher than both the ChatGPT-4.0 model and the same ChatGPT-3.5-based method ChatUniTest. It also achieves an impressive line coverage rate of 90.96% on the focal methods that passed the test, exceeding EvoSuite by 3.4%.
+
+**Major Findings:**
+
+1. TestART improves LLM-based unit test generation through the co-evolution of automated generation and repair iteration, representing a significant advancement in automated unit test generation.
+2. TestART leverages a template-based repair technique to fix bugs in LLM-generated test cases, using prompt injection to guide the next-step automated generation and avoid repetition suppression.
+3. TestART extracts coverage information from passed test cases and utilizes it as testing feedback to enhance the sufficiency of the final test case.
+4. In comparative experiments, the pass rate of TestART-generated test cases is 78.55%, which is approximately 18% higher than both the ChatGPT-4.0 model and the same ChatGPT-3.5-based method ChatUniTest.
+5. TestART achieves an impressive line coverage rate of 90.96% on the focal methods that passed the test, exceeding EvoSuite by 3.4%.
+
+**Analysis and Critique:**
+
+TestART's approach to improving LLM-based unit test generation through the co-evolution
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.03095v2](https://arxiv.org/abs/2408.03095v2)        |
+| HTML     | [https://browse.arxiv.org/html/2408.03095v2](https://browse.arxiv.org/html/2408.03095v2)       |
+| Truncated       | False       |
+| Word Count       | 10992       |

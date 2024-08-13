@@ -1,0 +1,40 @@
+
+---
+title: "Optimizing RAG Techniques for Automotive Industry PDF Chatbots: A Case Study with Locally Deployed Ollama Models"
+id: "2408.05933v1"
+description: "TL;DR: Optimized RAG techniques improve local LLM deployment for automotive PDF chatbots, enhancing context precision, recall, and answer relevancy."
+author: Fei Liu, Zejun Kang, Xing Han
+date: "2024-08-12"
+image: "../../img/2408.05933v1/image_1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2408.05933v1/image_1.png)
+
+### Summary:
+
+The research focuses on optimizing Retrieval-Augmented Generation (RAG) techniques for processing complex automotive industry documents using locally deployed Ollama models. The study proposes a multi-dimensional optimization approach based on the Langchain framework, addressing key challenges such as multi-column layouts and technical specifications. The proposed method introduces improvements in PDF processing, retrieval mechanisms, and context compression tailored to the unique characteristics of automotive industry documents. The study also designs custom classes supporting embedding pipelines and an agent supporting self-RAG based on LangGraph best practices. The proposed approach is evaluated using a proprietary dataset of typical automotive industry documents and compared against a naive RAG baseline across three datasets: the automotive industry dataset, QReCC, and CoQA. Results demonstrate significant improvements in context precision, context recall, answer relevancy, and faithfulness, with particularly notable performance on the automotive industry dataset.
+
+### Major Findings:
+
+1. The proposed multi-dimensional optimization approach for Ollama's local RAG implementation effectively addresses key challenges in automotive document processing, including multi-column layouts and technical specifications.
+2. The optimized RAG model and self-RAG agent outperform a naive RAG baseline across three datasets, with significant improvements in context precision, context recall, answer relevancy, and faithfulness.
+3. The proposed approach provides an effective solution for deploying local RAG systems in the automotive sector, addressing the specific needs of PDF chatbots in industrial production environments.
+
+### Analysis and Critique:
+
+The study presents a comprehensive approach to optimizing RAG techniques for automotive industry applications, specifically focusing on PDF chatbots deployed in local, low-performance environments. The research addresses critical challenges in processing complex automotive documentation and responding to industry-specific queries. The proposed method combines PDFMiner and Tabula to effectively handle multi-column layouts and complex tables prevalent in automotive technical documents, significantly improving information extraction accuracy. The Langchain-based RAG system, featuring a custom retriever ensemble and context compression pipeline, demonstrates substantial improvements in retrieving and utilizing automotive-specific information. The proposed AgenticRAG, enhanced with a custom function calling mechanism, shows superior performance in handling complex, multi-step queries typical in automotive engineering and manufacturing
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.05933v1](https://arxiv.org/abs/2408.05933v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.05933v1](https://browse.arxiv.org/html/2408.05933v1)       |
+| Truncated       | False       |
+| Word Count       | 14182       |

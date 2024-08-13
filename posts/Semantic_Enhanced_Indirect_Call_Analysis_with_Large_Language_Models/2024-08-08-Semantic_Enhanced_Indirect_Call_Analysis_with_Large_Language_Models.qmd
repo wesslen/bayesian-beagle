@@ -1,0 +1,44 @@
+
+---
+title: "Semantic-Enhanced Indirect Call Analysis with Large Language Models"
+id: "2408.04344v1"
+description: "SEA uses LLMs to improve indirect call analysis, enhancing static analysis tasks in software development."
+author: Baijun Cheng, Cen Zhang, Kailong Wang, Ling Shi, Yang Liu, Haoyu Wang, Yao Guo, Xiangqun Chen
+date: "2024-08-08"
+image: "https://browse.arxiv.org/html/2408.04344v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.04344v1/x1.png)
+
+### Summary:
+
+The paper proposes Semantic-Enhanced Analysis (SEA), a new approach to enhance the effectiveness of indirect call analysis. SEA leverages the semantic similarity between indirect calls and their invoked targets, which is often exhibited in common programming practices. The approach utilizes large language models (LLMs) to generate natural language summaries of both indirect calls and target functions from multiple perspectives, further analyzing these summaries to determine their suitability as caller-callee pairs. Experimental results demonstrate that SEA can significantly enhance existing static analysis methods by producing more precise target sets for indirect calls.
+
+### Major Findings:
+
+1. SEA is a novel semantic-aware static analysis framework for indirect call analysis that addresses the limitations of existing techniques by constructing semantic information within the context of callers and their target callees.
+2. SEA enables effective filtering of false targets, ultimately leading to more accurate and efficient indirect call analysis. For instance, a caller module->create_conf(cycle) suggests that the corresponding callees are specifically designed to create configurations for particular modules, allowing SEA to prune a significant portion of false targets.
+3. SEA can improve the F1 score of the static analysis tool FLTA by up to 24% in the best-case scenario and from 38% to 67% in cases where only FLTA can perform the analysis. Compared to two more advanced tools MLTA and Kelp, SEA demonstrates notable advantages in terms of flexibility and robustness.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to indirect call analysis by leveraging the semantic understanding of LLMs. However, there are potential limitations and areas for improvement:
+
+1. The effectiveness of SEA relies heavily on the quality and accuracy of the LLMs used for semantic analysis. If the LLMs generate incorrect summaries or struggle to understand the context, the performance of SEA may be negatively impacted.
+2. The paper does not discuss the scalability of SEA in handling large-scale software systems with a vast number of indirect calls. The computational resources and time required for SEA to analyze such systems may be a concern.
+3. The paper does not provide a comprehensive comparison of SEA with other state-of-the-art indirect call analysis
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.04344v1](https://arxiv.org/abs/2408.04344v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.04344v1](https://browse.arxiv.org/html/2408.04344v1)       |
+| Truncated       | False       |
+| Word Count       | 10860       |

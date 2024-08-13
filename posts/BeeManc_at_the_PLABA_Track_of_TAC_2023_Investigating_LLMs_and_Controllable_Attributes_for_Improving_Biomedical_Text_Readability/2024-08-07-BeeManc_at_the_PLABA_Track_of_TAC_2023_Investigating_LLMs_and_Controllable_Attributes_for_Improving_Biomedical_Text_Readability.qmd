@@ -1,0 +1,44 @@
+
+---
+title: "BeeManc at the PLABA Track of TAC-2023: Investigating LLMs and Controllable Attributes for Improving Biomedical Text Readability"
+id: "2408.03871v1"
+description: "TL;DR: BeeManc and Lay-SciFive rank 2nd and 3rd in PLABA2023 task, using T5-like models, BART-w-CTs, and ChatGPT-prompting."
+author: Zihao Li, Samuel Belkadi, Nicolo Micheletti, Lifeng Han, Matthew Shardlow, Goran Nenadic
+date: "2024-08-07"
+image: "https://browse.arxiv.org/html/2408.03871v1/extracted/5779684/Figures/PLABA-pipeline.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.03871v1/extracted/5779684/Figures/PLABA-pipeline.png)
+
+### Summary:
+- The study describes the models and methods used for participation in the PLABA2023 task on biomedical abstract simplification.
+- The system outputs submitted include domain fine-tuned T5-like models, fine-tuned BART-Large model with controllable attributes, and ChatGPT-prompting.
+- The official automatic evaluation using SARI scores ranked BeeManc 2nd among all teams, and the model Lay-SciFive ranked 3rd among all 13 evaluated systems.
+- In the official human evaluation, the model BART-w-CTs ranked 2nd on Sentence-Simplicity and 3rd on Term-Simplicity among all 7 evaluated systems.
+- In the second round of submissions, the team using ChatGPT-prompting ranked 2nd in several categories, including simplified term accuracy score and completeness score.
+
+### Major Findings:
+1. The fine-tuned T5 Small model obtained the highest scores in both BLEU and ROUGE metrics, including ROUGE-1, ROUGE-2, and ROUGE-L.
+2. The fine-tuned BART Large with CTs (BART-L-w-CTs) produced the highest SARI score at 46.54.
+3. The fine-tuned T5 Base model achieved the highest BERTScore (72.62) with a slightly lower SARI score (44.10).
+4. The fine-tuned SciFive Large achieved the highest SARI score (44.38) among T5-like models, though it was approximately 2 points lower than BART Large with CTs.
+5. The GPT-like models did not beat T5-Base on both SARI and BERTScore and did not beat BART-w-CTs on SARI.
+
+### Analysis and Critique:
+- The study does not provide a detailed analysis of the limitations or potential biases in the models used.
+- The evaluation metrics used in the study, such as SARI, BERTScore, BLEU, and ROUGE, may not fully capture the quality of the simpl
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.03871v1](https://arxiv.org/abs/2408.03871v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.03871v1](https://browse.arxiv.org/html/2408.03871v1)       |
+| Truncated       | False       |
+| Word Count       | 5132       |

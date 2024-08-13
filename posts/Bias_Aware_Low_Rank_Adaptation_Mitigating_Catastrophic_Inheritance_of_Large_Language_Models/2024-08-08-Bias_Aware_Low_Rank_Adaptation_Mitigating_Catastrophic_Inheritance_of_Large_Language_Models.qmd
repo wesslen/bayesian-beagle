@@ -1,0 +1,41 @@
+
+---
+title: "Bias-Aware Low-Rank Adaptation: Mitigating Catastrophic Inheritance of Large Language Models"
+id: "2408.04556v1"
+description: "TL;DR: BA-LoRA is a PEFT method that reduces bias and improves LLM performance with regularizers."
+author: Yupeng Chang, Yi Chang, Yuan Wu
+date: "2024-08-08"
+image: "https://browse.arxiv.org/html/2408.04556v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.04556v1/x1.png)
+
+### Summary:
+
+The paper introduces Bias-Aware Low-Rank Adaptation (BA-LoRA), a novel parameter-efficient fine-tuning method for large language models (LLMs) that addresses the issue of Catastrophic Inheritance, which refers to the propagation of biases from pre-training data. BA-LoRA incorporates three regularization terms: consistency regularizer, diversity regularizer, and singular value decomposition regularizer. These regularizers aim to improve the generative models' consistency, diversity, and generalization capabilities during the fine-tuning process. The method is evaluated on various natural language understanding (NLU) and natural language generation (NLG) tasks, demonstrating superior performance over LoRA and its state-of-the-art variants. BA-LoRA effectively mitigates the detrimental effects of pre-training bias, leading to more reliable and robust model outputs.
+
+### Major Findings:
+
+1. BA-LoRA is a novel parameter-efficient fine-tuning method that addresses the issue of Catastrophic Inheritance in LLMs.
+2. The method incorporates three regularization terms: consistency regularizer, diversity regularizer, and singular value decomposition regularizer.
+3. BA-LoRA outperforms LoRA and its state-of-the-art variants on various NLU and NLG tasks.
+4. The method effectively mitigates the detrimental effects of pre-training bias, leading to more reliable and robust model outputs.
+
+### Analysis and Critique:
+
+While BA-LoRA offers significant advancements in enhancing LLM performance and mitigating dataset bias, several limitations should be considered. The method's efficacy depends on the careful selection and tuning of regularization terms, which may vary across downstream tasks. Despite computational efficiency gains over full fine-tuning, BA-LoRA may still require significant resources for large-scale models, limiting its applicability in resource-constrained environments. Additionally, while BA-LoRA effectively addresses certain aspects of Catastrophic Inheritance, a comprehensive solution encompassing all facets of this challenge remains elusive. Future research should explore more holistic approaches. Furthermore, the present study primarily focuses on English-based LLMs, and the generalizability of BA-
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.04556v1](https://arxiv.org/abs/2408.04556v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.04556v1](https://browse.arxiv.org/html/2408.04556v1)       |
+| Truncated       | False       |
+| Word Count       | 5969       |

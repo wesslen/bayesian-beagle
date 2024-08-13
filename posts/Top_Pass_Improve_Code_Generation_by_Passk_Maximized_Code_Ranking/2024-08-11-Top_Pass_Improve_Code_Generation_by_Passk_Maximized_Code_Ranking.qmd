@@ -1,0 +1,47 @@
+
+---
+title: "Top Pass: Improve Code Generation by Pass@k-Maximized Code Ranking"
+id: "2408.05715v1"
+description: "Top Pass ranks code better, improving usability; 32.9% pass@1 increase on CodeContests."
+author: Zhi-Cun Lyu, Xin-Ye Li, Zheng Xie, Ming Li
+date: "2024-08-11"
+image: "https://browse.arxiv.org/html/2408.05715v1/x1.png"
+categories: ['architectures', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.05715v1/x1.png)
+
+### Summary:
+
+The paper proposes a novel approach called Top Pass for ranking generated code candidates based on their probabilities of correctness. The method directly optimizes the pass@k loss, which enhances the ranking quality at the top of the code candidate list. This enables users to find the correct solution within as few tries as possible. The experimental results demonstrate that Top Pass substantially improves the utility of current code generation models, particularly achieving a 32.9% relative improvement in pass@1 on CodeContests when compared to the state-of-the-art ranking method.
+
+### Major Findings:
+
+1. Top Pass is a novel approach for ranking generated code candidates based on their probabilities of correctness, which directly optimizes the pass@k loss.
+2. The method enhances the ranking quality at the top of the code candidate list, enabling users to find the correct solution within as few tries as possible.
+3. Experimental results show that Top Pass outperforms the baselines by a large margin, achieving a 32.9% relative improvement in pass@1 on CodeContests when compared to the state-of-the-art ranking method.
+
+### Analysis and Critique:
+
+The paper presents a promising approach for improving the usability of code generation systems by optimizing the pass@k loss. However, there are some limitations and potential biases that should be considered:
+
+1. The method relies on the availability of a large number of code candidates, which may not always be feasible in practice.
+2. The method assumes that the correct solution is always present in the candidate list, which may not always be the case.
+3. The method may be biased towards certain types of code candidates, depending on the specific pass@k loss function used.
+4. The method may not be effective for certain types of code generation tasks, such as those that require a deep understanding of the problem domain.
+
+Overall, the paper presents a promising approach for improving the usability of code generation systems, but further research is needed to address the limitations and potential biases identified.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.05715v1](https://arxiv.org/abs/2408.05715v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.05715v1](https://browse.arxiv.org/html/2408.05715v1)       |
+| Truncated       | False       |
+| Word Count       | 6715       |

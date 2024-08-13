@@ -1,0 +1,43 @@
+
+---
+title: "Evaluating Large Language Models for Automatic Register Transfer Logic Generation via High-Level Synthesis"
+id: "2408.02793v1"
+description: "LLMs struggle with direct Verilog RTL generation. A two-stage pipeline (LLM-generated C++ to HLS-generated Verilog) improves functional correctness."
+author: Sneha Swaroopa, Rijoy Mukherjee, Anushka Debnath, Rajat Subhra Chakraborty
+date: "2024-08-05"
+image: "https://browse.arxiv.org/html/2408.02793v1/extracted/5775638/llm-hls-flow.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.02793v1/extracted/5775638/llm-hls-flow.png)
+
+# Summary:
+**Evaluating Large Language Models for Automatic Register Transfer Logic Generation via High-Level Synthesis**
+
+This paper explores the capabilities of LLMs in generating sophisticated C++ programs suitable for HLS processing, starting with natural language problem descriptions. The generated C++ code is then converted to Verilog RTL using a HLS tool. The proposed software pipeline is evaluated using a subset of the VerilogEval dataset, comprising 70 problems sourced from the HDLBits platform. The experimental results demonstrate that the proposed approach achieves superior accuracy (up to 0.86) for automated Verilog RTL generation compared to existing LLM-assisted techniques.
+
+## Major Findings:
+1. The proposed software pipeline for automated Verilog generation via HLS outperforms previous techniques of direct Verilog RTL generation by LLMs in terms of average functional correctness rates, reaching a score of 0.86 in the metric.
+2. The reliability of hardware design is a key factor, and the generated final Verilog code is evaluated through a robust validation procedure.
+3. The proposed software pipeline enables the evaluation of the generated final Verilog code through a robust validation procedure, ensuring the reliability of the hardware design.
+
+## Analysis and Critique:
+- The paper does not provide a detailed comparison of the proposed approach with other existing techniques for automated RTL generation and validation using LLMs.
+- The paper does not discuss the limitations and challenges of the proposed approach, such as the need for a large amount of open-source codebases in HDLs like Verilog and VHDL for training the LLMs.
+- The paper does not provide a detailed analysis of the results, such as the impact of the size and complexity of the problems on the performance of the proposed approach.
+- The paper does not discuss the potential applications and implications of the proposed approach for the design and verification of digital hardware.
+- The paper does not provide a clear and concise summary of the main contributions and findings of the paper.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.02793v1](https://arxiv.org/abs/2408.02793v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.02793v1](https://browse.arxiv.org/html/2408.02793v1)       |
+| Truncated       | False       |
+| Word Count       | 3718       |

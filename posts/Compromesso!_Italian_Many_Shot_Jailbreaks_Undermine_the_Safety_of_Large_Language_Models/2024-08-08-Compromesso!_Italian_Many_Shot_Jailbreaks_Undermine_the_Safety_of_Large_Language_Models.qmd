@@ -1,0 +1,47 @@
+
+---
+title: "Compromesso! Italian Many-Shot Jailbreaks Undermine the Safety of Large Language Models"
+id: "2408.04522v1"
+description: "LLMs can be jailbroken to act unsafely in Italian, with vulnerabilities increasing with more unsafe demonstrations."
+author: Fabio Pernisi, Dirk Hovy, Paul Röttger
+date: "2024-08-08"
+image: "https://browse.arxiv.org/html/2408.04522v1/extracted/5781613/images/ColoredIntro.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.04522v1/extracted/5781613/images/ColoredIntro.png)
+
+### Summary:
+- The study focuses on the safety of large language models (LLMs) across languages, specifically Italian, and introduces a new dataset of 418 unsafe Italian question-answer pairs.
+- The research investigates the effectiveness of many-shot jailbreaking, where models are prompted with unsafe demonstrations to induce unsafe behavior.
+- The study tests six open-weight models and finds that the likelihood of generating unsafe responses increases with the number of unsafe demonstrations.
+- The results show a substantial increase in the proportion of unsafe completions as the number of demonstrations grows, with an average rise across all six tested models from 68% at one shot to 84% at 32 shots.
+
+### Major Findings:
+1. The study introduces a new dataset for assessing safety in Italian, addressing the critical scarcity of such resources in the field.
+2. The proportion of unsafe completions increases with the number of demonstrations, with an average rise from 68% at one shot to 84% at 32 shots.
+3. The findings underscore the urgent need for robust multilingual safety protocols.
+
+### Analysis and Critique:
+- The study focuses on a single non-English language, Italian, and does not consider other languages, which may limit the generalizability of the findings.
+- The research does not examine the impact of prompt format variations on the metrics used, which could be a potential area for future research.
+- The study only tests small, open-weight models and does not include larger models, which may have different safety vulnerabilities.
+- The sampling of demonstrations is random and does not consider the specific safety categories they violate, which may overlook the nuanced effects of category-specific demonstrations on model responses.
+- The study does not explore the potential impact of model size on the effectiveness of many-shot jailbreaking, as seen in the anomaly with the Gemma 2B model.
+- The research does not investigate the potential differences in linguistic capabilities between the tested models and their impact on the effectiveness of many-shot jailbreaking.
+- The study does not discuss the potential implications of the findings for the development and deployment of LLMs in non-English languages.
+- The research does not provide a comprehensive analysis of the potential ethical considerations and risks associated with many-shot
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.04522v1](https://arxiv.org/abs/2408.04522v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.04522v1](https://browse.arxiv.org/html/2408.04522v1)       |
+| Truncated       | False       |
+| Word Count       | 4028       |

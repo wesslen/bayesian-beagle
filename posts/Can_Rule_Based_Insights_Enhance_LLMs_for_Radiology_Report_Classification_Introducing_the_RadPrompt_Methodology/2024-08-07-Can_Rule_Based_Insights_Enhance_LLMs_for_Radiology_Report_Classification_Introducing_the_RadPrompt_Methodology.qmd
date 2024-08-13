@@ -1,0 +1,44 @@
+
+---
+title: "Can Rule-Based Insights Enhance LLMs for Radiology Report Classification? Introducing the RadPrompt Methodology"
+id: "2408.04121v1"
+description: "RadPert & RadPrompt improve chest X-ray pathology detection, outperforming GPT-4 Turbo with fewer rules and multi-turn prompting."
+author: Panagiotis Fytas, Anna Breger, Ian Selby, Simon Baker, Shahab Shahipasand, Anna Korhonen
+date: "2024-08-07"
+image: "https://browse.arxiv.org/html/2408.04121v1/extracted/5780155/fig/Drawing11_3.png"
+categories: ['social-sciences', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.04121v1/extracted/5780155/fig/Drawing11_3.png)
+
+**Summary:**
+
+This paper introduces RadPert, a rule-based system that integrates an uncertainty-aware information schema with a streamlined set of rules, enhancing performance in extracting structured labels from radiology reports. The authors also present RadPrompt, a multi-turn prompting strategy that leverages RadPert to bolster the zero-shot predictive capabilities of large language models (LLMs). RadPrompt achieves a statistically significant improvement in weighted average F1 score over GPT-4 Turbo and surpasses both its underlying models, showcasing the synergistic potential of LLMs with rule-based models. The methods have been evaluated on two English Corpora: the MIMIC-CXR gold-standard test set and a gold-standard dataset collected from the Cambridge University Hospitals.
+
+**Major Findings:**
+
+1. RadPert, a rule-based system built on the RadGraph knowledge graph, outperforms CheXpert, the former rule-based state-of-the-art (SOTA), by achieving statistically significant improvement in weighted average F1 score.
+2. RadPrompt, a multi-turn prompting strategy that employs RadPert as an implicit means of encoding medical knowledge, outperforms both its underlying models in a zero-shot setting.
+3. The synergistic potential of LLMs with rule-based models is demonstrated by the performance of RadPrompt, which surpasses both its underlying models.
+
+**Analysis and Critique:**
+
+1. The paper does not discuss the limitations of the proposed methods, such as their applicability to other languages, types of medical imaging, and additional pathologies.
+2. The study does not address the discrepancies between labels from radiology report annotations and those from the corresponding imaging study annotations, which have been highlighted in previous studies.
+3. The ethical agreement with Cambridge University Hospitals currently limits the use of third-party APIs, preventing the evaluation of RadPrompt externally for SOTA LLMs.
+4. The computational cost and carbon footprint for GPT-4-based RadPrompt are not estimated due to a lack of specific metrics.
+5. The inherent degree of ambiguity in classifying radiology reports, especially as it pertains to the Un
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.04121v1](https://arxiv.org/abs/2408.04121v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.04121v1](https://browse.arxiv.org/html/2408.04121v1)       |
+| Truncated       | False       |
+| Word Count       | 6498       |

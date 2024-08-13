@@ -1,0 +1,45 @@
+
+---
+title: "WalledEval: A Comprehensive Safety Evaluation Toolkit for Large Language Models"
+id: "2408.03837v1"
+description: "WalledEval: Open-source AI safety toolkit for LLMs, featuring 35+ benchmarks and custom mutators. Introduces WalledGuard and SGXSTest."
+author: Prannaya Gupta, Le Qi Yau, Hao Han Low, I-Shiang Lee, Hugo Maximus Lim, Yu Xin Teoh, Jia Hng Koh, Dar Win Liew, Rishabh Bhardwaj, Rajat Bhardwaj, Soujanya Poria
+date: "2024-08-07"
+image: "https://browse.arxiv.org/html/2408.03837v1/x1.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.03837v1/x1.png)
+
+### Summary:
+
+WalledEval is a comprehensive AI safety testing toolkit designed to evaluate large language models (LLMs). It supports both open-weight and API-based models and features over 35 safety benchmarks. The framework supports LLM and judge benchmarking and incorporates custom mutators to test safety against various text-style mutations. WalledEval introduces WalledGuard, a new, small and performant content moderation tool, and SGXSTest, a benchmark for assessing exaggerated safety in cultural contexts.
+
+### Major Findings:
+
+1. WalledEval supports a wide range of open-weight models built on the HuggingFace Transformers library and API inference endpoints from proprietary and open-weight model hosts.
+2. The framework hosts over 35 AI safety benchmarks, allowing users to perform comprehensive safety tests on LLMs across dimensions such as multilingual safety, exaggerated safety, and prompt injections.
+3. WalledEval supports various safety judges, including content moderators (guardrails) such as LlamaGuard and LionGuard. It also introduces a new content moderator, WalledGuard, which is approximately 16 times smaller than state-of-the-art guardrails like LlamaGuard-3.
+4. WalledEval supports using generic LLMs as safety evaluators in the form of a LLM-as-a-Judge mode for both open- and closed-weight models.
+5. The framework supports a range of off-the-shelf open- and closed-weight LLMs and custom testing support for any Transformers-based LLM properties, such as chat templates.
+
+### Analysis and Critique:
+
+* WalledEval is a comprehensive toolkit for evaluating the safety of large language models, but it may not cover all possible safety risks.
+* The toolkit supports a wide range of models and benchmarks, but it may not be able to keep up with the rapid pace of development in the field of LLMs.
+* The introduction of WalledGuard and SGXSTest is a significant contribution, but more research is needed to evaluate their effectiveness in real-world scenarios.
+* The toolkit supports using generic LLMs as safety evaluators, but this approach may not be as reliable as using specialized safety
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.03837v1](https://arxiv.org/abs/2408.03837v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.03837v1](https://browse.arxiv.org/html/2408.03837v1)       |
+| Truncated       | False       |
+| Word Count       | 4789       |

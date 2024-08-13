@@ -1,0 +1,45 @@
+
+---
+title: "Anchored Preference Optimization and Contrastive Revisions: Addressing Underspecification in Alignment"
+id: "2408.06266v1"
+description: "CLAIR and APO improve LLM alignment, boosting Llama-3-8B-Instruct performance by 7.65% and closing gap with GPT-4-turbo by 45%."
+author: Karel D'Oosterlinck, Winnie Xu, Chris Develder, Thomas Demeester, Amanpreet Singh, Christopher Potts, Douwe Kiela, Shikib Mehri
+date: "2024-08-12"
+image: "https://browse.arxiv.org/html/2408.06266v1/extracted/5787579/figures/underspecifiedv3-6.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.06266v1/extracted/5787579/figures/underspecifiedv3-6.png)
+
+# Summary
+
+The paper introduces two new methods to improve the alignment of large language models (LLMs) with human preferences: Contrastive Learning from AI Revisions (CLAIR) and Anchored Preference Optimization (APO). CLAIR is a data-creation method that generates more contrastive preference pairs, while APO is a family of alignment objectives with tailored training dynamics. The authors align Llama-3-8B-Instruct using various datasets and alignment objectives and measure MixEval-Hard scores, which correlate highly with human judgments. The results show that CLAIR preferences lead to the strongest performance, and APO consistently outperforms less controllable objectives. The best model, trained on 32K CLAIR preferences with APO, improves Llama-3-8B-Instruct by 7.65%, closing the gap with GPT-4-turbo by 45%.
+
+## Major Findings
+
+1. The CLAIR preferences lead to the strongest performance out of all datasets, improving Llama-3-8B-Instruct by 7.65% and closing the gap with GPT-4-turbo by 45%.
+2. APO consistently outperforms less controllable objectives, with the best model trained on 32K CLAIR preferences with APO.
+3. The contrastiveness of CLAIR preferences is the major driver of performance.
+
+## Analysis and Critique
+
+1. The paper does not provide a detailed comparison with other alignment methods, such as Reinforcement Learning from Human or AI Feedback (RLHF/RLAIF).
+2. The paper does not discuss the potential limitations of CLAIR and APO, such as the need for a strong LLM to perform revisions or the potential for overfitting to the preference dataset.
+3. The paper does not provide a clear explanation of how the APO objectives are selected for a given target model and preference dataset.
+4. The paper does not discuss the potential impact of the choice of the target model on the alignment results.
+5. The paper does not provide a detailed analysis of the impact of the size of the preference dataset on the alignment results.
+6. The paper does not discuss the potential impact of the choice
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.06266v1](https://arxiv.org/abs/2408.06266v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.06266v1](https://browse.arxiv.org/html/2408.06266v1)       |
+| Truncated       | False       |
+| Word Count       | 7233       |

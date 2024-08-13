@@ -1,0 +1,43 @@
+
+---
+title: "Zero-Delay QKV Compression for Mitigating KV Cache and Network Bottlenecks in LLM Inference"
+id: "2408.04107v1"
+description: "ZDC system reduces job completion time, improves throughput, and lowers perplexity in large-language models by embedding compression within model operations."
+author: Zeyu Zhang, Haiying Shen
+date: "2024-08-07"
+image: "https://browse.arxiv.org/html/2408.04107v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.04107v1/x1.png)
+
+# Summary
+
+The paper presents a novel system called ZDC (Zero-Delay QKV Compression) for mitigating KV cache and network bottlenecks in LLM inference. The authors observe that compressing KV values is more effective than compressing the model regarding accuracy and job completion time (JCT). However, existing methods incur significant runtime computational time overhead, delaying JCT. To tackle these issues, the authors propose ZDC, which eliminates time overhead and even reduces computation and communication time of the model operations. ZDC innovatively embeds compression and decompression operations within model operations and adaptively determines compression ratios at a hybrid layer-token level. The proposed system achieves up to 80% lower average JCT, 35% lower average perplexity, and 2.8× higher throughput with the same latency compared to state-of-the-art compression methods.
+
+## Major Findings
+
+1. Compressing KV values offers more benefits in terms of accuracy and job completion time (JCT) compared to compressing the model itself.
+2. Existing methods for compressing KV values, such as quantization and KVC eviction, incur significant runtime computational time overhead, resulting in notable delays in JCT.
+3. ZDC, a Zero-Delay QKV Compression system, eliminates time overhead and even reduces computation and communication time of the model operations.
+4. ZDC achieves up to 80% lower average JCT, 35% lower average perplexity, and 2.8× higher throughput with the same latency compared to state-of-the-art compression methods.
+
+## Analysis and Critique
+
+The paper presents a well-structured and coherent summary of the proposed ZDC system for mitigating KV cache and network bottlenecks in LLM inference. The authors provide a clear and concise summary of the text, highlighting the major findings and contributions of the paper. The proposed system, ZDC, addresses the limitations of existing methods for compressing KV values and offers significant improvements in terms of accuracy, JCT, and throughput.
+
+However, the paper does not discuss the potential limitations or shortcomings of the proposed system. For instance, the authors do not address the potential impact of the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-13       |
+| Abstract | [https://arxiv.org/abs/2408.04107v1](https://arxiv.org/abs/2408.04107v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.04107v1](https://browse.arxiv.org/html/2408.04107v1)       |
+| Truncated       | False       |
+| Word Count       | 12427       |

@@ -1,0 +1,48 @@
+
+---
+title: "A System for Automated Unit Test Generation Using Large Language Models and Assessment of Generated Test Suites"
+id: "2408.07846v1"
+description: "LLMs can automate unit test generation, and AgoneTest offers a scalable solution for Java projects, complete with a new dataset and evaluation methodology."
+author: Andrea Lops, Fedelucio Narducci, Azzurra Ragone, Michelantonio Trizio, Claudio Bartolini
+date: "2024-08-14"
+image: "https://browse.arxiv.org/html/2408.07846v1/x1.png"
+categories: ['robustness', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.07846v1/x1.png)
+
+### Summary:
+
+The paper introduces AgoneTest, an automated system designed to generate test suites for Java projects and evaluate their quality. The system focuses on class-level test code generation and automates the entire process from test generation to test assessment. AgoneTest leverages the Methods2Test dataset and integrates libraries such as JaCoCo, PITest, and TsDetect to compute metrics for test evaluation. The main contributions of the work include the AgoneTest system, a methodology for evaluating LLMs and prompting techniques, and a new dataset called Classes2Test.
+
+### Major Findings:
+
+1. AgoneTest is a closed-loop, highly automated software system that supports the generation and assessment of unit tests for real-life open-source Java projects.
+2. The system provides a comprehensive evaluation of LLMs and prompting techniques in the task of developing unit tests, along with a set of metrics and test smells to assess the quality of the generated test suites.
+3. Classes2Test is an annotated open-source Java project dataset that extends Methods2Test, allowing for the assessment of test performance of an LLM on the entire class rather than on a single method.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to automating the generation and evaluation of unit test suites using LLMs. However, there are some potential limitations and areas for improvement:
+
+1. The scope of the evaluation is limited to Java projects, which may not generalize well to other programming languages.
+2. The evaluation only considers two LLMs and two prompt types, which may not fully capture the capabilities of other models and prompting techniques.
+3. The temperature parameter is set to 0, which may limit the creativity and diversity of the generated test cases.
+4. A significant number of generated test classes fail to compile or execute, highlighting the need for improved LLM performance in generating syntactically and semantically correct test code.
+5. The evaluation metrics used may not fully capture the quality of the test suite, and additional metrics or approaches may be needed to provide a more comprehensive assessment.
+
+Future work should focus on addressing these limitations and further refining the AgoneTest system to improve its performance and applicability to a wider range of projects and programming languages.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.07846v1](https://arxiv.org/abs/2408.07846v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.07846v1](https://browse.arxiv.org/html/2408.07846v1)       |
+| Truncated       | False       |
+| Word Count       | 9465       |

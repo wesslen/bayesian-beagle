@@ -1,0 +1,36 @@
+
+---
+title: "LPU: A Latency-Optimized and Highly Scalable Processor for Large Language Model Inference"
+id: "2408.07326v1"
+description: "HyperAccel's LPU outperforms GPU in LLM inference, offering better speed and energy efficiency."
+author: Seungjae Moon, Jung-Hoon Kim, Junsoo Kim, Seongmin Hong, Junseo Cha, Minsu Kim, Sukbin Lim, Gyubin Choi, Dongjin Seo, Jongho Kim, Hunjong Lee, Hyunjun Park, Ryeowook Ko, Soongyu Choi, Jongse Park, Jinwon Lee, Joo-Young Kim
+date: "2024-08-14"
+image: "https://browse.arxiv.org/html/2408.07326v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.07326v1/x1.png)
+
+### Summary:
+
+HyperAccel introduces a latency processing unit (LPU), a latency-optimized and highly scalable processor architecture for the acceleration of large language model (LLM) inference. LPU perfectly balances the memory bandwidth and compute logic with streamlined dataflow to maximize performance and efficiency. LPU is equipped with expandable synchronization link (ESL) that hides data synchronization latency between multiple LPUs. HyperDex complements LPU as an intuitive software framework to run LLM applications. LPU achieves 1.25 ms/token and 20.9 ms/token for 1.3B and 66B model, respectively, which is 2.09 and 1.37 faster than the GPU. LPU, synthesized using Samsung 4nm process, has total area of 0.824 mm2 and power consumption of 284.31 mW. LPU-based servers achieve 1.33 and 1.32 energy efficiency over NVIDIA H100 and L4 servers, respectively.
+
+### Major Findings:
+
+1. LPU introduces streamlined hardware that maximizes the effective memory bandwidth usage during end-to-end inference regardless of the model size to achieve up to 90% bandwidth utilization for high-speed text generation. It also consists of expandable synchronization link (ESL) that hides bulk of the data synchronization latency in a multi-device system to achieve near-perfect scalability, or 1.75 speedup for doubling the number of devices.
+2. HyperDex, a software framework that enables automated compilation of prerequisite data based on LLM specifications, is proposed. It also provides a runtime environment based on widely used HuggingFace API for seamless execution of GenAI applications on LPU hardware.
+3. LPU achieves 1.25 ms/token for OPT 1.3B, and two LPUs achieve 20.9 ms/token for OPT 66B, which is 2.09 and 1.37 faster than GPUs with equal device count. The LPU-based ASIC implemented using 4nm process consumes only 0
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.07326v1](https://arxiv.org/abs/2408.07326v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.07326v1](https://browse.arxiv.org/html/2408.07326v1)       |
+| Truncated       | False       |
+| Word Count       | 9561       |

@@ -1,0 +1,38 @@
+
+---
+title: "How to Make the Most of LLMs' Grammatical Knowledge for Acceptability Judgments"
+id: "2408.09639v1"
+description: "LLMs' grammatical knowledge is best evaluated using in-template LP and Yes/No probability computing, outperforming traditional methods. Diverse methods recommended for comprehensive evaluation."
+author: Yusuke Ide, Yuto Nishida, Miyu Oba, Yusuke Sakai, Justin Vasselli, Hidetaka Kamigaito, Taro Watanabe
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09639v1/x1.png"
+categories: ['social-sciences', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09639v1/x1.png)
+
+### Summary:
+The study investigates how to make the most of large language models (LLMs) for acceptability judgments, comparing conventional sentence probability readout methods, novel probability readout methods in in-template settings, and prompting-based methods. Through extensive experiments using six state-of-the-art LLMs and two minimal pair (MP) benchmarks (one for English and one for Chinese), the authors demonstrate that an in-template probability readout method, in-template LP, and a prompting-based method, Yes/No probability computing, achieve particularly high performance, surpassing the conventional approach. The analysis reveals their different strengths, with Yes/No probability computing being robust against token-length bias, suggesting that they harness different aspects of LLMs' grammatical knowledge. The authors recommend using diverse judgment methods to evaluate LLMs comprehensively.
+
+### Major Findings:
+1. In-template LP and Yes/No probability computing show top performance, surpassing the conventional methods.
+2. In-template LP and Yes/No probability computing have different strengths; for example, Yes/No probability computing is robust against token-length bias, indicating that they harness different aspects of LLMs' grammatical knowledge.
+3. Ensembling the two methods further improves the accuracy, revealing their complementary capabilities. The highest score by Mix-P3 with Qwen2 is 1.6 percentage points higher than humans on the English benchmark.
+4. Even with the top two methods, all the LLMs have trouble making correct judgments where the unacceptable sentence can be obtained by shuffling the words in the acceptable one.
+
+### Analysis and Critique:
+The study provides a comprehensive comparison of various methods for extracting acceptability judgments from LLMs, highlighting the strengths and weaknesses of each approach. The authors' recommendation to use diverse judgment methods for a more comprehensive and appropriate evaluation of LLMs is well-supported by their findings. However, the cause of the different strengths of in-template LP and Yes/No probability computing remains an open question, as the hypotheses examined in the study were not supported. Additionally, the focus on experiments in the zero-shot setting leaves room for further investigation into the potential benefits of providing few-shot examples in in-template LP and Yes/No probability computing. Overall, the study contributes valuable insights into
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09639v1](https://arxiv.org/abs/2408.09639v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09639v1](https://browse.arxiv.org/html/2408.09639v1)       |
+| Truncated       | False       |
+| Word Count       | 5926       |

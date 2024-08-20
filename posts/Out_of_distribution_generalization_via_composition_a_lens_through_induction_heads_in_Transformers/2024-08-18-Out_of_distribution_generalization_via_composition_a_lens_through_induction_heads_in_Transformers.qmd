@@ -1,0 +1,40 @@
+
+---
+title: "Out-of-distribution generalization via composition: a lens through induction heads in Transformers"
+id: "2408.09503v1"
+description: "LLMs solve new tasks via OOD generalization, learning rules through self-attention layer composition and a shared latent subspace."
+author: Jiajun Song, Zhuoyan Xu, Yiqiao Zhong
+date: "2024-08-18"
+image: "https://browse.arxiv.org/html/2408.09503v1/extracted/5798377/Figs/main.png"
+categories: ['prompt-engineering', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09503v1/extracted/5798377/Figs/main.png)
+
+**Summary:**
+
+This paper explores the out-of-distribution (OOD) generalization capabilities of large language models (LLMs) through the lens of induction heads in Transformers. The authors examine OOD generalization in settings where instances are generated according to hidden rules, including in-context learning with symbolic reasoning. They empirically investigate the training dynamics of Transformers on a synthetic example and conduct extensive experiments on various pretrained LLMs, focusing on induction heads. The study reveals that OOD generalization and composition are intertwined, with models learning rules by composing two self-attention layers, thereby achieving OOD generalization. Furthermore, a shared latent subspace in the embedding space acts as a bridge for composition by aligning early layers and later layers, a concept referred to as the common bridge representation hypothesis.
+
+**Major Findings:**
+
+1. On a synthetic task of copying sequences of arbitrary patterns, a 2-layer Transformer exhibits an abrupt emergence of subspace matching that accompanies OOD generalization between two Transformer layers, a phenomenon that echoes emergent abilities.
+2. On language reasoning tasks where LLMs infer the meanings of planted symbols, including examples of in-context learning, OOD generalization requires a similar compositional structure. Extensive experiments on LLMs suggest the presence of a latent subspace for compositions in multilayer and multihead models, which is proposed as the common bridge representation hypothesis.
+3. The study demonstrates that the sharp transition in prediction accuracy is related to the emergent abilities of LLMs observed in broader contexts, and that feedforward networks learning algebraic rules also exhibit phase transitions from memorization to generalization, a phenomenon known as Grokking.
+
+**Analysis and Critique:**
+
+The paper provides valuable insights into the OOD generalization capabilities of LLMs and the role of induction heads in Transformers. However, the study is limited to a specific set of tasks and models, and further research is needed to explore the generalizability of the findings. Additionally, the paper does not address the potential impact of model size and architecture on OOD generalization. The authors acknowledge these limitations and suggest that future work should explore alternative mechanisms for compositions and examine variants or practical techniques in LLMs that may impact the common bridge representation hypothesis.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09503v1](https://arxiv.org/abs/2408.09503v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09503v1](https://browse.arxiv.org/html/2408.09503v1)       |
+| Truncated       | False       |
+| Word Count       | 11571       |

@@ -1,0 +1,47 @@
+
+---
+title: "Performance Law of Large Language Models"
+id: "2408.09895v1"
+description: "Performance Law predicts LLM capabilities using key hyperparameters, aiding architecture and resource decisions."
+author: Chuhan Wu, Ruiming Tang
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09895v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09895v1/x1.png)
+
+### Summary:
+
+The article presents an empirical equation named "Performance Law" to directly predict the MMLU score of an LLM, a widely used metric to indicate the general capability of LLMs in real-world conversations and applications. The equation is based on only a few key hyperparameters of the LLM architecture and the size of training data. The authors claim that this equation can be used to guide the choice of LLM architecture and the effective allocation of computational resources without extensive experiments.
+
+### Major Findings:
+
+1. The Performance Law equation can predict the MMLU score of an LLM based on the amount of training data and the key hyperparameters of a common Transformer-based LLM, including the number of layers, hidden size, and the intermediate size of feed-forward networks.
+2. The equation can be used to predict the performance of MoE models by considering the number of activated parameters and following a variant of dense model prediction.
+3. The equation has been tested on 10 popular open source models released in 2024 and has shown surprisingly accurate performance prediction of LLMs of different sizes (from 0.5B to 1000+B) and in different years (from 2020 to 2024) released by different organizations around the world.
+
+### Analysis and Critique:
+
+The Performance Law equation is a promising tool for predicting the performance of LLMs. However, there are some limitations and potential biases that need to be considered:
+
+1. The equation has been tested on a limited number of models, and its accuracy and generality across different model structures and shapes need to be further validated.
+2. The precision and stability of the computing infrastructures are not taken into account, which may affect the quality of the model.
+3. The equation does not consider the impact of data quality and distributions, which may largely affect model quality.
+4. The equation has been tested on MMLU scores, and its applicability to other benchmarks needs to be further investigated.
+
+Overall, the Performance Law equation is a valuable tool for predicting the performance of LLMs, but its limitations and potential biases need to be carefully considered. Further research is needed to validate its accuracy and generality across different model structures and shapes, and to investigate its applicability to other bench
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09895v1](https://arxiv.org/abs/2408.09895v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09895v1](https://browse.arxiv.org/html/2408.09895v1)       |
+| Truncated       | False       |
+| Word Count       | 5218       |

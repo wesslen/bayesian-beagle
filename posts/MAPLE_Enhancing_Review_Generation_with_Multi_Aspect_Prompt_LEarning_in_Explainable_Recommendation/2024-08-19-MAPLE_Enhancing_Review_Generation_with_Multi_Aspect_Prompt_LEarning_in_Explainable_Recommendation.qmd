@@ -1,0 +1,49 @@
+
+---
+title: "MAPLE: Enhancing Review Generation with Multi-Aspect Prompt LEarning in Explainable Recommendation"
+id: "2408.09865v1"
+description: "MAPLE, a personalized aspect-controlled model, outperforms baseline review-generation models in diversity, coherence, and factual relevance, offering enriched, personalized explanations."
+author: Ching-Wen Yang, Che Wei Chen, Kun-da Wu, Hao Xu, Jui-Feng Yao, Hung-Yu Kao
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09865v1/x1.png"
+categories: ['prompt-engineering', 'recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09865v1/x1.png)
+
+# Summary:
+
+MAPLE: Enhancing Review Generation with Multi-Aspect Prompt LEarning in Explainable Recommendation
+
+**Summary:**
+
+- The paper introduces MAPLE, a model that leverages user IDs and multi-aspect signals to generate detailed and controllable explanatory texts.
+- MAPLE integrates aspect information into representation learning, aspect recommendation, and review sentence learning.
+- MAPLE can also serve as a good discrete retriever in a retriever-reader explainable pipeline.
+
+**Major Findings:**
+
+1. MAPLE significantly outperforms baseline review-generation models in factuality, feature coverage, and both sentence-level and corpus-level diversity.
+2. MAPLE shows more than a 10% improvement in item-wise FMR, recommending accurate features in about 80% of explanations.
+3. MAPLE excels in textual diversity on Yelp19, evidenced by high USR and ENTR scores, indicating minimal sentence repetition and high creativity.
+
+**Analysis and Critique:**
+
+- MAPLE presents several limitations, including the challenge of labeling aspect categories and the need for manual effort to define the aspect category inventory.
+- The quality of these labels and their distribution across the dataset impact the training difficulty of the aspect recommendation component and subsequently the inferenced text quality and style.
+- In cases where the label distribution is highly skewed, it might be necessary to optimize the aspect recommendation component separately.
+- The introduction of the item-wise Feature Matching Ratio marks a pioneering step towards enriching the aspect-wise factuality perspective of explainable recommendation model evaluations. However, its capability to detect non-factual elements still needs future research and methodological advancement.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09865v1](https://arxiv.org/abs/2408.09865v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09865v1](https://browse.arxiv.org/html/2408.09865v1)       |
+| Truncated       | False       |
+| Word Count       | 8535       |

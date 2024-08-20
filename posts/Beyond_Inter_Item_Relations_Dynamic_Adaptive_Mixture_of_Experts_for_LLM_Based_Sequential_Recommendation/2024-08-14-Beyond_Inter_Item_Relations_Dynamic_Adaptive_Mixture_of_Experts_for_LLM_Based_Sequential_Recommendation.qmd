@@ -1,0 +1,45 @@
+
+---
+title: "Beyond Inter-Item Relations: Dynamic Adaptive Mixture-of-Experts for LLM-Based Sequential Recommendation"
+id: "2408.07427v1"
+description: "MixRec: LLM-based SRS that captures intra-item relations, long-term collaborative knowledge, and uses dynamic adaptive architecture for better sequential recommendations."
+author: CanYi Liu, Wei Li, Youchen, Zhang, Hui Li, Rongrong Ji
+date: "2024-08-14"
+image: "https://browse.arxiv.org/html/2408.07427v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.07427v1/x1.png)
+
+### Summary:
+
+The paper proposes MixRec, an LLM-based SRS that aims to improve sequential recommendation by incorporating intra-item information and user-side collaborative knowledge into LLM-based sequential recommendation with a dynamic adaptive mixture-of-experts (DAMoE) architecture. MixRec is designed to address the limitations of existing LLM-based SRS, such as neglecting intra-item relations, ignoring long-term collaborative knowledge, and using inflexible architecture designs for adaption. The contributions of this work include designing coarse-grained adaption tasks, introducing context masking, collaborative knowledge injection, and a dynamic adaptive mixture-of-experts design.
+
+### Major Findings:
+
+1. MixRec is built on top of coarse-grained adaption for capturing inter-item relations and is further enhanced with context masking, collaborative knowledge injection, and a dynamic adaptive mixture-of-experts design.
+2. Context masking is used together with causal masking to help LLM better understand token and item semantics in the context of SRS.
+3. Collaborative knowledge injection is designed to jointly train a small CF model and LLM-based SRS, allowing LLM-based SRS to benefit from long-term collaborative knowledge.
+4. A dynamic adaptive mixture-of-experts design is proposed to flexibly choose expert architectures based on Bayesian optimization, improving the incorporation of different sequential information.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to improving LLM-based SRS by incorporating intra-item information and user-side collaborative knowledge. However, there are some potential limitations and areas for improvement.
+
+1. The paper does not provide a detailed comparison with other LLM-based SRS methods, making it difficult to evaluate the performance of MixRec against existing approaches.
+2. The paper does not discuss the computational cost of MixRec, which is an important consideration for practical applications.
+3. The paper does not provide a detailed analysis of the impact of different design choices on the performance of MixRec, such as the choice of coarse-grained adaption tasks, the design of the dynamic adaptive mixture-of-experts, and the use of collaborative knowledge
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.07427v1](https://arxiv.org/abs/2408.07427v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.07427v1](https://browse.arxiv.org/html/2408.07427v1)       |
+| Truncated       | False       |
+| Word Count       | 9137       |

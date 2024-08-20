@@ -1,0 +1,48 @@
+
+---
+title: "Evaluating Language Models for Efficient Code Generation"
+id: "2408.06450v1"
+description: "DPE is a framework for evaluating LLMs' code efficiency, offering a compound metric and efficiency-focused tasks. It's proven reliable and convenient."
+author: Jiawei Liu, Songrun Xie, Junhao Wang, Yuxiang Wei, Yifeng Ding, Lingming Zhang
+date: "2024-08-12"
+image: "https://browse.arxiv.org/html/2408.06450v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.06450v1/x1.png)
+
+### Summary:
+
+- The paper introduces Differential Performance Evaluation (DPE), a framework for evaluating the efficiency of Large Language Models (LLMs) in code generation.
+- DPE addresses the limitations of traditional coding benchmarks by focusing on efficiency-demanding tasks and establishing a compound metric for performance evaluation.
+- DPE operates in two phases: curating efficiency datasets and assessing code efficiency.
+- The authors use DPE to create EvalPerf, a benchmark with 121 performance-challenging coding tasks, and evaluate popular LLMs for code efficiency.
+- The evaluation reveals interesting findings regarding the impact of model sizes, instruction tuning, and prompting on code efficiency.
+
+### Major Findings:
+
+1. The scaling law fails to account for code efficiency, but general instruction tuning benefits both code correctness and efficiency.
+2. EvalPerf is reliable and convenient to use even across platforms.
+3. DPE can create inputs that are more performance-exercising than prior art by 4.8×.
+
+### Analysis and Critique:
+
+- The paper provides a comprehensive evaluation of LLMs for code efficiency, addressing the limitations of traditional coding benchmarks.
+- The DPE framework and EvalPerf benchmark offer a reliable and convenient way to evaluate code efficiency across platforms.
+- However, the paper does not discuss potential biases or limitations in the data curation process, which could impact the generalizability of the findings.
+- Additionally, the evaluation focuses on a limited set of LLMs and does not consider other factors that may impact code efficiency, such as hardware or software configurations.
+- Future research could address these limitations by expanding the evaluation to include a more diverse set of LLMs and considering additional factors that may impact code efficiency.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.06450v1](https://arxiv.org/abs/2408.06450v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.06450v1](https://browse.arxiv.org/html/2408.06450v1)       |
+| Truncated       | False       |
+| Word Count       | 8516       |

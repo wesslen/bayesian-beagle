@@ -1,0 +1,44 @@
+
+---
+title: "LLM-Enhanced Static Analysis for Precise Identification of Vulnerable OSS Versions"
+id: "2408.07321v1"
+description: "Vercation identifies vulnerable OSS versions using program slicing & LLM, outperforming current methods with a 92.4% F1 score and detecting 134 incorrect versions in NVD reports."
+author: Yiran Cheng, Lwin Khin Shar, Ting Zhang, Shouguo Yang, Chaopeng Dong, David Lo, Shichao Lv, Zhiqiang Shi, Limin Sun
+date: "2024-08-14"
+image: "https://browse.arxiv.org/html/2408.07321v1/extracted/5786293/figs/new_timeline.png"
+categories: ['security', 'programming', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.07321v1/extracted/5786293/figs/new_timeline.png)
+
+# Summary
+
+The paper presents Vercation, an approach designed to identify vulnerable versions of open-source C/C++ software. The approach combines program slicing with a Large Language Model (LLM) to identify vulnerability-relevant code from vulnerability patches. It then backtraces historical commits to gather previous modifications of identified vulnerability-relevant code. Vercation proposes semantic-level code clone detection to compare the differences between pre-modification and post-modification code, thereby locating the vulnerability-introducing commit (vic) and enabling the identification of vulnerable versions between the patch commit and the vic.
+
+The authors curated a dataset linking 74 OSS vulnerabilities and 1013 versions to evaluate Vercation. On this dataset, the approach achieves an F1 score of 92.4%, outperforming current state-of-the-art methods. More importantly, Vercation detected 134 incorrect vulnerable OSS versions in NVD reports.
+
+## Major Findings
+
+1. Vercation, an approach combining program slicing with a Large Language Model (LLM), effectively identifies vulnerable versions of open-source C/C++ software.
+2. The approach achieves an F1 score of 92.4% on a curated dataset, outperforming current state-of-the-art methods.
+3. Vercation detected 134 incorrect vulnerable OSS versions in NVD reports, highlighting its effectiveness in identifying vulnerable versions.
+
+## Analysis and Critique
+
+The paper presents a novel approach to identifying vulnerable versions of open-source C/C++ software. The use of a Large Language Model (LLM) in conjunction with program slicing is a unique contribution to the field. The authors' curation of a dataset linking 74 OSS vulnerabilities and 1013 versions is commendable, as it provides a robust basis for evaluating the approach.
+
+However, the paper does not provide a detailed comparison of Vercation with other state-of-the-art methods. While the F1 score of 92.4% is impressive, it would be beneficial to understand how this compares to other approaches in terms of precision, recall, and other relevant metrics. Additionally, the paper does not discuss
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.07321v1](https://arxiv.org/abs/2408.07321v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.07321v1](https://browse.arxiv.org/html/2408.07321v1)       |
+| Truncated       | False       |
+| Word Count       | 13214       |

@@ -1,0 +1,42 @@
+
+---
+title: "Offline RLHF Methods Need More Accurate Supervision Signals"
+id: "2408.09385v1"
+description: "RDO improves offline RLHF by considering how much one response is preferred over others, enhancing LLM alignment with human preferences."
+author: Shiqi Wang, Zhengze Zhang, Rui Zhao, Fei Tan, Cam Tu Nguyen
+date: "2024-08-18"
+image: "https://browse.arxiv.org/html/2408.09385v1/extracted/5797951/fig/motivation.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09385v1/extracted/5797951/fig/motivation.png)
+
+### Summary:
+
+The paper introduces a novel method called Reward Difference Optimization (RDO) to improve the alignment of Large Language Models (LLMs) with human preferences. The authors argue that current offline Reinforcement Learning with Human Feedback (RLHF) methods only capture the "ordinal relationship" between responses, overlooking the crucial aspect of "how much" one is preferred over the others. RDO addresses this issue by introducing reward difference coefficients to reweigh sample pairs in offline RLHF and developing a difference model for predicting these coefficients.
+
+### Major Findings:
+
+1. **Reward Difference Coefficients**: The authors propose the use of reward difference coefficients to quantify the degree to which one response is preferred over another, given the same query. These coefficients are then leveraged as sample weights in the alignment loss function.
+
+2. **Difference Model**: The paper introduces a difference model that leverages attention-based interactions between two responses for predicting the reward difference. This model is designed to be more effective than traditional reward models, which consider responses independently.
+
+3. **Experimental Results**: The authors conduct extensive experiments with Alpaca-7B, one of the most well-known open-source LLMs, on the HH dataset and TL;DR dataset. The results show the effectiveness of the proposed method in automatic metrics based on reward models, GPT-4, and human evaluation.
+
+### Analysis and Critique:
+
+The paper presents a promising approach to improving the alignment of LLMs with human preferences. The use of reward difference coefficients and the difference model are innovative solutions to the limitations of current offline RLHF methods. However, the paper could benefit from a more detailed analysis of the method's limitations and potential biases. For instance, the authors could discuss the potential for the difference model to introduce new biases or the impact of the choice of the reward model on the results. Additionally, the paper could explore the method's scalability to larger LLMs and more complex tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09385v1](https://arxiv.org/abs/2408.09385v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09385v1](https://browse.arxiv.org/html/2408.09385v1)       |
+| Truncated       | False       |
+| Word Count       | 3578       |

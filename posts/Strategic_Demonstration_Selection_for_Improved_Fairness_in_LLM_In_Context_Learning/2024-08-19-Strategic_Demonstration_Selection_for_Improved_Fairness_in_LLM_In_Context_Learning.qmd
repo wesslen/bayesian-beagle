@@ -1,0 +1,42 @@
+
+---
+title: "Strategic Demonstration Selection for Improved Fairness in LLM In-Context Learning"
+id: "2408.09757v1"
+description: "Including minority group samples in prompts boosts fairness in LLMs without compromising accuracy, aiding in-context learning for tabular data."
+author: Jingyu Hu, Weiru Liu, Mengnan Du
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09757v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09757v1/x1.png)
+
+### Summary:
+
+This study investigates the impact of varying demonstrations within in-context learning (ICL) prompts on the fairness outcomes of large language models (LLMs). The findings reveal that including minority group samples in prompts significantly improves fairness without compromising predictive accuracy. The proportion of minority to majority samples in demonstrations affects the trade-off between fairness and prediction accuracy. Based on these insights, a mitigation technique is introduced that employs clustering and evolutionary strategies to curate a diverse and representative sample set from the training data. This approach aims to enhance both predictive performance and fairness in ICL applications. Experimental results validate that the proposed method dramatically improves fairness across various metrics, demonstrating its efficacy in real-world scenarios.
+
+### Major Findings:
+1. Deliberately including minority group samples in ICL prompts significantly boosts fairness without sacrificing predictive accuracy.
+2. The proportion of minority to majority samples in demonstrations affects the trade-off between fairness and prediction accuracy.
+3. A mitigation technique that employs clustering and evolutionary strategies to curate a diverse and representative sample set from the training data enhances both predictive performance and fairness in ICL applications.
+
+### Analysis and Critique:
+- The study provides valuable insights into the fairness implications of ICL in LLMs and introduces a novel mitigation technique to improve fairness.
+- However, the study focuses on binary classification with a single sensitive feature, which limits the broader applicability of the findings. Future research should explore LLM's intersectional fairness and its performance in multi-classification tasks.
+- The study uses pre-trained models without fine-tuning. Investigating how fine-tuning on curated samples impacts fairness could provide deeper insights.
+- The proposed mitigation technique equally weighs fairness and prediction performance, which might not align with real-world applications that require a dynamic balance between these metrics.
+- The study does not address the potential biases in the training data, which could impact the fairness of the LLMs. Future research should consider methods to mitigate biases in the training data.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09757v1](https://arxiv.org/abs/2408.09757v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09757v1](https://browse.arxiv.org/html/2408.09757v1)       |
+| Truncated       | False       |
+| Word Count       | 6909       |

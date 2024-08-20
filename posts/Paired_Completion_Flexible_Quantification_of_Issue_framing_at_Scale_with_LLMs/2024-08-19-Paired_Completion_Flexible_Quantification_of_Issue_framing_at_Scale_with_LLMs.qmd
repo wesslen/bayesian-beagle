@@ -1,0 +1,40 @@
+
+---
+title: "Paired Completion: Flexible Quantification of Issue-framing at Scale with LLMs"
+id: "2408.09742v1"
+description: "Paired completion method enables scalable, accurate, and low-bias issue-framing detection in large text datasets."
+author: Simon D Angus, Lachlan O'Neill
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09742v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09742v1/x1.png)
+
+### Summary:
+
+The study introduces a novel method called "paired completion" for detecting and quantifying issue framing in large text datasets. This method leverages next-token log probabilities derived from generative large language models (LLMs) to reliably and efficiently detect issue framing with only a few examples of either perspective on a given issue. The authors evaluate paired completion against prompt-based LLM methods and labeled methods using traditional NLP and recent LLM contextual embeddings. They also conduct a cost-based analysis and a model bias analysis. The results demonstrate a feasible path to scalable, accurate, and low-bias issue-framing in large corpora.
+
+### Major Findings:
+
+1. **Paired completion method**: The authors introduce a new method called paired completion, which is a low-resource, computationally efficient method that can accurately identify whether a target text aligns with one or other conceptual framing on a given issue.
+2. **Empirical evaluation**: The authors conduct rigorous evaluation of their proposed method across 192 independent experiments by comparing it to four framing classification approaches over four diverse, synthetic textual datasets. They demonstrate that the LLM-based approaches are, in general, far superior to the alternatives.
+3. **Cost- and bias- comparison analyses**: The authors conduct cost- and bias- comparison analyses at current gated API pricing to assess any trade-offs in performance. They demonstrate that paired completion with LLMs is generally superior to the LLM prompting approach.
+
+### Analysis and Critique:
+
+The study presents a promising approach to detecting and quantifying issue framing in large text datasets. The paired completion method is a novel and efficient solution that can accurately identify conceptual framing with minimal examples. The authors provide a comprehensive evaluation of their method, demonstrating its superiority over existing approaches. However, the use of synthetic data for evaluation has some limitations, as it may not accurately reflect the performance of the method on human-labeled ground-truth data. Additionally, the study focuses on a traditional two-class classification paradigm, and further research is needed to explore the extension of paired completion to any number of framings on a given dimension of an issue. Finally, the study suggests that aligned models may be more prone to bias when performing framing alignment, but
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09742v1](https://arxiv.org/abs/2408.09742v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09742v1](https://browse.arxiv.org/html/2408.09742v1)       |
+| Truncated       | False       |
+| Word Count       | 7395       |

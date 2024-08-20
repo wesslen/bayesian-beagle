@@ -1,0 +1,39 @@
+
+---
+title: "Fine-tuning Large Language Models with Human-inspired Learning Strategies in Medical Question Answering"
+id: "2408.07888v1"
+description: "Curriculum learning for LLMs varies in effectiveness, with gains up to 1.81% per dataset, and model-defined difficulty may outperform human-defined difficulty."
+author: Yushi Yang, Andrew M. Bean, Robert McCraith, Adam Mahdi
+date: "2024-08-15"
+image: "https://browse.arxiv.org/html/2408.07888v1/extracted/5718231/Figures/learning_orders.png"
+categories: ['education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.07888v1/extracted/5718231/Figures/learning_orders.png)
+
+Summary:
+This study evaluates the effectiveness of human-inspired learning strategies, such as curriculum learning, for fine-tuning large language models (LLMs) in medical question answering. The research extends previous work by assessing both curriculum-based and non-curriculum-based learning strategies across multiple LLMs, using human-defined and automated data labels. The results indicate a moderate impact of using human-inspired learning strategies for fine-tuning LLMs, with maximum accuracy gains of 1.77% per model and 1.81% per dataset. Crucially, the effectiveness of these strategies varies significantly across different model-dataset combinations, emphasizing that the benefits of a specific human-inspired strategy for fine-tuning LLMs do not generalize. Additionally, evidence suggests that curriculum learning using LLM-defined question difficulty outperforms human-defined difficulty, highlighting the potential of using model-generated measures for optimal curriculum design.
+
+Major Findings:
+1. Human-inspired learning strategies have a moderate impact on fine-tuning LLMs, with maximum accuracy gains of 1.77% per model and 1.81% per dataset.
+2. The effectiveness of human-inspired learning strategies varies significantly across different model-dataset combinations, emphasizing the need for caution in generalizing these strategies across diverse contexts.
+3. Curriculum learning using LLM-defined question difficulty outperforms human-defined difficulty, highlighting the potential of using model-generated measures for optimal curriculum design.
+
+Analysis and Critique:
+The study provides valuable insights into the effectiveness and variability of human-inspired learning strategies for optimizing the fine-tuning process of LLMs. However, several limitations should be considered. First, the five-time repetition used for each model-data combination may not provide reliable confidence intervals and statistical testing. Second, the LLM-defined difficulty measure and the results for clustered categories heavily depend on the choice of LLMs and their pre-training knowledge, as well as the choice of clustering algorithm and selected hyperparameters. Third, the relatively small size of the LEK dataset may not fully reveal the effects of learning strategies that only emerge with more training data.
+
+Future research could explore a medical curriculum that encompasses a broader spectrum of questions, spanning from fundamental medical
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.07888v1](https://arxiv.org/abs/2408.07888v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.07888v1](https://browse.arxiv.org/html/2408.07888v1)       |
+| Truncated       | False       |
+| Word Count       | 6594       |

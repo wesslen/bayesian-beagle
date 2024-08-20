@@ -1,0 +1,28 @@
+
+---
+title: "TBA: Faster Large Language Model Training Using SSD-Based Activation Offloading"
+id: "2408.10013v1"
+description: "TBA offloads activations to SSDs, reducing GPU memory usage by 47% with negligible performance overhead, outperforming layerwise full recomputation in memory savings."
+author: Kun Wu, Jeongmin Brian Park, Xiaofan Zhang, Mert Hidayetoğlu, Vikram Sharma Mailthody, Sitao Huang, Steven Sam Lumetta, Wen-mei Hwu
+date: "2024-08-19"
+image: "../../img/2408.10013v1/image_1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2408.10013v1/image_1.png)
+
+The paper "TBA: Faster Large Language Model Training Using SSD-Based Activation Offloading" proposes a software framework called TBA to offload activations in LLM training to NVMe SSDs. The authors demonstrate the viability of TBA on large-scale systems by modeling the performance, estimated SSD lifespan, and the required per-GPU PCIe bandwidth. The paper also discusses the design and implementation of TBA, including the use of PyTorch hooks to alter its execution behavior and the optimization techniques used to achieve full overlap of activation transfers with computation. The evaluation shows that TBA achieves almost the same training time per step as the original system without TBA while reducing the activations peak memory use by up to 47%. The paper also introduces the recompute-offload-keep (ROK) curve to compare the TBA offloading with two other tensor placement strategies, keeping activations in memory and layerwise full recomputation. TBA has the same performance as keeping activations in memory and lower memory peak compared with activation checkpointing. The paper concludes by discussing the limitations and potential biases of the article.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.10013v1](https://arxiv.org/abs/2408.10013v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.10013v1](https://browse.arxiv.org/html/2408.10013v1)       |
+| Truncated       | False       |
+| Word Count       | 23878       |

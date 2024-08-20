@@ -1,0 +1,48 @@
+
+---
+title: "Casper: Prompt Sanitization for Protecting User Privacy in Web-Based Large Language Models"
+id: "2408.07004v1"
+description: "Casper is a browser extension that sanitizes user inputs to protect privacy, removing sensitive info before sending to LLM services with 98.5% PII and 89.9% topic accuracy."
+author: Chun Jie Chong, Chenxi Hou, Zhihao Yao, Seyed Mohammadjavad Seyed Talebi
+date: "2024-08-13"
+image: "https://browse.arxiv.org/html/2408.07004v1/x1.png"
+categories: ['security', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.07004v1/x1.png)
+
+# Summary
+
+The paper presents a novel approach, Casper, to address the privacy concerns associated with the use of cloud-based Large Language Models (LLMs) and their third-party plugins. Casper is a prompt sanitization technique that aims to protect user privacy by detecting and removing sensitive information from user inputs before sending them to LLM services. It operates as a browser extension, running entirely on the user's device, and does not require any changes to the online LLM services.
+
+Casper employs a three-layered sanitization mechanism consisting of a rule-based filter, a Machine Learning (ML)-based named entity recognizer, and a browser-based local LLM topic identifier. The system was evaluated on a dataset of 4000 synthesized prompts and demonstrated high accuracy in filtering out Personal Identifiable Information (PII) and privacy-sensitive topics.
+
+# Major Findings
+
+1. Casper can effectively filter out PII with an accuracy of 98.5%.
+2. The system can identify privacy-sensitive topics with an accuracy of 89.9%.
+3. Casper operates as a lightweight and efficient browser extension, incurring minimal performance overhead.
+
+# Analysis and Critique
+
+The paper presents a comprehensive solution to the privacy concerns associated with the use of cloud-based LLMs and their third-party plugins. The three-layered sanitization mechanism employed by Casper ensures high accuracy in filtering out PII and identifying privacy-sensitive topics. The system's design as a browser extension ensures that it is lightweight and efficient, incurring minimal performance overhead.
+
+However, the paper does not discuss the potential implications of false positives or false negatives in the filtering process. False positives could result in the removal of non-sensitive information, while false negatives could allow sensitive information to pass through the filter. The paper also does not discuss the potential for the system to be bypassed or circumvented by malicious actors.
+
+Furthermore, the paper does not discuss the potential for the system to be used for malicious purposes, such as censorship or surveillance. The ability to filter out certain types of information could be used to suppress free speech or monitor user activity.
+
+In conclusion, while Casper presents a promising solution
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.07004v1](https://arxiv.org/abs/2408.07004v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.07004v1](https://browse.arxiv.org/html/2408.07004v1)       |
+| Truncated       | False       |
+| Word Count       | 12904       |

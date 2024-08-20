@@ -1,0 +1,40 @@
+
+---
+title: "Enhancing Large Language Model-based Speech Recognition by Contextualization for Rare and Ambiguous Words"
+id: "2408.08027v1"
+description: "LLM-based ASR system transcribes ambiguous words better with keyword prompts, improving rare word recognition."
+author: Kento Nozawa, Takashi Masuko, Toru Taniguchi
+date: "2024-08-15"
+image: "https://browse.arxiv.org/html/2408.08027v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.08027v1/x1.png)
+
+### Summary:
+
+This paper presents a large language model (LLM) based automatic speech recognition (ASR) system that can be contextualized by providing keywords as prior information in text prompts. The system adopts a decoder-only architecture and uses an in-house LLM, PLaMo-100B, pre-trained from scratch using datasets dominated by Japanese and English texts as the decoder. A pre-trained Whisper encoder is used as an audio encoder, and the audio embeddings from the audio encoder are projected to the text embedding space by an adapter layer and concatenated with text embeddings converted from text prompts to form inputs to the decoder. Experimental results demonstrate that providing keywords to the decoder can significantly improve the recognition performance of rare and ambiguous words.
+
+### Major Findings:
+
+1. The LLM-based ASR system can be contextualized by providing keywords as prior information in text prompts, without modifying the model architecture.
+2. Providing keywords to the decoder can significantly improve the recognition performance of rare and ambiguous words.
+3. The system can perform not only ASR but also other tasks, such as speech translation and voice chat, by including instructions in the prompt texts to the LLMs.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to improving the recognition performance of rare and ambiguous words in ASR systems. However, the paper does not provide a detailed comparison with other state-of-the-art ASR systems, which makes it difficult to evaluate the performance of the proposed system. Additionally, the paper does not discuss the potential limitations of the proposed approach, such as the need for a large amount of data to pre-train the LLM and the computational resources required to fine-tune the model. Finally, the paper does not provide a clear explanation of how the keywords are selected and how they are used to contextualize the LLM-based ASR system.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.08027v1](https://arxiv.org/abs/2408.08027v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.08027v1](https://browse.arxiv.org/html/2408.08027v1)       |
+| Truncated       | False       |
+| Word Count       | 6678       |

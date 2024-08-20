@@ -1,0 +1,48 @@
+
+---
+title: "Multilingual Needle in a Haystack: Investigating Long-Context Behavior of Multilingual Large Language Models"
+id: "2408.10151v1"
+description: "LLMs struggle with long, multilingual contexts, especially non-English and middle-positioned needles. This is the first study on LLMs' multilingual long-context behavior."
+author: Amey Hengle, Prasoon Bajpai, Soham Dan, Tanmoy Chakraborty
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.10151v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.10151v1/x1.png)
+
+# Summary:
+
+**Summary:**
+
+The paper introduces the MultiLingual Needle in a Haystack (MLNeedle) test, a new benchmark for evaluating the long-context capabilities of multilingual large language models (LLMs). The test assesses a model's ability to retrieve relevant information (the needle) from a collection of multilingual distractor texts (the haystack). The authors evaluate four state-of-the-art LLMs on MLNeedle and find that model performance varies significantly with language and needle position. The lowest performance is observed when the needle is in a language outside the English language family and located in the middle of the input context. Additionally, none of the models demonstrate satisfactory cross-lingual retrieval performance as the context length increases.
+
+**Major Findings:**
+
+1. Model performance is highly sensitive to both the language and position of the needle in the haystack.
+2. LLMs are relatively robust to variations in the language of distractor passages, indicating that the key challenges lie in how LLMs process and retrieve the needle from diverse linguistic environments.
+3. Ablation studies reveal the role of temperature sampling, instruction tuning, and the choice of evaluation metric on performance.
+
+**Analysis and Critique:**
+
+* The paper provides valuable insights into the long-context behavior of LLMs in multilingual settings, but it does not address the potential biases or limitations of the models themselves.
+* The study focuses on a specific task (multilingual question-answering) and does not explore other tasks that may be affected by long-context multilingual inputs.
+* The evaluation of models is limited to four state-of-the-art LLMs, and the results may not generalize to other models or architectures.
+* The paper does not discuss the potential implications of these findings for real-world applications, such as information retrieval or machine translation.
+* The study does not address the potential impact of the size and quality of the training data on the models' performance in long-context multilingual tasks.
+* The paper does not provide a clear comparison between the performance of the evaluated models and that of other models or approaches in the literature.
+* The study does not discuss the potential impact of the evaluation metric on the results, and it does not explore alternative metrics that
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.10151v1](https://arxiv.org/abs/2408.10151v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.10151v1](https://browse.arxiv.org/html/2408.10151v1)       |
+| Truncated       | False       |
+| Word Count       | 6917       |

@@ -1,0 +1,40 @@
+
+---
+title: "Evaluating Cultural Adaptability of a Large Language Model via Simulation of Synthetic Personas"
+id: "2408.06929v1"
+description: "LLMs like GPT-3.5 perform better with user's country info, but native language cues can reduce alignment with real responses."
+author: Louis Kwok, Michal Bravansky, Lewis D. Griffin
+date: "2024-08-13"
+image: "https://browse.arxiv.org/html/2408.06929v1/extracted/5786006/figures/diagram.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.06929v1/extracted/5786006/figures/diagram.png)
+
+### Summary:
+
+The study evaluates the cultural adaptability of a large language model, GPT-3.5, by simulating human profiles representing various nationalities within a questionnaire-style psychological experiment. The model is tasked with reproducing reactions to persuasive news articles of 7,286 participants from 15 countries, and the results are compared with a dataset of real participants sharing the same demographic traits. The analysis shows that specifying a person's country of residence improves GPT-3.5's alignment with their responses. However, using native language prompting introduces shifts that significantly reduce overall alignment, with some languages particularly impairing performance.
+
+### Major Findings:
+
+1. **Effect of Indicating Nationality**: Explicitly stating the country of residence of simulated participants significantly improves the fidelity of the simulation's responses, allowing national variations in persuasion and mobilization to be modeled.
+2. **Effect of using a Single Language to Simulate Multinational Participants**: Prompting in different languages, while keeping nationality information present, yields unexpected outcomes. All languages performed well in terms of producing good sign agreement rates for country-specific bias terms. However, only Greek and Hebrew did not manage to achieve statistical significance for the sign agreement rates for framing and relative deprivation coefficients.
+3. **Effect of using Native Languages to Simulate Multinational Participants**: Prompting approaches that were constant across nationalities, such as monolingual and full-shuffled, performed similarly well and had statistically significant agreement rates. On the other hand, approaches that were not constant across nationalities, such as native language and country-shuffled, performed less well and failed to achieve significance.
+
+### Analysis and Critique:
+
+The study's predominant focus on European nationals is a notable limitation, as it does not capture a wide spectrum of cultural backgrounds. Future research should aim to address this limitation by expanding the investigation to include a broader range of cultures and nationalities. Additionally, the study primarily examines the performance of a single model, GPT-3.5. Developing a comprehensive benchmark that assesses cultural adaptability across various models would provide a more robust evaluation of large language models' cultural adaptability.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.06929v1](https://arxiv.org/abs/2408.06929v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.06929v1](https://browse.arxiv.org/html/2408.06929v1)       |
+| Truncated       | False       |
+| Word Count       | 5805       |

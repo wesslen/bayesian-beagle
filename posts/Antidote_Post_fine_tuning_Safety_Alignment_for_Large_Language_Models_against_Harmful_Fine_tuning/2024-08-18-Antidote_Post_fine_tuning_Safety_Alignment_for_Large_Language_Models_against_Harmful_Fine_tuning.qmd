@@ -1,0 +1,44 @@
+
+---
+title: "Antidote: Post-fine-tuning Safety Alignment for Large Language Models against Harmful Fine-tuning"
+id: "2408.09600v1"
+description: "Antidote removes harmful parameters post-fine-tuning, reducing harmful content without compromising performance, regardless of training hyper-parameters."
+author: Tiansheng Huang, Gautam Bhattacharya, Pratik Joshi, Josh Kimball, Ling Liu
+date: "2024-08-18"
+image: "https://browse.arxiv.org/html/2408.09600v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09600v1/x1.png)
+
+### Summary:
+
+The paper proposes a post-fine-tuning stage solution called Antidote to address the issue of harmful fine-tuning in large language models (LLMs). The authors evaluate existing solutions and find that they are highly sensitive to training hyperparameters in the fine-tuning stage, which they call the hyper-parameter sensitive issue. Antidote aims to realign the model after the fine-tuning stage has been completed, remaining agnostic to the training details in the fine-tuning stage. The method relies on the philosophy that by removing harmful parameters, the harmful model can be recovered from harmful behaviors, regardless of how those harmful parameters are formed in the fine-tuning stage. Empirical results show that Antidote reduces harmful scores while maintaining accuracy on downstream tasks.
+
+### Major Findings:
+
+1. Existing solutions for harmful fine-tuning are highly sensitive to the training hyperparameters in the fine-tuning stage, which is named the hyper-parameter sensitive issue.
+2. Antidote, a post-fine-tuning realignment solution, remains agnostic towards the training details in the fine-tuning stage, addressing the hyper-parameter sensitive issue.
+3. Comprehensive experiments on four downstream tasks and different attack settings verify the effectiveness of the proposed method.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to addressing the issue of harmful fine-tuning in LLMs. The authors provide a thorough evaluation of existing solutions and identify their limitations, which is a significant contribution to the field. The proposed method, Antidote, offers a promising solution to the hyper-parameter sensitive issue, which has not been systematically studied before.
+
+However, the paper does not discuss potential limitations or unanswered questions regarding the proposed method. For instance, it is unclear how Antidote would perform in scenarios where the harmful data is not easily identifiable or when the model has already been significantly compromised. Additionally, the paper does not provide a comparison of Antidote with other post-fine-tuning stage defenses, such as those mentioned in the related work section.
+
+In conclusion, the paper presents a valuable contribution to the field of LLM safety alignment, but further research is needed to explore the limitations and potential improvements of the proposed method.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09600v1](https://arxiv.org/abs/2408.09600v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09600v1](https://browse.arxiv.org/html/2408.09600v1)       |
+| Truncated       | False       |
+| Word Count       | 8169       |

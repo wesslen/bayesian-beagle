@@ -1,0 +1,46 @@
+
+---
+title: "Attribution Analysis Meets Model Editing: Advancing Knowledge Correction in Vision Language Models with VisEdit"
+id: "2408.09916v1"
+description: "VisEdit edits visual representations in VLLMs for accurate, cost-effective knowledge correction."
+author: Qizhou Chen, Taolin Zhang, Chengyu Wang, Xiaofeng He, Dakan Wang, Tingting Liu
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09916v1/x1.png"
+categories: ['prompt-engineering', 'robustness', 'production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09916v1/x1.png)
+
+### Summary:
+
+The paper presents a novel model editing technique for Vision-Language Models (VLLMs) called VisEdit. The authors first conduct an attribution analysis to measure the contributions of visual representations to token predictions in VLLMs. They find that visual representations in mid-to-late layers that are highly relevant to the prompt contribute significantly to predictions. Based on these insights, they propose VisEdit, a model editor that effectively corrects knowledge by editing intermediate visual representations in regions important to the edit prompt. The authors evaluate VisEdit using multiple VLLM backbones and public VLLM editing benchmark datasets, demonstrating its superiority over strong baselines adapted from existing state-of-the-art editors for LLMs.
+
+### Major Findings:
+
+1. Visual representations in mid-to-late layers that are highly relevant to the prompt contribute significantly to predictions in VLLMs.
+2. VisEdit, a novel model editor for VLLMs, effectively corrects knowledge by editing intermediate visual representations in regions important to the edit prompt.
+3. VisEdit outperforms strong baselines adapted from existing state-of-the-art editors for LLMs when evaluated on multiple VLLM backbones and public VLLM editing benchmark datasets.
+
+### Analysis and Critique:
+
+The paper presents a well-structured and coherent summary of the proposed VisEdit model editor for VLLMs. The authors provide a clear motivation for the need for model editing techniques in VLLMs and demonstrate the effectiveness of their proposed method through extensive experiments. However, there are a few potential limitations and areas for improvement:
+
+1. The paper does not discuss the computational cost of the proposed method, which could be an important factor for practical applications.
+2. The paper does not provide a detailed comparison with other model editing techniques for VLLMs, which could help to better understand the advantages and limitations of the proposed method.
+3. The paper does not discuss the potential impact of the proposed method on the generalization performance of VLLMs, which could be an important consideration for practical applications.
+
+Overall, the paper presents an interesting and promising approach to model editing in VLLMs, but further research is needed to address some of the potential limitations and to better understand the practical implications of the proposed method.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09916v1](https://arxiv.org/abs/2408.09916v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09916v1](https://browse.arxiv.org/html/2408.09916v1)       |
+| Truncated       | False       |
+| Word Count       | 9519       |

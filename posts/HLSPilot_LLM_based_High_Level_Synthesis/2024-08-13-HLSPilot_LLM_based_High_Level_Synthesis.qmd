@@ -1,0 +1,40 @@
+
+---
+title: "HLSPilot: LLM-based High-Level Synthesis"
+id: "2408.06810v1"
+description: "HLSPilot: LLM-based tool automates high-level application acceleration on hybrid CPU-FPGA architectures, often outperforming manual designs."
+author: Chenwei Xiong, Cheng Liu, Huawei Li, Xiaowei Li
+date: "2024-08-13"
+image: "https://browse.arxiv.org/html/2408.06810v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.06810v1/x1.png)
+
+### Summary:
+
+The paper introduces HLSPilot, an automated framework that utilizes Large Language Models (LLMs) to generate and optimize High-Level Synthesis (HLS) code from sequential C/C++ code. Instead of generating RTL code from natural language directly, HLSPilot generates C-like HLS code from C/C++ with a much narrower semantic gap and outputs RTL code using established HLS tools. The framework is designed to address the challenges of hardware design by utilizing LLMs for hardware acceleration throughout the entire hardware acceleration workflow, ranging from profiling, HW/SW partitioning, HLS code generation, HLS code optimization, and tool usage.
+
+### Major Findings:
+
+1. HLSPilot is the first automatic HLS code generation and optimization framework from sequential C/C++ code using LLM. It investigates the use of LLM for HLS design strategy learning and tool learning, and builds a complete hardware acceleration workflow ranging from runtime profiling, kernel identification, automatic HLS code generation, design space exploration, and HW/SW co-design on a hybrid CPU-FPGA computing architecture.
+2. HLSPilot proposes a retrieval-based approach to learn the HLS optimization techniques and examples from Xilinx user manual and utilizes an in-context learning approach to apply the learned HLS optimizations on serial C/C++ code and generate optimized HLS code with LLM for various computing kernels.
+3. According to experiments on an HLS benchmark, HLSPilot can generate optimized HLS code from sequential C/C++ code and the resulting designs can outperform manual optimizations with the assistance of DSE tools in most cases. In addition, HLSPilot has been demonstrated to be a complete hardware acceleration workflow on a hybrid CPU-FPGA architecture with a case study.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to hardware design by utilizing LLMs to generate and optimize HLS code. The proposed framework, HLSPilot, addresses the challenges of hardware design by utilizing LLMs for hardware acceleration throughout the entire hardware acceleration workflow. The framework has been shown to generate optimized HLS code from sequential C/C
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.06810v1](https://arxiv.org/abs/2408.06810v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.06810v1](https://browse.arxiv.org/html/2408.06810v1)       |
+| Truncated       | False       |
+| Word Count       | 5801       |

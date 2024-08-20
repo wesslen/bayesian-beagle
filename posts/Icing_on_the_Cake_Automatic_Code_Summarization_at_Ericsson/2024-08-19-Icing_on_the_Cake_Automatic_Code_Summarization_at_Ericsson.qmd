@@ -1,0 +1,42 @@
+
+---
+title: "Icing on the Cake: Automatic Code Summarization at Ericsson"
+id: "2408.09735v1"
+description: "TL;DR: Simpler Java method summarization approaches outperform ASAP, showing robustness to method name variations."
+author: Giriprasad Sridhara, Sujoy Roychowdhury, Sumit Soman, Ranjani H G, Ricardo Britto
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09735v1/extracted/5799135/figs/asap_1.png"
+categories: ['prompt-engineering', 'programming', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09735v1/extracted/5799135/figs/asap_1.png)
+
+### Summary:
+
+This paper presents the findings of a study conducted at Ericsson, a global telecommunications company, on the automatic summarization of Java methods. The study evaluates the performance of an approach called Automatic Semantic Augmentation of Prompts (ASAP), which uses a Large Language Model (LLM) to generate leading summary comments (Javadocs) for Java methods. The ASAP approach enhances the LLM's prompt context by integrating static program analysis and information retrieval techniques to identify similar exemplar methods along with their developer-written Javadocs.
+
+In contrast, the study explores and compares the performance of four simpler approaches that do not require static program analysis, information retrieval, or the presence of exemplars. These methods rely solely on the Java method body as input, making them lightweight and more suitable for rapid deployment in commercial software development environments.
+
+The study was conducted on an Ericsson software project and replicated using two widely-used open-source Java projects, Guava and Elasticsearch, to ensure the reliability of the results. Performance was measured across eight metrics that capture various aspects of similarity. Notably, one of the simpler approaches performed as well as or better than the ASAP method on both the Ericsson project and the open-source projects.
+
+Additionally, an ablation study was performed to examine the impact of method names on Javadoc summary generation across the four proposed approaches and the ASAP method. By masking the method names and observing the generated summaries, it was found that the proposed approaches were statistically significantly less influenced by the absence of method names compared to the baseline. This suggests that the proposed methods are more robust to variations in method names and may derive summaries more comprehensively from the method body than the ASAP approach.
+
+### Major Findings:
+
+1. The simpler approaches that rely solely on the Java method body as input performed as well as or better than the ASAP method, which uses static program analysis and information retrieval techniques.
+2. The proposed approaches were found to be more robust to variations in method names, as they were statistically significantly less influenced by the absence of method names compared to the baseline.
+3. The study was conducted on both an Ericsson software project and two widely-used open-source Java projects, Guava and Elasticsearch, to
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09735v1](https://arxiv.org/abs/2408.09735v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09735v1](https://browse.arxiv.org/html/2408.09735v1)       |
+| Truncated       | False       |
+| Word Count       | 7985       |

@@ -1,0 +1,42 @@
+
+---
+title: "Customizing Language Models with Instance-wise LoRA for Sequential Recommendation"
+id: "2408.10159v1"
+description: "iLoRA: A tailored approach for sequential recommendations, improving accuracy by capturing individual user preferences."
+author: Xiaoyu Kong, Jiancan Wu, An Zhang, Leheng Sheng, Hui Lin, Xiang Wang, Xiangnan He
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.10159v1/extracted/5799760/figures/motivation1.png"
+categories: ['production', 'recommender', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.10159v1/extracted/5799760/figures/motivation1.png)
+
+# Summary:
+
+The paper introduces a novel fine-tuning framework called Instance-wise LoRA (iLoRA) for sequential recommendation systems. iLoRA addresses the challenges posed by substantial individual variability in user behaviors by integrating the mixture of experts (MoE) concept into the basic LoRA module. This approach allows iLoRA to dynamically adjust to diverse user behaviors, mitigating negative transfer issues observed with standard single-module LoRA approaches.
+
+# Major Findings:
+
+1. iLoRA effectively adjusts expert activation based on the characteristics of each sequence, allowing for personalized recommendations at the parameter level.
+2. The use of sequence representation as guidance in the gating network and MoE combination consistently outperforms other variants, demonstrating the rationale of the gating network and the benefits for the MoE combination.
+3. The optimal performance of iLoRA is achieved when the number of experts is set to 4, with increasing the number of experts not necessarily correlating with enhanced performance.
+
+# Analysis and Critique:
+
+While iLoRA demonstrates promising results, there are several limitations to consider. The experiments are constrained by computational resources, limiting the exploration of a larger number of expert combinations and their potential impact on recommendation performance. Additionally, the study focused on sequential recommendation tasks, and the applicability of iLoRA to other types of recommendation systems or domains remains to be explored. Further research is needed to fully understand the scalability and effectiveness of iLoRA with more complex expert configurations.
+
+The paper does not extensively investigate the effects of using hard routing for recommendations with a large number of experts. Moreover, the study does not address the potential drawbacks of iLoRA, such as algorithmic biases present in the training data, over-reliance on customization leading to filter bubbles, and concerns regarding privacy due to the collection and analysis of user data for personalized recommendations. These limitations suggest that further research is needed to fully understand the scalability and effectiveness of iLoRA with more complex expert configurations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.10159v1](https://arxiv.org/abs/2408.10159v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.10159v1](https://browse.arxiv.org/html/2408.10159v1)       |
+| Truncated       | False       |
+| Word Count       | 7624       |

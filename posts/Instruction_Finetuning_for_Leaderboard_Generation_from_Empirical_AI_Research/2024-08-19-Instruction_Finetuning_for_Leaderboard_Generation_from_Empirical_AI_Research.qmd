@@ -1,0 +1,45 @@
+
+---
+title: "Instruction Finetuning for Leaderboard Generation from Empirical AI Research"
+id: "2408.10141v1"
+description: "This study automates AI leaderboards using finetuned LLMs, improving information extraction and knowledge representation."
+author: Salomon Kabongo, Jennifer D'Souza
+date: "2024-08-19"
+image: "../../../bayesian-beagle.png"
+categories: ['production']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../../bayesian-beagle.png)
+
+### Summary:
+
+This study explores the application of instruction finetuning of pretrained Large Language Models (LLMs) to automate the generation of AI research leaderboards. The authors utilize the FLAN-T5 model to enhance LLMs' adaptability and reliability in information extraction, offering a novel method for structured knowledge representation. The research aims to streamline the dissemination of advancements in AI research by transitioning from traditional, manual community curation, or otherwise taxonomy-constrained natural language inference (NLI) models, to an automated, generative LLM-based approach.
+
+### Major Findings:
+
+1. The study introduces a novel objective: text generation within a given context, aiming to overcome the limitations of traditional NLI-based systems that rely on a predefined (T, D, M) taxonomy.
+2. The authors adopt instruction fine-tuning to accomplish SOTA as a text generation task, enhancing the model’s adaptability to the domain-specific nuances of AI research.
+3. The research employs the FLAN-T5 model, an instruction-tuned variant from the T5 model class, boasting 780M parameters and sourced from Google’s open-access repository on the Transformers library.
+4. The authors demonstrate improvements in task performance, with their model surpassing previous NLI-based systems by nearly 10% in F1 scores, thereby validating the efficacy and feasibility of their approach.
+
+### Analysis and Critique:
+
+While the study presents a promising approach to automate the generation of AI research leaderboards, there are some potential limitations and areas for improvement:
+
+1. The study focuses on the FLAN-T5 model, which may not generalize well to other LLMs or domains outside of AI research.
+2. The authors acknowledge that their approach relies on the quality of data processing and the inherent limitations of the tools employed, such as Pandoc, for converting LaTeX documents to plain text. Errors introduced during this conversion can significantly affect the extraction accuracy of (Task, Dataset, Metric, Score) quadruples.
+3. The model’s generalizability across various domains of academic research beyond computer science is not yet verified. The distinct formats and
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.10141v1](https://arxiv.org/abs/2408.10141v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.10141v1](https://browse.arxiv.org/html/2408.10141v1)       |
+| Truncated       | False       |
+| Word Count       | 6247       |

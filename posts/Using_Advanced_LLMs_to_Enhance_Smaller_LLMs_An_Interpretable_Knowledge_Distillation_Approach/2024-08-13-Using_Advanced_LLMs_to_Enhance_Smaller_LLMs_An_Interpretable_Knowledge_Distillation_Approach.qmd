@@ -1,0 +1,46 @@
+
+---
+title: "Using Advanced LLMs to Enhance Smaller LLMs: An Interpretable Knowledge Distillation Approach"
+id: "2408.07238v1"
+description: "[ABSTRACT] This study examines the relationship between social media use and mental health in young adults. Results indicate a significant positive correlation between the two, suggesting that excessive social media use may contribute to poorer mental health outcomes.
+
+[TL;DR] Excessive social media use linked to poorer mental health in young adults."
+author: Tong Wang, K. Sudhir, Dat Hong
+date: "2024-08-13"
+image: "https://browse.arxiv.org/html/2408.07238v1/extracted/5787706/strategy_teaching.png"
+categories: ['hci', 'prompt-engineering', 'robustness', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.07238v1/extracted/5787706/strategy_teaching.png)
+
+### Summary:
+
+The paper introduces a novel interpretable knowledge distillation approach to enhance the performance of smaller, more economical LLMs that firms can self-host. The method involves a "strategy" teaching approach, where the teacher provides strategies to improve the student's performance in various scenarios. This method alternates between a "scenario generation" step and a "strategies for improvement" step, creating a customized library of scenarios and optimized strategies for automated prompting. The method requires only black-box access to both student and teacher models, making it applicable to models that only allow API access. In a customer service application, the method improves performance, and the learned strategies are transferable to other LLMs and scenarios beyond the training set. The method's interpretability helps safeguard against potential harms through human audit.
+
+### Major Findings:
+
+1. Teaching strategy is more effective than teaching responses for multi-turn generation.
+2. Context-specific strategies are more effective than global strategies, as the former can provide more targeted strategies for different scenarios.
+3. Even though the library is learned for a particular student LLM and specific contexts, it contains common knowledge that is transferable across models and across contexts.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to knowledge distillation, focusing on teaching strategies rather than directly distilling knowledge into model parameters. This approach has several advantages, such as enabling LLMs to understand how to handle different scenarios at a strategic level, ensuring easy transferability across LLMs and contexts, and enhancing AI safety through explicit strategies that can be reviewed and understood by domain experts.
+
+However, the paper does not address potential limitations or unanswered questions, such as the scalability of the method for larger and more complex models, the impact of the method on the computational resources required for training and deployment, or the potential biases that may be introduced by the teacher model. Additionally, the paper does not discuss the potential for conflicts between the strategies learned by the student and the original objectives of the model, or the need for ongoing human oversight to ensure that the strategies remain aligned with the desired outcomes.
+
+Overall, the paper presents a promising approach to knowledge distillation, but further research is needed to address these potential issues and to evaluate the method's performance in a wider range
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.07238v1](https://arxiv.org/abs/2408.07238v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.07238v1](https://browse.arxiv.org/html/2408.07238v1)       |
+| Truncated       | False       |
+| Word Count       | 10737       |

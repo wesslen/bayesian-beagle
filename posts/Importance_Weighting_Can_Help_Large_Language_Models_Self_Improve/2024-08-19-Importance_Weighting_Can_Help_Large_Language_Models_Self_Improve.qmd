@@ -1,0 +1,40 @@
+
+---
+title: "Importance Weighting Can Help Large Language Models Self-Improve"
+id: "2408.09849v1"
+description: "Filtering high-DSE samples with DS weight improves LLM self-improvement, rivaling externally supervised methods."
+author: Chunyang Jiang, Chi-min Chan, Wei Xue, Qifeng Liu, Yike Guo
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09849v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09849v1/x1.png)
+
+### Summary:
+
+This paper explores the impact of sample distribution shift extent (DSE) on Large Language Models (LLMs) self-improvement. The authors propose a novel metric called Distribution Shift Weight (DS weight) to approximate DSE, inspired by Importance Weighting methods. They then introduce a new self-improvement framework called Importance Weighting-based Self-Improvement (IWSI), which incorporates both answer correctness and DSE in its filtering strategy. The experiments conducted on six datasets show that IWSI significantly outperforms baseline self-improvement methods and rivals the enhancements achieved with supervision from a pre-trained reward model.
+
+### Major Findings:
+
+1. The proposed DS weight metric effectively approximates the DSE of LLM self-generated data, with the help of a tiny valid set.
+2. The IWSI framework, which considers both answer correctness and DSE in its filtering strategy, significantly improves the performance of LLM self-improvement.
+3. The performance of IWSI is comparable to that achieved with external supervision from a pre-trained reward model.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to LLM self-improvement by incorporating the DS weight metric to filter out high DSE samples. The proposed IWSI framework demonstrates significant improvements over baseline methods, and its performance is comparable to methods that rely on external supervision. However, the paper does not discuss the potential limitations or biases of the proposed method, nor does it address any methodological issues or conflicting evidence. Additionally, the paper does not provide any information on the computational cost or scalability of the proposed method. Further research is needed to evaluate the generalizability of the proposed method to other tasks and datasets, as well as its applicability in real-world scenarios.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09849v1](https://arxiv.org/abs/2408.09849v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09849v1](https://browse.arxiv.org/html/2408.09849v1)       |
+| Truncated       | False       |
+| Word Count       | 7239       |

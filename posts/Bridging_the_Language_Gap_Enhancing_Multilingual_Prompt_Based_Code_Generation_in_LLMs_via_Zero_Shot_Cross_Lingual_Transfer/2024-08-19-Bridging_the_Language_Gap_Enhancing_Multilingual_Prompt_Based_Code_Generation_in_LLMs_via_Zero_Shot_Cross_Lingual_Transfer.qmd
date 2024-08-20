@@ -1,0 +1,46 @@
+
+---
+title: "Bridging the Language Gap: Enhancing Multilingual Prompt-Based Code Generation in LLMs via Zero-Shot Cross-Lingual Transfer"
+id: "2408.09701v1"
+description: "LLMs struggle with non-English prompts for code generation. A zero-shot cross-lingual approach using neural projection improves code quality for multilingual prompts."
+author: Mingda Li, Abhijit Mishra, Utkarsh Mujumdar
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09701v1/extracted/5799199/images/issues_and_mitigated.png"
+categories: ['prompt-engineering', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09701v1/extracted/5799199/images/issues_and_mitigated.png)
+
+### Summary:
+
+The paper investigates the challenges of multilingual prompt-based code generation in Large Language Models (LLMs) and proposes a novel approach to address these issues. The authors evaluate LLMs, including CodeLLaMa and CodeGemma, and reveal significant disparities in code quality for non-English prompts. They also demonstrate the inadequacy of simple approaches like prompt translation, bootstrapped data augmentation, and fine-tuning.
+
+To address this, the authors propose a zero-shot cross-lingual approach using a neural projection technique, integrating a cross-lingual encoder like LASER Artetxe and Schwenk (2019) to map multilingual embeddings from it into the LLM’s token space. This method requires training only on English data and scales effectively to other languages. Results on a translated and quality-checked MBPP dataset show substantial improvements in code quality.
+
+### Major Findings:
+
+1. The paper highlights the significant disparities in code quality for non-English prompts in LLMs, including CodeLLaMa and CodeGemma.
+2. The authors demonstrate the inadequacy of simple approaches like prompt translation, bootstrapped data augmentation, and fine-tuning.
+3. The paper proposes a novel zero-shot cross-lingual approach using a neural projection technique, integrating a cross-lingual encoder like LASER Artetxe and Schwenk (2019) to map multilingual embeddings from it into the LLM’s token space.
+4. This method requires training only on English data and scales effectively to other languages.
+5. Results on a translated and quality-checked MBPP dataset show substantial improvements in code quality.
+
+### Analysis and Critique:
+
+The paper provides a comprehensive analysis of the challenges of multilingual prompt-based code generation in LLMs and proposes a novel approach to address these issues. However, the paper does not discuss the potential limitations of the proposed approach, such as the need for high-quality translations and the potential for errors in the translation process. Additionally, the paper does not discuss the potential impact of the proposed approach on the performance of LLMs in other tasks, such as natural language understanding and generation.
+
+Furthermore, the paper does not
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09701v1](https://arxiv.org/abs/2408.09701v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09701v1](https://browse.arxiv.org/html/2408.09701v1)       |
+| Truncated       | False       |
+| Word Count       | 5578       |

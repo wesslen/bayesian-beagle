@@ -1,0 +1,40 @@
+
+---
+title: "MergeRepair: An Exploratory Study on Merging Task-Specific Adapters in Code LLMs for Automated Program Repair"
+id: "2408.09568v1"
+description: "Merging task-specific adapters for LLMs in APR; exploring merging methods, weight, and task order impact on performance."
+author: Meghdad Dehghan, Jie JW Wu, Fatemeh H. Fard, Ali Ouni
+date: "2024-08-18"
+image: "https://browse.arxiv.org/html/2408.09568v1/extracted/5798719/figs/merged-final.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09568v1/extracted/5798719/figs/merged-final.png)
+
+### Summary:
+
+The research proposes a framework, MergeRepair, to investigate the performance of merged task-specific adapters in Code LLMs for the Automated Program Repair (APR) task. The study aims to explore the potential improvement and generalizability of merged adapters for APR and the capability of merged adapters in continual learning scenarios. The research will utilize the LoRA adapter and train one instance per task. The study will employ three merging techniques: weight-space averaging, TIES-Merging, and DARE. The main goal is to explore the merging capability of adapters injected in Code LLMs to improve the performance of the APR task.
+
+### Major Findings:
+
+1. The study aims to investigate the performance of merged task-specific adapters on the APR task, using two main scenarios for merging adapters.
+2. The research questions focus on the potential improvement of merged adapters on the APR task, the generalizability of merged adapters to out-of-domain data, and the continual learning capacity of merged adapters.
+3. The study will utilize the CommitPackFT dataset and conduct experiments for the Python split of the dataset, which contains samples.
+
+### Analysis and Critique:
+
+The research proposes an exploratory study on merging task-specific adapters in Code LLMs for the APR task. The study aims to investigate the potential improvement and generalizability of merged adapters for APR and the capability of merged adapters in continual learning scenarios. However, the research is limited to the Python split of the dataset, which may not be representative of other programming languages. Additionally, the study does not consider the impact of different model architectures and sizes on the performance of merged adapters. The research also assumes that the task type of the records in the dataset is obtained by prompting GPT-4 model, which may include incorrect labels. Therefore, the results may not be generalizable to other tasks and programming languages.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09568v1](https://arxiv.org/abs/2408.09568v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09568v1](https://browse.arxiv.org/html/2408.09568v1)       |
+| Truncated       | False       |
+| Word Count       | 6640       |

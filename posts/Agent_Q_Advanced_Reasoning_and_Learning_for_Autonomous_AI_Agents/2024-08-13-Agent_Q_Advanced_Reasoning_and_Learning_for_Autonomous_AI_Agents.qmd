@@ -1,0 +1,44 @@
+
+---
+title: "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents"
+id: "2408.07199v1"
+description: "LLMs struggle with multi-step reasoning in interactive environments. Our framework, combining MCTS search, self-critique, and iterative fine-tuning, improves LLM agents' performance in complex tasks, outperforming baselines and human performance in a simulated e-commerce platform."
+author: Pranav Putta, Edmund Mills, Naman Garg, Sumeet Motwani, Chelsea Finn, Divyansh Garg, Rafael Rafailov
+date: "2024-08-13"
+image: "https://browse.arxiv.org/html/2408.07199v1/extracted/5790031/images/AgentTree2.png"
+categories: ['prompt-engineering', 'hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.07199v1/extracted/5790031/images/AgentTree2.png)
+
+### Summary:
+
+The paper introduces Agent Q, a novel approach that combines several key concepts in reasoning, search, self-critique, and reinforcement learning to improve the planning and reasoning capabilities of a web agent. The method utilizes Monte Carlo Tree Search (MCTS) to guide trajectory collection and iteratively improve model performance using direct preference optimization (DPO). The proposed approach is evaluated in the WebShop environment and a real-world reservations booking website, demonstrating significant improvements in the model's zero-shot performance and outperforming GPT-4's performance after a single day of autonomous data collection.
+
+### Major Findings:
+
+1. Agent Q framework improves the model zero-shot absolute success rate from 18.6% to 81.7% (a 340% relative increase) in real-world booking experiments, outperforming GPT-4's performance after a single day of autonomous data collection.
+2. When equipped with online search capability, Agent Q's absolute success further improves to 95.4%.
+3. The approach represents a significant step forward in the development of autonomous web agents through its search and self-critique capabilities, setting a new benchmark for reliable multi-step decision-making in interactive settings.
+
+### Analysis and Critique:
+
+1. The paper does not discuss the potential limitations of the proposed approach, such as the computational resources required for MCTS and DPO, or the scalability of the method to more complex environments.
+2. The evaluation of Agent Q is limited to the WebShop environment and a real-world reservations booking website, and it is unclear how the approach would perform in other domains or tasks.
+3. The paper does not provide a detailed comparison with other state-of-the-art methods for improving the planning and reasoning capabilities of web agents, making it difficult to assess the relative performance of Agent Q.
+4. The paper does not discuss the potential ethical implications of deploying autonomous web agents, such as the risk of bias or the impact on human employment.
+5. The paper does not provide a clear roadmap for future research, making it difficult to identify potential directions for improving the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.07199v1](https://arxiv.org/abs/2408.07199v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.07199v1](https://browse.arxiv.org/html/2408.07199v1)       |
+| Truncated       | False       |
+| Word Count       | 9890       |

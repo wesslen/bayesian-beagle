@@ -1,0 +1,44 @@
+
+---
+title: "Prompt Tuning as User Inherent Profile Inference Machine"
+id: "2408.06577v1"
+description: "LLMs improve recommender systems but face challenges. UserIP-Tuning, a prompt-tuning method, addresses these issues, enhancing performance and efficiency."
+author: Yusheng Lu, Zhaocheng Du, Xiangyang Li, Xiangyu Zhao, Weiwen Liu, Yichao Wang, Huifeng Guo, Ruiming Tang, Zhenhua Dong, Yongrui Duan
+date: "2024-08-13"
+image: "https://browse.arxiv.org/html/2408.06577v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.06577v1/x1.png)
+
+### Summary:
+
+The paper proposes a novel framework called UserIP-Tuning, which uses prompt-tuning to infer user profiles in Large Language Models (LLMs). The framework addresses challenges such as unstable instruction compliance, modality gaps, and high inference latency in LLMs. It integrates the causal relationship between user profiles and behavior sequences into LLMs' prompts and employs expectation maximization to infer the embedded latent profile, minimizing textual noise by fixing the prompt template. A profile quantization codebook is also introduced to bridge the modality gap by categorizing profile embeddings into collaborative IDs, which are pre-stored for online deployment. Experiments on four public datasets show that UserIP-Tuning outperforms state-of-the-art recommendation algorithms in terms of effectiveness, robustness, and transferability.
+
+### Major Findings:
+
+1. UserIP-Tuning is a lightweight, controllable, and easily integrated framework that can improve profile inference's causality and avoid textual noises.
+2. The proposed UserIP-tuning framework is efficient and model-agnostic, improving recommendation models' performance with guaranteed inference efficiency.
+3. Extensive experiments on both public and industrial datasets validate the advantages of UserIP-Tuning's effectiveness, efficiency, generalizability, and explainability.
+
+### Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other prompt-tuning methods, which could help to better understand the advantages and limitations of UserIP-Tuning.
+2. The paper does not discuss the potential biases in the inferred user profiles, which could be a significant concern in real-world applications.
+3. The paper does not provide a detailed analysis of the computational complexity of the proposed framework, which could be an essential factor in its practical applicability.
+4. The paper does not discuss the potential privacy concerns related to the inferred user profiles, which could be a significant issue in real-world applications.
+5. The paper does not provide a detailed analysis of the impact of the size of the profile quantization codebook on the performance of the framework, which could be an essential factor in its practical applicability.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.06577v1](https://arxiv.org/abs/2408.06577v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.06577v1](https://browse.arxiv.org/html/2408.06577v1)       |
+| Truncated       | False       |
+| Word Count       | 7611       |

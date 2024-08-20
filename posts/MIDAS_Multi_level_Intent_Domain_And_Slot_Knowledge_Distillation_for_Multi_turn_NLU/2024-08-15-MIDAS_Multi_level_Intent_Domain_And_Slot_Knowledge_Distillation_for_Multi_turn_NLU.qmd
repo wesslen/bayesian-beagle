@@ -1,0 +1,45 @@
+
+---
+title: "MIDAS: Multi-level Intent, Domain, And Slot Knowledge Distillation for Multi-turn NLU"
+id: "2408.08144v1"
+description: "MIDAS improves multi-turn conversation understanding by distilling multi-level intent, domain, and slot knowledge."
+author: Yan Li, So-Eon Kim, Seong-Bae Park, Soyeon Caren Han
+date: "2024-08-15"
+image: "https://browse.arxiv.org/html/2408.08144v1/extracted/5793644/images/conv_sample.png"
+categories: ['hci', 'prompt-engineering', 'education']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.08144v1/extracted/5793644/images/conv_sample.png)
+
+# Summary:
+
+**Summary:**
+
+The paper introduces a novel approach, MIDAS, which leverages a multi-level intent, domain, and slot knowledge distillation for multi-turn NLU. The model constructs distinct teachers for varying levels of conversation knowledge, including sentence-level intent detection, word-level slot filling, and conversation-level domain classification. These teachers are then fine-tuned to acquire specific knowledge of their designated levels. A multi-teacher loss is proposed to facilitate the combination of these multi-level teachers, guiding a student model in multi-turn dialogue tasks. The experimental results demonstrate the efficacy of the model in improving overall multi-turn conversation understanding, showcasing the potential for advancements in NLU models through the incorporation of multi-level dialogue knowledge distillation techniques.
+
+## Major Findings:
+
+1. MIDAS introduces a novel multi-level, multi-teacher knowledge distillation model to enhance multi-turn NLU, outperforming across widely-used multi-NLU datasets and producing superior performance in all intent detection, slot filling, and domain classification, even compared with LLMs.
+2. The paper introduces multi-level teacher loss functions, shedding light on their impact within the multi-teacher knowledge distillation and guiding a student model.
+
+## Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other existing NLU models, making it difficult to assess the true novelty and effectiveness of the proposed approach.
+2. The paper does not discuss the potential limitations or shortcomings of the proposed approach, such as the computational complexity of training multiple teachers or the potential for overfitting.
+3. The paper does not provide a clear explanation of how the multi-teacher loss is calculated or how it is used to guide the student model.
+4. The paper does not provide a detailed analysis of the experimental results, making it difficult to understand the significance of the reported improvements.
+5. The paper does not discuss the potential applications or use cases of the proposed approach, making it difficult to understand its practical relevance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.08144v1](https://arxiv.org/abs/2408.08144v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.08144v1](https://browse.arxiv.org/html/2408.08144v1)       |
+| Truncated       | False       |
+| Word Count       | 8516       |

@@ -1,0 +1,40 @@
+
+---
+title: "Galápagos: Automated N-Version Programming with LLMs"
+id: "2408.09536v1"
+description: "TL;DR: Galápagos tool generates diverse, equivalent program variants using LLMs, protecting C code from miscompilation bugs."
+author: Javier Ron, Diogo Gaspar, Javier Cabrera-Arteaga, Benoit Baudry, Martin Monperrus
+date: "2024-08-18"
+image: "https://browse.arxiv.org/html/2408.09536v1/x1.png"
+categories: ['security', 'programming', 'robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09536v1/x1.png)
+
+**Summary:**
+
+Galápagos is a tool for automated N-Version programming using large language models (LLMs). It generates program variants, validates their correctness and equivalence, and assembles N-Version binaries. The tool is evaluated by creating N-Version components of real-world C code. The results show that Galápagos can produce functionally equivalent program variants, even when written in different programming languages. The variants exhibit static and dynamic diversity, and can protect C code against miscompilation bugs in the Clang compiler.
+
+**Major Findings:**
+
+1. Galápagos uses LLMs to generate code variants that are provably equivalent, even when the variants are written in different programming languages.
+2. Galápagos can produce and identify code variants that exhibit diversity both in their code (statically) and during execution (dynamically).
+3. These diverse code variants can be utilized to strengthen critical sections of software via automated N-Version programming, as demonstrated by Galápagos' capability to mitigate real-world miscompilation bugs in the Clang compiler.
+
+**Analysis and Critique:**
+
+While Galápagos shows promising results in automating N-Version programming with LLMs, there are potential limitations and areas for improvement. The tool's reliance on LLMs for generating variants introduces the risk of incorrect or non-equivalent code, which is mitigated by formal verification but may still impact the overall performance and reliability of the generated N-Version components. Additionally, the evaluation focuses on C code and the Clang compiler, and further research is needed to assess the tool's effectiveness with other programming languages and compilers. Lastly, the scalability and efficiency of Galápagos in handling larger and more complex codebases should be investigated to ensure its practical applicability in real-world software development scenarios.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09536v1](https://arxiv.org/abs/2408.09536v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09536v1](https://browse.arxiv.org/html/2408.09536v1)       |
+| Truncated       | False       |
+| Word Count       | 11203       |

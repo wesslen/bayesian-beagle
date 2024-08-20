@@ -1,0 +1,43 @@
+
+---
+title: "Transferring Backdoors between Large Language Models by Knowledge Distillation"
+id: "2408.09878v1"
+description: "Backdoor Attack Risk in Mini-LLMs: Adaptive Transferable Attack Proposed"
+author: Pengzhou Cheng, Zongru Wu, Tianjie Ju, Wei Du, Zhuosheng Zhang Gongshen Liu
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09878v1/x1.png"
+categories: ['prompt-engineering', 'security', 'education', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09878v1/x1.png)
+
+### Summary:
+
+The paper proposes ATBA, an adaptive and transferable backdoor attack for Large Language Models (LLMs) that aims to reveal the vulnerability of LLMs when using knowledge distillation. The method involves two crucial modules: Target Triggers Generation (TTG) and Adaptive Trigger Optimization (ATO). TTG filters out a set of indicative trigger candidates from the token list based on cosine similarity distribution, while ATO uses a shadow model to imitate the distilling process and introduces an Adaptive Trigger Optimization (ATO) module to realize a gradient-based greedy feedback to search optimal triggers. The proposed method is robust and stealthy, with over 80% backdoor transferability.
+
+### Major Findings:
+
+1. The proposed ATBA method is the first adaptive and transferable backdoor attack for LLMs, which aims to reveal the vulnerability of LLMs when using knowledge distillation.
+2. The TTG module filters out a set of indicative trigger candidates from the token list based on cosine similarity distribution, effectively realizing implicit backdoor transferability and reducing search complexity.
+3. The ATO module introduces an adaptive trigger optimization module based on KD simulation and dynamic greedy searching, which overcomes textual discretization and is more robust than traditional triggers.
+4. Extensive experiments show that ATBA is highly transferable and successfully activates against student models with different architectures on five popular tasks.
+
+### Analysis and Critique:
+
+The proposed method is a significant contribution to the field of LLM security, as it reveals the vulnerability of LLMs when using knowledge distillation. However, the paper does not discuss the potential impact of the proposed method on the performance of the LLMs or the potential risks associated with the use of backdoor attacks. Additionally, the paper does not provide a detailed analysis of the limitations of the proposed method or potential countermeasures that could be used to mitigate the risks associated with backdoor attacks.
+
+Furthermore, the paper does not discuss the potential impact of the proposed method on the performance of the LLMs or the potential risks associated with the use of backdoor attacks. Additionally, the paper does not provide a detailed analysis of the limitations of the proposed method or potential countermeasures that could
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09878v1](https://arxiv.org/abs/2408.09878v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09878v1](https://browse.arxiv.org/html/2408.09878v1)       |
+| Truncated       | False       |
+| Word Count       | 8063       |

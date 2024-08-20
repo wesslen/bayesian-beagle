@@ -1,0 +1,43 @@
+
+---
+title: "Harnessing Multimodal Large Language Models for Multimodal Sequential Recommendation"
+id: "2408.09698v1"
+description: "MLLM-MSR: A new model for multimodal recommendation systems, capturing dynamic user preferences with image and text data."
+author: Yuyang Ye, Zhi Zheng, Yishan Shen, Tianshu Wang, Hengruo Zhang, Peijun Zhu, Runlong Yu, Kai Zhang, Hui Xiong
+date: "2024-08-19"
+image: "https://browse.arxiv.org/html/2408.09698v1/extracted/5799202/figures/framework.png"
+categories: ['prompt-engineering', 'recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.09698v1/extracted/5799202/figures/framework.png)
+
+# Summary
+
+**Summary:**
+The paper introduces the Multimodal Large Language Model-enhanced Sequential Multimodal Recommendation (MLLM-MSR) model, which aims to capture dynamic user preferences in a two-stage user preference summarization method. The first stage involves an MLLM-based item-summarizer to extract image features and convert them into text. The second stage employs a recurrent user preference summarization generation paradigm to capture the dynamic changes in user preferences using an LLM-based user-summarizer. The MLLM-based recommender is then fine-tuned using Supervised Fine-Tuning (SFT) techniques. The proposed model is evaluated on various datasets, demonstrating its effectiveness in capturing and adapting to the evolving dynamics of user preferences.
+
+## Major Findings:
+1. The MLLM-MSR model is the first attempt to fine-tune multimodal large models for sequential multimodal recommendation, achieving significant improvements in recommendation performance.
+2. The paper introduces a novel image summarizing method based on MLLMs to recurrently summarize user preferences on multi-modality, facilitating a deeper understanding of user interactions and interests over time.
+3. The proposed approach is extensively validated across various datasets, demonstrating its effectiveness in enhancing the accuracy and interpretability of recommendations.
+
+## Analysis and Critique:
+- The paper presents an innovative approach to integrating MLLMs into multimodal sequential recommendation systems, addressing the challenges of processing sequential multimodal data.
+- The proposed two-stage user preference summarization method effectively captures dynamic user preferences, improving the interpretability of recommendations.
+- The paper demonstrates the effectiveness of the MLLM-MSR model through extensive evaluations on various datasets, showcasing its superior ability to adapt to evolving user preferences.
+- However, the paper does not discuss potential limitations or unanswered questions, such as the computational demands of processing sequential multimodal data or the generalizability of the fine-tuned MLLM-based recommender.
+- Future research could explore these aspects and investigate the applicability of the MLLM-MSR model in other recommendation domains.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-20       |
+| Abstract | [https://arxiv.org/abs/2408.09698v1](https://arxiv.org/abs/2408.09698v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.09698v1](https://browse.arxiv.org/html/2408.09698v1)       |
+| Truncated       | False       |
+| Word Count       | 6167       |

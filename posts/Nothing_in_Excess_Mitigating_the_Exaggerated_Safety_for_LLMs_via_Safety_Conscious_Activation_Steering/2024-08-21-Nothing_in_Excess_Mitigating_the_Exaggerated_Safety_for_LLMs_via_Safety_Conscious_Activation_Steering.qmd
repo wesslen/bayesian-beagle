@@ -1,0 +1,44 @@
+
+---
+title: "Nothing in Excess: Mitigating the Exaggerated Safety for LLMs via Safety-Conscious Activation Steering"
+id: "2408.11491v1"
+description: "SCANS method balances safety & helpfulness in LLMs, improving performance on XSTest & OKTest without compromising defense or capability."
+author: Zouying Cao, Yifei Yang, Hai Zhao
+date: "2024-08-21"
+image: "../../img/2408.11491v1/image_1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2408.11491v1/image_1.png)
+
+**Summary:**
+
+The paper "Nothing in Excess: Mitigating the Exaggerated Safety for LLMs via Safety-Conscious Activation Steering" by Zouying Cao, Yifei Yang, and Hai Zhao proposes a method called SCANS to address the issue of exaggerated safety in aligned large language models (LLMs). The authors observe that safety-aligned LLMs often refuse benign queries due to the exaggerated safety issue, which limits their helpfulness.
+
+SCANS extracts refusal steering vectors within the activation space and utilizes vocabulary projection to anchor specific safety-critical layers that influence model refusal behavior. By tracking the hidden state transition, SCANS identifies the steering direction and steers the model behavior accordingly, achieving a balance between exaggerated safety and adequate safety.
+
+The paper presents experiments on four LLMs, demonstrating that SCANS outperforms both training-free and training-based baselines in mitigating exaggerated safety without compromising adequate safety. SCANS maintains almost unchanged model capability, with minimal increase in perplexity. The contributions of the paper include introducing SCANS, discovering the extracted refusal steering vectors from middle layers that promote refusal tokens, and effectively mitigating exaggerated safety in aligned LLMs without undermining adequate safety and general capability.
+
+**Major Findings:**
+
+1. SCANS is a training-free, representation engineering method that utilizes refusal behavior vectors to steer the model output in safety-critical layers.
+2. The extracted refusal steering vectors from middle layers promote refusal tokens, and the corresponding steering can effectively reduce the false refusal rate.
+3. SCANS effectively mitigates exaggerated safety in aligned LLMs without undermining adequate safety and general capability, reducing the average false refusal rate by 24.7% and 26.3% on XSTest and OKTest benchmarks.
+
+**Analysis and Critique:**
+
+The paper presents a novel approach to addressing the exaggerated safety issue in aligned LLMs. The proposed method, SCANS, demonstrates promising results in mitigating exaggerated safety without compromising adequate safety and general capability. However, the paper does not discuss the potential limitations or shortcomings of the proposed method, such as
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11491v1](https://arxiv.org/abs/2408.11491v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11491v1](https://browse.arxiv.org/html/2408.11491v1)       |
+| Truncated       | False       |
+| Word Count       | 15883       |

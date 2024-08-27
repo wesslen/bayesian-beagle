@@ -1,0 +1,46 @@
+
+---
+title: "Search-Based LLMs for Code Optimization"
+id: "2408.12159v1"
+description: "TL;DR: SBLLM improves code efficiency by up to 209.59% via iterative refinement and optimization method discovery."
+author: Shuzheng Gao, Cuiyun Gao, Wenchao Gu, Michael Lyu
+date: "2024-08-22"
+image: "https://browse.arxiv.org/html/2408.12159v1/x1.png"
+categories: ['programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.12159v1/x1.png)
+
+### Summary:
+
+The paper introduces a novel framework called SBLLM (Search-Based LLMs) for code optimization. SBLLM integrates LLMs with evolutionary search, consisting of three main components: 1) Execution-based representative sample selection, 2) Adaptive optimization pattern retrieval, and 3) Genetic operator-inspired chain-of-thought prompting. The framework aims to iteratively refine and discover improved optimization methods for code.
+
+### Major Findings:
+
+1. SBLLM can improve program execution efficiency by up to 209.59% and consistently outperform all baseline methods by 8.75% to 28.06% and 1.15% to 9.56% with different LLMs in terms of top-5 speedup rate on Python and C++, respectively.
+2. The framework effectively guides LLMs towards identifying efficient optimization methods in the vast search space.
+3. SBLLM is model-agnostic and can be easily generalized to different LLMs.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to code optimization by integrating LLMs with evolutionary search. The proposed framework, SBLLM, demonstrates promising results in improving program execution efficiency and outperforming baseline methods. However, there are a few potential limitations and areas for improvement:
+
+1. The paper focuses on two programming languages, Python and C++, and does not evaluate the framework on other languages. Future work could explore the applicability of SBLLM to a broader range of programming languages.
+2. The paper does not discuss the potential impact of data leakage, as the training data for some of the LLMs used in the experiments are not publicly accessible. This could be a concern for the generalizability of the results.
+3. The paper does not provide a detailed comparison of SBLLM with other code optimization techniques, such as rule-based methods or other deep learning-based methods. A more comprehensive comparison would help to better understand the strengths and weaknesses of the proposed framework.
+
+In conclusion, the paper presents a promising approach to code optimization using LLMs and evolutionary search. However, further research is needed to address the potential limitations and evaluate the framework's performance on a broader range of programming languages and optimization tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.12159v1](https://arxiv.org/abs/2408.12159v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.12159v1](https://browse.arxiv.org/html/2408.12159v1)       |
+| Truncated       | False       |
+| Word Count       | 9347       |

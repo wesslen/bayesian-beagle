@@ -1,0 +1,43 @@
+
+---
+title: "Aligning (Medical) LLMs for (Counterfactual) Fairness"
+id: "2408.12055v1"
+description: "New method aligns LLMs to reduce biases in medical applications, improving fairness and trust in AI-augmented tools."
+author: Raphael Poulain, Hamed Fayyaz, Rahmatollah Beheshti
+date: "2024-08-22"
+image: "https://browse.arxiv.org/html/2408.12055v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.12055v1/x1.png)
+
+# Summary:
+
+This study presents a new model alignment approach for aligning Large Language Models (LLMs) using a preference optimization method within a knowledge distillation framework. The aim is to address the issue of biases in LLMs, which can lead to unfair treatment of individuals and worsen health disparities. The authors first conduct a comprehensive empirical evaluation to reveal the type and nature of existing biases in LLMs used for medical applications. They then offer a bias mitigation technique to reduce unfair patterns in LLM outputs across different subgroups identified by protected attributes. The code is publicly available at <https://github.com/healthylaife/FairAlignmentLLM>.
+
+## Major Findings:
+
+1. The study presents an evaluation framework to conduct a comprehensive evaluation to quantify social biases in LLMs used in medical applications. The authors extensively analyze multiple LLM types, datasets, and prompting techniques, demonstrating existing fairness challenges in medical LLMs.
+2. The authors propose a mitigation technique for fairness concerns using model alignment techniques in a knowledge distillation framework. They show that their mitigation method is effective in reducing observed biased patterns.
+
+## Analysis and Critique:
+
+1. The study provides a comprehensive evaluation of bias patterns in LLMs used for medical applications, which is a significant contribution to the field. However, the evaluation framework may not cover all possible sources of bias, and further research is needed to identify other potential biases.
+2. The proposed bias mitigation technique is promising, but it may not be applicable to all types of LLMs, especially those that do not have access to model parameters. Additionally, the effectiveness of the mitigation technique may vary depending on the specific LLM and the task at hand.
+3. The study does not address the potential impact of the mitigation technique on the overall performance of the LLMs. It is essential to ensure that the mitigation of biases does not come at the cost of reduced performance in other areas.
+4. The study focuses on counterfactual fairness, which is an important aspect of fairness, but it may not capture all forms of bias. Future research should consider other types of fairness, such as group fairness and individual fairness.
+5. The study does not discuss the potential ethical implications of the proposed mitigation technique. It is crucial to consider the ethical
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.12055v1](https://arxiv.org/abs/2408.12055v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.12055v1](https://browse.arxiv.org/html/2408.12055v1)       |
+| Truncated       | False       |
+| Word Count       | 9308       |

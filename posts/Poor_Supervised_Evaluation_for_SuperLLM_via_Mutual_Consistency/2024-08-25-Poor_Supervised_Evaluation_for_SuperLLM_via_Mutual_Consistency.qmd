@@ -1,0 +1,42 @@
+
+---
+title: "Poor-Supervised Evaluation for SuperLLM via Mutual Consistency"
+id: "2408.13738v1"
+description: "PoEM framework evaluates LLMs without accurate labels, using human & model-centric approach, achieving high correlation with supervised results."
+author: Peiwen Yuan, Shaoxiong Feng, Yiwei Li, Xinglin Wang, Boyuan Pan, Heda Wang, Yao Hu, Kan Li
+date: "2024-08-25"
+image: "https://browse.arxiv.org/html/2408.13738v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.13738v1/x1.png)
+
+### Summary:
+
+The paper proposes a framework called PoEM (Poor-supervised Evaluation with Mutual Consistency) for evaluating large language models (LLMs) without accurate labels. The framework is based on the idea that the capability of a model can be assessed by its consistency with a reference model, given that their prediction distributions are independent and the sample size is infinite. The authors introduce an algorithm that treats humans and the models under evaluation as reference models, alternately conducting model weights calibration and filtering during E-step and M-step. The algorithm is designed to alleviate the insufficiencies of the conditions in reality. The authors conduct experiments across 3 types of tasks with 16 mainstream LLMs and show that PoEM under poor supervision can achieve an average of 0.98 Pearson correlation coefficient with supervised evaluation results. The paper argues that PoEM has advanced the evaluation paradigm evolution from human-centric to human&model-centric by treating both of them as reference models, mitigating the limitations of human evaluation in the era of LLMs.
+
+### Major Findings:
+
+1. The capability of a model can be assessed by its consistency with a reference model, given that their prediction distributions are independent and the sample size is infinite.
+2. The authors introduce an algorithm that treats humans and the models under evaluation as reference models, alternately conducting model weights calibration and filtering during E-step and M-step.
+3. The algorithm is designed to alleviate the insufficiencies of the conditions in reality.
+4. PoEM under poor supervision can achieve an average of 0.98 Pearson correlation coefficient with supervised evaluation results.
+5. PoEM has advanced the evaluation paradigm evolution from human-centric to human&model-centric by treating both of them as reference models, mitigating the limitations of human evaluation in the era of LLMs.
+
+### Analysis and Critique:
+
+The paper presents an interesting and novel approach to evaluating LLMs without accurate labels. The idea of using mutual consistency between a model and a reference model is intuitive and well-motivated. The authors provide a theoretical justification for their approach and conduct experiments to validate their claims. The results are impressive, with PoEM achieving an average of 0.98
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.13738v1](https://arxiv.org/abs/2408.13738v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.13738v1](https://browse.arxiv.org/html/2408.13738v1)       |
+| Truncated       | False       |
+| Word Count       | 6446       |

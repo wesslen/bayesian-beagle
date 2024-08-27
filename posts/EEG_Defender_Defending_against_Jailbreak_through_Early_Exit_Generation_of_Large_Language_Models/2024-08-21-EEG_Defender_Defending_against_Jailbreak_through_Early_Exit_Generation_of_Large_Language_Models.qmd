@@ -1,0 +1,43 @@
+
+---
+title: "EEG-Defender: Defending against Jailbreak through Early Exit Generation of Large Language Models"
+id: "2408.11308v1"
+description: "Eeg-Defender reduces malicious LLM use by 85%, detecting threats via early transformer outputs."
+author: Chongwen Zhao, Zhihao Dou, Kaizhu Huang
+date: "2024-08-21"
+image: "https://browse.arxiv.org/html/2408.11308v1/extracted/5792079/Fig/vicuna_acc.png"
+categories: ['robustness', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.11308v1/extracted/5792079/Fig/vicuna_acc.png)
+
+### Summary:
+
+The paper introduces Eeg-Defender, a novel framework designed to defend against jailbreak attacks on Large Language Models (LLMs). The authors draw inspiration from the human-like generation process of language models and investigate the mechanism behind jailbreaking. They discover that in shallow transformer layers, jailbreak prompt embeddings are closer to those of harmful prompts, but as layer depth increases, these embeddings shift toward benign ones. This insight leads to the development of a more robust defense mechanism through early exit generation. The proposed Eeg-Defender reduces the Attack Success Rate (ASR) of jailbreak methods by approximately 85%, compared to 50% for current state-of-the-art methods, with minimal impact on the utility and effectiveness of LLMs.
+
+### Major Findings:
+
+1. The human-like generation process of LLMs reveals that the generation process of LLMs parallels human language organization, a phenomenon not addressed in previous research.
+2. The latent space mechanism of jailbreak demonstrates that embeddings of jailbreak prompts in the early and middle layers closely resemble those of harmful prompts, but shift towards benign prompts in the later layers.
+3. Defending jailbreak through early exit: Building on the insights into LLM jailbreak, the authors propose Eeg-Defender, which reduces Attack Success Rate (ASR) by approximately 85% against existing jailbreak methods, with near-zero computational cost.
+
+### Analysis and Critique:
+
+1. The paper focuses primarily on existing single-turn jailbreak attack methods, and the effectiveness of Eeg-Defender against multi-turn jailbreak attacks remains unexplored.
+2. The authors acknowledge that for certain attack methods, the results are not as significant as others, and there is still some impact on the original functionality of the model.
+3. The paper emphasizes that Eeg-Defender can be developed using only publicly available jailbreak attack prompts, without the need to create new attack methods. However, the authors do not discuss the potential for adversarial attacks specifically designed to bypass Eeg-Defender.
+4. The paper does not provide a detailed analysis of the computational overhead introduced by Eeg-Defender, which could be a crucial factor in the practical implementation of the proposed defense mechanism
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11308v1](https://arxiv.org/abs/2408.11308v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11308v1](https://browse.arxiv.org/html/2408.11308v1)       |
+| Truncated       | False       |
+| Word Count       | 8701       |

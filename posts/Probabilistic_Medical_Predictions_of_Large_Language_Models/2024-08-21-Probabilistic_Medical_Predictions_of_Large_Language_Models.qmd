@@ -1,0 +1,40 @@
+
+---
+title: "Probabilistic Medical Predictions of Large Language Models"
+id: "2408.11316v1"
+description: "LLMs struggle to reliably generate prediction probabilities in clinical contexts, with explicit probabilities underperforming implicit ones."
+author: Bowen Gu, Rishi J. Desai, Kueiyu Joshua Lin, Jie Yang
+date: "2024-08-21"
+image: "../../img/2408.11316v1/image_1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](../../img/2408.11316v1/image_1.png)
+
+**Summary:**
+
+This study examines the credibility of probabilistic medical predictions made by Large Language Models (LLMs) by comparing explicit probabilities derived from text generation to implicit probabilities calculated based on the likelihood of predicting the correct label token. The authors experimented with six advanced open-source LLMs across five medical datasets and found that the performance of explicit probabilities was consistently lower than implicit probabilities with respect to discrimination, precision, and recall. These differences were more pronounced on small LLMs and imbalanced datasets, emphasizing the need for cautious interpretation and applications, as well as further research into robust probability estimation methods for LLMs in clinical contexts.
+
+**Major Findings:**
+
+1. The performance of explicit probabilities derived from text generation was consistently lower than implicit probabilities with respect to discrimination, precision, and recall.
+2. The differences between explicit and implicit probabilities were more pronounced on small LLMs and imbalanced datasets.
+3. The study highlights the need for cautious interpretation and applications of LLMs in clinical contexts and the importance of further research into robust probability estimation methods.
+
+**Analysis and Critique:**
+
+The study provides a valuable contribution to the understanding of the reliability of probabilistic medical predictions made by LLMs. However, there are some limitations and potential areas for improvement. The study only focuses on open-source LLMs, which may not be representative of the performance of proprietary LLMs. Additionally, the experiments were simplified to binary classification settings, which may not fully capture the complexity of real-world clinical scenarios. The study also does not examine the probability performance using Chain of Thought (CoT) prompting, which could be a promising approach for improving the performance of LLMs. Finally, the study does not address the potential impact of data leakage on the performance of LLMs. Despite these limitations, the study provides important insights into the reliability of LLMs for probabilistic medical predictions and highlights the need for further research in this area.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11316v1](https://arxiv.org/abs/2408.11316v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11316v1](https://browse.arxiv.org/html/2408.11316v1)       |
+| Truncated       | False       |
+| Word Count       | 17222       |

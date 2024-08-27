@@ -1,0 +1,40 @@
+
+---
+title: "Unlocking Adversarial Suffix Optimization Without Affirmative Phrases: Efficient Black-box Jailbreaking via LLM as Optimizer"
+id: "2408.11313v1"
+description: "ECLIPSE, a new black-box jailbreaking method, outperforms existing methods in generating harmful LLM content, with 2.4x higher ASR than GCG and 83% less attack overhead than template-based methods."
+author: Weipeng Jiang, Zhenting Wang, Juan Zhai, Shiqing Ma, Zhengyu Zhao, Chao Shen
+date: "2024-08-21"
+image: "https://browse.arxiv.org/html/2408.11313v1/x1.png"
+categories: ['robustness', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.11313v1/x1.png)
+
+### Summary:
+
+The paper introduces ECLIPSE, a novel and efficient black-box jailbreaking method that utilizes optimizable suffixes to exploit the vulnerabilities of LLMs. ECLIPSE leverages the powerful generation and optimization capabilities of LLMs, employing task prompts to translate jailbreaking goals into natural language instructions. The method guides the LLM to generate adversarial suffixes for malicious queries, with a harmfulness scorer providing continuous feedback for self-reflection and iterative optimization. Experimental results demonstrate that ECLIPSE achieves an average attack success rate (ASR) of 0.92 across three open-source LLMs and GPT-3.5-Turbo, significantly surpassing GCG in 2.4 times. ECLIPSE is also on par with template-based methods in ASR while offering superior attack efficiency, reducing the average attack overhead by 83%.
+
+### Major Findings:
+
+1. ECLIPSE, a novel and efficient black-box jailbreaking method, achieves an average attack success rate (ASR) of 0.92 across three open-source LLMs and GPT-3.5-Turbo, significantly surpassing GCG in 2.4 times.
+2. ECLIPSE is on par with template-based methods in ASR while offering superior attack efficiency, reducing the average attack overhead by 83%.
+3. ECLIPSE leverages the powerful generation and optimization capabilities of LLMs, employing task prompts to translate jailbreaking goals into natural language instructions and guiding the LLM to generate adversarial suffixes for malicious queries.
+
+### Analysis and Critique:
+
+While ECLIPSE demonstrates promising results in terms of attack success rate and efficiency, there are potential limitations and areas for improvement. The method relies on the instruction-following capabilities of LLMs, which may not be universally applicable. Additionally, the optimization process may be sensitive to hyperparameters, such as batch size, temperature, and reference counts, which could impact the overall performance. Further research is needed to explore the transferability of jailbreaking capabilities across different LLMs and to investigate the potential for combining ECLIPSE with other jailbreaking methods for improved performance.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11313v1](https://arxiv.org/abs/2408.11313v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11313v1](https://browse.arxiv.org/html/2408.11313v1)       |
+| Truncated       | False       |
+| Word Count       | 7430       |

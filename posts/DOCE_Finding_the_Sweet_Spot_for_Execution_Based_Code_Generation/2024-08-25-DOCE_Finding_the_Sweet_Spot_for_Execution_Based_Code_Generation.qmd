@@ -1,0 +1,41 @@
+
+---
+title: "DOCE: Finding the Sweet Spot for Execution-Based Code Generation"
+id: "2408.13745v1"
+description: "TL;DR: We propose a framework for code generation with execution-based evaluation, highlighting the importance of filtering and self-debugging."
+author: Haau-Sing Li, Patrick Fernandes, Iryna Gurevych, André F. T. Martins
+date: "2024-08-25"
+image: "https://browse.arxiv.org/html/2408.13745v1/x1.png"
+categories: ['security', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.13745v1/x1.png)
+
+### Summary:
+
+The paper introduces Decoding Objectives for Code Execution (DOCE), a comprehensive framework for code generation that includes candidate generation, reranking, and self-debugging. The authors analyze the impact of the number of generated candidates and sampling temperature, emphasizing the importance of execution-based approaches. They also propose self-debugging on multiple candidates, obtaining state-of-the-art performance on reranking for code generation.
+
+### Major Findings:
+
+1. The DOCE framework improves both oracle and reranking performance for code generation.
+2. Sampling with previously unseen high temperatures allows high oracle reranking performance and execution-based MBR performance with filtering based on trial unit tests.
+3. The importance of filtering based on trial unit tests, a commonly used technique whose effect has been overlooked in previous works, is highlighted.
+4. Self-debugging, when applied to multiple generated candidates before the final choice is made, is more effective and robust than applying it as a final step.
+
+### Analysis and Critique:
+
+The paper provides a solid guideline for future research on code generation by proposing a unified framework for execution-based code generation. However, the authors do not discuss the limitations of their approach, such as the potential for overfitting to specific datasets or the computational cost of the proposed methods. Additionally, the paper does not provide a comparison with other state-of-the-art code generation methods, which could help to better understand the strengths and weaknesses of the proposed approach.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.13745v1](https://arxiv.org/abs/2408.13745v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.13745v1](https://browse.arxiv.org/html/2408.13745v1)       |
+| Truncated       | False       |
+| Word Count       | 10157       |

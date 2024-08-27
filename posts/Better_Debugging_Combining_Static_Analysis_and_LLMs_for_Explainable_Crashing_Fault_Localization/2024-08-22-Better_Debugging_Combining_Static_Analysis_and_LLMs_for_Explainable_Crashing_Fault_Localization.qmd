@@ -1,0 +1,43 @@
+
+---
+title: "Better Debugging: Combining Static Analysis and LLMs for Explainable Crashing Fault Localization"
+id: "2408.12070v1"
+description: "TL;DR: CrashTracker uses static analysis & LLM to localize & explain Android framework-specific crashing faults, outperforming SOTA tools."
+author: Jiwei Yan, Jinhao Huang, Chunrong Fang, Jun Yan, Jian Zhang
+date: "2024-08-22"
+image: "https://browse.arxiv.org/html/2408.12070v1/x1.png"
+categories: ['robustness', 'prompt-engineering', 'education', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.12070v1/x1.png)
+
+**Summary:**
+
+The paper presents a novel approach for explainable crashing fault localization by combining static analysis and large language models (LLMs). The approach aims to address the challenge of debugging and fixing post-release crashes in applications that rely on various frameworks or libraries. The primary insight is that understanding the semantics of exception-throwing statements in the framework code can help find and apprehend buggy methods in the application code.
+
+The proposed approach involves designing an exception-thrown summary (ETS) that describes key elements related to each framework-specific exception and extracting ETSs by performing static analysis. The approach does not solely depend on call graph tracing and does not require prior knowledge. Instead, it fully utilizes the information from the framework code and is the first to consider the explainability of the localization results.
+
+The approach is applied to one typical scenario, i.e., locating Android framework-specific crashing faults, and implemented as a tool called CrashTracker. The fault localization results show that CrashTracker exhibited an overall MRR value of 0.91 and outperformed the SOTA tool Anchor in precision. For fault explanation, the LLM-powered explanation achieved a 67.04% improvement in users’ satisfaction score compared to the naive one produced by static analysis only.
+
+**Major Findings:**
+
+1. The proposed approach combines static analysis and LLMs to provide an explainable crashing fault localization for applications that rely on various frameworks or libraries.
+2. The approach involves designing an exception-thrown summary (ETS) that describes key elements related to each framework-specific exception and extracting ETSs by performing static analysis.
+3. The approach does not solely depend on call graph tracing and does not require prior knowledge. Instead, it fully utilizes the information from the framework code and is the first to consider the explainability of the localization results.
+4. The approach is applied to one typical scenario, i.e., locating Android framework-specific crashing faults, and implemented as a tool called CrashTracker.
+5. The fault localization results show that CrashTracker exhibited an overall MRR value of 0.91 and outperformed the SOTA tool Anchor in precision.
+6. For fault explanation,
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.12070v1](https://arxiv.org/abs/2408.12070v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.12070v1](https://browse.arxiv.org/html/2408.12070v1)       |
+| Truncated       | False       |
+| Word Count       | 19814       |

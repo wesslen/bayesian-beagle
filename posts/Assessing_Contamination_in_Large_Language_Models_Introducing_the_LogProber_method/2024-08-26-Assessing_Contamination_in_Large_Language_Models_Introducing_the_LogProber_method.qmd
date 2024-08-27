@@ -1,0 +1,43 @@
+
+---
+title: "Assessing Contamination in Large Language Models: Introducing the LogProber method"
+id: "2408.14352v1"
+description: "LogProber: A new algorithm detects contamination in LLMs using token probability, but limitations exist based on training methods."
+author: Nicolas Yax, Pierre-Yves Oudeyer, Stefano Palminteri
+date: "2024-08-26"
+image: "https://browse.arxiv.org/html/2408.14352v1/x1.png"
+categories: ['production', 'robustness', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.14352v1/x1.png)
+
+### Summary:
+
+The paper introduces LogProber, a novel algorithm designed to detect contamination in Large Language Models (LLMs) using token probability in given sentences. The method is particularly relevant for evaluating LLMs' performance in cognitive tasks, where traditional evaluation methods may not be suitable due to the short length of the sequences. The authors demonstrate the effectiveness of LogProber in dedicated experiments, where they fine-tune a LLM with specific items from a cognitive test. The results show that the method is effective in detecting contamination, but it may not be able to identify contamination when the model is only trained on the answer tokens.
+
+### Major Findings:
+
+1. LogProber is a computationally cheap algorithm that can disentangle contamination from confidence in LLMs, making it suitable for evaluating LLMs' performance in cognitive tasks.
+2. The method is effective in detecting contamination when the model is trained on the full sequence of question and answer tokens.
+3. LogProber may not be able to detect contamination when the model is only trained on the answer tokens, highlighting the need for further research in this area.
+
+### Analysis and Critique:
+
+1. The paper presents a promising approach to detecting contamination in LLMs, but it is limited to evaluating contamination in the context of cognitive tasks. Further research is needed to determine the applicability of LogProber to other types of LLM evaluation tasks.
+2. The authors acknowledge that LogProber may not be able to detect contamination when the model is only trained on the answer tokens. This limitation highlights the need for further research to develop more robust methods for detecting contamination in LLMs.
+3. The paper does not provide a comprehensive evaluation of LogProber's performance across different LLMs and datasets. Further research is needed to determine the generalizability of the method and its potential limitations.
+4. The paper does not discuss the potential impact of contamination on the performance of LLMs in real-world applications. Further research is needed to determine the extent to which contamination may affect the reliability and validity of LLM-based systems.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.14352v1](https://arxiv.org/abs/2408.14352v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.14352v1](https://browse.arxiv.org/html/2408.14352v1)       |
+| Truncated       | False       |
+| Word Count       | 6889       |

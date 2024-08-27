@@ -1,0 +1,47 @@
+
+---
+title: "Are LLM-based Recommenders Already the Best? Simple Scaled Cross-entropy Unleashes the Potential of Traditional Sequential Recommenders"
+id: "2408.14238v1"
+description: "LLMs excel in sequential recommendation, but inconsistent experimental settings inflate their ranking capability. Cross-entropy loss has desirable properties, but isn't optimal for all ranking metrics. Traditional models can surpass LLMs with proper optimization."
+author: Cong Xu, Zhangchi Zhu, Mo Yu, Jun Wang, Jianyong Wang, Wei Zhang
+date: "2024-08-26"
+image: "https://browse.arxiv.org/html/2408.14238v1/x1.png"
+categories: ['production', 'recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.14238v1/x1.png)
+
+# Summary
+
+This study aims to clarify the superiority of the cross-entropy loss in improving the ranking capability of recommenders. The authors provide theoretical justification for the tightness and coverage properties of the cross-entropy loss and shed light on additional novel insights. They find that the cross-entropy loss is not yet optimal in terms of some ranking metrics and propose an effective alternative, scaling up the sampled normalizing term, when full softmax cannot be performed. These findings help unleash the potential of traditional recommendation models, allowing them to surpass LLM-based counterparts.
+
+## Major Findings:
+
+1. The cross-entropy loss has two desirable properties: tightness and coverage, which contribute to its superiority in improving the ranking capability of recommenders.
+2. The cross-entropy loss is not yet optimal in terms of some ranking metrics, and an effective alternative is to scale up the sampled normalizing term when full softmax cannot be performed.
+3. Traditional recommendation models can surpass LLM-based counterparts by utilizing the cross-entropy loss and the proposed alternative.
+
+## Analysis and Critique:
+
+1. The study provides a valuable theoretical foundation for understanding the superiority of the cross-entropy loss in improving the ranking capability of recommenders.
+2. The proposed alternative to the cross-entropy loss, scaling up the sampled normalizing term, is a promising approach when full softmax cannot be performed.
+3. The study highlights the potential of traditional recommendation models, which can surpass LLM-based counterparts by utilizing the cross-entropy loss and the proposed alternative.
+4. However, the study does not provide empirical evidence to support the theoretical findings, which could be a limitation.
+5. The study focuses on the cross-entropy loss and its alternative, but other loss functions, such as binary cross-entropy and Bayesian personalized ranking, are not discussed in detail.
+6. The study does not consider the computational complexity of the proposed alternative, which could be a concern in practical applications.
+
+In conclusion, this study provides valuable insights into the superiority of the cross-entropy loss in improving the ranking capability of recommenders and proposes an effective alternative when full softmax cannot be performed. However, the lack of empirical evidence and the focus on a single loss
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.14238v1](https://arxiv.org/abs/2408.14238v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.14238v1](https://browse.arxiv.org/html/2408.14238v1)       |
+| Truncated       | False       |
+| Word Count       | 7714       |

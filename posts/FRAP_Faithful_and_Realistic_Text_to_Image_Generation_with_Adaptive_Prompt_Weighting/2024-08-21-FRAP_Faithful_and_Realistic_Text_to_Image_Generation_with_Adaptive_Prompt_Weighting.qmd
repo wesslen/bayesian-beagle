@@ -1,0 +1,47 @@
+
+---
+title: "FRAP: Faithful and Realistic Text-to-Image Generation with Adaptive Prompt Weighting"
+id: "2408.11706v1"
+description: "FRAP improves prompt-image alignment in T2I diffusion models, generating more authentic images with lower latency than latent code optimization methods."
+author: Liyao Jiang, Negar Hassanpour, Mohammad Salameh, Mohan Sai Singamsetti, Fengyu Sun, Wei Lu, Di Niu
+date: "2024-08-21"
+image: "https://browse.arxiv.org/html/2408.11706v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.11706v1/x1.png)
+
+### Summary:
+
+The paper introduces FRAP, a method for improving prompt-image alignment and authenticity in text-to-image (T2I) diffusion models. FRAP adaptively adjusts per-token prompt weighting throughout the reverse generative process (RGP) of a diffusion model, aiming to improve prompt-image alignment while generating high-quality images with realistic appearance. The method uses an online optimization algorithm to update each token's weight coefficient, minimizing a unified objective function that encourages object presence and the binding of object-modifier pairs.
+
+FRAP is evaluated on various prompt-image alignment and image quality assessment metrics, demonstrating significantly higher faithfulness than recent methods on complex datasets while maintaining a lower average latency. The method also generates more authentic images with realistic appearances, as confirmed by the CLIP-IQA-Real metric and visual comparisons.
+
+### Major Findings:
+
+1. FRAP achieves significantly higher faithfulness than recent methods on all prompt-image alignment metrics on complex datasets, while remaining on par with these methods on simple datasets with prompts created from templates.
+2. FRAP generates images with better authenticity and more realistic appearances, as confirmed by the CLIP-IQA-Real metric and visual comparisons.
+3. FRAP has lower average latency and lower number of UNet calls than recent methods, as it does not rely on costly refinement loops which repeatedly call UNet at each time-step, especially on datasets with more complex prompts.
+
+### Analysis and Critique:
+
+While FRAP demonstrates promising results in improving prompt-image alignment and authenticity, there are some potential limitations and areas for further research:
+
+1. The method relies on the availability of a pre-trained T2I diffusion model, which may not always be available or may not perform well on certain types of prompts.
+2. The unified objective function used in FRAP may not be optimal for all types of prompts or image generation tasks, and further research is needed to explore alternative objective functions or optimization methods.
+3. The method's performance on larger and more diverse datasets, as well as its generalizability to other T2I diffusion models, needs to be further evaluated.
+4. The method's impact on the overall computational cost and efficiency of T2I diffusion models
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11706v1](https://arxiv.org/abs/2408.11706v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11706v1](https://browse.arxiv.org/html/2408.11706v1)       |
+| Truncated       | False       |
+| Word Count       | 11663       |

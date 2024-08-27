@@ -1,0 +1,48 @@
+
+---
+title: "Unlearning Trojans in Large Language Models: A Comparison Between Natural Language and Source Code"
+id: "2408.12416v1"
+description: "Lya, a novel unlearning approach, effectively removes trojans from poisoned BERT and CodeBERT models, outperforming existing methods."
+author: Mahdi Kazemi, Aftab Hussain, Md Rafiqul Islam Rabin, Mohammad Amin Alipour, Sen Lin
+date: "2024-08-22"
+image: "https://browse.arxiv.org/html/2408.12416v1/x1.png"
+categories: ['security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.12416v1/x1.png)
+
+### Summary:
+
+- The paper investigates the application of Machine Unlearning (MU) for mitigating the impact of trojans embedded in large language models of natural language (Text-LLMs) and large language models of code (Code-LLMs).
+- A novel unlearning approach, Lya, is proposed, which leverages both gradient ascent and elastic weight consolidation, a Fisher Information Matrix (FIM) based regularization technique.
+- Lya is compared against conventional techniques like fine-tuning, retraining, and vanilla gradient ascent.
+- The subject models investigated are BERT and CodeBERT, for sentiment analysis and code defect detection tasks, respectively.
+- The combination of gradient ascent and FIM-based regularization in Lya outperforms existing methods in removing the trojan’s influence from the poisoned model, while preserving its original functionality.
+
+### Major Findings:
+
+1. Lya, the proposed unlearning approach, outperforms existing methods in removing trojans from poisoned models while preserving their original functionality.
+2. The combination of gradient ascent and FIM-based regularization in Lya is effective in reducing the trojan’s influence and improving model accuracy.
+3. Lya enhances model accuracy while reducing ASR in both sentiment analysis and defect detection tasks.
+
+### Analysis and Critique:
+
+- The paper provides a comprehensive comparison of MU techniques for removing trojans in LLMs, in both the NL and coding domains.
+- The proposed Lya approach shows promising results in removing trojans and preserving model functionality.
+- However, the paper does not discuss the potential limitations or shortcomings of the Lya approach, such as its computational complexity or the need for careful hyperparameter tuning.
+- The paper also does not address the potential impact of the proposed approach on the model's performance on other tasks or its generalization to other types of LLMs.
+- Further research is needed to evaluate the proposed approach in more diverse settings and to address its potential limitations.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.12416v1](https://arxiv.org/abs/2408.12416v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.12416v1](https://browse.arxiv.org/html/2408.12416v1)       |
+| Truncated       | False       |
+| Word Count       | 6450       |

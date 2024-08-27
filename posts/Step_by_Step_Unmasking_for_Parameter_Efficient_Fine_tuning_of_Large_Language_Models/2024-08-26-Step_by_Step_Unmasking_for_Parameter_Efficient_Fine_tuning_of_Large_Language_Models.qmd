@@ -1,0 +1,47 @@
+
+---
+title: "Step-by-Step Unmasking for Parameter-Efficient Fine-tuning of Large Language Models"
+id: "2408.14470v1"
+description: "ID3 method dynamically unmasks parameters for efficient fine-tuning, outperforming fixed-masking techniques, and reducing gradient updates by half."
+author: Aradhye Agarwal, Suhas K Ramesh, Ayan Sengupta, Tanmoy Chakraborty
+date: "2024-08-26"
+image: "https://browse.arxiv.org/html/2408.14470v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.14470v1/x1.png)
+
+# Summary:
+
+**Summary:**
+
+The paper introduces a novel selective parameter-efficient fine-tuning (PEFT) method called "increment-" for large language models (LLMs). This method calculates parameter importance continually and dynamically unmasks parameters by balancing exploration and exploitation in parameter selection. The proposed method reduces the number of gradient updates by a factor of two, enhancing computational efficiency. The empirical study on 15 tasks demonstrates the effectiveness of the method compared to fixed-masking-based PEFT techniques. The method is robust to random initialization of neurons and can be integrated into existing additive and reparametrization-based PEFT modules such as adapters and LoRA for dynamic sparsification.
+
+**Major Findings:**
+
+1. The proposed "increment-" method for selective PEFT enables incremental parameter selection and dynamic assessment of parameter importance, outperforming existing methods in various natural language understanding and generation tasks.
+2. The new importance-based heuristic, "magnituDe and graDient-based heuristic (MDGD)," combines the benefits of gradient and magnitude-based parameter importance functions, improving the performance of the proposed selective PEFT method.
+3. The method produces a series of progressively improved models across various budget levels, allowing users to balance budget and performance effectively.
+4. An open-source toolkit integrating four selective PEFT techniques is provided, offering comprehensive support for selective methods that is not available in existing toolkits.
+
+**Analysis and Critique:**
+
+1. The paper addresses the limitations of existing selective PEFT methods, such as incorrect allocation of budget and detrimental impact on fine-tuning performance due to misselection of parameters.
+2. The proposed method introduces a novel selection strategy, increment-, which balances the exploration and exploitation strategies adopted in repeat- and static-.
+3. The paper provides a mathematical justification for the heuristic function used in the proposed method, demonstrating that parameters with maximum Fisher importance have maximum parameter magnitude.
+4. The paper introduces a new term, "scalar parameter," to refer to individual entries in the weight matrices, and "tensor parameter" to refer to the whole weight matrix. This distinction allows for a more granular analysis of parameter importance.
+
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.14470v1](https://arxiv.org/abs/2408.14470v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.14470v1](https://browse.arxiv.org/html/2408.14470v1)       |
+| Truncated       | False       |
+| Word Count       | 8198       |

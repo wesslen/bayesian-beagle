@@ -1,0 +1,44 @@
+
+---
+title: "LMM-VQA: Advancing Video Quality Assessment with Large Multimodal Models"
+id: "2408.14008v1"
+description: "LMM-VQA: New model for video quality assessment using large multimodal models, outperforming existing methods by 5% on average."
+author: Qihang Ge, Wei Sun, Yu Zhang, Yunhao Li, Zhongpeng Ji, Fengyu Sun, Shangling Jui, Xiongkuo Min, Guangtao Zhai
+date: "2024-08-26"
+image: "https://browse.arxiv.org/html/2408.14008v1/x2.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.14008v1/x2.png)
+
+# Summary
+
+The paper introduces a novel approach to video quality assessment (VQA) using large multimodal models (LMMs), called LMM-VQA. The proposed method reformulates the quality regression problem into a question-and-answering (Q&A) task and constructs Q&A prompts for VQA instruction tuning. LMM-VQA employs a spatiotemporal vision encoder to extract spatial and temporal features, which are then mapped into the language space for modality alignment. The aligned visual tokens and quality-inquired text tokens are aggregated as inputs for the large language model (LLM) to generate the quality score and level.
+
+## Major Findings
+
+1. LMM-VQA achieves state-of-the-art performance across five VQA benchmarks, demonstrating an average improvement of  in generalization ability over existing methods.
+2. The advanced design of the spatiotemporal encoder and projector enables LMM-VQA to perform exceptionally well on general video understanding tasks.
+3. The code for LMM-VQA will be made available at <https://github.com/Sueqk/LMM-VQA>.
+
+## Analysis and Critique
+
+1. The paper presents a promising approach to VQA using LMMs, which has the potential to improve the performance and generalization ability of VQA models.
+2. The use of a spatiotemporal vision encoder and modality alignment is a novel approach to addressing the challenges of VQA, which could inspire further research in this area.
+3. The paper does not provide a detailed comparison of LMM-VQA with other state-of-the-art VQA methods, which could help to better understand its strengths and limitations.
+4. The paper does not discuss the computational complexity and efficiency of LMM-VQA, which are important considerations for practical applications.
+5. The paper does not provide a detailed analysis of the limitations and potential biases of LMM-VQA, which could help to identify areas for improvement and further research.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.14008v1](https://arxiv.org/abs/2408.14008v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.14008v1](https://browse.arxiv.org/html/2408.14008v1)       |
+| Truncated       | False       |
+| Word Count       | 8834       |

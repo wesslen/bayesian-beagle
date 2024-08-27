@@ -1,0 +1,44 @@
+
+---
+title: "Fire-Flyer AI-HPC: A Cost-Effective Software-Hardware Co-Design for Deep Learning"
+id: "2408.14158v1"
+description: "Fire-Flyer AI-HPC halves costs and reduces energy use by 40% for DL training, while maintaining DGX-A100-like performance."
+author: Wei An, Xiao Bi, Guanting Chen, Shanhuang Chen, Chengqi Deng, Honghui Ding, Kai Dong, Qiushi Du, Wenjun Gao, Kang Guan, Jianzhong Guo, Yongqiang Guo, Zhe Fu, Ying He, Panpan Huang, Jiashi Li, Wenfeng Liang, Xiaodong Liu, Xin Liu, Yiyuan Liu, Yuxuan Liu, Shanghao Lu, Xuan Lu, Xiaotao Nie, Tian Pei, Junjie Qiu, Hui Qu, Zehui Ren, Zhangli Sha, Xuecheng Su, Xiaowen Sun, Yixuan Tan, Minghui Tang, Shiyu Wang, Yaohui Wang, Yongji Wang, Ziwei Xie, Yiliang Xiong, Yanhong Xu, Shengfeng Ye, Shuiping Yu, Yukun Zha, Liyue Zhang, Haowei Zhang, Mingchuan Zhang, Wentao Zhang, Yichao Zhang, Chenggang Zhao, Yao Zhao, Shangyan Zhou, Shunfeng Zhou, Yuheng Zou
+date: "2024-08-26"
+image: "https://browse.arxiv.org/html/2408.14158v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.14158v1/x1.png)
+
+**Summary:**
+
+The paper introduces the Fire-Flyer AI-HPC architecture, a cost-effective hardware-software co-design framework for deep learning and large language models (LLMs). The authors deployed a cluster of 10,000 PCIe A100 GPUs for deep learning training, achieving performance comparable to the DGX-A100 while reducing costs by half and energy consumption by 40%. The architecture features a Two-Layer Fat-Tree Network integrating storage and computation, HFReduce for computation-communication overlap, and various software optimizations to keep the Computation-Storage Integrated Network congestion-free. The system-oriented experience from deep learning training provides valuable insights for future advancements in AI-HPC.
+
+**Major Findings:**
+
+1. The Fire-Flyer AI-HPC architecture, utilizing 10,000 PCIe A100 GPUs, achieves performance comparable to the DGX-A100 while reducing costs by half and energy consumption by 40%.
+2. The Two-Layer Fat-Tree Network integrates storage and computation, while HFReduce enables computation-communication overlap, improving overall system performance.
+3. Various software optimizations, such as HaiScale, 3FS, and HAI-Platform, contribute to the system's scalability and congestion-free operation.
+
+**Analysis and Critique:**
+
+The Fire-Flyer AI-HPC architecture presents a promising approach to addressing the increasing demands of computational power and bandwidth in deep learning and LLMs. The authors' focus on cost-effectiveness and energy efficiency is commendable, as these factors are crucial for the widespread adoption of AI-HPC systems.
+
+However, the paper could benefit from a more detailed discussion of the limitations and potential biases in the proposed architecture. For instance, the authors mention the need for software optimizations to address the performance challenges of the PCIe architecture, but they do not provide specific examples or discuss the potential trade-offs between performance and cost-effectiveness.
+
+Additionally, the paper could benefit from a more comprehensive comparison with other existing AI-HPC architectures, highlighting the unique advantages and disadvantages of the Fire-Flyer AI-H
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.14158v1](https://arxiv.org/abs/2408.14158v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.14158v1](https://browse.arxiv.org/html/2408.14158v1)       |
+| Truncated       | False       |
+| Word Count       | 11170       |

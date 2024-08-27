@@ -1,0 +1,42 @@
+
+---
+title: "Reading with Intent"
+id: "2408.11189v1"
+description: "RAG systems struggle with sarcasm; this paper generates sarcastic passages to improve their performance."
+author: Benjamin Reichman, Kartik Talamadupula, Toshish Jawale, Larry Heck
+date: "2024-08-20"
+image: "https://browse.arxiv.org/html/2408.11189v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.11189v1/x1.png)
+
+### Summary:
+
+The paper focuses on the challenge of understanding and processing emotionally inflected text, particularly sarcasm, in the context of Retrieval-Augmented Generation (RAG) systems. The authors introduce a novel prompt-based approach to improve reading comprehension across both emotionally and non-emotionally inflected text. They construct a sarcasm-poisoned retrieval corpus, develop a prompt-based approach for reading sarcasm-inflected text, and conduct comprehensive ablation studies to validate their approach.
+
+### Major Findings:
+
+1. The proposed "Reading with Intent" prompt boosts performance across various datasets for both the Llama2 and Mistral family of models, across model scales.
+2. The "Reading with Intent" method comprises several components, including the intent reading prompt and the intent tag. Adding the intent prompt produces a significantly larger performance boost than adding the intent tag.
+3. The position of the intent tag and the position of the factually distorted passage relative to the correct passage significantly impact performance.
+4. The performance of each retrieval system at Recall@K declines by - with the addition of approximately 1 million sarcastic passages. Sarcastic passages are significantly overrepresented in retrievals.
+5. The model correctly differentiated between sarcastic and non-sarcastic passages 98% of the time.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to addressing the challenge of understanding and processing emotionally inflected text in RAG systems. The proposed "Reading with Intent" method shows promising results in improving performance across various datasets and model scales. However, there are some limitations to this work. The sarcastic passages generated are likely too easy to detect, and the "Reading with Intent" system is primarily prompt-based. Future work could focus on creating more challenging, artificially generated sarcasm and instruction-tuning the model to read with intent. Additionally, the paper could benefit from a more detailed analysis of the impact of the proposed method on different types of sarcasm and other emotionally inflected text.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11189v1](https://arxiv.org/abs/2408.11189v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11189v1](https://browse.arxiv.org/html/2408.11189v1)       |
+| Truncated       | False       |
+| Word Count       | 6931       |

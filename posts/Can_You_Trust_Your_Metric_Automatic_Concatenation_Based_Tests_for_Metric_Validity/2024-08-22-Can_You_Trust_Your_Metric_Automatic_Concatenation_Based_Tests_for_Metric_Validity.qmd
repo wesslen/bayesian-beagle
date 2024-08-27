@@ -1,0 +1,48 @@
+
+---
+title: "Can You Trust Your Metric? Automatic Concatenation-Based Tests for Metric Validity"
+id: "2408.12259v1"
+description: "LLM harmfulness metrics, like GPT-based, can misclassify unsafe content when prompts and responses are concatenated, showing decision-flipping and order sensitivity."
+author: Ora Nova Fandina, Leshem Choshen, Eitan Farchi, George Kour, Yotam Perlitz, Orna Raz
+date: "2024-08-22"
+image: "https://browse.arxiv.org/html/2408.12259v1/extracted/5807115/paper_metric_intro.png"
+categories: ['robustness', 'security']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.12259v1/extracted/5807115/paper_metric_intro.png)
+
+### Summary:
+
+This study investigates the reliability of harmfulness detection metrics used in AI-based tools, specifically Large Language Models (LLMs). The researchers discovered that several LLM-based metrics, including GPT-based, exhibit a decision-flipping phenomenon, where the metric's decision changes when prompts and responses are concatenated. They also found that the advanced metric GPT-4o is highly sensitive to input order, tending to classify responses as safe if the safe content appears first.
+
+To assess the fundamental properties a valid metric should satisfy, the researchers introduced automatic concatenation-based tests. These tests were applied in a model safety scenario to evaluate the reliability of harmfulness detection metrics, revealing inconsistencies in several metrics.
+
+### Major Findings:
+
+1. **Decision-Flipping Phenomenon**: Several LLM-based metrics, including GPT-based, exhibit a decision-flipping phenomenon, where the metric's decision changes when prompts and responses are concatenated.
+2. **Input Order Sensitivity**: The advanced metric GPT-4o is highly sensitive to input order, tending to classify responses as safe if the safe content appears first.
+3. **Automatic Concatenation-Based Tests**: The researchers introduced automatic concatenation-based tests to assess the fundamental properties a valid metric should satisfy. These tests revealed inconsistencies in several metrics when applied in a model safety scenario.
+
+### Analysis and Critique:
+
+While this study provides valuable insights into the reliability of harmfulness detection metrics, there are some limitations and areas for further research. The study only tested one task, the task of model safety, with one underlying benchmark dataset. This limited scope might affect the generalizability of the findings.
+
+Additionally, the number of tests is small at this stage, which may not comprehensively cover all aspects of metric validity. Further research is needed to extend these tests to other metrics and tasks.
+
+Moreover, the study focused on specific metrics and their current implementations, which may evolve and improve over time. Future work should address these limitations by expanding the range of tasks, increasing the number of tests, and continuously evaluating new metrics.
+
+In conclusion, this study highlights the need for robust and reliable validation of LLM-based metrics, particularly those
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.12259v1](https://arxiv.org/abs/2408.12259v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.12259v1](https://browse.arxiv.org/html/2408.12259v1)       |
+| Truncated       | False       |
+| Word Count       | 4848       |

@@ -1,0 +1,42 @@
+
+---
+title: "DAAD: Dynamic Analysis and Adaptive Discriminator for Fake News Detection"
+id: "2408.10883v1"
+description: "TL;DR: DAAD approach for fake news detection uses MCTS for prompt optimization and identifies four deceit patterns for detection."
+author: Xinqi Su, Yawen Cui, Ajian Liu, Xun Lin, Yuhao Wang, Haochen Liang, Wenhui Li, Zitong Yu
+date: "2024-08-20"
+image: "https://browse.arxiv.org/html/2408.10883v1/x1.png"
+categories: ['prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.10883v1/x1.png)
+
+**Summary:**
+
+The paper proposes a Dynamic Analysis and Adaptive Discriminator (DAAD) approach for fake news detection, addressing the limitations of existing knowledge-based and semantics-based methods. The DAAD approach introduces domain-specific comments from Large language models (LLMs) using Monte Carlo Tree Search (MCTS) and mitigates the risk of getting trapped in local minima during optimization through MemoryBank, Batchprompt, and Resampling. The paper also defines four typical deceit patterns and designs corresponding discriminators, allowing for flexible exploration of optimal detection models through dynamic routing.
+
+**Major Findings:**
+
+1. The DAAD approach introduces domain-specific comments from LLMs using MCTS and mitigates the risk of getting trapped in local minima during optimization through MemoryBank, Batchprompt, and Resampling.
+2. The paper defines four typical deceit patterns and designs corresponding discriminators, allowing for flexible exploration of optimal detection models through dynamic routing.
+3. Extensive experiments on three mainstream datasets demonstrate the superiority of the DAAD approach.
+
+**Analysis and Critique:**
+
+1. The paper's reliance on manually defined meta-prompts during the optimization process may lead to suboptimal prompts. Future research could focus on incorporating more detailed comments tailored to different news domains.
+2. The paper's predefined deception patterns and adaptive discriminators may limit the approach's flexibility. Future work could explore how to automatically discover more effective deception patterns and discriminators from different domains and extend these methods to areas beyond fake news detection.
+3. The paper's focus on fake news detection may limit its applicability to other domains, such as Sarcasm and Harmful Meme Detection. Future work could aim to develop a unified detection model for these areas.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.10883v1](https://arxiv.org/abs/2408.10883v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.10883v1](https://browse.arxiv.org/html/2408.10883v1)       |
+| Truncated       | False       |
+| Word Count       | 8259       |

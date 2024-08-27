@@ -1,0 +1,40 @@
+
+---
+title: "CoRA: Collaborative Information Perception by Large Language Model's Weights for Recommendation"
+id: "2408.10645v1"
+description: "TL;DR: CoRA method integrates collaborative info into LLMs for better recommendations, preserving LLM's world knowledge and text inference abilities."
+author: Yuting Liu, Jinghao Zhang, Yizhou Dang, Yuliang Liang, Qiang Liu, Guibing Guo, Jianzhe Zhao, Xingwei Wang
+date: "2024-08-20"
+image: "https://browse.arxiv.org/html/2408.10645v1/x1.png"
+categories: ['recommender']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.10645v1/x1.png)
+
+### Summary:
+
+The paper proposes a new paradigm, CoRA (Collaborative LoRA), for adapting Large Language Models (LLMs) to recommendation tasks. The method aligns collaborative information with LLM's parameter space, representing it as incremental weights to update LLM's output. This approach allows LLM to perceive collaborative information without altering its general knowledge and text inference capabilities. The paper employs a collaborative filtering model to extract user and item embeddings, converting them into collaborative weights with low-rank properties through a collaborative weights generator. These collaborative weights are then merged into LLM's weights, enabling LLM to generate personalized recommendations without fine-tuning or extra collaborative tokens in prompts.
+
+### Major Findings:
+
+1. CoRA effectively integrates collaborative information into LLM, enhancing recommendation performance.
+2. CoRA enables LLM to perceive collaborative information without altering its general knowledge and text inference capabilities.
+3. CoRA allows LLM to generate personalized recommendations without fine-tuning or extra collaborative tokens in prompts.
+
+### Analysis and Critique:
+
+The paper presents a novel approach to adapting LLMs to recommendation tasks, addressing the limitations of existing methods that can undermine LLM's inherent world knowledge and fundamental competencies. However, the paper does not provide a comprehensive comparison with other state-of-the-art methods, which could provide a more robust evaluation of the proposed method's performance. Additionally, the paper does not discuss the potential limitations or biases of the proposed method, which could be a topic for future research.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.10645v1](https://arxiv.org/abs/2408.10645v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.10645v1](https://browse.arxiv.org/html/2408.10645v1)       |
+| Truncated       | False       |
+| Word Count       | 6279       |

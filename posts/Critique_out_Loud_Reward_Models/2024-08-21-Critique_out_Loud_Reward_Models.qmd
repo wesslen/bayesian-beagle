@@ -1,0 +1,45 @@
+
+---
+title: "Critique-out-Loud Reward Models"
+id: "2408.11791v1"
+description: "CLoud reward models improve preference classification accuracy by critiquing assistant responses, offering a Pareto improvement for win rate in Best-of-N."
+author: Zachary Ankner, Mansheej Paul, Brandon Cui, Jonathan D. Chang, Prithviraj Ammanabrolu
+date: "2024-08-21"
+image: "https://browse.arxiv.org/html/2408.11791v1/x1.png"
+categories: ['social-sciences']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.11791v1/x1.png)
+
+### Summary:
+
+The paper introduces Critique-out-Loud (CLoud) reward models, which are designed to improve the performance of reward models in reinforcement learning from human feedback (RLHF) by training them to critique responses before predicting a reward. CLoud reward models operate by first generating a natural language critique of the assistant's response and then using it to predict a scalar reward for the quality of the response. The authors demonstrate that CLoud reward models improve pairwise preference classification accuracy on RewardBench and lead to a Pareto improvement for win rate on ArenaHard when used as the scoring model for Best-of-N. The paper also explores the dynamic inference compute capabilities of CLoud reward models by performing self-consistency decoding for reward prediction.
+
+### Major Findings:
+
+1. CLoud reward models improve pairwise preference classification accuracy on RewardBench by up to 4.65 and 5.84 percentage points for the 8B and 70B base models, respectively.
+2. CLoud reward models lead to a Pareto improvement for win rate on ArenaHard when used as the scoring model for Best-of-N.
+3. On-policy training is essential for the success of CLoud reward models for both preference classification and for Best-of-N.
+4. Self-consistency over critiques improves pairwise preference classification accuracy for reasoning tasks by up to 0.70 and 0.49 percentage points for the 8B and 70B models, respectively.
+
+### Analysis and Critique:
+
+1. The paper does not provide a clear explanation of how the oracle critiques are generated, which could be a potential source of bias in the results.
+2. The paper does not discuss the potential limitations of using natural language critiques, such as the subjectivity of language and the difficulty of interpreting critiques.
+3. The paper does not provide a comparison of CLoud reward models to other methods for improving reward model performance, such as using a larger dataset or using a more complex model architecture.
+4. The paper does not discuss the potential impact of the dynamic inference compute capabilities of CLoud reward models on the computational resources required for training and inference.
+5. The paper does not provide a clear explanation of how the
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11791v1](https://arxiv.org/abs/2408.11791v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11791v1](https://browse.arxiv.org/html/2408.11791v1)       |
+| Truncated       | False       |
+| Word Count       | 8502       |

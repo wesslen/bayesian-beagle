@@ -1,0 +1,42 @@
+
+---
+title: "Exploring the Potential of Large Language Models for Heterophilic Graphs"
+id: "2408.14134v1"
+description: "LLMs enhance GNNs for heterophilic graphs via edge discrimination and reweighting, improving node classification."
+author: Yuxia Wu, Shujie Li, Yuan Fang, Chuan Shi
+date: "2024-08-26"
+image: "https://browse.arxiv.org/html/2408.14134v1/x1.png"
+categories: ['architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.14134v1/x1.png)
+
+### Summary:
+
+This paper explores the potential of Large Language Models (LLMs) for enhancing Graph Neural Networks (GNNs) in handling heterophilic graphs, where connected nodes often exhibit dissimilar characteristics. The proposed two-stage framework, LLM4HeG, fine-tunes LLMs to improve GNNs for heterophilic graphs. The first stage involves LLM-enhanced edge discrimination, where an LLM is fine-tuned using Low-Rank Adaptation (LoRA) to distinguish heterophilic and homophilic edges based on a limited amount of ground truth labels. The second stage, LLM-guided edge reweighting, learns adaptive weights for both heterophilic and homophilic edges, enabling fine-grained, edge-sensitive aggregation in GNNs. To cope with the computational demands of deploying LLMs, model distillation techniques are explored to condense the knowledge from fine-tuned LLMs into smaller, more efficient models.
+
+### Major Findings:
+
+1. LLMs can be effectively adapted to characterize and identify heterophilic contexts by fine-tuning an LLM using LoRA to discriminate heterophilic and homophilic edges based on a limited amount of ground truth labels.
+2. LLMs can effectively guide the fine-grained integration of heterophilic contexts into graph models by learning adaptive weights for both heterophilic and homophilic edges, which are adapted to individual edges based on their features, structure, and heterophilic or homophilic characteristics.
+3. Model distillation techniques can be used to condense the knowledge from fine-tuned LLMs into smaller, more efficient models, achieving faster inference time with minimal performance degradation.
+
+### Analysis and Critique:
+
+The proposed framework, LLM4HeG, demonstrates the potential of LLMs for enhancing GNNs in handling heterophilic graphs. However, the following limitations and potential areas for improvement should be considered:
+
+1. The computational demands of deploying LLMs for edge discrimination and reweighting may limit their practical deployment for real-world applications. While model distillation techniques can help address this issue, further research is needed
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.14134v1](https://arxiv.org/abs/2408.14134v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.14134v1](https://browse.arxiv.org/html/2408.14134v1)       |
+| Truncated       | False       |
+| Word Count       | 8228       |

@@ -1,0 +1,45 @@
+
+---
+title: "First Activations Matter: Training-Free Methods for Dynamic Activation in Large Language Models"
+id: "2408.11393v1"
+description: "TL;DR: TDA method accelerates LLM generation speed by 18-25% without compromising performance, addressing DA limitations and providing theoretical insights."
+author: Chi Ma, Mincong Huang, Ying Zhang, Chao Wang, Yujie Wang, Lei Yu, Chuan Liu, Wei Lin
+date: "2024-08-21"
+image: "https://browse.arxiv.org/html/2408.11393v1/extracted/5804507/images/dejavu.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.11393v1/extracted/5804507/images/dejavu.png)
+
+# Summary:
+
+The paper introduces a training-free Threshold-based Dynamic Activation (TDA) method to enhance the inference efficiency of large language models (LLMs). TDA leverages sequence information to exploit the inherent sparsity of models across various architectures, achieving a 18-25% improvement in generation speed without significantly affecting task performance. Unlike existing dynamic activation (DA) techniques, TDA offers a more practical and straightforward solution, addressing the limitations of current DA methods.
+
+The paper also delves into the root causes of LLM sparsity, providing a comprehensive theoretical analysis of two key features: history-related activation uncertainty and semantic-irrelevant activation inertia. These insights establish a robust theoretical foundation for DA methods and offer valuable guidance for future research aimed at optimizing LLMs for greater efficiency and effectiveness.
+
+## Major Findings:
+
+1. TDA significantly reduces generation latency with minimal impact on model performance.
+2. The paper provides a mathematical explanation for DA and its relationship with the ReLU activation function.
+3. The paper identifies history-related activation uncertainty in dynamic activation, explaining why previous DA methods fail in models with non-ReLU activation functions.
+4. The paper conducts a detailed analysis of semantic-irrelevant activation inertia in DA, elucidating the mechanism of TDA that leverages sequential information in models across various architectures and activation functions.
+
+## Analysis and Critique:
+
+The paper presents a promising approach to improving the inference efficiency of LLMs. However, the theoretical derivations and empirical validation are based on specific models and datasets, which may limit the generalizability of the findings. Future research should consider more diverse models and datasets to validate the proposed method's effectiveness.
+
+Additionally, the paper does not discuss the potential impact of TDA on the model's interpretability and fairness. As the method selectively activates neurons based on sequential information, it may introduce biases or reduce the model's ability to explain its predictions. Future research should address these concerns to ensure that the proposed method is not only efficient but also fair and interpretable.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11393v1](https://arxiv.org/abs/2408.11393v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11393v1](https://browse.arxiv.org/html/2408.11393v1)       |
+| Truncated       | False       |
+| Word Count       | 5666       |

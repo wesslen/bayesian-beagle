@@ -1,0 +1,47 @@
+
+---
+title: "Perception-guided Jailbreak against Text-to-Image Models"
+id: "2408.10848v1"
+description: "PGJ: A model-free method for generating natural attack prompts, replacing unsafe words with safe phrases that have similar human perception."
+author: Yihao Huang, Le Liang, Tianlin Li, Xiaojun Jia, Run Wang, Weikai Miao, Geguang Pu, Yang Liu
+date: "2024-08-20"
+image: "https://browse.arxiv.org/html/2408.10848v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.10848v1/x1.png)
+
+# Summary:
+
+**Perception-guided Jailbreak against Text-to-Image Models**
+
+**Summary:**
+
+This paper proposes a novel LLM-driven perception-guided jailbreak method (PGJ) to bypass safety checkers in Text-to-Image (T2I) models. The method involves identifying a safe phrase that is similar in human perception but inconsistent in text semantics with the target unsafe word and using it as a substitution. The experiments conducted on six open-source models and commercial online services with thousands of prompts have verified the effectiveness of PGJ.
+
+**Major Findings:**
+
+1. The proposed PGJ method is a black-box jailbreak method that requires no specific T2I model (model-free) and generates highly natural attack prompts.
+2. The method is based on the observation of perceptual confusion, where people may become confused about the objects or behaviors depicted in an image due to perceptual similarity.
+3. The method leverages the capabilities of LLMs to automatically discover safe substitution phrases that align with the PSTSI principle, which states that the safe substitution phrase and target unsafe word should be similar in human perception and inconsistent in text semantics.
+
+**Analysis and Critique:**
+
+1. The paper does not address the post-checker, which is an image filter that detects NSFW content in output images. This could be a limitation as the proposed method may not be effective against T2I models with strong post-checkers.
+2. The paper does not discuss the potential ethical implications of bypassing safety checkers in T2I models. This is an important consideration as it could lead to the generation of inappropriate or NSFW images.
+3. The paper does not provide a comparison with other jailbreak methods, which could help to better understand the effectiveness of the proposed method.
+4. The paper does not discuss the potential for the proposed method to be used maliciously, which is an important consideration given the potential for misuse of T2I models.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.10848v1](https://arxiv.org/abs/2408.10848v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.10848v1](https://browse.arxiv.org/html/2408.10848v1)       |
+| Truncated       | False       |
+| Word Count       | 5762       |

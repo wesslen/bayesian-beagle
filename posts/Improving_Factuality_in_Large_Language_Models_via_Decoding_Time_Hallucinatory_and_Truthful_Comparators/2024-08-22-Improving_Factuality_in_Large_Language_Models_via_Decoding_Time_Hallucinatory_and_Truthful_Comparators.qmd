@@ -1,0 +1,44 @@
+
+---
+title: "Improving Factuality in Large Language Models via Decoding-Time Hallucinatory and Truthful Comparators"
+id: "2408.12325v1"
+description: "CDT framework reduces LLM hallucination, improving factuality and performance in downstream tasks."
+author: Dingkang Yang, Dongling Xiao, Jinjie Wei, Mingcheng Li, Zhaoyu Chen, Ke Li, Lihua Zhang
+date: "2024-08-22"
+image: "https://browse.arxiv.org/html/2408.12325v1/x1.png"
+categories: ['robustness']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.12325v1/x1.png)
+
+# Summary:
+
+The paper proposes a Comparator-driven Decoding-Time (CDT) framework to alleviate response hallucination in Large Language Models (LLMs). The framework constructs hallucinatory and truthful comparators using multi-task fine-tuning samples and an instruction prototype-guided mixture of experts strategy. CDT constrains next-token predictions to factuality-robust distributions by contrasting the logit differences between the target LLMs and these comparators. Systematic experiments on multiple downstream tasks show that the framework significantly improves model performance and response factuality.
+
+## Major Findings:
+
+1. The CDT framework can significantly improve the robustness and factuality of model responses by removing non-factual knowledge from the output space during the decoding process.
+2. The comparators in the CDT framework are not limited to specific model structures and task types, offering the prospect of eliminating hallucinations with multifaceted patterns in different tasks.
+3. Extensive experiments on multiple NLP benchmarks demonstrate the broad applicability and effectiveness of the proposed framework.
+
+## Analysis and Critique:
+
+1. The paper does not provide a detailed comparison with other existing methods that address the hallucination problem in LLMs.
+2. The paper does not discuss the potential limitations of the proposed framework, such as the increased computational cost and the need for large-scale fine-tuning data.
+3. The paper does not provide a clear explanation of how the instruction prototype-guided mixture of experts strategy enhances the ability of the comparators to capture different hallucination or truthfulness patterns in distinct task instructions.
+4. The paper does not discuss the potential impact of the proposed framework on the interpretability and explainability of LLMs.
+5. The paper does not provide a clear explanation of how the proposed framework can be extended to other NLP tasks beyond the ones considered in the experiments.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.12325v1](https://arxiv.org/abs/2408.12325v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.12325v1](https://browse.arxiv.org/html/2408.12325v1)       |
+| Truncated       | False       |
+| Word Count       | 7654       |

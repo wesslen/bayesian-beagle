@@ -1,0 +1,46 @@
+
+---
+title: "Enhancing LLM-Based Automated Program Repair with Design Rationales"
+id: "2408.12056v1"
+description: "DRCodePilot improves APR by 4.7x using design rationales and feedback-based refinement."
+author: Jiuang Zhao, Donghao Yang, Li Zhang, Xiaoli Lian, Zitian Yang
+date: "2024-08-22"
+image: "https://browse.arxiv.org/html/2408.12056v1/extracted/5805246/figures/introduce.png"
+categories: ['robustness', 'prompt-engineering']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.12056v1/extracted/5805246/figures/introduce.png)
+
+### Summary:
+
+The paper introduces DRCodePilot, a novel approach that enhances GPT-4-Turbo's automated program repair (APR) capabilities by incorporating design rationales (DR) into the prompt instruction. The approach also includes a feedback-based self-reflective framework to improve the generated patches by referencing a provided patch and suggested identifiers. The authors created a benchmark of 938 issue-patch pairs from two open-source repositories on GitHub and Jira. The experimental results show that DRCodePilot achieves a full-match ratio that is 4.7x higher than when GPT-4 is used directly, with significant improvements in CodeBLEU scores. The standalone application of DR also yields promising increases in the full-match ratio across CodeLlama, GPT-3.5, and GPT-4 within the benchmark suite.
+
+### Major Findings:
+
+1. The DRCodePilot approach significantly improves the full-match ratio and CodeBLEU scores in APR compared to using GPT-4 directly.
+2. The standalone application of design rationales can yield promising increases in the full-match ratio across different APR models.
+3. The feedback-based self-reflective framework helps GPT-4 to reconsider and refine its outputs, leading to better APR performance.
+
+### Analysis and Critique:
+
+The paper presents an innovative approach to enhancing APR by incorporating design rationales and a feedback-based self-reflective framework. The experimental results demonstrate the effectiveness of the proposed method in improving the full-match ratio and CodeBLEU scores. However, there are some limitations and potential areas for improvement:
+
+1. The benchmark used in the study is relatively small, consisting of only 938 issue-patch pairs. A larger and more diverse benchmark could provide a more comprehensive evaluation of the proposed approach.
+2. The paper does not discuss the potential limitations or biases in the design rationales extracted from issue logs, which could impact the performance of the DRCodePilot approach.
+3. The authors do not explore the potential of using other large language models or APR techniques in combination with the proposed approach, which could lead to further improvements in APR performance.
+
+Overall
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.12056v1](https://arxiv.org/abs/2408.12056v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.12056v1](https://browse.arxiv.org/html/2408.12056v1)       |
+| Truncated       | False       |
+| Word Count       | 11439       |

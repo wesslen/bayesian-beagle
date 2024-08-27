@@ -1,0 +1,43 @@
+
+---
+title: "LLM4VV: Exploring LLM-as-a-Judge for Validation and Verification Testsuites"
+id: "2408.11729v1"
+description: "LLMs can revolutionize software development, but bias and confidentiality concerns exist. This paper explores judging LLM-generated code to understand and improve these models."
+author: Zachariah Sollenberger, Jay Patel, Christian Munley, Aaron Jarmusch, Sunita Chandrasekaran
+date: "2024-08-21"
+image: "https://browse.arxiv.org/html/2408.11729v1/extracted/5803632/Images/Agent-Based-LLMJ.png"
+categories: ['robustness', 'education', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.11729v1/extracted/5803632/Images/Agent-Based-LLMJ.png)
+
+### Summary:
+
+The paper explores the idea of using an LLM-as-a-Judge (LLMJ) to evaluate tests written to verify and validate compiler implementations. The authors chose Deepseek's deepseek-coder-33b Instruct model for this purpose, as it demonstrated the best capability to generate directive-based parallel programming model codes among several LLMs tested. The authors aim to automate the creation of functional validation and verification test suites for directive-based programming models and minimize the need for human intervention.
+
+The authors discuss strategies such as negative probing, agent-based approach, and a validation pipeline to evaluate the performance of deepseek-coder-33b as an LLMJ. They use a high-performance computing cluster, Perlmutter, for their experiments and conduct negative probing on manually written test suites from the OpenACC and OpenMP Validation and Verification test suites.
+
+The authors define three metrics to evaluate the effectiveness of LLMJ: per-issue evaluation accuracy, overall evaluation accuracy, and bias. They conduct numerical analysis to determine the performance of LLMJ for each issue type and calculate overall accuracy and bias.
+
+The authors present the results of their analysis of deepseek-coder-33b as an LLMJ in two parts. In the first part, they discuss the results derived from using the LLMJ by itself through negative probing. In the second part, they discuss the results from two different prompting styles for an agent-based LLMJ and a validation pipeline that utilizes an agent-based LLMJ.
+
+The authors conclude that utilizing an agent-based prompting approach and setting up a validation pipeline structure significantly increased the quality of Deepseek's evaluations of tests used to validate compiler implementations of directive-based programming models. They plan to incorporate Fortran files into their testing and explore the automation of compiler test generation based on lessons learned from this work.
+
+### Major Findings:
+
+1. The authors found that utilizing an agent-based prompting approach and setting up a validation pipeline structure significantly increased the quality of Deepseek's evaluations of tests used to validate compiler implementations of directive-based programming models.
+2. The authors defined three metrics to evaluate the effectiveness of LLMJ: per-issue evaluation accuracy, overall
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11729v1](https://arxiv.org/abs/2408.11729v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11729v1](https://browse.arxiv.org/html/2408.11729v1)       |
+| Truncated       | False       |
+| Word Count       | 5702       |

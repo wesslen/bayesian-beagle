@@ -1,0 +1,44 @@
+
+---
+title: "Towards Evaluating Large Language Models on Sarcasm Understanding"
+id: "2408.11319v1"
+description: "LLMs struggle with sarcasm; GPT-4 performs best. Few-shot IO prompting is most effective."
+author: Yazhou Zhang, Chunwang Zou, Zheng Lian, Prayag Tiwari, Jing Qin
+date: "2024-08-21"
+image: "https://browse.arxiv.org/html/2408.11319v1/extracted/5799155/figure/example.png"
+categories: ['prompt-engineering', 'hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.11319v1/extracted/5799155/figure/example.png)
+
+**Summary:**
+
+This study evaluates the performance of large language models (LLMs) in understanding sarcasm, a subtle linguistic phenomenon that often employs rhetorical devices to convey true sentiments and intentions. Eleven state-of-the-art LLMs and eight pre-trained language models (PLMs) were selected and evaluated on six widely used benchmark datasets using different prompting approaches: zero-shot input/output (IO) prompting, few-shot IO prompting, and chain of thought (CoT) prompting.
+
+**Major Findings:**
+
+1. Current LLMs underperform supervised PLMs based sarcasm detection baselines across six sarcasm benchmarks, suggesting that significant efforts are still required to improve LLMs’ understanding of human sarcasm.
+2. GPT-4 consistently and significantly outperforms other LLMs across various prompting methods, with an average improvement of 14.0%. Claude 3 and ChatGPT demonstrate the next best performance after GPT-4.
+3. Few-shot IO prompting method outperforms the other two methods: zero-shot IO and few-shot CoT. The reason is that sarcasm detection, being a holistic, intuitive, and non-rational cognitive process, is argued not to adhere to step-by-step logical reasoning, making CoT less effective in understanding sarcasm compared to its effectiveness in mathematical reasoning tasks.
+
+**Analysis and Critique:**
+
+* The study highlights the complex nature of sarcasm detection and the current limitations of LLMs, while also highlighting the further need of stronger LLMs.
+* The study does not explore more refined prompting methods such as tree-based or graphical approaches, which could be investigated in future work.
+* The study does not consider the variation in model performance on sarcasm across different contexts, which could be explored in future work to enhance the model’s understanding of sarcastic language by refining context processing mechanisms.
+* The study does not discuss the potential impact of the size of the language models on their performance in sarcasm detection. Future work could investigate the relationship between model size and sarcasm understanding.
+* The study does not discuss the potential impact of the quality and diversity of the training data on the performance of the models in sarc
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.11319v1](https://arxiv.org/abs/2408.11319v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.11319v1](https://browse.arxiv.org/html/2408.11319v1)       |
+| Truncated       | False       |
+| Word Count       | 8231       |

@@ -1,0 +1,45 @@
+
+---
+title: "Language-specific Calibration for Pruning Multilingual Language Models"
+id: "2408.14398v1"
+description: "TL;DR: Multilingual LLM pruning strategies explored; calibrating in target language improves fluency, not reasoning."
+author: Simon Kurz, Zhixue Zhao, Jian-Jia Chen, Lucie Flek
+date: "2024-08-26"
+image: "https://browse.arxiv.org/html/2408.14398v1/x1.png"
+categories: ['production', 'architectures']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.14398v1/x1.png)
+
+### Summary:
+
+The paper presents a comprehensive empirical study on the impact of calibration language on pruning multilingual language models. The authors investigate the performance of pruned models in various languages, comparing them to their full-sized counterparts. The study focuses on two state-of-the-art language model families, Llama-3 and Aya-23, and employs two post-training pruning methods, Wanda and SparseGPT. The experiments cover seven languages, including Arabic, German, English, Spanish, Russian, Swahili, and Chinese.
+
+### Major Findings:
+
+1. Calibrating on the target language consistently yields the lowest perplexity, but does not guarantee optimal performance on downstream tasks.
+2. Pruning re-orders the strength language of the multilingual model, sacrificing performance in some strength languages for others after pruning.
+3. No single pruning technique consistently outperforms others across different models and tasks. In general, SparseGPT is recommended for pruning Llama-3 8B, while both Wanda and SparseGPT exhibit mixed performance with Aya-23 8B.
+4. Pruning substantially impacts the storage and retrieval of knowledge in a multilingual model across different languages.
+
+### Analysis and Critique:
+
+The paper provides valuable insights into the impact of calibration language on pruning multilingual language models. However, the study is limited to two model families and does not explore the potential impact of other factors, such as model architecture or training data. Additionally, the experiments are primarily conducted on smaller models, and the results may not generalize to larger models or other tasks.
+
+The authors acknowledge the limitations of their study, including the focus on a small number of languages and the lack of support for underrepresented languages. They also note that the results may not translate to future models or different training techniques.
+
+In conclusion, the paper offers practical recommendations for future practitioners, emphasizing the importance of calibrating pruning in the target language and directly testing on downstream tasks. However, further research is needed to explore the impact of other factors and to validate the findings on a broader range of models and tasks.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.14398v1](https://arxiv.org/abs/2408.14398v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.14398v1](https://browse.arxiv.org/html/2408.14398v1)       |
+| Truncated       | False       |
+| Word Count       | 5621       |

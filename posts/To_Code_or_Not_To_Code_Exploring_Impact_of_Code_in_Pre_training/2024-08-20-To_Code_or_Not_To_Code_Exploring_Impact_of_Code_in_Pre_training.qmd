@@ -1,0 +1,48 @@
+
+---
+title: "To Code, or Not To Code? Exploring Impact of Code in Pre-training"
+id: "2408.10914v1"
+description: "Code in pre-training boosts LLM performance in non-code tasks, with up to 8.2% improvement in natural language reasoning and 4.2% in world knowledge."
+author: Viraat Aryabumi, Yixuan Su, Raymond Ma, Adrien Morisot, Ivan Zhang, Acyr Locatelli, Marzieh Fadaee, Ahmet Üstün, Sara Hooker
+date: "2024-08-20"
+image: "https://browse.arxiv.org/html/2408.10914v1/x1.png"
+categories: ['prompt-engineering', 'programming']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.10914v1/x1.png)
+
+# Summary:
+
+- The study explores the impact of including code in the pre-training data mixture for LLMs, even when the models are not specifically designed for code-related tasks.
+- The research aims to analyze the precise impact of code on non-code tasks, as previous work has only provided anecdotal evidence of its importance.
+- The authors conduct extensive ablations and evaluate across a broad range of natural language reasoning tasks, world knowledge tasks, code benchmarks, and LLM-as-a-judge win-rates for models with sizes ranging from 470M to 2.8B parameters.
+- The results show a consistent improvement in performance when code is included in the pre-training data, with up to a relative increase of 8.2% in natural language reasoning, 4.2% in world knowledge, 6.6% improvement in generative win-rates, and a 12x boost in code performance.
+- The study suggests that investments in code quality and preserving code during pre-training have positive impacts on the model's performance.
+
+# Major Findings:
+
+1. Code is a critical building block for generalization far beyond coding tasks.
+2. Improvements to code quality have an outsized impact on performance across all tasks.
+3. The addition of code in pre-training results in a relative increase of 8.2% in natural language reasoning, 4.2% in world knowledge, 6.6% improvement in generative win-rates, and a 12x boost in code performance.
+
+# Analysis and Critique:
+
+- The study provides valuable insights into the impact of code on non-code tasks, which has been a relatively unexplored area.
+- The authors conduct a comprehensive evaluation using a wide range of benchmarks, which strengthens the validity of their findings.
+- However, the study does not discuss the potential limitations or biases in their methodology, which could be a topic for future research.
+- Additionally, the study does not explore the impact of code on other types of tasks, such as those involving multimodal data or reinforcement learning.
+- Future work could also investigate the impact of code on models with different architectures or training objectives.
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.10914v1](https://arxiv.org/abs/2408.10914v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.10914v1](https://browse.arxiv.org/html/2408.10914v1)       |
+| Truncated       | False       |
+| Word Count       | 3631       |

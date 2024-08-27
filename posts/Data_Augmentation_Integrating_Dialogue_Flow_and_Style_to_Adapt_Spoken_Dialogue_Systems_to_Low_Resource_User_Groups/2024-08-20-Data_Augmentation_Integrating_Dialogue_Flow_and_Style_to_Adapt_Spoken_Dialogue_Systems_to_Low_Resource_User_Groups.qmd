@@ -1,0 +1,44 @@
+
+---
+title: "Data Augmentation Integrating Dialogue Flow and Style to Adapt Spoken Dialogue Systems to Low-Resource User Groups"
+id: "2408.10516v1"
+description: "TL;DR: This study improves SDS performance for underrepresented users via a novel data augmentation framework using LLM and PLM."
+author: Zhiyang Qi, Michimasa Inaba
+date: "2024-08-20"
+image: "https://browse.arxiv.org/html/2408.10516v1/x1.png"
+categories: ['hci']
+format:
+  html:
+    code-overflow: wrap
+---
+
+![](https://browse.arxiv.org/html/2408.10516v1/x1.png)
+
+### Summary:
+
+This study introduces a novel data augmentation framework to enhance the performance of spoken dialogue systems (SDSs) when engaging with users who exhibit distinct conversational behaviors, particularly minors, in scenarios where data are scarce. The proposed approach leverages a large language model (LLM) to extract speaker styles and a pre-trained language model (PLM) to simulate dialogue act history. This method generates enriched and personalized dialogue data, facilitating improved interactions with unique user demographics. Extensive experiments validate the efficacy of the methodology, highlighting its potential to foster the development of more adaptive and inclusive dialogue systems.
+
+### Major Findings:
+
+1. The proposed data augmentation framework effectively enhances the performance of SDSs when dealing with users who have limited data and unique conversational behaviors and styles.
+2. The difficulty of dialogue act (DA) prediction varies across different users, and the proposed method demonstrates adaptability and effectiveness in multiple experiments conducted in a low-resource setting.
+3. The data augmentation framework comprises three components: (1) employing ChatGPT to extract the speaker's styles, (2) finetuning a pre-trained model to generate the system's DA history, and (3) inputting the extracted speaking styles and the generated system's DA history into ChatGPT to generate the training dialogue data.
+
+### Analysis and Critique:
+
+1. The study's focus on generating coherent dialogues comprising multiple sentences tailored for specific target groups is a significant contribution to the field, as previous methods have primarily focused on generating individual sentences.
+2. The use of LLMs for data augmentation is a promising approach, as demonstrated by recent research. However, the key distinction between the proposed method and existing work is that the proposed method generates tailored DA histories based on existing data, specifically optimized for target user groups.
+3. The study's experiments were conducted using dialogue data from minors to facilitate targeted data augmentation for this demographic. However, the generalizability of the proposed method to other user groups with distinct conversational behaviors and styles remains to be explored.
+4. The study does not exhaustively explore the full potential for improvement of the proposed method, and further evaluation is needed to fully understand its capabilities and limitations.
+5. The reliance
+
+## Appendix
+
+|          |          |
+|----------|----------|
+| Model     | accounts/fireworks/models/mixtral-8x22b-instruct       |
+| Date Generated     | 2024-08-27       |
+| Abstract | [https://arxiv.org/abs/2408.10516v1](https://arxiv.org/abs/2408.10516v1)        |
+| HTML     | [https://browse.arxiv.org/html/2408.10516v1](https://browse.arxiv.org/html/2408.10516v1)       |
+| Truncated       | False       |
+| Word Count       | 5983       |
